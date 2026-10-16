@@ -10,7 +10,7 @@ Tahrirlanadigan [eski GLB drafti](prototype/assets/tooth3d/reference-molar.glb) 
 
 ## Interaktiv prototipni ko‘rish
 
-[Interaktiv prototipni brauzerda oching](https://davlatsudekspert.github.io/DentalExpert/?screen=anatomy&lang=uz). Tugmalar, tillar va ekranlar telefonda ishlaydi. GitHub Pages `prototype/demo.html` faylini joylaydi; bu demo hech qanday haqiqiy xizmatga ulanmaydi.
+Telefon uchun GitHub Pages interaktiv demo manzili hozircha **faol emas (404)**. `.github/workflows/preview.yml` joylash jarayonini tayyorlaydi, ammo sayt GitHub sozlamalarida yoqilishi kerak. Ishlaydigan havola tasdiqlanmaguncha uni tayyor deb hisoblamang.
 
 Offline ishlatish uchun [repository ZIPini yuklab oling](https://github.com/davlatsudekspert/DentalExpert/archive/refs/heads/main.zip), arxivni oching va `prototype/demo.html` faylini kompyuter brauzerida oching.
 

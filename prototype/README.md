@@ -1,10 +1,10 @@
 # Dental Expert · mobile UI prototype
 
-Mustaqil React + TypeScript + Vite dizayn prototipi. Backend, API, haqiqiy autentifikatsiya, to‘lov va bemor bazasi yo‘q. Interaktiv demo GitHub Pages orqali ochiladi.
+Mustaqil React + TypeScript + Vite dizayn prototipi. Backend, API, haqiqiy autentifikatsiya, to‘lov va bemor bazasi yo‘q. GitHub Pages manzili hozir 404 qaytaryapti; interaktiv demo hali onlayn ishlamaydi.
 
 ## Uyda ko‘rish va davom ettirish
 
-Telefon yoki kompyuterda [interaktiv prototipni oching](https://davlatsudekspert.github.io/DentalExpert/?screen=anatomy&lang=uz). Ekranlar va menyularni shu sahifada sinab ko‘rish mumkin.
+GitHub Pages yoqilgach telefon yoki kompyuterda interaktiv demo manzili `https://davlatsudekspert.github.io/DentalExpert/?screen=anatomy&lang=uz` bo‘ladi. Hozir uning ishlashi tasdiqlanmagan.
 
 1. `dental-expert-prototype.zip`ni yuklab oling va arxivdan chiqaring.
 2. Tez ko‘rish uchun `demo.html`ni kompyuter brauzerida oching. Internet ham, Node.js ham kerak emas. Telefonning fayl ko‘rish dasturi HTML/JavaScript ishlatishini kafolatlab bo‘lmaydi; telefonda ishonchli ko‘rish uchun Vite serveridan foydalaning.
