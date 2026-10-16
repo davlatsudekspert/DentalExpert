@@ -29,6 +29,21 @@ Shifokor bir necha klinikada ishlashi mumkin; xaritada klinika manzili va shifok
 - Har postning asl tili saqlansin. UZ/RU/EN matn tarjimasi foydalanuvchi xohlaganda ko‘rsatilsin; original matn doim ochiq bo‘lsin.
 - **Audio tarjima mumkin**: ovoz → matn → tarjima → ovoz. Bu keyingi bosqich; faqat foydalanuvchi bosganda ishlasin, yozib olish/saqlash haqida aniq rozilik va narx nazorati bo‘lsin. Tibbiy ma’nosi o‘zgarmasligi uchun muhim klinik ma’lumotda asl matn yoki audio ham ko‘rinsin.
 
+## Odamlar nima uchun qaytib kiradi
+
+Ilova hamma rolga bitta umumiy lenta yoki faqat ball berish orqali qiziqarli bo‘lib qolmaydi. Kirishda rol, til, mamlakat/shahar va qiziqish bo‘yicha foydali bosh sahifa ochilsin. Har qaytishda odam o‘zi boshlagan ishni davom ettira olsin.
+
+| Foydalanuvchi | Birinchi foyda | Qaytish sababi |
+| --- | --- | --- |
+| Bemor | Yaqinidagi mos, tasdiqlangan stomatologni topish; profil va klinikani solishtirish. | Saqlangan shifokorlar, qabul holati, o‘zi kuzatgan mavzudagi tushunarli maslahatlar. |
+| Stomatolog | Ishonchli kasbiy profil va mutaxassislik bo‘yicha topilish. | Hamkasblar bilan mazmunli munozara, yangi murojaat va o‘z profilini yangilash. |
+| Ustoz | Guruhdagi talabalar ishini bitta joyda ko‘rish. | Yangi topshirilgan amaliy ishga izoh berish va o‘sishni kuzatish. |
+| Talaba | Ustoz bergan real vazifani bajarish. | Ustoz fikrini ko‘rish, ishini yaxshilash va portfelini to‘ldirish. |
+
+Hamjamiyatda mutaxassislikka oid mavzuni kuzatish, foydali postni saqlash va izohga javob olish ishlasin. Xabarnomalar faqat foydalanuvchi tanlagan mavzu, uchrashuv yoki ish holati uchun bo‘lsin; bezovta qiladigan majburiy kundalik savol va sun’iy “streak” asosiy mexanizm bo‘lmasin. Reputatsiya haqiqiy kasbiy tasdiq va foydali hissa bilan bog‘lansin. Qidiruvda pullik joylashuv bo‘lsa, reklama ekanini aniq belgilash kerak.
+
+Forensic LabGuide ham alohida ilova sifatida shu tamoyildan foydalanadi: talaba keyingi tergov ishini davom ettirish, ustoz izohini ko‘rish va amaliy portfelini to‘ldirish uchun qaytadi. Uning kontenti, forumi va foydalanuvchi ma’lumotlari Dental Expert bilan avtomatik qo‘shilmaydi.
+
 ## Qurish tartibi
 
 1. **Global poydevor:** 3 til, barcha mamlakatlar, email-kodli hisob arxitekturasi, ko‘p rolli profil, stomatolog/klinika katalogi, filtr va xarita, GPSga o‘z vaqtida ruxsat so‘rash. Avval demo ma’lumot bilan aniq ishlaydigan bir oqim; keyin haqiqiy auth, baza va tasdiqlash.

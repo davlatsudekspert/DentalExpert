@@ -16,7 +16,7 @@ Mavjud mobil dizaynni saqlagan holda **global qidiruvning bitta to‘liq demo oq
 
 1. Hozirgi katta `src/main.tsx`dan shu oqimga kerakli komponent va typed model/repository interfeyslarini ajrat. Mamlakat, shahar, klinika va stomatologni alohida modellashtir. Bitta stomatolog bir necha klinikada ishlay olsin. Demo yozuvlari aniq “namuna” deb belgilanadi.
 2. Barcha mamlakatni tanlash, shaharni qo‘lda kiritish/tanlash, UZ/RU/EN tilini saqlash va bemor/stomatolog/ustoz/talaba rolini ko‘rsatish ishlasin. Bir email hisobi keyinchalik ko‘p rol olishi mumkinligini modelda hisobga ol.
-3. Stomatolog qidiruvi profil, ixtisos, mamlakat, shahar va til bo‘yicha ishlasin. Profil sahifasida telefon, Telegram, WhatsApp, Instagram va sayt uchun ixtiyoriy maydonlar va tegishli ikonlar bo‘lsin; noto‘g‘ri URL/telefonni tekshir. “Tasdiqlangan stomatolog” belgisi demo profilga asossiz berilmasin.
+3. Stomatolog qidiruvi profil, ixtisos, mamlakat, shahar va til bo‘yicha ishlasin. Profil sahifasida telefon, Telegram, WhatsApp, Instagram va sayt uchun ixtiyoriy maydonlar va tegishli ikonlar bo‘lsin; noto‘g‘ri URL/telefonni tekshir. Bemor shifokorni saqlab, keyin “Saqlanganlar”dan qayta ochsin. “Tasdiqlangan stomatolog” belgisi demo profilga asossiz berilmasin.
 4. “Yaqin stomatologlar” bosilgandagina geolokatsiya ruxsatini so‘ra. Ruxsat rad qilinsa yoki joylashuv aniqlanmasa, qo‘lda tanlangan shahar bo‘yicha qidiruv ishlasin. Demo klinikalarni xaritada ko‘rsat; real global qamrovni da’vo qilma.
 5. Email-kodli ro‘yxatdan o‘tish oqimi uchun frontend va `AuthGateway` interfeysini tayyorla. Haqiqiy email yuborish, kod muddati, rate limit va sessiya uchun server/auth provayder kerakligini aniq ko‘rsat. Provider va credentials hali yo‘q bo‘lsa, “kod yuborildi” deb yolg‘on xabar ko‘rsatma. Keyingi bosqich uchun integratsiya nuqtasini va kerakli tashqi konfiguratsiyani hujjatlashtir.
 
@@ -24,7 +24,7 @@ Bir sessiyaga sig‘adigan eng kichik to‘liq bo‘lakni tanla, lekin faqat sta
 
 ## Qabul mezonlari
 
-- Telefon o‘lchamida mamlakat/shahar tanlash → stomatologlarni filtrlash → profil va klinika xaritasini ochish oqimi bosib ishlaydi. “Yaqin” bosilganda ruxsat so‘raladi; rad etilganda qo‘lda qidiruv ishlaydi.
+- Telefon o‘lchamida mamlakat/shahar tanlash → stomatologlarni filtrlash → profil va klinika xaritasini ochish → shifokorni saqlab qayta topish oqimi bosib ishlaydi. “Yaqin” bosilganda ruxsat so‘raladi; rad etilganda qo‘lda qidiruv ishlaydi.
 - UZ/RU/EN matnlari va mavjud 19 ekran buzilmaydi. Demo ma’lumot va haqiqiy xizmat farqi foydalanuvchiga tushunarli.
 - `npm run build` o‘tadi; yangi oqim uchun mazmunli browser testi qo‘shiladi. Frontend o‘zgarsa `python tools/package.py` bilan offline demo va haqiqiy screenshotlar yangilanadi, `PROTOTYPE_HTML=demo.html python tools/verify.py` ishlatiladi.
 - README’da bajarilgan qismi, keyingi server/auth talablari va ishlamaydigan integratsiyalar aniq yoziladi. Natijani commit qil. Tekshirilmagan GitHub Pages yoki email yuborishni ishlaydi deb yozma.
