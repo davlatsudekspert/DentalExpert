@@ -16,4 +16,4 @@ Offline ishlatish uchun [repository ZIPini yuklab oling](https://github.com/davl
 
 ## Claude Code bilan davom ettirish
 
-Claude Code’ga ushbu repositoryning `main` branchini ochib, [`prototype/CLAUDE_START_HERE.md`](prototype/CLAUDE_START_HERE.md) va [`prototype/DESIGN_HANDOFF.md`](prototype/DESIGN_HANDOFF.md)ni o‘qishni ayting. Barcha kod, 19 ekran screenshotlari va original Blender 3D tish sahnasi `prototype/` ichida.
+Claude Code’ga ushbu repositoryning `main` branchini ochib, birinchi navbatda [`prototype/CLAUDE_NEXT_STEP.md`](prototype/CLAUDE_NEXT_STEP.md)ni o‘qishni ayting. Unda ustoz–talaba amaliy ish oqimini kodlash vazifasi va qabul mezonlari bor. Qo‘shimcha kontekst [`prototype/CLAUDE_START_HERE.md`](prototype/CLAUDE_START_HERE.md) va [`prototype/DESIGN_HANDOFF.md`](prototype/DESIGN_HANDOFF.md)da; barcha kod va screenshotlar `prototype/` ichida.
