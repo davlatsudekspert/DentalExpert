@@ -39,7 +39,7 @@ Build natijasi `dist/` ichida. `demo.html` esa shu buildning bitta faylga yig‘
 
 Foydalanuvchi bergan ikki etalon asosida och moviy gradient, navy sarlavhalar, turquoise tugmalar, mint statuslar, yumaloq oq kartalar va tish atrofidagi orbitalar ishlatilgan. Bu etalonning pikselma-piksel nusxasi emas. Shifokor portretlari bitta original AI yaratilgan fotografik demo aktivdan olinadi. Ular haqiqiy shifokorlarning surati emas. Barcha portretlar mahalliy faylda, klinika xaritasi esa sxema. Dastlabki ochiq foto manzasiga tarmoq orqali kirish bloklandi; o‘rniga yuqori sifatli fiktsion demo aktiv tayyorlandi.
 
-Splash, bosh sahifa va anatomiya sahifasidagi `premium-hero.*` va `premium-anatomy.*` tish tasvirlari shu prototip uchun AI bilan yaratilgan yuqori sifatli statik illyustratsiyalardir. Ular aylantiriladigan 3D model yoki klinik anatomiya emas. Anatomiya tasviriga bosilganda `src/Tooth3D.tsx`dagi original Three.js/WebGL o‘quv maketi ochiladi: burish, zoom va qatlamlar ishlaydi. `assets/tooth3d/DentalExpert_Tooth.blend`da alohida original Blender sahnasi va kesimi saqlangan; `tools/create_tooth_asset.py` uni qayta yaratadi. Interaktiv model ham, Blender maketi ham o‘quv uchun soddalashtirilgan, klinik/ilmiy aniqligi tekshirilmagan.
+Splash va bosh sahifadagi `premium-hero.*` tish tasviri shu prototip uchun yaratilgan statik illyustratsiya. Anatomiya ekranidagi `nanobanana-anatomy.*` foydalanuvchi yuborgan NanoBanana kesim tasvirining shaffof fonga ajratilgan variantidir; shaxmat foni manba rasmda chizilgan edi. Bu tasvirlar aylantiriladigan 3D model yoki klinik anatomiya emas. Anatomiya tasviriga bosilganda `src/Tooth3D.tsx`dagi original Three.js/WebGL o‘quv maketi ochiladi: burish, zoom va qatlamlar ishlaydi. `assets/tooth3d/DentalExpert_Tooth.blend`da alohida original Blender sahnasi va kesimi saqlangan; `tools/create_tooth_asset.py` uni qayta yaratadi. Interaktiv model ham, Blender maketi ham o‘quv uchun soddalashtirilgan, klinik/ilmiy aniqligi tekshirilmagan.
 
 Login ma’lumotlarini hech qayerga yubormaydi. Testlar, maxfiylik va bildirishnoma kabi ayrim elementlar faqat demo holat yoki izohni ko‘rsatadi. Kurslar o‘quv kontenti emas; navigatsiya namunasi. Narxlar, vaqtlar, ism va barcha ko‘rsatkichlar sun’iy demo ma’lumotlar.
 
@@ -57,7 +57,7 @@ Login ma’lumotlarini hech qayerga yubormaydi. Testlar, maxfiylik va bildirishn
 
 `src/main.tsx` — ekranlar, lokal holat va tarjimalar.
 `src/Tooth3D.tsx` — original 3D geometriya, yoritish, kesim va WebGL boshqaruvi.
-`assets/tooth3d/` — original Blender `.blend` sahnasi va uning renderlari, premium AI illyustratsiyalari (PNG/WebP/JPG); `tools/create_tooth_asset.py` — Blender generatori.
+`assets/tooth3d/` — original Blender `.blend` sahnasi va uning renderlari, premium hero hamda foydalanuvchi yuborgan kesim illyustratsiyasi (PNG/WebP/JPG); `tools/create_tooth_asset.py` — Blender generatori.
 `public/clinicians.png` — 3 ta fiktsion shifokor portretidan iborat lokal fotografik aktiv; `src/Portrait.tsx` — uning vektor fallbacki. `src/LogoMark.tsx` — original vektor logo.
 `src/style.css` — mobil dizayn tizimi va responsive layout.
 `DESIGN_HANDOFF.md` — Claude Code yoki keyingi ishlab chiquvchi uchun topshirish.

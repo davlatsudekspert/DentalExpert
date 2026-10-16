@@ -3,7 +3,7 @@ import {createRoot} from 'react-dom/client';
 import {ArrowLeft, ArrowUpRight, ArrowRight, Bell, CalendarDays, Check, ChevronRight, Search, SlidersHorizontal, Star, MapPin, Clock3, Home, BookOpen, UserRound, Settings, Heart, ShieldCheck, GraduationCap, Stethoscope, Plus, Layers, RotateCw, ZoomIn, X, Globe, Activity, Play, Sparkles} from 'lucide-react';
 import Tooth3D from './Tooth3D';
 import heroRender from '../assets/tooth3d/premium-hero.webp?inline';
-import anatomyRender from '../assets/tooth3d/premium-anatomy.webp?inline';
+import anatomyRender from '../assets/tooth3d/nanobanana-anatomy.webp?inline';
 import Portrait from './Portrait';
 import LogoMark from './LogoMark';
 import './style.css';

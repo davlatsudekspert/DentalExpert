@@ -48,4 +48,5 @@
 .anatomy-render>img{transform:scale(1.10);filter:drop-shadow(0 19px 15px #2f67842b)}
 .anatomy-title h2{font-weight:750;color:#09204a}
 .anatomy-tools button{font-size:11px}
+.anatomy-render>img{transform:scale(1.02)}
 @media(max-width:440px){.phone{border:0;box-shadow:none}.phone:before{top:9px}.intro-art{width:min(342px,100%);height:355px}}
