@@ -3,6 +3,7 @@ import * as THREE from 'three';
 import {RoomEnvironment} from 'three/addons/environments/RoomEnvironment.js';
 import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';
 import referenceMolar from '../assets/tooth3d/reference-molar.glb?url';
+import referenceEnamel from '../assets/tooth3d/archive-healthy.webp?inline';
 
 type Layer = 'enamel' | 'dentin' | 'pulp' | 'root';
 type Props = {cut?: boolean; angle?: number; zoom?: boolean; layer?: Layer; variant?: 'hero' | 'study' | 'card'; onRotate?: (degrees: number) => void};
@@ -113,15 +114,33 @@ export default function Tooth3D({cut=false,angle=0,zoom=false,layer='enamel',var
      new GLTFLoader().load(referenceMolar,gltf=>{
        if(!host.isConnected){gltf.scene.traverse(obj=>{if(obj instanceof THREE.Mesh)obj.geometry.dispose()});return}
        gltf.scene.rotation.y=.38;
+       const surfaceCanvas=document.createElement('canvas');
+       surfaceCanvas.width=1280;surfaceCanvas.height=1280;
+       const surfaceContext=surfaceCanvas.getContext('2d');
+       surfaceContext!.fillStyle='#eee3d2';surfaceContext!.fillRect(0,0,1280,1280);
+       const surfaceTexture=new THREE.CanvasTexture(surfaceCanvas);
+       surfaceTexture.colorSpace=THREE.SRGBColorSpace;
+       const surfaceImage=new Image();
+       surfaceImage.onload=()=>{surfaceContext!.drawImage(surfaceImage,0,0,1280,1280);surfaceTexture.needsUpdate=true};
+       surfaceImage.src=referenceEnamel;
        gltf.scene.traverse(object=>{
          if(!(object instanceof THREE.Mesh))return;
+         const positions=object.geometry.getAttribute('position');
+         const uv=new Float32Array(positions.count*2);
+         for(let i=0;i<positions.count;i++){
+           uv[i*2]=.5+positions.getX(i)*.32;
+           uv[i*2+1]=.06+(positions.getY(i)+1.78)/2.83*.88;
+         }
+         object.geometry.setAttribute('uv',new THREE.BufferAttribute(uv,2));
          const materials=Array.isArray(object.material)?object.material:[object.material];
          materials.forEach(material=>{
            if(!(material instanceof THREE.MeshStandardMaterial))return;
-           material.color.set(material.name.includes('enamel')?'#efe6da':'#d7c6ad');
-           material.roughness=material.name.includes('enamel')?.26:.43;
+           material.color.set('#ffffff');
+           material.map=surfaceTexture;
+           material.roughness=material.name.includes('enamel')?.48:.64;
            material.metalness=0;
-           material.envMapIntensity=material.name.includes('enamel')?1.15:.85;
+           material.envMapIntensity=.55;
+           material.needsUpdate=true;
          });
        });
        model.add(gltf.scene);host.dataset.model='reference-glb';
@@ -136,7 +155,7 @@ export default function Tooth3D({cut=false,angle=0,zoom=false,layer='enamel',var
    const state={model,camera,renderer,scene,frame:0,rotation:angle*Math.PI/180,dispose:()=>{}};
    const render=()=>{state.frame=requestAnimationFrame(render);model.rotation.y=state.rotation;renderer.render(scene,camera)};
    render();
-   state.dispose=()=>{cancelAnimationFrame(state.frame);observer.disconnect();scene.traverse(obj=>{if(obj instanceof THREE.Mesh){obj.geometry.dispose();const materials=Array.isArray(obj.material)?obj.material:[obj.material];materials.forEach(m=>m.dispose())}});scene.environment?.dispose();environment.dispose();renderer.dispose();renderer.domElement.remove()};
+   state.dispose=()=>{cancelAnimationFrame(state.frame);observer.disconnect();scene.traverse(obj=>{if(obj instanceof THREE.Mesh){obj.geometry.dispose();const materials=Array.isArray(obj.material)?obj.material:[obj.material];materials.forEach(m=>{if(m instanceof THREE.MeshStandardMaterial)m.map?.dispose();m.dispose()})}});scene.environment?.dispose();environment.dispose();renderer.dispose();renderer.domElement.remove()};
    runtime.current=state;
    return()=>{state.dispose();runtime.current=null};
  },[cut,variant]);
