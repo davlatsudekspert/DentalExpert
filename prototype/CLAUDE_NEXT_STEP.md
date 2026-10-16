@@ -6,6 +6,7 @@ Bu faylni ertangi sessiyada Claude Code'ga bering: **“`prototype/CLAUDE_NEXT_S
 
 - Repository: `davlatsudekspert/DentalExpert`, `main`; ilova kodi `prototype/`da.
 - React + TypeScript + Vite asosidagi 19 ekranli, UZ/RU/EN tilidagi **UI/UX demo** bor. Backend, haqiqiy hisob, klinik booking, to‘lov va bemor bazasi hali yo‘q.
+- Bu hozir brauzer ilovasi; iOS/Android do‘konlari uchun native ilova yoki PWA yo‘nalishi hali tanlanmagan. Birinchi bosqichni mavjud React kodida tugat, platforma almashtirishni hozir boshlama.
 - Premium tish renderlari ishlatiladi. `PremiumTurntable.tsx` to‘rtta rakursli vizual prototip; uzluksiz 3D mesh emas. Eski `Tooth3D.tsx` va GLB draftini premium ko‘rinish o‘rniga qo‘yma.
 - GitHub Pages sozlash workflow'i bor, lekin `github.io` sahifasi oxirgi foydalanuvchi tekshiruvida **404** qaytargan. Uni ishlaydi deb da’vo qilma. `demo.html` lokal brauzerda ishlaydi.
 - `README.md`, `DESIGN_HANDOFF.md` va `CLAUDE_START_HERE.md`ni o‘qi. Mavjud ekranlar va vizual sifatni saqla.
@@ -37,5 +38,6 @@ Avval mavjud `src/main.tsx` va CSSdagi ekranlarni kichik komponentlarga ajratib,
 2. Bemor/stomatolog oqimlarini backendga ulash: profil, klinika, jadval va qabulni alohida bosqichlarda tekshirish.
 3. Ta’lim portfeli uchun ko‘nikma mezonlari va ustoz tasdig‘i. Testlar yordamchi bo‘lishi mumkin, lekin asosiy o‘quv tajribasi amaliy ish bo‘lsin.
 4. Premium uzluksiz 3D tish modeli faqat bir-biriga mos, tahrirlanadigan va foydalanish huquqi aniq bo‘lgan asset tayyorlangach. To‘rtta rasmni haqiqiy 3D deb atama.
+5. Ustoz/talaba oqimi va bemor/stomatolog xizmatlari ishlagach, foydalanuvchi bilan PWA yoki native iOS/Android tarqatish yo‘lini tanla.
 
 Birinchi bosqichni tugatish uchun mutlaqo kerak bo‘lmagan mahsulot qarorlarini o‘zing oqilona tanla; haqiqiy server, klinik ma’lumot yoki to‘lovga o‘tish oldidan foydalanuvchining talablarini aniqlashtir.
