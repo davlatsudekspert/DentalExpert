@@ -23,6 +23,8 @@ Butun dunyodagi stomatologlar, klinikalar, bemorlar, ustozlar va talabalarni bit
 
 Shifokor bir necha klinikada ishlashi mumkin; xaritada klinika manzili va shifokorning shu manzildagi faoliyati alohida modellansin. Profilga telefon, Telegram, WhatsApp, Instagram, sayt va boshqa mos ijtimoiy havolalar logotipi bilan qo‘shilsin. Aloqa maydonlari ixtiyoriy, havolalar tekshiriladi va qaysisi ommaga ko‘rinishini egasi tanlaydi. Professional tasdiq mamlakatga qarab hujjat va inson tekshiruvi bilan yuritiladi; tasdiqlanmagan profilni tasdiqlangan shifokor sifatida ko‘rsatma.
 
+Boshlang‘ich demoda beshta **namunaviy, to‘liq tasvirlangan** stomatolog profili bo‘lsin. Turli mamlakat, shahar, ixtisos va ish tillari orqali qidiruvni ko‘rsatadi. Profilning izohli matnlari UZ/RU/EN interfeysiga moslashadi; odam ismi va joy nomi o‘zgarmaydi. “100% to‘liq” degani bemorga qaror qilish uchun kerakli ma’lumotlar borligini anglatadi; ixtiyoriy ijtimoiy tarmoq maydonini sun’iy ma’lumot bilan to‘ldirish shart emas. Barcha demo profillar aniq belgilansin, haqiqiy reyting, litsenziya yoki aloqa ekanini da’vo qilmasin.
+
 ## Hamjamiyat va tarjima
 
 - Forum/hamjamiyatda mavzu, post, izoh, javob, qidiruv, mutaxassislik bo‘yicha bo‘limlar, shikoyat qilish va moderatsiya bo‘lsin. Bemor savollari, stomatologlar professional munozarasi va yopiq o‘quv guruhlari huquq bilan ajratilsin.
