@@ -9,3 +9,14 @@
 .brand-symbol{background:none!important;box-shadow:none}.logo-tooth{width:100%;height:100%;overflow:visible;filter:drop-shadow(0 4px 5px #078daa28)}.portrait-art{display:block;position:relative;width:62px;height:70px;flex-shrink:0;border-radius:15px;overflow:hidden;background:#e8f6f8;box-shadow:0 3px 11px #2d618322}.portrait-art svg{display:block;width:100%;height:100%}.portrait-art-large{width:115px;height:127px;border-radius:26px;margin:4px auto 17px;box-shadow:0 12px 27px #194c6c20}.screen:has(.profile-hero) .portrait-art-large{width:96px;height:104px;margin:0 auto 10px}.edit-avatar .portrait-art-large{margin:16px auto}
 /* Three fictional demo clinician portraits, stored locally as one original asset. */
 .portrait-art:after{content:'';position:absolute;inset:0;background-image:url('/clinicians.png');background-repeat:no-repeat;background-size:300% auto;background-position:left center}.portrait-art-1:after{background-position:center center}.portrait-art-2:after{background-position:right center}
+/* The polished render is an original Blender 3D asset. The atlas opens the live WebGL mesh on tap. */
+.intro-art>.hero-render{position:absolute;inset:0;width:100%;height:100%;z-index:1;object-fit:contain;filter:drop-shadow(0 18px 18px #37728e30)}
+.hero-tooth>.hero-render{display:block;width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 12px 12px #26778b32)}
+.anatomy-stage{min-height:390px}
+.anatomy-stage>.tooth-3d{height:390px}
+.anatomy-stage>.anatomy-orbit{width:320px;height:320px}
+.anatomy-stage>.anatomy-render{position:absolute;inset:0;z-index:2;width:100%;height:100%;padding:0;background:transparent;display:block;cursor:pointer}
+.anatomy-render>img{width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 15px 16px #276b8630)}
+.anatomy-render>span{position:absolute;right:8px;bottom:19px;display:flex;align-items:center;gap:5px;background:#fffefee8;color:#087f94;border:1px solid #c8e7ed;border-radius:20px;padding:7px 10px;font-size:10px;font-weight:700;box-shadow:0 5px 18px #26758e20}
+.anatomy-stage>.stage-caption{z-index:3}
+.anatomy-stage:has(.anatomy-render)>.tooth-3d{visibility:hidden}

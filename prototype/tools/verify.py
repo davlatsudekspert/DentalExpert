@@ -4,7 +4,8 @@ import json, os
 from playwright.sync_api import sync_playwright
 ROOT=Path(__file__).resolve().parents[1]
 OUT=ROOT/'screenshots'; OUT.mkdir(exist_ok=True)
-BASE=os.environ.get('PROTOTYPE_URL','http://127.0.0.1:5173')
+OFFLINE_HTML=os.environ.get('PROTOTYPE_HTML')
+BASE='https://dental-demo.local' if OFFLINE_HTML else os.environ.get('PROTOTYPE_URL','http://127.0.0.1:5173')
 SCREENS=['splash','onboard','roles','login','signup','home','search','profile','clinics','booking','dashboard','edit','record','chart','anatomy','teacher','student','courses','settings']
 checks=[]
 def check(name,condition):
@@ -13,6 +14,9 @@ def check(name,condition):
 with sync_playwright() as p:
  browser=p.chromium.launch(executable_path=os.environ.get('CHROMIUM_PATH','/usr/bin/chromium'),headless=True,args=['--no-sandbox','--enable-webgl','--use-gl=angle','--use-angle=swiftshader','--enable-unsafe-swiftshader'])
  page=browser.new_page(viewport={'width':390,'height':844},device_scale_factor=2)
+ if OFFLINE_HTML:
+  html=Path(OFFLINE_HTML).read_text()
+  page.route('https://dental-demo.local/**',lambda route:route.fulfill(status=200,content_type='text/html',body=html))
  errors=[]; page.on('pageerror',lambda e:errors.append(str(e)))
  def go(screen,lang='uz'):
   page.goto(f'{BASE}/?screen={screen}&lang={lang}')
@@ -23,8 +27,10 @@ with sync_playwright() as p:
    check(f'{lang}/{screen}: content',bool(page.locator('.screen').inner_text().strip()))
    check(f'{lang}/{screen}: no horizontal overflow',page.evaluate('document.documentElement.scrollWidth<=innerWidth'))
    check(f'{lang}/{screen}: language',page.locator('html').get_attribute('lang')==lang)
-   if screen in ['splash','onboard','home','anatomy','teacher','student','courses']:
+   if screen in ['anatomy','teacher','student','courses']:
     check(f'{lang}/{screen}: live WebGL model',page.locator('.tooth-3d canvas').count()==1 and page.locator('.webgl-unavailable').count()==0)
+   if screen in ['splash','onboard','home']:
+    check(f'{lang}/{screen}: original 3D render',page.locator('.hero-render').count()==1 and page.locator('.hero-render').evaluate('(e)=>e.complete && e.naturalWidth>0'))
    if lang=='uz':
     page.wait_for_timeout(320)
     page.locator('.mobile-screen-picker').evaluate('(e)=>e.style.display="none"')
@@ -41,6 +47,7 @@ with sync_playwright() as p:
  check('booking is explicitly demo','No real appointment' in page.locator('.success').inner_text())
  go('chart','en');page.get_by_role('button',name='Select a tooth 26',exact=True).click();check('tooth 26 selected','26' in page.locator('.selected-tooth').inner_text())
  page.get_by_role('button',name='Tooth anatomy',exact=True).first.click();page.get_by_role('button',name='Pulp 03').click();check('anatomy layer selection','Pulp' in page.locator('.anatomy-tag').inner_text() and page.locator('.tooth-3d').get_attribute('data-layer')=='pulp');page.get_by_role('button',name='Rotate',exact=True).click();check('visual rotation',page.locator('.anatomy-stage .tooth-3d').get_attribute('data-rotation')=='35');page.get_by_role('button',name='Zoom',exact=True).click();check('visual zoom',page.locator('.anatomy-stage .tooth-3d').get_attribute('data-zoom')=='true')
+ go('anatomy','en');check('anatomy render visible',page.locator('.anatomy-render').count()==1 and page.locator('.anatomy-render img').evaluate('(e)=>e.complete && e.naturalWidth>0'));page.get_by_role('button',name='Interactive 3D tooth').click();check('anatomy live 3D revealed',page.locator('.anatomy-render').count()==0 and page.locator('.anatomy-stage .tooth-3d canvas').count()==1)
  go('search','en');page.get_by_role('textbox',name='Find a dentist').fill('Aziz');check('doctor search',page.locator('.doctor-card').count()==1);page.get_by_role('textbox',name='Find a dentist').fill('');page.get_by_role('button',name='Filter',exact=True).click();check('rating filter',page.locator('.doctor-card').count()==2)
  go('edit','en');page.locator('input').first.fill('Dr. Demo');page.get_by_role('button',name='Save demo changes').click();check('edit confirmation',page.get_by_role('status').inner_text().startswith('Demo saved'));page.locator('.mobile-screen-picker select').select_option('profile');check('edit reflected in profile',page.locator('.profile-hero h2').inner_text()=='Dr. Demo')
  for width in [360,430,1280]:
