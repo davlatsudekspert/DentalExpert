@@ -1,6 +1,8 @@
 # Claude Code uchun navbatdagi ish — Dental Expert
 
-Ertangi sessiyada Claude Code'ga shuni yozing: **“`prototype/CLAUDE_NEXT_STEP.md` va `prototype/PRODUCT_VISION.md`ni o‘qi. Birinchi bosqichni faqat reja bilan emas, ishlaydigan kod va test bilan yakunla.”**
+Ertangi sessiyada Claude Code'ga shuni yozing: **“`prototype/CLAUDE_NEXT_STEP.md` va `prototype/PRODUCT_VISION.md`ni o‘qi. Birinchi bosqichni faqat reja bilan emas, ishlaydigan kod va test bilan yakunla. Mahsulotni yaxshilaydigan o‘z takliflaringni qisqa asosla; tasdiqlangan talablarga mos, kichik va tekshiriladigan yaxshilanishlarni kodga ham qo‘sh.”**
+
+Claude Code avval repo ichida ishlayotganini va `main`ning so‘nggi holatini olganini tekshirsin. Repo unga ko‘rinmasa yoki GitHub 404 qaytarsa, kodni o‘qiyapman deb taxmin qilmasin: GitHub hisobiga kirish huquqini tekshirib, foydalanuvchiga aniq to‘siqni aytsin. Dizayn yoki mahsulot bo‘yicha o‘z fikrini taklif qilishi mumkin, lekin yangi imkoniyatni haqiqatan ishlamaguncha “tayyor” deb atamasin. Katta g‘oyalar keyingi bosqichga yozilsin, birinchi bosqichdagi ishlaydigan oqimni tugatishga xalaqit bermasin.
 
 ## Avval holatni tekshir
 
