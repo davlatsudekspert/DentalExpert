@@ -1,6 +1,8 @@
 import {useEffect, useRef} from 'react';
 import * as THREE from 'three';
 import {RoomEnvironment} from 'three/addons/environments/RoomEnvironment.js';
+import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';
+import referenceMolar from '../assets/tooth3d/reference-molar.glb?url';
 
 type Layer = 'enamel' | 'dentin' | 'pulp' | 'root';
 type Props = {cut?: boolean; angle?: number; zoom?: boolean; layer?: Layer; variant?: 'hero' | 'study' | 'card'; onRotate?: (degrees: number) => void};
@@ -97,14 +99,32 @@ export default function Tooth3D({cut=false,angle=0,zoom=false,layer='enamel',var
    let renderer:THREE.WebGLRenderer;
    try {renderer=new THREE.WebGLRenderer({antialias:true,alpha:true,powerPreference:'high-performance',preserveDrawingBuffer:true});}
    catch {host.classList.add('webgl-unavailable');return;}
-   renderer.setPixelRatio(Math.min(window.devicePixelRatio||1,2));renderer.outputColorSpace=THREE.SRGBColorSpace;renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=1.25;renderer.localClippingEnabled=true;
+   renderer.setPixelRatio(Math.min(window.devicePixelRatio||1,2));renderer.outputColorSpace=THREE.SRGBColorSpace;renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=cut?1.25:.76;renderer.localClippingEnabled=true;
    host.appendChild(renderer.domElement);
    const environment=new THREE.PMREMGenerator(renderer);const environmentScene=new RoomEnvironment();scene.environment=environment.fromScene(environmentScene).texture;environmentScene.dispose();
-   scene.add(new THREE.AmbientLight(0xf5fdff,1.25));
-   const key=new THREE.DirectionalLight(0xffffff,3.2);key.position.set(-3,5,5);scene.add(key);
-   const rim=new THREE.DirectionalLight(0x6bd7e5,2.4);rim.position.set(3,1,-4);scene.add(rim);
-   const fill=new THREE.DirectionalLight(0xfff0de,1.2);fill.position.set(4,-2,3);scene.add(fill);
-   const model=makeModel(cut);scene.add(model);
+   scene.add(new THREE.AmbientLight(0xf5fdff,cut?1.25:.6));
+   const key=new THREE.DirectionalLight(0xffffff,cut?3.2:1.6);key.position.set(-3,5,5);scene.add(key);
+   const rim=new THREE.DirectionalLight(0x6bd7e5,cut?2.4:1.4);rim.position.set(3,1,-4);scene.add(rim);
+   const fill=new THREE.DirectionalLight(0xfff0de,cut?1.2:.7);fill.position.set(4,-2,3);scene.add(fill);
+   const useReferenceMesh=variant==='study'&&!cut;
+   const model=useReferenceMesh?new THREE.Group():makeModel(cut);scene.add(model);
+   if(useReferenceMesh){
+     host.dataset.model='loading-glb';
+     new GLTFLoader().load(referenceMolar,gltf=>{
+       if(!host.isConnected){gltf.scene.traverse(obj=>{if(obj instanceof THREE.Mesh)obj.geometry.dispose()});return}
+       gltf.scene.rotation.y=.38;
+       gltf.scene.traverse(object=>{
+         if(!(object instanceof THREE.Mesh))return;
+         const materials=Array.isArray(object.material)?object.material:[object.material];
+         materials.forEach(material=>{
+           if(!(material instanceof THREE.MeshStandardMaterial))return;
+           material.color.set(material.name.includes('enamel')?'#e8dbca':'#c7b69d');
+           material.roughness=material.name.includes('enamel')?.28:.46;
+         });
+       });
+       model.add(gltf.scene);host.dataset.model='reference-glb';
+     },undefined,()=>{model.add(makeModel(false));host.dataset.model='procedural-fallback'});
+   }else host.dataset.model=cut?'procedural-cut':'procedural-outer';
    if(variant==='hero'){
      const orbital=new THREE.Mesh(new THREE.TorusGeometry(1.23,.024,12,150),new THREE.MeshBasicMaterial({color:0x47d6e2,transparent:true,opacity:.72}));orbital.rotation.set(.63,.31,.17);orbital.position.y=-.25;model.add(orbital);
      const orbital2=new THREE.Mesh(new THREE.TorusGeometry(1.38,.009,8,150),new THREE.MeshBasicMaterial({color:0xb7fbff,transparent:true,opacity:.72}));orbital2.rotation.set(1.12,-.31,-.2);orbital2.position.y=-.28;model.add(orbital2);

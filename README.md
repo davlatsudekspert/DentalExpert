@@ -4,6 +4,8 @@ Quyidagi rasmlar **ishlaydigan frontenddan olingan screenshotlar**. Splash va an
 
 [8 ekranli previewni katta ochish](prototype/screenshots/jpg/preview-board.jpg) · [Onboarding](prototype/screenshots/jpg/onboard.jpg) · [Bemor bosh sahifasi](prototype/screenshots/jpg/home.jpg) · [Stomatolog profili](prototype/screenshots/jpg/profile.jpg) · [Qabulga yozilish](prototype/screenshots/jpg/booking.jpg) · [3D anatomiya](prototype/screenshots/jpg/anatomy.jpg)
 
+[Jonli 3D GLB maketining alohida screenshoti](prototype/screenshots/anatomy-3d.png) · [GLB fayl](prototype/assets/tooth3d/reference-molar.glb). Bu arxivdagi rasmlardan taxminan yasalgan tahrirlanadigan o‘quv maketi; rasmlarning foto sifatini yoki klinik aniqligini hali takrorlamaydi.
+
 ![Dental Expert prototipining 8 asosiy ekrani](prototype/screenshots/jpg/preview-board.jpg)
 
 ## Interaktiv prototipni ko‘rish
