@@ -1,6 +1,6 @@
 # Dental Expert — mobil dizayn prototipi
 
-Quyidagi rasmlar **ishlaydigan frontenddan olingan screenshotlar**. `Tish Rasm.rar`dagi tishlar fonidan ajratilib splash, bosh sahifa va anatomiyadagi uch ko‘rinishga joylangan; anatomiya tugmasi alohida interaktiv 3D o‘quv maketini ochadi. Bu loyiha React + TypeScript + Vite asosidagi lokal UI/UX demo; haqiqiy qabul, bemor ma’lumotlari yoki to‘lov tizimi ulanmagan.
+Quyidagi rasmlar **ishlaydigan frontenddan olingan screenshotlar**. `Tish Rasm.rar`dagi tishlar asosida premium renderlar tayyorlanib splash, bosh sahifa va anatomiyadagi uch ko‘rinishga joylangan; anatomiya tugmasi alohida interaktiv 3D o‘quv maketini ochadi. Bu loyiha React + TypeScript + Vite asosidagi lokal UI/UX demo; haqiqiy qabul, bemor ma’lumotlari yoki to‘lov tizimi ulanmagan.
 
 [8 ekranli previewni katta ochish](prototype/screenshots/jpg/preview-board.jpg) · [Onboarding](prototype/screenshots/jpg/onboard.jpg) · [Bemor bosh sahifasi](prototype/screenshots/jpg/home.jpg) · [Stomatolog profili](prototype/screenshots/jpg/profile.jpg) · [Qabulga yozilish](prototype/screenshots/jpg/booking.jpg) · [3D anatomiya](prototype/screenshots/jpg/anatomy.jpg)
 

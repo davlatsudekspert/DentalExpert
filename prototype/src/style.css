@@ -55,3 +55,8 @@
 .anatomy-view-tabs button.active{border-color:#23b2c4;background:#ecfaff;color:#067d98;box-shadow:0 3px 12px #1b9ca926}
 .anatomy-view-tabs img{width:46px;height:58px;object-fit:contain;flex-shrink:0;filter:drop-shadow(0 3px 3px #2549692b)}
 .anatomy-view-tabs span{line-height:1.2}
+.intro-art:before,.intro-art:after{display:none}
+.intro-art>.orbit{opacity:.14}
+.intro-art>.hero-render{filter:drop-shadow(0 22px 22px #167ba032)}
+.hero-tooth{width:248px;right:-53px;top:-4px;height:244px}
+.hero-tooth>.hero-render{filter:drop-shadow(0 12px 13px #14708b32)}

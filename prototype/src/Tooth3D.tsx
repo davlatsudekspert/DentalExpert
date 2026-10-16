@@ -99,7 +99,7 @@ export default function Tooth3D({cut=false,angle=0,zoom=false,layer='enamel',var
    let renderer:THREE.WebGLRenderer;
    try {renderer=new THREE.WebGLRenderer({antialias:true,alpha:true,powerPreference:'high-performance',preserveDrawingBuffer:true});}
    catch {host.classList.add('webgl-unavailable');return;}
-   renderer.setPixelRatio(Math.min(window.devicePixelRatio||1,2));renderer.outputColorSpace=THREE.SRGBColorSpace;renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=cut?1.25:.76;renderer.localClippingEnabled=true;
+   renderer.setPixelRatio(Math.min(window.devicePixelRatio||1,2));renderer.outputColorSpace=THREE.SRGBColorSpace;renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=cut?1.25:.82;renderer.localClippingEnabled=true;
    host.appendChild(renderer.domElement);
    const environment=new THREE.PMREMGenerator(renderer);const environmentScene=new RoomEnvironment();scene.environment=environment.fromScene(environmentScene).texture;environmentScene.dispose();
    scene.add(new THREE.AmbientLight(0xf5fdff,cut?1.25:.6));
@@ -118,8 +118,10 @@ export default function Tooth3D({cut=false,angle=0,zoom=false,layer='enamel',var
          const materials=Array.isArray(object.material)?object.material:[object.material];
          materials.forEach(material=>{
            if(!(material instanceof THREE.MeshStandardMaterial))return;
-           material.color.set(material.name.includes('enamel')?'#e8dbca':'#c7b69d');
-           material.roughness=material.name.includes('enamel')?.28:.46;
+           material.color.set(material.name.includes('enamel')?'#efe6da':'#d7c6ad');
+           material.roughness=material.name.includes('enamel')?.26:.43;
+           material.metalness=0;
+           material.envMapIntensity=material.name.includes('enamel')?1.15:.85;
          });
        });
        model.add(gltf.scene);host.dataset.model='reference-glb';
