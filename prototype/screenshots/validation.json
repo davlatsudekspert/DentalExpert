@@ -1,5 +1,5 @@
 {
-  "passed": 215,
+  "passed": 218,
   "checks": [
     "uz/splash: content",
     "uz/splash: no horizontal overflow",
@@ -207,6 +207,9 @@
     "visual rotation",
     "visual zoom",
     "anatomy render visible",
+    "archive top view switches",
+    "archive exterior switches",
+    "archive cutaway restores",
     "anatomy live GLB revealed",
     "doctor search",
     "rating filter",
