@@ -1,6 +1,6 @@
 # Dental Expert — mobil dizayn prototipi
 
-Quyidagi rasmlar **ishlaydigan frontenddan olingan screenshotlar**. `Tish Rasm.rar`dagi tishlar asosida premium renderlar tayyorlanib splash, bosh sahifa va anatomiyadagi uch ko‘rinishga joylangan; anatomiya tugmasi bir xil premium uslubdagi to‘rt burchakli 360° vizual ko‘rinishni ochadi (bu haqiqiy 3D mesh emas). Bu loyiha React + TypeScript + Vite asosidagi lokal UI/UX demo; haqiqiy qabul, bemor ma’lumotlari yoki to‘lov tizimi ulanmagan.
+Quyidagi rasmlar **ishlaydigan frontenddan olingan screenshotlar**. `Tish Rasm.rar`dagi tishlar asosida premium renderlar tayyorlanib splash, bosh sahifa va anatomiyadagi uch ko‘rinishga joylangan; anatomiya tugmasi bir xil premium uslubdagi to‘rt burchakli 360° vizual ko‘rinishni ochadi (bu haqiqiy 3D mesh emas). Bu loyiha React + TypeScript + Vite asosidagi UI/UX demo; haqiqiy qabul, bemor ma’lumotlari yoki to‘lov tizimi ulanmagan.
 
 [8 ekranli previewni katta ochish](prototype/screenshots/jpg/preview-board.jpg) · [Onboarding](prototype/screenshots/jpg/onboard.jpg) · [Bemor bosh sahifasi](prototype/screenshots/jpg/home.jpg) · [Stomatolog profili](prototype/screenshots/jpg/profile.jpg) · [Qabulga yozilish](prototype/screenshots/jpg/booking.jpg) · [Anatomiya](prototype/screenshots/jpg/anatomy.jpg) · [360° old ko‘rinish](prototype/screenshots/jpg/anatomy-360.jpg) · [360° yon ko‘rinish](prototype/screenshots/jpg/anatomy-360-side.jpg)
 
@@ -10,7 +10,9 @@ Tahrirlanadigan [eski GLB drafti](prototype/assets/tooth3d/reference-molar.glb) 
 
 ## Interaktiv prototipni ko‘rish
 
-GitHub HTML faylni kod sifatida ko‘rsatadi. Ilovani ishlatish uchun [repository ZIPini yuklab oling](https://github.com/davlatsudekspert/DentalExpert/archive/refs/heads/main.zip), arxivni oching va `prototype/demo.html` faylini kompyuter brauzerida oching. Bu bitta offline HTML fayl: server va internet kerak emas. Telefonda fayl ko‘ruvchi HTML/JavaScript’ni qo‘llashi kerak; ishonchliroq variant — kompyuterda `npm run dev` bilan ishga tushirib, shu Wi‑Fi’dagi telefon brauzeridan ochish.
+[Interaktiv prototipni brauzerda oching](https://davlatsudekspert.github.io/DentalExpert/?screen=anatomy&lang=uz). Tugmalar, tillar va ekranlar telefonda ishlaydi. GitHub Pages `prototype/demo.html` faylini joylaydi; bu demo hech qanday haqiqiy xizmatga ulanmaydi.
+
+Offline ishlatish uchun [repository ZIPini yuklab oling](https://github.com/davlatsudekspert/DentalExpert/archive/refs/heads/main.zip), arxivni oching va `prototype/demo.html` faylini kompyuter brauzerida oching.
 
 ## Claude Code bilan davom ettirish
 
