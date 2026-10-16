@@ -16,4 +16,4 @@ Offline ishlatish uchun [repository ZIPini yuklab oling](https://github.com/davl
 
 ## Claude Code bilan davom ettirish
 
-Claude Code’ga ushbu repositoryning `main` branchini ochib, birinchi navbatda [`prototype/CLAUDE_NEXT_STEP.md`](prototype/CLAUDE_NEXT_STEP.md)ni o‘qishni ayting. Unda ustoz–talaba amaliy ish oqimini kodlash vazifasi va qabul mezonlari bor. Qo‘shimcha kontekst [`prototype/CLAUDE_START_HERE.md`](prototype/CLAUDE_START_HERE.md) va [`prototype/DESIGN_HANDOFF.md`](prototype/DESIGN_HANDOFF.md)da; barcha kod va screenshotlar `prototype/` ichida.
+Claude Code’ga ushbu repositoryning `main` branchini ochib, [`prototype/CLAUDE_NEXT_STEP.md`](prototype/CLAUDE_NEXT_STEP.md) va [`prototype/PRODUCT_VISION.md`](prototype/PRODUCT_VISION.md)ni o‘qishni ayting. Birinchisida navbatdagi kodlash vazifasi, ikkinchisida global ilova talablari bor. Qo‘shimcha kontekst [`prototype/CLAUDE_START_HERE.md`](prototype/CLAUDE_START_HERE.md) va [`prototype/DESIGN_HANDOFF.md`](prototype/DESIGN_HANDOFF.md)da; barcha kod va screenshotlar `prototype/` ichida.

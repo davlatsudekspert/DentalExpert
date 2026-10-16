@@ -1,6 +1,6 @@
 # Dental Expert prototipini Claude Code bilan davom ettirish
 
-**Keyingi kodlash vazifasi:** [`CLAUDE_NEXT_STEP.md`](CLAUDE_NEXT_STEP.md). Ertangi sessiyada Claude avval shu faylni o‘qib, birinchi amaliy ish oqimini yakunlasin.
+**Keyingi kodlash vazifasi:** [`CLAUDE_NEXT_STEP.md`](CLAUDE_NEXT_STEP.md) va global mahsulot talablari [`PRODUCT_VISION.md`](PRODUCT_VISION.md)da. Ertangi sessiyada Claude avval shu fayllarni o‘qib, global qidiruvning birinchi ishlaydigan oqimini yakunlasin.
 
 Bu papka mustaqil React + TypeScript + Vite **dizayn prototipi**. Asosiy loyiha kodi bu yerda o‘zgartirilmagan. Backend, API, haqiqiy login, to‘lov va bemor ma’lumotlari yo‘q. GitHub Pages workflow qo‘shilgan, lekin sayt hozir 404; boshqa joyga foydalanuvchi ruxsatisiz deploy qilmang.
 

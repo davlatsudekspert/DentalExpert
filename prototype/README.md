@@ -2,6 +2,8 @@
 
 Mustaqil React + TypeScript + Vite dizayn prototipi. Backend, API, haqiqiy autentifikatsiya, to‘lov va bemor bazasi yo‘q. GitHub Pages manzili hozir 404 qaytaryapti; interaktiv demo hali onlayn ishlamaydi.
 
+Global mahsulot talablari [`PRODUCT_VISION.md`](PRODUCT_VISION.md)da, Claude uchun birinchi kodlash bosqichi [`CLAUDE_NEXT_STEP.md`](CLAUDE_NEXT_STEP.md)da. Hozirgi ekranlar bu talablardagi haqiqiy xizmatlar tayyorligini anglatmaydi.
+
 ## Uyda ko‘rish va davom ettirish
 
 GitHub Pages yoqilgach telefon yoki kompyuterda interaktiv demo manzili `https://davlatsudekspert.github.io/DentalExpert/?screen=anatomy&lang=uz` bo‘ladi. Hozir uning ishlashi tasdiqlanmagan.

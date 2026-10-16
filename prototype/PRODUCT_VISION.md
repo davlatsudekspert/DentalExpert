@@ -1,0 +1,42 @@
+# Dental Expert — global ilova talablari
+
+Bu hujjat mahsulot maqsadini belgilaydi. Hozirgi `prototype/` — mobil brauzerda ishlaydigan UI/UX demo; quyidagi xizmatlar hali haqiqiy backend bilan qurilmagan. Demo ma’lumotini global xizmat deb ko‘rsatmaslik kerak.
+
+## Asosiy maqsad
+
+Butun dunyodagi stomatologlar, klinikalar, bemorlar, ustozlar va talabalarni bitta platformada bog‘lash. UZ, RU va EN interfeyslari birinchi kundan mavjud bo‘lsin. **Barcha mamlakatlar** ro‘yxatdan o‘tishda tanlansin; foydalanuvchi mamlakat, shahar va interfeys tilini o‘zi tanlaydi. Keyingi tillarni qo‘shishga tuzilma tayyor bo‘lsin. Bir email hisobi bir nechta rolga ega bo‘lishi mumkin, lekin har bir rolning huquqi va profili alohida boshqariladi.
+
+## Ro‘yxatdan o‘tish va joylashuv
+
+- Emailga bir martalik kod yuborib tasdiqlash: kodning muddati, qayta yuborish chegarasi, xato urinishlari cheklovi va sessiya boshqaruvi bo‘lsin. Haqiqiy email yuborish faqat server/auth provayder ulanganda ishlaydi; frontenddagi soxta kodni haqiqiy login deb atama.
+- Mamlakat va shaharni qo‘lda tanlash mumkin bo‘lsin. Ro‘yxatdan o‘tishda aniq GPS joylashuvini majburiy so‘rama.
+- Foydalanuvchi “Yaqin stomatologlar” yoki xaritani ochganda joylashuv nima uchun kerakligini aytib, shundan keyin brauzer/telefon ruxsatini so‘ra. Rad etsa, mamlakat/shahar bo‘yicha qidiruv ishlasin. Aniq koordinatani keraksiz saqlama.
+
+## Rollar va asosiy oqimlar
+
+| Rol | Kerakli imkoniyatlar |
+| --- | --- |
+| Bemor | Shifokor/klinika qidirish va filtrlash; yaqinlarni xaritada ko‘rish; profil, xizmat, til va aloqa ma’lumotlarini ko‘rish; keyin haqiqiy qabulga yozilish. |
+| Stomatolog | Kasbiy profil, ixtisos, mamlakat/shahar, ish joylari, jadval, xizmatlar, tillar, aloqa kanallari; litsenziya tekshiruvi va tasdiq belgisi; hamjamiyatda qatnashish. |
+| Ustoz | Guruh/kurs ochish, talabani kod bilan qo‘shish, amaliy topshiriq berish, ishni ko‘rib izoh va tasdiq berish, ko‘nikma portfelini kuzatish. |
+| Talaba | Guruhga qo‘shilish, amaliy ish topshirish, ustoz izohini ko‘rish, qayta ishlash va portfelni yuritish. Test yordamchi, asosiy tajriba amaliy ish. |
+
+Shifokor bir necha klinikada ishlashi mumkin; xaritada klinika manzili va shifokorning shu manzildagi faoliyati alohida modellansin. Profilga telefon, Telegram, WhatsApp, Instagram, sayt va boshqa mos ijtimoiy havolalar logotipi bilan qo‘shilsin. Aloqa maydonlari ixtiyoriy, havolalar tekshiriladi va qaysisi ommaga ko‘rinishini egasi tanlaydi. Professional tasdiq mamlakatga qarab hujjat va inson tekshiruvi bilan yuritiladi; tasdiqlanmagan profilni tasdiqlangan shifokor sifatida ko‘rsatma.
+
+## Hamjamiyat va tarjima
+
+- Forum/hamjamiyatda mavzu, post, izoh, javob, qidiruv, mutaxassislik bo‘yicha bo‘limlar, shikoyat qilish va moderatsiya bo‘lsin. Bemor savollari, stomatologlar professional munozarasi va yopiq o‘quv guruhlari huquq bilan ajratilsin.
+- Har postning asl tili saqlansin. UZ/RU/EN matn tarjimasi foydalanuvchi xohlaganda ko‘rsatilsin; original matn doim ochiq bo‘lsin.
+- **Audio tarjima mumkin**: ovoz → matn → tarjima → ovoz. Bu keyingi bosqich; faqat foydalanuvchi bosganda ishlasin, yozib olish/saqlash haqida aniq rozilik va narx nazorati bo‘lsin. Tibbiy ma’nosi o‘zgarmasligi uchun muhim klinik ma’lumotda asl matn yoki audio ham ko‘rinsin.
+
+## Qurish tartibi
+
+1. **Global poydevor:** 3 til, barcha mamlakatlar, email-kodli hisob arxitekturasi, ko‘p rolli profil, stomatolog/klinika katalogi, filtr va xarita, GPSga o‘z vaqtida ruxsat so‘rash. Avval demo ma’lumot bilan aniq ishlaydigan bir oqim; keyin haqiqiy auth, baza va tasdiqlash.
+2. **Ustoz/talaba:** guruh, amaliy ish, izoh, tasdiq va portfel. Bu oqim Forensic LabGuide’da ham mahsulot g‘oyasi sifatida ishlatilishi mumkin, ammo kod/baza avtomatik birlashtirilmasin.
+3. **Hamjamiyat:** forum, izohlar, moderatsiya va matn tarjimasi.
+4. **Xizmatlar:** qabul jadvali va tasdiq, xabarlar, audio tarjima va keyingi integratsiyalar.
+5. **Mobil tarqatish:** ishlaydigan web oqimlari va backend tasdiqlangach PWA yoki native iOS/Android yo‘li tanlansin. Ilovani “butun dunyoda ishlaydi” deb atashdan oldin real email, geografik qidiruv, kasbiy tasdiq, xavfsizlik va xalqaro ish yuklamasi tekshirilsin.
+
+## Birinchi Claude sessiyasining natijasi
+
+[`CLAUDE_NEXT_STEP.md`](CLAUDE_NEXT_STEP.md) birinchi kodlash vazifasini belgilaydi. Dizayn prototipi va global mahsulotni chalkashtirmaslik, ishlamagan integratsiyani ishlaydi deb yozmaslik va har bir bosqichni brauzerda tekshirish shart.

@@ -1,43 +1,37 @@
 # Claude Code uchun navbatdagi ish — Dental Expert
 
-Bu faylni ertangi sessiyada Claude Code'ga bering: **“`prototype/CLAUDE_NEXT_STEP.md`ni o‘qi va undagi birinchi bosqichni kod bilan yakunla.”** Ishni faqat reja yoki yangi maket bilan tugatma.
+Ertangi sessiyada Claude Code'ga shuni yozing: **“`prototype/CLAUDE_NEXT_STEP.md` va `prototype/PRODUCT_VISION.md`ni o‘qi. Birinchi bosqichni faqat reja bilan emas, ishlaydigan kod va test bilan yakunla.”**
 
-## Hozirgi holat
+## Avval holatni tekshir
 
-- Repository: `davlatsudekspert/DentalExpert`, `main`; ilova kodi `prototype/`da.
-- React + TypeScript + Vite asosidagi 19 ekranli, UZ/RU/EN tilidagi **UI/UX demo** bor. Backend, haqiqiy hisob, klinik booking, to‘lov va bemor bazasi hali yo‘q.
-- Bu hozir brauzer ilovasi; iOS/Android do‘konlari uchun native ilova yoki PWA yo‘nalishi hali tanlanmagan. Birinchi bosqichni mavjud React kodida tugat, platforma almashtirishni hozir boshlama.
-- Premium tish renderlari ishlatiladi. `PremiumTurntable.tsx` to‘rtta rakursli vizual prototip; uzluksiz 3D mesh emas. Eski `Tooth3D.tsx` va GLB draftini premium ko‘rinish o‘rniga qo‘yma.
-- GitHub Pages sozlash workflow'i bor, lekin `github.io` sahifasi oxirgi foydalanuvchi tekshiruvida **404** qaytargan. Uni ishlaydi deb da’vo qilma. `demo.html` lokal brauzerda ishlaydi.
-- `README.md`, `DESIGN_HANDOFF.md` va `CLAUDE_START_HERE.md`ni o‘qi. Mavjud ekranlar va vizual sifatni saqla.
+Repository `davlatsudekspert/DentalExpert`, `main`; ilova `prototype/`da. `README.md`, `DESIGN_HANDOFF.md`, `PRODUCT_VISION.md` va `CLAUDE_START_HERE.md`ni o‘qi. `npm run build` va `npm run dev` bilan mavjud React + TypeScript + Vite prototipini tekshir. 19 ekran, UZ/RU/EN va premium tish renderlarini saqla. Hozir backend, haqiqiy email-kod, global stomatolog bazasi yoki klinik booking yo‘q. GitHub Pages oxirgi foydalanuvchi tekshiruvida 404 qaytargan; ishlayotgan live demo deb taqdim etma.
 
-## Mahsulot yo‘nalishi
+## Mahsulot maqsadi
 
-Dental Expert’da bemor/stomatolog oqimlari bilan birga ustoz/talaba ta’lim oqimi bo‘ladi. Foydalanuvchi ta’limni faqat test yoki kunlik savolga aylantirishni xohlamaydi. Talaba **amaliy ish** topshiradi, ustoz jarayon va natijaga fikr beradi, tasdiqlangan ishlar talabaning ko‘nikma portfelida saqlanadi. Forensic LabGuide’da ham o‘xshash ustoz/talaba modeli ko‘zda tutilgan, lekin u alohida repository: uning kodiga bu taskda tegma va ikki ilovaning ma’lumotlarini avtomatik birlashtirma.
+Bu butun dunyodagi stomatologlar va klinikalarni bemorlar bilan bog‘laydigan, ustoz/talaba amaliy ta’limi va forumga ega platforma bo‘ladi. Interfeys avval UZ/RU/EN; ro‘yxatdan o‘tishda barcha mamlakatlar bo‘lishi kerak. Emailga bir martalik kod, kasbiy tasdiq, klinika xaritasi, profil ijtimoiy havolalari, izohli forum va keyinchalik audio tarjima kerak. Aniq talablar va bosqichlar `PRODUCT_VISION.md`da. Forensic LabGuide alohida loyiha; bu repo ichida uning kodini yaratma.
 
-## Birinchi kodlash bosqichi: bitta to‘liq amaliy ish oqimi
+## Hozir kodlanadigan birinchi bosqich
 
-1. Mavjud demo ichida ustoz va talaba ekranlariga haqiqiy navigatsiya qo‘sh. Ustoz demo guruh ochadi; talaba guruh kodini kiritib unga qo‘shiladi. Bir sessiyada rolni almashtirib, ikki tomondagi natijani tekshirish mumkin bo‘lsin.
-2. Ustoz **bitta namunaviy stomatologik amaliy topshiriq** yaratadi: tish yoki rentgen rasmi, vaziyat tavsifi, bajarish bosqichlari va baholash mezonlari. Real bemor ma’lumotlarini qo‘shma.
-3. Talaba rasmda muhim joylarni belgilab, qisqa amaliy reja yozadi; qoralamani saqlab, so‘ng ustozga topshiradi. Bu ko‘p variantli savol-javob bo‘lmasin.
-4. Ustoz topshirilgan ishni, belgilangan nuqtalarni va rejani ko‘radi; izoh yozadi va holatini “qayta ishlash kerak / qabul qilindi” deb belgilaydi. Talaba izohni ko‘rib ishini yangilay olsin. Qabul qilingan ish portfelda ko‘rinsin.
-5. Demo ma’lumotlari brauzerda yangilashdan keyin ham saqlansin. LocalStorage yoki IndexedDB uchun aniq typed data model va repository interfeysi ishlat; buni haqiqiy login yoki server xavfsizligi deb ko‘rsatma. Keyingi backendga almashtirish mumkin bo‘lsin.
+Mavjud mobil dizaynni saqlagan holda **global qidiruvning bitta to‘liq demo oqimi**ni qur:
 
-Avval mavjud `src/main.tsx` va CSSdagi ekranlarni kichik komponentlarga ajratib, faqat shu oqimga kerakli qismini tartibga sol. UZ/RU/EN matnlarini saqla. Telefon ekranida mavjud premium dizaynni buzma. Yangi kutubxonani faqat aniq ehtiyoj bo‘lsa qo‘sh.
+1. Hozirgi katta `src/main.tsx`dan shu oqimga kerakli komponent va typed model/repository interfeyslarini ajrat. Mamlakat, shahar, klinika va stomatologni alohida modellashtir. Bitta stomatolog bir necha klinikada ishlay olsin. Demo yozuvlari aniq “namuna” deb belgilanadi.
+2. Barcha mamlakatni tanlash, shaharni qo‘lda kiritish/tanlash, UZ/RU/EN tilini saqlash va bemor/stomatolog/ustoz/talaba rolini ko‘rsatish ishlasin. Bir email hisobi keyinchalik ko‘p rol olishi mumkinligini modelda hisobga ol.
+3. Stomatolog qidiruvi profil, ixtisos, mamlakat, shahar va til bo‘yicha ishlasin. Profil sahifasida telefon, Telegram, WhatsApp, Instagram va sayt uchun ixtiyoriy maydonlar va tegishli ikonlar bo‘lsin; noto‘g‘ri URL/telefonni tekshir. “Tasdiqlangan stomatolog” belgisi demo profilga asossiz berilmasin.
+4. “Yaqin stomatologlar” bosilgandagina geolokatsiya ruxsatini so‘ra. Ruxsat rad qilinsa yoki joylashuv aniqlanmasa, qo‘lda tanlangan shahar bo‘yicha qidiruv ishlasin. Demo klinikalarni xaritada ko‘rsat; real global qamrovni da’vo qilma.
+5. Email-kodli ro‘yxatdan o‘tish oqimi uchun frontend va `AuthGateway` interfeysini tayyorla. Haqiqiy email yuborish, kod muddati, rate limit va sessiya uchun server/auth provayder kerakligini aniq ko‘rsat. Provider va credentials hali yo‘q bo‘lsa, “kod yuborildi” deb yolg‘on xabar ko‘rsatma. Keyingi bosqich uchun integratsiya nuqtasini va kerakli tashqi konfiguratsiyani hujjatlashtir.
+
+Bir sessiyaga sig‘adigan eng kichik to‘liq bo‘lakni tanla, lekin faqat statik maket yoki reja bilan to‘xtama. Yangi xarita/ISO mamlakat kutubxonasi kerak bo‘lsa, ishlatish shartlari va hajmini ko‘rib tanla. Oldingi `PremiumTurntable.tsx` to‘rtta tasvirdan iborat; uni uzluksiz 3D deb atama yoki eski GLB drafti bilan almashtirma.
 
 ## Qabul mezonlari
 
-- Ustoz guruh yaratadi → talaba kod bilan qo‘shiladi → ustoz topshiriq beradi → talaba rasmni belgilab ish topshiradi → ustoz fikr bildiradi → talaba portfelda natijani ko‘radi. Bu zanjir brauzerda bosib ishlaydi.
-- Yangilashdan keyin demo holatlari saqlanadi; rol almashganda boshqa rolning ma’lumotlari ko‘rinadi. Xatolik va bo‘sh holatlar tushunarli ko‘rsatiladi.
-- `npm run build` va mavjud `PROTOTYPE_HTML=demo.html python tools/verify.py` tekshiruvlari o‘tadi. Dependency yo‘q yoki lockfile o‘zgargan bo‘lsa, avval lockfile bo‘yicha qayta o‘rnat. Yangi oqim uchun **bitta mazmunli end-to-end test** yoz va ustoz hamda talaba rollari o‘rtasidagi almashuvni tekshir. `python tools/package.py` bilan offline demo va haqiqiy frontend screenshotlarini yangila.
-- Ish yakunida qanday ekranlar qo‘shilganini, qaysi ma’lumot faqat lokal ekanini va keyingi bosqich uchun qolgan qarorlarni README’da yoz. Natijani commit qil. Saytga joylanganini alohida tekshirmasdan “live” deb yozma.
+- Telefon o‘lchamida mamlakat/shahar tanlash → stomatologlarni filtrlash → profil va klinika xaritasini ochish oqimi bosib ishlaydi. “Yaqin” bosilganda ruxsat so‘raladi; rad etilganda qo‘lda qidiruv ishlaydi.
+- UZ/RU/EN matnlari va mavjud 19 ekran buzilmaydi. Demo ma’lumot va haqiqiy xizmat farqi foydalanuvchiga tushunarli.
+- `npm run build` o‘tadi; yangi oqim uchun mazmunli browser testi qo‘shiladi. Frontend o‘zgarsa `python tools/package.py` bilan offline demo va haqiqiy screenshotlar yangilanadi, `PROTOTYPE_HTML=demo.html python tools/verify.py` ishlatiladi.
+- README’da bajarilgan qismi, keyingi server/auth talablari va ishlamaydigan integratsiyalar aniq yoziladi. Natijani commit qil. Tekshirilmagan GitHub Pages yoki email yuborishni ishlaydi deb yozma.
 
-## Keyingi bosqichlar — birinchisi tugagach
+## Keyingi bosqichlar
 
-1. Haqiqiy autentifikatsiya, ustoz-guruh-talaba huquqlari, server bazasi va fayl saqlash. Texnologiyani mavjud talablar va hosting qaroriga qarab tanla; hozirdan tasodifiy backend tanlab qo‘yma.
-2. Bemor/stomatolog oqimlarini backendga ulash: profil, klinika, jadval va qabulni alohida bosqichlarda tekshirish.
-3. Ta’lim portfeli uchun ko‘nikma mezonlari va ustoz tasdig‘i. Testlar yordamchi bo‘lishi mumkin, lekin asosiy o‘quv tajribasi amaliy ish bo‘lsin.
-4. Premium uzluksiz 3D tish modeli faqat bir-biriga mos, tahrirlanadigan va foydalanish huquqi aniq bo‘lgan asset tayyorlangach. To‘rtta rasmni haqiqiy 3D deb atama.
-5. Ustoz/talaba oqimi va bemor/stomatolog xizmatlari ishlagach, foydalanuvchi bilan PWA yoki native iOS/Android tarqatish yo‘lini tanla.
-
-Birinchi bosqichni tugatish uchun mutlaqo kerak bo‘lmagan mahsulot qarorlarini o‘zing oqilona tanla; haqiqiy server, klinik ma’lumot yoki to‘lovga o‘tish oldidan foydalanuvchining talablarini aniqlashtir.
+1. Haqiqiy email-kodli auth, ko‘p rolli huquqlar, server baza va global geo-qidiruv; kasbiy litsenziya tekshiruvi. Provider/hosting va hisob sozlamalari foydalanuvchi bilan aniqlanadi.
+2. Ustoz/talaba uchun guruh kodi → amaliy ish → ustoz izohi → tasdiq → ko‘nikma portfeli. Faqat test/kunlik savolga aylantirma.
+3. Moderatsiyali forum, post va izohlar, UZ/RU/EN matn tarjimasi; so‘ng foydalanuvchi boshlaydigan audio tarjima.
+4. Haqiqiy qabul jadvali va boshqa klinik xizmatlar; so‘ng PWA yoki native iOS/Android tarqatish qarori. Bir xil sifat va huquqlar barcha rollarda tekshirilmaguncha “mukammal ilova” deb taqdim etma.
