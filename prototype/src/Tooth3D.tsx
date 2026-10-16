@@ -121,7 +121,12 @@ export default function Tooth3D({cut=false,angle=0,zoom=false,layer='enamel',var
        const surfaceTexture=new THREE.CanvasTexture(surfaceCanvas);
        surfaceTexture.colorSpace=THREE.SRGBColorSpace;
        const surfaceImage=new Image();
-       surfaceImage.onload=()=>{surfaceContext!.drawImage(surfaceImage,0,0,1280,1280);surfaceTexture.needsUpdate=true};
+       surfaceImage.onload=()=>{
+         surfaceContext!.drawImage(surfaceImage,0,0,1280,1280);
+         surfaceContext!.fillStyle='rgba(255,251,246,.14)';
+         surfaceContext!.fillRect(0,650,1280,630);
+         surfaceTexture.needsUpdate=true;
+       };
        surfaceImage.src=referenceEnamel;
        gltf.scene.traverse(object=>{
          if(!(object instanceof THREE.Mesh))return;
