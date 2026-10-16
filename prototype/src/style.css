@@ -20,3 +20,32 @@
 .anatomy-render>span{position:absolute;right:8px;bottom:19px;display:flex;align-items:center;gap:5px;background:#fffefee8;color:#087f94;border:1px solid #c8e7ed;border-radius:20px;padding:7px 10px;font-size:10px;font-weight:700;box-shadow:0 5px 18px #26758e20}
 .anatomy-stage>.stage-caption{z-index:3}
 .anatomy-stage:has(.anatomy-render)>.tooth-3d{visibility:hidden}
+
+/* Premium visual pass: fuller reference-inspired compositions and legible mobile type. */
+.phone{border-color:#10151b;box-shadow:0 30px 75px #17315338,0 0 0 3px #49525b,0 0 0 5px #d5e6ee}
+.phone:before{content:'';position:absolute;top:10px;left:50%;transform:translateX(-50%);width:92px;height:20px;border-radius:18px;background:#05080b;z-index:5;pointer-events:none}
+.intro-phone{background:radial-gradient(ellipse at 50% 43%,#c6f2f7 0,transparent 55%),linear-gradient(145deg,#ecf9ff,#fff 49%,#e7f7fb)}
+.intro-art{width:min(342px,100%);height:358px;margin:13px auto 5px}
+.intro-art>.hero-render{filter:drop-shadow(0 22px 18px #21627d3d)}
+.intro-art>.orbit,.intro-art:before,.intro-art:after{opacity:.23}
+.intro .brand.small{font-size:14px;letter-spacing:.2px;color:#09204a}
+.intro .brand.small .brand-symbol{width:39px;height:42px;margin-right:3px}
+.intro .eyebrow{font-size:10px;letter-spacing:2.6px}
+.intro h1{font-size:32px;font-weight:750;line-height:1.12;color:#071c45}
+.intro>p{font-size:13px;line-height:1.5;color:#577597}
+.hero{min-height:231px;background:linear-gradient(115deg,#e6f9fc 2%,#beeaf3 100%);box-shadow:0 11px 24px #2a8ca212}
+.hero-copy{width:65%}
+.hero h1{font-weight:750;font-size:25px}
+.hero p{font-size:11px;color:#526f8f}
+.hero-tooth{width:232px;height:239px;top:-1px;right:-54px;transform:none}
+.hero-tooth>.hero-render{filter:drop-shadow(0 15px 12px #176c8333)}
+.doctor-info h3,.schedule-card h3{font-size:13px}
+.doctor-info p,.schedule-card p,.body-copy{font-size:11px}
+.section-title h2{font-size:17px;font-weight:750}
+.profile-hero{padding-top:9px;background:radial-gradient(ellipse at 50% 32%,#c9edf7,transparent 72%)}
+.profile-hero h2{font-weight:750;color:#0b214e}
+.anatomy-stage{background:radial-gradient(ellipse at 50% 48%,#cceef7,#eaf8fc 64%,#f5fbff 100%);border:1px solid #e0f3f8;border-radius:28px;overflow:hidden}
+.anatomy-render>img{transform:scale(1.10);filter:drop-shadow(0 19px 15px #2f67842b)}
+.anatomy-title h2{font-weight:750;color:#09204a}
+.anatomy-tools button{font-size:11px}
+@media(max-width:440px){.phone{border:0;box-shadow:none}.phone:before{top:9px}.intro-art{width:min(342px,100%);height:355px}}

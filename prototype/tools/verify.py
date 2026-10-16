@@ -30,7 +30,7 @@ with sync_playwright() as p:
    if screen in ['anatomy','teacher','student','courses']:
     check(f'{lang}/{screen}: live WebGL model',page.locator('.tooth-3d canvas').count()==1 and page.locator('.webgl-unavailable').count()==0)
    if screen in ['splash','onboard','home']:
-    check(f'{lang}/{screen}: original 3D render',page.locator('.hero-render').count()==1 and page.locator('.hero-render').evaluate('(e)=>e.complete && e.naturalWidth>0'))
+    check(f'{lang}/{screen}: premium tooth image',page.locator('.hero-render').count()==1 and page.locator('.hero-render').evaluate('(e)=>e.complete && e.naturalWidth>0'))
    if lang=='uz':
     page.wait_for_timeout(320)
     page.locator('.mobile-screen-picker').evaluate('(e)=>e.style.display="none"')

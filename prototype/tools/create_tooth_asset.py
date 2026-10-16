@@ -23,14 +23,22 @@ def material(name,rgba,rough=.25,coat=.0,sub=.0):
  p.inputs['Coat Weight'].default_value=coat;p.inputs['Coat Roughness'].default_value=.08
  p.inputs['Subsurface Weight'].default_value=sub;p.inputs['Subsurface Radius'].default_value=(1,.5,.25)
  return m
-ENAMEL=material('Lustrous ivory enamel',(.87,.91,.91),.16,.82,.09)
-ROOT_MAT=material('Warm translucent root cementum',(.78,.72,.61),.3,.32,.12)
+ENAMEL=material('Lustrous ivory enamel',(.91,.89,.83),.135,.95,.12)
+ROOT_MAT=material('Warm translucent root cementum',(.84,.77,.65),.27,.4,.1)
 CUT=material('Enamel cross-section',(.94,.89,.78),.3,.3)
 DENTIN=material('Warm dentin',(.76,.52,.29),.36,.18,.1)
 PULP=material('Living pulp',(.65,.19,.19),.28,.35,.16)
 VESSEL=material('Deep red vessel',(.55,.055,.075),.21,.5)
 BLUE=material('Blue vessel',(.035,.23,.47),.23,.35)
 TEAL=material('Glowing turquoise orbit',(.02,.75,.83),.17,.6)
+
+# Enamel is smooth at a glance, but tiny roughness changes keep it from looking
+# like featureless plastic under the studio softboxes.
+enamel_nodes=ENAMEL.node_tree.nodes
+noise=enamel_nodes.new('ShaderNodeTexNoise');noise.inputs['Scale'].default_value=72;noise.inputs['Detail'].default_value=2.4
+bump=enamel_nodes.new('ShaderNodeBump');bump.inputs['Strength'].default_value=.055;bump.inputs['Distance'].default_value=.012
+ENAMEL.node_tree.links.new(noise.outputs['Fac'],bump.inputs['Height'])
+ENAMEL.node_tree.links.new(bump.outputs['Normal'],enamel_nodes.get('Principled BSDF').inputs['Normal'])
 
 def mesh(name,vertices,faces,mat):
  data=bpy.data.meshes.new(name);data.from_pydata(vertices,[],faces);data.update()
@@ -60,6 +68,7 @@ for j,(y,r) in enumerate(profile):
   ring.append((.99*radius*math.cos(a),y+cusp,.83*radius*math.sin(a)))
  rings.append(ring)
 crown=ring_mesh('Four-cusp sculpted enamel crown',rings,ENAMEL)
+roots=[]
 for side in [-1,1]:
  rings=[]
  for j in range(49):
@@ -67,7 +76,20 @@ for side in [-1,1]:
   x=side*(.34+.2*t+.06*math.sin(math.pi*t))
   rx=.36*(1-t)**.72+.008;rz=.30*(1-t)**.8+.008
   rings.append([(x+rx*math.cos(i*2*math.pi/S),y,rz*math.sin(i*2*math.pi/S)+.025*math.sin(math.pi*t)) for i in range(S)])
- ring_mesh(('Mesial' if side<0 else 'Distal')+' sculpted root',rings,ROOT_MAT)
+ roots.append(ring_mesh(('Mesial' if side<0 else 'Distal')+' sculpted root',rings,ENAMEL))
+
+# Voxel union removes the visible seam where each root enters the crown. A
+# light surface relaxation rounds the transition while retaining four cusps.
+bpy.ops.object.select_all(action='DESELECT')
+for obj in [crown,*roots]:obj.select_set(True)
+bpy.context.view_layer.objects.active=crown
+bpy.ops.object.join()
+crown.name='Single-piece sculpted molar'
+crown.data.remesh_voxel_size=.026
+bpy.ops.object.voxel_remesh()
+relax=crown.modifiers.new('Organic crown-root transition','SMOOTH');relax.factor=1.1;relax.iterations=3
+bpy.ops.object.modifier_apply(modifier=relax.name)
+for face in crown.data.polygons:face.use_smooth=True
 
 # Sectional dental tissue remains genuine geometry. It is displayed on a separate
 # anatomy render; the app's browser model supplies the drag, rotate and layer controls.
@@ -136,7 +158,7 @@ bpy.ops.mesh.primitive_cube_add(size=2)
 cutter=bpy.context.object;cutter.name='Anatomy section cutter';cutter.parent=rig
 cutter.location=(0,0,2.52);cutter.scale=(3,3,2.5)
 bpy.context.view_layer.update()
-for obj in [crown]+[o for o in bpy.context.scene.objects if o.name.endswith('sculpted root')]:
+for obj in [crown]:
  mod=obj.modifiers.new('Physical sagittal section','BOOLEAN');mod.operation='DIFFERENCE';mod.object=cutter
  bpy.ops.object.select_all(action='DESELECT');obj.select_set(True);bpy.context.view_layer.objects.active=obj
  bpy.ops.object.modifier_apply(modifier=mod.name)

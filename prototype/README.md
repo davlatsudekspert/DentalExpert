@@ -30,7 +30,7 @@ Build natijasi `dist/` ichida. `demo.html` esa shu buildning bitta faylga yig‘
 - Rol tanlash → Continue → demo kirish → rol bosh sahifasi.
 - Shifokor kartasi → profil → qabul → kun / vaqt → demo tasdiq.
 - Odontogrammada 32 ta FDI raqami bor; tishni tanlab anatomiya ekraniga o‘ting.
-- Anatomiya sahifasida original Blender 3D maketining sifatli renderi ochiladi. Renderdagi «Aylantirish · 3D»ni bosib jonli WebGL modeliga o‘ting; qatlamlar, aylantirish, yaqinlashtirish va barmoq bilan burishni sinang.
+- Anatomiya sahifasida premium illyustratsiya ochiladi. «Aylantirish · 3D»ni bosib jonli WebGL o‘quv maketiga o‘ting; qatlamlar, aylantirish, yaqinlashtirish va barmoq bilan burishni sinang.
 - Profil tahriri joriy sessiya ichida aks etadi; yangilaganda barcha demo holatlar tiklanadi.
 
 19 ko‘rinish: splash, onboarding, rol tanlash, login, sign up, bemor bosh sahifasi, qidiruv, shifokor profili, klinika, qabul, stomatolog ish maydoni, profil tahriri, bemor kartasi, odontogramma, anatomiya, ustoz, talaba, kurslar, sozlamalar.
@@ -39,7 +39,7 @@ Build natijasi `dist/` ichida. `demo.html` esa shu buildning bitta faylga yig‘
 
 Foydalanuvchi bergan ikki etalon asosida och moviy gradient, navy sarlavhalar, turquoise tugmalar, mint statuslar, yumaloq oq kartalar va tish atrofidagi orbitalar ishlatilgan. Bu etalonning pikselma-piksel nusxasi emas. Shifokor portretlari bitta original AI yaratilgan fotografik demo aktivdan olinadi. Ular haqiqiy shifokorlarning surati emas. Barcha portretlar mahalliy faylda, klinika xaritasi esa sxema. Dastlabki ochiq foto manzasiga tarmoq orqali kirish bloklandi; o‘rniga yuqori sifatli fiktsion demo aktiv tayyorlandi.
 
-Tish maketi original 3D geometriya. `assets/tooth3d/DentalExpert_Tooth.blend`da Blender sahnasi, fizik kesimi va emal/dentin/pulpa/ildiz materiallari saqlangan; `tools/create_tooth_asset.py` uni qayta yaratadi. Onboarding va anatomiya sahifasida shu maketdan olingan render ko‘rsatiladi. Anatomiya renderiga bosilganda `src/Tooth3D.tsx`dagi jonli Three.js/WebGL 3D model ochiladi: burish, zoom va qatlamlar ishlaydi. Bu o‘quv uchun soddalashtirilgan maket; klinik/ilmiy aniqligi tekshirilmagan. Tish AI rasm emas; faqat fiktsion shifokor portretlari AI bilan yaratilgan.
+Splash, bosh sahifa va anatomiya sahifasidagi `premium-hero.*` va `premium-anatomy.*` tish tasvirlari shu prototip uchun AI bilan yaratilgan yuqori sifatli statik illyustratsiyalardir. Ular aylantiriladigan 3D model yoki klinik anatomiya emas. Anatomiya tasviriga bosilganda `src/Tooth3D.tsx`dagi original Three.js/WebGL o‘quv maketi ochiladi: burish, zoom va qatlamlar ishlaydi. `assets/tooth3d/DentalExpert_Tooth.blend`da alohida original Blender sahnasi va kesimi saqlangan; `tools/create_tooth_asset.py` uni qayta yaratadi. Interaktiv model ham, Blender maketi ham o‘quv uchun soddalashtirilgan, klinik/ilmiy aniqligi tekshirilmagan.
 
 Login ma’lumotlarini hech qayerga yubormaydi. Testlar, maxfiylik va bildirishnoma kabi ayrim elementlar faqat demo holat yoki izohni ko‘rsatadi. Kurslar o‘quv kontenti emas; navigatsiya namunasi. Narxlar, vaqtlar, ism va barcha ko‘rsatkichlar sun’iy demo ma’lumotlar.
 
@@ -57,7 +57,7 @@ Login ma’lumotlarini hech qayerga yubormaydi. Testlar, maxfiylik va bildirishn
 
 `src/main.tsx` — ekranlar, lokal holat va tarjimalar.
 `src/Tooth3D.tsx` — original 3D geometriya, yoritish, kesim va WebGL boshqaruvi.
-`assets/tooth3d/` — original Blender `.blend` sahnasi, transparent WebP previewlar va JPG renderlar; `tools/create_tooth_asset.py` — Blender generatori.
+`assets/tooth3d/` — original Blender `.blend` sahnasi va uning renderlari, premium AI illyustratsiyalari (PNG/WebP/JPG); `tools/create_tooth_asset.py` — Blender generatori.
 `public/clinicians.png` — 3 ta fiktsion shifokor portretidan iborat lokal fotografik aktiv; `src/Portrait.tsx` — uning vektor fallbacki. `src/LogoMark.tsx` — original vektor logo.
 `src/style.css` — mobil dizayn tizimi va responsive layout.
 `DESIGN_HANDOFF.md` — Claude Code yoki keyingi ishlab chiquvchi uchun topshirish.

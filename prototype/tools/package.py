@@ -32,7 +32,7 @@ for idx,(screen,label) in enumerate(selected):
  draw.rounded_rectangle((left-7,top-7,left+image.width+7,top+image.height+7),radius=29,fill='#fff',outline='#cbdfe8',width=2)
  mask=Image.new('L',image.size,0);ImageDraw.Draw(mask).rounded_rectangle((0,0,*image.size),radius=22,fill=255)
  board.paste(image,(left,top),mask)
-draw.text((62,2340),'Original WebGL 3D tooth · Fictional local photo portraits · No backend · Not published',font=f(16),fill='#718da4')
+draw.text((62,2340),'Premium tooth visuals · Interactive WebGL viewer · Local demo only',font=f(16),fill='#718da4')
 board.save(ROOT/'screenshots/preview-board.png')
 archive=ROOT/'dental-expert-prototype.zip'
 with zipfile.ZipFile(archive,'w',zipfile.ZIP_DEFLATED) as z:

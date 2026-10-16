@@ -10,7 +10,7 @@ Bu papka mustaqil React + TypeScript + Vite **dizayn prototipi**. Asosiy loyiha 
 
 - `demo.html` — offline ko‘rish uchun bitta HTML fayl.
 - `src/main.tsx`, `src/style.css`, `src/Tooth3D.tsx` — ekranlar, dizayn va interaktiv tish.
-- `assets/tooth3d/` — original Blender modeli, JPG/WebP renderlari.
+- `assets/tooth3d/` — original Blender modeli va uning renderlari, splash va anatomiya uchun AI yaratilgan premium PNG/WebP/JPG illyustratsiyalar.
 - `screenshots/jpg/preview-board.jpg` — 8 asosiy ekranning umumiy ko‘rinishi; `screenshots/jpg/` — barcha 19 ekran.
 - `DESIGN_HANDOFF.md` — ekranlar, holatlar, komponentlar va cheklovlar haqida batafsil izoh.
 
