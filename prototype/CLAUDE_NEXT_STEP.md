@@ -6,7 +6,7 @@ Claude Code avval repo ichida ishlayotganini va `main`ning so‘nggi holatini ol
 
 ## Avval holatni tekshir
 
-Repository `davlatsudekspert/DentalExpert`, `main`; ilova `prototype/`da. `README.md`, `DESIGN_HANDOFF.md`, `PRODUCT_VISION.md` va `CLAUDE_START_HERE.md`ni o‘qi. `npm run build` va `npm run dev` bilan mavjud React + TypeScript + Vite prototipini tekshir. 19 ekran, UZ/RU/EN va premium tish renderlarini saqla. Hozir backend, haqiqiy email-kod, global stomatolog bazasi yoki klinik booking yo‘q. GitHub Pages oxirgi foydalanuvchi tekshiruvida 404 qaytargan; ishlayotgan live demo deb taqdim etma.
+Repository `davlatsudekspert/DentalExpert`, `main`; ilova `prototype/`da. `README.md`, `DESIGN_HANDOFF.md`, `PRODUCT_VISION.md` va `CLAUDE_START_HERE.md`ni o‘qi. `npm run build` va `npm run dev` bilan mavjud React + TypeScript + Vite prototipini tekshir. 19 ekran, UZ/RU/EN, premium tish renderlari va 5 tugmali, scroll paytida ixchamlashadigan pastki navigatsiyani saqla. Markazdagi 3D atlas hozir asosiy vizual amal; keyingi real Case Studio qurilganda unga tabiiy kirish nuqtasi bo‘lishi mumkin. Hozir backend, haqiqiy email-kod, global stomatolog bazasi yoki klinik booking yo‘q. GitHub Pages oxirgi foydalanuvchi tekshiruvida 404 qaytargan; ishlayotgan live demo deb taqdim etma.
 
 ## Mahsulot maqsadi
 

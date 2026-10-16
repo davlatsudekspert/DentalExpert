@@ -1,5 +1,5 @@
 {
-  "passed": 221,
+  "passed": 225,
   "checks": [
     "uz/splash: content",
     "uz/splash: no horizontal overflow",
@@ -218,6 +218,10 @@
     "rating filter",
     "edit confirmation",
     "edit reflected in profile",
+    "five navigation destinations",
+    "featured atlas opens",
+    "navigation compacts on scroll",
+    "navigation expands at top",
     "responsive 360",
     "responsive 430",
     "responsive 1280",

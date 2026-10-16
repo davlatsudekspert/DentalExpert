@@ -39,6 +39,8 @@ Boshlang‘ich demoda beshta **namunaviy, to‘liq tasvirlangan** stomatolog pro
 
 Ilova hamma rolga bitta umumiy lenta yoki faqat ball berish orqali qiziqarli bo‘lib qolmaydi. Kirishda rol, til, mamlakat/shahar va qiziqish bo‘yicha foydali bosh sahifa ochilsin. Har qaytishda odam o‘zi boshlagan ishni davom ettira olsin.
 
+Mobil pastki navigatsiyada beshta aniq yo‘nalish bo‘lsin: Asosiy, Qidiruv, markazda ajralib turadigan 3D atlas, O‘rganish va Profil. Ko‘proq kontent ko‘rish uchun pastga aylantirganda panel ixchamlashadi, yuqoriga qaytganda yozuvlari yana ochiladi; tugmalarni bosish va ekran o‘quvchisi orqali boshqarish saqlanadi. Hozirgi demo 3D atlasga olib boradi; keyingi Case Studio yoki boshqa rolga mos asosiy ishga o‘tish faqat shu oqim haqiqatda qurilgandan keyin hal qilinadi.
+
 | Foydalanuvchi | Birinchi foyda | Qaytish sababi |
 | --- | --- | --- |
 | Bemor | Yaqinidagi mos, tasdiqlangan stomatologni topish; profil va klinikani solishtirish. | Saqlangan shifokorlar, qabul holati, o‘zi kuzatgan mavzudagi tushunarli maslahatlar. |

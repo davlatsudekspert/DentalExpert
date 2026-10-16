@@ -68,3 +68,24 @@
 .premium-turntable>img{width:100%;height:100%;object-fit:contain;pointer-events:none;user-select:none;filter:drop-shadow(0 19px 16px #2f678430);transition:transform .2s ease}
 .premium-turntable>.turntable-angle{position:absolute;right:12px;bottom:17px;padding:7px 11px;border:1px solid #d1e9f0;border-radius:20px;background:#ffffffeb;color:#087f94;font-size:10px;font-weight:700;pointer-events:none}
 .anatomy-stage:has(.premium-turntable)>.anatomy-tag,.anatomy-stage:has(.premium-turntable)>.stage-caption{z-index:3}
+
+/* Five destinations with a raised atlas action; compact labels while scrolling. */
+.bottom-nav.five-tab-nav{z-index:20;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));align-items:end;gap:2px;margin:12px 12px 8px;padding:9px 7px 10px;min-height:70px;border:1px solid #36546e;border-radius:28px;background:linear-gradient(140deg,#152c4b,#0a1b35);box-shadow:0 13px 30px #0d28433d;transition:min-height .24s ease,padding .24s ease}
+.five-tab-nav button{min-height:49px;gap:4px;color:#d8e8f1;font-size:9px;transition:transform .2s ease,color .2s ease}
+.five-tab-nav button:active{transform:scale(.9)}
+.five-tab-nav button.active{color:#f5d88a}
+.five-tab-nav button:focus-visible{outline:2px solid #f5d88a;outline-offset:2px;border-radius:14px}
+.five-tab-nav .nav-icon{width:36px;height:30px;display:grid;place-items:center}
+.five-tab-nav .nav-icon svg{width:23px;height:23px}
+.five-tab-nav .nav-label{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%;transition:opacity .2s ease,max-height .2s ease}
+.five-tab-nav .nav-featured{align-self:center;color:#f7de9d;transform:translateY(-7px)}
+.five-tab-nav .nav-featured .nav-icon{width:55px;height:55px;margin-top:-25px;border:2px solid #d5b96c;border-radius:50%;background:radial-gradient(circle at 35% 28%,#274e68,#102944 65%);box-shadow:0 6px 17px #020d21a8,0 0 0 5px #102641;transition:transform .2s ease}
+.five-tab-nav .nav-featured .nav-icon svg{width:27px;height:27px}
+.five-tab-nav .nav-featured:active{transform:translateY(-7px) scale(.9)}
+.five-tab-nav.compact{min-height:49px;padding-top:5px;padding-bottom:5px}
+.five-tab-nav.compact button{min-height:36px}
+.five-tab-nav.compact .nav-label{opacity:0;max-height:0}
+.five-tab-nav.compact .nav-featured{transform:translateY(0)}
+.five-tab-nav.compact .nav-featured .nav-icon{width:41px;height:41px;margin-top:-10px}
+.five-tab-nav.compact .nav-featured:active{transform:scale(.9)}
+@media(max-width:440px){.phone:has(.five-tab-nav) .screen{padding-bottom:130px}.bottom-nav.five-tab-nav{position:fixed;left:10px;right:10px;bottom:max(8px,env(safe-area-inset-bottom));margin:0;max-width:none}.phone:has(.five-tab-nav) .home-indicator{display:none}.phone:has(.five-tab-nav)~.mobile-screen-picker{bottom:100px}}
