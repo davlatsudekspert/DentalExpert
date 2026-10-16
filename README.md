@@ -1,10 +1,10 @@
 # Dental Expert — mobil dizayn prototipi
 
-Quyidagi rasmlar **ishlaydigan frontenddan olingan screenshotlar**. `Tish Rasm.rar`dagi tishlar asosida premium renderlar tayyorlanib splash, bosh sahifa va anatomiyadagi uch ko‘rinishga joylangan; anatomiya tugmasi alohida interaktiv 3D o‘quv maketini ochadi. Bu loyiha React + TypeScript + Vite asosidagi lokal UI/UX demo; haqiqiy qabul, bemor ma’lumotlari yoki to‘lov tizimi ulanmagan.
+Quyidagi rasmlar **ishlaydigan frontenddan olingan screenshotlar**. `Tish Rasm.rar`dagi tishlar asosida premium renderlar tayyorlanib splash, bosh sahifa va anatomiyadagi uch ko‘rinishga joylangan; anatomiya tugmasi bir xil premium uslubdagi to‘rt burchakli 360° vizual ko‘rinishni ochadi (bu haqiqiy 3D mesh emas). Bu loyiha React + TypeScript + Vite asosidagi lokal UI/UX demo; haqiqiy qabul, bemor ma’lumotlari yoki to‘lov tizimi ulanmagan.
 
-[8 ekranli previewni katta ochish](prototype/screenshots/jpg/preview-board.jpg) · [Onboarding](prototype/screenshots/jpg/onboard.jpg) · [Bemor bosh sahifasi](prototype/screenshots/jpg/home.jpg) · [Stomatolog profili](prototype/screenshots/jpg/profile.jpg) · [Qabulga yozilish](prototype/screenshots/jpg/booking.jpg) · [3D anatomiya](prototype/screenshots/jpg/anatomy.jpg)
+[8 ekranli previewni katta ochish](prototype/screenshots/jpg/preview-board.jpg) · [Onboarding](prototype/screenshots/jpg/onboard.jpg) · [Bemor bosh sahifasi](prototype/screenshots/jpg/home.jpg) · [Stomatolog profili](prototype/screenshots/jpg/profile.jpg) · [Qabulga yozilish](prototype/screenshots/jpg/booking.jpg) · [Anatomiya](prototype/screenshots/jpg/anatomy.jpg) · [360° old ko‘rinish](prototype/screenshots/jpg/anatomy-360.jpg) · [360° yon ko‘rinish](prototype/screenshots/jpg/anatomy-360-side.jpg)
 
-[Jonli 3D GLB maketining alohida screenshoti](prototype/screenshots/anatomy-3d.png) · [GLB fayl](prototype/assets/tooth3d/reference-molar.glb). Bu arxivdagi rasmlardan taxminan yasalgan tahrirlanadigan o‘quv maketi; rasmlarning foto sifatini yoki klinik aniqligini hali takrorlamaydi.
+Tahrirlanadigan [eski GLB drafti](prototype/assets/tooth3d/reference-molar.glb) arxivda saqlangan; u premium vizualning o‘rnida ko‘rsatilmaydi.
 
 ![Dental Expert prototipining 8 asosiy ekrani](prototype/screenshots/jpg/preview-board.jpg)
 

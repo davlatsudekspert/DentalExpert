@@ -30,7 +30,7 @@ Build natijasi `dist/` ichida. `demo.html` esa shu buildning bitta faylga yig‘
 - Rol tanlash → Continue → demo kirish → rol bosh sahifasi.
 - Shifokor kartasi → profil → qabul → kun / vaqt → demo tasdiq.
 - Odontogrammada 32 ta FDI raqami bor; tishni tanlab anatomiya ekraniga o‘ting.
-- Anatomiya sahifasida `Tish Rasm.rar`dagi kesim, tashqi va yuqori ko‘rinishlarni tanlash mumkin. «Aylantirish · 3D»ni bosib arxivdagi tashqi ko‘rinishlardan **taxminan** yaratilgan uch ildizli GLB modeliga o‘ting; aylantirish va yaqinlashtirish ishlaydi. Qatlam tanlanganda alohida, soddalashtirilgan ikki ildizli kesim maketi ochiladi.
+- Anatomiya sahifasida `Tish Rasm.rar`dagi kesim, tashqi va yuqori ko‘rinishlarni tanlash mumkin. «360° ko‘rinish»ni bosib uch ildizli tishning old, o‘ng, orqa va chap premium tasvirlarini aylantirib ko‘ring; drag, klaviatura strelkalari va yaqinlashtirish ishlaydi. Bu to‘rtta statik renderdan tuzilgan vizual prototip, uzluksiz 3D mesh emas. Qatlam tanlanganda premium kesim tasviri ochiladi.
 - Profil tahriri joriy sessiya ichida aks etadi; yangilaganda barcha demo holatlar tiklanadi.
 
 19 ko‘rinish: splash, onboarding, rol tanlash, login, sign up, bemor bosh sahifasi, qidiruv, shifokor profili, klinika, qabul, stomatolog ish maydoni, profil tahriri, bemor kartasi, odontogramma, anatomiya, ustoz, talaba, kurslar, sozlamalar.
@@ -39,9 +39,9 @@ Build natijasi `dist/` ichida. `demo.html` esa shu buildning bitta faylga yig‘
 
 Foydalanuvchi bergan ikki etalon asosida och moviy gradient, navy sarlavhalar, turquoise tugmalar, mint statuslar, yumaloq oq kartalar va tish atrofidagi orbitalar ishlatilgan. Bu etalonning pikselma-piksel nusxasi emas. Shifokor portretlari bitta original AI yaratilgan fotografik demo aktivdan olinadi. Ular haqiqiy shifokorlarning surati emas. Barcha portretlar mahalliy faylda, klinika xaritasi esa sxema. Dastlabki ochiq foto manzasiga tarmoq orqali kirish bloklandi; o‘rniga yuqori sifatli fiktsion demo aktiv tayyorlandi.
 
-Splash va bosh sahifada arxivdagi tashqi tish ko‘rinishi, anatomiyada esa shu arxivning kesim, tashqi va tepadan ko‘rinishlari (`premium-reference-*-ivory.webp` va `archive-occlusal.webp`) ishlatiladi. Premium renderlar yuborilgan JPGlar asosida qayta ishlanib, shaffof WebPga aylantirildi; original JPGlar `assets/tooth3d/user-views/`da saqlangan. Bular turli burchakdagi statik tasvirlar, aylantiriladigan yagona 3D model emas. Anatomiya tasviriga bosilganda `src/Tooth3D.tsx`dagi original Three.js/WebGL o‘quv maketi ochiladi: burish, zoom va qatlamlar ishlaydi. `assets/tooth3d/DentalExpert_Tooth.blend`da alohida original Blender sahnasi va kesimi saqlangan; `tools/create_tooth_asset.py` uni qayta yaratadi. Interaktiv model ham, Blender maketi ham o‘quv uchun soddalashtirilgan, klinik/ilmiy aniqligi tekshirilmagan.
+Splash va bosh sahifada `premium-reference-hero-ivory.webp`, anatomiyada esa kesim, tepadan ko‘rinish va `turntable-*.webp` asosidagi to‘rt burchakli 360° vizual ishlatiladi. Premium renderlar foydalanuvchi yuborgan JPGlar asosida tayyorlangan; original JPGlar `assets/tooth3d/user-views/`da saqlangan. Turntable old/o‘ng/orqa/chap ko‘rinishlarga ega, lekin bu yagona aylantiriladigan 3D mesh yoki klinik rekonstruksiya emas. `src/PremiumTurntable.tsx` drag va klaviatura orqali burchak almashtiradi; `src/Tooth3D.tsx`dagi eski WebGL drafti manba sifatida qoldirilgan, foydalanuvchi ekranlarida ko‘rsatilmaydi.
 
-`Tish Rasm.rar`dan 6 JPG ochildi va `assets/tooth3d/user-views/`da saqlandi. Tashqi ko‘rinishlarda uchta ildiz, kesimlarda ikkita ildiz ko‘rinadi; rasmlar bitta mos 3D obyektning kalibrlangan ko‘rinishlari emas. `tools/build_reference_molar.py` tashqi ko‘rinishlarga tayangan holda `reference-molar.glb` va tahrirlanadigan `reference-molar.blend` yaratadi. Bu haqiqiy aylantiriladigan 3D **draft**; tashqi sirtida yuborilgan tish renderi tekstura sifatida ishlatiladi, lekin geometriyasi hali surat darajasidagi premium yoki klinik jihatdan to‘g‘ri rekonstruksiya emas. Jonli holatning haqiqiy frontend screenshoti `screenshots/anatomy-3d.png`da.
+`Tish Rasm.rar`dan 6 JPG ochildi va `assets/tooth3d/user-views/`da saqlandi. Tashqi ko‘rinishlarda uchta ildiz, kesimlarda ikkita ildiz ko‘rinadi; rasmlar bitta mos 3D obyektning kalibrlangan ko‘rinishlari emas. `tools/build_reference_molar.py` tashqi ko‘rinishlarga tayangan holda `reference-molar.glb` va tahrirlanadigan `reference-molar.blend` yaratadi. Bu repoda saqlangan haqiqiy aylantiriladigan 3D **draft**, ammo ilovadagi premium turntable uchun ishlatilmaydi; tashqi sirtida yuborilgan tish renderi tekstura sifatida ishlatiladi, lekin geometriyasi hali surat darajasidagi premium yoki klinik jihatdan to‘g‘ri rekonstruksiya emas. Jonli holatning haqiqiy frontend screenshoti `screenshots/anatomy-3d.png`da.
 
 Login ma’lumotlarini hech qayerga yubormaydi. Testlar, maxfiylik va bildirishnoma kabi ayrim elementlar faqat demo holat yoki izohni ko‘rsatadi. Kurslar o‘quv kontenti emas; navigatsiya namunasi. Narxlar, vaqtlar, ism va barcha ko‘rsatkichlar sun’iy demo ma’lumotlar.
 
@@ -58,13 +58,13 @@ Login ma’lumotlarini hech qayerga yubormaydi. Testlar, maxfiylik va bildirishn
 ## Fayllar
 
 `src/main.tsx` — ekranlar, lokal holat va tarjimalar.
-`src/Tooth3D.tsx` — original 3D geometriya, yoritish, kesim va WebGL boshqaruvi.
+`src/PremiumTurntable.tsx` — premium tasvirli 360° vizual boshqaruvi; `src/Tooth3D.tsx` — avvalgi WebGL drafti.
 `assets/tooth3d/` — original Blender `.blend` sahnasi va uning renderlari, premium hero hamda foydalanuvchi yuborgan kesim illyustratsiyasi (PNG/WebP/JPG); `tools/create_tooth_asset.py` — Blender generatori.
 `tools/build_reference_molar.py` — arxivdagi JPG ko‘rinishlari asosida uch ildizli tahrirlanadigan Blender sahnasi va GLB draft yaratadi.
 `public/clinicians.png` — 3 ta fiktsion shifokor portretidan iborat lokal fotografik aktiv; `src/Portrait.tsx` — uning vektor fallbacki. `src/LogoMark.tsx` — original vektor logo.
 `src/style.css` — mobil dizayn tizimi va responsive layout.
 `DESIGN_HANDOFF.md` — Claude Code yoki keyingi ishlab chiquvchi uchun topshirish.
 
-Asl loyiha bo‘sh edi; barcha yangi ish faqat `prototype/` ichida. GitHubga push va ommaviy joylashtirish bajarilmagan. Fayllarni saqlab qolishning mustaqil usuli — ZIPni o‘z qurilmangizga yuklab olish.
+Asl loyiha bo‘sh edi; barcha yangi ish faqat `prototype/` ichida. Manba kod foydalanuvchi ruxsati bilan GitHubdagi public repoga yuborilgan; ilova alohida deploy qilinmagan. Fayllarni saqlab qolishning mustaqil usuli — ZIPni o‘z qurilmangizga yuklab olish.
 
 Offline HTMLning navigatsiyasi va demo qabuli brauzer xotirasidan yuklash orqali tekshirildi: tashqi HTTP so‘rovlari yo‘q. Cloud Chromium `file://` navigatsiyasini administrator siyosati bilan bloklaydi, shu sababli faylni bevosita ochish ushbu muhitda tekshirilmagan. ZIP yaxlitligi tekshirildi. Bulut uchun install/start ko‘rsatmalari draft sifatida saqlandi; ular avtomatik faollashtirilmagan va muhit publikatsiya qilinmagan.
