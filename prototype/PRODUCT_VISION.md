@@ -25,6 +25,8 @@ Shifokor bir necha klinikada ishlashi mumkin; xaritada klinika manzili va shifok
 
 Aloqa tugmalari profilda ko‘rinadigan, brend ikonli va yozuvli bo‘lsin: qo‘ng‘iroq, Telegram, Instagram, email, xarita va raqamli vizitka (profil QR/ulashish). WhatsApp va sayt mavjud bo‘lsa qo‘shiladi. “Kuzatish” va ulashish alohida amallar. QR yoki vizitka to‘lov kartasi sifatida talqin qilinmasin. Bosiladigan tashqi havolalar tekshirilsin; demo profilning o‘ylab topilgan kontaktlari ishlaydigan deb ko‘rsatilmasin.
 
+Profil rasmi foydalanuvchi tomonidan yuklanadi: mutaxassis o‘z fotosuratini, klinika egasi klinikaning firma logotipini qo‘yadi. Bular alohida identifikator va joylarda ko‘rsatiladi, profil egasi ularni almashtirishi yoki olib tashlashi mumkin. Format/hajm tekshiruvi, kesishdan oldin ko‘rish va rasm yo‘q holatida sifatli placeholder bo‘lsin. Yuklangan rasm kasbiy litsenziya tasdig‘i emas.
+
 Boshlang‘ich demoda beshta **namunaviy, to‘liq tasvirlangan** stomatolog profili bo‘lsin. Turli mamlakat, shahar, ixtisos va ish tillari orqali qidiruvni ko‘rsatadi. Profilning izohli matnlari UZ/RU/EN interfeysiga moslashadi; odam ismi va joy nomi o‘zgarmaydi. “100% to‘liq” degani bemorga qaror qilish uchun kerakli ma’lumotlar borligini anglatadi; ixtiyoriy ijtimoiy tarmoq maydonini sun’iy ma’lumot bilan to‘ldirish shart emas. Barcha demo profillar aniq belgilansin, haqiqiy reyting, litsenziya yoki aloqa ekanini da’vo qilmasin.
 
 ## Hamjamiyat va tarjima
