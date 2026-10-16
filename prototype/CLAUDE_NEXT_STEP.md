@@ -32,6 +32,6 @@ Bir sessiyaga sig‘adigan eng kichik to‘liq bo‘lakni tanla, lekin faqat sta
 ## Keyingi bosqichlar
 
 1. Haqiqiy email-kodli auth, ko‘p rolli huquqlar, server baza va global geo-qidiruv; kasbiy litsenziya tekshiruvi. Provider/hosting va hisob sozlamalari foydalanuvchi bilan aniqlanadi.
-2. Ustoz/talaba uchun guruh kodi → amaliy ish → ustoz izohi → tasdiq → ko‘nikma portfeli. Faqat test/kunlik savolga aylantirma.
+2. Ustoz/talaba uchun guruh kodi → amaliy ish → ustoz izohi → tasdiq → ko‘nikma portfeli. `PRODUCT_VISION.md`dagi Case Studio’dan bitta namunaviy stomatologik holat bilan boshlagin. Faqat test/kunlik savolga aylantirma; hozirgi to‘rt tasvirli aylantirgichni haqiqiy 3D model deb ko‘rsatma.
 3. Moderatsiyali forum, post va izohlar, UZ/RU/EN matn tarjimasi; so‘ng foydalanuvchi boshlaydigan audio tarjima.
 4. Haqiqiy qabul jadvali va boshqa klinik xizmatlar; so‘ng PWA yoki native iOS/Android tarqatish qarori. Bir xil sifat va huquqlar barcha rollarda tekshirilmaguncha “mukammal ilova” deb taqdim etma.

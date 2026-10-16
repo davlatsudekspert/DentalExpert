@@ -44,6 +44,19 @@ Hamjamiyatda mutaxassislikka oid mavzuni kuzatish, foydali postni saqlash va izo
 
 Forensic LabGuide ham alohida ilova sifatida shu tamoyildan foydalanadi: talaba keyingi tergov ishini davom ettirish, ustoz izohini ko‘rish va amaliy portfelini to‘ldirish uchun qaytadi. Uning kontenti, forumi va foydalanuvchi ma’lumotlari Dental Expert bilan avtomatik qo‘shilmaydi.
 
+## Ikkala ilovaning ajralib turadigan tajribasi: Case Studio
+
+Case Studio foydalanuvchiga bir holatni bosqichma-bosqich o‘rganish, o‘z qarorini asoslash va ustoz yoki hamkasbdan mazmunli fikr olish imkonini beradi. Bu majburiy kundalik test emas. Har holatning manbasi, muallifi, murakkabligi va zarur ogohlantirishi ko‘rsatiladi; faqat ruxsat berilgan, shaxsi aniqlanmaydigan materiallar ishlatiladi. Talabaning ishi va ustoz izohi ruxsatlari bilan yopiq qoladi; ommaga chiqarish alohida ixtiyoriy amal bo‘ladi.
+
+| Ilova | Holatdagi asosiy amal | Qaytishga sabab |
+| --- | --- | --- |
+| Dental Expert | 3D tish atlasi va klinik tasvirga belgi qo‘yish, ehtimoliy tashxis va davolash yo‘llarini dalil bilan solishtirish, ustozga ish yuborish. | Ustozning aniq izohi, qayta ishlangan reja, rivojlangan ko‘nikma portfeli va ixtiyoriy kasbiy muhokama. |
+| Forensic LabGuide | Hodisa materiallari va laboratoriya natijalarini vaqt chizig‘i hamda dalillar taxtasida bog‘lash, xulosa va noaniqliklarni yozish, ustozga topshirish. | Yangi dalil yoki ustoz izohi kelganda xulosani qayta ko‘rish, oldingi qarorlar bilan solishtirish va amaliy portfelni to‘ldirish. |
+
+Ikkalasida ham ustoz kichik guruhga holat tayinlaydi, bosqichma-bosqich izoh beradi va talabaning **fikrlash jarayonini** baholaydi. To‘g‘ri javobni birdan ochib berish o‘rniga foydalanuvchi qaysi dalilga suyanganini ko‘rsatadi. Kasbiy hamjamiyat uchun alohida, moderatsiyali “holat muhokamasi” bo‘lishi mumkin; bemorga individual tashxis yoki sud-tergovga rasmiy xulosa o‘rnini bosmasligi aniq aytiladi.
+
+Birinchi kichik mahsulot bo‘lagi: Dental Expert’da bitta ruxsatli namunaviy holatga 3D atlasda belgi qo‘yish → qaror sababini yozish → ustoz izohini ko‘rish; Forensic LabGuide’da bitta namunaviy dalillar taxtasi → vaqt chizig‘i → asoslangan xulosa → ustoz izohi. Avval shu oqimlar foydali ekanini haqiqiy ustoz va talabalar bilan tekshirish, keyin kontent kutubxonasi, tarjima va avtomatik tahlilni kengaytirish. Forensic LabGuide kodi va ma’lumotlari uning o‘z reposida yuritiladi.
+
 ## Qurish tartibi
 
 1. **Global poydevor:** 3 til, barcha mamlakatlar, email-kodli hisob arxitekturasi, ko‘p rolli profil, stomatolog/klinika katalogi, filtr va xarita, GPSga o‘z vaqtida ruxsat so‘rash. Avval demo ma’lumot bilan aniq ishlaydigan bir oqim; keyin haqiqiy auth, baza va tasdiqlash.
