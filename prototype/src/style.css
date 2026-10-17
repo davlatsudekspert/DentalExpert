@@ -174,3 +174,10 @@
 .phone:has(.email-verification) .topbar button:last-child{visibility:hidden}
 
 .account-session{display:grid;gap:10px;padding:4px 20px 28px}
+
+.official-schedule{display:grid;gap:10px;margin:14px 20px 110px;padding:16px}
+.official-schedule h2{margin:0;font-size:17px;color:#10254e}
+.official-schedule label{display:grid;gap:6px;font-size:12px;color:#5c7590}
+.official-schedule select{width:100%;min-height:44px;border:1px solid #d3e6ee;border-radius:14px;padding:0 12px;background:#fff;color:#10254e;font:inherit}
+.official-schedule .button{text-decoration:none}
+.official-schedule small{color:#718da4;font-size:11px;line-height:1.4}

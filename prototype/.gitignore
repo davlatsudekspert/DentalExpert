@@ -5,3 +5,9 @@ dist/
 dental-expert-prototype.zip
 .wrangler/
 .dev.vars
+android/local.properties
+android/.gradle/
+android/app/build/
+android/build/
+ios/App/Pods/
+ios/DerivedData/

@@ -50,6 +50,13 @@ with sync_playwright() as p:
  page.get_by_role('button',name='Sign out').click();page.wait_for_selector('.auth-entry')
  page.goto(f'{BASE}/?screen=settings&lang=en');page.wait_for_selector('.screen')
  check('signed out: no account actions',page.locator('.account-session').count()==0)
+ # --- official schedule links (no copied schedules)
+ page.goto(f'{BASE}/?screen=student&lang=en');page.wait_for_selector('.official-schedule')
+ check('schedule section lists institutions',page.locator('.official-schedule option').count()>=4)
+ link=page.locator('.official-schedule a.button').first
+ check('official schedule is an external noopener link',link.get_attribute('rel')=='noopener noreferrer' and link.get_attribute('href').startswith('http'))
+ page.locator('.official-schedule select').select_option('adti')
+ check('institution without a schedule page links to its site instead',page.locator('.official-schedule a').first.get_attribute('href')=='https://adti.uz')
  check('no browser exceptions',not errors)
  b.close()
 print('PASS',len(checks),'checks')

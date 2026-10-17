@@ -65,6 +65,7 @@ Telegram guruhi @stomotologiya_alfraganus ("STOMOTOLOGIYA 4🩺", 73 a'zo) rasmi
 | Muassasa | Holat |
 | --- | --- |
 | Buxoro davlat tibbiyot instituti (https://bsmi.uz) | Sayt fakultetlar ro'yxatida stomatologiya fakulteti yo'q (Tibbiyot, Biotibbiyot, Xalqaro tibbiyot, Turkiya, Diplomdan keyingi). Lekin "Stomatologiya o'quv-ilmiy va amaliy markazi" mavjud va sayt "Stomatologiya" bakalavr dasturi ECAQA tomonidan xalqaro akkreditatsiyadan o'tganini yozadi. Dastur qaysi tuzilmada ekani aniq emas. |
+| Qo'qon universiteti va Andijon filiali (QUAF) | Rasmiy sayt https://www.kokanduni.uz (manzil, telefon, rekvizitlar bor; "rasmiy" deb yozilmagan). Rasmiy aloqa sahifasi Andijon filialini ko'rsatadi: Andijon sh., Bobur shoh ko'chasi 2-b. **Stomatologiya dasturi faqat aggregatorda** ([Mentalaba](https://mentalaba.uz/direction/stomatologiya-yonalishlar-boyicha-244): 2026 qabul, 5 yil; narxlar yozilmadi) uchraydi; rasmiy saytda stomatologiya fakulteti/kafedrasi topilmadi. Filialning o'z sayti (`quaf.uz`, `andijan.kokanduni.uz`) mavjud emas. Dars jadvali havolasi topilmadi (talaba tizimi HEMIS: https://student.kokanduni.uz, jadval borligi aniq emas). Ilova ro'yxatiga kiritilmadi. |
 
 ## Tasdiqlanmagan nomzodlar (rasmiy sayt ochilmagan)
 

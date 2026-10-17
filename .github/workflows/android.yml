@@ -1,0 +1,43 @@
+name: Android test APK
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  apk:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: prototype
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: prototype/package-lock.json
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 21
+      - name: Install Android platform and build tools
+        run: |
+          yes | "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" --licenses >/dev/null || true
+          "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" "platforms;android-36" "build-tools;36.0.0"
+      - run: npm ci
+      - name: Build web assets (bundled, hosted API)
+        run: npm run build
+        env:
+          VITE_API_BASE: https://dental-expert.pages.dev
+      - run: npx cap sync android
+      - name: Assemble debug APK (debug-signed, installable for testing)
+        working-directory: prototype/android
+        run: ./gradlew assembleDebug --no-daemon
+      - uses: actions/upload-artifact@v4
+        with:
+          name: dental-expert-debug-apk
+          path: prototype/android/app/build/outputs/apk/debug/app-debug.apk
+          if-no-files-found: error
