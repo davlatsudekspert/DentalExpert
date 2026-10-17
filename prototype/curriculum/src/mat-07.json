@@ -180,7 +180,7 @@
           "detail": {
             "en": "Perforated tray or adhesive",
             "ru": "Перфорированная ложка или адгезив",
-            "uz": "Perforatsiyali yoki yopishqoqli qoshiq"
+            "uz": "Perforatsiyali qoshiq yoki adgeziv"
           }
         },
         {
@@ -398,7 +398,7 @@
           {
             "en": "Crowns and implants",
             "ru": "Для коронок и имплантатов",
-            "uz": "Toj va implantlar uchun"
+            "uz": "Koronka va implantlar uchun"
           }
         ],
         [
@@ -571,7 +571,7 @@
         {
           "en": "Crowns, bridges, inlays: A-silicone or polyether",
           "ru": "Коронки, мосты, вкладки: А-силикон или полиэфир",
-          "uz": "Toj, ko‘prik, vkladka: A-silikon yoki polieter"
+          "uz": "Koronka, ko‘prik, vkladka: A-silikon yoki polieter"
         },
         {
           "en": "Wet fields favour polyether or hydrophilic A-silicone",
@@ -1019,7 +1019,7 @@
       "q": {
         "en": "A crown impression is planned and the gingival margin area is moist. Which material is preferable?",
         "ru": "Пациенту планируют оттиск под металлокерамическую коронку, у края десны влажно. Какой материал предпочтителен?",
-        "uz": "Bemorda metall-keramik toj uchun qolip olish rejalashtirilgan, milk chizig‘i atrofi nam. Qaysi material afzal?"
+        "uz": "Bemorda metall-keramik koronka uchun qolip olish rejalashtirilgan, milk chizig‘i atrofi nam. Qaysi material afzal?"
       },
       "options": [
         {
@@ -1047,7 +1047,7 @@
       "explain": {
         "en": "These materials are accurate and wet moist surfaces well; alginate is not accurate enough for crowns.",
         "ru": "Эти материалы точны и хорошо смачивают влажную поверхность; альгинат для коронок недостаточно точен.",
-        "uz": "Bu materiallar aniq va nam yuzani yaxshi ho‘llaydi; alginat esa toj uchun yetarlicha aniq emas."
+        "uz": "Bu materiallar aniq va nam yuzani yaxshi ho‘llaydi; alginat esa koronka uchun yetarlicha aniq emas."
       }
     },
     {

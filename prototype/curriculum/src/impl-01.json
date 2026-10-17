@@ -304,7 +304,7 @@
           "label": {
             "en": "Cool saline irrigation",
             "ru": "Охлаждение холодным физраствором",
-            "uz": "Sovuq sho‘r eritma bilan sovitish"
+            "uz": "Sovuq fiziologik eritma bilan sovitish"
           },
           "detail": {
             "en": "Continuous irrigation",
@@ -633,7 +633,7 @@
         {
           "en": "Black",
           "ru": "Блэк",
-          "uz": "Black"
+          "uz": "Blek"
         },
         {
           "en": "Angle",
@@ -648,7 +648,7 @@
         {
           "en": "Kennedy",
           "ru": "Кеннеди",
-          "uz": "Kennedy"
+          "uz": "Kennedi"
         }
       ],
       "correct": 2,
@@ -853,7 +853,7 @@
         {
           "en": "Cool saline irrigation",
           "ru": "Охлаждение физраствором",
-          "uz": "Sovuq sho‘r eritma bilan sovitish"
+          "uz": "Sovuq fiziologik eritma bilan sovitish"
         },
         {
           "en": "Heavy smoking during healing",

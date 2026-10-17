@@ -681,7 +681,7 @@
         {
           "en": "Bitewing radiograph",
           "ru": "Интерпроксимальный снимок",
-          "uz": "Bitewing snimok"
+          "uz": "Bitewing rentgenogramma"
         },
         {
           "en": "Chest radiograph",
@@ -691,19 +691,19 @@
         {
           "en": "Upper periapical view",
           "ru": "Прицельный снимок верхней челюсти",
-          "uz": "Yuqori jag‘ prisel snimki"
+          "uz": "Yuqori jag‘ periapikal rentgenogrammasi"
         },
         {
           "en": "Lower occlusal radiograph",
           "ru": "Окклюзионный снимок нижней челюсти",
-          "uz": "Pastki jag‘ okklyuzion snimki"
+          "uz": "Pastki jag‘ okklyuzion rentgenogrammasi"
         }
       ],
       "correct": 3,
       "explain": {
         "en": "A lower occlusal view shows the Wharton duct in the floor of the mouth.",
         "ru": "Окклюзионный снимок нижней челюсти хорошо показывает вартонов проток.",
-        "uz": "Pastki okklyuzion snimok og‘iz tubidagi Varton yo‘lini yaxshi ko‘rsatadi."
+        "uz": "Pastki okklyuzion rentgenogramma og‘iz tubidagi Varton yo‘lini yaxshi ko‘rsatadi."
       }
     },
     {

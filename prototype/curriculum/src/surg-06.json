@@ -222,7 +222,7 @@
           {
             "en": "Maxillary central incisor",
             "ru": "Верхний центральный резец",
-            "uz": "Yuqori markaziy kurak tish"
+            "uz": "Yuqori markaziy kesuvchi tish"
           },
           {
             "en": "Rotation (conical root)",
@@ -434,7 +434,7 @@
           "label": {
             "en": "No food until numbness wears off",
             "ru": "Не есть до прохождения онемения",
-            "uz": "Uvushish o‘tguncha ovqat yemaslik"
+            "uz": "Uvishish o‘tguncha ovqat yemaslik"
           }
         },
         {
@@ -605,7 +605,7 @@
         {
           "en": "Upper central incisor: conical root",
           "ru": "Верхний центральный резец — конусовидный корень",
-          "uz": "Yuqori markaziy kurak tish – konussimon ildiz"
+          "uz": "Yuqori markaziy kesuvchi tish – konussimon ildiz"
         },
         {
           "en": "Lower premolars: round root",
@@ -745,14 +745,14 @@
         {
           "en": "Maxillary central incisor",
           "ru": "Верхний центральный резец",
-          "uz": "Yuqori markaziy kurak tish"
+          "uz": "Yuqori markaziy kesuvchi tish"
         }
       ],
       "correct": 3,
       "explain": {
         "en": "The maxillary central incisor has a single conical root, so rotation is safe and effective.",
         "ru": "У верхнего центрального резца один конусовидный корень, поэтому ротация безопасна и эффективна.",
-        "uz": "Yuqori markaziy kurak tishning ildizi konussimon va bitta, shuning uchun rotatsiya xavfsiz va samarali."
+        "uz": "Yuqori markaziy kesuvchi tishning ildizi konussimon va bitta, shuning uchun rotatsiya xavfsiz va samarali."
       }
     },
     {

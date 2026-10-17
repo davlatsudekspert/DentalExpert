@@ -328,7 +328,7 @@
           "detail": {
             "en": "Swelling, bruising, asymmetry, sensation",
             "ru": "Отёк, гематома, асимметрия, чувствительность",
-            "uz": "Shish, gematoma, assimetriya, sezgi"
+            "uz": "Shish, gematoma, asimmetriya, sezgi"
           }
         },
         {
@@ -906,7 +906,7 @@
         {
           "en": "A single periapical film",
           "ru": "Только один прицельный снимок",
-          "uz": "Faqat bitta prisel snimok"
+          "uz": "Faqat bitta periapikal rentgenogramma"
         },
         {
           "en": "Ultrasound only",

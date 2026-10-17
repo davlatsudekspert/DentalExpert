@@ -29,7 +29,7 @@
     {
       "en": "Identify crossbites and displacements",
       "ru": "Выявлять перекрёстный прикус и смещение нижней челюсти",
-      "uz": "Kesishgan tishlov va siljishni aniqlash"
+      "uz": "Kesishgan tishlam va siljishni aniqlash"
     }
   ],
   "links": [
@@ -52,7 +52,7 @@
       "subtitle": {
         "en": "Angle classes, overjet, overbite and crossbite",
         "ru": "Классификация Энгля, сагиттальная щель, перекрытие и перекрёстный прикус",
-        "uz": "Angle tasnifi, overjet, overbite va kesishgan tishlov"
+        "uz": "Angle tasnifi, overjet, overbite va kesishgan tishlam"
       }
     },
     {
@@ -134,7 +134,7 @@
           {
             "en": "Div 1: large overjet; Div 2: deep bite",
             "ru": "1-й подкласс: большая щель; 2-й: глубокий прикус",
-            "uz": "1-bo‘lim: overjet katta; 2-bo‘lim: chuqur tishlov"
+            "uz": "1-bo‘lim: overjet katta; 2-bo‘lim: chuqur tishlam"
           }
         ],
         [
@@ -309,7 +309,7 @@
             {
               "en": "Reduced or absent: open bite",
               "ru": "Уменьшено или нет: открытый прикус",
-              "uz": "Kam yoki yo‘q: ochiq tishlov"
+              "uz": "Kam yoki yo‘q: ochiq tishlam"
             }
           ]
         }
@@ -330,14 +330,14 @@
       "root": {
         "en": "Crossbite",
         "ru": "Перекрёстный прикус",
-        "uz": "Kesishgan tishlov"
+        "uz": "Kesishgan tishlam"
       },
       "children": [
         {
           "label": {
             "en": "Anterior crossbite",
             "ru": "Передний перекрёстный",
-            "uz": "Old kesishgan tishlov"
+            "uz": "Old kesishgan tishlam"
           },
           "items": [
             {
@@ -351,7 +351,7 @@
           "label": {
             "en": "Posterior buccal crossbite",
             "ru": "Боковой (щёчный)",
-            "uz": "Yon (bukkal) kesishgan tishlov"
+            "uz": "Yon (bukkal) kesishgan tishlam"
           },
           "items": [
             {
@@ -370,7 +370,7 @@
           "label": {
             "en": "Scissor bite",
             "ru": "Ножницеобразный прикус",
-            "uz": "Qaychisimon tishlov"
+            "uz": "Qaychisimon tishlam"
           },
           "items": [
             {
@@ -454,7 +454,7 @@
           "label": {
             "en": "Crossbites and displacement",
             "ru": "Перекрёстный прикус и смещение",
-            "uz": "Kesishgan tishlov va siljish"
+            "uz": "Kesishgan tishlam va siljish"
           },
           "detail": {
             "en": "Does the mandible shift on closing",
@@ -588,7 +588,7 @@
         {
           "en": "Always check crossbites for displacement",
           "ru": "При перекрёстном прикусе всегда проверяйте смещение",
-          "uz": "Kesishgan tishlovda siljishni har doim tekshiring"
+          "uz": "Kesishgan tishlamda siljishni har doim tekshiring"
         }
       ]
     }
@@ -643,7 +643,7 @@
         {
           "en": "Div 2 usually has a deep overbite",
           "ru": "При 2-м подклассе прикус обычно глубокий",
-          "uz": "2-bo‘limda tishlov odatda chuqur"
+          "uz": "2-bo‘limda tishlam odatda chuqur"
         },
         {
           "en": "In both the lower edge is behind the cingulum",
@@ -677,7 +677,7 @@
         {
           "en": "Record deep, reduced or open bite",
           "ru": "Отмечают глубокий, уменьшенный или открытый прикус",
-          "uz": "Chuqur, kam yoki ochiq tishlov qayd etiladi"
+          "uz": "Chuqur, kam yoki ochiq tishlam qayd etiladi"
         }
       ]
     },
@@ -685,7 +685,7 @@
       "q": {
         "en": "Why does a displacement matter in a posterior crossbite?",
         "ru": "Почему важно смещение при боковом перекрёстном прикусе?",
-        "uz": "Yon kesishgan tishlovda siljish nima uchun muhim?"
+        "uz": "Yon kesishgan tishlamda siljish nima uchun muhim?"
       },
       "plan": [
         {
@@ -751,7 +751,7 @@
       "q": {
         "en": "Upper centrals are retroclined, the overbite is deep and molars are Class II. Diagnosis?",
         "ru": "Верхние центральные резцы ретрузированы, прикус глубокий, моляры по II классу. Диагноз?",
-        "uz": "Yuqori markaziy kesuvchilar orqaga og‘gan, tishlov chuqur, molyarlar II sinf. Tashxis?"
+        "uz": "Yuqori markaziy kesuvchilar orqaga og‘gan, tishlam chuqur, molyarlar II sinf. Tashxis?"
       },
       "options": [
         {
@@ -779,7 +779,7 @@
       "explain": {
         "en": "Retroclined upper centrals with a deep overbite are typical of Class II division 2.",
         "ru": "Ретрузия верхних центральных резцов и глубокий прикус характерны для 2-го подкласса II класса.",
-        "uz": "Orqaga og‘gan yuqori markaziy kesuvchilar va chuqur tishlov II sinf 2-bo‘limga xos."
+        "uz": "Orqaga og‘gan yuqori markaziy kesuvchilar va chuqur tishlam II sinf 2-bo‘limga xos."
       }
     },
     {
@@ -856,7 +856,7 @@
       "q": {
         "en": "An 8-year-old has a posterior crossbite and the mandible shifts left on closing. What does this suggest?",
         "ru": "У ребёнка 8 лет боковой перекрёстный прикус, при смыкании челюсть смещается влево. О чём это говорит?",
-        "uz": "8 yoshli bolada yon kesishgan tishlov bor, yopilishda pastki jag‘ chapga siljiydi. Bu nimani ko‘rsatadi?"
+        "uz": "8 yoshli bolada yon kesishgan tishlam bor, yopilishda pastki jag‘ chapga siljiydi. Bu nimani ko‘rsatadi?"
       },
       "options": [
         {
@@ -872,7 +872,7 @@
         {
           "en": "A crossbite with displacement, often a narrow maxilla",
           "ru": "Перекрёстный прикус со смещением, чаще из-за узкой верхней челюсти",
-          "uz": "Siljish bilan kesishgan tishlov, ko‘pincha yuqori jag‘ torligi"
+          "uz": "Siljish bilan kesishgan tishlam, ko‘pincha yuqori jag‘ torligi"
         },
         {
           "en": "A normal finding",
@@ -883,7 +883,7 @@
       "correct": 2,
       "explain": {
         "en": "The shift is often functional from a bilaterally narrow maxilla and can be corrected by early expansion.",
-        "ru": "Смещение чаще функциональное из-за двусторонне сужённой верхней челюсти; его можно устранить ранним расширением.",
+        "ru": "Смещение чаще функциональное из-за двусторонне суженной верхней челюсти; его можно устранить ранним расширением.",
         "uz": "Siljish ko‘pincha ikki tomonlama tor yuqori jag‘ tufayli funksional; uni erta kengaytirish bilan tuzatish mumkin."
       }
     },

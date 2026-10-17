@@ -54,7 +54,7 @@
       "title": {
         "en": "Two dentitions",
         "ru": "Два прикуса",
-        "uz": "Ikki tishlov"
+        "uz": "Ikki tishlam"
       },
       "head": [
         {
@@ -78,7 +78,7 @@
           {
             "en": "Incisors",
             "ru": "Резцы",
-            "uz": "Kurak tishlar"
+            "uz": "Kesuvchi tishlar"
           },
           {
             "en": "8",
@@ -163,7 +163,7 @@
       "note": {
         "en": "Ask why there are no premolars in the primary dentition and which teeth replace the primary molars.",
         "ru": "Спросите, почему во временном прикусе нет премоляров и какие зубы сменяют временные моляры.",
-        "uz": "Sut tishlovida nega kichik oziq tishlar yo‘qligini va sut oziq tishlari o‘rniga qaysi tishlar chiqishini so‘rang."
+        "uz": "Sut tishlamida nega kichik oziq tishlar yo‘qligini va sut oziq tishlari o‘rniga qaysi tishlar chiqishini so‘rang."
       }
     },
     {
@@ -183,7 +183,7 @@
           "label": {
             "en": "Incisors",
             "ru": "Резцы",
-            "uz": "Kurak tishlar"
+            "uz": "Kesuvchi tishlar"
           },
           "items": [
             {
@@ -246,7 +246,7 @@
             {
               "en": "Support the bite",
               "ru": "Поддерживают прикус",
-              "uz": "Tishlovni ushlab turadi"
+              "uz": "Tishlamni ushlab turadi"
             }
           ]
         }
@@ -382,7 +382,7 @@
           "label": {
             "en": "Dentition",
             "ru": "Прикус",
-            "uz": "Tishlov"
+            "uz": "Tishlam"
           },
           "detail": {
             "en": "Permanent or primary tooth?",
@@ -411,7 +411,7 @@
           "detail": {
             "en": "Count from the midline: central incisor is 1",
             "ru": "Считать от средней линии: центральный резец — 1",
-            "uz": "O‘rta chiziqdan sanash: markaziy kurak tish — 1"
+            "uz": "O‘rta chiziqdan sanash: markaziy kesuvchi tish — 1"
           }
         },
         {
@@ -556,7 +556,7 @@
           {
             "en": "Upper left central incisor",
             "ru": "Верхний левый центральный резец",
-            "uz": "Yuqori chap markaziy kurak tish"
+            "uz": "Yuqori chap markaziy kesuvchi tish"
           },
           {
             "en": "21",
@@ -664,7 +664,7 @@
           "label": {
             "en": "First molars and lower central incisors",
             "ru": "Первые моляры и нижние центральные резцы",
-            "uz": "Birinchi katta oziq tishlar va pastki markaziy kurak tishlar"
+            "uz": "Birinchi katta oziq tishlar va pastki markaziy kesuvchi tishlar"
           }
         },
         {
@@ -676,7 +676,7 @@
           "label": {
             "en": "Upper central and lateral incisors",
             "ru": "Верхние центральные и боковые резцы",
-            "uz": "Yuqori markaziy va yon kurak tishlar"
+            "uz": "Yuqori markaziy va yon kesuvchi tishlar"
           }
         },
         {
@@ -728,7 +728,7 @@
         {
           "en": "Permanent dentition: 32 teeth; primary: 20, with no premolars",
           "ru": "Постоянный прикус: 32 зуба; временный: 20, без премоляров",
-          "uz": "Doimiy tishlov: 32 tish; sut tishlovi: 20 ta, kichik oziq tishlarsiz"
+          "uz": "Doimiy tishlam: 32 tish; sut tishlami: 20 ta, kichik oziq tishlarsiz"
         },
         {
           "en": "FDI: first digit quadrant, second digit tooth position",
@@ -782,7 +782,7 @@
       "q": {
         "en": "Compare the primary and permanent dentitions.",
         "ru": "Сравните временный и постоянный прикус.",
-        "uz": "Sut va doimiy tishlovni solishtiring."
+        "uz": "Sut va doimiy tishlamni solishtiring."
       },
       "plan": [
         {
@@ -793,7 +793,7 @@
         {
           "en": "Primary dentition has no premolars",
           "ru": "Во временном прикусе нет премоляров",
-          "uz": "Sut tishlovida kichik oziq tishlar yo‘q"
+          "uz": "Sut tishlamida kichik oziq tishlar yo‘q"
         },
         {
           "en": "Premolars replace the primary molars",
@@ -846,12 +846,12 @@
         {
           "en": "First molars and lower central incisors at about 6–7 years",
           "ru": "Первые моляры и нижние центральные резцы около 6–7 лет",
-          "uz": "Birinchi katta oziq va pastki markaziy kurak tishlar taxminan 6–7 yoshda"
+          "uz": "Birinchi katta oziq va pastki markaziy kesuvchi tishlar taxminan 6–7 yoshda"
         },
         {
           "en": "Incisors next, then canines and premolars at 9–12",
           "ru": "Затем резцы, клыки и премоляры в 9–12 лет",
-          "uz": "So‘ng kurak tishlar, 9–12 yoshda qoziq va kichik oziq tishlar"
+          "uz": "So‘ng kesuvchi tishlar, 9–12 yoshda qoziq va kichik oziq tishlar"
         },
         {
           "en": "Second molars about 11–13 years",
@@ -976,7 +976,7 @@
       "q": {
         "en": "How many premolars are in a complete permanent dentition?",
         "ru": "Сколько премоляров в полном постоянном прикусе?",
-        "uz": "To‘liq doimiy tishlovda nechta kichik oziq tish bor?"
+        "uz": "To‘liq doimiy tishlamda nechta kichik oziq tish bor?"
       },
       "options": [
         {
@@ -1162,7 +1162,7 @@
         {
           "en": "Primary upper right central incisor",
           "ru": "временный верхний правый центральный резец",
-          "uz": "Yuqori o‘ng markaziy sut kurak tishi"
+          "uz": "Yuqori o‘ng markaziy sut kesuvchi tishi"
         },
         {
           "en": "Permanent upper right third molar",

@@ -78,7 +78,7 @@
           "detail": {
             "en": "Face, TMJ, muscles, lip support",
             "ru": "Лицо, ВНЧС, мышцы, поддержка губ",
-            "uz": "Yuz, CHPJB, mushaklar, lab tayanchi"
+            "uz": "Yuz, ChPJB, mushaklar, lab tayanchi"
           }
         },
         {
@@ -562,7 +562,7 @@
         {
           "en": "Ignore unreplaced missing third and second molars",
           "ru": "Не учитывать незамещаемые третьи и вторые моляры",
-          "uz": "Tiklanmaydigan uchinchi va ikkinchi moziq tishlarni hisobga olmaslik"
+          "uz": "Tiklanmaydigan uchinchi va ikkinchi katta oziq tishlarni hisobga olmaslik"
         },
         {
           "en": "Most posterior area determines the class",
@@ -896,7 +896,7 @@
         {
           "en": "Fused roots of a molar",
           "ru": "Сросшиеся корни моляра",
-          "uz": "Moziq tishning qo‘shilgan ildizlari"
+          "uz": "Katta oziq tishning qo‘shilgan ildizlari"
         },
         {
           "en": "Root with external resorption",
@@ -915,7 +915,7 @@
       "q": {
         "en": "Under Applegate's rules, missing second molars that will not be replaced are:",
         "ru": "По правилам Эпплгейта отсутствующие вторые моляры, которые не будут замещены:",
-        "uz": "Applegate qoidalariga ko‘ra tiklanmaydigan yo‘q ikkinchi moziq tishlar:"
+        "uz": "Applegate qoidalariga ko‘ra tiklanmaydigan yo‘q ikkinchi katta oziq tishlar:"
       },
       "options": [
         {
@@ -943,7 +943,7 @@
       "explain": {
         "en": "Missing second molars that are not to be replaced are not considered, just like unreplaced third molars.",
         "ru": "Незамещаемые вторые моляры не учитываются, как и незамещаемые третьи.",
-        "uz": "Tiklanmaydigan ikkinchi moziq tishlar xuddi aql tishlari kabi hisobga olinmaydi."
+        "uz": "Tiklanmaydigan ikkinchi katta oziq tishlar xuddi aql tishlari kabi hisobga olinmaydi."
       }
     },
     {
@@ -956,7 +956,7 @@
         {
           "en": "To fabricate the final crown directly",
           "ru": "Чтобы сразу изготовить окончательную коронку",
-          "uz": "Yakuniy tojni darhol tayyorlash uchun"
+          "uz": "Yakuniy koronkani darhol tayyorlash uchun"
         },
         {
           "en": "To replace the radiographic examination",

@@ -24,7 +24,7 @@
     {
       "en": "Manage pericoronitis and identify indications for third molar removal",
       "ru": "Лечить перикоронит и определять показания к удалению зуба мудрости",
-      "uz": "Perikoronitni davolash va aql tishini olishga ko‘rsatmalarni aniqlash"
+      "uz": "Perikoronaritni davolash va aql tishini olishga ko‘rsatmalarni aniqlash"
     }
   ],
   "links": [
@@ -47,7 +47,7 @@
       "subtitle": {
         "en": "Stages of infection, pericoronitis and indications for removal",
         "ru": "Стадии инфекции, перикоронит и показания к удалению зуба мудрости",
-        "uz": "Infeksiya bosqichlari, perikoronit va aql tishini olishga ko‘rsatmalar"
+        "uz": "Infeksiya bosqichlari, perikoronarit va aql tishini olishga ko‘rsatmalar"
       }
     },
     {
@@ -284,7 +284,7 @@
           "label": {
             "en": "Ludwig angina",
             "ru": "Ангина Людвига",
-            "uz": "Ludwig anginasi"
+            "uz": "Lyudvig anginasi"
           },
           "items": [
             {
@@ -298,7 +298,7 @@
       "note": {
         "en": "Ludwig angina can obstruct the airway; it is an emergency requiring immediate hospital admission.",
         "ru": "Ангина Людвига может перекрыть дыхательные пути — это неотложное состояние, пациента немедленно госпитализируют.",
-        "uz": "Ludwig anginasi nafas yo‘lini to‘sib qo‘yishi mumkin – bu shoshilinch holat, bemor darhol shifoxonaga yuboriladi."
+        "uz": "Lyudvig anginasi nafas yo‘lini to‘sib qo‘yishi mumkin – bu shoshilinch holat, bemor darhol shifoxonaga yuboriladi."
       }
     },
     {
@@ -374,7 +374,7 @@
       "title": {
         "en": "Pericoronitis",
         "ru": "Перикоронит",
-        "uz": "Perikoronit"
+        "uz": "Perikoronarit"
       },
       "term": {
         "en": "Inflammation of the operculum",
@@ -498,7 +498,7 @@
             {
               "en": "Recurrent or severe pericoronitis",
               "ru": "Повторный или тяжёлый перикоронит",
-              "uz": "Takroriy yoki og‘ir perikoronit"
+              "uz": "Takroriy yoki og‘ir perikoronarit"
             },
             {
               "en": "Cellulitis, abscess",
@@ -682,7 +682,7 @@
         {
           "en": "Bilateral floor-of-mouth swelling (Ludwig)",
           "ru": "Двусторонний отёк дна рта (Людвиг)",
-          "uz": "Ikki tomonlama jag‘ osti shishi (Ludwig)"
+          "uz": "Ikki tomonlama jag‘ osti shishi (Lyudvig)"
         }
       ]
     },
@@ -690,7 +690,7 @@
       "q": {
         "en": "How is pericoronitis managed?",
         "ru": "Как лечат перикоронит?",
-        "uz": "Perikoronitni qanday davolaysiz?"
+        "uz": "Perikoronaritni qanday davolaysiz?"
       },
       "plan": [
         {
@@ -735,7 +735,7 @@
         {
           "en": "Indications: recurrent pericoronitis, caries, cyst, second molar damage",
           "ru": "Показания: рецидивы перикоронита, кариес, киста, поражение второго моляра",
-          "uz": "Ko‘rsatmalar: takroriy perikoronit, karies, kista, ikkinchi molyar shikasti"
+          "uz": "Ko‘rsatmalar: takroriy perikoronarit, karies, kista, ikkinchi molyar shikasti"
         },
         {
           "en": "Prophylactic removal of disease-free teeth usually not advised",
@@ -826,12 +826,12 @@
         {
           "en": "Ludwig angina",
           "ru": "Ангина Людвига",
-          "uz": "Ludwig anginasi"
+          "uz": "Lyudvig anginasi"
         },
         {
           "en": "Pericoronitis",
           "ru": "Перикоронит",
-          "uz": "Perikoronit"
+          "uz": "Perikoronarit"
         },
         {
           "en": "Alveolar osteitis",
@@ -848,7 +848,7 @@
       "explain": {
         "en": "Ludwig angina elevates the floor of the mouth and can obstruct the airway.",
         "ru": "Ангина Людвига приподнимает дно полости рта и может перекрыть дыхательные пути.",
-        "uz": "Ludwig anginasi og‘iz tubini ko‘taradi va nafas yo‘lini to‘sib qo‘yishi mumkin."
+        "uz": "Lyudvig anginasi og‘iz tubini ko‘taradi va nafas yo‘lini to‘sib qo‘yishi mumkin."
       }
     },
     {
@@ -890,7 +890,7 @@
       "q": {
         "en": "Pericoronitis most often affects which tooth?",
         "ru": "При каком зубе чаще всего развивается перикоронит?",
-        "uz": "Perikoronit ko‘pincha qaysi tishda uchraydi?"
+        "uz": "Perikoronarit ko‘pincha qaysi tishda uchraydi?"
       },
       "options": [
         {
@@ -901,7 +901,7 @@
         {
           "en": "Maxillary central incisor",
           "ru": "Верхний центральный резец",
-          "uz": "Yuqori markaziy kurak"
+          "uz": "Yuqori markaziy kesuvchi"
         },
         {
           "en": "Mandibular first premolar",
@@ -1001,7 +1001,7 @@
         {
           "en": "Recurrent pericoronitis",
           "ru": "Рецидивирующий перикоронит",
-          "uz": "Takroriy perikoronit"
+          "uz": "Takroriy perikoronarit"
         },
         {
           "en": "A symptom-free, disease-free tooth",
@@ -1065,7 +1065,7 @@
       "q": {
         "en": "In pericoronitis the opposing upper third molar is biting on the flap. What is appropriate?",
         "ru": "При перикороните верхний зуб мудрости травмирует капюшон. Что правильно?",
-        "uz": "Perikoronitda qarama-qarshi yuqori aql tishi milk qalpog‘ini shikastlamoqda. Nima qilish to‘g‘ri?"
+        "uz": "Perikoronaritda qarama-qarshi yuqori aql tishi milk qalpog‘ini shikastlamoqda. Nima qilish to‘g‘ri?"
       },
       "options": [
         {

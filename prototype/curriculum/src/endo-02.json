@@ -671,7 +671,7 @@
       "q": {
         "en": "What are the limitations of EPT and causes of false results?",
         "ru": "Каковы ограничения ЭОД и причины ложных результатов?",
-        "uz": "EOD ning cheklovlari va yolg‘on natijalar sabablari nimalar?"
+        "uz": "EODning cheklovlari va yolg‘on natijalar sabablari nimalar?"
       },
       "plan": [
         {
@@ -807,7 +807,7 @@
       "q": {
         "en": "In a 10-year-old, a maxillary incisor with an immature root does not respond to EPT. The correct conclusion is:",
         "ru": "У 10-летнего ребёнка верхний резец с несформированным корнем не ответил на ЭОД. Верный вывод?",
-        "uz": "10 yoshli bolada shakllanmagan ildizli yuqori kurak tish EOD ga javob bermadi. To‘g‘ri xulosa?"
+        "uz": "10 yoshli bolada shakllanmagan ildizli yuqori kesuvchi tish EODga javob bermadi. To‘g‘ri xulosa?"
       },
       "options": [
         {
@@ -823,7 +823,7 @@
         {
           "en": "The tooth should be extracted",
           "ru": "Зуб нужно удалить",
-          "uz": "Tish ekstraksiya qilinishi kerak"
+          "uz": "Tishni olib tashlash kerak"
         },
         {
           "en": "This may be a false negative",

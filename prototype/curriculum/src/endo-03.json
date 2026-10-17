@@ -209,7 +209,7 @@
       "title": {
         "en": "Classification used in the CIS (Lukomsky)",
         "ru": "Классификация, принятая в СНГ (Лукомский)",
-        "uz": "MDH da qo‘llaniladigan tasnif (Lukomskiy)"
+        "uz": "MDHda qo‘llaniladigan tasnif (Lukomskiy)"
       },
       "head": [
         {
@@ -474,7 +474,7 @@
           {
             "en": "Vital teeth, often mandibular incisors",
             "ru": "Зубы витальные, чаще нижние резцы",
-            "uz": "Tishlar hayotiy, ko‘pincha pastki kurak tishlar"
+            "uz": "Tishlar hayotiy, ko‘pincha pastki kesuvchi tishlar"
           }
         ]
       ],
@@ -844,7 +844,7 @@
         {
           "en": "Bitewing radiograph",
           "ru": "Интерпроксимальный снимок",
-          "uz": "Prikus rentgenogrammasi"
+          "uz": "Bitewing rentgenogramma"
         },
         {
           "en": "Cone-beam CT (CBCT)",
@@ -938,7 +938,7 @@
       "q": {
         "en": "Several lesions at mandibular incisor apices, all teeth vital, in a middle-aged woman. The likely diagnosis is:",
         "ru": "У нижних резцов несколько очагов, все зубы витальные, пациентка средних лет. Вероятный диагноз?",
-        "uz": "Pastki kurak tishlar apekslarida bir nechta o‘choq bor, barcha tishlar hayotiy, bemor o‘rta yoshli ayol. Ehtimolli tashxis?"
+        "uz": "Pastki kesuvchi tishlar apekslarida bir nechta o‘choq bor, barcha tishlar hayotiy, bemor o‘rta yoshli ayol. Ehtimolli tashxis?"
       },
       "options": [
         {
@@ -966,7 +966,7 @@
       "explain": {
         "en": "Lesions at vital mandibular incisors suggest cemento-osseous dysplasia; endodontic treatment is not indicated.",
         "ru": "Очаги у витальных нижних резцов характерны для цементно-костной дисплазии; эндодонтическое лечение не нужно.",
-        "uz": "Hayotiy pastki kurak tishlardagi o‘choqlar sement-suyak displaziyasiga xos; endodontik davolash talab qilinmaydi."
+        "uz": "Hayotiy pastki kesuvchi tishlardagi o‘choqlar sement-suyak displaziyasiga xos; endodontik davolash talab qilinmaydi."
       }
     },
     {
@@ -1001,7 +1001,7 @@
       "explain": {
         "en": "Gutta-percha is radiopaque and follows the tract to the apex of the causative tooth.",
         "ru": "Гуттаперча рентгеноконтрастна и по ходу свища указывает на апекс причинного зуба.",
-        "uz": "Gutta-percha rentgenkontrast bo‘lib, oqma yo‘li bo‘ylab manba tishning apeksiga olib boradi."
+        "uz": "Gutta-percha rentgenokontrast bo‘lib, oqma yo‘li bo‘ylab manba tishning apeksiga olib boradi."
       }
     }
   ]

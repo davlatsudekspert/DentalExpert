@@ -308,7 +308,7 @@
       "note": {
         "en": "Students should know numbness of the lower lip and chin signals a successful block.",
         "ru": "Студенты должны знать, что онемение нижней губы и подбородка — признак успешной блокады.",
-        "uz": "Talabalar yuz va lab uvushishini (pastki lab, iyak) blokadaning muvaffaqiyat belgisi sifatida bilishi kerak."
+        "uz": "Talabalar pastki lab va iyak uvishishini blokadaning muvaffaqiyat belgisi sifatida bilishi kerak."
       }
     },
     {
@@ -349,8 +349,8 @@
           },
           {
             "en": "Molars (MB root of first molar may be spared)",
-            "ru": "Моляры (возможно, кроме MB корня 6)",
-            "uz": "Molyarlar (MB ildizdan tashqari bo‘lishi mumkin)"
+            "ru": "Моляры (кроме, возможно, медиально-щёчного корня 16/26)",
+            "uz": "Molyarlar (1-molyarning MB ildizi chetda qolishi mumkin)"
           }
         ],
         [
@@ -367,7 +367,7 @@
           {
             "en": "Incisors, canine, premolars",
             "ru": "Резцы, клык, премоляры",
-            "uz": "Kurak, qoziq, premolyarlar"
+            "uz": "Kesuvchi, qoziq, premolyarlar"
           }
         ],
         [
@@ -439,7 +439,7 @@
             {
               "en": "Torusal block (common in CIS countries)",
               "ru": "Торусальная анестезия (распространена в СНГ)",
-              "uz": "Torusal anesteziya (MDH da keng tarqalgan)"
+              "uz": "Torusal anesteziya (MDHda keng tarqalgan)"
             }
           ]
         },
@@ -774,29 +774,29 @@
         {
           "en": "Palatal numbness",
           "ru": "Онемение нёба",
-          "uz": "Tanglay uvushishi"
+          "uz": "Tanglay uvishishi"
         },
         {
           "en": "Upper lip numbness",
           "ru": "Онемение верхней губы",
-          "uz": "Yuqori lab uvushishi"
+          "uz": "Yuqori lab uvishishi"
         },
         {
           "en": "Numbness of the nose tip",
           "ru": "Онемение кончика носа",
-          "uz": "Burun uchi uvushishi"
+          "uz": "Burun uchi uvishishi"
         },
         {
           "en": "Numbness of the lower lip and chin",
           "ru": "Онемение нижней губы и подбородка",
-          "uz": "Pastki lab va iyak uvushishi"
+          "uz": "Pastki lab va iyak uvishishi"
         }
       ],
       "correct": 3,
       "explain": {
         "en": "The mental nerve is a branch of the inferior alveolar nerve, so lip and chin numbness confirms the block.",
         "ru": "Подбородочный нерв — ветвь нижнего альвеолярного; онемение губы и подбородка подтверждает блокаду.",
-        "uz": "Iyak nervi pastki alveolyar nervning shoxchasi bo‘lib, uning uvushishi blokada samarasini ko‘rsatadi."
+        "uz": "Iyak nervi pastki alveolyar nervning shoxchasi bo‘lib, uning uvishishi blokada samarasini ko‘rsatadi."
       }
     },
     {
@@ -823,7 +823,7 @@
         },
         {
           "en": "Mental",
-          "ru": "Ментальная",
+          "ru": "Подбородочная",
           "uz": "Iyak"
         }
       ],

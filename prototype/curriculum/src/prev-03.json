@@ -251,7 +251,7 @@
           },
           {
             "en": "Smear or rice-grain size",
-            "ru": "Мазок, размер с рисовое зерно",
+            "ru": "Мазок размером с рисовое зерно",
             "uz": "Surtma, guruch donidek"
           }
         ],
@@ -268,7 +268,7 @@
           },
           {
             "en": "Pea-sized",
-            "ru": "С горошину",
+            "ru": "Размером с горошину",
             "uz": "No‘xatdek"
           }
         ],
@@ -519,7 +519,7 @@
         },
         {
           "en": "Under 3: smear of at least 1000 ppm; 3–6: pea-sized",
-          "ru": "До 3 лет: мазок не менее 1000 ppm; 3–6 лет: с горошину",
+          "ru": "До 3 лет: мазок не менее 1000 ppm; 3–6 лет: размером с горошину",
           "uz": "3 yoshgacha: kamida 1000 ppm surtma; 3–6 yosh: no‘xatdek"
         },
         {
@@ -579,7 +579,7 @@
         },
         {
           "en": "3–6 years: pea-sized, 1000–1500 ppm",
-          "ru": "3–6 лет: с горошину, 1000–1500 ppm",
+          "ru": "3–6 лет: размером с горошину, 1000–1500 ppm",
           "uz": "3–6 yosh: no‘xatdek, 1000–1500 ppm"
         },
         {
@@ -713,7 +713,7 @@
         },
         {
           "en": "250 ppm F, pea-sized",
-          "ru": "250 ppm F, с горошину",
+          "ru": "250 ppm F, размером с горошину",
           "uz": "250 ppm F, no‘xatdek"
         }
       ],
@@ -883,7 +883,7 @@
         },
         {
           "en": "Pea-sized 1000–1500 ppm, brushed by a parent",
-          "ru": "С горошину 1000–1500 ppm, чистят родители",
+          "ru": "Размером с горошину, 1000–1500 ppm, чистят родители",
           "uz": "No‘xatdek 1000–1500 ppm, ota-ona tozalaydi"
         },
         {
@@ -895,7 +895,7 @@
       "correct": 2,
       "explain": {
         "en": "At 3–6 years a pea-sized amount of 1000–1500 ppm paste with parental help balances benefit and fluorosis risk.",
-        "ru": "В 3–6 лет количество с горошину пасты 1000–1500 ppm с помощью родителей уравновешивает пользу и риск флюороза.",
+        "ru": "В 3–6 лет паста размером с горошину (1000–1500 ppm), которой чистят зубы с помощью родителей, уравновешивает пользу и риск флюороза.",
         "uz": "3–6 yoshda ota-ona yordamida no‘xatdek 1000–1500 ppm pasta foyda va flyuoroz xavfini muvozanatlaydi."
       }
     },

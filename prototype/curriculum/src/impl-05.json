@@ -79,7 +79,7 @@
           {
             "en": "Peri-implant health",
             "ru": "Периимплантное здоровье",
-            "uz": "Implant atrofi sog‘lom"
+            "uz": "Implant atrofi to‘qimalari sog‘lom"
           },
           {
             "en": "Absent",
@@ -168,7 +168,7 @@
           "label": {
             "en": "Plaque and mucosa",
             "ru": "Налёт и десна",
-            "uz": "Blyashka va milk"
+            "uz": "Karash va milk"
           },
           "detail": {
             "en": "Redness, swelling",
@@ -259,7 +259,7 @@
             {
               "en": "Poor plaque control",
               "ru": "Плохой контроль налёта",
-              "uz": "Yomon blyashka nazorati"
+              "uz": "Yomon karash nazorati"
             },
             {
               "en": "No supportive care",
@@ -378,7 +378,7 @@
       "note": {
         "en": "Note that in both cases the first step is removing plaque and any excess cement.",
         "ru": "Скажите, что в обоих случаях первый шаг — устранить налёт и остатки цемента.",
-        "uz": "Har ikkala holatda sababni — blyashka va sement qoldig‘ini — bartaraf etish birinchi qadam ekanini ayting."
+        "uz": "Har ikkala holatda sababni — karash va sement qoldig‘ini — bartaraf etish birinchi qadam ekanini ayting."
       }
     },
     {
@@ -656,7 +656,7 @@
         {
           "en": "Presence of plaque",
           "ru": "Наличие налёта",
-          "uz": "Blyashka borligi"
+          "uz": "Karash borligi"
         },
         {
           "en": "Progressive bone loss",
@@ -750,7 +750,7 @@
       "q": {
         "en": "A year after cementing an implant crown there is pus and bone loss. What should be checked first?",
         "ru": "Через год после фиксации цементной коронки вокруг имплантата гной и убыль кости. Что проверить в первую очередь?",
-        "uz": "Sementli toj o‘rnatilganidan bir yil o‘tib implant atrofida yiring va suyak yo‘qolishi aniqlandi. Avval nimani tekshirish kerak?"
+        "uz": "Sementli koronka o‘rnatilganidan bir yil o‘tib implant atrofida yiring va suyak yo‘qolishi aniqlandi. Avval nimani tekshirish kerak?"
       },
       "options": [
         {
@@ -761,7 +761,7 @@
         {
           "en": "Crown shade",
           "ru": "Цвет коронки",
-          "uz": "Toj rangi"
+          "uz": "Koronka rangi"
         },
         {
           "en": "Caries on the neighbour",
@@ -778,7 +778,7 @@
       "explain": {
         "en": "Excess cement promotes plaque and peri-implantitis.",
         "ru": "Остатки цемента способствуют налёту и периимплантиту.",
-        "uz": "Sement qoldig‘i blyashka to‘planishiga va periimplantitga olib keladi."
+        "uz": "Sement qoldig‘i karash to‘planishiga va periimplantitga olib keladi."
       }
     },
     {
@@ -848,7 +848,7 @@
       "explain": {
         "en": "Mucositis is plaque-induced and usually resolves with cleaning.",
         "ru": "Мукозит связан с налётом и обычно разрешается после очистки.",
-        "uz": "Mukozit blyashka bilan bog‘liq va tozalash bilan odatda qaytadi."
+        "uz": "Mukozit karash bilan bog‘liq va tozalash bilan odatda qaytadi."
       }
     },
     {
@@ -946,7 +946,7 @@
         {
           "en": "Healthy patient with a screw crown",
           "ru": "Здоровый пациент с винтовой коронкой",
-          "uz": "Vintli toj taqqan, sog‘lom bemor"
+          "uz": "Vintli koronka taqqan, sog‘lom bemor"
         }
       ],
       "correct": 2,

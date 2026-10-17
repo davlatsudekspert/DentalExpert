@@ -19,7 +19,7 @@
     {
       "en": "Compare conventional GIC and RMGIC",
       "ru": "Сравнивать традиционный и модифицированный СИЦ",
-      "uz": "An’anaviy SIS va SMSIS ni solishtirish"
+      "uz": "An’anaviy SIS va SMSISni solishtirish"
     },
     {
       "en": "Carry out the clinical handling steps of GIC",
@@ -162,7 +162,7 @@
             {
               "en": "Crowns and bridges",
               "ru": "Коронки и мосты",
-              "uz": "Toj va ko‘prik"
+              "uz": "Koronka va ko‘prik"
             }
           ]
         },
@@ -209,7 +209,7 @@
             {
               "en": "Erupting teeth",
               "ru": "Прорезывающиеся зубы",
-              "uz": "Prorezlanayotgan tishlar"
+              "uz": "Chiqayotgan tishlar"
             }
           ]
         }
@@ -583,7 +583,7 @@
       "q": {
         "en": "Compare conventional GIC with RMGIC.",
         "ru": "Сравните традиционный СИЦ и СИЦ, модифицированный смолой.",
-        "uz": "An’anaviy SIS va SMSIS ni solishtiring."
+        "uz": "An’anaviy SIS va SMSISni solishtiring."
       },
       "plan": [
         {
@@ -641,7 +641,7 @@
       "q": {
         "en": "Name the clinical indications for GIC.",
         "ru": "Назовите клинические показания к применению СИЦ.",
-        "uz": "SIS ning klinik ko‘rsatmalarini aytib bering."
+        "uz": "SISning klinik ko‘rsatmalarini aytib bering."
       },
       "plan": [
         {
@@ -753,7 +753,7 @@
         {
           "en": "To remove the smear layer and clean the surface",
           "ru": "Удалить смазанный слой и очистить поверхность",
-          "uz": "Smear qatlamni olib, sirtni tozalash"
+          "uz": "Smear qatlamini olib, sirtni tozalash"
         },
         {
           "en": "To disinfect the pulp",
@@ -770,14 +770,14 @@
       "explain": {
         "en": "The mild acid removes the smear layer and prepares the surface for chemical bonding without deep demineralisation.",
         "ru": "Слабая кислота удаляет смазанный слой и готовит поверхность к химической связи без глубокой деминерализации.",
-        "uz": "Kuchsiz kislota smear qatlamni olib tashlaydi va sirtni kimyoviy bog‘lanishga tayyorlaydi, dentinni chuqur demineralizatsiya qilmaydi."
+        "uz": "Kuchsiz kislota smear qatlamini olib tashlaydi va sirtni kimyoviy bog‘lanishga tayyorlaydi, dentinni chuqur demineralizatsiya qilmaydi."
       }
     },
     {
       "q": {
         "en": "What most harms GIC during early setting?",
         "ru": "Что сильнее всего вредит СИЦ на ранней стадии твердения?",
-        "uz": "Qotishning dastlabki bosqichida SIS ga nima eng ko‘p zarar yetkazadi?"
+        "uz": "Qotishning dastlabki bosqichida SISga nima eng ko‘p zarar yetkazadi?"
       },
       "options": [
         {
@@ -812,7 +812,7 @@
       "q": {
         "en": "What does RMGIC contain in addition to conventional GIC?",
         "ru": "Что содержит модифицированный смолой СИЦ дополнительно к традиционному?",
-        "uz": "SMSIS tarkibida an’anaviy SIS ga qo‘shimcha ravishda nima bor?"
+        "uz": "SMSIS tarkibida an’anaviy SISga qo‘shimcha ravishda nima bor?"
       },
       "options": [
         {

@@ -342,7 +342,7 @@
       "title": {
         "en": "Stages of the dentition",
         "ru": "Периоды прикуса",
-        "uz": "Tishlov davrlari"
+        "uz": "Tishlam davrlari"
       },
       "events": [
         {
@@ -402,7 +402,7 @@
           "label": {
             "en": "Mixed dentition",
             "ru": "Сменный прикус",
-            "uz": "Almashinuv (aralash) prikus"
+            "uz": "Almashinuv (aralash) tishlam"
           }
         },
         {
@@ -414,7 +414,7 @@
           "label": {
             "en": "Permanent dentition except third molars",
             "ru": "Постоянный прикус (без третьих моляров)",
-            "uz": "Doimiy prikus (aql tishlarisiz)"
+            "uz": "Doimiy tishlam (aql tishlarisiz)"
           }
         },
         {
@@ -646,7 +646,7 @@
         {
           "en": "Cervical constriction affects matrices and crown choice",
           "ru": "Из-за сужения шейки нужны особые матрицы и коронки",
-          "uz": "Bo‘yin torayishi tufayli matritsa va qoplamalar maxsus tanlanadi"
+          "uz": "Bo‘yin torayishi tufayli matritsa va koronkalar maxsus tanlanadi"
         },
         {
           "en": "Infection in primary molars shows in the furcation",
@@ -759,7 +759,7 @@
       "q": {
         "en": "When does the mixed dentition start and end?",
         "ru": "Когда начинается и заканчивается сменный прикус?",
-        "uz": "Almashinuv prikusi qachon boshlanadi va qachon tugaydi?"
+        "uz": "Almashinuv tishlami qachon boshlanadi va qachon tugaydi?"
       },
       "plan": [
         {
@@ -849,7 +849,7 @@
       "q": {
         "en": "By what age is the primary dentition usually complete?",
         "ru": "К какому возрасту обычно формируется временный прикус?",
-        "uz": "Sut tishlari prikusi odatda qaysi yoshda to‘liq shakllanadi?"
+        "uz": "Sut tishlami odatda qaysi yoshda to‘liq shakllanadi?"
       },
       "options": [
         {
@@ -877,7 +877,7 @@
       "explain": {
         "en": "Second primary molars erupt at about 23–33 months, so the dentition is complete by 2.5–3 years.",
         "ru": "Вторые временные моляры прорезываются примерно в 23–33 месяца, поэтому прикус завершается к 2,5–3 годам.",
-        "uz": "Ikkinchi sut molyarlari taxminan 23–33 oyda chiqadi, shuning uchun prikus 2,5–3 yoshda to‘liq bo‘ladi."
+        "uz": "Ikkinchi sut molyarlari taxminan 23–33 oyda chiqadi, shuning uchun sut tishlami 2,5–3 yoshda to‘liq bo‘ladi."
       }
     },
     {

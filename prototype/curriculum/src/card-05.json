@@ -67,7 +67,7 @@
           "label": {
             "en": "Black: extension for prevention",
             "ru": "Блэк: «расширение для профилактики»",
-            "uz": "Black: «profilaktik kengaytirish»"
+            "uz": "Blek: «profilaktik kengaytirish»"
           }
         },
         {
@@ -110,7 +110,7 @@
       "note": {
         "en": "Discuss that Black’s rules fitted the amalgam era and changed with adhesion.",
         "ru": "Обсудите, что принципы Блэка соответствовали эпохе амальгамы, а в адгезивную эпоху изменились.",
-        "uz": "Black tamoyillari amalgama davri uchun to‘g‘ri bo‘lganini, adgeziv davrda esa o‘zgarganini muhokama qiling."
+        "uz": "Blek tamoyillari amalgama davri uchun to‘g‘ri bo‘lganini, adgeziv davrda esa o‘zgarganini muhokama qiling."
       }
     },
     {
@@ -118,7 +118,7 @@
       "title": {
         "en": "Black’s steps of preparation",
         "ru": "Этапы препарирования по Блэку",
-        "uz": "Black bo‘yicha preparatsiya bosqichlari"
+        "uz": "Blek bo‘yicha preparatsiya bosqichlari"
       },
       "steps": [
         {
@@ -616,7 +616,7 @@
       "q": {
         "en": "List Black’s steps of cavity preparation.",
         "ru": "Перечислите этапы препарирования по Блэку.",
-        "uz": "Black bo‘yicha kovak preparatsiyasi bosqichlarini sanab bering."
+        "uz": "Blek bo‘yicha kovak preparatsiyasi bosqichlarini sanab bering."
       },
       "plan": [
         {
@@ -711,7 +711,7 @@
         {
           "en": "Black",
           "ru": "Блэк",
-          "uz": "Black"
+          "uz": "Blek"
         },
         {
           "en": "Buonocore",
@@ -733,7 +733,7 @@
       "explain": {
         "en": "In the amalgam era Black advised extending cavities to self-cleansing areas to prevent recurrence.",
         "ru": "Блэк в эпоху амальгамы предлагал расширять полость до иммунных зон для профилактики вторичного кариеса.",
-        "uz": "Black amalgama davrida ikkilamchi kariesning oldini olish uchun kovakni immun sohalargacha kengaytirishni taklif qilgan."
+        "uz": "Blek amalgama davrida ikkilamchi kariesning oldini olish uchun kovakni immun sohalargacha kengaytirishni taklif qilgan."
       }
     },
     {
@@ -1041,7 +1041,7 @@
         {
           "en": "Placing a crown",
           "ru": "Покрытие коронкой",
-          "uz": "Toj qo‘yish"
+          "uz": "Koronka qo‘yish"
         }
       ],
       "correct": 2,

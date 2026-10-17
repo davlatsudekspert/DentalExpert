@@ -105,7 +105,7 @@
             {
               "en": "Covered by a smear layer",
               "ru": "Покрыт смазанным слоем",
-              "uz": "Smear qatlam bilan qoplangan"
+              "uz": "Smear qatlami bilan qoplangan"
             },
             {
               "en": "Bonding is more demanding",
@@ -126,12 +126,12 @@
       "title": {
         "en": "Smear layer",
         "ru": "Смазанный слой",
-        "uz": "Smear qatlam"
+        "uz": "Smear qatlami"
       },
       "term": {
         "en": "Smear layer",
         "ru": "Смазанный слой",
-        "uz": "Smear qatlam"
+        "uz": "Smear qatlami"
       },
       "definition": {
         "en": "A layer of mineral and organic debris left on dentin after cutting. It plugs the tubules; etch-and-rinse systems remove it, while self-etch systems modify it and incorporate it into the hybrid layer.",
@@ -309,7 +309,7 @@
             {
               "en": "Removes the smear layer",
               "ru": "Смазанный слой удаляется",
-              "uz": "Smear qatlam olib tashlanadi"
+              "uz": "Smear qatlami olib tashlanadi"
             },
             {
               "en": "Best enamel bond",
@@ -338,7 +338,7 @@
             {
               "en": "Modifies the smear layer",
               "ru": "Смазанный слой модифицируется",
-              "uz": "Smear qatlam o‘zgartiriladi"
+              "uz": "Smear qatlami o‘zgartiriladi"
             },
             {
               "en": "No rinsing, fewer steps",
@@ -540,7 +540,7 @@
         {
           "en": "Etch-and-rinse removes, self-etch modifies the smear layer",
           "ru": "Тотальное травление удаляет смазанный слой, самопротравливание модифицирует",
-          "uz": "Total-etch smear qatlamni olib tashlaydi, self-etch uni o‘zgartiradi"
+          "uz": "Total-etch smear qatlamini olib tashlaydi, self-etch uni o‘zgartiradi"
         },
         {
           "en": "The hybrid layer is the basis of dentin bonding",
@@ -576,7 +576,7 @@
         {
           "en": "The smear layer and its role",
           "ru": "Смазанный слой и его значение",
-          "uz": "Smear qatlam va uning ahamiyati"
+          "uz": "Smear qatlami va uning ahamiyati"
         },
         {
           "en": "Enamel microretention, dentin hybrid layer",
@@ -706,7 +706,7 @@
       "explain": {
         "en": "Phosphoric acid creates enamel microretention and removes the dentin smear layer.",
         "ru": "Фосфорная кислота создаёт микроретенцию в эмали и удаляет смазанный слой с дентина.",
-        "uz": "Fosfat kislota emalda mikroretensiya hosil qiladi va dentindan smear qatlamni olib tashlaydi."
+        "uz": "Fosfat kislota emalda mikroretensiya hosil qiladi va dentindan smear qatlamini olib tashlaydi."
       }
     },
     {
@@ -724,7 +724,7 @@
         {
           "en": "Black",
           "ru": "Блэк",
-          "uz": "Black"
+          "uz": "Blek"
         },
         {
           "en": "Nakabayashi",
@@ -764,7 +764,7 @@
         {
           "en": "The smear layer reforms",
           "ru": "Смазанный слой образуется снова",
-          "uz": "Smear qatlam qayta hosil bo‘ladi"
+          "uz": "Smear qatlami qayta hosil bo‘ladi"
         },
         {
           "en": "The composite cures faster",
@@ -783,7 +783,7 @@
       "q": {
         "en": "What do self-etch systems do with the smear layer?",
         "ru": "Что самопротравливающие системы делают со смазанным слоем?",
-        "uz": "Self-etch tizimlar smear qatlam bilan nima qiladi?"
+        "uz": "Self-etch tizimlar smear qatlami bilan nima qiladi?"
       },
       "options": [
         {
@@ -811,7 +811,7 @@
       "explain": {
         "en": "Acidic monomers modify the smear layer and include it in the hybrid layer, with no rinsing.",
         "ru": "Кислые мономеры модифицируют смазанный слой и включают его в гибридный слой, без промывания.",
-        "uz": "Kislotali monomerlar smear qatlamni o‘zgartirib, uni gibrid qatlam tarkibiga kiritadi, yuvish bosqichi yo‘q."
+        "uz": "Kislotali monomerlar smear qatlamini o‘zgartirib, uni gibrid qatlam tarkibiga kiritadi, yuvish bosqichi yo‘q."
       }
     },
     {
@@ -894,7 +894,7 @@
         {
           "en": "Smear layer too thick",
           "ru": "Слишком толстый смазанный слой",
-          "uz": "Smear qatlam haddan tashqari qalin"
+          "uz": "Smear qatlami haddan tashqari qalin"
         },
         {
           "en": "Collagen collapsed and tubules were left open",

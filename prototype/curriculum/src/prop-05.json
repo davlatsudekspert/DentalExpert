@@ -358,7 +358,7 @@
           {
             "en": "Three bumps on newly erupted incisor edges",
             "ru": "Три бугорка на режущем крае недавно прорезавшихся резцов",
-            "uz": "Yangi chiqqan kurak tishlar qirrasidagi uchta do‘mboqcha"
+            "uz": "Yangi chiqqan kesuvchi tishlar qirrasidagi uchta do‘mboqcha"
           }
         ]
       ]
@@ -392,7 +392,7 @@
           {
             "en": "Incisors and canines",
             "ru": "Резцы и клыки",
-            "uz": "Kurak va qoziq tishlar"
+            "uz": "Kesuvchi va qoziq tishlar"
           },
           {
             "en": "1 root",
@@ -581,7 +581,7 @@
       "note": {
         "en": "Give students extracted or model incisors and let them apply all three signs.",
         "ru": "Дайте студентам удалённые или модельные резцы и попросите применить все три признака.",
-        "uz": "Talabalarga olingan yoki model kurak tishlarni bering va uchala belgini qo‘llashni so‘rang."
+        "uz": "Talabalarga olingan yoki model kesuvchi tishlarni bering va uchala belgini qo‘llashni so‘rang."
       }
     },
     {
@@ -620,13 +620,13 @@
       "q": {
         "en": "Name the surfaces of an upper central incisor and a lower first molar.",
         "ru": "Назовите поверхности верхнего центрального резца и нижнего первого моляра.",
-        "uz": "Yuqori markaziy kurak tish va pastki birinchi katta oziq tish yuzalarini ayting."
+        "uz": "Yuqori markaziy kesuvchi tish va pastki birinchi katta oziq tish yuzalarini ayting."
       },
       "plan": [
         {
           "en": "Incisor: mesial, distal, labial, palatal, incisal edge",
           "ru": "Резец: медиальная, дистальная, губная, нёбная, режущий край",
-          "uz": "Kurak tish: medial, distal, lab, tanglay yuzalari, kesuvchi qirra"
+          "uz": "Kesuvchi tish: medial, distal, lab, tanglay yuzalari, kesuvchi qirra"
         },
         {
           "en": "Molar: mesial, distal, buccal, lingual, occlusal",
@@ -707,7 +707,7 @@
       "q": {
         "en": "How can you tell whether an extracted incisor is right or left?",
         "ru": "Как определить, правый или левый удалённый резец?",
-        "uz": "Olingan kurak tishning o‘ng yoki chap ekanini qanday aniqlash mumkin?"
+        "uz": "Olingan kesuvchi tishning o‘ng yoki chap ekanini qanday aniqlash mumkin?"
       },
       "plan": [
         {
@@ -1018,7 +1018,7 @@
       "q": {
         "en": "According to the root sign, the root of an incisor is usually inclined:",
         "ru": "Согласно признаку корня, корень резца обычно отклонён:",
-        "uz": "Ildiz belgisiga ko‘ra, kurak tish ildizi odatda qaysi tomonga og‘gan:"
+        "uz": "Ildiz belgisiga ko‘ra, kesuvchi tish ildizi odatda qaysi tomonga og‘gan:"
       },
       "options": [
         {

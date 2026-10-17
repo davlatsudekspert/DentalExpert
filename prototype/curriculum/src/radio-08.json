@@ -118,7 +118,7 @@
           },
           "detail": {
             "en": "Tooth displacement, resorption, expansion",
-            "ru": "Смещение зубов, резорбция, вздутие кортикала",
+            "ru": "Смещение зубов, резорбция, вздутие кортикальной пластинки",
             "uz": "Tish siljishi, rezorbsiya, kortikal kengayish"
           }
         }
@@ -126,7 +126,7 @@
       "note": {
         "en": "Description comes before diagnosis; ask students to describe every image using these five steps.",
         "ru": "Описание предшествует диагнозу; просите студентов описывать каждый снимок по этим пяти шагам.",
-        "uz": "Tasvirlash tashxisdan oldin keladi; talabalardan har bir snimokni shu besh qadam bilan og‘zaki tasvirlashni so‘rang."
+        "uz": "Tasvirlash tashxisdan oldin keladi; talabalardan har bir rentgenogrammani shu besh qadam bilan og‘zaki tasvirlashni so‘rang."
       }
     },
     {
@@ -280,8 +280,8 @@
             },
             {
               "en": "Cortical destruction, soft-tissue mass",
-              "ru": "Разрушение кортикала, мягкотканный компонент",
-              "uz": "Kortikal buzilish, yumshoq to‘qima o‘smasi"
+              "ru": "Разрушение кортикальной пластинки, мягкотканный компонент",
+              "uz": "Kortikal buzilish, yumshoq to‘qima komponenti"
             },
             {
               "en": "Teeth 'floating in air'",
@@ -393,7 +393,7 @@
       "title": {
         "en": "Signs of canal proximity on panoramic (Rood)",
         "ru": "Признаки близости к каналу на ОПТГ (Руд)",
-        "uz": "OPTG da kanalga yaqinlik belgilari (Rood)"
+        "uz": "OPTGda kanalga yaqinlik belgilari (Rood)"
       },
       "bullets": [
         {
@@ -419,7 +419,7 @@
         {
           "en": "If present, consider CBCT",
           "ru": "При этих признаках рассмотрите КЛКТ",
-          "uz": "Bu belgilar bo‘lsa — KLKT ni ko‘rib chiqing"
+          "uz": "Bu belgilar bo‘lsa — KLKTni ko‘rib chiqing"
         }
       ],
       "note": {
@@ -535,7 +535,7 @@
         },
         {
           "en": "Ill-defined margins, cortical loss or numbness mean urgent referral",
-          "ru": "Нечёткие края, разрушение кортикала, онемение — срочное направление",
+          "ru": "Нечёткие края, разрушение кортикальной пластинки, онемение — срочное направление",
           "uz": "Noaniq chegara, kortikal yemirilish va uvishish — shoshilinch yo‘llanma"
         }
       ]
@@ -610,7 +610,7 @@
         {
           "en": "Panoramic or periapical image",
           "ru": "ОПТГ или периапикальный снимок",
-          "uz": "OPTG yoki periapikal snimok"
+          "uz": "OPTG yoki periapikal rentgenogramma"
         },
         {
           "en": "Look for Rood's signs",
@@ -643,8 +643,8 @@
         },
         {
           "en": "Cortical destruction and soft-tissue mass",
-          "ru": "Разрушение кортикала и мягкотканный компонент",
-          "uz": "Kortikal yemirilish va yumshoq to‘qima o‘smasi"
+          "ru": "Разрушение кортикальной пластинки и мягкотканный компонент",
+          "uz": "Kortikal yemirilish va yumshoq to‘qima komponenti"
         },
         {
           "en": "Floating teeth, root resorption",
@@ -684,7 +684,7 @@
         },
         {
           "en": "Cortical destruction",
-          "ru": "Разрушение кортикала",
+          "ru": "Разрушение кортикальной пластинки",
           "uz": "Kortikal buzilish"
         }
       ],
@@ -839,7 +839,7 @@
       "q": {
         "en": "Which panoramic sign suggests a third molar root is close to the canal?",
         "ru": "Какой признак на ОПТГ указывает на близость корня третьего моляра к каналу?",
-        "uz": "OPTG da qaysi belgi uchinchi molyar ildizining kanalga yaqinligini ko‘rsatadi?"
+        "uz": "OPTGda qaysi belgi uchinchi molyar ildizining kanalga yaqinligini ko‘rsatadi?"
       },
       "options": [
         {
@@ -867,7 +867,7 @@
       "explain": {
         "en": "This is one of Rood's signs; CBCT may then be considered.",
         "ru": "Это один из признаков Руда; в такой ситуации можно рассмотреть КЛКТ.",
-        "uz": "Rood belgilaridan biri; bunday holatda KLKT ni ko‘rib chiqish mumkin."
+        "uz": "Rood belgilaridan biri; bunday holatda KLKTni ko‘rib chiqish mumkin."
       }
     },
     {
@@ -880,7 +880,7 @@
         {
           "en": "Repeat imaging in 6 months",
           "ru": "Повторный снимок через 6 месяцев",
-          "uz": "6 oydan keyin qayta snimok"
+          "uz": "6 oydan keyin qayta rentgenogramma"
         },
         {
           "en": "Antibiotics and review",

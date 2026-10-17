@@ -271,7 +271,7 @@
       "term": {
         "en": "Secondary (recurrent) caries",
         "ru": "Вторичный (рецидивный) кариес",
-        "uz": "Ikkilamchi (residiv) karies"
+        "uz": "Ikkilamchi (retsidiv) karies"
       },
       "definition": {
         "en": "A new carious lesion at the margin of an existing restoration. It is one of the most common reasons for replacing fillings. Marginal staining or a narrow ditch alone is not a sign of secondary caries.",
@@ -540,7 +540,7 @@
           {
             "en": "Plaque retention",
             "ru": "Скопление налёта",
-            "uz": "Blyashka to‘planishi"
+            "uz": "Karash to‘planishi"
           },
           {
             "en": "Anatomical shaping",
@@ -994,7 +994,7 @@
       "explain": {
         "en": "An overhang traps plaque, causing gingivitis and bone loss; a wedge and proper matrix prevent it.",
         "ru": "Нависающий край задерживает налёт, вызывает гингивит и резорбцию кости; клин и правильная матрица предотвращают его.",
-        "uz": "Osilib turgan chekka blyashka to‘playdi, gingivit va suyak rezorbsiyasiga olib keladi; pona va to‘g‘ri matritsa uni oldini oladi."
+        "uz": "Osilib turgan chekka karash to‘playdi, gingivit va suyak rezorbsiyasiga olib keladi; pona va to‘g‘ri matritsa uni oldini oladi."
       }
     },
     {

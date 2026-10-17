@@ -315,7 +315,7 @@
             {
               "en": "Last resort: crown",
               "ru": "Последний вариант: коронка",
-              "uz": "Oxirgi tanlov: toj"
+              "uz": "Oxirgi tanlov: koronka"
             }
           ]
         }
@@ -417,7 +417,7 @@
           "detail": {
             "en": "About 2 mm of glass ionomer",
             "ru": "Около 2 мм стеклоиономерного цемента",
-            "uz": "Taxminan 2 mm shisha ionomer sement"
+            "uz": "Taxminan 2 mm shisha-ionomer sement"
           }
         },
         {
@@ -584,7 +584,7 @@
         {
           "en": "Crowns as a last resort",
           "ru": "Коронки как последний вариант",
-          "uz": "Tojlar oxirgi tanlov sifatida"
+          "uz": "Koronkalar oxirgi tanlov sifatida"
         }
       ]
     },
@@ -698,7 +698,7 @@
         {
           "en": "Place a ceramic crown at once",
           "ru": "Сразу изготовить керамическую коронку",
-          "uz": "Darhol keramik toj qo‘yish"
+          "uz": "Darhol keramik koronka qo‘yish"
         },
         {
           "en": "Start at-home whitening",
@@ -848,7 +848,7 @@
         {
           "en": "The tooth has a crown",
           "ru": "На зубе есть коронка",
-          "uz": "Tishda toj bo‘lishi"
+          "uz": "Tishda koronka bo‘lishi"
         }
       ],
       "correct": 2,
@@ -873,7 +873,7 @@
         {
           "en": "Crown placement",
           "ru": "Изготовление коронки",
-          "uz": "Toj qo‘yish"
+          "uz": "Koronka qo‘yish"
         },
         {
           "en": "Internal bleaching",
@@ -988,7 +988,7 @@
         {
           "en": "Never; only a crown is placed",
           "ru": "Никогда, только коронка",
-          "uz": "Hech qachon, faqat toj qo‘yiladi"
+          "uz": "Hech qachon, faqat koronka qo‘yiladi"
         }
       ],
       "correct": 0,

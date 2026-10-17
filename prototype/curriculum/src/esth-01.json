@@ -78,7 +78,7 @@
           "detail": {
             "en": "Incisor display at rest and on smiling",
             "ru": "Видимость резцов в покое и при улыбке",
-            "uz": "Tinch holatda va tabassumda kesuv tishlar ko‘rinishi"
+            "uz": "Tinch holatda va tabassumda kesuvchi tishlar ko‘rinishi"
           }
         },
         {
@@ -210,7 +210,7 @@
         {
           "en": "Upper incisal edges form an arc parallel to the lower lip",
           "ru": "Режущие края верхних резцов образуют дугу, параллельную нижней губе",
-          "uz": "Yuqori kesuv tishlar qirralari pastki lab egriligiga parallel yoy hosil qiladi"
+          "uz": "Yuqori kesuvchi tishlar qirralari pastki lab egriligiga parallel yoy hosil qiladi"
         },
         {
           "en": "The incisal plane is parallel to the interpupillary line",
@@ -310,7 +310,7 @@
           {
             "en": "Symmetry of centrals",
             "ru": "Симметрия центральных резцов",
-            "uz": "Markaziy kesuvlar simmetriyasi"
+            "uz": "Markaziy kesuvchilar simmetriyasi"
           },
           {
             "en": "As equal as possible",
@@ -344,7 +344,7 @@
       "note": {
         "en": "Point out that incisor display at rest depends on age and sex and decreases with age.",
         "ru": "Отметьте, что видимость резцов в покое зависит от возраста и пола и с возрастом уменьшается.",
-        "uz": "Tinch holatda kesuvlar ko‘rinishi yosh va jinsga bog‘liqligini, keksalarda kamayishini ta’kidlang."
+        "uz": "Tinch holatda kesuvchilar ko‘rinishi yosh va jinsga bog‘liqligini, keksalarda kamayishini ta’kidlang."
       }
     },
     {
@@ -699,7 +699,7 @@
       "q": {
         "en": "What is the usual width/length ratio of a maxillary central incisor?",
         "ru": "Каково обычное соотношение ширины к длине верхнего центрального резца?",
-        "uz": "Yuqori markaziy kesuv tishning odatiy kenglik/uzunlik nisbati qancha?"
+        "uz": "Yuqori markaziy kesuvchi tishning odatiy kenglik/uzunlik nisbati qancha?"
       },
       "options": [
         {
@@ -734,7 +734,7 @@
       "q": {
         "en": "Where is the gingival zenith usually located on a maxillary central incisor?",
         "ru": "Где обычно расположен зенит десны у верхнего центрального резца?",
-        "uz": "Yuqori markaziy kesuv tishda milk zeniti odatda qayerda joylashadi?"
+        "uz": "Yuqori markaziy kesuvchi tishda milk zeniti odatda qayerda joylashadi?"
       },
       "options": [
         {
@@ -839,7 +839,7 @@
       "q": {
         "en": "How is the lateral incisor gingival margin usually positioned compared with the central?",
         "ru": "Как обычно расположен десневой край латерального резца по сравнению с центральным?",
-        "uz": "Lateral kesuv tishning milk qirg‘og‘i markaziy kesuvga nisbatan odatda qanday joylashadi?"
+        "uz": "Lateral kesuvchi tishning milk qirg‘og‘i markaziy kesuvchiga nisbatan odatda qanday joylashadi?"
       },
       "options": [
         {
@@ -874,7 +874,7 @@
       "q": {
         "en": "A patient has a black triangle between the upper central incisors. What is a likely main cause?",
         "ru": "У пациента между верхними центральными резцами чёрный треугольник. Какова его вероятная основная причина?",
-        "uz": "Bemorning yuqori markaziy kesuvlari o‘rtasida qora uchburchak bor. Uning asosiy sababi nima bo‘lishi mumkin?"
+        "uz": "Bemorning yuqori markaziy kesuvchilari o‘rtasida qora uchburchak bor. Uning asosiy sababi nima bo‘lishi mumkin?"
       },
       "options": [
         {
@@ -909,7 +909,7 @@
       "q": {
         "en": "A patient with a high smile line has gingival asymmetry. What is the best approach before anterior crowns?",
         "ru": "У пациента с высокой линией улыбки асимметрия десны. Какой подход правильнее перед изготовлением передних коронок?",
-        "uz": "Baland tabassum chizig‘iga ega bemorda milk asimmetriyasi bor. Old tojlar qo‘yishdan oldin eng to‘g‘ri yondashuv qaysi?"
+        "uz": "Baland tabassum chizig‘iga ega bemorda milk asimmetriyasi bor. Old koronkalar qo‘yishdan oldin eng to‘g‘ri yondashuv qaysi?"
       },
       "options": [
         {

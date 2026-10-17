@@ -112,7 +112,7 @@
           {
             "en": "Incisor display at rest",
             "ru": "Видимость резцов в покое",
-            "uz": "Tinch holatda kesuvlar ko‘rinishi"
+            "uz": "Tinch holatda kesuvchilar ko‘rinishi"
           }
         ],
         [
@@ -136,7 +136,7 @@
           {
             "en": "Incisor inclination and edge position",
             "ru": "Наклон резцов и положение края",
-            "uz": "Kesuv tishlar qiyaligi va qirra holati"
+            "uz": "Kesuvchi tishlar qiyaligi va qirra holati"
           }
         ],
         [
@@ -327,7 +327,7 @@
           "detail": {
             "en": "Provisional crown material",
             "ru": "Материал для временных коронок",
-            "uz": "Vaqtinchalik toj materiali"
+            "uz": "Vaqtinchalik koronka materiali"
           }
         },
         {
@@ -703,7 +703,7 @@
         {
           "en": "Glass ionomer cement",
           "ru": "Стеклоиономерный цемент",
-          "uz": "Shisha ionomer sement"
+          "uz": "Shisha-ionomer sement"
         },
         {
           "en": "Zinc phosphate cement",
@@ -790,7 +790,7 @@
       "explain": {
         "en": "On F and V sounds the upper incisal edges should lightly touch the lower lip.",
         "ru": "При звуках Ф и В режущий край верхних резцов слегка касается границы красной каймы нижней губы.",
-        "uz": "F va V tovushlarida yuqori kesuvlar qirrasi pastki labning ichki chegarasiga yengil tegishi kerak."
+        "uz": "F va V tovushlarida yuqori kesuvchilar qirrasi pastki labning ichki chegarasiga yengil tegishi kerak."
       }
     },
     {

@@ -122,7 +122,7 @@
           "label": {
             "en": "Place the rubber dam",
             "ru": "Наложение коффердама",
-            "uz": "Koffer-damni qo‘yish"
+            "uz": "Kofferdamni qo‘yish"
           },
           "detail": {
             "en": "Before entering the chamber",
@@ -150,7 +150,7 @@
           },
           "detail": {
             "en": "With a safe-ended bur",
-            "ru": "Бором с некрежущим кончиком",
+            "ru": "Бором с нережущим кончиком",
             "uz": "Uchi kesmaydigan bor bilan"
           }
         },
@@ -197,7 +197,7 @@
           {
             "en": "Incisors",
             "ru": "Резцы",
-            "uz": "Kurak tishlar"
+            "uz": "Kesuvchi tishlar"
           },
           {
             "en": "Palatal surface, triangular",
@@ -265,7 +265,7 @@
       "note": {
         "en": "In maxillary molars preserve the oblique ridge where possible; look for MB2 on the line between the MB and palatal orifices.",
         "ru": "В верхнем моляре по возможности сохраняйте косой валик; MB2 ищите на линии между MB и нёбным устьем.",
-        "uz": "Yuqori molyarda qiyshiq qirrani imkon qadar saqlang va MB2 ni MB va tanglay kanali orasidagi chiziqda qidiring."
+        "uz": "Yuqori molyarda qiyshiq qirrani imkon qadar saqlang va MB2ni MB va tanglay kanali orasidagi chiziqda qidiring."
       }
     },
     {
@@ -297,7 +297,7 @@
           {
             "en": "Incisors",
             "ru": "Резцы",
-            "uz": "Kurak tishlar"
+            "uz": "Kesuvchi tishlar"
           },
           {
             "en": "Lingual surface, narrow oval",
@@ -657,7 +657,7 @@
         {
           "en": "Search for MB2 between MB and palatal orifices",
           "ru": "Поиск MB2 между MB и нёбным устьем",
-          "uz": "MB2 ni MB va tanglay og‘izlari orasida qidirish"
+          "uz": "MB2ni MB va tanglay og‘izlari orasida qidirish"
         }
       ]
     },
@@ -755,7 +755,7 @@
       "q": {
         "en": "Where does access begin in a maxillary central incisor?",
         "ru": "Откуда начинают доступ в верхнем центральном резце?",
-        "uz": "Yuqori markaziy kurak tishda kirish qayerdan boshlanadi?"
+        "uz": "Yuqori markaziy kesuvchi tishda kirish qayerdan boshlanadi?"
       },
       "options": [
         {
@@ -795,7 +795,7 @@
       "options": [
         {
           "en": "A safe-ended tapered bur",
-          "ru": "Конусный бор с некрежущим кончиком",
+          "ru": "Конусный бор с нережущим кончиком",
           "uz": "Uchi kesmaydigan konussimon bor"
         },
         {
@@ -817,7 +817,7 @@
       "correct": 0,
       "explain": {
         "en": "A safe-ended bur shapes the walls without damaging the chamber floor.",
-        "ru": "Бор с некрежущим кончиком формирует стенки, не повреждая дно полости.",
+        "ru": "Бор с нережущим кончиком формирует стенки, не повреждая дно полости.",
         "uz": "Uchi kesmaydigan bor devorlarni shakllantiradi, lekin kamera tubini shikastlamaydi."
       }
     },
@@ -930,7 +930,7 @@
       "q": {
         "en": "A student treated one canal in a mandibular incisor; a periapical lesion developed later. The likely cause is:",
         "ru": "Студент нашёл и обработал один канал в нижнем резце; позже возник периапикальный очаг. Наиболее вероятная причина?",
-        "uz": "Talaba pastki kurak tishda faqat bitta kanalni topdi va uni davoladi; keyinroq periapikal o‘choq paydo bo‘ldi. Eng ehtimolli sabab?"
+        "uz": "Talaba pastki kesuvchi tishda faqat bitta kanalni topdi va uni davoladi; keyinroq periapikal o‘choq paydo bo‘ldi. Eng ehtimolli sabab?"
       },
       "options": [
         {
@@ -946,7 +946,7 @@
         {
           "en": "A rubber dam was used",
           "ru": "Использовали коффердам",
-          "uz": "Koffer-dam ishlatilgan"
+          "uz": "Kofferdam ishlatilgan"
         },
         {
           "en": "The palatal shoulder was removed",
@@ -958,14 +958,14 @@
       "explain": {
         "en": "Mandibular incisors often have a second lingual canal; if missed, infection persists.",
         "ru": "В нижних резцах часто есть второй язычный канал; если его пропустить, инфекция сохраняется.",
-        "uz": "Pastki kurak tishlarda ikkinchi til tomon kanali ko‘p uchraydi; u qolib ketsa infeksiya saqlanadi."
+        "uz": "Pastki kesuvchi tishlarda ikkinchi til tomon kanali ko‘p uchraydi; u qolib ketsa infeksiya saqlanadi."
       }
     },
     {
       "q": {
         "en": "When is the rubber dam placed?",
         "ru": "Когда накладывают коффердам?",
-        "uz": "Koffer-dam qachon qo‘yiladi?"
+        "uz": "Kofferdam qachon qo‘yiladi?"
       },
       "options": [
         {
@@ -993,7 +993,7 @@
       "explain": {
         "en": "The rubber dam keeps saliva and bacteria out and prevents instruments being swallowed or inhaled.",
         "ru": "Коффердам защищает канал от слюны и микробов и предупреждает аспирацию инструментов.",
-        "uz": "Koffer-dam kanalni so‘lak va mikroblardan himoya qiladi va asboblar yutib yuborilishining oldini oladi."
+        "uz": "Kofferdam kanalni so‘lak va mikroblardan himoya qiladi va asboblar yutib yuborilishining oldini oladi."
       }
     },
     {

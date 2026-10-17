@@ -175,7 +175,7 @@
       "note": {
         "en": "This scale is widely used; the ICDAS/ICCMS radiographic RA–RC scale is similar. Treatment also depends on lesion activity.",
         "ru": "Эта шкала широко применяется; рентгеношкала ICDAS/ICCMS (RA–RC) построена похоже. Решение о лечении зависит и от активности.",
-        "uz": "Bu shkala keng qo‘llanadi; ICDAS/ICCMS ning RA–RC rentgen shkalasi ham shunga o‘xshash. Davolash qarori klinik faollikka ham bog‘liq."
+        "uz": "Bu shkala keng qo‘llanadi; ICDAS/ICCMSning RA–RC rentgen shkalasi ham shunga o‘xshash. Davolash qarori klinik faollikka ham bog‘liq."
       }
     },
     {
@@ -680,7 +680,7 @@
       "explain": {
         "en": "Plaque stagnates just below the contact point, where caries starts.",
         "ru": "Налёт скапливается ниже контактного пункта, где и начинается кариес.",
-        "uz": "Blyashka kontakt nuqtasidan pastda to‘planadi va karies shu yerda boshlanadi."
+        "uz": "Karash kontakt nuqtasidan pastda to‘planadi va karies shu yerda boshlanadi."
       }
     },
     {
@@ -803,7 +803,7 @@
         {
           "en": "The image is faulty",
           "ru": "Снимок сделан неверно",
-          "uz": "Snimok noto‘g‘ri olingan"
+          "uz": "Rentgenogramma noto‘g‘ri olingan"
         },
         {
           "en": "Bone change is not yet visible",
@@ -843,7 +843,7 @@
         {
           "en": "Amalgam and pulp",
           "ru": "Амальгаму и пульпу",
-          "uz": "Amalgam va pulpa"
+          "uz": "Amalgama va pulpa"
         },
         {
           "en": "Mental foramen and canal",

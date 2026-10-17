@@ -19,12 +19,12 @@
     {
       "en": "Know the indications and technique of bitewings",
       "ru": "Знать показания и технику интерпроксимального снимка",
-      "uz": "Tishlam (bitewing) snimokning ko‘rsatmalari va texnikasini bilish"
+      "uz": "Interproksimal (bitewing) rentgenogrammaning ko‘rsatmalari va texnikasini bilish"
     },
     {
       "en": "Explain the types and uses of occlusal radiographs",
       "ru": "Объяснить виды и применение окклюзионных снимков",
-      "uz": "Okklyuzion snimok turlari va qo‘llanishini tushuntirish"
+      "uz": "Okklyuzion rentgenogramma turlari va qo‘llanishini tushuntirish"
     },
     {
       "en": "Recognise angulation errors on the image",
@@ -50,7 +50,7 @@
       "subtitle": {
         "en": "Periapical, bitewing and occlusal radiographs",
         "ru": "Периапикальные, интерпроксимальные и окклюзионные снимки",
-        "uz": "Periapikal, tishlam (bitewing) va okklyuzion snimoklar"
+        "uz": "Periapikal, interproksimal (bitewing) va okklyuzion rentgenogrammalar"
       }
     },
     {
@@ -58,12 +58,12 @@
       "title": {
         "en": "Types of intraoral radiograph",
         "ru": "Виды внутриротовых снимков",
-        "uz": "Intraoral snimok turlari"
+        "uz": "Intraoral rentgenogramma turlari"
       },
       "root": {
         "en": "Intraoral radiographs",
         "ru": "Внутриротовые снимки",
-        "uz": "Intraoral snimoklar"
+        "uz": "Intraoral rentgenogrammalar"
       },
       "children": [
         {
@@ -89,7 +89,7 @@
           "label": {
             "en": "Bitewing",
             "ru": "Интерпроксимальный (bitewing)",
-            "uz": "Tishlam (bitewing)"
+            "uz": "Interproksimal (bitewing)"
           },
           "items": [
             {
@@ -148,7 +148,7 @@
             {
               "en": "Beam perpendicular to both",
               "ru": "Пучок перпендикулярен обоим",
-              "uz": "Dasta ikkalasiga perpendikulyar"
+              "uz": "Nur dastasi ikkalasiga perpendikulyar"
             },
             {
               "en": "Needs a holder and long cone",
@@ -177,7 +177,7 @@
             {
               "en": "Beam perpendicular to the bisector",
               "ru": "Пучок перпендикулярен биссектрисе",
-              "uz": "Dasta bissektrisaga perpendikulyar"
+              "uz": "Nur dastasi bissektrisaga perpendikulyar"
             },
             {
               "en": "May be held by the patient's finger",
@@ -283,7 +283,7 @@
           {
             "en": "Beam not centred on receptor",
             "ru": "Пучок не отцентрован на приёмник",
-            "uz": "Dasta qabul qilgichga markazlanmagan"
+            "uz": "Nur dastasi qabul qilgichga markazlanmagan"
           },
           {
             "en": "Part of image clear white",
@@ -303,7 +303,7 @@
       "title": {
         "en": "Periapical: paralleling steps",
         "ru": "Периапикальный снимок: этапы параллельной методики",
-        "uz": "Periapikal snimok: parallel usul bosqichlari"
+        "uz": "Periapikal rentgenogramma: parallel usul bosqichlari"
       },
       "steps": [
         {
@@ -373,13 +373,13 @@
       "title": {
         "en": "Bitewing radiograph",
         "ru": "Интерпроксимальный снимок (bitewing)",
-        "uz": "Tishlam (bitewing) snimok"
+        "uz": "Interproksimal (bitewing) rentgenogramma"
       },
       "bullets": [
         {
           "en": "Upper and lower crowns on one image",
           "ru": "Коронки верхних и нижних зубов на одном снимке",
-          "uz": "Yuqori va pastki tish tojlari bitta snimokda"
+          "uz": "Yuqori va pastki tish tojlari bitta rentgenogrammada"
         },
         {
           "en": "Detects approximal and secondary caries",
@@ -394,18 +394,18 @@
         {
           "en": "Horizontal beam must pass through the contacts",
           "ru": "Горизонтальный пучок должен пройти через контакты",
-          "uz": "Gorizontal dasta kontaktlar orqali o‘tishi kerak"
+          "uz": "Gorizontal nur dastasi kontaktlar orqali o‘tishi kerak"
         },
         {
           "en": "Vertical bitewings when bone loss is marked",
           "ru": "При выраженной убыли кости — вертикальный bitewing",
-          "uz": "Chuqur suyak yo‘qolishida vertikal tishlam snimok"
+          "uz": "Chuqur suyak yo‘qolishida vertikal bitewing rentgenogramma"
         }
       ],
       "note": {
         "en": "Stress that bitewings detect approximal caries better than clinical examination alone.",
         "ru": "Подчеркните, что bitewing выявляет контактный кариес лучше, чем осмотр.",
-        "uz": "Tishlam snimok kontakt kariesini klinik ko‘rikdan ko‘ra yaxshiroq aniqlashini ta’kidlang."
+        "uz": "Bitewing rentgenogramma kontakt kariesini klinik ko‘rikdan ko‘ra yaxshiroq aniqlashini ta’kidlang."
       }
     },
     {
@@ -413,7 +413,7 @@
       "title": {
         "en": "Occlusal radiographs",
         "ru": "Окклюзионные снимки",
-        "uz": "Okklyuzion snimoklar"
+        "uz": "Okklyuzion rentgenogrammalar"
       },
       "columns": [
         {
@@ -450,7 +450,7 @@
             {
               "en": "Beam at 90° from below the chin",
               "ru": "Пучок снизу под 90° к приёмнику",
-              "uz": "Dasta qabul qilgichga 90° pastdan"
+              "uz": "Nur dastasi qabul qilgichga 90° pastdan"
             },
             {
               "en": "Submandibular salivary stone",
@@ -481,7 +481,7 @@
       "definition": {
         "en": "Two images are taken at different horizontal angles. If the object moves the same way as the tube it is lingual (palatal); if it moves the opposite way it is buccal (Same Lingual, Opposite Buccal).",
         "ru": "Делают два снимка с разным горизонтальным углом. Если объект смещается в ту же сторону, что и трубка, — он язычный (нёбный), если в противоположную — щёчный (Same Lingual, Opposite Buccal).",
-        "uz": "Ikki snimok turli gorizontal burchakda olinadi. Obyekt trubka bilan bir tomonga siljisa — u til (tanglay) tomonda, qarama-qarshi tomonga siljisa — lunj tomonda joylashgan (Same Lingual, Opposite Buccal)."
+        "uz": "Ikki rentgenogramma turli gorizontal burchakda olinadi. Obyekt trubka bilan bir tomonga siljisa — u til (tanglay) tomonda, qarama-qarshi tomonga siljisa — lunj tomonda joylashgan (Same Lingual, Opposite Buccal)."
       },
       "note": {
         "en": "Most often used for an unerupted maxillary canine; sketch the tube shift on the board.",
@@ -500,7 +500,7 @@
         {
           "en": "Paralleling is the preferred periapical technique",
           "ru": "Параллельная методика — предпочтительный стандарт периапикальных снимков",
-          "uz": "Parallel usul — periapikal snimok uchun afzal standart"
+          "uz": "Parallel usul — periapikal rentgenogramma uchun afzal standart"
         },
         {
           "en": "Vertical errors distort length; horizontal errors overlap contacts",
@@ -510,12 +510,12 @@
         {
           "en": "Bitewings show approximal caries and crestal bone",
           "ru": "Bitewing — для контактного кариеса и гребня альвеолы",
-          "uz": "Tishlam snimok — kontakt kariesi va alveolyar qirra uchun"
+          "uz": "Bitewing rentgenogramma — kontakt kariesi va alveolyar qirra uchun"
         },
         {
           "en": "Occlusal views and the SLOB rule help localise objects",
           "ru": "Окклюзионный снимок и правило SLOB помогают локализовать объект",
-          "uz": "Okklyuzion snimok va SLOB qoidasi joylashuvni aniqlashga yordam beradi"
+          "uz": "Okklyuzion rentgenogramma va SLOB qoidasi joylashuvni aniqlashga yordam beradi"
         }
       ]
     }
@@ -536,7 +536,7 @@
         {
           "en": "Direction of the beam",
           "ru": "Направление пучка",
-          "uz": "Dastaning yo‘nalishi"
+          "uz": "Nur dastasining yo‘nalishi"
         },
         {
           "en": "Need for a holder and long cone",
@@ -583,7 +583,7 @@
       "q": {
         "en": "What are the indications and technique of bitewings?",
         "ru": "Каковы показания и техника снимка bitewing?",
-        "uz": "Tishlam snimokning ko‘rsatmalari va texnikasi qanday?"
+        "uz": "Bitewing rentgenogrammaning ko‘rsatmalari va texnikasi qanday?"
       },
       "plan": [
         {
@@ -599,12 +599,12 @@
         {
           "en": "Horizontal beam through the contacts",
           "ru": "Горизонтальный пучок через контакты",
-          "uz": "Gorizontal dasta kontaktlar orqali"
+          "uz": "Gorizontal nur dastasi kontaktlar orqali"
         },
         {
           "en": "Holder with both arches on one image",
           "ru": "Держатель, обе дуги на одном снимке",
-          "uz": "Ushlagich bilan yuqori-pastki tojlar bir snimokda"
+          "uz": "Ushlagich bilan yuqori-pastki tojlar bir rentgenogrammada"
         }
       ]
     },
@@ -618,7 +618,7 @@
         {
           "en": "Parallax: two images at different horizontal angles",
           "ru": "Параллакс: два снимка под разными горизонтальными углами",
-          "uz": "Parallaks: ikki snimok turli gorizontal burchakda"
+          "uz": "Parallaks: ikki rentgenogramma turli gorizontal burchakda"
         },
         {
           "en": "Applying the SLOB rule",
@@ -628,7 +628,7 @@
         {
           "en": "Combination with occlusal or panoramic image",
           "ru": "Сочетание с окклюзионным или панорамным снимком",
-          "uz": "Okklyuzion yoki panoramik snimok bilan birga"
+          "uz": "Okklyuzion yoki panoramik rentgenogramma bilan birga"
         },
         {
           "en": "CBCT in complex cases",
@@ -643,7 +643,7 @@
       "q": {
         "en": "In the paralleling technique, how is the central ray directed?",
         "ru": "Как направлен центральный луч при параллельной методике?",
-        "uz": "Parallel usulda markaziy dasta qanday yo‘naltiriladi?"
+        "uz": "Parallel usulda markaziy nur dastasi qanday yo‘naltiriladi?"
       },
       "options": [
         {
@@ -671,7 +671,7 @@
       "explain": {
         "en": "The receptor is parallel to the tooth and the beam is perpendicular to both.",
         "ru": "Приёмник параллелен оси зуба, а пучок перпендикулярен им обоим.",
-        "uz": "Qabul qilgich tish o‘qiga parallel, dasta esa ikkalasiga perpendikulyar bo‘ladi."
+        "uz": "Qabul qilgich tish o‘qiga parallel, nur dastasi esa ikkalasiga perpendikulyar bo‘ladi."
       }
     },
     {
@@ -713,7 +713,7 @@
       "q": {
         "en": "Contacts overlap on a bitewing. What is the main cause?",
         "ru": "На bitewing наложились контакты. Основная причина?",
-        "uz": "Tishlam snimokda kontaktlar ustma-ust tushdi. Asosiy sabab nima?"
+        "uz": "Bitewing rentgenogrammada kontaktlar ustma-ust tushdi. Asosiy sabab nima?"
       },
       "options": [
         {
@@ -741,14 +741,14 @@
       "explain": {
         "en": "If the beam does not pass straight through the contacts, adjacent teeth overlap.",
         "ru": "Если пучок не проходит параллельно через контакты, соседние зубы накладываются.",
-        "uz": "Dasta kontakt nuqtalari orqali parallel o‘tmasa, qo‘shni tishlar ustma-ust tushadi."
+        "uz": "Nur dastasi kontakt nuqtalari orqali parallel o‘tmasa, qo‘shni tishlar ustma-ust tushadi."
       }
     },
     {
       "q": {
         "en": "What is the main indication for bitewings?",
         "ru": "Основное показание к снимку bitewing?",
-        "uz": "Tishlam snimokning asosiy ko‘rsatmasi qaysi?"
+        "uz": "Bitewing rentgenogrammaning asosiy ko‘rsatmasi qaysi?"
       },
       "options": [
         {
@@ -776,14 +776,14 @@
       "explain": {
         "en": "Bitewings show crowns and crestal bone, not the apices.",
         "ru": "Bitewing показывает коронки и гребень, но не апексы.",
-        "uz": "Tishlam snimok tojlar va alveolyar qirrani ko‘rsatadi, apeksni emas."
+        "uz": "Bitewing rentgenogramma tojlar va alveolyar qirrani ko‘rsatadi, apeksni emas."
       }
     },
     {
       "q": {
         "en": "Part of the image is a clear white area with a sharp edge. Which error is this?",
         "ru": "Часть снимка — белая область с чёткой границей. Какая это ошибка?",
-        "uz": "Snimokning bir qismi aniq chegarali oq soha bo‘lib chiqdi. Bu qaysi xato?"
+        "uz": "Rentgenogrammaning bir qismi aniq chegarali oq soha bo‘lib chiqdi. Bu qaysi xato?"
       },
       "options": [
         {
@@ -811,20 +811,20 @@
       "explain": {
         "en": "When the collimated beam misses part of the receptor, that unexposed area stays white.",
         "ru": "Если коллимированный пучок не покрыл часть приёмника, необлучённый участок остаётся белым.",
-        "uz": "Kollimatsiyalangan dasta qabul qilgichning bir qismini qoplamaganda nurlanmagan soha oq qoladi."
+        "uz": "Kollimatsiyalangan nur dastasi qabul qilgichning bir qismini qoplamaganda nurlanmagan soha oq qoladi."
       }
     },
     {
       "q": {
         "en": "Which view best shows a stone in the submandibular duct?",
         "ru": "Какой снимок лучше всего подходит для выявления камня в протоке поднижнечелюстной железы?",
-        "uz": "Qaysi snimok jag‘ osti so‘lak bezi yo‘lidagi toshni aniqlashga eng mos?"
+        "uz": "Qaysi rentgenogramma jag‘ osti so‘lak bezi yo‘lidagi toshni aniqlashga eng mos?"
       },
       "options": [
         {
           "en": "Bitewing",
           "ru": "Bitewing",
-          "uz": "Tishlam snimok"
+          "uz": "Bitewing rentgenogramma"
         },
         {
           "en": "Maxillary occlusal",
@@ -846,7 +846,7 @@
       "explain": {
         "en": "A beam at 90° from below shows the floor of the mouth in cross-section.",
         "ru": "Пучок снизу под 90° показывает дно полости рта в поперечной проекции.",
-        "uz": "Pastdan 90° yo‘nalgan dasta og‘iz tubini ko‘ndalang kesimda ko‘rsatadi."
+        "uz": "Pastdan 90° yo‘nalgan nur dastasi og‘iz tubini ko‘ndalang kesimda ko‘rsatadi."
       }
     },
     {
@@ -929,36 +929,36 @@
         {
           "en": "Bisecting technique or a panoramic image",
           "ru": "Методика биссектрисы или ОПТГ",
-          "uz": "Bissektrisa usuli yoki panoramik snimok"
+          "uz": "Bissektrisa usuli yoki panoramik rentgenogramma"
         },
         {
           "en": "Bitewing only",
           "ru": "Только bitewing",
-          "uz": "Faqat tishlam snimok"
+          "uz": "Faqat bitewing rentgenogramma"
         },
         {
           "en": "Treat without a radiograph",
           "ru": "Лечение без снимка",
-          "uz": "Snimoksiz davolash"
+          "uz": "Rentgenogrammasiz davolash"
         },
         {
           "en": "Mandibular occlusal view",
           "ru": "Нижнечелюстной окклюзионный снимок",
-          "uz": "Pastki okklyuzion snimok"
+          "uz": "Pastki okklyuzion rentgenogramma"
         }
       ],
       "correct": 0,
       "explain": {
         "en": "If a paralleling holder is not tolerated, bisecting or an extraoral view is used instead.",
         "ru": "Если держатель для параллельной методики не переносится, выбирают биссектрису или внеротовой снимок.",
-        "uz": "Parallel ushlagich chidab bo‘lmasa, bissektrisa usuli yoki ekstraoral snimok tanlanadi."
+        "uz": "Parallel ushlagich chidab bo‘lmasa, bissektrisa usuli yoki ekstraoral rentgenogramma tanlanadi."
       }
     },
     {
       "q": {
         "en": "When are vertical bitewings preferred?",
         "ru": "Когда предпочтителен вертикальный bitewing?",
-        "uz": "Vertikal tishlam snimok qachon afzal?"
+        "uz": "Vertikal bitewing rentgenogramma qachon afzal?"
       },
       "options": [
         {

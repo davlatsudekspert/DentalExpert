@@ -121,7 +121,7 @@
             {
               "en": "Radiopaque glass",
               "ru": "Рентгеноконтрастное стекло",
-              "uz": "Rentgenkontrast shisha"
+              "uz": "Rentgenokontrast shisha"
             }
           ]
         },
@@ -794,7 +794,7 @@
       "explain": {
         "en": "TEGDMA is a low-viscosity monomer that thins viscous Bis-GMA but increases shrinkage.",
         "ru": "TEGDMA — маловязкий мономер, разбавляющий вязкий Bis-GMA, но увеличивающий усадку.",
-        "uz": "TEGDMA past qovushqoq monomer bo‘lib, juda qovushqoq Bis-GMA ni suyultiradi, lekin kirishishni oshiradi."
+        "uz": "TEGDMA past qovushqoq monomer bo‘lib, juda qovushqoq Bis-GMAni suyultiradi, lekin kirishishni oshiradi."
       }
     },
     {
@@ -997,7 +997,7 @@
         {
           "en": "It raises radiopacity",
           "ru": "Повышает рентгеноконтрастность",
-          "uz": "Rentgenkontrastlikni oshiradi"
+          "uz": "Rentgenokontrastlikni oshiradi"
         }
       ],
       "correct": 0,

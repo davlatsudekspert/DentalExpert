@@ -398,7 +398,7 @@
       "note": {
         "en": "Add that infection can also spread through the pterygoid venous plexus.",
         "ru": "Добавьте, что инфекция может пройти и через крыловидное венозное сплетение.",
-        "uz": "Qanot-tanglay venoz chigali orqali ham infeksiya kavernoz sinusga o‘tishi mumkinligini qo‘shimcha qiling."
+        "uz": "Qanotsimon venoz chigal orqali ham infeksiya kavernoz sinusga o‘tishi mumkinligini qo‘shimcha qiling."
       }
     },
     {
@@ -520,7 +520,7 @@
             {
               "en": "Canine (infraorbital) space",
               "ru": "Клыковое (подглазничное) пространство",
-              "uz": "It tishi (ko‘z osti) bo‘shlig‘i"
+              "uz": "Qoziq tish (ko‘z osti) bo‘shlig‘i"
             },
             {
               "en": "Buccal space",
@@ -745,7 +745,7 @@
         {
           "en": "Injury causes lower lip asymmetry",
           "ru": "Повреждение даёт асимметрию нижней губы",
-          "uz": "Shikastlanish pastki lab assimetriyasini beradi"
+          "uz": "Shikastlanish pastki lab asimmetriyasini beradi"
         }
       ]
     },
@@ -959,7 +959,7 @@
       "q": {
         "en": "Which is a terminal branch of the external carotid artery?",
         "ru": "Какая артерия является конечной ветвью наружной сонной?",
-        "uz": "Qaysi tashqi uyqu arteriyasining oxirgi shoxi hisoblanadi?"
+        "uz": "Qaysi arteriya tashqi uyqu arteriyasining oxirgi shoxi hisoblanadi?"
       },
       "options": [
         {
@@ -1005,7 +1005,7 @@
         {
           "en": "The canine space",
           "ru": "В клыковое пространство",
-          "uz": "It tishi bo‘shlig‘iga"
+          "uz": "Qoziq tish bo‘shlig‘iga"
         },
         {
           "en": "The submandibular space",

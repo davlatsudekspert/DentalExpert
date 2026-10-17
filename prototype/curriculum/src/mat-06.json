@@ -155,7 +155,7 @@
             {
               "en": "Seats crowns, bridges, inlays",
               "ru": "Фиксация коронок, мостов, вкладок",
-              "uz": "Toj, ko‘prik, vkladkani mahkamlash"
+              "uz": "Koronka, ko‘prik, vkladkani mahkamlash"
             },
             {
               "en": "Needs a thin film",
@@ -465,7 +465,7 @@
           "head": {
             "en": "Calcium silicate (MTA etc.)",
             "ru": "Кальций-силикатные (МТА и др.)",
-            "uz": "Kalsiy silikat (MTA va boshq.)"
+            "uz": "Kalsiy silikat (MTA va boshqalar)"
           },
           "items": [
             {
@@ -814,7 +814,7 @@
       "explain": {
         "en": "In polycarboxylate cement carboxyl groups bind tooth calcium; the idea was later used in GIC.",
         "ru": "В поликарбоксилатном цементе карбоксильные группы связываются с кальцием зуба; этот принцип затем перенесли в СИЦ.",
-        "uz": "Polikarboksilat sementda poliakril kislotaning karboksil guruhlari tish kalsiyi bilan bog‘lanadi; bu tamoyil keyin SIS ga o‘tdi."
+        "uz": "Polikarboksilat sementda poliakril kislotaning karboksil guruhlari tish kalsiyi bilan bog‘lanadi; bu tamoyil keyin SISga o‘tdi."
       }
     },
     {
@@ -996,7 +996,7 @@
       "q": {
         "en": "Which cement group is most often used to lute a zirconia crown?",
         "ru": "Какая группа цементов чаще всего используется для фиксации коронки из диоксида циркония?",
-        "uz": "Sirkoniy dioksidi tojini fiksatsiyalash uchun eng ko‘p qo‘llaniladigan sement guruhi?"
+        "uz": "Sirkoniy dioksidi koronkasini fiksatsiyalash uchun eng ko‘p qo‘llaniladigan sement guruhi?"
       },
       "options": [
         {

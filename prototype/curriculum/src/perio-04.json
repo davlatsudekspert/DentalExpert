@@ -102,7 +102,7 @@
           "detail": {
             "en": "Localised, generalised, molar–incisor",
             "ru": "Локализованный, генерализованный, моляро-резцовый",
-            "uz": "Mahalliy, tarqalgan, moziq-kesuv"
+            "uz": "Mahalliy, tarqalgan, molyar-kesuvchi"
           }
         },
         {
@@ -315,7 +315,7 @@
             {
               "en": "Bite collapse, drifting; under 20 teeth",
               "ru": "Снижение прикуса, смещение; менее 20 зубов",
-              "uz": "Tishlov pasayishi, siljish; 20 dan kam tish"
+              "uz": "Tishlam pasayishi, siljish; 20 dan kam tish"
             }
           ]
         }
@@ -342,7 +342,7 @@
         {
           "en": "Molar–incisor pattern described separately",
           "ru": "Моляро-резцовый тип описывают отдельно",
-          "uz": "Moziq-kesuv turi alohida tavsiflanadi"
+          "uz": "Molyar-kesuvchi turi alohida tavsiflanadi"
         }
       ],
       "note": {
@@ -610,7 +610,7 @@
         {
           "en": "Masticatory dysfunction, bite collapse, drifting",
           "ru": "Нарушение жевания, снижение прикуса, смещение зубов",
-          "uz": "Chaynash buzilishi, tishlov pasayishi, tishlar siljishi"
+          "uz": "Chaynash buzilishi, tishlam pasayishi, tishlar siljishi"
         },
         {
           "en": "Fewer than 20 remaining teeth",
@@ -708,7 +708,7 @@
       "q": {
         "en": "A patient has CAL 4 mm and bone loss 25%, but one molar has a class II furcation and a 7 mm pocket. The stage is:",
         "ru": "У пациента потеря прикрепления 4 мм, убыль кости 25%, но на моляре фуркация II класса и карман 7 мм. Стадия:",
-        "uz": "Bemorda birikish yo‘qolishi 4 mm, suyak yo‘qolishi 25%, lekin bitta moziq tishda II sinf furkatsiya va 7 mm cho‘ntak bor. Bosqich:"
+        "uz": "Bemorda birikish yo‘qolishi 4 mm, suyak yo‘qolishi 25%, lekin bitta katta oziq tishda II sinf furkatsiya va 7 mm cho‘ntak bor. Bosqich:"
       },
       "options": [
         {
@@ -749,7 +749,7 @@
         {
           "en": "Any molar",
           "ru": "Любой моляр",
-          "uz": "Istalgan moziq tish zararlanganda"
+          "uz": "Istalgan katta oziq tish zararlanganda"
         },
         {
           "en": "Fewer than 30% of teeth",
@@ -759,7 +759,7 @@
         {
           "en": "Only incisors",
           "ru": "Только резцы",
-          "uz": "Faqat kesuv tishlar zararlanganda"
+          "uz": "Faqat kesuvchi tishlar zararlanganda"
         },
         {
           "en": "30% of teeth or more",
@@ -899,7 +899,7 @@
         {
           "en": "Bite collapse with fewer than 20 teeth remaining",
           "ru": "Снижение прикуса и менее 20 зубов",
-          "uz": "Tishlov pasayishi va 20 dan kam tish qolgani"
+          "uz": "Tishlam pasayishi va 20 dan kam tish qolgani"
         },
         {
           "en": "Class II furcation",
@@ -911,7 +911,7 @@
       "explain": {
         "en": "Bite collapse, drifting and fewer than 20 teeth signal the need for complex rehabilitation, which defines stage IV.",
         "ru": "Снижение прикуса, смещение зубов и менее 20 зубов указывают на потребность в сложной реабилитации — стадия IV.",
-        "uz": "Tishlov pasayishi, siljish va 20 dan kam tish murakkab reabilitatsiya zaruratini ko‘rsatadi, bu IV bosqichni belgilaydi."
+        "uz": "Tishlam pasayishi, siljish va 20 dan kam tish murakkab reabilitatsiya zaruratini ko‘rsatadi, bu IV bosqichni belgilaydi."
       }
     },
     {

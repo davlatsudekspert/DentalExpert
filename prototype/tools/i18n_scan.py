@@ -310,9 +310,25 @@ def main():
                         if try_(lambda: page.locator('.contact-action').first.click()):
                             collect(lang, 'profile › toast')
                     if s == 'courses':
-                        for i in range(3):
-                            if try_(lambda: page.locator('.learn .chips button').nth(i).click()):
+                        for i in range(page.locator('.learn > .chips button').count()):
+                            if try_(lambda: page.locator('.learn > .chips button').nth(i).click()):
                                 page.wait_for_timeout(500); collect(lang, f'courses › tab {i+1}')
+                        # Curriculum: every subject page, its first topic and all of that topic's slides.
+                        go(s, lang)
+                        try_(lambda: page.locator('.learn > .chips button').first.click())
+                        n_subj = page.locator('.lg-section .lg-row').count()
+                        for k in range(n_subj):
+                            go(s, lang); try_(lambda: page.locator('.learn > .chips button').first.click())
+                            if not try_(lambda: page.locator('.lg-section .lg-row').nth(k).click()): continue
+                            collect(lang, f'curriculum › subject {k+1}')
+                            if not try_(lambda: page.locator('.lg-section .lg-row').first.click()): continue
+                            page.wait_for_timeout(300); collect(lang, f'curriculum › subject {k+1} › topic 1')
+                            if try_(lambda: page.locator('.lg-section > .button').first.click()):
+                                for j in range(14):
+                                    collect(lang, f'curriculum › subject {k+1} › slide {j+1}')
+                                    nxt = page.locator('.sl-nav .button').last
+                                    if page.locator('.sl-nav .button:has(svg.lucide-chevron-right)').count() == 0: break
+                                    try_(lambda: nxt.click()); page.wait_for_timeout(120)
                     if s == 'lessonPage':
                         if try_(lambda: [q.locator('button').first.click() for q in page.locator('.academy-question').all()]):
                             collect(lang, 'lessonPage › answered')

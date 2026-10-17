@@ -612,7 +612,7 @@
         {
           "en": "Elements: hand hygiene, PPE, sharps safety, reprocessing",
           "ru": "Элементы: гигиена рук, СИЗ, безопасность с острыми предметами, обработка",
-          "uz": "Tarkibi: qo‘l gigiyenasi, SHHV, o‘tkir buyumlar xavfsizligi, ishlov berish"
+          "uz": "Tarkibi: qo‘l gigiyenasi, ShHV, o‘tkir buyumlar xavfsizligi, ishlov berish"
         },
         {
           "en": "Also surface disinfection and waste management",
@@ -625,7 +625,7 @@
       "q": {
         "en": "Describe the order of putting on and taking off PPE.",
         "ru": "Опишите порядок надевания и снятия СИЗ.",
-        "uz": "SHHVni kiyish va yechish tartibini tushuntiring."
+        "uz": "ShHVni kiyish va yechish tartibini tushuntiring."
       },
       "plan": [
         {
@@ -819,7 +819,7 @@
       "q": {
         "en": "Which item is removed first when taking off PPE?",
         "ru": "Что снимают первым при снятии СИЗ?",
-        "uz": "SHHVni yechishda birinchi navbatda nima yechiladi?"
+        "uz": "ShHVni yechishda birinchi navbatda nima yechiladi?"
       },
       "options": [
         {

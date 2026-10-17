@@ -324,7 +324,7 @@
             {
               "en": "Local chip or small defect",
               "ru": "Локальный скол или небольшой дефект",
-              "uz": "Mahalliy skol yoki kichik nuqson"
+              "uz": "Mahalliy sinish (skol) yoki kichik nuqson"
             },
             {
               "en": "Deep marginal stain in a small area",
@@ -452,7 +452,7 @@
           {
             "en": "Metal/zirconia primer",
             "ru": "Праймер для металла/циркония",
-            "uz": "Metall/sirkoniy prayimeri"
+            "uz": "Metall/sirkoniy praymeri"
           }
         ],
         [
@@ -649,7 +649,7 @@
         {
           "en": "Repair: local chip, small defect, marginal stain",
           "ru": "Починка: локальный скол, малый дефект, краевое окрашивание",
-          "uz": "Tuzatish: mahalliy skol, kichik nuqson, chegara dog‘i"
+          "uz": "Tuzatish: mahalliy sinish, kichik nuqson, chegara dog‘i"
         },
         {
           "en": "Replace: extensive caries, bulk fracture",
@@ -773,7 +773,7 @@
       "q": {
         "en": "An anterior composite has a small incisal chip; the rest is sound. What is the best approach?",
         "ru": "У пациента небольшой скол режущего края композитной реставрации, остальная часть в хорошем состоянии. Какой подход оптимален?",
-        "uz": "Bemorning old kompozit restavratsiyasida kichik insisal skol bor, qolgan qismi yaxshi. Eng to‘g‘ri yondashuv qaysi?"
+        "uz": "Bemorning old kompozit restavratsiyasida kesuv qirrasida kichik sinish bor, qolgan qismi yaxshi. Eng to‘g‘ri yondashuv qaysi?"
       },
       "options": [
         {
@@ -784,7 +784,7 @@
         {
           "en": "Place a ceramic crown",
           "ru": "Изготовить керамическую коронку",
-          "uz": "Keramik toj qo‘yish"
+          "uz": "Keramik koronka qo‘yish"
         },
         {
           "en": "Do nothing",
@@ -794,7 +794,7 @@
         {
           "en": "Repair the chip locally",
           "ru": "Локально починить скол",
-          "uz": "Skolni mahalliy tuzatish"
+          "uz": "Sinishni mahalliy tuzatish"
         }
       ],
       "correct": 3,
@@ -864,7 +864,7 @@
         {
           "en": "Small marginal chip",
           "ru": "Небольшой скол у края",
-          "uz": "Chegaradagi kichik skol"
+          "uz": "Chegaradagi kichik sinish"
         }
       ],
       "correct": 2,
@@ -929,7 +929,7 @@
         {
           "en": "Place a crown",
           "ru": "Изготовить коронку",
-          "uz": "Toj qo‘yish"
+          "uz": "Koronka qo‘yish"
         },
         {
           "en": "Refinish and polish the margin",

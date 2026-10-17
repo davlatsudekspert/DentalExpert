@@ -79,7 +79,7 @@
           "detail": {
             "en": "Remove plaque",
             "ru": "Удаление налёта",
-            "uz": "Blyashkani olish"
+            "uz": "Karashni olish"
           }
         },
         {
@@ -395,7 +395,7 @@
             {
               "en": "At plaque stagnation sites",
               "ru": "В местах скопления налёта",
-              "uz": "Blyashka to‘planadigan joyda"
+              "uz": "Karash to‘planadigan joyda"
             },
             {
               "en": "One or a few teeth",
@@ -776,7 +776,7 @@
       "explain": {
         "en": "A ball-ended probe removes plaque and feels texture without damaging enamel.",
         "ru": "Зонд с шариком позволяет снять налёт и оценить текстуру без повреждения эмали.",
-        "uz": "Yumaloq uchli zond blyashkani olib, yuza teksturasini sezadi va emalga zarar yetkazmaydi."
+        "uz": "Yumaloq uchli zond karashni olib, yuza teksturasini sezadi va emalga zarar yetkazmaydi."
       }
     },
     {
@@ -1028,7 +1028,7 @@
       "q": {
         "en": "Why are teeth cleaned of plaque before examination?",
         "ru": "Зачем перед осмотром удаляют налёт с зубов?",
-        "uz": "Nima uchun ko‘rikdan oldin tishlar blyashkadan tozalanadi?"
+        "uz": "Nima uchun ko‘rikdan oldin tishlar karashdan tozalanadi?"
       },
       "options": [
         {
@@ -1056,7 +1056,7 @@
       "explain": {
         "en": "Plaque hides early lesions and prevents assessment of activity.",
         "ru": "Налёт скрывает начальные пятна и мешает оценить активность.",
-        "uz": "Blyashka dastlabki dog‘larni yashiradi va faollikni baholashga xalaqit beradi."
+        "uz": "Karash dastlabki dog‘larni yashiradi va faollikni baholashga xalaqit beradi."
       }
     }
   ]

@@ -215,7 +215,7 @@
           "detail": {
             "en": "Oxidised cellulose, collagen, gelatin sponge",
             "ru": "Окисленная целлюлоза, коллаген, желатиновая губка",
-            "uz": "Oksidlangan tsellyuloza, kollagen, jelatin gubka"
+            "uz": "Oksidlangan sellyuloza, kollagen, jelatin gubka"
           }
         },
         {
@@ -239,14 +239,14 @@
           "detail": {
             "en": "Anticoagulants, blood disorder: refer",
             "ru": "Антикоагулянты, болезни крови — направить",
-            "uz": "Antikoagulant, qon kasalligi – yo‘naltirish"
+            "uz": "Antikoagulyant, qon kasalligi – yo‘naltirish"
           }
         }
       ],
       "note": {
         "en": "Most bleeding stops with local measures; tranexamic acid mouthwash is also used in anticoagulated patients.",
         "ru": "Большинство кровотечений останавливаются местными мерами; полоскания транексамовой кислотой применяют и у пациентов на антикоагулянтах.",
-        "uz": "Ko‘pchilik qon ketishlar mahalliy choralar bilan to‘xtaydi; tranexam kislotasi bilan chayish antikoagulant qabul qiluvchilarda ham qo‘llanadi."
+        "uz": "Ko‘pchilik qon ketishlar mahalliy choralar bilan to‘xtaydi; tranexam kislotasi bilan chayish antikoagulyant qabul qiluvchilarda ham qo‘llanadi."
       }
     },
     {
@@ -685,7 +685,7 @@
         {
           "en": "Extracting an upper incisor",
           "ru": "Удаление верхнего резца",
-          "uz": "Yuqori kurak tishni olish"
+          "uz": "Yuqori kesuvchi tishni olish"
         },
         {
           "en": "Extracting a primary tooth",

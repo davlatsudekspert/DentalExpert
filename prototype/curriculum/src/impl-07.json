@@ -155,7 +155,7 @@
           {
             "en": "Periapical",
             "ru": "Прицельный (периапикальный)",
-            "uz": "Prisel (periapikal)"
+            "uz": "Periapikal"
           },
           {
             "en": "Apex, endodontics, trauma",
@@ -226,7 +226,7 @@
       "title": {
         "en": "What a bitewing shows",
         "ru": "Что показывает интерпроксимальный снимок",
-        "uz": "Interproksimal snimok nimani ko‘rsatadi"
+        "uz": "Interproksimal rentgenogramma nimani ko‘rsatadi"
       },
       "image": "front",
       "callouts": [
@@ -270,7 +270,7 @@
       "note": {
         "en": "Stress that approximal caries hidden on examination is found on this view.",
         "ru": "Подчеркните, что кариес контактных поверхностей, невидимый при осмотре, выявляется именно здесь.",
-        "uz": "Ko‘rik paytida ko‘rinmaydigan kontakt yuzalar kariesi aynan shu snimokda topilishini ta’kidlang."
+        "uz": "Ko‘rik paytida ko‘rinmaydigan kontakt yuzalar kariesi aynan shu rentgenogrammada topilishini ta’kidlang."
       }
     },
     {
@@ -423,7 +423,7 @@
             {
               "en": "Avoid retakes",
               "ru": "Избегать повторных снимков",
-              "uz": "Takroriy snimoklardan qochish"
+              "uz": "Takroriy rentgenogrammalardan qochish"
             }
           ]
         },
@@ -542,7 +542,7 @@
         {
           "en": "Collimation, fast receptors and distance protect best",
           "ru": "Коллимация, быстрый приёмник и расстояние — главная защита",
-          "uz": "Kollimatsiya, tez qabul qilgich va masofa — asosiy himoya"
+          "uz": "Kollimatsiya, yuqori sezgir qabul qilgich va masofa — asosiy himoya"
         }
       ]
     }
@@ -621,7 +621,7 @@
         {
           "en": "Digital or fast receptor",
           "ru": "Цифровой или быстрый приёмник",
-          "uz": "Raqamli yoki tez qabul qilgich"
+          "uz": "Raqamli yoki yuqori sezgir qabul qilgich"
         },
         {
           "en": "Holders and paralleling technique",
@@ -631,7 +631,7 @@
         {
           "en": "Avoid retakes",
           "ru": "Избегать повторов",
-          "uz": "Takroriy snimoklardan qochish"
+          "uz": "Takroriy rentgenogrammalardan qochish"
         }
       ]
     },
@@ -705,7 +705,7 @@
       "q": {
         "en": "Which view is best for approximal caries?",
         "ru": "Какой снимок лучше всего выявляет апроксимальный кариес?",
-        "uz": "Kontakt yuzalardagi kariesni aniqlash uchun eng mos snimok qaysi?"
+        "uz": "Kontakt yuzalardagi kariesni aniqlash uchun eng mos rentgenogramma qaysi?"
       },
       "options": [
         {
@@ -726,7 +726,7 @@
         {
           "en": "Lateral cephalogram",
           "ru": "Боковая телерентгенограмма",
-          "uz": "Bosh suyagi yon snimki"
+          "uz": "Yon telerentgenogramma"
         }
       ],
       "correct": 2,
@@ -796,7 +796,7 @@
         {
           "en": "Slow film",
           "ru": "Медленная плёнка",
-          "uz": "Sekin plyonka"
+          "uz": "Kam sezgir plyonka"
         }
       ],
       "correct": 1,
@@ -985,13 +985,13 @@
       "q": {
         "en": "Bitewings do not show apices. Which view is needed for periapical disease?",
         "ru": "На интерпроксимальном снимке не видны верхушки. Какой снимок нужен для оценки периапикальных тканей?",
-        "uz": "Bitewing snimokda ildiz uchlari ko‘rinmaydi. Ildiz uchi patologiyasini ko‘rish uchun qaysi snimok kerak?"
+        "uz": "Bitewing rentgenogrammada ildiz uchlari ko‘rinmaydi. Ildiz uchi patologiyasini ko‘rish uchun qaysi rentgenogramma kerak?"
       },
       "options": [
         {
           "en": "Periapical radiograph",
           "ru": "Прицельный (периапикальный) снимок",
-          "uz": "Prisel (periapikal) snimok"
+          "uz": "Periapikal rentgenogramma"
         },
         {
           "en": "Another bitewing",
@@ -1013,7 +1013,7 @@
       "explain": {
         "en": "A periapical film shows the whole tooth and periapical area.",
         "ru": "Прицельный снимок показывает весь зуб и периапикальную область.",
-        "uz": "Prisel snimok butun tish va ildiz uchi atrofini ko‘rsatadi."
+        "uz": "Periapikal rentgenogramma butun tish va ildiz uchi atrofini ko‘rsatadi."
       }
     }
   ]

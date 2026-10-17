@@ -836,14 +836,14 @@
         {
           "en": "Fluorescence of dentin",
           "ru": "Флуоресценция дентина",
-          "uz": "Dentin flyuoressensiyasi"
+          "uz": "Dentin fluoressensiyasi"
         }
       ],
       "correct": 1,
       "explain": {
         "en": "In metamerism two objects match under one light source and differ under another.",
         "ru": "При метамерии два объекта выглядят одинаково при одном источнике света и по-разному при другом.",
-        "uz": "Metamerizmda ikki ob’ekt bir yorug‘lik manbaida bir xil, boshqasida esa har xil ko‘rinadi."
+        "uz": "Metamerizmda ikki obyekt bir yorug‘lik manbaida bir xil, boshqasida esa har xil ko‘rinadi."
       }
     },
     {
@@ -1018,7 +1018,7 @@
       "explain": {
         "en": "Instruments give objective, reproducible readings, but visual assessment is still needed for characterisation.",
         "ru": "Приборы дают объективный воспроизводимый результат, но для оценки особенностей нужна и визуальная оценка.",
-        "uz": "Asboblar ob’ektiv va takrorlanuvchan natija beradi, lekin xususiyatlarni baholash uchun ko‘z bilan tekshirish ham kerak."
+        "uz": "Asboblar obyektiv va takrorlanuvchan natija beradi, lekin xususiyatlarni baholash uchun ko‘z bilan tekshirish ham kerak."
       }
     }
   ]

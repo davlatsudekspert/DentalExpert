@@ -211,7 +211,7 @@
           {
             "en": "Crowns, inlays, dentures",
             "ru": "Коронки, вкладки, протезы",
-            "uz": "Toj, vkladka, protez"
+            "uz": "Koronka, vkladka, protez"
           }
         ],
         [
@@ -473,7 +473,7 @@
           "head": {
             "en": "Coefficient of thermal expansion",
             "ru": "Коэффициент термического расширения",
-            "uz": "Issiqlikdan kengayish koeffitsienti"
+            "uz": "Issiqlikdan kengayish koeffitsiyenti"
           },
           "items": [
             {
@@ -584,7 +584,7 @@
         {
           "en": "Colour, translucency, radiopacity",
           "ru": "Цвет, прозрачность, рентгеноконтрастность",
-          "uz": "Rang, shaffoflik, rentgenkontrastlik"
+          "uz": "Rang, shaffoflik, rentgenokontrastlik"
         },
         {
           "en": "Ability to bond to tooth tissue",
@@ -703,7 +703,7 @@
         {
           "en": "Expansion mismatch and marginal gap",
           "ru": "Разница коэффициента расширения и краевая щель",
-          "uz": "Kengayish koeffitsientidagi farq va chekka tirqish"
+          "uz": "Kengayish koeffitsiyentidagi farq va chekka tirqish"
         },
         {
           "en": "Microleakage, risk of secondary caries",
@@ -852,7 +852,7 @@
       "q": {
         "en": "A large mismatch in thermal expansion between restoration and tooth leads to what?",
         "ru": "К чему приводит большая разница коэффициентов термического расширения пломбы и зуба?",
-        "uz": "Plomba va tishning issiqlikdan kengayish koeffitsientlari orasidagi katta farq nimaga olib keladi?"
+        "uz": "Plomba va tishning issiqlikdan kengayish koeffitsiyentlari orasidagi katta farq nimaga olib keladi?"
       },
       "options": [
         {
@@ -863,7 +863,7 @@
         {
           "en": "Higher radiopacity",
           "ru": "Повышению рентгеноконтрастности",
-          "uz": "Rentgenkontrastlikning oshishiga"
+          "uz": "Rentgenokontrastlikning oshishiga"
         },
         {
           "en": "Marginal gaps and microleakage",
@@ -1033,7 +1033,7 @@
         {
           "en": "Radiopacity",
           "ru": "Рентгеноконтрастность",
-          "uz": "Rentgenkontrastlik"
+          "uz": "Rentgenokontrastlik"
         },
         {
           "en": "Thermal conductivity",
@@ -1062,7 +1062,7 @@
       "q": {
         "en": "Why should composite restorations be radiopaque?",
         "ru": "Почему композитные пломбы должны быть рентгеноконтрастными?",
-        "uz": "Kompozit plombalar nima uchun rentgenkontrast bo‘lishi kerak?"
+        "uz": "Kompozit plombalar nima uchun rentgenokontrast bo‘lishi kerak?"
       },
       "options": [
         {
@@ -1090,7 +1090,7 @@
       "explain": {
         "en": "A radiopaque filling stands out from tooth tissue, so caries and defects at its margins can be seen.",
         "ru": "Рентгеноконтрастную пломбу отличают от ткани зуба, поэтому видны кариес и дефекты у её края.",
-        "uz": "Rentgenkontrast plomba tish to‘qimasidan ajralib ko‘rinadi, shuning uchun uning chekkasidagi karies va nuqsonlar aniqlanadi."
+        "uz": "Rentgenokontrast plomba tish to‘qimasidan ajralib ko‘rinadi, shuning uchun uning chekkasidagi karies va nuqsonlar aniqlanadi."
       }
     }
   ]

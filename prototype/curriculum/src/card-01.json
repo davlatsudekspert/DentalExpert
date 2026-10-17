@@ -46,7 +46,7 @@
       "subtitle": {
         "en": "Ecological plaque hypothesis, demineralisation and remineralisation",
         "ru": "Экологическая гипотеза зубного налёта, де- и реминерализация",
-        "uz": "Ekologik blyashka gipotezasi, demineralizatsiya va remineralizatsiya"
+        "uz": "Ekologik karash gipotezasi, demineralizatsiya va remineralizatsiya"
       }
     },
     {
@@ -77,7 +77,7 @@
       "title": {
         "en": "Plaque hypotheses",
         "ru": "Гипотезы зубного налёта",
-        "uz": "Blyashka gipotezalari"
+        "uz": "Karash gipotezalari"
       },
       "columns": [
         {
@@ -109,7 +109,7 @@
             {
               "en": "Amount of plaque matters",
               "ru": "Важно количество налёта",
-              "uz": "Blyashka miqdori muhim"
+              "uz": "Karash miqdori muhim"
             },
             {
               "en": "Regardless of composition",
@@ -154,7 +154,7 @@
       "center": {
         "en": "Ecological plaque hypothesis",
         "ru": "Экологическая гипотеза",
-        "uz": "Ekologik blyashka gipotezasi"
+        "uz": "Ekologik karash gipotezasi"
       },
       "steps": [
         {
@@ -309,7 +309,7 @@
       "definition": {
         "en": "The pH at which plaque fluid becomes undersaturated with respect to hydroxyapatite; about 5.5 for enamel. It is lower for fluorapatite (about 4.5) and higher for root dentin and cementum.",
         "ru": "Уровень pH, при котором жидкость налёта становится ненасыщенной по гидроксиапатиту; для эмали около 5,5. Для фторапатита он ниже (около 4,5), а для корневого дентина и цемента выше.",
-        "uz": "Blyashka suyuqligi gidroksiapatitga nisbatan to‘yinmagan holga o‘tadigan pH darajasi; emal uchun taxminan 5,5. Ftorapatit uchun u pastroq (taxminan 4,5), ildiz dentini va sementi uchun esa yuqoriroq."
+        "uz": "Karash suyuqligi gidroksiapatitga nisbatan to‘yinmagan holga o‘tadigan pH darajasi; emal uchun taxminan 5,5. Ftorapatit uchun u pastroq (taxminan 4,5), ildiz dentini va sementi uchun esa yuqoriroq."
       },
       "note": {
         "en": "Use critical pH to explain why root caries progresses fast in older adults.",
@@ -396,7 +396,7 @@
       "layout": "compare",
       "title": {
         "en": "The caries balance",
-        "ru": "Кариесный баланс",
+        "ru": "Баланс кариеса",
         "uz": "Karies balansi"
       },
       "columns": [
@@ -528,7 +528,7 @@
       "q": {
         "en": "Explain the ecological plaque hypothesis.",
         "ru": "Объясните экологическую гипотезу зубного налёта.",
-        "uz": "Ekologik blyashka gipotezasini tushuntiring."
+        "uz": "Ekologik karash gipotezasini tushuntiring."
       },
       "plan": [
         {
@@ -674,14 +674,14 @@
       "explain": {
         "en": "Below about pH 5.5 plaque fluid is undersaturated with hydroxyapatite and enamel dissolves.",
         "ru": "При pH ниже примерно 5,5 жидкость налёта ненасыщена по гидроксиапатиту, и эмаль начинает растворяться.",
-        "uz": "pH taxminan 5,5 dan pastga tushganda blyashka suyuqligi gidroksiapatitga nisbatan to‘yinmagan bo‘ladi va emal eriy boshlaydi."
+        "uz": "pH taxminan 5,5 dan pastga tushganda karash suyuqligi gidroksiapatitga nisbatan to‘yinmagan bo‘ladi va emal eriy boshlaydi."
       }
     },
     {
       "q": {
         "en": "Who proposed the ecological plaque hypothesis?",
         "ru": "Кто автор экологической гипотезы зубного налёта?",
-        "uz": "Ekologik blyashka gipotezasi muallifi kim?"
+        "uz": "Ekologik karash gipotezasi muallifi kim?"
       },
       "options": [
         {
@@ -692,12 +692,12 @@
         {
           "en": "Black",
           "ru": "Блэк",
-          "uz": "Black"
+          "uz": "Blek"
         },
         {
           "en": "Stephan",
           "ru": "Стефан",
-          "uz": "Stephan"
+          "uz": "Stefan"
         },
         {
           "en": "Marsh",

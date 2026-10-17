@@ -138,7 +138,7 @@
         {
           "en": "Constant cool saline irrigation",
           "ru": "Постоянное охлаждение холодным физраствором",
-          "uz": "Doimiy sovuq sho‘r eritma bilan sovitish"
+          "uz": "Doimiy sovuq fiziologik eritma bilan sovitish"
         },
         {
           "en": "Intermittent strokes, light pressure",
@@ -638,7 +638,7 @@
         {
           "en": "Final crown",
           "ru": "Постоянная коронка",
-          "uz": "Doimiy toj"
+          "uz": "Doimiy koronka"
         },
         {
           "en": "Healing abutment",
@@ -783,7 +783,7 @@
         {
           "en": "Fit a final crown at once",
           "ru": "Немедленная постоянная коронка",
-          "uz": "Darhol doimiy toj qo‘yish"
+          "uz": "Darhol doimiy koronka qo‘yish"
         },
         {
           "en": "Immediate full loading",

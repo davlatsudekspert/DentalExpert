@@ -324,7 +324,7 @@
           "detail": {
             "en": "Probe retention, check occlusion",
             "ru": "Проверить ретенцию зондом и окклюзию",
-            "uz": "Ushlanishni zond bilan, tishlovni tekshirish"
+            "uz": "Ushlanishni zond bilan, tishlamni tekshirish"
           }
         }
       ],
@@ -612,7 +612,7 @@
         {
           "en": "Check retention and occlusion",
           "ru": "Проверить ретенцию и окклюзию",
-          "uz": "Ushlanish va tishlovni tekshirish"
+          "uz": "Ushlanish va tishlamni tekshirish"
         }
       ]
     },
@@ -662,7 +662,7 @@
         {
           "en": "A lower incisor in a low-risk adult",
           "ru": "Нижний резец у взрослого с низким риском",
-          "uz": "Past xavfli kattaning pastki kurak tishi"
+          "uz": "Past xavfli kattaning pastki kesuvchi tishi"
         },
         {
           "en": "A fully erupted first molar with deep fissures in a high-risk child",
@@ -672,7 +672,7 @@
         {
           "en": "A crowned premolar",
           "ru": "Премоляр под коронкой",
-          "uz": "Qoplamali kichik oziq tish"
+          "uz": "Koronkali kichik oziq tish"
         }
       ],
       "correct": 2,
@@ -749,7 +749,7 @@
       "explain": {
         "en": "A frosty white surface shows that etching has created the micro-roughness needed for bonding.",
         "ru": "Матово-белая поверхность показывает, что протравливание создало нужную для адгезии микрошероховатость.",
-        "uz": "Xira oq yuza yedirish bog‘lanish uchun zarur mikrog‘adir-budirlikni hosil qilganini ko‘rsatadi."
+        "uz": "Xira oq yuza yedirish bog‘lanish uchun zarur mikrog‘adir-budurlikni hosil qilganini ko‘rsatadi."
       }
     },
     {
@@ -867,7 +867,7 @@
         {
           "en": "Check retention with a probe and check occlusion",
           "ru": "проверить ретенцию зондом и окклюзию",
-          "uz": "Zond bilan ushlanishni va tishlovni tekshirish"
+          "uz": "Zond bilan ushlanishni va tishlamni tekshirish"
         },
         {
           "en": "Etch the surface again",

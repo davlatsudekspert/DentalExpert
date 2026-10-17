@@ -8,13 +8,13 @@
   "title": {
     "en": "Single crowns: types and tooth preparation",
     "ru": "Одиночные коронки: виды и препарирование",
-    "uz": "Yakka tojlar: turlari va tishni preparatsiya qilish"
+    "uz": "Yakka koronkalar: turlari va tishni preparatsiya qilish"
   },
   "goals": [
     {
       "en": "Compare metal-ceramic, glass-ceramic and zirconia crowns",
       "ru": "Сравнить металлокерамические, стеклокерамические и циркониевые коронки",
-      "uz": "Metallokeramik, shisha-keramik va sirkoniy tojlarni solishtirish"
+      "uz": "Metallokeramik, shisha-keramik va sirkoniy koronkalarni solishtirish"
     },
     {
       "en": "Apply the biological, mechanical and aesthetic principles of preparation",
@@ -24,7 +24,7 @@
     {
       "en": "Select reduction depth and margin design for each crown type",
       "ru": "Выбирать глубину сошлифовывания и форму уступа для каждого вида коронки",
-      "uz": "Har bir toj turi uchun charxlash chuqurligi va chet shaklini tanlash"
+      "uz": "Har bir koronka turi uchun charxlash chuqurligi va chet shaklini tanlash"
     }
   ],
   "links": [
@@ -42,12 +42,12 @@
       "title": {
         "en": "Single crowns",
         "ru": "Одиночные коронки",
-        "uz": "Yakka tojlar"
+        "uz": "Yakka koronkalar"
       },
       "subtitle": {
         "en": "Crown types and principles of tooth preparation",
         "ru": "Виды коронок и принципы препарирования",
-        "uz": "Toj turlari va tishni preparatsiya qilish tamoyillari"
+        "uz": "Koronka turlari va tishni preparatsiya qilish tamoyillari"
       }
     },
     {
@@ -55,7 +55,7 @@
       "title": {
         "en": "Indications for a crown",
         "ru": "Показания к коронке",
-        "uz": "Toj qo‘yishga ko‘rsatmalar"
+        "uz": "Koronka qo‘yishga ko‘rsatmalar"
       },
       "bullets": [
         {
@@ -85,7 +85,7 @@
       "title": {
         "en": "Crown types",
         "ru": "Виды коронок",
-        "uz": "Toj turlari"
+        "uz": "Koronka turlari"
       },
       "head": [
         {
@@ -177,7 +177,7 @@
       "note": {
         "en": "Ask which type students would choose for a molar with a short clinical crown.",
         "ru": "Спросите, какой вид коронки студенты выберут для моляра с короткой клинической коронкой.",
-        "uz": "Klinik toji qisqa moziq tish uchun qaysi turni tanlashlarini so‘rang."
+        "uz": "Klinik toji qisqa katta oziq tish uchun qaysi turni tanlashlarini so‘rang."
       }
     },
     {
@@ -339,7 +339,7 @@
         {
           "en": "Crown",
           "ru": "Коронка",
-          "uz": "Toj"
+          "uz": "Koronka"
         },
         {
           "en": "Occlusal",
@@ -501,7 +501,7 @@
       "definition": {
         "en": "A band of sound tooth structure, commonly at least 1.5–2 mm high, encircled by the crown above the margin; it improves fracture resistance of root-filled teeth.",
         "ru": "Пояс здоровых тканей зуба высотой обычно не менее 1,5–2 мм, охватываемый коронкой над уступом; повышает устойчивость депульпированных зубов к перелому.",
-        "uz": "Toj chetidan yuqorida toj bilan o‘ralgan, odatda kamida 1,5–2 mm balandlikdagi sog‘lom tish to‘qimasi halqasi; ildizi plombalangan tishlarning sinishga chidamliligini oshiradi."
+        "uz": "Koronka chetidan yuqorida koronka bilan o‘ralgan, odatda kamida 1,5–2 mm balandlikdagi sog‘lom tish to‘qimasi halqasi; ildizi plombalangan tishlarning sinishga chidamliligini oshiradi."
       },
       "note": {
         "en": "Ask students to explain why a post alone does not strengthen a root.",
@@ -557,7 +557,7 @@
           "label": {
             "en": "Provisional crown",
             "ru": "Временная коронка",
-            "uz": "Vaqtinchalik toj"
+            "uz": "Vaqtinchalik koronka"
           },
           "detail": {
             "en": "Protects pulp and gingiva",
@@ -615,7 +615,7 @@
       "q": {
         "en": "Compare metal-ceramic and lithium disilicate crowns.",
         "ru": "Сравните металлокерамические коронки и коронки из дисиликата лития.",
-        "uz": "Metallokeramik va litiy disilikat tojlarni solishtiring."
+        "uz": "Metallokeramik va litiy disilikat koronkalarni solishtiring."
       },
       "plan": [
         {
@@ -728,42 +728,42 @@
       "q": {
         "en": "Which crown requires the least tooth reduction?",
         "ru": "Какая коронка требует наименьшего сошлифовывания?",
-        "uz": "Qaysi toj eng kam charxlashni talab qiladi?"
+        "uz": "Qaysi koronka eng kam charxlashni talab qiladi?"
       },
       "options": [
         {
           "en": "Metal-ceramic crown",
           "ru": "Металлокерамическая коронка",
-          "uz": "Metallokeramik toj"
+          "uz": "Metallokeramik koronka"
         },
         {
           "en": "Full metal crown",
           "ru": "Цельнолитая металлическая коронка",
-          "uz": "Butun quyma metall toj"
+          "uz": "Butun quyma metall koronka"
         },
         {
           "en": "Layered zirconia crown",
           "ru": "Облицованная циркониевая коронка",
-          "uz": "Qoplamali sirkoniy toj"
+          "uz": "Qoplamali sirkoniy koronka"
         },
         {
           "en": "Feldspathic ceramic crown",
           "ru": "Полевошпатная керамическая коронка",
-          "uz": "Dala shpati keramik toj"
+          "uz": "Dala shpati keramik koronka"
         }
       ],
       "correct": 1,
       "explain": {
         "en": "Cast metal is strong in thin section, so a full metal crown needs the least reduction.",
         "ru": "Литой металл прочен в тонком слое, поэтому металлическая коронка требует наименьшего сошлифовывания.",
-        "uz": "Quyma metall yupqa qatlamda ham mustahkam, shuning uchun metall toj eng kam charxlashni talab qiladi."
+        "uz": "Quyma metall yupqa qatlamda ham mustahkam, shuning uchun metall koronka eng kam charxlashni talab qiladi."
       }
     },
     {
       "q": {
         "en": "The ideal total occlusal convergence (taper) of a crown preparation is about:",
         "ru": "Идеальная общая конусность культи под коронку составляет около:",
-        "uz": "Toj preparatsiyasining ideal umumiy konusligi taxminan qancha?"
+        "uz": "Koronka preparatsiyasining ideal umumiy konusligi taxminan qancha?"
       },
       "options": [
         {
@@ -798,7 +798,7 @@
       "q": {
         "en": "Typical occlusal reduction for a metal-ceramic posterior crown is about:",
         "ru": "Типичное окклюзионное сошлифовывание под металлокерамическую коронку бокового зуба составляет около:",
-        "uz": "Yon tish uchun metallokeramik tojda odatiy okklyuzion charxlash taxminan qancha?"
+        "uz": "Yon tish uchun metallokeramik koronkada odatiy okklyuzion charxlash taxminan qancha?"
       },
       "options": [
         {
@@ -861,14 +861,14 @@
       "explain": {
         "en": "Sound tooth structure encircled by the crown above the margin creates a ferrule that resists fracture.",
         "ru": "Здоровые ткани, охваченные коронкой над уступом, образуют ферулу, противодействующую перелому.",
-        "uz": "Toj bilan o‘ralgan chetdan yuqoridagi sog‘lom to‘qima sinishga qarshi turuvchi ferrula hosil qiladi."
+        "uz": "Koronka bilan o‘ralgan chetdan yuqoridagi sog‘lom to‘qima sinishga qarshi turuvchi ferrula hosil qiladi."
       }
     },
     {
       "q": {
         "en": "Lithium disilicate crowns are usually bonded after etching the intaglio surface with:",
         "ru": "Внутреннюю поверхность коронок из дисиликата лития перед адгезивной фиксацией обычно протравливают:",
-        "uz": "Litiy disilikat tojlarning ichki yuzasi adgeziv mahkamlashdan oldin odatda nima bilan ishlanadi?"
+        "uz": "Litiy disilikat koronkalarning ichki yuzasi adgeziv mahkamlashdan oldin odatda nima bilan ishlanadi?"
       },
       "options": [
         {
@@ -903,13 +903,13 @@
       "q": {
         "en": "A patient with heavy bruxism needs a molar crown and has limited interocclusal space. The most suitable option is often:",
         "ru": "Пациенту с выраженным бруксизмом нужна коронка на моляр при малом межокклюзионном пространстве. Наиболее подходящий вариант часто:",
-        "uz": "Kuchli bruksizmi bor bemorga okklyuziyalararo joy kam bo‘lgan holda moziq tishga toj kerak. Ko‘pincha eng mos variant:"
+        "uz": "Kuchli bruksizmi bor bemorga okklyuziyalararo joy kam bo‘lgan holda katta oziq tishga koronka kerak. Ko‘pincha eng mos variant:"
       },
       "options": [
         {
           "en": "Feldspathic porcelain crown",
           "ru": "Полевошпатная керамическая коронка",
-          "uz": "Dala shpati keramik toj"
+          "uz": "Dala shpati keramik koronka"
         },
         {
           "en": "Layered metal-ceramic with thick porcelain",
@@ -919,12 +919,12 @@
         {
           "en": "Monolithic zirconia or full metal crown",
           "ru": "Монолитная циркониевая или металлическая коронка",
-          "uz": "Monolit sirkoniy yoki metall toj"
+          "uz": "Monolit sirkoniy yoki metall koronka"
         },
         {
           "en": "Composite resin crown",
           "ru": "Композитная коронка",
-          "uz": "Kompozit toj"
+          "uz": "Kompozit koronka"
         }
       ],
       "correct": 2,
@@ -938,7 +938,7 @@
       "q": {
         "en": "Which feature most reduces the retention of a crown preparation?",
         "ru": "Какой признак сильнее всего снижает ретенцию культи?",
-        "uz": "Qaysi xususiyat toj preparatsiyasining retensiyasini eng ko‘p kamaytiradi?"
+        "uz": "Qaysi xususiyat koronka preparatsiyasining retensiyasini eng ko‘p kamaytiradi?"
       },
       "options": [
         {
@@ -966,7 +966,7 @@
       "explain": {
         "en": "As taper increases, the crown can be dislodged along more paths and retention falls.",
         "ru": "С увеличением конусности растёт число путей снятия коронки и падает ретенция.",
-        "uz": "Konuslik oshgan sari toj chiqib ketishi mumkin bo‘lgan yo‘llar ko‘payadi va retensiya kamayadi."
+        "uz": "Konuslik oshgan sari koronka chiqib ketishi mumkin bo‘lgan yo‘llar ko‘payadi va retensiya kamayadi."
       }
     },
     {
@@ -1043,7 +1043,7 @@
       "q": {
         "en": "What is the main purpose of a provisional crown?",
         "ru": "Какова основная задача временной коронки?",
-        "uz": "Vaqtinchalik tojning asosiy vazifasi nima?"
+        "uz": "Vaqtinchalik koronkaning asosiy vazifasi nima?"
       },
       "options": [
         {

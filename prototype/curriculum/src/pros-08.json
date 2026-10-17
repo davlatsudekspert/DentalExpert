@@ -13,7 +13,7 @@
   "goals": [
     {
       "en": "Describe the anatomy and movements of the temporomandibular joint",
-      "ru": "Описать анатомию и движения ВНЧС",
+      "ru": "Описать анатомию и движения височно-нижнечелюстного сустава",
       "uz": "Chakka-pastki jag‘ bo‘g‘imi anatomiyasi va harakatlarini tavsiflash"
     },
     {
@@ -56,7 +56,7 @@
       "root": {
         "en": "TMJ",
         "ru": "ВНЧС",
-        "uz": "CHPJB"
+        "uz": "ChPJB"
       },
       "children": [
         {
@@ -283,7 +283,7 @@
       "root": {
         "en": "Temporomandibular disorders",
         "ru": "Нарушения ВНЧС",
-        "uz": "CHPJB buzilishlari"
+        "uz": "ChPJB buzilishlari"
       },
       "children": [
         {
@@ -306,7 +306,7 @@
             {
               "en": "Headache attributed to TMD",
               "ru": "Головная боль, связанная с ВНЧС",
-              "uz": "CHPJB bilan bog‘liq bosh og‘rig‘i"
+              "uz": "ChPJB bilan bog‘liq bosh og‘rig‘i"
             }
           ]
         },
@@ -421,7 +421,7 @@
       "title": {
         "en": "TMJ examination",
         "ru": "Обследование ВНЧС",
-        "uz": "CHPJBni tekshirish"
+        "uz": "ChPJBni tekshirish"
       },
       "steps": [
         {
@@ -597,7 +597,7 @@
       "q": {
         "en": "Describe the movements of the TMJ and where they occur.",
         "ru": "Опишите движения в ВНЧС и где они происходят.",
-        "uz": "CHPJB harakatlarini va ular qayerda sodir bo‘lishini tavsiflang."
+        "uz": "ChPJB harakatlarini va ular qayerda sodir bo‘lishini tavsiflang."
       },
       "plan": [
         {
@@ -645,7 +645,7 @@
       "q": {
         "en": "Outline conservative management of TMD.",
         "ru": "Опишите консервативное лечение нарушений ВНЧС.",
-        "uz": "CHPJB buzilishlarining konservativ davolashini bayon qiling."
+        "uz": "ChPJB buzilishlarining konservativ davolashini bayon qiling."
       },
       "plan": [
         {
@@ -674,7 +674,7 @@
       "q": {
         "en": "How does TMD influence the timing of prosthodontic treatment?",
         "ru": "Как нарушения ВНЧС влияют на сроки протезирования?",
-        "uz": "CHPJB buzilishlari protezlash muddatlariga qanday ta’sir qiladi?"
+        "uz": "ChPJB buzilishlari protezlash muddatlariga qanday ta’sir qiladi?"
       },
       "plan": [
         {
@@ -875,7 +875,7 @@
       "q": {
         "en": "Crepitus in the TMJ most commonly suggests:",
         "ru": "Крепитация в ВНЧС чаще всего указывает на:",
-        "uz": "CHPJBdagi krepitatsiya ko‘pincha nimadan dalolat beradi?"
+        "uz": "ChPJBdagi krepitatsiya ko‘pincha nimadan dalolat beradi?"
       },
       "options": [
         {
@@ -910,7 +910,7 @@
       "q": {
         "en": "First-line management of most painful TMD is:",
         "ru": "Лечение первой линии большинства болевых нарушений ВНЧС:",
-        "uz": "Ko‘pchilik og‘riqli CHPJB buzilishlarida birinchi navbatdagi davolash:"
+        "uz": "Ko‘pchilik og‘riqli ChPJB buzilishlarida birinchi navbatdagi davolash:"
       },
       "options": [
         {
@@ -945,13 +945,13 @@
       "q": {
         "en": "A stabilisation splint used for TMD is usually:",
         "ru": "Стабилизирующая шина при нарушениях ВНЧС обычно:",
-        "uz": "CHPJB buzilishlarida qo‘llanadigan stabillashtiruvchi shina odatda qanday bo‘ladi?"
+        "uz": "ChPJB buzilishlarida qo‘llanadigan stabillashtiruvchi shina odatda qanday bo‘ladi?"
       },
       "options": [
         {
           "en": "Soft and covering only incisors",
           "ru": "Мягкая, только на резцах",
-          "uz": "Yumshoq, faqat kesuv tishlarni qoplaydi"
+          "uz": "Yumshoq, faqat kesuvchi tishlarni qoplaydi"
         },
         {
           "en": "Hard and covering the full arch",
@@ -1043,7 +1043,7 @@
       "explain": {
         "en": "Interincisal opening above about 40 mm is usually considered normal, though it varies with body size.",
         "ru": "Межрезцовое открывание более 40 мм обычно считают нормой, хотя оно зависит от телосложения.",
-        "uz": "Kesuv tishlararo 40 mm dan ortiq ochilish odatda me’yor hisoblanadi, lekin u gavda tuzilishiga bog‘liq."
+        "uz": "Kesuvchi tishlararo 40 mm dan ortiq ochilish odatda me’yor hisoblanadi, lekin u gavda tuzilishiga bog‘liq."
       }
     }
   ]

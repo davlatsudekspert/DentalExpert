@@ -191,7 +191,7 @@
           {
             "en": "Dies for crowns",
             "ru": "Штампики под коронки",
-            "uz": "Shtamplar (die), toj uchun"
+            "uz": "Shtamplar (die), koronka uchun"
           }
         ],
         [
@@ -467,7 +467,7 @@
             {
               "en": "Bite registration",
               "ru": "Регистрация прикуса",
-              "uz": "Prikus registratsiyasi"
+              "uz": "Tishlam qaydi"
             }
           ]
         }
@@ -488,7 +488,7 @@
       "definition": {
         "en": "Wax has a very high coefficient of thermal expansion. Stresses built up during waxing relax with time and warmth and distort the pattern, so a finished pattern is invested promptly.",
         "ru": "У воска очень высокий коэффициент термического расширения. Внутренние напряжения, накопленные при моделировании, со временем и при нагреве релаксируют и искажают модель. Поэтому готовую восковую модель быстро пакуют в огнеупорную массу.",
-        "uz": "Mumning issiqlikdan kengayish koeffitsienti juda yuqori. Modellashda to‘plangan ichki kuchlanish vaqt o‘tishi va qizish bilan bo‘shab, mum model shaklini o‘zgartiradi. Shuning uchun mum model tayyor bo‘lgach, tezda investitsiya massasiga solinadi."
+        "uz": "Mumning issiqlikdan kengayish koeffitsiyenti juda yuqori. Modellashda to‘plangan ichki kuchlanish vaqt o‘tishi va qizish bilan bo‘shab, mum model shaklini o‘zgartiradi. Shuning uchun mum model tayyor bo‘lgach, tezda investitsiya massasiga solinadi."
       },
       "note": {
         "en": "Ask why a wax pattern should not be left on the bench.",
@@ -564,7 +564,7 @@
           {
             "en": "Denture bases, temporary crowns",
             "ru": "Базис протеза, временные коронки",
-            "uz": "Protez bazisi, vaqtinchalik toj"
+            "uz": "Protez bazisi, vaqtinchalik koronka"
           },
           {
             "en": "Heat-cured is stronger",
@@ -780,7 +780,7 @@
       "q": {
         "en": "Which gypsum type is preferred for a crown die?",
         "ru": "Какой тип гипса предпочтителен для штампика под коронку?",
-        "uz": "Toj uchun shtamp (die) tayyorlashda qaysi gips turi afzal?"
+        "uz": "Koronka uchun shtamp (die) tayyorlashda qaysi gips turi afzal?"
       },
       "options": [
         {
@@ -1071,7 +1071,7 @@
         {
           "en": "It is radiopaque",
           "ru": "Рентгеноконтрастна",
-          "uz": "Rentgenkontrast"
+          "uz": "Rentgenokontrast"
         },
         {
           "en": "Less residual monomer, stronger",

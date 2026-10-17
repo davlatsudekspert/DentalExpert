@@ -290,7 +290,7 @@
         {
           "en": "In protrusion, incisors separate the posterior teeth",
           "ru": "При протрузии резцы разобщают боковые зубы",
-          "uz": "Pastki jag‘ oldinga surilganda kesuv tishlar yon tishlarni ajratadi"
+          "uz": "Pastki jag‘ oldinga surilganda kesuvchi tishlar yon tishlarni ajratadi"
         },
         {
           "en": "In lateral movement, the canine separates the other teeth",
@@ -306,7 +306,7 @@
       "note": {
         "en": "Link each statement to a clinical example, such as a crown on a canine.",
         "ru": "Свяжите каждое утверждение с клиническим примером, например коронкой на клыке.",
-        "uz": "Har bir fikrni klinik misol bilan bog‘lang, masalan qoziq tishdagi toj."
+        "uz": "Har bir fikrni klinik misol bilan bog‘lang, masalan qoziq tishdagi koronka."
       }
     },
     {
@@ -476,7 +476,7 @@
       "note": {
         "en": "Explain that a semi-adjustable articulator is the usual choice for most crown and denture work.",
         "ru": "Поясните, что полурегулируемый артикулятор — обычный выбор для большинства коронок и протезов.",
-        "uz": "Ko‘pchilik toj va protez ishlarida yarim sozlanadigan artikulyator odatiy tanlov ekanini tushuntiring."
+        "uz": "Ko‘pchilik koronka va protez ishlarida yarim sozlanadigan artikulyator odatiy tanlov ekanini tushuntiring."
       }
     },
     {
@@ -754,7 +754,7 @@
         {
           "en": "Single metal-ceramic crowns",
           "ru": "Одиночных металлокерамических коронок",
-          "uz": "Yakka metallokeramik tojlarda"
+          "uz": "Yakka metallokeramik koronkalarda"
         },
         {
           "en": "Anterior resin-bonded bridges",
@@ -916,7 +916,7 @@
       "explain": {
         "en": "Semi-adjustable articulators accept facebow and check-bite records and suit most crown, bridge and denture work.",
         "ru": "Полурегулируемые артикуляторы работают с лицевой дугой и регистратами и подходят для большинства коронок, мостов и протезов.",
-        "uz": "Yarim sozlanadigan artikulyatorlar yuz yoyi va qaydlar bilan ishlaydi va ko‘pchilik toj, ko‘prik va protezlar uchun mos."
+        "uz": "Yarim sozlanadigan artikulyatorlar yuz yoyi va qaydlar bilan ishlaydi va ko‘pchilik koronka, ko‘prik va protezlar uchun mos."
       }
     },
     {
@@ -958,7 +958,7 @@
       "q": {
         "en": "A crown on a lower molar creates a contact on the non-working side during lateral movement. What is the main concern?",
         "ru": "Коронка на нижнем моляре даёт контакт на балансирующей стороне при боковом движении. В чём основная проблема?",
-        "uz": "Pastki moziq tishdagi toj yon harakatda balans tomonida kontakt hosil qiladi. Asosiy xavf nimada?"
+        "uz": "Pastki katta oziq tishdagi koronka yon harakatda balans tomonida kontakt hosil qiladi. Asosiy xavf nimada?"
       },
       "options": [
         {

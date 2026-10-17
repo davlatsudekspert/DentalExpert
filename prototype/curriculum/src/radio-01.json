@@ -118,7 +118,7 @@
           "detail": {
             "en": "Aluminium filter removes soft rays, collimator narrows the beam",
             "ru": "Алюминиевый фильтр задерживает мягкие лучи, коллиматор сужает пучок",
-            "uz": "Alyuminiy filtr yumshoq nurlarni ushlaydi, kollimator dastani toraytiradi"
+            "uz": "Alyuminiy filtr yumshoq nurlarni ushlaydi, kollimator nur dastasini toraytiradi"
           }
         }
       ],
@@ -570,7 +570,7 @@
             },
             {
               "en": "Must be protected from scratches",
-              "ru": "Боится царапин",
+              "ru": "Требует защиты от царапин",
               "uz": "Tirnalishdan ehtiyot qilish kerak"
             }
           ]
@@ -951,7 +951,7 @@
         {
           "en": "Amalgam filling",
           "ru": "Амальгамовая пломба",
-          "uz": "Amalgam plomba"
+          "uz": "Amalgama plomba"
         }
       ],
       "correct": 3,
@@ -976,7 +976,7 @@
         {
           "en": "Shape the beam into a rectangle",
           "ru": "Придавать пучку прямоугольную форму",
-          "uz": "Dastani to‘rtburchak shaklga keltirish"
+          "uz": "Nur dastasini to‘rtburchak shaklga keltirish"
         },
         {
           "en": "Cool the anode",

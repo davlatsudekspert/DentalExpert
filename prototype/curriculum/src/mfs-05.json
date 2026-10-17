@@ -104,7 +104,7 @@
           "label": {
             "en": "Odontogenic developmental",
             "ru": "Одонтогенные эмбриональные",
-            "uz": "Odontogen rivojlanish"
+            "uz": "Odontogen rivojlanish kistalari"
           },
           "items": [
             {
@@ -120,7 +120,7 @@
             {
               "en": "Eruption cyst",
               "ru": "Киста прорезывания",
-              "uz": "Yorib chiqish kistasi"
+              "uz": "Tish chiqishi kistasi"
             }
           ]
         },
@@ -304,7 +304,7 @@
           {
             "en": "Lower third molar, upper canine",
             "ru": "Нижний третий моляр, верхний клык",
-            "uz": "Pastki 3-molyar, yuqori it tishi"
+            "uz": "Pastki 3-molyar, yuqori qoziq tish"
           },
           {
             "en": "Posterior mandible",
@@ -779,7 +779,7 @@
         {
           "en": "Eruption cyst",
           "ru": "Киста прорезывания",
-          "uz": "Yorib chiqish kistasi"
+          "uz": "Tish chiqishi kistasi"
         },
         {
           "en": "Odontogenic keratocyst",

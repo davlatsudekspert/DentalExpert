@@ -188,7 +188,7 @@
           "detail": {
             "en": "Minimal, enamel bevel where useful",
             "ru": "Минимально, скос эмали",
-            "uz": "Minimal, emal chekkasi bevel"
+            "uz": "Minimal, emal chekkasida bevel"
           }
         },
         {
@@ -529,7 +529,7 @@
       "note": {
         "en": "Stress that a smooth surface collects less plaque and stain.",
         "ru": "Подчеркните, что гладкая поверхность меньше накапливает налёт и окрашивается.",
-        "uz": "Silliq yuza blyashka to‘planishini va rang o‘zgarishini kamaytirishini ta’kidlang."
+        "uz": "Silliq yuza karash to‘planishini va rang o‘zgarishini kamaytirishini ta’kidlang."
       }
     },
     {
@@ -977,7 +977,7 @@
         {
           "en": "To reduce plaque and staining",
           "ru": "Чтобы уменьшить налёт и окрашивание",
-          "uz": "Blyashka va rang to‘planishini kamaytirish uchun"
+          "uz": "Karash va rang to‘planishini kamaytirish uchun"
         },
         {
           "en": "To weaken the bond",
@@ -987,14 +987,14 @@
         {
           "en": "To increase radiopacity",
           "ru": "Чтобы повысить рентгеноконтрастность",
-          "uz": "Rentgenkontrastlikni oshirish uchun"
+          "uz": "Rentgenokontrastlikni oshirish uchun"
         }
       ],
       "correct": 1,
       "explain": {
         "en": "Rough surfaces hold plaque and pigment, leading to secondary caries and poor aesthetics.",
         "ru": "На шероховатой поверхности легко задерживаются налёт и пигменты, что ведёт к вторичному кариесу и потере эстетики.",
-        "uz": "G‘adir-budur yuzada blyashka va pigmentlar oson ushlanadi, bu ikkilamchi karies va estetik muammoga olib keladi."
+        "uz": "G‘adir-budur yuzada karash va pigmentlar oson ushlanadi, bu ikkilamchi karies va estetik muammoga olib keladi."
       }
     },
     {

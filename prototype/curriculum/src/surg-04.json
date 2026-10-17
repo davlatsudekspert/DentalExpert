@@ -222,7 +222,7 @@
           {
             "en": "Children bite the numb lip",
             "ru": "Дети прикусывают онемевшую губу",
-            "uz": "Bolalar uvushgan labni tishlaydi"
+            "uz": "Bolalar uvishgan labni tishlaydi"
           },
           {
             "en": "Warn parents",
@@ -306,7 +306,7 @@
             {
               "en": "Circumoral numbness, tinnitus",
               "ru": "Онемение вокруг рта, шум в ушах",
-              "uz": "Og‘iz atrofi uvushishi, quloq shang‘illashi"
+              "uz": "Og‘iz atrofi uvishishi, quloq shang‘illashi"
             },
             {
               "en": "Agitation, tremor, seizures",
@@ -645,7 +645,7 @@
         {
           "en": "Early: circumoral numbness, tinnitus, slurred speech",
           "ru": "Ранние: онемение вокруг рта, шум в ушах, нарушение речи",
-          "uz": "Erta: og‘iz atrofi uvushishi, quloq shang‘illashi, nutq buzilishi"
+          "uz": "Erta: og‘iz atrofi uvishishi, quloq shang‘illashi, nutq buzilishi"
         },
         {
           "en": "Then tremor, seizures, CNS depression",
@@ -804,7 +804,7 @@
       "q": {
         "en": "After injection the patient reports circumoral numbness, tinnitus and tremor. The first action is:",
         "ru": "После инъекции — онемение вокруг рта, шум в ушах и тремор. Первое действие?",
-        "uz": "Anestetik yuborilgandan keyin bemor og‘iz atrofi uvushishi, quloq shang‘illashi va titroqni sezdi. Birinchi harakat?"
+        "uz": "Anestetik yuborilgandan keyin bemor og‘iz atrofi uvishishi, quloq shang‘illashi va titroqni sezdi. Birinchi harakat?"
       },
       "options": [
         {

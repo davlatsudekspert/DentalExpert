@@ -203,12 +203,12 @@
           {
             "en": "Canine",
             "ru": "Клыковое",
-            "uz": "It tishi"
+            "uz": "Qoziq tish"
           },
           {
             "en": "Upper canine",
             "ru": "Верхний клык",
-            "uz": "Yuqori it tishi"
+            "uz": "Yuqori qoziq tish"
           },
           {
             "en": "Swelling below the eye, loss of nasolabial fold",
@@ -720,7 +720,7 @@
         {
           "en": "Unilateral buccal and canine",
           "ru": "Одностороннее щёчное и клыковое",
-          "uz": "Bir tomonlama lunj va it tishi"
+          "uz": "Bir tomonlama lunj va qoziq tish"
         },
         {
           "en": "Temporal and infratemporal",
@@ -750,7 +750,7 @@
         {
           "en": "Canine space",
           "ru": "Клыковое пространство",
-          "uz": "It tishi bo‘shlig‘i"
+          "uz": "Qoziq tish bo‘shlig‘i"
         },
         {
           "en": "Pterygomandibular space",
@@ -779,7 +779,7 @@
       "q": {
         "en": "Which dangerous complication can follow infection from an upper canine?",
         "ru": "К какому опасному осложнению может привести инфекция от верхнего клыка?",
-        "uz": "Yuqori it tishidan kelib chiqqan infeksiya qaysi xavfli asoratga olib kelishi mumkin?"
+        "uz": "Yuqori qoziq tishdan kelib chiqqan infeksiya qaysi xavfli asoratga olib kelishi mumkin?"
       },
       "options": [
         {
@@ -807,7 +807,7 @@
       "explain": {
         "en": "From the canine space infection can travel via the angular and ophthalmic veins to the cavernous sinus.",
         "ru": "Из клыкового пространства инфекция может пройти по угловой и глазным венам в пещеристый синус.",
-        "uz": "It tishi bo‘shlig‘idan infeksiya burchak va ko‘z venalari orqali kavernoz sinusga o‘tishi mumkin."
+        "uz": "Qoziq tish bo‘shlig‘idan infeksiya burchak va ko‘z venalari orqali kavernoz sinusga o‘tishi mumkin."
       }
     },
     {
@@ -900,7 +900,7 @@
         {
           "en": "Canine space",
           "ru": "В клыковое пространство",
-          "uz": "It tishi bo‘shlig‘iga"
+          "uz": "Qoziq tish bo‘shlig‘iga"
         },
         {
           "en": "Buccal space",

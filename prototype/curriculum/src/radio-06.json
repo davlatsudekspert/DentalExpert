@@ -388,12 +388,12 @@
           {
             "en": "Radicular cyst of incisors",
             "ru": "Радикулярная киста резцов",
-            "uz": "Kesuv tishlar apikal kistasi"
+            "uz": "Kesuvchi tishlar apikal kistasi"
           },
           {
             "en": "Midline, vital teeth, intact lamina dura",
             "ru": "По средней линии, зубы витальны, lamina dura цела",
-            "uz": "O‘rtada, tishlar sog‘lom, lamina dura butun"
+            "uz": "O‘rtada, tishlar hayotiy, lamina dura butun"
           }
         ],
         [
@@ -533,7 +533,7 @@
         {
           "en": "Read every image in the same order",
           "ru": "Читайте каждый снимок по одной схеме",
-          "uz": "Har bir snimokni bir xil tartibda o‘qing"
+          "uz": "Har bir rentgenogrammani bir xil tartibda o‘qing"
         }
       ]
     }
@@ -759,14 +759,14 @@
       "explain": {
         "en": "Intact lamina dura and a vital pulp point to a normal anatomical structure.",
         "ru": "Целая lamina dura и витальная пульпа указывают на анатомическую структуру.",
-        "uz": "Butun lamina dura va sog‘lom pulpa normal anatomik tuzilmani ko‘rsatadi."
+        "uz": "Butun lamina dura va hayotiy pulpa normal anatomik tuzilmani ko‘rsatadi."
       }
     },
     {
       "q": {
         "en": "An oval radiolucency between the roots of the upper central incisors is usually what?",
         "ru": "Что обычно представляет тёмная овальная область между корнями верхних центральных резцов?",
-        "uz": "Yuqori markaziy kesuv tishlar ildizlari orasidagi qora oval soha odatda nima?"
+        "uz": "Yuqori markaziy kesuvchi tishlar ildizlari orasidagi qora oval soha odatda nima?"
       },
       "options": [
         {
@@ -801,7 +801,7 @@
       "q": {
         "en": "What is a small dark dot within a white ring below the lower incisors?",
         "ru": "Что за маленькая тёмная точка в светлом кольце под нижними резцами?",
-        "uz": "Pastki kesuv tishlar ostida oq halqa bilan o‘ralgan kichik qora nuqta nima?"
+        "uz": "Pastki kesuvchi tishlar ostida oq halqa bilan o‘ralgan kichik qora nuqta nima?"
       },
       "options": [
         {
@@ -857,7 +857,7 @@
         {
           "en": "Visible only on CBCT",
           "ru": "Виден только на КЛКТ",
-          "uz": "Faqat KLKT da ko‘rinadi"
+          "uz": "Faqat KLKTda ko‘rinadi"
         }
       ],
       "correct": 0,
@@ -941,7 +941,7 @@
       "q": {
         "en": "On an upper molar periapical, a triangular radiopacity appears behind the molar. Usually what?",
         "ru": "На периапикальном снимке верхнего моляра позади него треугольная светлая тень. Обычно это?",
-        "uz": "Yuqori molyar periapikal snimogida molyar orqasida uchburchak rentgenokontrast soya ko‘rindi. Bu odatda nima?"
+        "uz": "Yuqori molyar periapikal rentgenogrammasida molyar orqasida uchburchak rentgenokontrast soya ko‘rindi. Bu odatda nima?"
       },
       "options": [
         {
@@ -969,7 +969,7 @@
       "explain": {
         "en": "On opening, the coronoid process moves forward into the upper molar image.",
         "ru": "При открывании рта венечный отросток смещается вперёд и попадает на снимок.",
-        "uz": "Og‘iz ochilganda toj o‘simtasi oldinga siljib, yuqori molyar snimogiga tushadi."
+        "uz": "Og‘iz ochilganda toj o‘simtasi oldinga siljib, yuqori molyar rentgenogrammasiga tushadi."
       }
     },
     {

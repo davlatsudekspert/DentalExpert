@@ -1091,7 +1091,7 @@
       "q": {
         "en": "What is the maximum possible dmft value in a full primary dentition?",
         "ru": "Каково максимально возможное значение кпу в полном временном прикусе?",
-        "uz": "To‘liq sut tishlovida kpu ning eng katta qiymati qancha bo‘lishi mumkin?"
+        "uz": "To‘liq sut tishlamida kpu ning eng katta qiymati qancha bo‘lishi mumkin?"
       },
       "options": [
         {
@@ -1126,7 +1126,7 @@
       "q": {
         "en": "According to WHO survey methods, a sound molar with a fissure sealant is counted in DMFT as:",
         "ru": "Согласно методике ВОЗ, интактный моляр с герметиком учитывается в КПУ как:",
-        "uz": "JSST usuliga ko‘ra fissurasi germetiklangan sog‘lom katta oziq tish KPU da qanday hisoblanadi:"
+        "uz": "JSST usuliga ko‘ra fissurasi germetiklangan sog‘lom katta oziq tish KPUda qanday hisoblanadi:"
       },
       "options": [
         {
@@ -1147,14 +1147,14 @@
         {
           "en": "Not counted as DMF",
           "ru": "не учитывается в КПУ",
-          "uz": "KPU ga kiritilmaydi"
+          "uz": "KPUga kiritilmaydi"
         }
       ],
       "correct": 3,
       "explain": {
         "en": "A sealant is preventive, not a restoration, so the sealed sound tooth adds nothing to DMFT.",
         "ru": "Герметик — профилактика, а не пломба, поэтому интактный зуб с герметиком не увеличивает КПУ.",
-        "uz": "Germetik plomba emas, profilaktika vositasi, shuning uchun germetikli sog‘lom tish KPU ni oshirmaydi."
+        "uz": "Germetik plomba emas, profilaktika vositasi, shuning uchun germetikli sog‘lom tish KPUni oshirmaydi."
       }
     }
   ]

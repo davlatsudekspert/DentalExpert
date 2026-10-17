@@ -79,7 +79,7 @@
           "label": {
             "en": "Extraoral examination",
             "ru": "Внеротовой осмотр",
-            "uz": "Yuzdan tashqari ko‘rik"
+            "uz": "Og‘izdan tashqari ko‘rik"
           },
           "detail": {
             "en": "Skeleton, soft tissues, symmetry",
@@ -243,7 +243,7 @@
       "title": {
         "en": "Extraoral assessment",
         "ru": "Внеротовая оценка",
-        "uz": "Yuzdan tashqari baholash"
+        "uz": "Og‘izdan tashqari baholash"
       },
       "columns": [
         {
@@ -318,7 +318,7 @@
           "label": {
             "en": "Extraoral",
             "ru": "Внеротовые",
-            "uz": "Yuzdan tashqari"
+            "uz": "Og‘izdan tashqari"
           },
           "items": [
             {
@@ -379,7 +379,7 @@
       "bullets": [
         {
           "en": "Plaster casts or digital scans",
-          "ru": "Гипсовые или цифровое сканирование",
+          "ru": "Гипсовые модели или цифровое сканирование",
           "uz": "Gips yoki raqamli skanerlash"
         },
         {
@@ -469,7 +469,7 @@
           {
             "en": "Selected cases: impactions, resorption",
             "ru": "Только по показаниям: ретенция, резорбция",
-            "uz": "Faqat tanlangan holatlar: retinirlangan tish, rezorbsiya"
+            "uz": "Faqat tanlangan holatlar: retensiyalangan tish, rezorbsiya"
           }
         ]
       ],
@@ -674,7 +674,7 @@
         {
           "en": "Extraoral: skeletal and soft tissue",
           "ru": "Внеротовой осмотр: скелет и мягкие ткани",
-          "uz": "Yuzdan tashqari: skelet va yumshoq to‘qimalar"
+          "uz": "Og‘izdan tashqari: skelet va yumshoq to‘qimalar"
         },
         {
           "en": "Intraoral: teeth and occlusion",
@@ -802,7 +802,7 @@
         {
           "en": "Anterior open bite",
           "ru": "Открытый прикус",
-          "uz": "Old ochiq tishlov"
+          "uz": "Old ochiq tishlam"
         }
       ],
       "correct": 2,
@@ -832,7 +832,7 @@
         {
           "en": "Bitewing",
           "ru": "Интерпроксимальный снимок",
-          "uz": "Tishlararo (bitewing)"
+          "uz": "Interproksimal (bitewing)"
         },
         {
           "en": "Chest radiograph",
@@ -897,7 +897,7 @@
         {
           "en": "In selected cases such as impacted canines",
           "ru": "В отдельных случаях, например при ретенции клыка",
-          "uz": "Tanlangan holatlarda, masalan retinirlangan qoziqda"
+          "uz": "Tanlangan holatlarda, masalan retensiyalangan qoziqda"
         },
         {
           "en": "Monthly for monitoring",
@@ -914,14 +914,14 @@
       "explain": {
         "en": "Because of higher dose, CBCT is used only for specific questions such as impactions or resorption.",
         "ru": "Из-за большей лучевой нагрузки КТ применяют только при конкретном клиническом вопросе, например при ретенции или резорбции.",
-        "uz": "Nur yuki yuqoriroq bo‘lgani uchun KT faqat aniq klinik savol bo‘lganda, masalan retinirlangan tish yoki rezorbsiyada qo‘llanadi."
+        "uz": "Nur yuki yuqoriroq bo‘lgani uchun KT faqat aniq klinik savol bo‘lganda, masalan retensiyalangan tish yoki rezorbsiyada qo‘llanadi."
       }
     },
     {
       "q": {
         "en": "The profile is convex with a retrusive chin. Which skeletal pattern does this suggest?",
         "ru": "Профиль выпуклый, нижняя челюсть отстоит назад. На какое скелетное соотношение это указывает?",
-        "uz": "Bemorning profili qavariq, pastki jag‘ orqada. Yuzdan tashqari ko‘rikda bu qaysi skelet munosabatiga ishora qiladi?"
+        "uz": "Bemorning profili qavariq, pastki jag‘ orqada. Og‘izdan tashqari ko‘rikda bu qaysi skelet munosabatiga ishora qiladi?"
       },
       "options": [
         {
@@ -1002,7 +1002,7 @@
         {
           "en": "A bitewing film",
           "ru": "Интерпроксимальный снимок",
-          "uz": "Tishlararo (bitewing) surat"
+          "uz": "Interproksimal (bitewing) rentgenogramma"
         },
         {
           "en": "Parallax with two films at different angles",
@@ -1117,7 +1117,7 @@
         {
           "en": "Anterior open bite",
           "ru": "Открытый прикус",
-          "uz": "Old ochiq tishlov"
+          "uz": "Old ochiq tishlam"
         }
       ],
       "correct": 0,

@@ -24,7 +24,7 @@
     {
       "en": "Identify key anatomical landmarks",
       "ru": "Находить основные анатомические ориентиры на ОПТГ",
-      "uz": "OPTG da asosiy anatomik belgilarni topish"
+      "uz": "OPTGda asosiy anatomik belgilarni topish"
     },
     {
       "en": "Recognise positioning errors on the image",
@@ -105,7 +105,7 @@
             {
               "en": "Developing mixed dentition",
               "ru": "Развитие сменного прикуса",
-              "uz": "Aralash tishlov rivojlanishi"
+              "uz": "Aralash tishlam rivojlanishi"
             },
             {
               "en": "Jaw fractures and large lesions",
@@ -124,7 +124,7 @@
             {
               "en": "Lower detail than intraoral images",
               "ru": "Разрешение ниже, чем у внутриротовых",
-              "uz": "Intraoral snimokdan past aniqlik"
+              "uz": "Intraoral rentgenogrammadan past aniqlik"
             },
             {
               "en": "Not adequate for approximal caries",
@@ -174,7 +174,7 @@
           "detail": {
             "en": "Incisors in the bite-block groove",
             "ru": "Резцы в желобке блока",
-            "uz": "Kesuv tishlar bloki ariqchasida"
+            "uz": "Kesuvchi tishlar bloki ariqchasida"
           }
         },
         {
@@ -465,7 +465,7 @@
         {
           "en": "Panoramic gives an overview; bitewings are needed for approximal caries",
           "ru": "ОПТГ даёт обзор, для контактного кариеса нужен bitewing",
-          "uz": "OPTG umumiy ko‘rinish beradi, kontakt kariesi uchun tishlam snimok kerak"
+          "uz": "OPTG umumiy ko‘rinish beradi, kontakt kariesi uchun bitewing rentgenogramma kerak"
         },
         {
           "en": "Be able to name the error and its cause from the image",
@@ -491,7 +491,7 @@
         {
           "en": "Narrow slit beam",
           "ru": "Узкий щелевой пучок",
-          "uz": "Tor tirqishli dasta"
+          "uz": "Tor tirqishli nur dastasi"
         },
         {
           "en": "Horseshoe-shaped focal trough",
@@ -509,7 +509,7 @@
       "q": {
         "en": "Describe correct patient positioning for a panoramic image.",
         "ru": "Назовите этапы правильного позиционирования для ОПТГ.",
-        "uz": "Bemorni OPTG ga to‘g‘ri joylashtirish bosqichlarini ayting."
+        "uz": "Bemorni OPTGga to‘g‘ri joylashtirish bosqichlarini ayting."
       },
       "plan": [
         {
@@ -520,7 +520,7 @@
         {
           "en": "Incisors in the bite block",
           "ru": "Резцы в прикусном блоке",
-          "uz": "Kesuv tishlar tishlash blokida"
+          "uz": "Kesuvchi tishlar tishlash blokida"
         },
         {
           "en": "Frankfort horizontal, midsagittal vertical",
@@ -567,13 +567,13 @@
       "q": {
         "en": "What are the limitations of panoramic radiography?",
         "ru": "Каковы ограничения ОПТГ?",
-        "uz": "OPTG ning cheklovlari qanday?"
+        "uz": "OPTGning cheklovlari qanday?"
       },
       "plan": [
         {
           "en": "Lower detail than intraoral views",
           "ru": "Разрешение ниже внутриротовых снимков",
-          "uz": "Intraoral snimokdan past aniqlik"
+          "uz": "Intraoral rentgenogrammadan past aniqlik"
         },
         {
           "en": "Uneven magnification and distortion",
@@ -633,7 +633,7 @@
       "q": {
         "en": "On a panoramic image the occlusal line is a deep 'smile' and incisors are blurred. Cause?",
         "ru": "На ОПТГ окклюзионная линия резко изогнута «улыбкой», фронт размыт. Причина?",
-        "uz": "OPTG da okklyuzion chiziq kuchli «tabassum» shaklida, old tishlar xira. Sabab nima?"
+        "uz": "OPTGda okklyuzion chiziq kuchli «tabassum» shaklida, old tishlar xira. Sabab nima?"
       },
       "options": [
         {
@@ -766,7 +766,7 @@
       "explain": {
         "en": "The object crosses the beam twice and projects a blurred shadow on the opposite side.",
         "ru": "Объект дважды попадает в пучок и даёт размытую тень на противоположной стороне.",
-        "uz": "Obyekt dasta yo‘lida ikki marta bo‘lgani uchun qarama-qarshi tomonda xira soya beradi."
+        "uz": "Obyekt nur dastasi yo‘lida ikki marta bo‘lgani uchun qarama-qarshi tomonda xira soya beradi."
       }
     },
     {
@@ -808,7 +808,7 @@
       "q": {
         "en": "A vertical radiopaque shadow covers the midline and hides the incisors. Cause?",
         "ru": "На ОПТГ по центру вертикальная светлая тень, фронт не виден. Причина?",
-        "uz": "OPTG da o‘rtada vertikal rentgenokontrast soya bor, old tishlar ko‘rinmayapti. Sabab?"
+        "uz": "OPTGda o‘rtada vertikal rentgenokontrast soya bor, old tishlar ko‘rinmayapti. Sabab?"
       },
       "options": [
         {
@@ -836,7 +836,7 @@
       "explain": {
         "en": "When slumped, the cervical spine falls into the beam path.",
         "ru": "При сутулости шейные позвонки оказываются на пути пучка.",
-        "uz": "Bukchaygan holatda bo‘yin umurtqalari dasta yo‘liga tushadi."
+        "uz": "Bukchaygan holatda bo‘yin umurtqalari nur dastasi yo‘liga tushadi."
       }
     },
     {
@@ -859,7 +859,7 @@
         {
           "en": "A small lesion at an incisor apex",
           "ru": "Малый очаг у апекса резца",
-          "uz": "Kesuv tishlar apeksidagi kichik o‘choq"
+          "uz": "Kesuvchi tishlar apeksidagi kichik o‘choq"
         },
         {
           "en": "Assessing third molar position",
@@ -878,7 +878,7 @@
       "q": {
         "en": "Which structure appears radiolucent on a panoramic image?",
         "ru": "Какая структура на ОПТГ выглядит рентгенопрозрачной?",
-        "uz": "OPTG da qaysi tuzilma rentgenoshaffof ko‘rinadi?"
+        "uz": "OPTGda qaysi tuzilma rentgenoshaffof ko‘rinadi?"
       },
       "options": [
         {

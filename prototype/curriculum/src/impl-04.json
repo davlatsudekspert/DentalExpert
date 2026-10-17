@@ -103,7 +103,7 @@
             {
               "en": "Crown or bridge",
               "ru": "Коронка или мост",
-              "uz": "Toj yoki ko‘prik"
+              "uz": "Koronka yoki ko‘prik"
             },
             {
               "en": "Overdenture",
@@ -446,7 +446,7 @@
         {
           "en": "Avoid lateral contacts on the implant crown",
           "ru": "Разобщение коронки на имплантате при боковых движениях",
-          "uz": "Yon harakatlarda implantli tojni bo‘shatish"
+          "uz": "Yon harakatlarda implantli koronkani bo‘shatish"
         }
       ]
     },
@@ -720,7 +720,7 @@
       "explain": {
         "en": "Residual cement promotes plaque and peri-implantitis.",
         "ru": "Остатки цемента способствуют накоплению налёта и периимплантиту.",
-        "uz": "Sement qoldig‘i blyashka to‘planishiga va periimplantitga olib keladi."
+        "uz": "Sement qoldig‘i karash to‘planishiga va periimplantitga olib keladi."
       }
     },
     {
@@ -748,7 +748,7 @@
         {
           "en": "Crown without abutment",
           "ru": "Коронка без абатмента",
-          "uz": "Abatmentsiz toj"
+          "uz": "Abatmentsiz koronka"
         }
       ],
       "correct": 1,
@@ -797,7 +797,7 @@
       "q": {
         "en": "How should occlusion be set on an implant crown?",
         "ru": "Как настраивается окклюзия на коронке с опорой на имплантат?",
-        "uz": "Implant ustidagi tojda okklyuziya qanday sozlanadi?"
+        "uz": "Implant ustidagi koronkada okklyuziya qanday sozlanadi?"
       },
       "options": [
         {
@@ -832,7 +832,7 @@
       "q": {
         "en": "A patient’s implant crown screw keeps loosening. Most likely cause?",
         "ru": "У пациента повторно раскручивается винт коронки на имплантате. Наиболее вероятная причина?",
-        "uz": "Bemorda bir necha marta implant toji vinti bo‘shab qolgan. Eng ehtimol sabab qaysi?"
+        "uz": "Bemorda bir necha marta implant koronkasi vinti bo‘shab qolgan. Eng ehtimol sabab qaysi?"
       },
       "options": [
         {

@@ -308,7 +308,7 @@
             {
               "en": "In children: small chin, facial asymmetry",
               "ru": "У ребёнка микрогения, асимметрия лица",
-              "uz": "Bolada iyak kichikligi, yuz assimetriyasi"
+              "uz": "Bolada iyak kichikligi, yuz asimmetriyasi"
             },
             {
               "en": "Sleep apnoea",
@@ -551,7 +551,7 @@
         {
           "en": "Facial asymmetry and small chin",
           "ru": "Асимметрия лица и микрогения",
-          "uz": "Yuz assimetriyasi va kichik iyak"
+          "uz": "Yuz asimmetriyasi va kichik iyak"
         },
         {
           "en": "Problems with eating and hygiene",
@@ -769,7 +769,7 @@
       "q": {
         "en": "A 12-year-old opens 10 mm and has a small chin with facial asymmetry. Likely diagnosis?",
         "ru": "У 12-летнего ребёнка открывание рта 10 мм, микрогения и асимметрия лица. Вероятный диагноз?",
-        "uz": "12 yoshli bolada og‘iz ochilishi 10 mm, iyak kichik va yuz assimetrik. Tashxis ehtimoli?"
+        "uz": "12 yoshli bolada og‘iz ochilishi 10 mm, iyak kichik va yuz asimmetrik. Tashxis ehtimoli?"
       },
       "options": [
         {
@@ -797,7 +797,7 @@
       "explain": {
         "en": "Long-standing ankylosis disturbs the growth site, causing a small chin and asymmetry.",
         "ru": "Длительный анкилоз нарушает зону роста, вызывая микрогению и асимметрию.",
-        "uz": "Uzoq davom etgan ankiloz o‘sish markazini buzib, mikrogeniya va assimetriya beradi."
+        "uz": "Uzoq davom etgan ankiloz o‘sish markazini buzib, mikrogeniya va asimmetriya beradi."
       }
     },
     {

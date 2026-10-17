@@ -110,7 +110,7 @@
       "note": {
         "en": "Use Löe's classic study to show that gingivitis is caused by plaque and is reversible.",
         "ru": "Используйте классическое исследование Лоэ, чтобы показать, что гингивит вызван налётом и обратим.",
-        "uz": "Gingivit karash tufayli kelib chiqishi va qaytar ekanini ko‘rsatish uchun Lyoning klassik tadqiqotidan foydalaning."
+        "uz": "Gingivit karash tufayli kelib chiqishi va qaytar ekanini ko‘rsatish uchun Loening klassik tadqiqotidan foydalaning."
       }
     },
     {
@@ -329,7 +329,7 @@
       "title": {
         "en": "Gingival index (Löe and Silness)",
         "ru": "Гингивальный индекс (Лоэ и Силнесс)",
-        "uz": "Milk indeksi (Lyo va Silness)"
+        "uz": "Milk indeksi (Loe va Silness)"
       },
       "head": [
         {
@@ -1088,7 +1088,7 @@
         {
           "en": "A well-polished crown margin",
           "ru": "Хорошо отполированный край коронки",
-          "uz": "Yaxshi silliqlangan toj cheti"
+          "uz": "Yaxshi silliqlangan koronka cheti"
         },
         {
           "en": "Overhanging restoration margin",

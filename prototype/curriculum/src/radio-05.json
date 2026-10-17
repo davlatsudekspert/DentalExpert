@@ -14,7 +14,7 @@
     {
       "en": "Explain how CBCT works and what a voxel is",
       "ru": "Объяснить принцип КЛКТ и понятие вокселя",
-      "uz": "KLKT ning ishlash tamoyili va voksel tushunchasini tushuntirish"
+      "uz": "KLKTning ishlash tamoyili va voksel tushunchasini tushuntirish"
     },
     {
       "en": "Justify the choice of field of view",
@@ -24,7 +24,7 @@
     {
       "en": "Compare CBCT dose with 2D imaging and medical CT",
       "ru": "Сравнивать дозу КЛКТ с 2D-снимками и медицинской КТ",
-      "uz": "KLKT dozasini 2D snimoklar va tibbiy KT bilan solishtirish"
+      "uz": "KLKT dozasini 2D rentgenogrammalar va tibbiy KT bilan solishtirish"
     },
     {
       "en": "Know the indications and limitations",
@@ -63,7 +63,7 @@
           "label": {
             "en": "Cone beam",
             "ru": "Конический пучок",
-            "uz": "Konus dasta"
+            "uz": "Konussimon nur dastasi"
           },
           "detail": {
             "en": "One rotation around the head",
@@ -141,7 +141,7 @@
       "definition": {
         "en": "A voxel is the smallest cubic unit of a 3D image. In CBCT voxels are usually isotropic (equal on all sides), so measurements are accurate in any plane. Smaller voxels give finer detail but usually a higher dose.",
         "ru": "Воксель — наименьший кубический элемент трёхмерного изображения. В КЛКТ воксели обычно изотропны (все стороны равны), поэтому измерения точны в любой плоскости. Меньший воксель даёт более детальное изображение, но доза обычно выше.",
-        "uz": "Voksel — uch o‘lchamli tasvirning eng kichik kubik birligi. KLKT da vokselar odatda izotrop (barcha tomonlari teng), shuning uchun har qanday tekislikda o‘lchash aniq. Kichik voksel aniqroq tasvir beradi, lekin doza odatda oshadi."
+        "uz": "Voksel — uch o‘lchamli tasvirning eng kichik kubik birligi. KLKTda vokselar odatda izotrop (barcha tomonlari teng), shuning uchun har qanday tekislikda o‘lchash aniq. Kichik voksel aniqroq tasvir beradi, lekin doza odatda oshadi."
       }
     },
     {
@@ -239,7 +239,7 @@
           "head": {
             "en": "2D images",
             "ru": "2D-снимки",
-            "uz": "2D snimoklar"
+            "uz": "2D rentgenogrammalar"
           },
           "items": [
             {
@@ -283,7 +283,7 @@
             {
               "en": "Usually higher than CBCT",
               "ru": "Обычно выше КЛКТ",
-              "uz": "Odatda KLKT dan yuqori"
+              "uz": "Odatda KLKTdan yuqori"
             },
             {
               "en": "Better soft-tissue contrast",
@@ -468,7 +468,7 @@
           "detail": {
             "en": "Intraoral or panoramic image",
             "ru": "Внутриротовой или панорамный снимок",
-            "uz": "Intraoral yoki panoramik snimok"
+            "uz": "Intraoral yoki panoramik rentgenogramma"
           }
         },
         {
@@ -518,7 +518,7 @@
         {
           "en": "Dose is above 2D, usually below medical CT, and varies widely",
           "ru": "Доза выше 2D, обычно ниже медицинской КТ и сильно варьирует",
-          "uz": "Doza 2D dan yuqori, odatda tibbiy KT dan past va keng farq qiladi"
+          "uz": "Doza 2D dan yuqori, odatda tibbiy KTdan past va keng farq qiladi"
         },
         {
           "en": "Only when 2D is not enough, with the smallest FOV",
@@ -538,13 +538,13 @@
       "q": {
         "en": "Explain the working principle of CBCT.",
         "ru": "Объясните принцип работы КЛКТ.",
-        "uz": "KLKT ning ishlash tamoyilini tushuntiring."
+        "uz": "KLKTning ishlash tamoyilini tushuntiring."
       },
       "plan": [
         {
           "en": "Cone-shaped beam and flat detector",
           "ru": "Конический пучок и плоский детектор",
-          "uz": "Konus shaklidagi dasta va tekis detektor"
+          "uz": "Konus shaklidagi nur dastasi va tekis detektor"
         },
         {
           "en": "Many projections in one rotation",
@@ -596,7 +596,7 @@
       "q": {
         "en": "List the limitations of CBCT.",
         "ru": "Назовите ограничения КЛКТ.",
-        "uz": "KLKT ning cheklovlarini ayting."
+        "uz": "KLKTning cheklovlarini ayting."
       },
       "plan": [
         {
@@ -656,7 +656,7 @@
       "q": {
         "en": "What does it mean that a CBCT voxel is isotropic?",
         "ru": "Что значит, что воксель в КЛКТ изотропен?",
-        "uz": "KLKT da voksel izotrop bo‘lishi nimani anglatadi?"
+        "uz": "KLKTda voksel izotrop bo‘lishi nimani anglatadi?"
       },
       "options": [
         {
@@ -754,14 +754,14 @@
       "explain": {
         "en": "2D images have the lowest dose; CBCT is intermediate and usually below medical CT.",
         "ru": "2D-снимки дают наименьшую дозу, КЛКТ — промежуточную, обычно ниже медицинской КТ.",
-        "uz": "2D snimoklar eng past, KLKT o‘rtada va odatda tibbiy KT dan past dozaga ega."
+        "uz": "2D rentgenogrammalar eng past, KLKT o‘rtada va odatda tibbiy KTdan past dozaga ega."
       }
     },
     {
       "q": {
         "en": "What is a key limitation of CBCT?",
         "ru": "Главное ограничение КЛКТ?",
-        "uz": "KLKT ning asosiy cheklovi qaysi?"
+        "uz": "KLKTning asosiy cheklovi qaysi?"
       },
       "options": [
         {
@@ -782,7 +782,7 @@
         {
           "en": "Lower dose than panoramic",
           "ru": "Доза ниже ОПТГ",
-          "uz": "Dozasi OPTG dan past"
+          "uz": "Dozasi OPTGdan past"
         }
       ],
       "correct": 1,
@@ -796,7 +796,7 @@
       "q": {
         "en": "A patient has many metal crowns. What should you expect on CBCT?",
         "ru": "У пациента много металлических коронок. Чего ожидать на КЛКТ?",
-        "uz": "Bemorda ko‘p metall koronkalar bor. KLKT da nima kutiladi?"
+        "uz": "Bemorda ko‘p metall koronkalar bor. KLKTda nima kutiladi?"
       },
       "options": [
         {
@@ -831,23 +831,23 @@
       "q": {
         "en": "On a panoramic image the lower third molar roots are close to the canal with Rood's signs. Next step?",
         "ru": "На ОПТГ корни нижнего третьего моляра близки к каналу, есть признаки Руда. Следующий шаг?",
-        "uz": "Pastki uchinchi molyar ildizlari OPTG da kanalga yaqin, Rood belgilari bor. Keyingi qadam?"
+        "uz": "Pastki uchinchi molyar ildizlari OPTGda kanalga yaqin, Rood belgilari bor. Keyingi qadam?"
       },
       "options": [
         {
           "en": "Consider CBCT",
           "ru": "Рассмотреть КЛКТ",
-          "uz": "KLKT ni ko‘rib chiqish"
+          "uz": "KLKTni ko‘rib chiqish"
         },
         {
           "en": "Extract without further imaging",
           "ru": "Удалить без доп. снимков",
-          "uz": "Snimoksiz olib tashlash"
+          "uz": "Rentgenogrammasiz olib tashlash"
         },
         {
           "en": "Take a bitewing",
           "ru": "Сделать bitewing",
-          "uz": "Tishlam snimok olish"
+          "uz": "Bitewing rentgenogramma olish"
         },
         {
           "en": "Order an MRI",
@@ -936,7 +936,7 @@
       "q": {
         "en": "Which statement about CBCT grey values is correct?",
         "ru": "Какое утверждение о значениях серого в КЛКТ верно?",
-        "uz": "KLKT dagi kulrang qiymatlar haqida qaysi fikr to‘g‘ri?"
+        "uz": "KLKTdagi kulrang qiymatlar haqida qaysi fikr to‘g‘ri?"
       },
       "options": [
         {

@@ -8,13 +8,13 @@
   "title": {
     "en": "Caries classification: Black classes, ICDAS, depth and activity",
     "ru": "Классификация кариеса: Блэк, ICDAS, глубина и активность",
-    "uz": "Karies tasnifi: Black, ICDAS, chuqurlik va faollik"
+    "uz": "Karies tasnifi: Blek, ICDAS, chuqurlik va faollik"
   },
   "goals": [
     {
       "en": "Identify Black classes",
       "ru": "Определять классы по Блэку",
-      "uz": "Black sinflarini aniqlash"
+      "uz": "Blek sinflarini aniqlash"
     },
     {
       "en": "Apply ICDAS codes",
@@ -48,7 +48,7 @@
       "subtitle": {
         "en": "Black classes, ICDAS, depth and activity",
         "ru": "Классы Блэка, ICDAS, по глубине и активности",
-        "uz": "Black sinflari, ICDAS, chuqurlik va faollik bo‘yicha"
+        "uz": "Blek sinflari, ICDAS, chuqurlik va faollik bo‘yicha"
       }
     },
     {
@@ -56,7 +56,7 @@
       "title": {
         "en": "Black’s classification",
         "ru": "Классификация Блэка",
-        "uz": "Black tasnifi"
+        "uz": "Blek tasnifi"
       },
       "head": [
         {
@@ -147,7 +147,7 @@
       "note": {
         "en": "Note that Class VI was not in Black’s original scheme and was added later.",
         "ru": "Отметьте, что VI класс отсутствовал у Блэка и был добавлен позже.",
-        "uz": "VI sinf Blackning asl tasnifida bo‘lmaganini va keyinchalik qo‘shilganini aytib o‘ting."
+        "uz": "VI sinf Blekning asl tasnifida bo‘lmaganini va keyinchalik qo‘shilganini aytib o‘ting."
       }
     },
     {
@@ -309,7 +309,7 @@
           "detail": {
             "en": "Remove plaque",
             "ru": "Удалить налёт",
-            "uz": "Blyashkani olib tashlash"
+            "uz": "Karashni olib tashlash"
           }
         },
         {
@@ -435,7 +435,7 @@
       ],
       "note": {
         "en": "Mention that depth-based diagnosis is widely used in clinics in the region.",
-        "ru": "Напомните, что классификация по глубине широко применяется в клиническом диагнозе в странах СНГ.",
+        "ru": "Напомните, что классификация по глубине широко применяется в клиническом диагнозе в нашей стране.",
         "uz": "Mamlakatimizda chuqurlik bo‘yicha tasnif klinik tashxisda keng qo‘llanishini eslating."
       }
     },
@@ -462,7 +462,7 @@
             {
               "en": "Rough and plaque-covered",
               "ru": "Шероховатая, покрыта налётом",
-              "uz": "G‘adir-budur, blyashka bilan qoplangan"
+              "uz": "G‘adir-budur, karash bilan qoplangan"
             },
             {
               "en": "Dentin soft or leathery",
@@ -561,7 +561,7 @@
         {
           "en": "Black’s classes describe lesion location",
           "ru": "Классификация Блэка описывает локализацию полости",
-          "uz": "Black tasnifi kovak joylashuvini bildiradi"
+          "uz": "Blek tasnifi kovak joylashuvini bildiradi"
         },
         {
           "en": "ICDAS codes 0–6 grade lesion severity",
@@ -586,7 +586,7 @@
       "q": {
         "en": "List Black’s classes with examples.",
         "ru": "Перечислите классы Блэка и приведите примеры.",
-        "uz": "Black tasnifini sanab bering va misollar keltiring."
+        "uz": "Blek tasnifini sanab bering va misollar keltiring."
       },
       "plan": [
         {
@@ -660,7 +660,7 @@
         {
           "en": "Plaque presence and site",
           "ru": "Наличие и локализация налёта",
-          "uz": "Blyashka borligi va joylashuvi"
+          "uz": "Karash borligi va joylashuvi"
         },
         {
           "en": "Dentin hardness",
@@ -704,7 +704,7 @@
       "q": {
         "en": "By Black, an occlusal fissure lesion on a lower molar is which class?",
         "ru": "К какому классу по Блэку относится фиссурный кариес жевательной поверхности нижнего моляра?",
-        "uz": "Black tasnifiga ko‘ra pastki molyar tishning chaynov yuzasidagi fissura kariesi qaysi sinfga kiradi?"
+        "uz": "Blek tasnifiga ko‘ra pastki molyar tishning chaynov yuzasidagi fissura kariesi qaysi sinfga kiradi?"
       },
       "options": [
         {
@@ -739,7 +739,7 @@
       "q": {
         "en": "Distal caries on a central incisor with the incisal edge intact. Black class?",
         "ru": "Кариес дистальной поверхности центрального резца, режущий край цел. Класс по Блэку?",
-        "uz": "Markaziy kesuvchi tishning distal yuzasida karies, kesuvchi qirra butun. Black bo‘yicha sinfi?"
+        "uz": "Markaziy kesuvchi tishning distal yuzasida karies, kesuvchi qirra butun. Blek bo‘yicha sinfi?"
       },
       "options": [
         {
@@ -844,7 +844,7 @@
       "q": {
         "en": "A patient has a chalky, matt, rough spot covered with plaque. How do you assess it?",
         "ru": "У пациента меловидное матовое шероховатое пятно, покрытое налётом. Как его оценить?",
-        "uz": "Bemorda bo‘r rangli, xira va g‘adir-budur, blyashka bilan qoplangan dog‘ bor. Uni qanday baholaysiz?"
+        "uz": "Bemorda bo‘r rangli, xira va g‘adir-budur, karash bilan qoplangan dog‘ bor. Uni qanday baholaysiz?"
       },
       "options": [
         {
@@ -872,7 +872,7 @@
       "explain": {
         "en": "A matt, rough, plaque-covered surface indicates active demineralisation.",
         "ru": "Матовая шероховатая поверхность под налётом указывает на активную деминерализацию.",
-        "uz": "Xira, g‘adir-budur va blyashka bilan qoplangan yuza faol demineralizatsiyani ko‘rsatadi."
+        "uz": "Xira, g‘adir-budur va karash bilan qoplangan yuza faol demineralizatsiyani ko‘rsatadi."
       }
     },
     {
@@ -900,7 +900,7 @@
         {
           "en": "Thick plaque layer",
           "ru": "Толстый слой налёта",
-          "uz": "Qalin blyashka qatlami"
+          "uz": "Qalin karash qatlami"
         }
       ],
       "correct": 2,
@@ -914,7 +914,7 @@
       "q": {
         "en": "Cervical caries is which Black class?",
         "ru": "Какой класс по Блэку у кариеса пришеечной области?",
-        "uz": "Tish bo‘yin sohasidagi karies Black bo‘yicha qaysi sinf?"
+        "uz": "Tish bo‘yin sohasidagi karies Blek bo‘yicha qaysi sinf?"
       },
       "options": [
         {
@@ -1030,7 +1030,7 @@
         {
           "en": "Black classes and filling material",
           "ru": "Классы Блэка и пломбировочный материал",
-          "uz": "Black sinflari va plomba materiali"
+          "uz": "Blek sinflari va plomba materiali"
         },
         {
           "en": "ICDAS code, activity and caries risk",

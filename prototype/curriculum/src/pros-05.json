@@ -85,7 +85,7 @@
             {
               "en": "Crown on the abutment",
               "ru": "Коронка на опоре",
-              "uz": "Tayanchdagi toj"
+              "uz": "Tayanchdagi koronka"
             }
           ]
         },
@@ -197,7 +197,7 @@
           {
             "en": "Single missing incisor",
             "ru": "Отсутствие одного резца",
-            "uz": "Bitta kesuv tish yo‘qligi"
+            "uz": "Bitta kesuvchi tish yo‘qligi"
           }
         ],
         [
@@ -291,7 +291,7 @@
       },
       "definition": {
         "en": "The root surface area of the abutments should be at least equal to that of the teeth being replaced. It is an empirical guide; evidence for it is weak and span, occlusion and periodontal support also matter.",
-        "ru": "Площадь поверхности корней опор должна быть не меньше, чем у замещаемых зубов. Это эмпирическое правило с слабой доказательной базой; важны также пролёт, окклюзия и пародонт.",
+        "ru": "Площадь поверхности корней опор должна быть не меньше, чем у замещаемых зубов. Это эмпирическое правило со слабой доказательной базой; важны также пролёт, окклюзия и пародонт.",
         "uz": "Tayanch tishlar ildiz yuzasi maydoni tiklanayotgan tishlarnikidan kam bo‘lmasligi kerak. Bu amaliy qoida bo‘lib, dalillari zaif; oraliq uzunligi, okklyuziya va parodont tayanchi ham muhim."
       },
       "note": {
@@ -403,7 +403,7 @@
           {
             "en": "Mandibular molar region",
             "ru": "Нижние моляры",
-            "uz": "Pastki moziq tishlar sohasi"
+            "uz": "Pastki katta oziq tishlar sohasi"
           }
         ],
         [
@@ -594,7 +594,7 @@
         {
           "en": "Retainers cemented on abutments",
           "ru": "Опорные коронки на опорах",
-          "uz": "Tayanchlarga mahkamlangan tojlar"
+          "uz": "Tayanchlarga mahkamlangan koronkalar"
         },
         {
           "en": "Pontic replacing the missing tooth",
@@ -796,7 +796,7 @@
       "q": {
         "en": "Which pontic design is best for the mandibular first molar region where aesthetics is not a concern?",
         "ru": "Какая форма промежуточной части лучше для области нижнего первого моляра, где эстетика не важна?",
-        "uz": "Estetika ahamiyatsiz bo‘lgan pastki birinchi moziq tish sohasi uchun qaysi oraliq qism shakli eng yaxshi?"
+        "uz": "Estetika ahamiyatsiz bo‘lgan pastki birinchi katta oziq tish sohasi uchun qaysi oraliq qism shakli eng yaxshi?"
       },
       "options": [
         {
@@ -866,7 +866,7 @@
       "q": {
         "en": "A young patient has one missing upper lateral incisor and intact, caries-free neighbours. A conservative fixed option is:",
         "ru": "У молодого пациента отсутствует один верхний боковой резец, соседние зубы интактны. Щадящий несъёмный вариант:",
-        "uz": "Yosh bemorda bitta yuqori yon kesuv tish yo‘q, qo‘shni tishlar butun va kariessiz. Tejamkor olinmaydigan variant:"
+        "uz": "Yosh bemorda bitta yuqori yon kesuvchi tish yo‘q, qo‘shni tishlar butun va kariessiz. Tejamkor olinmaydigan variant:"
       },
       "options": [
         {
@@ -1017,7 +1017,7 @@
         {
           "en": "Two molars are missing in a row",
           "ru": "Отсутствуют два моляра подряд",
-          "uz": "Ketma-ket ikki moziq tish yo‘q"
+          "uz": "Ketma-ket ikki katta oziq tish yo‘q"
         },
         {
           "en": "The patient has heavy bruxism",

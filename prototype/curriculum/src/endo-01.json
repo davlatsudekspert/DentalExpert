@@ -485,7 +485,7 @@
           {
             "en": "Incisors",
             "ru": "Резцы",
-            "uz": "Kurak tishlar"
+            "uz": "Kesuvchi tishlar"
           },
           {
             "en": "1 canal",
@@ -898,7 +898,7 @@
         {
           "en": "Maxillary central incisor",
           "ru": "Верхний центральный резец",
-          "uz": "Yuqori markaziy kurak tish"
+          "uz": "Yuqori markaziy kesuvchi tish"
         },
         {
           "en": "Mandibular canine",
@@ -987,7 +987,7 @@
       "q": {
         "en": "What must always be considered when treating a mandibular central incisor?",
         "ru": "Что всегда нужно учитывать при лечении нижнего центрального резца?",
-        "uz": "Pastki markaziy kurak tishni davolashda nimani doimo hisobga olish kerak?"
+        "uz": "Pastki markaziy kesuvchi tishni davolashda nimani doimo hisobga olish kerak?"
       },
       "options": [
         {
@@ -1015,7 +1015,7 @@
       "explain": {
         "en": "Mandibular incisors often have a second lingual canal, and missing it can cause failure.",
         "ru": "В нижних резцах нередко есть второй язычный канал; его пропуск ведёт к неудаче.",
-        "uz": "Pastki kurak tishlarda ikkinchi til tomon kanali tez-tez uchraydi va topilmasa davolash muvaffaqiyatsiz bo‘lishi mumkin."
+        "uz": "Pastki kesuvchi tishlarda ikkinchi til tomon kanali tez-tez uchraydi va topilmasa davolash muvaffaqiyatsiz bo‘lishi mumkin."
       }
     },
     {

@@ -212,7 +212,7 @@
             {
               "en": "Acute pericoronitis (treat first)",
               "ru": "Острый перикоронит (сначала лечение)",
-              "uz": "O‘tkir perikoronit (avval davolanadi)"
+              "uz": "O‘tkir perikoronarit (avval davolanadi)"
             }
           ]
         }
@@ -252,7 +252,7 @@
           {
             "en": "Incisors and canines",
             "ru": "Резцы и клыки",
-            "uz": "Kurak va qoziq tishlar"
+            "uz": "Kesuvchi va qoziq tishlar"
           },
           {
             "en": "Straight forceps",
@@ -262,7 +262,7 @@
           {
             "en": "Non-pointed",
             "ru": "Без шипов",
-            "uz": "Uchi o‘tmas"
+            "uz": "Tikansiz"
           }
         ],
         [
@@ -279,7 +279,7 @@
           {
             "en": "Non-pointed",
             "ru": "Без шипов",
-            "uz": "Uchi o‘tmas"
+            "uz": "Tikansiz"
           }
         ],
         [
@@ -347,7 +347,7 @@
           {
             "en": "Incisors, canines, premolars",
             "ru": "Резцы, клыки, премоляры",
-            "uz": "Kurak, qoziq, premolyarlar"
+            "uz": "Kesuvchi, qoziq, premolyarlar"
           },
           {
             "en": "Beak-shaped, bent at right angle",
@@ -357,7 +357,7 @@
           {
             "en": "Non-pointed",
             "ru": "Без шипов",
-            "uz": "Uchi o‘tmas"
+            "uz": "Tikansiz"
           }
         ],
         [
@@ -391,7 +391,7 @@
           {
             "en": "Non-pointed",
             "ru": "Без шипов",
-            "uz": "Uchi o‘tmas"
+            "uz": "Tikansiz"
           }
         ],
         [
@@ -597,7 +597,7 @@
         {
           "en": "Local: malignancy, acute pericoronitis",
           "ru": "Местные: злокачественная опухоль, острый перикоронит",
-          "uz": "Mahalliy: xavfli o‘sma, o‘tkir perikoronit"
+          "uz": "Mahalliy: xavfli o‘sma, o‘tkir perikoronarit"
         },
         {
           "en": "Most are relative; extract after preparation",
@@ -711,7 +711,7 @@
         {
           "en": "S-shaped forceps without points",
           "ru": "S-образные щипцы без шипов",
-          "uz": "S-simon qisqich, uchi o‘tmas"
+          "uz": "S-simon, tikansiz qisqich"
         },
         {
           "en": "Mandibular molar forceps",
@@ -728,7 +728,7 @@
       "explain": {
         "en": "Maxillary premolars are extracted with S-shaped forceps with non-pointed beaks.",
         "ru": "Для верхних премоляров используют S-образные щипцы с щёчками без шипов.",
-        "uz": "Yuqori premolyarlar uchun S-simon, uchi o‘tmas jag‘li qisqichlar ishlatiladi."
+        "uz": "Yuqori premolyarlar uchun S-simon, tikansiz jag‘li qisqichlar ishlatiladi."
       }
     },
     {
@@ -881,7 +881,7 @@
         {
           "en": "Mandibular edge-bent forceps",
           "ru": "Нижние, изогнутые по ребру",
-          "uz": "Pastki qirrasi egilgan qisqich"
+          "uz": "Pastki jag‘ uchun qirrasi bo‘yicha egilgan qisqich"
         },
         {
           "en": "Straight forceps",

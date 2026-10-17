@@ -165,7 +165,7 @@
           {
             "en": "Crowns, bridges, implants",
             "ru": "Коронки, мосты, имплантаты",
-            "uz": "Tojlar, ko‘priklar, implantlar"
+            "uz": "Koronkalar, ko‘priklar, implantlar"
           }
         ],
         [
@@ -182,7 +182,7 @@
           {
             "en": "Crowns, implant transfers",
             "ru": "Коронки, перенос имплантатов",
-            "uz": "Tojlar, implant ko‘chirmalari"
+            "uz": "Koronkalar, implant ko‘chirmalari"
           }
         ],
         [
@@ -276,7 +276,7 @@
       "title": {
         "en": "Crown impression with retraction",
         "ru": "Оттиск под коронку с ретракцией",
-        "uz": "Retraksiya bilan toj uchun qolip"
+        "uz": "Retraksiya bilan koronka uchun qolip"
       },
       "steps": [
         {
@@ -583,7 +583,7 @@
         {
           "en": "Uses: study casts versus crowns and bridges",
           "ru": "Применение: модели против коронок и мостов",
-          "uz": "Qo‘llanish: modellar va tojlar, ko‘priklar"
+          "uz": "Qo‘llanish: modellar va koronkalar, ko‘priklar"
         }
       ]
     },
@@ -620,7 +620,7 @@
       "q": {
         "en": "Why and how is the gingiva retracted before a crown impression?",
         "ru": "Зачем и как проводят ретракцию десны перед оттиском под коронку?",
-        "uz": "Toj uchun qolip olishdan oldin milk nima uchun va qanday retraksiya qilinadi?"
+        "uz": "Koronka uchun qolip olishdan oldin milk nima uchun va qanday retraksiya qilinadi?"
       },
       "plan": [
         {
@@ -850,7 +850,7 @@
       "q": {
         "en": "A crown impression shows a void exactly at the distal margin. The correct action is:",
         "ru": "На оттиске под коронку видна пора точно на дистальном крае. Правильное действие:",
-        "uz": "Toj uchun qolipda aynan distal chetda g‘ovak ko‘rinmoqda. To‘g‘ri harakat:"
+        "uz": "Koronka uchun qolipda aynan distal chetda g‘ovak ko‘rinmoqda. To‘g‘ri harakat:"
       },
       "options": [
         {

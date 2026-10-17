@@ -322,12 +322,12 @@
             {
               "en": "Single-tooth anterior crossbite",
               "ru": "Перекрёстный прикус одного резца",
-              "uz": "Bitta kesuvchining old kesishgan tishlovi"
+              "uz": "Bitta kesuvchining old kesishgan tishlami"
             },
             {
               "en": "Expansion for crossbite with displacement",
               "ru": "Расширение при боковом перекрёстном прикусе со смещением",
-              "uz": "Siljishli yon kesishgan tishlovda kengaytirish"
+              "uz": "Siljishli yon kesishgan tishlamda kengaytirish"
             },
             {
               "en": "Simple tipping movements",
@@ -405,7 +405,7 @@
             {
               "en": "Reduces a deep overbite",
               "ru": "Уменьшает глубокий прикус",
-              "uz": "Chuqur tishlovni kamaytiradi"
+              "uz": "Chuqur tishlamni kamaytiradi"
             }
           ]
         },
@@ -429,7 +429,7 @@
             {
               "en": "Used to correct anterior crossbite",
               "ru": "Для исправления переднего перекрёстного прикуса",
-              "uz": "Old kesishgan tishlovni tuzatishda"
+              "uz": "Old kesishgan tishlamni tuzatishda"
             }
           ]
         }
@@ -659,7 +659,7 @@
         {
           "en": "Simple tipping, single-tooth crossbite",
           "ru": "Простой наклон, перекрёстный прикус одного зуба",
-          "uz": "Oddiy og‘dirish, bitta tishning kesishgan tishlovi"
+          "uz": "Oddiy og‘dirish, bitta tishning kesishgan tishlami"
         },
         {
           "en": "Expansion, retention, space maintenance",
@@ -688,7 +688,7 @@
         {
           "en": "Anterior reduces a deep overbite",
           "ru": "Передняя – уменьшает глубокий прикус",
-          "uz": "Old platforma – chuqur tishlovni kamaytiradi"
+          "uz": "Old platforma – chuqur tishlamni kamaytiradi"
         },
         {
           "en": "Lets posterior teeth erupt",
@@ -703,7 +703,7 @@
         {
           "en": "Used to correct anterior crossbite",
           "ru": "Используется при переднем перекрёстном прикусе",
-          "uz": "Old kesishgan tishlovni tuzatishda ishlatiladi"
+          "uz": "Old kesishgan tishlamni tuzatishda ishlatiladi"
         }
       ]
     },
@@ -847,7 +847,7 @@
       "q": {
         "en": "A 9-year-old has one upper central incisor in crossbite with adequate overbite. What does the appliance need?",
         "ru": "У ребёнка 9 лет один верхний центральный резец в перекрёстном прикусе, перекрытие достаточное. Что нужно в аппарате?",
-        "uz": "9 yoshli bolada bitta yuqori markaziy kesuvchi kesishgan tishlovda, overbite yetarli. Apparatda qanday qism kerak?"
+        "uz": "9 yoshli bolada bitta yuqori markaziy kesuvchi kesishgan tishlamda, overbite yetarli. Apparatda qanday qism kerak?"
       },
       "options": [
         {
@@ -893,12 +893,12 @@
         {
           "en": "Posterior crossbite",
           "ru": "Боковой перекрёстный прикус",
-          "uz": "Yon kesishgan tishlov"
+          "uz": "Yon kesishgan tishlam"
         },
         {
           "en": "A deep overbite",
           "ru": "Глубокий прикус",
-          "uz": "Chuqur tishlov"
+          "uz": "Chuqur tishlam"
         },
         {
           "en": "Spacing between teeth",

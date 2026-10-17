@@ -179,7 +179,7 @@
       "note": {
         "en": "The drawing shows a molar; explain that the layer relationship is the same as in an incisor.",
         "ru": "Рисунок показывает моляр; объясните, что соотношение слоёв такое же, как в переднем зубе.",
-        "uz": "Chizma oziq tishni ko‘rsatadi; qatlamlar nisbati old tishdagidek ekanini tushuntiring."
+        "uz": "Chizma katta oziq tishni ko‘rsatadi; qatlamlar nisbati old tishdagidek ekanini tushuntiring."
       }
     },
     {
@@ -465,7 +465,7 @@
         {
           "en": "Final curing under glycerine reduces the oxygen-inhibited layer",
           "ru": "Финальная полимеризация под глицерином уменьшает ингибированный слой",
-          "uz": "Yakuniy qotirishdan keyin glitserin ostida qotirish havo ingibitsiya qatlamini kamaytiradi"
+          "uz": "Yakuniy qotirishni glitserin ostida bajarish kislorod ingibitsiyalangan qatlamni kamaytiradi"
         },
         {
           "en": "Check occlusion in protrusion and lateral excursions",
@@ -633,7 +633,7 @@
       "q": {
         "en": "Where is a Black Class IV cavity located?",
         "ru": "Где расположен дефект IV класса по Блэку?",
-        "uz": "Black tasnifi bo‘yicha IV sinf nuqson qayerda joylashadi?"
+        "uz": "Blek tasnifi bo‘yicha IV sinf nuqson qayerda joylashadi?"
       },
       "options": [
         {
@@ -889,7 +889,7 @@
         {
           "en": "Flowable liner alone",
           "ru": "Только жидкотекучий прокладочный композит",
-          "uz": "Oqim kompozit lajnerining o‘zi"
+          "uz": "Oquvchan kompozit laynerining o‘zi"
         },
         {
           "en": "Translucent or effect shade",
@@ -899,7 +899,7 @@
         {
           "en": "Glass ionomer cement",
           "ru": "Стеклоиономерный цемент",
-          "uz": "Shisha ionomer sement"
+          "uz": "Shisha-ionomer sement"
         }
       ],
       "correct": 2,

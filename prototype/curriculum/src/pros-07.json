@@ -231,7 +231,7 @@
           "detail": {
             "en": "Lip support, incisal level",
             "ru": "Поддержка губы, уровень резцов",
-            "uz": "Lab tayanchi, kesuv tishlar sathi"
+            "uz": "Lab tayanchi, kesuvchi tishlar sathi"
           }
         },
         {
@@ -289,7 +289,7 @@
       "title": {
         "en": "Checking vertical dimension",
         "ru": "Проверка высоты прикуса",
-        "uz": "Tishlov balandligini tekshirish"
+        "uz": "Tishlam balandligini tekshirish"
       },
       "bullets": [
         {
@@ -838,7 +838,7 @@
       "explain": {
         "en": "Overclosure deepens the skin folds at the mouth corners and reduces facial height.",
         "ru": "Снижение прикуса углубляет складки в углах рта и уменьшает высоту лица.",
-        "uz": "Tishlovning pasayishi og‘iz burchaklaridagi burmalarni chuqurlashtiradi va yuz balandligini kamaytiradi."
+        "uz": "Tishlamning pasayishi og‘iz burchaklaridagi burmalarni chuqurlashtiradi va yuz balandligini kamaytiradi."
       }
     },
     {

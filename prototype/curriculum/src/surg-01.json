@@ -110,7 +110,7 @@
       "title": {
         "en": "Spaulding classification",
         "ru": "Классификация Сполдинга",
-        "uz": "Spaulding tasnifi"
+        "uz": "Spolding tasnifi"
       },
       "head": [
         {
@@ -566,7 +566,7 @@
             {
               "en": "Anticoagulants",
               "ru": "Антикоагулянты",
-              "uz": "Antikoagulantlar"
+              "uz": "Antikoagulyantlar"
             },
             {
               "en": "Haemophilia",
@@ -694,7 +694,7 @@
       "q": {
         "en": "Explain the Spaulding classification and its use for dental instruments.",
         "ru": "Объясните классификацию Сполдинга и её применение к инструментам.",
-        "uz": "Spaulding tasnifini va stomatologik asboblarga qo‘llanilishini tushuntiring."
+        "uz": "Spolding tasnifini va stomatologik asboblarga qo‘llanilishini tushuntiring."
       },
       "plan": [
         {
@@ -783,7 +783,7 @@
       "q": {
         "en": "Which Spaulding category do extraction forceps belong to?",
         "ru": "К какой категории по Сполдингу относятся щипцы для удаления зубов?",
-        "uz": "Tish olish qisqichlari Spaulding tasnifi bo‘yicha qaysi toifaga kiradi?"
+        "uz": "Tish olish qisqichlari Spolding tasnifi bo‘yicha qaysi toifaga kiradi?"
       },
       "options": [
         {

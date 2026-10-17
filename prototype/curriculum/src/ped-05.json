@@ -221,7 +221,7 @@
           {
             "en": "Remove coronal pulp, medicament and crown",
             "ru": "Удаление коронковой пульпы, препарат и коронка",
-            "uz": "Toj pulpasini olish, dori va qoplama"
+            "uz": "Toj pulpasini olish, dori va koronka"
           }
         ],
         [
@@ -342,7 +342,7 @@
           "detail": {
             "en": "Base and stainless steel crown",
             "ru": "Прокладка и стальная коронка",
-            "uz": "Asos va zanglamaydigan po‘lat qoplama"
+            "uz": "Asos va zanglamaydigan po‘lat koronka"
           }
         }
       ],
@@ -494,7 +494,7 @@
         {
           "en": "Success needs a sealed restoration, often a steel crown",
           "ru": "Успех зависит от герметичной реставрации, чаще стальной коронки",
-          "uz": "Muvaffaqiyat germetik tiklashga bog‘liq, ko‘pincha po‘lat qoplama"
+          "uz": "Muvaffaqiyat germetik tiklashga bog‘liq, ko‘pincha po‘lat koronka"
         }
       ]
     }
@@ -578,7 +578,7 @@
         {
           "en": "Restore with a steel crown",
           "ru": "Восстановление стальной коронкой",
-          "uz": "Po‘lat qoplama bilan tiklash"
+          "uz": "Po‘lat koronka bilan tiklash"
         }
       ]
     },
@@ -833,7 +833,7 @@
         {
           "en": "Pulpotomy and stainless steel crown",
           "ru": "Пульпотомия и стальная коронка",
-          "uz": "Pulpotomiya va po‘lat qoplama"
+          "uz": "Pulpotomiya va po‘lat koronka"
         },
         {
           "en": "Direct pulp capping",
@@ -897,7 +897,7 @@
       "q": {
         "en": "Why is a pulp-treated primary molar usually restored with a steel crown?",
         "ru": "Почему временный моляр после лечения пульпы обычно восстанавливают стальной коронкой?",
-        "uz": "Pulpa davolangan sut molyari nima uchun ko‘pincha po‘lat qoplama bilan tiklanadi?"
+        "uz": "Pulpa davolangan sut molyari nima uchun ko‘pincha po‘lat koronka bilan tiklanadi?"
       },
       "options": [
         {
@@ -925,7 +925,7 @@
       "explain": {
         "en": "Success depends on a good seal; a steel crown covers the tooth and limits fracture and leakage.",
         "ru": "Успех зависит от герметичности; стальная коронка полностью покрывает зуб и снижает риск перелома и подтекания.",
-        "uz": "Muvaffaqiyat germetik tiklashga bog‘liq; po‘lat qoplama tojni to‘liq qoplab, sinish va oqishni kamaytiradi."
+        "uz": "Muvaffaqiyat germetik tiklashga bog‘liq; po‘lat koronka tojni to‘liq qoplab, sinish va oqishni kamaytiradi."
       }
     },
     {

@@ -188,7 +188,7 @@
           {
             "en": "Crowns, inlays, bridges",
             "ru": "Коронки, вкладки, мостовидные протезы",
-            "uz": "Qoplamalar, vkladkalar, ko‘prik protezlar"
+            "uz": "Koronkalar, vkladkalar, ko‘prik protezlar"
           }
         ],
         [
@@ -873,7 +873,7 @@
       "explain": {
         "en": "Zirconia is a high-strength oxide ceramic used for crowns and bridges.",
         "ru": "Диоксид циркония — высокопрочная оксидная керамика для коронок и мостовидных протезов.",
-        "uz": "Sirkoniy dioksidi qoplama va ko‘prik protezlar uchun ishlatiladigan yuqori mustahkam oksid keramikadir."
+        "uz": "Sirkoniy dioksidi koronka va ko‘prik protezlar uchun ishlatiladigan yuqori mustahkam oksid keramikadir."
       }
     },
     {
@@ -966,7 +966,7 @@
         {
           "en": "Between the incisors",
           "ru": "между резцами",
-          "uz": "Kurak tishlar orasiga"
+          "uz": "Kesuvchi tishlar orasiga"
         },
         {
           "en": "In the vestibule near the parotid duct opening",

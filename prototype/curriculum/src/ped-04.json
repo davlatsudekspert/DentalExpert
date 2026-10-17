@@ -8,7 +8,7 @@
   "title": {
     "en": "Restoring primary teeth: materials, stainless steel crowns, Hall technique",
     "ru": "Восстановление временных зубов: материалы, стальные коронки, метод Холла",
-    "uz": "Sut tishlarini tiklash: materiallar, metall qoplamalar va Hall usuli"
+    "uz": "Sut tishlarini tiklash: materiallar, metall koronkalar va Hall usuli"
   },
   "goals": [
     {
@@ -19,7 +19,7 @@
     {
       "en": "Know the indications for stainless steel crowns",
       "ru": "Знать показания к стандартным стальным коронкам",
-      "uz": "Zanglamaydigan po‘lat qoplamaning ko‘rsatmalarini bilish"
+      "uz": "Zanglamaydigan po‘lat koronkaning ko‘rsatmalarini bilish"
     },
     {
       "en": "Explain the steps and contraindications of the Hall technique",
@@ -47,7 +47,7 @@
       "subtitle": {
         "en": "Materials, stainless steel crowns and the Hall technique",
         "ru": "Материалы, стальные коронки и метод Холла",
-        "uz": "Materiallar, metall qoplamalar va Hall usuli"
+        "uz": "Materiallar, metall koronkalar va Hall usuli"
       }
     },
     {
@@ -228,7 +228,7 @@
             {
               "en": "Stainless steel crown",
               "ru": "Стальная коронка",
-              "uz": "Zanglamaydigan po‘lat qoplama"
+              "uz": "Zanglamaydigan po‘lat koronka"
             }
           ]
         },
@@ -253,7 +253,7 @@
       "title": {
         "en": "Stainless steel crown: conventional preparation",
         "ru": "Стальная коронка: традиционное препарирование",
-        "uz": "Po‘lat qoplama: an’anaviy preparatsiya"
+        "uz": "Po‘lat koronka: an’anaviy preparatsiya"
       },
       "image": "front",
       "callouts": [
@@ -297,7 +297,7 @@
       "note": {
         "en": "Show that the crown margin snaps under the cervical constriction; this gives retention.",
         "ru": "Покажите, что край коронки «защёлкивается» под пришеечным сужением: именно это обеспечивает ретенцию.",
-        "uz": "Qoplama cheti bo‘yin torayishi ostiga «chertilib» o‘tirishini ko‘rsating: retensiya aynan shundan keladi."
+        "uz": "Koronka cheti bo‘yin torayishi ostiga «chertilib» o‘tirishini ko‘rsating: retensiya aynan shundan keladi."
       }
     },
     {
@@ -315,7 +315,7 @@
       "definition": {
         "en": "Cementing a preformed stainless steel crown onto a primary molar with no local anaesthetic, no caries removal and no tooth preparation. The caries is sealed in, cut off from nutrients and arrests.",
         "ru": "Фиксация стандартной стальной коронки на временный моляр без анестезии, без удаления кариеса и без препарирования. Кариес герметизируется, лишается питания и останавливается.",
-        "uz": "Sut molyariga zanglamaydigan po‘lat qoplamani anesteziyasiz, karies olib tashlanmasdan va tish preparatsiya qilinmasdan sement bilan kiydirish usuli. Karies muhrlanib, ozuqa olmaydi va to‘xtaydi."
+        "uz": "Sut molyariga zanglamaydigan po‘lat koronkani anesteziyasiz, karies olib tashlanmasdan va tish preparatsiya qilinmasdan sement bilan kiydirish usuli. Karies muhrlanib, ozuqa olmaydi va to‘xtaydi."
       }
     },
     {
@@ -323,7 +323,7 @@
       "title": {
         "en": "Conventional crown versus Hall technique",
         "ru": "Традиционная коронка и метод Холла",
-        "uz": "An’anaviy qoplama va Hall usuli"
+        "uz": "An’anaviy koronka va Hall usuli"
       },
       "columns": [
         {
@@ -365,12 +365,12 @@
             {
               "en": "Caries sealed under the crown",
               "ru": "Кариес герметизируется под коронкой",
-              "uz": "Karies qoplama ostida muhrlanadi"
+              "uz": "Karies koronka ostida muhrlanadi"
             },
             {
               "en": "Bite settles within weeks",
               "ru": "Прикус выравнивается за несколько недель",
-              "uz": "Tishlov bir necha haftada moslashadi"
+              "uz": "Tishlam bir necha haftada moslashadi"
             }
           ]
         }
@@ -417,7 +417,7 @@
           "detail": {
             "en": "Crown seats with slight resistance",
             "ru": "Коронка садится с лёгким усилием",
-            "uz": "Qoplama tishga oson kirib, mahkam tursin"
+            "uz": "Koronka tishga oson kirib, mahkam tursin"
           }
         },
         {
@@ -448,7 +448,7 @@
       "note": {
         "en": "Have students practise sizing and seating a crown on a phantom head.",
         "ru": "Пусть студенты на фантоме отработают подбор размера и фиксацию коронки.",
-        "uz": "Talabalar fantomda qoplama o‘lchamini tanlash va kiydirishni mashq qilsin."
+        "uz": "Talabalar fantomda koronka o‘lchamini tanlash va kiydirishni mashq qilsin."
       }
     },
     {
@@ -472,12 +472,12 @@
         {
           "en": "Too little crown left for retention",
           "ru": "Коронка сильно разрушена, нет ретенции",
-          "uz": "Toj juda yemirilgan, qoplama tutib turmaydi"
+          "uz": "Toj juda yemirilgan, koronka tutib turmaydi"
         },
         {
           "en": "Child cannot tolerate crown seating",
           "ru": "Ребёнок совсем не позволяет установить коронку",
-          "uz": "Bola qoplamani kiydirishga mutlaqo ko‘nmaydi"
+          "uz": "Bola koronkani kiydirishga mutlaqo ko‘nmaydi"
         }
       ]
     },
@@ -502,12 +502,12 @@
         {
           "en": "Prefer a crown for multi-surface lesions",
           "ru": "При многоповерхностной полости выбирайте коронку",
-          "uz": "Ko‘p yuzali kovakda plomba o‘rniga qoplamani tanlang"
+          "uz": "Ko‘p yuzali kovakda plomba o‘rniga koronkani tanlang"
         },
         {
           "en": "Protect the airway when handling crowns",
           "ru": "Защищайте дыхательные пути при работе с коронкой",
-          "uz": "Qoplama bilan ishlaganda nafas yo‘llarini himoya qiling"
+          "uz": "Koronka bilan ishlaganda nafas yo‘llarini himoya qiling"
         }
       ],
       "note": {
@@ -532,7 +532,7 @@
         {
           "en": "Steel crowns are most reliable for multi-surface lesions",
           "ru": "Стальная коронка – самая надёжная при многоповерхностных полостях",
-          "uz": "Po‘lat qoplama – ko‘p yuzali kovaklar uchun eng ishonchli"
+          "uz": "Po‘lat koronka – ko‘p yuzali kovaklar uchun eng ishonchli"
         },
         {
           "en": "Hall: no anaesthetic, no preparation, caries sealed",
@@ -581,7 +581,7 @@
       "q": {
         "en": "Give the indications for a stainless steel crown.",
         "ru": "Назовите показания к стандартной стальной коронке.",
-        "uz": "Zanglamaydigan po‘lat qoplamaning ko‘rsatmalarini ayting."
+        "uz": "Zanglamaydigan po‘lat koronkaning ko‘rsatmalarini ayting."
       },
       "plan": [
         {
@@ -631,7 +631,7 @@
         {
           "en": "Explain the bite settles in weeks",
           "ru": "Объяснить, что прикус выровняется за недели",
-          "uz": "Tishlov bir necha haftada moslashishini tushuntirish"
+          "uz": "Tishlam bir necha haftada moslashishini tushuntirish"
         }
       ]
     },
@@ -706,7 +706,7 @@
         {
           "en": "Stainless steel crown",
           "ru": "Стандартная стальная коронка",
-          "uz": "Zanglamaydigan po‘lat qoplama"
+          "uz": "Zanglamaydigan po‘lat koronka"
         },
         {
           "en": "Temporary dentine paste",
@@ -728,7 +728,7 @@
       "explain": {
         "en": "A steel crown covers the whole crown and limits microleakage, so it is preferred after pulp therapy.",
         "ru": "Стальная коронка полностью покрывает коронку зуба и уменьшает микроподтекание, поэтому предпочтительна после лечения пульпы.",
-        "uz": "Po‘lat qoplama tojni to‘liq qoplaydi va mikrooqishni kamaytiradi, shuning uchun pulpa davolangandan keyin afzal."
+        "uz": "Po‘lat koronka tojni to‘liq qoplaydi va mikrooqishni kamaytiradi, shuning uchun pulpa davolangandan keyin afzal."
       }
     },
     {
@@ -741,7 +741,7 @@
         {
           "en": "Filling the crown with glass ionomer",
           "ru": "Заполнение коронки стеклоиономером",
-          "uz": "Qoplamani shisha-ionomer bilan to‘ldirish"
+          "uz": "Koronkani shisha-ionomer bilan to‘ldirish"
         },
         {
           "en": "Caries removal and tooth preparation",
@@ -751,7 +751,7 @@
         {
           "en": "Selecting the crown size",
           "ru": "Подбор размера коронки",
-          "uz": "Qoplama o‘lchamini tanlash"
+          "uz": "Koronka o‘lchamini tanlash"
         },
         {
           "en": "Removing excess cement",
@@ -770,13 +770,13 @@
       "q": {
         "en": "After a Hall crown the bite is high. What do you tell the parents?",
         "ru": "После установки коронки по Холлу прикус завышен. Что сказать родителям?",
-        "uz": "Hall qoplamasi kiydirilgach tishlov baland bo‘lib qoldi. Ota-onaga nima deyiladi?"
+        "uz": "Hall koronkasi kiydirilgach tishlam baland bo‘lib qoldi. Ota-onaga nima deyiladi?"
       },
       "options": [
         {
           "en": "The crown must be removed at once",
           "ru": "Коронку нужно сразу снять",
-          "uz": "Qoplamani darhol olib tashlash kerak"
+          "uz": "Koronkani darhol olib tashlash kerak"
         },
         {
           "en": "The opposing tooth needs grinding",
@@ -791,14 +791,14 @@
         {
           "en": "The bite usually settles within weeks",
           "ru": "Прикус обычно выравнивается за несколько недель",
-          "uz": "Tishlov odatda bir necha haftada moslashadi"
+          "uz": "Tishlam odatda bir necha haftada moslashadi"
         }
       ],
       "correct": 3,
       "explain": {
         "en": "The raised bite after a Hall crown usually equilibrates by itself within a few weeks.",
         "ru": "Завышение прикуса после коронки по Холлу обычно само выравнивается за несколько недель.",
-        "uz": "Hall qoplamasidan keyingi okklyuzion balandlik odatda bir necha hafta ichida o‘z-o‘zidan tenglashadi."
+        "uz": "Hall koronkasidan keyingi okklyuzion balandlik odatda bir necha hafta ichida o‘z-o‘zidan tenglashadi."
       }
     },
     {
@@ -840,7 +840,7 @@
       "q": {
         "en": "What is used before seating a Hall crown when contacts are tight?",
         "ru": "Что используют перед фиксацией коронки по Холлу при тугом контакте?",
-        "uz": "Zich kontakt bo‘lganda Hall qoplamasini kiydirishdan oldin nima ishlatiladi?"
+        "uz": "Zich kontakt bo‘lganda Hall koronkasini kiydirishdan oldin nima ishlatiladi?"
       },
       "options": [
         {
@@ -868,14 +868,14 @@
       "explain": {
         "en": "Orthodontic separators open the contact over a few days so the crown can seat without preparation.",
         "ru": "Ортодонтические сепараторы за несколько дней разобщают контакт и позволяют установить коронку без препарирования.",
-        "uz": "Ortodontik separatorlar bir necha kun ichida kontaktni ochib, qoplamani preparatsiyasiz kiydirishga imkon beradi."
+        "uz": "Ortodontik separatorlar bir necha kun ichida kontaktni ochib, koronkani preparatsiyasiz kiydirishga imkon beradi."
       }
     },
     {
       "q": {
         "en": "How much occlusal reduction is made for a conventional stainless steel crown?",
         "ru": "На сколько сошлифовывают окклюзионную поверхность при традиционном препарировании под стальную коронку?",
-        "uz": "An’anaviy po‘lat qoplama preparatsiyasida okklyuzion yuza qancha kesiladi?"
+        "uz": "An’anaviy po‘lat koronka preparatsiyasida okklyuzion yuza qancha kesiladi?"
       },
       "options": [
         {
@@ -916,12 +916,12 @@
         {
           "en": "Stainless steel crown",
           "ru": "Стальная коронка",
-          "uz": "Zanglamaydigan po‘lat qoplama"
+          "uz": "Zanglamaydigan po‘lat koronka"
         },
         {
           "en": "Composite strip crown",
           "ru": "Композитная коронка по прозрачной форме",
-          "uz": "Shaffof qolipli kompozit qoplama"
+          "uz": "Shaffof qolipli kompozit koronka"
         },
         {
           "en": "Amalgam filling",
@@ -938,14 +938,14 @@
       "explain": {
         "en": "A composite strip crown gives a natural look for anterior primary teeth.",
         "ru": "Композитная коронка по прозрачной форме обеспечивает естественный вид фронтальных зубов.",
-        "uz": "Shaffof qolip yordamida kompozitdan qilingan qoplama old tishlarda tabiiy ko‘rinish beradi."
+        "uz": "Shaffof qolip yordamida kompozitdan qilingan koronka old tishlarda tabiiy ko‘rinish beradi."
       }
     },
     {
       "q": {
         "en": "What mainly provides retention for a stainless steel crown?",
         "ru": "Чем в основном обеспечивается ретенция стальной коронки?",
-        "uz": "Po‘lat qoplamaning retensiyasi asosan nimaga bog‘liq?"
+        "uz": "Po‘lat koronkaning retensiyasi asosan nimaga bog‘liq?"
       },
       "options": [
         {
@@ -973,7 +973,7 @@
       "explain": {
         "en": "The marked cervical constriction holds the crown margin, while cement seals the space.",
         "ru": "Выраженное пришеечное сужение временного моляра удерживает край коронки, а цемент герметизирует пространство.",
-        "uz": "Sut molyarining keskin bo‘yin torayishi qoplama chetini ushlab turadi; sement esa bo‘shliqni muhrlaydi."
+        "uz": "Sut molyarining keskin bo‘yin torayishi koronka chetini ushlab turadi; sement esa bo‘shliqni muhrlaydi."
       }
     },
     {

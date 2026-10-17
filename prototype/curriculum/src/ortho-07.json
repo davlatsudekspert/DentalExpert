@@ -398,7 +398,7 @@
           "label": {
             "en": "Bite registration",
             "ru": "Регистрация прикуса",
-            "uz": "Tishlov qaydi"
+            "uz": "Tishlam qaydi"
           },
           "detail": {
             "en": "With the mandible postured forward",
@@ -724,7 +724,7 @@
         {
           "en": "A retainer only",
           "ru": "Только ретейнер",
-          "uz": "Faqat retenyer"
+          "uz": "Faqat retayner"
         }
       ],
       "correct": 2,
@@ -948,7 +948,7 @@
       "q": {
         "en": "In what position is the bite registered for a Twin Block?",
         "ru": "В каком положении регистрируют прикус для твин-блока?",
-        "uz": "Twin Block uchun tishlov qaydi qanday holatda olinadi?"
+        "uz": "Twin Block uchun tishlam qaydi qanday holatda olinadi?"
       },
       "options": [
         {
@@ -969,7 +969,7 @@
         {
           "en": "No bite registration is needed",
           "ru": "Регистрация прикуса не нужна",
-          "uz": "Tishlov qaydi kerak emas"
+          "uz": "Tishlam qaydi kerak emas"
         }
       ],
       "correct": 0,

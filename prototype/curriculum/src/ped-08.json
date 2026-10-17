@@ -222,7 +222,7 @@
           {
             "en": "Distal shoe",
             "ru": "Дистальный «башмачок»",
-            "uz": "Distal «tufli»"
+            "uz": "Distal yo‘naltiruvchi (distal shoe)"
           },
           {
             "en": "Second primary molar lost before the first molar erupts",
@@ -416,7 +416,7 @@
       "definition": {
         "en": "Early recognition of a developing malocclusion and simple measures that stop it or reduce its severity. The aim is to reduce the need for complex treatment later.",
         "ru": "Раннее выявление формирующейся аномалии прикуса и простые меры, которые останавливают или уменьшают её развитие. Цель – снизить потребность в сложном лечении в будущем.",
-        "uz": "Rivojlanayotgan noto‘g‘ri tishlovni erta aniqlash va oddiy choralar bilan uning og‘irlashishini to‘xtatish yoki kamaytirish. Maqsad – keyingi murakkab davolash ehtiyojini kamaytirish."
+        "uz": "Rivojlanayotgan noto‘g‘ri tishlamni erta aniqlash va oddiy choralar bilan uning og‘irlashishini to‘xtatish yoki kamaytirish. Maqsad – keyingi murakkab davolash ehtiyojini kamaytirish."
       },
       "note": {
         "en": "The paediatric dentist should spot these problems early and refer to an orthodontist in time.",
@@ -441,7 +441,7 @@
           "label": {
             "en": "Crossbites",
             "ru": "Перекрёстный прикус",
-            "uz": "Kesishgan tishlov"
+            "uz": "Kesishgan tishlam"
           },
           "items": [
             {
@@ -532,7 +532,7 @@
           "label": {
             "en": "First molars: ectopic eruption, crossbite",
             "ru": "Первые моляры: эктопия, перекрёстный прикус",
-            "uz": "Birinchi molyarlar: ektopik chiqish, kesishgan tishlov"
+            "uz": "Birinchi molyarlar: ektopik chiqish, kesishgan tishlam"
           }
         },
         {
@@ -690,7 +690,7 @@
         {
           "en": "Second primary molar before first molar erupts – distal shoe",
           "ru": "Потеря второго моляра до прорезывания первого – «башмачок»",
-          "uz": "Molyar chiqmasdan ikkinchi sut molyari yo‘qolsa – distal «tufli»"
+          "uz": "Molyar chiqmasdan ikkinchi sut molyari yo‘qolsa – distal yo‘naltiruvchi (distal shoe)"
         },
         {
           "en": "Bilateral – lingual arch or Nance",
@@ -719,7 +719,7 @@
         {
           "en": "Correcting anterior crossbite",
           "ru": "Исправление переднего перекрёстного прикуса",
-          "uz": "Old kesishgan tishlovni tuzatish"
+          "uz": "Old kesishgan tishlamni tuzatish"
         },
         {
           "en": "Stopping harmful habits",
@@ -755,7 +755,7 @@
         {
           "en": "Distal shoe",
           "ru": "Дистальный «башмачок»",
-          "uz": "Distal «tufli»"
+          "uz": "Distal yo‘naltiruvchi (distal shoe)"
         },
         {
           "en": "Headgear",
@@ -790,7 +790,7 @@
         {
           "en": "Distal shoe",
           "ru": "Дистальный «башмачок»",
-          "uz": "Distal «tufli»"
+          "uz": "Distal yo‘naltiruvchi (distal shoe)"
         },
         {
           "en": "No appliance needed",
@@ -802,7 +802,7 @@
       "explain": {
         "en": "A distal shoe guides the unerupted first permanent molar into place and holds the space.",
         "ru": "Дистальный «башмачок» направляет прорезывание первого постоянного моляра и сохраняет место.",
-        "uz": "Distal «tufli» chiqmagan birinchi doimiy molyarni to‘g‘ri yo‘naltirib, joyni saqlaydi."
+        "uz": "Distal yo‘naltiruvchi (distal shoe) chiqmagan birinchi doimiy molyarni to‘g‘ri yo‘naltirib, joyni saqlaydi."
       }
     },
     {
@@ -895,7 +895,7 @@
         {
           "en": "Distal shoe",
           "ru": "Дистальный «башмачок»",
-          "uz": "Distal «tufli»"
+          "uz": "Distal yo‘naltiruvchi (distal shoe)"
         },
         {
           "en": "Facemask",

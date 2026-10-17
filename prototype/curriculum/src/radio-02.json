@@ -112,7 +112,7 @@
       "note": {
         "en": "Dental doses are small and the concern is stochastic, so every unnecessary image matters.",
         "ru": "Стоматологические дозы малы, основной риск — стохастический; поэтому важен каждый лишний снимок.",
-        "uz": "Stomatologik dozalar juda kichik, asosiy xavf stoxastik; shuning uchun har bir ortiqcha snimok ahamiyatli."
+        "uz": "Stomatologik dozalar juda kichik, asosiy xavf stoxastik; shuning uchun har bir ortiqcha rentgenogramma ahamiyatli."
       }
     },
     {
@@ -221,7 +221,7 @@
             {
               "en": "Fast receptor",
               "ru": "Чувствительный приёмник",
-              "uz": "Tez qabul qilgich"
+              "uz": "Yuqori sezgir qabul qilgich"
             },
             {
               "en": "Rectangular collimation",
@@ -301,7 +301,7 @@
         {
           "en": "A collar is not used if it blocks the beam (e.g. panoramic)",
           "ru": "Воротник не используют, если он мешает пучку (например, ОПТГ)",
-          "uz": "Yoqa birlamchi dastaga xalaqit bersa, qo‘llanmaydi (masalan, OPTG)"
+          "uz": "Yoqa birlamchi nur dastasiga xalaqit bersa, qo‘llanmaydi (masalan, OPTG)"
         },
         {
           "en": "Practice differs between countries: follow local regulations",
@@ -356,7 +356,7 @@
           {
             "en": "Stand at 90–135° to the primary beam",
             "ru": "Стоять под углом 90–135° к пучку",
-            "uz": "Dastaga nisbatan 90–135° burchakda turish"
+            "uz": "Nur dastasiga nisbatan 90–135° burchakda turish"
           }
         ],
         [
@@ -403,7 +403,7 @@
             {
               "en": "Radiographs allowed when justified",
               "ru": "При показаниях снимок допустим",
-              "uz": "Ko‘rsatma bo‘lsa, snimok mumkin"
+              "uz": "Ko‘rsatma bo‘lsa, rentgenogramma mumkin"
             },
             {
               "en": "Fetal dose is negligible",
@@ -455,7 +455,7 @@
       "note": {
         "en": "Discuss that refusing a needed radiograph in pregnancy can leave an infection untreated.",
         "ru": "Обсудите: отказ от нужного снимка у беременной может повысить риск нелеченой инфекции.",
-        "uz": "Homilador bemorda zarur snimokdan bosh tortish davolanmagan infeksiya xavfini oshirishi mumkinligini muhokama qiling."
+        "uz": "Homilador bemorda zarur rentgenogrammadan bosh tortish davolanmagan infeksiya xavfini oshirishi mumkinligini muhokama qiling."
       }
     },
     {
@@ -469,12 +469,12 @@
         {
           "en": "Every radiograph must be clinically justified",
           "ru": "Каждый снимок должен быть клинически обоснован",
-          "uz": "Har bir snimok klinik asoslangan bo‘lishi kerak"
+          "uz": "Har bir rentgenogramma klinik asoslangan bo‘lishi kerak"
         },
         {
           "en": "Optimise: fast receptor, rectangular collimation, holder",
           "ru": "Оптимизация: чувствительный приёмник, прямоугольная коллимация, держатель",
-          "uz": "Optimallashtirish: tez qabul qilgich, to‘rtburchak kollimatsiya, ushlagich"
+          "uz": "Optimallashtirish: yuqori sezgir qabul qilgich, to‘rtburchak kollimatsiya, ushlagich"
         },
         {
           "en": "Staff: distance, barrier, correct position, never hold",
@@ -494,7 +494,7 @@
       "q": {
         "en": "Explain the three core ICRP principles.",
         "ru": "Объясните три основных принципа МКРЗ.",
-        "uz": "ICRP ning uchta asosiy tamoyilini tushuntiring."
+        "uz": "ICRPning uchta asosiy tamoyilini tushuntiring."
       },
       "plan": [
         {
@@ -529,12 +529,12 @@
         {
           "en": "Prescribe only when indicated",
           "ru": "Назначать снимки только по показаниям",
-          "uz": "Snimokni faqat ko‘rsatma bo‘yicha buyurish"
+          "uz": "Rentgenogrammani faqat ko‘rsatma bo‘yicha buyurish"
         },
         {
           "en": "Fast receptor or digital sensor",
           "ru": "Чувствительный приёмник или цифровой датчик",
-          "uz": "Tez qabul qilgich yoki raqamli sensor"
+          "uz": "Yuqori sezgir qabul qilgich yoki raqamli sensor"
         },
         {
           "en": "Rectangular collimation and holder",
@@ -568,7 +568,7 @@
         {
           "en": "Postpone elective imaging",
           "ru": "Плановые снимки отложить",
-          "uz": "Rejali snimoklarni keyinga qoldirish"
+          "uz": "Rejali rentgenogrammalarni keyinga qoldirish"
         },
         {
           "en": "Apply the usual optimisation measures",
@@ -592,7 +592,7 @@
         {
           "en": "Stand at 90–135° to the beam",
           "ru": "Стоять под углом 90–135° к пучку",
-          "uz": "Dastaga 90–135° burchakda turish"
+          "uz": "Nur dastasiga 90–135° burchakda turish"
         },
         {
           "en": "Never hold the receptor",
@@ -628,7 +628,7 @@
         {
           "en": "Radiation-induced cancer",
           "ru": "Радиационно-индуцированный рак",
-          "uz": "Radiatsiyaviy saraton"
+          "uz": "Nurlanish keltirib chiqargan saraton"
         },
         {
           "en": "Hair loss",
@@ -693,7 +693,7 @@
         {
           "en": "Prescribing after history and examination",
           "ru": "Назначать снимок после анамнеза и осмотра",
-          "uz": "Snimokni anamnez va ko‘rikdan keyin buyurish"
+          "uz": "Rentgenogrammani anamnez va ko‘rikdan keyin buyurish"
         },
         {
           "en": "Choosing a digital sensor",
@@ -710,14 +710,14 @@
       "explain": {
         "en": "Justification is the clinical decision that the image will benefit the patient; the others are optimisation or monitoring.",
         "ru": "Обоснование — это предварительная клиническая оценка пользы снимка; остальное относится к оптимизации или контролю.",
-        "uz": "Asoslash — snimok bemorga foyda keltirishini oldindan klinik baholashdir; qolganlari optimallashtirish yoki nazorat."
+        "uz": "Asoslash — rentgenogramma bemorga foyda keltirishini oldindan klinik baholashdir; qolganlari optimallashtirish yoki nazorat."
       }
     },
     {
       "q": {
         "en": "Which measure most effectively reduces patient dose in intraoral radiography?",
         "ru": "Какая мера наиболее эффективно снижает дозу пациента при внутриротовом снимке?",
-        "uz": "Qaysi chora intraoral snimokda bemor dozasini eng samarali kamaytiradi?"
+        "uz": "Qaysi chora intraoral rentgenogrammada bemor dozasini eng samarali kamaytiradi?"
       },
       "options": [
         {
@@ -733,7 +733,7 @@
         {
           "en": "Slow-speed film",
           "ru": "Низкочувствительная плёнка",
-          "uz": "Sekin plyonka"
+          "uz": "Kam sezgir plyonka"
         },
         {
           "en": "Rectangular collimation",
@@ -758,7 +758,7 @@
         {
           "en": "Behind the patient in line with the beam",
           "ru": "За пациентом по ходу пучка",
-          "uz": "Bemorning orqasida, dasta yo‘nalishida"
+          "uz": "Bemorning orqasida, nur dastasi yo‘nalishida"
         },
         {
           "en": "Beside the patient holding the sensor",
@@ -768,7 +768,7 @@
         {
           "en": "Over 2 m away at 90–135° to the beam",
           "ru": "Дальше 2 м, под углом 90–135° к пучку",
-          "uz": "2 m dan uzoqda, dastaga 90–135° burchakda"
+          "uz": "2 m dan uzoqda, nur dastasiga 90–135° burchakda"
         },
         {
           "en": "1 m behind the tube head",
@@ -793,12 +793,12 @@
         {
           "en": "Take a justified periapical radiograph",
           "ru": "Сделать периапикальный снимок по показаниям",
-          "uz": "Ko‘rsatma bo‘yicha periapikal snimok olish"
+          "uz": "Ko‘rsatma bo‘yicha periapikal rentgenogramma olish"
         },
         {
           "en": "Avoid all radiographs until delivery",
           "ru": "Не делать снимков до родов",
-          "uz": "Tug‘ruqqacha snimok olmaslik"
+          "uz": "Tug‘ruqqacha rentgenogramma olmaslik"
         },
         {
           "en": "Perform CBCT only",
@@ -808,14 +808,14 @@
         {
           "en": "Extract without a radiograph",
           "ru": "Удалить зуб без снимка",
-          "uz": "Snimoksiz tishni olib tashlash"
+          "uz": "Rentgenogrammasiz tishni olib tashlash"
         }
       ],
       "correct": 0,
       "explain": {
         "en": "A justified dental radiograph gives negligible fetal dose; untreated infection is the greater risk.",
         "ru": "При обоснованном стоматологическом снимке доза на плод ничтожна; нелеченая инфекция опаснее.",
-        "uz": "Asoslangan stomatologik snimokda homila dozasi juda kichik; davolanmagan infeksiya kattaroq xavf."
+        "uz": "Asoslangan stomatologik rentgenogrammada homila dozasi juda kichik; davolanmagan infeksiya kattaroq xavf."
       }
     },
     {
@@ -892,7 +892,7 @@
       "q": {
         "en": "Why is a thyroid collar usually not used for a panoramic radiograph?",
         "ru": "Почему воротник для щитовидной железы обычно не используют при ОПТГ?",
-        "uz": "Panoramik snimokda qalqonsimon bez yoqasi nima uchun odatda qo‘llanmaydi?"
+        "uz": "Panoramik rentgenogrammada qalqonsimon bez yoqasi nima uchun odatda qo‘llanmaydi?"
       },
       "options": [
         {
@@ -908,7 +908,7 @@
         {
           "en": "It blocks the beam and spoils the image",
           "ru": "Воротник перекрывает пучок и портит снимок",
-          "uz": "Yoqa dastani to‘sib tasvirni buzadi"
+          "uz": "Yoqa nur dastasini to‘sib tasvirni buzadi"
         },
         {
           "en": "Patients refuse it",
@@ -920,14 +920,14 @@
       "explain": {
         "en": "The panoramic beam angles upward, so a collar would cover part of the jaws.",
         "ru": "Пучок ОПТГ идёт снизу вверх, и воротник закрывает область челюсти.",
-        "uz": "Panoramik dasta pastdan yuqoriga qiya yo‘naladi va yoqa jag‘ sohasini yopib qo‘yadi."
+        "uz": "Panoramik nur dastasi pastdan yuqoriga qiya yo‘naladi va yoqa jag‘ sohasini yopib qo‘yadi."
       }
     },
     {
       "q": {
         "en": "A correct digital image is retaken just 'to be sharper'. Which principle does this breach?",
         "ru": "Просят повторить правильный цифровой снимок «для чёткости». Какому принципу это противоречит?",
-        "uz": "Raqamli sensor bilan to‘g‘ri olingan snimokni yana bir bor «aniqroq» qilish uchun qayta olish so‘raldi. Bu qaysi tamoyilga zid?"
+        "uz": "Raqamli sensor bilan to‘g‘ri olingan rentgenogrammani yana bir bor «aniqroq» qilish uchun qayta olish so‘raldi. Bu qaysi tamoyilga zid?"
       },
       "options": [
         {

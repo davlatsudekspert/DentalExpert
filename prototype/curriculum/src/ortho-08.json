@@ -19,7 +19,7 @@
     {
       "en": "Compare the pros and cons of retainer types",
       "ru": "Сравнивать преимущества и недостатки разных ретейнеров",
-      "uz": "Retenyer turlarining afzallik va kamchiliklarini taqqoslay olish"
+      "uz": "Retayner turlarining afzallik va kamchiliklarini taqqoslay olish"
     },
     {
       "en": "Plan retention and explain it to the patient",
@@ -255,7 +255,7 @@
       "title": {
         "en": "Types of retainer",
         "ru": "Виды ретейнеров",
-        "uz": "Retenyer turlari"
+        "uz": "Retayner turlari"
       },
       "head": [
         {
@@ -279,7 +279,7 @@
           {
             "en": "Hawley retainer",
             "ru": "Ретейнер Хаули",
-            "uz": "Hawley retenyeri"
+            "uz": "Hawley retayneri"
           },
           {
             "en": "Durable, allows settling",
@@ -296,7 +296,7 @@
           {
             "en": "Vacuum-formed clear retainer",
             "ru": "Вакуумформованный прозрачный ретейнер",
-            "uz": "Vakuumda shakllangan shaffof retenyer"
+            "uz": "Vakuumda shakllangan shaffof retayner"
           },
           {
             "en": "Aesthetic, cheap, quick to make",
@@ -313,7 +313,7 @@
           {
             "en": "Bonded lingual retainer",
             "ru": "Несъёмный лингвальный ретейнер",
-            "uz": "Yopishtirilgan til retenyeri"
+            "uz": "Yopishtirilgan til retayneri"
           },
           {
             "en": "No reliance on compliance",
@@ -415,7 +415,7 @@
           "detail": {
             "en": "Fit retainers promptly",
             "ru": "Ретейнеры устанавливают сразу",
-            "uz": "Retenyerlar tez orada kiydiriladi"
+            "uz": "Retaynerlar tez orada kiydiriladi"
           }
         },
         {
@@ -487,7 +487,7 @@
         {
           "en": "Fixed retainer after diastema closure",
           "ru": "Несъёмный ретейнер после закрытия диастемы",
-          "uz": "Diastema yopilgandan keyin qo‘zg‘almas retenyer"
+          "uz": "Diastema yopilgandan keyin qo‘zg‘almas retayner"
         }
       ]
     },
@@ -507,7 +507,7 @@
         {
           "en": "Bring retainers to every visit",
           "ru": "Приносите ретейнер на каждый визит",
-          "uz": "Retenyerni har tashrifga olib keling"
+          "uz": "Retaynerni har tashrifga olib keling"
         },
         {
           "en": "Report loss or breakage at once",
@@ -517,7 +517,7 @@
         {
           "en": "Clean fixed retainers with floss threaders",
           "ru": "Чистите несъёмный ретейнер с помощью нити-продевателя",
-          "uz": "Qo‘zg‘almas retenyer atrofini maxsus ip bilan tozalang"
+          "uz": "Qo‘zg‘almas retayner atrofini maxsus ip bilan tozalang"
         }
       ],
       "note": {
@@ -547,7 +547,7 @@
         {
           "en": "Choose the retainer to suit the patient",
           "ru": "Тип ретейнера выбирают индивидуально",
-          "uz": "Retenyer turi bemorga qarab tanlanadi"
+          "uz": "Retayner turi bemorga qarab tanlanadi"
         },
         {
           "en": "Long-term retention is widely advised",
@@ -591,7 +591,7 @@
       "q": {
         "en": "Compare the types of retainer.",
         "ru": "Сравните виды ретейнеров.",
-        "uz": "Retenyer turlarini taqqoslang."
+        "uz": "Retayner turlarini taqqoslang."
       },
       "plan": [
         {
@@ -715,23 +715,23 @@
       "q": {
         "en": "Which retainer does not depend on patient compliance?",
         "ru": "Какой ретейнер не зависит от того, носит ли его пациент?",
-        "uz": "Qaysi retenyer bemorning taqishiga bog‘liq emas?"
+        "uz": "Qaysi retayner bemorning taqishiga bog‘liq emas?"
       },
       "options": [
         {
           "en": "Hawley retainer",
           "ru": "Ретейнер Хаули",
-          "uz": "Hawley retenyeri"
+          "uz": "Hawley retayneri"
         },
         {
           "en": "Bonded lingual retainer",
           "ru": "Несъёмный лингвальный ретейнер",
-          "uz": "Yopishtirilgan til retenyeri"
+          "uz": "Yopishtirilgan til retayneri"
         },
         {
           "en": "Vacuum-formed retainer",
           "ru": "Вакуумформованный ретейнер",
-          "uz": "Vakuumda shakllangan retenyer"
+          "uz": "Vakuumda shakllangan retayner"
         },
         {
           "en": "Functional appliance",
@@ -743,7 +743,7 @@
       "explain": {
         "en": "A bonded retainer is fixed to the teeth, so it works regardless of compliance.",
         "ru": "Несъёмный ретейнер приклеен к зубам и работает независимо от желания пациента.",
-        "uz": "Yopishtirilgan retenyer tishlarga mahkamlangan, shuning uchun u bemorning xohishidan qat’i nazar ishlaydi."
+        "uz": "Yopishtirilgan retayner tishlarga mahkamlangan, shuning uchun u bemorning xohishidan qat’i nazar ishlaydi."
       }
     },
     {
@@ -778,7 +778,7 @@
       "explain": {
         "en": "The periodontal ligament reorganises in about 3–4 months, so retainers are worn more in the early phase.",
         "ru": "Волокна периодонта перестраиваются обычно за 3–4 месяца, поэтому в начальный период ретейнер носят дольше.",
-        "uz": "Periodont tolalari odatda 3–4 oyda qayta tuziladi; shuning uchun dastlabki davrda retenyer ko‘proq taqiladi."
+        "uz": "Periodont tolalari odatda 3–4 oyda qayta tuziladi; shuning uchun dastlabki davrda retayner ko‘proq taqiladi."
       }
     },
     {
@@ -855,7 +855,7 @@
       "q": {
         "en": "A patient's bonded retainer has come off one tooth. What should be done?",
         "ru": "У пациента несъёмный ретейнер отклеился от одного зуба. Правильная тактика?",
-        "uz": "Bemorning yopishtirilgan retenyeri bitta tishdan ajralib qolgan. To‘g‘ri tadbir qaysi?"
+        "uz": "Bemorning yopishtirilgan retayneri bitta tishdan ajralib qolgan. To‘g‘ri tadbir qaysi?"
       },
       "options": [
         {
@@ -883,25 +883,25 @@
       "explain": {
         "en": "The detached tooth can move, so the retainer is rebonded or replaced promptly.",
         "ru": "Зуб в отклеившемся участке может сместиться, поэтому ретейнер быстро приклеивают заново или заменяют.",
-        "uz": "Ajralgan qismdagi tish siljishi mumkin, shuning uchun retenyer tez qayta yopishtiriladi yoki almashtiriladi."
+        "uz": "Ajralgan qismdagi tish siljishi mumkin, shuning uchun retayner tez qayta yopishtiriladi yoki almashtiriladi."
       }
     },
     {
       "q": {
         "en": "Which retainer allows the teeth to settle into occlusion?",
         "ru": "Какой ретейнер позволяет зубам «доустановиться» в окклюзии?",
-        "uz": "Qaysi retenyer tishlarning biroz o‘tirishiga (settling) imkon beradi?"
+        "uz": "Qaysi retayner tishlarning biroz o‘tirishiga (settling) imkon beradi?"
       },
       "options": [
         {
           "en": "Hawley retainer",
           "ru": "Ретейнер Хаули",
-          "uz": "Hawley retenyeri"
+          "uz": "Hawley retayneri"
         },
         {
           "en": "Vacuum-formed retainer",
           "ru": "Вакуумформованный ретейнер",
-          "uz": "Vakuumda shakllangan retenyer"
+          "uz": "Vakuumda shakllangan retayner"
         },
         {
           "en": "A full-coverage splint",
@@ -918,7 +918,7 @@
       "explain": {
         "en": "A Hawley retainer leaves occlusal surfaces free, so the teeth can settle together.",
         "ru": "Ретейнер Хаули не покрывает окклюзионные поверхности, поэтому зубы могут доустановиться в смыкании.",
-        "uz": "Hawley retenyeri okklyuzion yuzalarni qoplamaydi, shuning uchun tishlar tutashuvga o‘tira oladi."
+        "uz": "Hawley retayneri okklyuzion yuzalarni qoplamaydi, shuning uchun tishlar tutashuvga o‘tira oladi."
       }
     },
     {
@@ -960,7 +960,7 @@
       "q": {
         "en": "What is the main drawback of a clear vacuum-formed retainer?",
         "ru": "Каков главный недостаток прозрачного вакуумформованного ретейнера?",
-        "uz": "Shaffof vakuum retenyerning asosiy kamchiligi qaysi?"
+        "uz": "Shaffof vakuum retaynerning asosiy kamchiligi qaysi?"
       },
       "options": [
         {
@@ -988,7 +988,7 @@
       "explain": {
         "en": "A clear retainer is aesthetic and cheap but wears and can crack over time.",
         "ru": "Прозрачный ретейнер эстетичен и недорог, но со временем изнашивается и может трескаться.",
-        "uz": "Shaffof retenyer estetik va arzon, lekin vaqt o‘tishi bilan yeyiladi va yorilishi mumkin."
+        "uz": "Shaffof retayner estetik va arzon, lekin vaqt o‘tishi bilan yeyiladi va yorilishi mumkin."
       }
     },
     {
@@ -1006,7 +1006,7 @@
         {
           "en": "Only Hawley retainers work",
           "ru": "Работает только ретейнер Хаули",
-          "uz": "Faqat Hawley retenyeri ishlaydi"
+          "uz": "Faqat Hawley retayneri ishlaydi"
         },
         {
           "en": "One month of retention is enough",
@@ -1023,7 +1023,7 @@
       "explain": {
         "en": "The review found too little high-quality evidence to declare one retention method clearly best.",
         "ru": "Обзор отметил нехватку качественных данных, чтобы однозначно выбрать лучший тип ретенции.",
-        "uz": "Sharh turli retenyerlar orasida qat’iy ustunlikni ko‘rsatish uchun yuqori sifatli dalillar kamligini qayd etgan."
+        "uz": "Sharh turli retaynerlar orasida qat’iy ustunlikni ko‘rsatish uchun yuqori sifatli dalillar kamligini qayd etgan."
       }
     }
   ]

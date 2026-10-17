@@ -8,7 +8,7 @@
   "title": {
     "en": "Development of occlusion from primary to permanent dentition",
     "ru": "Развитие окклюзии от временного до постоянного прикуса",
-    "uz": "Sut tishlovidan doimiy tishlovgacha okklyuziyaning rivojlanishi"
+    "uz": "Sut tishlamidan doimiy tishlamgacha okklyuziyaning rivojlanishi"
   },
   "goals": [
     {
@@ -19,7 +19,7 @@
     {
       "en": "Describe the normal features of the primary dentition",
       "ru": "Описывать нормальные признаки временного прикуса",
-      "uz": "Sut tishlovining me’yoriy belgilarini tasvirlay olish"
+      "uz": "Sut tishlamining me’yoriy belgilarini tasvirlay olish"
     },
     {
       "en": "Explain terminal planes, primate spaces and leeway space",
@@ -52,7 +52,7 @@
       "subtitle": {
         "en": "From gum pads to the permanent dentition",
         "ru": "От десневых валиков до постоянного прикуса",
-        "uz": "Milk valiklaridan doimiy tishlovgacha"
+        "uz": "Milk valiklaridan doimiy tishlamgacha"
       }
     },
     {
@@ -84,7 +84,7 @@
           "label": {
             "en": "Primary dentition complete",
             "ru": "Временный прикус сформирован",
-            "uz": "Sut tishlovi to‘liq"
+            "uz": "Sut tishlami to‘liq"
           }
         },
         {
@@ -159,7 +159,7 @@
       "title": {
         "en": "The normal primary dentition",
         "ru": "Нормальный временный прикус",
-        "uz": "Me’yoriy sut tishlovi"
+        "uz": "Me’yoriy sut tishlami"
       },
       "bullets": [
         {
@@ -180,13 +180,13 @@
         {
           "en": "A closed dentition raises the risk of crowding",
           "ru": "Прикус без трем повышает риск скученности",
-          "uz": "Oraliqsiz tishlov keyin qisilish xavfini oshiradi"
+          "uz": "Oraliqsiz tishlam keyin qisilish xavfini oshiradi"
         }
       ],
       "note": {
         "en": "Stress that a primary dentition without spaces may predict crowding of permanent teeth.",
         "ru": "Подчеркните, что временный прикус без трем может предвещать скученность постоянных зубов.",
-        "uz": "Oraliqlari yo‘q sut tishlovi keyinchalik doimiy tishlar qisilishiga ishora qilishi mumkinligini ta’kidlang."
+        "uz": "Oraliqlari yo‘q sut tishlami keyinchalik doimiy tishlar qisilishiga ishora qilishi mumkinligini ta’kidlang."
       }
     },
     {
@@ -466,7 +466,7 @@
         {
           "en": "Spacing in the primary dentition is normal",
           "ru": "Тремы во временном прикусе – норма",
-          "uz": "Sut tishlovida oraliqlar me’yor hisoblanadi"
+          "uz": "Sut tishlamida oraliqlar me’yor hisoblanadi"
         },
         {
           "en": "The terminal plane predicts the molar class",
@@ -491,7 +491,7 @@
       "q": {
         "en": "Describe the features of a normal primary dentition.",
         "ru": "Назовите признаки нормального временного прикуса.",
-        "uz": "Me’yoriy sut tishlovining belgilarini ayting."
+        "uz": "Me’yoriy sut tishlamining belgilarini ayting."
       },
       "plan": [
         {
@@ -512,7 +512,7 @@
         {
           "en": "No spacing suggests later crowding",
           "ru": "Прикус без трем – риск скученности",
-          "uz": "Oraliqsiz tishlov – qisilish xavfi"
+          "uz": "Oraliqsiz tishlam – qisilish xavfi"
         }
       ]
     },
@@ -779,7 +779,7 @@
       "q": {
         "en": "What may a primary dentition with no spacing predict?",
         "ru": "Что может предвещать временный прикус без трем?",
-        "uz": "Oraliqlari yo‘q sut tishlovi nimani bashorat qiladi?"
+        "uz": "Oraliqlari yo‘q sut tishlami nimani bashorat qiladi?"
       },
       "options": [
         {
@@ -800,7 +800,7 @@
         {
           "en": "An anterior open bite",
           "ru": "Открытый прикус",
-          "uz": "Old ochiq tishlov"
+          "uz": "Old ochiq tishlam"
         }
       ],
       "correct": 2,
@@ -877,7 +877,7 @@
       "explain": {
         "en": "Room comes from primary spacing, an increase in intercanine width and more labial incisor positioning.",
         "ru": "Место обеспечивают тремы, увеличение межклыковой ширины и вестибулярное положение постоянных резцов.",
-        "uz": "Joy sut tishlovidagi oraliqlar, qoziqlararo kenglikning ortishi va kesuvchilarning lab tomonga joylashishi hisobiga topiladi."
+        "uz": "Joy sut tishlamidagi oraliqlar, qoziqlararo kenglikning ortishi va kesuvchilarning lab tomonga joylashishi hisobiga topiladi."
       }
     },
     {
@@ -912,7 +912,7 @@
       "explain": {
         "en": "Second permanent molars usually erupt at 12–13 years, completing the permanent dentition apart from third molars.",
         "ru": "Вторые постоянные моляры обычно прорезываются в 12–13 лет, завершая постоянный прикус (без третьих моляров).",
-        "uz": "Ikkinchi doimiy molyarlar odatda 12–13 yoshda chiqib, doimiy tishlovni (aql tishlarisiz) yakunlaydi."
+        "uz": "Ikkinchi doimiy molyarlar odatda 12–13 yoshda chiqib, doimiy tishlamni (aql tishlarisiz) yakunlaydi."
       }
     },
     {

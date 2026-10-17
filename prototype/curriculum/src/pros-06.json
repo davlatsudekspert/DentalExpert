@@ -326,7 +326,7 @@
           {
             "en": "Premolars, molars",
             "ru": "Премоляры, моляры",
-            "uz": "Premolyarlar, moziq tishlar"
+            "uz": "Premolyarlar, katta oziq tishlar"
           },
           {
             "en": "Most common",
@@ -343,7 +343,7 @@
           {
             "en": "Canines, upper incisors",
             "ru": "Клыки, верхние резцы",
-            "uz": "Qoziq tishlar, yuqori kesuvlar"
+            "uz": "Qoziq tishlar, yuqori kesuvchilar"
           },
           {
             "en": "Load near the root axis",
@@ -606,7 +606,7 @@
         {
           "en": "Planned future replacement of incisors",
           "ru": "Планируемое замещение резцов в будущем",
-          "uz": "Kelajakda kesuv tishlarni tiklash rejasi"
+          "uz": "Kelajakda kesuvchi tishlarni tiklash rejasi"
         },
         {
           "en": "Need for indirect retention",
@@ -749,7 +749,7 @@
       "q": {
         "en": "A patient has a very shallow floor of mouth and mobile lower incisors. The mandibular major connector of choice is:",
         "ru": "У пациента очень мелкое дно полости рта и подвижные нижние резцы. Выбор большого соединителя нижней челюсти:",
-        "uz": "Bemorda og‘iz tubi juda sayoz va pastki kesuv tishlar qimirlaydi. Pastki jag‘ asosiy birlashtiruvchisi qaysi?"
+        "uz": "Bemorda og‘iz tubi juda sayoz va pastki kesuvchi tishlar qimirlaydi. Pastki jag‘ asosiy birlashtiruvchisi qaysi?"
       },
       "options": [
         {

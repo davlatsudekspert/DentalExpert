@@ -125,7 +125,7 @@
             {
               "en": "Visible plaque",
               "ru": "Видимый налёт",
-              "uz": "Ko‘rinadigan blyashka"
+              "uz": "Ko‘rinadigan karash"
             },
             {
               "en": "Caries in mother or caregiver",
@@ -203,7 +203,7 @@
           "label": {
             "en": "Acid forms in plaque",
             "ru": "Образование кислоты в налёте",
-            "uz": "Blyashkada kislota hosil bo‘ladi"
+            "uz": "Karashda kislota hosil bo‘ladi"
           }
         },
         {
@@ -378,7 +378,7 @@
           },
           {
             "en": "Twice daily, rice-grain fluoride paste",
-            "ru": "2 раза в день, паста с рисовое зерно",
+            "ru": "2 раза в день, паста размером с рисовое зерно",
             "uz": "Kuniga 2 marta, guruch donasicha ftorli pasta"
           },
           {
@@ -395,7 +395,7 @@
           },
           {
             "en": "Parent brushes, rice-grain paste",
-            "ru": "Родители чистят зубы, паста с рисовое зерно",
+            "ru": "Родители чистят зубы, паста размером с рисовое зерно",
             "uz": "Ota-ona tishlarni yuvadi, guruch donasicha pasta"
           },
           {
@@ -412,7 +412,7 @@
           },
           {
             "en": "Supervised, pea-size paste, spit without rinsing",
-            "ru": "Под контролем, паста с горошину, сплюнуть без полоскания",
+            "ru": "Под контролем, паста размером с горошину, сплюнуть без полоскания",
             "uz": "Nazorat ostida, no‘xat donasicha pasta, chayqamasdan tupurish"
           },
           {
@@ -424,7 +424,7 @@
       ],
       "note": {
         "en": "Show the toothpaste amounts as a rice grain and a pea; fluoride at least 1000 ppm.",
-        "ru": "Покажите количество пасты – с рисовое зерно и с горошину; концентрация фтора не менее 1000 ppm.",
+        "ru": "Покажите количество пасты – размером с рисовое зерно и размером с горошину; концентрация фтора не менее 1000 ppm.",
         "uz": "Tish pastasi miqdorini guruch donasi va no‘xat donasi bilan ko‘rsating; ftor konsentratsiyasi kamida 1000 ppm."
       }
     },
@@ -469,7 +469,7 @@
           "detail": {
             "en": "ART, glass ionomer, Hall crowns",
             "ru": "ART, СИЦ, коронки по методу Холла",
-            "uz": "ART, shisha-ionomer, Hall qoplamasi"
+            "uz": "ART, shisha-ionomer, Hall koronkasi"
           }
         },
         {
@@ -604,7 +604,7 @@
         {
           "en": "Plaque and transfer of bacteria from caregivers",
           "ru": "Налёт и передача бактерий от ухаживающего",
-          "uz": "Blyashka va parvarishchidan mikrob o‘tishi"
+          "uz": "Karash va parvarishchidan mikrob o‘tishi"
         },
         {
           "en": "Enamel defects, low fluoride",
@@ -662,7 +662,7 @@
         {
           "en": "Restore with glass ionomer, ART or Hall crowns",
           "ru": "Реставрация: СИЦ, ART, коронки по Холлу",
-          "uz": "Restavratsiya: shisha-ionomer, ART, Hall qoplamasi"
+          "uz": "Restavratsiya: shisha-ionomer, ART, Hall koronkasi"
         },
         {
           "en": "General anaesthesia if severe, frequent recall",
@@ -775,7 +775,7 @@
       "explain": {
         "en": "Each sugar intake drops plaque pH, so frequency is decisive.",
         "ru": "Каждый приём сахара снижает pH налёта, поэтому решающее значение имеет частота.",
-        "uz": "Har bir shakar qabul qilish blyashkada pH tushishiga olib keladi, shuning uchun chastota hal qiluvchi ahamiyatga ega."
+        "uz": "Har bir shakar qabul qilish karashda pH tushishiga olib keladi, shuning uchun chastota hal qiluvchi ahamiyatga ega."
       }
     },
     {
@@ -787,7 +787,7 @@
       "options": [
         {
           "en": "A pea-sized amount",
-          "ru": "С горошину",
+          "ru": "Размером с горошину",
           "uz": "No‘xat donasicha"
         },
         {
@@ -802,14 +802,14 @@
         },
         {
           "en": "A rice-grain smear",
-          "ru": "С рисовое зерно",
+          "ru": "Размером с рисовое зерно",
           "uz": "Guruch donasicha"
         }
       ],
       "correct": 3,
       "explain": {
         "en": "A rice-grain smear is advised under 3 years and a pea-sized amount at 3–6 years.",
-        "ru": "До 3 лет рекомендуют пасту с рисовое зерно, в 3–6 лет – с горошину.",
+        "ru": "До 3 лет рекомендуют пасту размером с рисовое зерно, в 3–6 лет – размером с горошину.",
         "uz": "3 yoshgacha guruch donasicha, 3–6 yoshda no‘xat donasicha ftorli pasta tavsiya etiladi."
       }
     },

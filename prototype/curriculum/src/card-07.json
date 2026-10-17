@@ -8,7 +8,7 @@
   "title": {
     "en": "Non-carious lesions: erosion, abrasion, fluorosis and others",
     "ru": "Некариозные поражения: эрозия, абразия, флюороз и др.",
-    "uz": "Kariesdan tashqari kasalliklar: eroziya, abraziya, flyuoroz va boshq."
+    "uz": "Kariesdan tashqari kasalliklar: eroziya, abraziya, flyuoroz va boshqalar"
   },
   "goals": [
     {
@@ -756,7 +756,7 @@
       "explain": {
         "en": "Erosion is chemical dissolution by non-bacterial acid; in caries plaque bacteria make the acid.",
         "ru": "Эрозия — химическое растворение небактериальными кислотами; при кариесе кислоту образуют бактерии налёта.",
-        "uz": "Eroziya — bakterial bo‘lmagan kislotalar ta’sirida kimyoviy erish; kariesda kislota blyashka bakteriyalaridan keladi."
+        "uz": "Eroziya — bakterial bo‘lmagan kislotalar ta’sirida kimyoviy erish; kariesda kislota karash bakteriyalaridan keladi."
       }
     },
     {

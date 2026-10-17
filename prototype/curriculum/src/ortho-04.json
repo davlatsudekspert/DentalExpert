@@ -8,13 +8,13 @@
   "title": {
     "en": "Aetiology of malocclusion: genetic and environmental factors, oral habits",
     "ru": "Этиология аномалий прикуса: наследственные и внешние факторы, вредные привычки",
-    "uz": "Tishlov anomaliyalarining etiologiyasi: irsiy va tashqi omillar, zararli odatlar"
+    "uz": "Tishlam anomaliyalarining etiologiyasi: irsiy va tashqi omillar, zararli odatlar"
   },
   "goals": [
     {
       "en": "Distinguish genetic from environmental causes of malocclusion",
       "ru": "Различать наследственные и внешние причины аномалий прикуса",
-      "uz": "Tishlov anomaliyalarining irsiy va tashqi sabablarini farqlay olish"
+      "uz": "Tishlam anomaliyalarining irsiy va tashqi sabablarini farqlay olish"
     },
     {
       "en": "Explain the equilibrium theory",
@@ -43,7 +43,7 @@
       "title": {
         "en": "Causes of malocclusion",
         "ru": "Причины аномалий прикуса",
-        "uz": "Tishlov anomaliyalarining sabablari"
+        "uz": "Tishlam anomaliyalarining sabablari"
       },
       "subtitle": {
         "en": "Genes, environment, habits and local factors",
@@ -61,7 +61,7 @@
       "root": {
         "en": "Malocclusion",
         "ru": "Аномалия прикуса",
-        "uz": "Tishlov anomaliyasi"
+        "uz": "Tishlam anomaliyasi"
       },
       "children": [
         {
@@ -296,7 +296,7 @@
           {
             "en": "Anterior open bite",
             "ru": "Передний открытый прикус",
-            "uz": "Old ochiq tishlov"
+            "uz": "Old ochiq tishlam"
           },
           {
             "en": "Incisor eruption is blocked",
@@ -308,7 +308,7 @@
           {
             "en": "Posterior crossbite",
             "ru": "Боковой перекрёстный прикус",
-            "uz": "Yon kesishgan tishlov"
+            "uz": "Yon kesishgan tishlam"
           },
           {
             "en": "Cheek pressure and low tongue narrow the maxilla",
@@ -585,7 +585,7 @@
       "q": {
         "en": "List the main aetiological factors in malocclusion.",
         "ru": "Назовите основные этиологические факторы аномалий прикуса.",
-        "uz": "Tishlov anomaliyalarining asosiy etiologik omillarini ayting."
+        "uz": "Tishlam anomaliyalarining asosiy etiologik omillarini ayting."
       },
       "plan": [
         {
@@ -654,12 +654,12 @@
         {
           "en": "Anterior open bite, often asymmetric",
           "ru": "Передний открытый прикус, часто асимметричный",
-          "uz": "Old ochiq tishlov, ko‘pincha asimmetrik"
+          "uz": "Old ochiq tishlam, ko‘pincha asimmetrik"
         },
         {
           "en": "Narrow maxilla and posterior crossbite",
           "ru": "Сужение верхней челюсти и перекрёстный прикус",
-          "uz": "Yuqori jag‘ torayishi va yon kesishgan tishlov"
+          "uz": "Yuqori jag‘ torayishi va yon kesishgan tishlam"
         },
         {
           "en": "Effect depends on hours per day",
@@ -744,7 +744,7 @@
         {
           "en": "Deep overbite",
           "ru": "Глубокий прикус",
-          "uz": "Chuqur tishlov"
+          "uz": "Chuqur tishlam"
         },
         {
           "en": "Class III molars",
@@ -754,7 +754,7 @@
         {
           "en": "Anterior open bite",
           "ru": "Передний открытый прикус",
-          "uz": "Old ochiq tishlov"
+          "uz": "Old ochiq tishlam"
         },
         {
           "en": "Proclined lower incisors",
@@ -766,14 +766,14 @@
       "explain": {
         "en": "The digit blocks incisor eruption, often producing an asymmetric anterior open bite.",
         "ru": "Палец препятствует прорезыванию резцов и часто формирует асимметричный передний открытый прикус.",
-        "uz": "Barmoq kesuvchilar chiqishiga to‘sqinlik qilib, ko‘pincha asimmetrik old ochiq tishlov hosil qiladi."
+        "uz": "Barmoq kesuvchilar chiqishiga to‘sqinlik qilib, ko‘pincha asimmetrik old ochiq tishlam hosil qiladi."
       }
     },
     {
       "q": {
         "en": "Why does digit sucking cause a posterior crossbite?",
         "ru": "Почему при сосании пальца возникает боковой перекрёстный прикус?",
-        "uz": "Barmoq so‘rishda yon kesishgan tishlov nima sababdan paydo bo‘ladi?"
+        "uz": "Barmoq so‘rishda yon kesishgan tishlam nima sababdan paydo bo‘ladi?"
       },
       "options": [
         {
@@ -814,7 +814,7 @@
         {
           "en": "Open bite from thumb sucking",
           "ru": "Открытый прикус от сосания пальца",
-          "uz": "Barmoq so‘rishdan ochiq tishlov"
+          "uz": "Barmoq so‘rishdan ochiq tishlam"
         },
         {
           "en": "Space loss after extraction",
@@ -954,7 +954,7 @@
         {
           "en": "The main cause of open bite",
           "ru": "Главная причина открытого прикуса",
-          "uz": "Ochiq tishlovning asosiy sababi"
+          "uz": "Ochiq tishlamning asosiy sababi"
         },
         {
           "en": "The cause of Class III",
@@ -969,7 +969,7 @@
         {
           "en": "Usually an adaptation to an existing open bite",
           "ru": "Чаще адаптация к уже имеющемуся открытому прикусу",
-          "uz": "Ko‘pincha mavjud ochiq tishlovga moslashuv"
+          "uz": "Ko‘pincha mavjud ochiq tishlamga moslashuv"
         }
       ],
       "correct": 3,
@@ -999,7 +999,7 @@
         {
           "en": "Posterior crossbite",
           "ru": "Боковой перекрёстный прикус",
-          "uz": "Yon kesishgan tishlov"
+          "uz": "Yon kesishgan tishlam"
         },
         {
           "en": "Molar ankylosis",

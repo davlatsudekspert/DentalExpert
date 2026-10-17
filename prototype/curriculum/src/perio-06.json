@@ -377,7 +377,7 @@
         {
           "en": "Full-mouth or quadrant approach: both acceptable",
           "ru": "Одномоментно или по квадрантам: оба подхода приемлемы",
-          "uz": "Bir vaqtda yoki chorak bo‘yicha: ikkalasi ham maqbul"
+          "uz": "Bir vaqtda yoki kvadrant bo‘yicha: ikkalasi ham maqbul"
         },
         {
           "en": "Systemic antibiotics not used routinely",
@@ -637,7 +637,7 @@
         {
           "en": "Full-mouth or quadrant delivery both acceptable",
           "ru": "Одномоментно или по квадрантам — оба варианта приемлемы",
-          "uz": "Bir vaqtda yoki chorak bo‘yicha — ikkalasi maqbul"
+          "uz": "Bir vaqtda yoki kvadrant bo‘yicha — ikkalasi maqbul"
         }
       ]
     },
@@ -734,7 +734,7 @@
     {
       "q": {
         "en": "For subgingival instrumentation, hand instruments compared with sonic or ultrasonic instruments are:",
-        "ru": "При поддесневой обработке ручные инструменты по сравнению с звуковыми и ультразвуковыми:",
+        "ru": "При поддесневой обработке ручные инструменты по сравнению со звуковыми и ультразвуковыми:",
         "uz": "Milk osti ishlovda qo‘l asboblari tovushli va ultratovushli asboblarga nisbatan:"
       },
       "options": [
@@ -840,7 +840,7 @@
       "q": {
         "en": "Full-mouth instrumentation within 24 hours compared with quadrant-wise treatment is:",
         "ru": "Обработка всей полости рта за 24 часа по сравнению с обработкой по квадрантам:",
-        "uz": "24 soat ichida butun og‘izga ishlov berish chorak bo‘yicha davolashga nisbatan:"
+        "uz": "24 soat ichida butun og‘izga ishlov berish kvadrant bo‘yicha davolashga nisbatan:"
       },
       "options": [
         {
@@ -960,7 +960,7 @@
         },
         {
           "en": "Swelling resolved, causing some recession",
-          "ru": "Отёк спал, что дало некоторую рецессию",
+          "ru": "Отёк спал, и появилась небольшая рецессия",
           "uz": "Shish qaytdi va biroz retsessiya yuzaga keldi"
         },
         {
@@ -1014,7 +1014,7 @@
     {
       "q": {
         "en": "At re-evaluation a site has PD 7 mm with BOP despite good hygiene. The next step is usually:",
-        "ru": "При повторной оценке в участке 7 мм с кровоточивостью при хорошей гигиене. Обычно следующий шаг:",
+        "ru": "При повторной оценке, несмотря на хорошую гигиену, в участке остаётся кровоточащий карман 7 мм. Обычно следующий шаг:",
         "uz": "Qayta baholashda gigiyena yaxshi bo‘lsa ham nuqtada qonashli 7 mm cho‘ntak bor. Odatda keyingi qadam:"
       },
       "options": [

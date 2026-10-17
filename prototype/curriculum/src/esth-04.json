@@ -63,7 +63,7 @@
       "definition": {
         "en": "Hydrogen peroxide diffuses through enamel and dentin and forms free radicals that break large coloured organic molecules (chromogens) into smaller, lighter ones. Carbamide peroxide breaks down into hydrogen peroxide and urea.",
         "ru": "Пероксид водорода диффундирует через эмаль и дентин и образует свободные радикалы, которые расщепляют крупные окрашенные органические молекулы (хромогены) на более мелкие и светлые. Пероксид карбамида распадается на пероксид водорода и мочевину.",
-        "uz": "Vodorod peroksid emal va dentin orqali diffuziyalanib, erkin radikallar hosil qiladi; ular yirik rangli organik molekulalarni (xromogenlarni) mayda va ochroq molekulalarga parchalaydi. Karbamid peroksid parchalanib vodorod peroksid va mochevina hosil qiladi."
+        "uz": "Vodorod peroksid emal va dentin orqali diffuziyalanib, erkin radikallar hosil qiladi; ular yirik rangli organik molekulalarni (xromogenlarni) mayda va ochroq molekulalarga parchalaydi. Karbamid peroksid parchalanib vodorod peroksid va karbamid hosil qiladi."
       },
       "note": {
         "en": "Stress that the active part of carbamide peroxide is hydrogen peroxide, roughly one third of its weight.",
@@ -299,7 +299,7 @@
             {
               "en": "Unrealistic expectations",
               "ru": "Нереалистичные ожидания",
-              "uz": "Real bo‘lmagan kutishlar"
+              "uz": "Haqiqatga to‘g‘ri kelmaydigan kutilmalar"
             }
           ]
         },
@@ -395,7 +395,7 @@
       "note": {
         "en": "Explain that residual oxygen reduces composite bond strength, which is why bonding is delayed.",
         "ru": "Объясните, что остаточный кислород снижает адгезию композита, поэтому фиксацию откладывают.",
-        "uz": "Qolgan kislorod kompozit adgeziyasini kamaytirishini, shu sabab bonding kechiktirilishini tushuntiring."
+        "uz": "Qolgan kislorod kompozit adgeziyasini kamaytirishini, shu sabab adgeziv bog‘lash kechiktirilishini tushuntiring."
       }
     },
     {
@@ -519,7 +519,7 @@
         {
           "en": "Restorations do not whiten; bonding is delayed",
           "ru": "Реставрации не отбеливаются, фиксацию откладывают",
-          "uz": "Restavratsiyalar oqarmaydi, bonding kechiktiriladi"
+          "uz": "Restavratsiyalar oqarmaydi, adgeziv bog‘lash kechiktiriladi"
         },
         {
           "en": "Contraindications are identified beforehand",
@@ -555,7 +555,7 @@
         {
           "en": "Carbamide peroxide yields hydrogen peroxide and urea",
           "ru": "Пероксид карбамида распадается на пероксид водорода и мочевину",
-          "uz": "Karbamid peroksid vodorod peroksid va mochevinaga parchalanadi"
+          "uz": "Karbamid peroksid vodorod peroksid va karbamidga parchalanadi"
         }
       ]
     },
@@ -642,7 +642,7 @@
         {
           "en": "Unrealistic expectations",
           "ru": "Нереалистичные ожидания",
-          "uz": "Real bo‘lmagan kutishlar"
+          "uz": "Haqiqatga to‘g‘ri kelmaydigan kutilmalar"
         }
       ]
     }
@@ -693,7 +693,7 @@
         {
           "en": "Hydrogen peroxide and urea",
           "ru": "Пероксид водорода и мочевину",
-          "uz": "Vodorod peroksid va mochevina"
+          "uz": "Vodorod peroksid va karbamid"
         },
         {
           "en": "Sodium perborate and water",
@@ -715,7 +715,7 @@
       "explain": {
         "en": "Carbamide peroxide yields hydrogen peroxide and urea; the peroxide is the active part.",
         "ru": "Пероксид карбамида распадается на пероксид водорода и мочевину; активен пероксид водорода.",
-        "uz": "Karbamid peroksid vodorod peroksid va mochevinaga parchalanadi; faol qismi vodorod peroksid."
+        "uz": "Karbamid peroksid vodorod peroksid va karbamidga parchalanadi; faol qismi vodorod peroksid."
       }
     },
     {

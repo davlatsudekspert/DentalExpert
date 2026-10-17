@@ -345,7 +345,7 @@
           "items": [
             {
               "en": "Low income or health literacy",
-              "ru": "Низкий доход или санитарная грамотность",
+              "ru": "Низкий доход или низкая санитарная грамотность",
               "uz": "Kam daromad yoki past tibbiy savodxonlik"
             },
             {
@@ -358,7 +358,7 @@
         {
           "label": {
             "en": "Protective",
-            "ru": "Защитные",
+            "ru": "Защитные факторы",
             "uz": "Himoya omillari"
           },
           "items": [
