@@ -70,16 +70,17 @@
 .anatomy-stage:has(.premium-turntable)>.anatomy-tag,.anatomy-stage:has(.premium-turntable)>.stage-caption{z-index:3}
 
 /* Five destinations with a raised atlas action; compact labels while scrolling. */
-.bottom-nav.five-tab-nav{z-index:20;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));align-items:end;gap:2px;margin:12px 12px 8px;padding:9px 7px 10px;min-height:70px;border:1px solid #36546e;border-radius:28px;background:linear-gradient(140deg,#152c4b,#0a1b35);box-shadow:0 13px 30px #0d28433d;transition:min-height .24s ease,padding .24s ease}
-.five-tab-nav button{min-height:49px;gap:4px;color:#d8e8f1;font-size:9px;transition:transform .2s ease,color .2s ease}
+.bottom-nav.five-tab-nav{z-index:20;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));align-items:end;gap:2px;margin:12px 12px 8px;padding:9px 7px 10px;min-height:70px;border:1px solid #cde8f0;border-radius:28px;background:linear-gradient(140deg,#fffffff5,#eaf8fcf5);box-shadow:0 13px 30px #1d71872b,inset 0 1px #fff;backdrop-filter:blur(18px);transition:min-height .24s ease,padding .24s ease}
+.five-tab-nav button{min-height:49px;gap:4px;color:#658596;font-size:9px;transition:transform .2s ease,color .2s ease}
 .five-tab-nav button:active{transform:scale(.9)}
-.five-tab-nav button.active{color:#f5d88a}
-.five-tab-nav button:focus-visible{outline:2px solid #f5d88a;outline-offset:2px;border-radius:14px}
+.five-tab-nav button.active{color:#008fa8}
+.five-tab-nav button:focus-visible{outline:2px solid #00a5b9;outline-offset:2px;border-radius:14px}
 .five-tab-nav .nav-icon{width:36px;height:30px;display:grid;place-items:center}
+.five-tab-nav button.active:not(.nav-featured) .nav-icon{border-radius:12px;background:#dff5f9}
 .five-tab-nav .nav-icon svg{width:23px;height:23px}
 .five-tab-nav .nav-label{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%;transition:opacity .2s ease,max-height .2s ease}
-.five-tab-nav .nav-featured{align-self:center;color:#f7de9d;transform:translateY(-7px)}
-.five-tab-nav .nav-featured .nav-icon{width:55px;height:55px;margin-top:-25px;border:2px solid #d5b96c;border-radius:50%;background:radial-gradient(circle at 35% 28%,#274e68,#102944 65%);box-shadow:0 6px 17px #020d21a8,0 0 0 5px #102641;transition:transform .2s ease}
+.five-tab-nav .nav-featured{align-self:center;color:#008fa8;transform:translateY(-7px)}
+.five-tab-nav .nav-featured .nav-icon{width:55px;height:55px;margin-top:-25px;border:2px solid #fff;border-radius:50%;background:linear-gradient(140deg,#36c4d0,#008fa8);color:#fff;box-shadow:0 7px 18px #088fa64d,0 0 0 5px #dff5fa;transition:transform .2s ease}
 .five-tab-nav .nav-featured .nav-icon svg{width:27px;height:27px}
 .five-tab-nav .nav-featured:active{transform:translateY(-7px) scale(.9)}
 .five-tab-nav.compact{min-height:49px;padding-top:5px;padding-bottom:5px}
