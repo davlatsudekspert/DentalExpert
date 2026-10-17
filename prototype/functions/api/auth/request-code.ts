@@ -10,6 +10,12 @@ export const onRequestPost:PagesFunction<Env>=async({request,env})=>{
  const email=normalizeEmail(body?.email);
  if(!email)return json({error:'invalid_email'},400,'no-store');
 
+ // Retention: spent or stale one-time codes and expired sessions are purged on every request (see the privacy policy).
+ await env.DB.batch([
+  env.DB.prepare(`DELETE FROM auth_codes WHERE created_at<datetime('now','-1 day')`),
+  env.DB.prepare(`DELETE FROM sessions WHERE expires_at<datetime('now')`)
+ ]);
+
  const ip=request.headers.get('cf-connecting-ip')||'local';
  const ipHash=await sha256(ip+env.AUTH_SECRET);
  const {results:[stats]}=await env.DB.prepare(
