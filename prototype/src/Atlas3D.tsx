@@ -7,27 +7,27 @@ import fallbackImage from '../assets/tooth3d/premium-reference-cutaway-ivory.web
 type LayerKey='enamel'|'dentin'|'pulp'|'vessels'|'root';
 
 const T={
- uz:{title:'3D tish atlasi',hint:'Aylantirish uchun suring · qatlamni bosing',explode:'Ajratish',assemble:'Yig‘ish',reset:'Boshlang‘ich',close:'Yopish',
-  layers:{enamel:['Emal','Tojni qoplaydigan eng qattiq to‘qima. Tirik hujayralari yo‘q, shuning uchun o‘zi tiklanmaydi.'],
+ uz:{title:'3D tish atlasi',hint:'Aylantirish uchun suring · qatlamni bosing',explode:'Ajratish',assemble:'Yig‘ish',reset:'Boshlang‘ich holat',close:'Yopish',
+  layers:{enamel:['Emal','Tojni qoplaydigan eng qattiq to‘qima. Tirik hujayralari yo‘q, shuning uchun yo‘qotilgan emal qayta o‘smaydi.'],
    dentin:['Dentin','Tishning asosiy qismi, emal va sement ostida. Mayda dentin kanalchalari bor.'],
    pulp:['Pulpa','Tish markazidagi yumshoq to‘qima: tishni oziqlantiradi va sezgi beradi.'],
-   vessels:['Qon tomirlar va nervlar','Qizil — arteriyalar (qon keltiradi), ko‘k — venalar (qon olib ketadi), sariq — nerv (sezgi).'],
-   root:['Ildiz','Ildiz yuzasi sement bilan qoplangan; boylamlar shunga birikib, tishni jag suyagiga ushlaydi.']},
+   vessels:['Qon tomirlari va nervlar','Qizil — arteriyalar (qon keltiradi), ko‘k — venalar (qon olib ketadi), sariq — nerv (sezgi).'],
+   root:['Ildiz','Ildiz yuzasi sement bilan qoplangan; unga periodont boylamlari birikib, tishni jag‘ suyagida ushlab turadi.']},
   note:'Ta’limiy tasvir: tomir va nervlar sxematik. Klinik ko‘rsatma emas.',nowebgl:'Bu qurilmada 3D ishlamadi. Rasmli atlas ko‘rsatilmoqda.'},
- ru:{title:'3D-атлас зуба',hint:'Вращайте жестом · нажмите на слой',explode:'Разделить',assemble:'Собрать',reset:'Сброс',close:'Закрыть',
-  layers:{enamel:['Эмаль','Самая твёрдая ткань, покрывающая коронку. Не содержит живых клеток и не восстанавливается.'],
+ ru:{title:'3D-атлас зуба',hint:'Проведите, чтобы вращать · нажмите на слой',explode:'Разделить',assemble:'Собрать',reset:'Исходный вид',close:'Закрыть',
+  layers:{enamel:['Эмаль','Самая твёрдая ткань, покрывающая коронку. В ней нет живых клеток, поэтому утраченная эмаль не нарастает заново.'],
    dentin:['Дентин','Основная часть зуба под эмалью и цементом корня. Пронизан мельчайшими канальцами.'],
    pulp:['Пульпа','Мягкая ткань в центре зуба: питает зуб и даёт чувствительность.'],
    vessels:['Сосуды и нервы','Красные — артерии (приносят кровь), синие — вены (отводят кровь), жёлтые — нерв (чувствительность).'],
-   root:['Корень','Поверхность корня покрыта цементом; к нему крепятся связки, удерживающие зуб в челюсти.']},
-  note:'Учебная иллюстрация: сосуды и нервы схематичны. Не клиническое руководство.',nowebgl:'3D недоступно на этом устройстве. Показан фото-атлас.'},
+   root:['Корень','Поверхность корня покрыта цементом; к нему крепятся волокна периодонтальной связки, удерживающие зуб в челюсти.']},
+  note:'Учебная иллюстрация: сосуды и нервы показаны схематично. Не клиническое руководство.',nowebgl:'3D недоступно на этом устройстве. Показан атлас в картинках.'},
  en:{title:'3D tooth atlas',hint:'Drag to rotate · tap a layer',explode:'Explode',assemble:'Assemble',reset:'Reset',close:'Close',
-  layers:{enamel:['Enamel','The hardest tissue, covering the crown. It has no living cells, so it cannot repair itself.'],
+  layers:{enamel:['Enamel','The hardest tissue, covering the crown. It has no living cells, so lost enamel does not grow back.'],
    dentin:['Dentin','The main body of the tooth under the enamel and the root cementum, threaded with tiny tubules.'],
-   pulp:['Pulp','Soft tissue in the centre of the tooth: it nourishes the tooth and provides sensation.'],
+   pulp:['Pulp','Soft tissue in the center of the tooth: it nourishes the tooth and provides sensation.'],
    vessels:['Vessels & nerves','Red: arteries (bring blood). Blue: veins (carry it away). Yellow: nerve (sensation).'],
-   root:['Root','The root surface is covered by cementum; ligaments attach to it and hold the tooth in the jaw.']},
-  note:'Educational illustration: vessels and nerves are schematic. Not clinical guidance.',nowebgl:'3D is not available on this device. Showing the photo atlas.'}
+   root:['Root','The root surface is covered by cementum; periodontal ligament fibers attach to it and hold the tooth in the jaw.']},
+  note:'Educational illustration: vessels and nerves are schematic. Not clinical guidance.',nowebgl:'3D is not available on this device. Showing the picture atlas.'}
 };
 
 const COLORS:Record<LayerKey,string>={enamel:'#bfe9ff',dentin:'#f0c987',pulp:'#ff6a6a',vessels:'#ffd84d',root:'#e6d5b0'};

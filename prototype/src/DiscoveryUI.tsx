@@ -3,6 +3,7 @@ import Portrait from './Portrait';
 import clinicianSheet from '../assets/clinician-contact-sheet.webp';
 import headscarfSheet from '../assets/headscarf-clinicians.webp';
 import {countryCodes} from './countryCodes';
+import {countryName} from './countryNames';
 import {demoCities,type DemoDoctor,type Lang} from './discoveryData';
 
 const words={
@@ -20,18 +21,17 @@ const photoIndex:Record<string,number>={
 const headscarfIndex:Record<string,number>={malika:0,nodira:1,'tashkent-3':2,'dubai-4':3};
 
 export function DemoAvatar({doctor,large=false}:{doctor:DemoDoctor;large?:boolean}){
- if(doctor.photoUrl)return <span className={'demo-avatar photo '+(large?'large':'')} role="img" aria-label={doctor.name} style={{backgroundImage:`url(${doctor.photoUrl})`,backgroundSize:'cover',backgroundPosition:'center'}}/>;
- if(doctor.portrait!==undefined)return <Portrait person={doctor.portrait} large={large}/>;
+ if(doctor.photoUrl)return <span className={'demo-avatar photo '+(large?'large':'')} role="img" translate="no" aria-label={doctor.name} style={{backgroundImage:`url(${doctor.photoUrl})`,backgroundSize:'cover',backgroundPosition:'center'}}/>;
+ if(doctor.portrait!==undefined)return <Portrait person={doctor.portrait} large={large} label={doctor.name}/>;
  const scarf=headscarfIndex[doctor.id];
- if(scarf!==undefined)return <span className={'demo-avatar photo headscarf '+(large?'large':'')} role="img" aria-label={doctor.name} style={{backgroundImage:`url(${headscarfSheet})`,backgroundSize:'200% 200%',backgroundPosition:`${(scarf%2)*100}% ${Math.floor(scarf/2)*100}%`,backgroundRepeat:'no-repeat'}}/>;
+ if(scarf!==undefined)return <span className={'demo-avatar photo headscarf '+(large?'large':'')} role="img" translate="no" aria-label={doctor.name} style={{backgroundImage:`url(${headscarfSheet})`,backgroundSize:'200% 200%',backgroundPosition:`${(scarf%2)*100}% ${Math.floor(scarf/2)*100}%`,backgroundRepeat:'no-repeat'}}/>;
  const index=photoIndex[doctor.id];
- if(index!==undefined)return <span className={'demo-avatar photo '+(large?'large':'')} role="img" aria-label={doctor.name} style={{backgroundImage:`url(${clinicianSheet})`,backgroundSize:'400% 400%',backgroundPosition:`${(index%4)*100/3}% ${Math.floor(index/4)*100/3}%`,backgroundRepeat:'no-repeat'}}/>;
- return <span className={'demo-avatar '+(large?'large':'')} aria-label={doctor.name}>{doctor.initials}</span>;
+ if(index!==undefined)return <span className={'demo-avatar photo '+(large?'large':'')} role="img" translate="no" aria-label={doctor.name} style={{backgroundImage:`url(${clinicianSheet})`,backgroundSize:'400% 400%',backgroundPosition:`${(index%4)*100/3}% ${Math.floor(index/4)*100/3}%`,backgroundRepeat:'no-repeat'}}/>;
+ return <span className={'demo-avatar '+(large?'large':'')} role="img" translate="no" aria-label={doctor.name}>{doctor.initials}</span>;
 }
 
 export function LocationPicker({lang,country,city,customCity,onCountry,onCity,onCustomCity}:{lang:Lang;country:string;city:string;customCity:string;onCountry:(v:string)=>void;onCity:(v:string)=>void;onCustomCity:(v:string)=>void}){
- const regionNames=new Intl.DisplayNames([lang],{type:'region'});
- const options=countryCodes.map(code=>({code,name:regionNames.of(code)||code})).sort((a,b)=>a.name.localeCompare(b.name,lang));
+ const options=countryCodes.map(code=>({code,name:countryName(code,lang)})).sort((a,b)=>a.name.localeCompare(b.name,lang));
  const cities=demoCities.filter(x=>x.countryCode===country);
  const t=words[lang];
  return <div className="discovery-location" role="group" aria-label={lang==='uz'?'Joylashuv':lang==='ru'?'Местоположение':'Location'}>

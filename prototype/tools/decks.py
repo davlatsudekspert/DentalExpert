@@ -24,8 +24,40 @@ CATALOG = json.loads((ROOT / 'decks/catalog.json').read_text())
 LAYOUTS = {'title', 'image-left', 'image-right', 'bullets', 'compare', 'closing'}
 NAVY, TEAL, ICE, WHITE, GREY, MINT = (RGBColor.from_string(x) for x in ('10254E', '17A6B7', 'F0FAFF', 'FFFFFF', '5C7590', 'E8F5EE'))
 FONT = 'Liberation Sans'
-FOOTER = 'Dental Expert · o‘quv namuna · mutaxassis tasdig‘idan o‘tmagan'
+FOOTERS = {'uz': 'Dental Expert · o‘quv namuna · mutaxassis tasdig‘idan o‘tmagan',
+           'ru': 'Dental Expert · учебный образец · не проверено специалистом',
+           'en': 'Dental Expert · learning sample · not reviewed by a specialist'}
+LANGS = ('uz', 'ru', 'en')
+FOOTER = FOOTERS['uz']
 W, H = Inches(13.333), Inches(7.5)
+
+def draft_files(src: Path = DRAFTS):
+    """Base (Uzbek) drafts are <id>.json; translations are <id>.ru.json and <id>.en.json with the same structure."""
+    out = {}
+    for f in sorted(src.glob('*.json')):
+        parts = f.name[:-5].split('.')
+        lang = parts[1] if len(parts) == 2 else 'uz'
+        if lang not in LANGS:
+            sys.exit(f'{f.name}: unknown language suffix')
+        out.setdefault(parts[0], {})[lang] = f
+    return out
+
+
+def same_shape(base: dict, tr: dict, name: str) -> list[str]:
+    """A translation must mirror the Uzbek deck exactly (slides, layouts, images, quiz answers), so quizzes score identically in every language."""
+    errs = []
+    if len(base['slides']) != len(tr['slides']): return [f'{name}: slide count differs']
+    for i, (a, b) in enumerate(zip(base['slides'], tr['slides']), 1):
+        for k in ('layout', 'image', 'image2'):
+            if a.get(k) != b.get(k): errs.append(f'{name}: slide {i} {k} differs')
+        if len(a.get('bullets', [])) != len(b.get('bullets', [])): errs.append(f'{name}: slide {i} bullet count differs')
+        for k in ('caption', 'caption2'):
+            if bool(a.get(k)) != bool(b.get(k)): errs.append(f'{name}: slide {i} {k} presence differs')
+    if len(base['quiz']) != len(tr['quiz']): return errs + [f'{name}: quiz size differs']
+    for i, (a, b) in enumerate(zip(base['quiz'], tr['quiz']), 1):
+        if a['correct'] != b['correct']: errs.append(f'{name}: quiz {i} correct index differs')
+        if len(a['options']) != len(b['options']): errs.append(f'{name}: quiz {i} option count differs')
+    return errs
 
 # ---------------------------------------------------------------- validation
 BAD = [re.compile(p, re.I) for p in (r'https?://', r'www\.', r'\(\s*\d{4}\s*\)', r'\b(p|pp)\.\s*\d', r'\b\d+\s*[-–]\s*bet\b', r'\bbet\s*\d+', r'\bsahifa\s*\d+', r'\bISBN\b', r'\bdoi\b')]
@@ -137,7 +169,8 @@ def base(prs, n, total, title=None):
 def bullet_list(slide, items, x, y, w, size=22, gap=0.25):
     cur = y
     for it in items:
-        lines = max(1, -(-len(it) * size // int(w / Inches(1) * 9.2 * 7.2 + 1)))
+        cpl = max(8, int((w / Inches(1) - 0.38) * 72 / (size * 0.52)))  # characters per line at this font size
+        lines = max(1, -(-len(it) // cpl))
         h = Inches(0.42 * max(lines, 1) * size / 22 + 0.12)
         rect(slide, x, cur + Inches(0.1), Inches(0.14), Inches(0.14), TEAL, shape=MSO_SHAPE.OVAL)
         text(slide, x + Inches(0.38), cur, w - Inches(0.38), h, it, size, NAVY)
@@ -145,6 +178,8 @@ def bullet_list(slide, items, x, y, w, size=22, gap=0.25):
 
 
 def build_deck(deck: dict, out: Path):
+    global FOOTER
+    FOOTER = FOOTERS[deck.get('lang', 'uz')]
     prs = Presentation(); prs.slide_width, prs.slide_height = W, H
     slides = deck['slides']; total = len(slides)
     for n, s in enumerate(slides, 1):
@@ -195,13 +230,13 @@ def build_deck(deck: dict, out: Path):
 # ---------------------------------------------------------------- render
 
 
-def render(pptx: Path, deck_id: str, public: Path = PUBLIC) -> int:
+def render(pptx: Path, deck_id: str, public: Path = PUBLIC, lang: str = 'uz') -> int:
     with tempfile.TemporaryDirectory() as td:
         subprocess.run(['soffice', '--headless', '--convert-to', 'pdf', '--outdir', td, str(pptx)], check=True, capture_output=True, timeout=240)
         pdf = Path(td) / (pptx.stem + '.pdf')
         subprocess.run(['pdftoppm', '-r', '96', '-png', str(pdf), str(Path(td) / 's')], check=True, capture_output=True, timeout=240)
         pngs = sorted(Path(td).glob('s-*.png'))
-        dest = public / deck_id
+        dest = public / deck_id / lang
         if dest.exists(): shutil.rmtree(dest)
         dest.mkdir(parents=True)
         for i, p in enumerate(pngs, 1):
@@ -210,20 +245,27 @@ def render(pptx: Path, deck_id: str, public: Path = PUBLIC) -> int:
 
 
 def cmd_build(src: Path = DRAFTS, out: Path = OUT, public: Path = PUBLIC):
-    manifest = []
-    for f in sorted(src.glob('*.json')):
-        deck = json.loads(f.read_text())
-        errs = validate(deck)
-        if errs:
-            sys.exit(f'{f.name}: ' + '; '.join(errs))
-        pptx = out / f'{deck["id"]}.pptx'
-        build_deck(deck, pptx)
-        n = render(pptx, deck['id'], public)
-        assert n == len(deck['slides']), (deck['id'], n, len(deck['slides']))
-        manifest.append({'id': deck['id'], 'title': deck['title'], 'subtitle': deck['subtitle'], 'audience': deck['audience'], 'slides': n, 'quiz': deck['quiz']})
-        print('built', deck['id'], n, 'slides')
+    manifests: dict[str, list] = {l: [] for l in LANGS}
+    for deck_id, files in draft_files(src).items():
+        base = json.loads(files['uz'].read_text())
+        for lang in LANGS:
+            if lang not in files:
+                if src == DRAFTS: sys.exit(f'{deck_id}: missing {lang} translation')
+                continue
+            deck = json.loads(files[lang].read_text())
+            deck['id'] = base['id']; deck['lang'] = lang
+            errs = validate(deck) + (same_shape(base, deck, files[lang].name) if lang != 'uz' else [])
+            if errs:
+                sys.exit(f'{files[lang].name}: ' + '; '.join(errs))
+            pptx = out / f'{deck["id"]}.{lang}.pptx'
+            build_deck(deck, pptx)
+            n = render(pptx, deck['id'], public, lang)
+            assert n == len(deck['slides']), (deck['id'], lang, n, len(deck['slides']))
+            manifests[lang].append({'id': deck['id'], 'title': deck['title'], 'subtitle': deck['subtitle'], 'audience': deck['audience'], 'slides': n, 'quiz': deck['quiz']})
+            print('built', deck['id'], lang, n, 'slides')
     public.mkdir(parents=True, exist_ok=True)
-    (public / 'manifest.json').write_text(json.dumps(manifest, ensure_ascii=False, indent=1) + '\n')
+    for lang, m in manifests.items():
+        if m: (public / f'manifest.{lang}.json').write_text(json.dumps(m, ensure_ascii=False, indent=1) + '\n')
 
 
 # ---------------------------------------------------------------- Claude API generation
@@ -257,7 +299,7 @@ def cmd_generate(ids):
     model = os.environ.get('DECK_MODEL', 'claude-sonnet-5-5')
     GENERATED.mkdir(parents=True, exist_ok=True)
     images = '; '.join(f'{k} = {v["about"]}' for k, v in CATALOG.items())
-    for f in sorted(DRAFTS.glob('*.json')):
+    for f in [v['uz'] for v in draft_files().values()]:
         draft = json.loads(f.read_text())
         if ids and draft['id'] not in ids:
             continue
@@ -287,9 +329,12 @@ if __name__ == '__main__':
     cmd = sys.argv[1] if len(sys.argv) > 1 else 'build'
     if cmd == 'validate':
         bad = 0
-        for f in sorted(DRAFTS.glob('*.json')):
-            e = validate(json.loads(f.read_text()))
-            print(f.name, 'OK' if not e else e); bad += bool(e)
+        for deck_id, files in draft_files().items():
+            base = json.loads(files['uz'].read_text())
+            for lang, f in files.items():
+                deck = json.loads(f.read_text()); deck['id'] = base['id']
+                e = validate(deck) + (same_shape(base, deck, f.name) if lang != 'uz' else [])
+                print(f.name, 'OK' if not e else e); bad += bool(e)
         sys.exit(1 if bad else 0)
     elif cmd == 'build':
         if '--review' in sys.argv:  # build the Claude-generated drafts into decks/review without touching public/

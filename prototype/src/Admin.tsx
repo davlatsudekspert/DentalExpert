@@ -4,7 +4,7 @@ import {callApi} from './api';
 
 type Stats={users:{total:number;byRole:Record<string,number>;last7:number;last30:number;activeSessions:number;suspended:number;daily:{day:string;n:number}[]};classroom:{groups:number;members:number;assignments:number;submissions:number};doctors:{verified:number;demo:number};reports:{open:number;total:number}};
 type Report={id:string;category:string;subject:string|null;body:string;contact:string|null;lang:string|null;status:'open'|'resolved';note:string|null;createdAt:string;reporter:string|null};
-type User={id:string;email:string;name:string|null;role:string;createdAt:string;suspended:boolean;admin:boolean};
+type User={id:string;email:string;name:string|null;role:string;createdAt:string;suspended:boolean;admin:boolean;publishRequested?:boolean;verified?:boolean;profile?:{phone:string|null;workplace:string|null;specialty:string|null;telegram:string|null;instagram:string|null;email:string|null;address:string|null;map:string|null;city:string|null}|null};
 const ROLE:Record<string,string>={patient:'Bemor',dentist:'Stomatolog',teacher:'Ustoz',student:'Talaba'};
 const CAT:Record<string,string>={complaint:'Shikoyat',content:'Nomaqbul kontent',bug:'Xato',advertising:'Reklama',other:'Boshqa'};
 
@@ -75,11 +75,18 @@ function Users(){
  const [list,setList]=useState<User[]|null>(null);
  const load=useCallback(async(query:string)=>{const r=await callApi<{users:User[]}>('/admin/users?q='+encodeURIComponent(query));if(r.ok)setList(r.data.users)},[]);
  useEffect(()=>{const t=setTimeout(()=>load(q),250);return()=>clearTimeout(t)},[q,load]);
- const change=async(id:string,patch:{role?:string;suspended?:boolean})=>{await callApi('/admin/users','PUT',{id,...patch});load(q)};
+ const change=async(id:string,patch:{role?:string;suspended?:boolean;verified?:boolean})=>{await callApi('/admin/users','PUT',{id,...patch});load(q)};
  return <>
   <input className="admin-search" value={q} placeholder="Email yoki ism bo‘yicha qidirish" onChange={e=>setQ(e.target.value)}/>
   {list===null?<p className="muted">…</p>:list.length===0?<p className="muted">Topilmadi.</p>:list.map(u=><div key={u.id} className={'card admin-user'+(u.suspended?' off':'')}>
    <div><strong>{u.name||'—'}</strong>{u.admin&&<span className="pill">Admin</span>}{u.suspended&&<span className="pill warn">To‘xtatilgan</span>}<small>{u.email} · {u.createdAt.slice(0,10)}</small></div>
+   {u.role==='dentist'&&u.publishRequested&&u.profile&&<div className="admin-profile">
+    <b>{u.verified?'✓ Tasdiqlangan (bemorlarga ko‘rinadi)':'Tasdiqlash kutilmoqda'}</b>
+    <small>{[u.profile.specialty,u.profile.workplace,u.profile.address,u.profile.city].filter(Boolean).join(' · ')||'—'}</small>
+    <small>{[u.profile.phone&&'☎ '+u.profile.phone,u.profile.telegram&&'TG '+u.profile.telegram,u.profile.instagram&&'IG '+u.profile.instagram,u.profile.email].filter(Boolean).join(' · ')||'—'}</small>
+    {u.profile.map&&<small>{u.profile.map}</small>}
+    <button className={'button'+(u.verified?' secondary':'')} onClick={()=>change(u.id,{verified:!u.verified})}>{u.verified?'Tasdiqni olib tashlash':'Litsenziya tekshirildi: tasdiqlash'}</button>
+   </div>}
    <div className="admin-user-actions">
     <select aria-label="Rol" value={u.role} onChange={e=>change(u.id,{role:e.target.value})}>{Object.entries(ROLE).map(([k,l])=><option key={k} value={k}>{l}</option>)}</select>
     {!u.admin&&<button className="button secondary" onClick={()=>{if(!u.suspended||window.confirm('Hisobni qayta yoqasizmi?'))change(u.id,{suspended:!u.suspended})}}>{u.suspended?'Yoqish':'To‘xtatish'}</button>}

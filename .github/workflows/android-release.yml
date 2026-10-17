@@ -1,0 +1,195 @@
+name: Android Play release (AAB)
+
+# Builds a signed Android App Bundle (.aab) for Google Play and, when the
+# PLAY_SERVICE_ACCOUNT_JSON secret exists, uploads it to the chosen Play track.
+# Owner guide (Uzbek): prototype/PLAY_RELEASE.md
+# The very first .aab must be uploaded by hand in Play Console (the Play API cannot create the first release).
+
+on:
+  workflow_dispatch:
+    inputs:
+      track:
+        description: "Play track: internal (internal testing), alpha (= closed testing), production"
+        type: choice
+        options:
+          - internal
+          - alpha
+          - production
+        default: internal
+      status:
+        description: "draft = you finish the release in Play Console; completed = roll out right away"
+        type: choice
+        options:
+          - draft
+          - completed
+        default: draft
+
+permissions:
+  contents: read
+
+concurrency:
+  group: android-play-release
+  cancel-in-progress: false
+
+jobs:
+  aab:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    defaults:
+      run:
+        working-directory: prototype
+    steps:
+      - name: Check required secrets
+        id: secrets
+        working-directory: .
+        env:
+          ANDROID_KEYSTORE_B64: ${{ secrets.ANDROID_KEYSTORE_B64 }}
+          ANDROID_KEYSTORE_PASSWORD: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
+          ANDROID_KEY_ALIAS: ${{ secrets.ANDROID_KEY_ALIAS }}
+          ANDROID_KEY_PASSWORD: ${{ secrets.ANDROID_KEY_PASSWORD }}
+          PLAY_SERVICE_ACCOUNT_JSON: ${{ secrets.PLAY_SERVICE_ACCOUNT_JSON }}
+        run: |
+          # Only the names of missing secrets are printed, never their values.
+          missing=""
+          for name in ANDROID_KEYSTORE_B64 ANDROID_KEYSTORE_PASSWORD ANDROID_KEY_ALIAS ANDROID_KEY_PASSWORD; do
+            if [ -z "${!name}" ]; then missing="$missing $name"; fi
+          done
+          if [ -n "$missing" ]; then
+            echo "::error::Missing GitHub secrets:$missing. Add them in Settings > Secrets and variables > Actions (see prototype/PLAY_RELEASE.md)."
+            exit 1
+          fi
+          if [ -n "$PLAY_SERVICE_ACCOUNT_JSON" ]; then
+            echo "has_play=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "has_play=false" >> "$GITHUB_OUTPUT"
+            echo "::notice::PLAY_SERVICE_ACCOUNT_JSON is not set: the .aab is built and kept as a workflow artifact only (upload it in Play Console by hand)."
+          fi
+
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: prototype/package-lock.json
+
+      # Capacitor 8 compiles with Java 21 (android/app/capacitor.build.gradle sets VERSION_21),
+      # the same JDK as android.yml; Java 17 cannot build this project.
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 21
+
+      - name: Install Android platform and build tools
+        run: |
+          yes | "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" --licenses >/dev/null || true
+          "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" "platforms;android-36" "build-tools;36.0.0"
+
+      - run: npm ci
+
+      - name: Build web assets (bundled, hosted API)
+        run: npm run build
+        env:
+          VITE_API_BASE: https://dental-expert.pages.dev
+          # Sign in with Google (see prototype/OAUTH_SETUP.md): a repository variable, or a secret of the same name.
+          # Empty is fine: the Google button is then hidden and email-code sign-in still works.
+          VITE_GOOGLE_WEB_CLIENT_ID: ${{ vars.VITE_GOOGLE_WEB_CLIENT_ID || secrets.VITE_GOOGLE_WEB_CLIENT_ID }}
+
+      - run: npx cap sync android
+
+      - name: Version (versionCode = 1000 + run number)
+        run: |
+          VERSION_CODE=$((1000 + GITHUB_RUN_NUMBER))
+          PKG_VERSION=$(node -p "require('./package.json').version || ''")
+          if [ -n "$PKG_VERSION" ]; then VERSION_NAME="$PKG_VERSION.$GITHUB_RUN_NUMBER"; else VERSION_NAME="1.0.$GITHUB_RUN_NUMBER"; fi
+          {
+            echo "ANDROID_VERSION_CODE=$VERSION_CODE"
+            echo "ANDROID_VERSION_NAME=$VERSION_NAME"
+          } >> "$GITHUB_ENV"
+          echo "### Android release: versionCode \`$VERSION_CODE\`, versionName \`$VERSION_NAME\`" >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Decode upload keystore
+        env:
+          ANDROID_KEYSTORE_B64: ${{ secrets.ANDROID_KEYSTORE_B64 }}
+          ANDROID_KEYSTORE_PASSWORD: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
+          ANDROID_KEY_ALIAS: ${{ secrets.ANDROID_KEY_ALIAS }}
+        run: |
+          KEYSTORE="$RUNNER_TEMP/upload-keystore.jks"
+          if ! printf '%s' "$ANDROID_KEYSTORE_B64" | tr -d ' \r\n' | base64 -d > "$KEYSTORE" 2>/dev/null || [ ! -s "$KEYSTORE" ]; then
+            echo "::error::ANDROID_KEYSTORE_B64 is not valid base64 of the keystore file. Re-create it (prototype/PLAY_RELEASE.md, step 2)."
+            exit 1
+          fi
+          # Passwords are passed through the environment (:env), not on the command line.
+          if ! keytool -list -keystore "$KEYSTORE" -storepass:env ANDROID_KEYSTORE_PASSWORD -alias "$ANDROID_KEY_ALIAS" >/dev/null 2>&1; then
+            echo "::error::The keystore cannot be opened with ANDROID_KEYSTORE_PASSWORD, or it has no key named ANDROID_KEY_ALIAS. Check these two secrets."
+            exit 1
+          fi
+          echo "ANDROID_KEYSTORE_PATH=$KEYSTORE" >> "$GITHUB_ENV"
+          # Public certificate fingerprints (not secret): register the SHA-1 for Google sign-in (OAUTH_SETUP.md).
+          CERT=$(keytool -list -v -keystore "$KEYSTORE" -storepass:env ANDROID_KEYSTORE_PASSWORD -alias "$ANDROID_KEY_ALIAS" 2>/dev/null)
+          SHA1=$(printf '%s\n' "$CERT" | sed -n 's/^[[:space:]]*SHA1: //p' | head -n 1)
+          SHA256=$(printf '%s\n' "$CERT" | sed -n 's/^[[:space:]]*SHA256: //p' | head -n 1)
+          echo "UPLOAD_CERT_SHA256=$SHA256" >> "$GITHUB_ENV"
+          {
+            echo "### Upload key certificate (public fingerprints)"
+            echo "- SHA-1: \`${SHA1:-unknown}\`"
+            echo "- SHA-256: \`${SHA256:-unknown}\`"
+            echo "Google sign-in in apps installed from Play uses the **App signing key** SHA-1 from Play Console > Test and release > App integrity, register that one too."
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Build release bundle (bundleRelease)
+        working-directory: prototype/android
+        env:
+          ANDROID_KEYSTORE_PASSWORD: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
+          ANDROID_KEY_ALIAS: ${{ secrets.ANDROID_KEY_ALIAS }}
+          ANDROID_KEY_PASSWORD: ${{ secrets.ANDROID_KEY_PASSWORD }}
+        run: ./gradlew bundleRelease --no-daemon
+
+      - name: Verify the bundle is signed with the upload key
+        working-directory: prototype/android
+        run: |
+          AAB=app/build/outputs/bundle/release/app-release.aab
+          if [ ! -s "$AAB" ]; then echo "::error::$AAB was not produced."; exit 1; fi
+          # jarsigner warns about the self-signed upload certificate; that is normal. Only "jar verified." matters.
+          if ! jarsigner -verify "$AAB" > "$RUNNER_TEMP/jarsigner.log" 2>&1 || ! grep -qx 'jar verified.' "$RUNNER_TEMP/jarsigner.log"; then
+            head -n 5 "$RUNNER_TEMP/jarsigner.log"
+            echo "::error::The .aab is not signed (or the signature is broken). Check the four ANDROID_* secrets."
+            exit 1
+          fi
+          SIGNER_SHA256=$(keytool -printcert -jarfile "$AAB" 2>/dev/null | sed -n 's/^[[:space:]]*SHA256: //p' | head -n 1)
+          if [ -z "$SIGNER_SHA256" ] || [ "$SIGNER_SHA256" != "$UPLOAD_CERT_SHA256" ]; then
+            echo "::error::The .aab is signed, but not with the upload key from ANDROID_KEYSTORE_B64 / ANDROID_KEY_ALIAS."
+            exit 1
+          fi
+          echo "Signed with the upload key (SHA-256 $SIGNER_SHA256)."
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: dental-expert-release-aab-${{ env.ANDROID_VERSION_CODE }}
+          path: prototype/android/app/build/outputs/bundle/release/app-release.aab
+          if-no-files-found: error
+
+      - name: Upload to Google Play (${{ inputs.track }}, ${{ inputs.status }})
+        if: steps.secrets.outputs.has_play == 'true'
+        # r0adkll/upload-google-play v1.1.5 (commit pinned)
+        uses: r0adkll/upload-google-play@e738b9dd8f2476ea806d921b64aacd24f34515a5
+        with:
+          serviceAccountJsonPlainText: ${{ secrets.PLAY_SERVICE_ACCOUNT_JSON }}
+          packageName: uz.dentalexpert.app
+          releaseFiles: prototype/android/app/build/outputs/bundle/release/app-release.aab
+          track: ${{ inputs.track }}
+          status: ${{ inputs.status }}
+
+      - name: Summary
+        if: always()
+        working-directory: .
+        env:
+          TRACK: ${{ inputs.track }}
+          STATUS: ${{ inputs.status }}
+          HAS_PLAY: ${{ steps.secrets.outputs.has_play }}
+        run: |
+          if [ "$HAS_PLAY" = "true" ]; then
+            echo "Play upload requested: track \`$TRACK\`, status \`$STATUS\`." >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "No Play upload (PLAY_SERVICE_ACCOUNT_JSON not set). Download the .aab artifact and upload it in Play Console." >> "$GITHUB_STEP_SUMMARY"
+          fi

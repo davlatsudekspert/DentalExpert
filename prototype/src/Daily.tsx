@@ -3,6 +3,7 @@ import {Flame,ImageIcon,ListChecks,Check} from 'lucide-react';
 import QuizRun,{type RunQ} from './QuizRun';
 import {dailyPictures,dailyTest,localDay} from './dailyData';
 import type {Lang} from './discoveryData';
+import {ruForm} from './i18n';
 
 type Day={test?:[number,number];pic?:[number,number]};
 const KEY='de_daily';
@@ -10,9 +11,9 @@ const read=():Record<string,Day>=>{try{return JSON.parse(localStorage.getItem(KE
 const write=(v:Record<string,Day>)=>{try{localStorage.setItem(KEY,JSON.stringify(v))}catch{/* storage unavailable */}};
 
 const words={
- uz:{title:'Bugungi mashqlar',test:'Kunlik test',testSub:'5 ta savol · har kuni yangi',pic:'Rasmli topshiriq',picSub:'Qatlamni rasmdan toping · 3 ta',done:'Bajarildi',start:'Boshlash',again:'Qayta',streak:'kun ketma-ket',streakNone:'Bugun birinchi kuningizni boshlang',which:'Rasmda qaysi qatlam ko‘rsatilgan?',note:'O‘quv mashqi; mutaxassis tasdig‘idan o‘tmagan. Natijalar shu qurilmada saqlanadi.'},
- ru:{title:'Задания на сегодня',test:'Тест дня',testSub:'5 вопросов · каждый день новые',pic:'Задание по картинке',picSub:'Определите слой по изображению · 3 шт.',done:'Выполнено',start:'Начать',again:'Ещё раз',streak:'дн. подряд',streakNone:'Начните серию сегодня',which:'Какой слой показан на изображении?',note:'Учебное упражнение; не проверено специалистом. Результаты хранятся на этом устройстве.'},
- en:{title:'Today’s practice',test:'Daily quiz',testSub:'5 questions · new every day',pic:'Picture task',picSub:'Identify the layer from the image · 3 images',done:'Done',start:'Start',again:'Again',streak:'day streak',streakNone:'Start your streak today',which:'Which layer is shown in the image?',note:'Learning exercise; not reviewed by a specialist. Results are stored on this device.'}
+ uz:{title:'Bugungi mashqlar',test:'Kunlik test',testSub:'5 ta savol · har kuni yangi',pic:'Rasmli topshiriq',picSub:'Qatlamni rasmdan aniqlang · 3 ta rasm',done:'Bajarildi',start:'Boshlash',again:'Qayta',streak:'kun ketma-ket',streakNone:'Bugun birinchi kuningizni boshlang',which:'Rasmda qaysi qatlam ko‘rsatilgan?',note:'O‘quv mashqi; mutaxassis tasdig‘idan o‘tmagan. Natijalar shu qurilmada saqlanadi.'},
+ ru:{title:'Задания на сегодня',test:'Тест дня',testSub:'5 вопросов · каждый день новые',pic:'Задание по картинке',picSub:'Определите слой по изображению · 3 изображения',done:'Выполнено',start:'Начать',again:'Ещё раз',streak:'',streakNone:'Начните серию сегодня',which:'Какой слой показан на изображении?',note:'Учебное упражнение; не проверено специалистом. Результаты хранятся на этом устройстве.'},
+ en:{title:'Today’s practice',test:'Daily quiz',testSub:'5 questions · new every day',pic:'Picture task',picSub:'Identify the layer from the image · 3 images',done:'Done',start:'Start',again:'Again',streak:'',streakNone:'Start your streak today',which:'Which layer is shown in the image?',note:'Learning exercise; not reviewed by a specialist. Results are stored on this device.'}
 };
 
 function streakOf(days:Record<string,Day>,today:string){
@@ -45,7 +46,7 @@ export default function Daily({lang}:{lang:Lang}){
   </button>;
  };
  return <section className="daily card" aria-label={t.title}>
-  <div className="daily-head"><h2>{t.title}</h2><span className={'daily-streak'+(streak?' on':'')}><Flame size={15}/>{streak?`${streak} ${t.streak}`:t.streakNone}</span></div>
+  <div className="daily-head"><h2>{t.title}</h2><span className={'daily-streak'+(streak?' on':'')}><Flame size={15}/>{streak?(lang==='ru'?`${streak} ${ruForm(streak,'день','дня','дней')} подряд`:lang==='en'?`${streak}-day streak`:`${streak} ${t.streak}`):t.streakNone}</span></div>
   {card('test',ListChecks,t.test,t.testSub)}
   {card('pic',ImageIcon,t.pic,t.picSub)}
   <small className="muted">{t.note}</small>

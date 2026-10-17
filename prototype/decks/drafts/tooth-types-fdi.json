@@ -36,7 +36,7 @@
    "title": "FDI tizimi",
    "bullets": [
     "Har bir tish ikki xonali raqam bilan belgilanadi",
-    "Birinchi raqam — kvadrant (jag choragi)",
+    "Birinchi raqam — kvadrant (tish qatorining choragi)",
     "Ikkinchi raqam — tishning o‘rta chiziqdan hisoblangan tartibi",
     "Doimiy tishlarda kvadrantlar 1–4, sut tishlarida 5–8"
    ]
@@ -45,7 +45,7 @@
    "layout": "image-left",
    "title": "Misol: molyar",
    "bullets": [
-    "Molyarlar jag yoyining orqa qismida joylashadi",
+    "Molyarlar jag‘ yoyining orqa qismida joylashadi",
     "Katta chaynash yuzasiga ega",
     "Ildizlar soni tish va jagga qarab farq qiladi"
    ],
@@ -92,7 +92,7 @@
     "Ildizlar sonini"
    ],
    "correct": 0,
-   "explanation": "Birinchi raqam jag chorak (kvadrant)ini ko‘rsatadi."
+   "explanation": "Birinchi raqam tish qatorining choragi — kvadrantni ko‘rsatadi."
   },
   {
    "q": "Qaysi tishlar asosan maydalaydi?",

@@ -11,17 +11,7 @@ const getToken=()=>{try{return isNative?localStorage.getItem(TOKEN_KEY):null}cat
 const setToken=(t:string|null)=>{try{if(!isNative)return;if(t)localStorage.setItem(TOKEN_KEY,t);else localStorage.removeItem(TOKEN_KEY)}catch{/* storage unavailable */}};
 const authHeaders=():Record<string,string>=>{if(!isNative)return {};const t=getToken();return t?{'x-client':'native',authorization:'Bearer '+t}:{'x-client':'native'}};
 
-export type SponsorsResponse={cityId:string;sample:boolean;activeCount:number;sponsors:{id:string;isDemo:boolean}[]};
-
-/** Returns null when the API is unreachable (offline demo.html, dev server without Functions) so callers keep the local demo data. */
-export async function fetchSponsors(cityId:string,signal?:AbortSignal):Promise<SponsorsResponse|null>{
- try{
-  const res=await fetch(url(`/api/sponsors?city=${encodeURIComponent(cityId)}&includeDemo=1`),{signal,headers:{accept:'application/json'}});
-  if(!res.ok||!(res.headers.get('content-type')||'').includes('application/json'))return null;
-  return await res.json() as SponsorsResponse;
- }catch{return null}
-}
-
+/** Fetch helpers below return null when the API is unreachable (offline demo.html, dev server without Functions) so callers keep the local demo data. */
 type ApiDoctor={id:string;fullName:string;initials?:string|null;specialty:Translated;bio?:Translated|null;languages:string[];services:Translated[];years?:number|null;rating?:number|null;photoUrl?:string|null;isDemo:boolean;clinics:{name:string;address?:Translated|null;cityId:string}[];contacts:{kind:string;value:string}[]};
 
 const initialsOf=(name:string)=>name.replace(/^Dr\.?\s+/i,'').split(/\s+/).map(x=>x[0]).join('').slice(0,2).toUpperCase();
@@ -49,7 +39,7 @@ export async function fetchDoctors(cityId:string,signal?:AbortSignal):Promise<Ap
  }catch{return null}
 }
 
-export type AuthUser={id:string;email:string;name:string|null;role:'patient'|'dentist'|'teacher'|'student';countryCode:string|null;cityId:string|null;phone?:string|null;workplace?:string|null;bio?:string|null;isAdmin?:boolean};
+export type AuthUser={id:string;email:string;name:string|null;role:'patient'|'dentist'|'teacher'|'student';countryCode:string|null;cityId:string|null;phone?:string|null;workplace?:string|null;bio?:string|null;isAdmin?:boolean;specialty?:string|null;telegram?:string|null;instagram?:string|null;publicEmail?:string|null;address?:string|null;mapUrl?:string|null;publishRequested?:boolean;verified?:boolean};
 export type AuthState={enabled:boolean;user:AuthUser|null};
 
 async function post<T>(path:string,body:unknown,method:'POST'|'PUT'|'DELETE'='POST'):Promise<{ok:boolean;status:number;data:T&{error?:string;retryAfterSec?:number;attemptsLeft?:number}}>{
@@ -96,4 +86,5 @@ export async function callApi<T=Record<string,unknown>>(path:string,method:'GET'
  }catch{return {ok:false,status:0,data:{error:'network'} as never}}
 }
 
-export const saveProfile=(b:{name:string;phone:string;workplace:string;bio:string})=>post<{user?:AuthUser}>('/api/auth/profile',b,'PUT');
+export type ProfileInput={name:string;phone:string;workplace:string;bio:string;specialty:string;address:string;telegram:string;instagram:string;publicEmail:string;mapUrl:string;publishRequested:boolean};
+export const saveProfile=(b:ProfileInput)=>post<{user?:AuthUser}>('/api/auth/profile',b,'PUT');

@@ -79,7 +79,7 @@ function GroupView({lang,group,teacher,onBack}:{lang:Lang;group:Group;teacher:bo
  const [copied,setCopied]=useState(false);
  const load=useCallback(async()=>{const r=await callApi<{assignments:Assignment[]}>('/classroom/assignments?groupId='+group.id);if(r.ok)setItems(r.data.assignments)},[group.id]);
  useEffect(()=>{load()},[load]);
- useEffect(()=>{fetch('/decks/manifest.json').then(r=>r.ok?r.json():[]).then(setDecks).catch(()=>setDecks([]))},[]);
+ useEffect(()=>{fetch(`/decks/manifest.${lang}.json`).then(r=>r.ok?r.json():[]).then(setDecks).catch(()=>setDecks([]))},[lang]);
  const openAssignment=async(a:Assignment)=>{
   setSel(a);setRoster(null);
   if(teacher){const r=await callApi<{members:Member[]}>(`/classroom/assignments?groupId=${group.id}&assignmentId=${a.id}`);if(r.ok)setRoster(r.data.members)}

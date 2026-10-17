@@ -4,7 +4,7 @@ import {oauthEnabled,PROVIDERS,verifyIdToken,type Provider} from '../../_lib/oau
 import {underLimit} from '../../_lib/ratelimit';
 
 const MAX_PER_IP=60, WINDOW_S=600;
-type Row=Record<string,string|null>;
+type Row=Record<string,string|number|null>;
 
 // Sign in with Google / Apple. Body: {provider, idToken, nonce?, name?, role?, countryCode?, cityId?}.
 // Returns the same shape as /api/auth/verify. Linking: provider subject first, then the same verified email, else a new user.

@@ -1,0 +1,132 @@
+{
+ "title": "Dental Caries: An Overview",
+ "subtitle": "How it develops and what influences it",
+ "audience": "General education, 1st–2nd year",
+ "slides": [
+  {
+   "layout": "title",
+   "title": "Dental Caries: An Overview",
+   "bullets": [
+    "A brief introduction for educational purposes"
+   ],
+   "image": "healthy"
+  },
+  {
+   "layout": "image-right",
+   "title": "What Is Caries?",
+   "bullets": [
+    "Gradual acid demineralization of dental hard tissue",
+    "Associated with bacterial plaque (biofilm) on the tooth surface",
+    "In the early stage, the tooth surface may still be intact"
+   ],
+   "image": "healthy",
+   "caption": "Healthy molar"
+  },
+  {
+   "layout": "bullets",
+   "title": "Contributing Factors",
+   "bullets": [
+    "Bacterial plaque on the tooth surface",
+    "Sugars and other rapidly fermentable carbohydrates (especially with frequent intake)",
+    "Time: the longer plaque remains, the higher the risk",
+    "Properties of the tooth itself and of saliva"
+   ]
+  },
+  {
+   "layout": "image-left",
+   "title": "Why Is the Chewing Surface at Greater Risk?",
+   "bullets": [
+    "Fissures (grooves) can be narrow and deep",
+    "Toothbrush bristles may not fully penetrate them",
+    "These areas therefore need particular attention during cleaning"
+   ],
+   "image": "occlusal",
+   "caption": "Fissures on the chewing surface"
+  },
+  {
+   "layout": "image-right",
+   "title": "When Caries Progresses Deeper",
+   "bullets": [
+    "It may spread from enamel into dentin",
+    "Sensitivity may increase via the dentinal tubules",
+    "Only a dentist decides on treatment, after an examination"
+   ],
+   "image": "cutaway",
+   "caption": "Position of enamel, dentin and pulp"
+  },
+  {
+   "layout": "bullets",
+   "title": "Basics of Prevention",
+   "bullets": [
+    "Brushing twice a day with fluoride toothpaste",
+    "Reducing how much and how often sweets are consumed",
+    "Cleaning the interdental spaces",
+    "Dental check-ups at the intervals recommended by a dentist"
+   ]
+  },
+  {
+   "layout": "closing",
+   "title": "Key Points",
+   "bullets": [
+    "Caries is a process of acid-driven demineralization",
+    "Biofilm and sugars are the main factors",
+    "Prevention starts with simple daily habits",
+    "Diagnosis and treatment are the dentist’s responsibility"
+   ],
+   "image": "healthy"
+  }
+ ],
+ "quiz": [
+  {
+   "q": "What process underlies caries?",
+   "options": [
+    "Only a change in tooth color",
+    "Filling of the tooth with new cells",
+    "Demineralization of the tooth by acids"
+   ],
+   "correct": 2,
+   "explanation": "Caries is a demineralization process."
+  },
+  {
+   "q": "Which factor influences caries?",
+   "options": [
+    "Biofilm and carbohydrates",
+    "Age alone",
+    "Tooth shape alone"
+   ],
+   "correct": 0,
+   "explanation": "Biofilm and rapidly fermentable carbohydrates are among the main factors."
+  },
+  {
+   "q": "Why are fissures difficult to clean?",
+   "options": [
+    "They are located in the pulp",
+    "They are very large",
+    "They can be narrow and deep"
+   ],
+   "correct": 2,
+   "explanation": "Toothbrush bristles may not reach into narrow grooves."
+  },
+  {
+   "q": "Who makes the decision on caries treatment?",
+   "options": [
+    "A friend’s advice",
+    "An online video",
+    "A dentist"
+   ],
+   "correct": 2,
+   "explanation": "Diagnosis and treatment are determined after a dental examination."
+  },
+  {
+   "q": "What does prevention include?",
+   "options": [
+    "Only sweets",
+    "Not brushing the teeth",
+    "Regular brushing with fluoride toothpaste"
+   ],
+   "correct": 2,
+   "explanation": "Regular oral hygiene reduces the risk of caries."
+  }
+ ],
+ "id": "caries-basics"
+}

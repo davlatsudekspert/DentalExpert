@@ -9,7 +9,7 @@ const options:{lang:Lang;label:string;hint:string}[]=[
 
 /** First screen on a fresh install: pick the app language, then registration follows. */
 export default function LanguageSelect({onPick}:{onPick:(lang:Lang)=>void}){
- return <section className="language-select" aria-label="Language">
+ return <section className="language-select" aria-label="Language · Язык · Til">
   <div className="language-brand"><span className="brand-symbol"><LogoMark/></span><span>Dental<span>Expert</span></span></div>
   <h1>Choose your language</h1>
   <p>Выберите язык · Tilni tanlang</p>

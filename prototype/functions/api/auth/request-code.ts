@@ -2,6 +2,7 @@ import {authEnabled,devEcho,guardPost,hmac,normalizeEmail,randomCode,ROLES,sendC
 import {cityIdOk,json,type Env} from '../../_lib/db';
 
 import {underLimit} from '../../_lib/ratelimit';
+import {reviewRole} from '../../_lib/review';
 const MAX_EMAILS_DAY=1500;
 const CODE_TTL_MIN=10, RESEND_COOLDOWN_S=60, MAX_PER_EMAIL_HOUR=5, MAX_PER_IP_HOUR=20;
 
@@ -12,6 +13,8 @@ export const onRequestPost:PagesFunction<Env>=async({request,env})=>{
  const email=normalizeEmail(body?.email);
  if(!email)return json({error:'invalid_email'},400,'no-store');
 
+ // Store reviewers' fixed test accounts need no email.
+ if(reviewRole(env,email))return json({ok:true,expiresInSec:CODE_TTL_MIN*60,resendAfterSec:RESEND_COOLDOWN_S},200,'no-store');
  // Retention: spent or stale one-time codes and expired sessions are purged on every request (see the privacy policy).
  await env.DB.batch([
   env.DB.prepare(`DELETE FROM auth_codes WHERE created_at<datetime('now','-1 day')`),

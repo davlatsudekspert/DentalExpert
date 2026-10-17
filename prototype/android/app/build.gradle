@@ -1,5 +1,41 @@
 apply plugin: 'com.android.application'
 
+// ---- Versioning (Google Play needs a new, larger versionCode for every upload) ----
+// CI (android-release.yml) sets ANDROID_VERSION_CODE=1000+run_number; otherwise 1000+GITHUB_RUN_NUMBER, or 1 locally.
+def envInt = { String name ->
+    def v = System.getenv(name)?.trim()
+    return (v != null && v ==~ /\d+/) ? v.toInteger() : null
+}
+def ciRun = envInt('GITHUB_RUN_NUMBER')
+def appVersionCode = envInt('ANDROID_VERSION_CODE') ?: (ciRun != null ? 1000 + ciRun : 1)
+// versionName: ANDROID_VERSION_NAME, else package.json "version" (+ ".<run>" on CI), else "1.0.<run>".
+def packageJsonVersion = null
+try {
+    def pkg = rootProject.file('../package.json')
+    if (pkg.exists()) {
+        packageJsonVersion = new groovy.json.JsonSlurper().parse(pkg)?.version?.toString()?.trim()
+    }
+} catch (Exception ignored) {
+    logger.info("package.json version not readable, using 1.0.<run>")
+}
+def appVersionName = System.getenv('ANDROID_VERSION_NAME')?.trim() ?:
+        (packageJsonVersion ? (ciRun != null ? "${packageJsonVersion}.${ciRun}" : packageJsonVersion) : "1.0.${ciRun ?: 0}").toString()
+
+// ---- Release signing (Play upload key), read only from environment variables ----
+// When any of them is missing the release build is still configured, just unsigned,
+// so `./gradlew assembleDebug` and the debug-APK workflow keep working without secrets.
+def releaseKeystorePath = System.getenv('ANDROID_KEYSTORE_PATH')?.trim()
+def releaseKeystorePassword = System.getenv('ANDROID_KEYSTORE_PASSWORD')
+def releaseKeyAlias = System.getenv('ANDROID_KEY_ALIAS')?.trim()
+def releaseKeyPassword = System.getenv('ANDROID_KEY_PASSWORD')
+def hasReleaseSigning = releaseKeystorePath && releaseKeystorePassword && releaseKeyAlias && releaseKeyPassword
+if (hasReleaseSigning && !file(releaseKeystorePath).exists()) {
+    throw new GradleException("ANDROID_KEYSTORE_PATH points to a missing file: ${releaseKeystorePath}")
+}
+if (!hasReleaseSigning) {
+    logger.info("Release signing env vars not set: release builds will be unsigned.")
+}
+
 android {
     namespace = "uz.dentalexpert.app"
     compileSdk = rootProject.ext.compileSdkVersion
@@ -7,8 +43,8 @@ android {
         applicationId "uz.dentalexpert.app"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 1
-        versionName "1.0"
+        versionCode appVersionCode
+        versionName appVersionName
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         aaptOptions {
              // Files and dirs to omit from the packaged assets dir, modified to accommodate modern web apps.
@@ -16,8 +52,21 @@ android {
             ignoreAssetsPattern = '!.svn:!.git:!.ds_store:!*.scc:.*:!CVS:!thumbs.db:!picasa.ini:!*~'
         }
     }
+    signingConfigs {
+        if (hasReleaseSigning) {
+            release {
+                storeFile file(releaseKeystorePath)
+                storePassword releaseKeystorePassword
+                keyAlias releaseKeyAlias
+                keyPassword releaseKeyPassword
+            }
+        }
+    }
     buildTypes {
         release {
+            if (hasReleaseSigning) {
+                signingConfig signingConfigs.release
+            }
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }

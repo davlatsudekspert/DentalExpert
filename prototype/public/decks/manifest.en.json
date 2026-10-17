@@ -1,0 +1,356 @@
+[
+ {
+  "id": "caries-basics",
+  "title": "Dental Caries: An Overview",
+  "subtitle": "How it develops and what influences it",
+  "audience": "General education, 1st–2nd year",
+  "slides": 7,
+  "quiz": [
+   {
+    "q": "What process underlies caries?",
+    "options": [
+     "Only a change in tooth color",
+     "Filling of the tooth with new cells",
+     "Demineralization of the tooth by acids"
+    ],
+    "correct": 2,
+    "explanation": "Caries is a demineralization process."
+   },
+   {
+    "q": "Which factor influences caries?",
+    "options": [
+     "Biofilm and carbohydrates",
+     "Age alone",
+     "Tooth shape alone"
+    ],
+    "correct": 0,
+    "explanation": "Biofilm and rapidly fermentable carbohydrates are among the main factors."
+   },
+   {
+    "q": "Why are fissures difficult to clean?",
+    "options": [
+     "They are located in the pulp",
+     "They are very large",
+     "They can be narrow and deep"
+    ],
+    "correct": 2,
+    "explanation": "Toothbrush bristles may not reach into narrow grooves."
+   },
+   {
+    "q": "Who makes the decision on caries treatment?",
+    "options": [
+     "A friend’s advice",
+     "An online video",
+     "A dentist"
+    ],
+    "correct": 2,
+    "explanation": "Diagnosis and treatment are determined after a dental examination."
+   },
+   {
+    "q": "What does prevention include?",
+    "options": [
+     "Only sweets",
+     "Not brushing the teeth",
+     "Regular brushing with fluoride toothpaste"
+    ],
+    "correct": 2,
+    "explanation": "Regular oral hygiene reduces the risk of caries."
+   }
+  ]
+ },
+ {
+  "id": "oral-hygiene",
+  "title": "Oral Hygiene Basics",
+  "subtitle": "Steps of daily care",
+  "audience": "General education",
+  "slides": 6,
+  "quiz": [
+   {
+    "q": "What forms on the tooth surface every day?",
+    "options": [
+     "Bacterial plaque",
+     "Dentin",
+     "New enamel"
+    ],
+    "correct": 0,
+    "explanation": "Bacterial plaque must be removed regularly."
+   },
+   {
+    "q": "How often is toothbrushing usually recommended?",
+    "options": [
+     "Twice a day",
+     "Only when ill",
+     "Once a week"
+    ],
+    "correct": 0,
+    "explanation": "Twice a day with fluoride toothpaste."
+   },
+   {
+    "q": "How are the spaces between the teeth cleaned?",
+    "options": [
+     "By rinsing only",
+     "With dental floss or an interdental brush",
+     "Cleaning is not necessary"
+    ],
+    "correct": 1,
+    "explanation": "A toothbrush does not reach between the teeth."
+   },
+   {
+    "q": "Which surface needs particular attention?",
+    "options": [
+     "The grooves of the chewing surface",
+     "Only the front surface",
+     "None"
+    ],
+    "correct": 0,
+    "explanation": "Plaque can accumulate in the grooves."
+   },
+   {
+    "q": "What determines when to have a preventive check-up?",
+    "options": [
+     "Advertising",
+     "A dentist’s recommendation",
+     "Chance"
+    ],
+    "correct": 1,
+    "explanation": "The interval is set according to the dentist’s recommendation."
+   }
+  ]
+ },
+ {
+  "id": "periodontium",
+  "title": "Periodontium: The Tooth-Supporting Tissues",
+  "subtitle": "Gingiva, ligament, bone and cementum",
+  "audience": "2nd-year students",
+  "slides": 6,
+  "quiz": [
+   {
+    "q": "Which of the following is NOT part of the periodontium?",
+    "options": [
+     "Periodontal ligament",
+     "Enamel",
+     "Gingiva"
+    ],
+    "correct": 1,
+    "explanation": "Enamel is a layer of the crown; the periodontium is the tissue that supports the tooth."
+   },
+   {
+    "q": "To which root layer do the ligament fibers attach?",
+    "options": [
+     "Cementum",
+     "Pulp",
+     "Enamel"
+    ],
+    "correct": 0,
+    "explanation": "The fibers attach to cementum."
+   },
+   {
+    "q": "What is gingivitis?",
+    "options": [
+     "Loss of enamel",
+     "Bone growth",
+     "Inflammation of the gingiva"
+    ],
+    "correct": 2,
+    "explanation": "Gingivitis is inflammation of the gingiva."
+   },
+   {
+    "q": "How does periodontitis differ from gingivitis?",
+    "options": [
+     "The supporting tissues, including bone, are damaged",
+     "There is no difference at all",
+     "Only the tooth color changes"
+    ],
+    "correct": 0,
+    "explanation": "In periodontitis, the supporting tissues are damaged."
+   },
+   {
+    "q": "What should be done if the gums bleed?",
+    "options": [
+     "See a dentist",
+     "Self-treat",
+     "Do nothing"
+    ],
+    "correct": 0,
+    "explanation": "The exact cause and treatment are determined by a dentist."
+   }
+  ]
+ },
+ {
+  "id": "tooth-layers",
+  "title": "Tooth Layers",
+  "subtitle": "Enamel, dentin, pulp and cementum",
+  "audience": "1st–2nd year students",
+  "slides": 8,
+  "quiz": [
+   {
+    "q": "Which is the outer layer of the crown?",
+    "options": [
+     "Enamel",
+     "Pulp",
+     "Cementum"
+    ],
+    "correct": 0,
+    "explanation": "Enamel covers the crown and is the hardest tissue."
+   },
+   {
+    "q": "Where are blood vessels and nerves located?",
+    "options": [
+     "In the enamel",
+     "In the pulp",
+     "In the cementum"
+    ],
+    "correct": 1,
+    "explanation": "The pulp is the soft, living tissue of the tooth."
+   },
+   {
+    "q": "To which layer do the periodontal ligament fibers attach?",
+    "options": [
+     "Cementum",
+     "Enamel",
+     "Dentinal tubules"
+    ],
+    "correct": 0,
+    "explanation": "The ligament fibers are anchored in root cementum."
+   },
+   {
+    "q": "Where is dentin located?",
+    "options": [
+     "Above the enamel",
+     "Beneath the enamel and cementum",
+     "Only at the root apex"
+    ],
+    "correct": 1,
+    "explanation": "Dentin lies beneath the enamel and cementum, surrounding the pulp."
+   },
+   {
+    "q": "Why can enamel not regenerate on its own?",
+    "options": [
+     "It contains no cells",
+     "It is very soft",
+     "It lies inside the pulp"
+    ],
+    "correct": 0,
+    "explanation": "Enamel contains no living cells."
+   }
+  ]
+ },
+ {
+  "id": "tooth-surfaces",
+  "title": "Tooth Surfaces and Directional Terms",
+  "subtitle": "Describing location correctly in dentistry",
+  "audience": "1st-year students",
+  "slides": 7,
+  "quiz": [
+   {
+    "q": "What is the chewing surface called?",
+    "options": [
+     "Occlusal",
+     "Lingual",
+     "Distal"
+    ],
+    "correct": 0,
+    "explanation": "The occlusal surface meets the opposing tooth during chewing."
+   },
+   {
+    "q": "Which surface faces the tongue?",
+    "options": [
+     "Vestibular",
+     "Lingual",
+     "Mesial"
+    ],
+    "correct": 1,
+    "explanation": "The lingual surface faces the tongue."
+   },
+   {
+    "q": "Which proximal surface is closer to the midline of the dental arch?",
+    "options": [
+     "Distal",
+     "Mesial",
+     "Occlusal"
+    ],
+    "correct": 1,
+    "explanation": "The mesial surface lies on the side closer to the midline."
+   },
+   {
+    "q": "On which surface are fissures found?",
+    "options": [
+     "Occlusal",
+     "Distal",
+     "Vestibular"
+    ],
+    "correct": 0,
+    "explanation": "Fissures (grooves) are located on the chewing surface."
+   },
+   {
+    "q": "Which surface faces the cheek?",
+    "options": [
+     "Lingual",
+     "Vestibular",
+     "Mesial"
+    ],
+    "correct": 1,
+    "explanation": "The vestibular surface faces the cheek or lip."
+   }
+  ]
+ },
+ {
+  "id": "tooth-types-fdi",
+  "title": "Tooth Types and FDI Numbering",
+  "subtitle": "The system for permanent and primary teeth",
+  "audience": "1st–2nd year students",
+  "slides": 6,
+  "quiz": [
+   {
+    "q": "How many permanent teeth are there (including wisdom teeth)?",
+    "options": [
+     "20",
+     "28",
+     "32"
+    ],
+    "correct": 2,
+    "explanation": "A complete permanent dentition has 32 teeth."
+   },
+   {
+    "q": "How many primary teeth are there?",
+    "options": [
+     "20",
+     "24",
+     "32"
+    ],
+    "correct": 0,
+    "explanation": "There are 20 primary teeth."
+   },
+   {
+    "q": "What does the first digit of an FDI number indicate?",
+    "options": [
+     "The quadrant",
+     "The tooth color",
+     "The number of roots"
+    ],
+    "correct": 0,
+    "explanation": "The first digit indicates the quadrant, one quarter of the dentition."
+   },
+   {
+    "q": "Which teeth mainly grind food?",
+    "options": [
+     "Incisors",
+     "Molars",
+     "Canines"
+    ],
+    "correct": 1,
+    "explanation": "Molars have a large chewing surface and grind food."
+   },
+   {
+    "q": "Which digits designate the quadrants for permanent teeth?",
+    "options": [
+     "1–4",
+     "5–8",
+     "Only 1"
+    ],
+    "correct": 0,
+    "explanation": "1–4 for permanent teeth, 5–8 for primary teeth."
+   }
+  ]
+ }
+]

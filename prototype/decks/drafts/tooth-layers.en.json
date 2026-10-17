@@ -1,0 +1,143 @@
+{
+ "title": "Tooth Layers",
+ "subtitle": "Enamel, dentin, pulp and cementum",
+ "audience": "1st–2nd year students",
+ "slides": [
+  {
+   "layout": "title",
+   "title": "Tooth Layers",
+   "bullets": [
+    "Enamel",
+    "dentin",
+    "pulp",
+    "cementum"
+   ],
+   "image": "hero"
+  },
+  {
+   "layout": "image-right",
+   "title": "How Is a Tooth Structured?",
+   "bullets": [
+    "Crown — the part visible in the oral cavity",
+    "Root — the part located within the jawbone",
+    "The boundary between crown and root — the neck (cervix) of the tooth"
+   ],
+   "image": "front",
+   "caption": "External view"
+  },
+  {
+   "layout": "image-left",
+   "title": "Enamel",
+   "bullets": [
+    "The outer layer covering the crown",
+    "The hardest mineralized tissue in the human body",
+    "Contains no living cells, so it cannot regenerate on its own"
+   ],
+   "image": "cutaway",
+   "caption": "Outer white layer in section"
+  },
+  {
+   "layout": "image-right",
+   "title": "Dentin",
+   "bullets": [
+    "Forms the bulk of the tooth",
+    "Lies beneath the enamel and cementum",
+    "Contains fine dentinal tubules, which is why sensitivity can occur"
+   ],
+   "image": "cutaway2",
+   "caption": "Yellowish-white layer beneath the enamel"
+  },
+  {
+   "layout": "image-left",
+   "title": "Pulp",
+   "bullets": [
+    "Soft tissue at the center of the tooth",
+    "Contains blood vessels and nerve fibers",
+    "Nourishes the tooth and provides sensation"
+   ],
+   "image": "cutaway",
+   "caption": "Red central part"
+  },
+  {
+   "layout": "bullets",
+   "title": "Cementum and Root",
+   "bullets": [
+    "Cementum covers the root surface",
+    "Periodontal ligament fibers attach to the cementum",
+    "The root canal extends the pulp tissue to the root apex"
+   ]
+  },
+  {
+   "layout": "compare",
+   "title": "Compare the Layers",
+   "image": "front",
+   "caption": "External view",
+   "image2": "cutaway",
+   "caption2": "Internal structure"
+  },
+  {
+   "layout": "closing",
+   "title": "Key Points",
+   "bullets": [
+    "Enamel protects",
+    "Dentin is the main supporting tissue",
+    "Pulp is living tissue",
+    "Cementum attaches the root to the ligament"
+   ],
+   "image": "hero"
+  }
+ ],
+ "quiz": [
+  {
+   "q": "Which is the outer layer of the crown?",
+   "options": [
+    "Enamel",
+    "Pulp",
+    "Cementum"
+   ],
+   "correct": 0,
+   "explanation": "Enamel covers the crown and is the hardest tissue."
+  },
+  {
+   "q": "Where are blood vessels and nerves located?",
+   "options": [
+    "In the enamel",
+    "In the pulp",
+    "In the cementum"
+   ],
+   "correct": 1,
+   "explanation": "The pulp is the soft, living tissue of the tooth."
+  },
+  {
+   "q": "To which layer do the periodontal ligament fibers attach?",
+   "options": [
+    "Cementum",
+    "Enamel",
+    "Dentinal tubules"
+   ],
+   "correct": 0,
+   "explanation": "The ligament fibers are anchored in root cementum."
+  },
+  {
+   "q": "Where is dentin located?",
+   "options": [
+    "Above the enamel",
+    "Beneath the enamel and cementum",
+    "Only at the root apex"
+   ],
+   "correct": 1,
+   "explanation": "Dentin lies beneath the enamel and cementum, surrounding the pulp."
+  },
+  {
+   "q": "Why can enamel not regenerate on its own?",
+   "options": [
+    "It contains no cells",
+    "It is very soft",
+    "It lies inside the pulp"
+   ],
+   "correct": 0,
+   "explanation": "Enamel contains no living cells."
+  }
+ ],
+ "id": "tooth-layers"
+}

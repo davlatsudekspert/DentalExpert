@@ -1,6 +1,7 @@
 import {authEnabled,guardPost,hmac,normalizeEmail,sha256,signedIn,timingSafeEqual,USER_COLUMNS,type Role} from '../../_lib/auth';
 import {json,type Env} from '../../_lib/db';
 import {underLimit} from '../../_lib/ratelimit';
+import {reviewRole} from '../../_lib/review';
 
 const MAX_ATTEMPTS=5,MAX_FAILS_DAY=15;
 const failures=async(env:Env,email:string)=>(await env.DB.prepare(`SELECT count FROM rate_limits WHERE bucket=? AND window_start>?`).bind('vfail:'+email,Date.now()-86400000).first<{count:number}>())?.count||0;
@@ -17,6 +18,13 @@ export const onRequestPost:PagesFunction<Env>=async({request,env})=>{
  const ip=request.headers.get('cf-connecting-ip')||'local';
  if(!await underLimit(env,'verify-ip:'+await sha256(ip.includes(':')?ip.split(':').slice(0,4).join(':'):ip),60,600))return json({error:'too_many_requests'},429,'no-store');
  if(await failures(env,email)>=MAX_FAILS_DAY)return json({error:'too_many_attempts'},429,'no-store');
+ const rr=reviewRole(env,email);
+ if(rr){
+  if(!timingSafeEqual(await hmac(env.AUTH_SECRET!,'review:'+code),await hmac(env.AUTH_SECRET!,'review:'+env.REVIEW_CODE))){await underLimit(env,'vfail:'+email,1e9,86400);return json({error:'invalid_code'},400,'no-store')}
+  let ru=await env.DB.prepare(`SELECT ${USER_COLUMNS} FROM users WHERE email=?`).bind(email).first<Record<string,string|number|null>>();
+  if(!ru){const id=crypto.randomUUID();await env.DB.prepare(`INSERT INTO users (id,email,name,role,email_verified_at) VALUES (?,?,?,?,datetime('now'))`).bind(id,email,'Store Reviewer ('+rr+')',rr).run();ru=await env.DB.prepare(`SELECT ${USER_COLUMNS} FROM users WHERE id=?`).bind(id).first<Record<string,string|number|null>>()}
+  return signedIn(env,request,ru!);
+ }
  const row=await env.DB.prepare(
   `SELECT id,code_hash,pending_profile FROM auth_codes
    WHERE email=? AND consumed_at IS NULL AND expires_at>datetime('now') ORDER BY id DESC LIMIT 1`
@@ -37,7 +45,7 @@ export const onRequestPost:PagesFunction<Env>=async({request,env})=>{
 
  const p=row.pending_profile?JSON.parse(row.pending_profile) as {name:string|null;role:Role;cityId:string|null;countryCode:string|null}:{name:null,role:'patient' as Role,cityId:null,countryCode:null};
  // An existing account keeps its stored profile; only a new account takes the sign-up fields.
- let user=await env.DB.prepare(`SELECT ${USER_COLUMNS} FROM users WHERE email=?`).bind(email).first<Record<string,string|null>>();
+ let user=await env.DB.prepare(`SELECT ${USER_COLUMNS} FROM users WHERE email=?`).bind(email).first<Record<string,string|number|null>>();
  if(!user){
   const id=crypto.randomUUID();
   await env.DB.prepare(`INSERT INTO users (id,email,name,role,country_code,city_id,email_verified_at) VALUES (?,?,?,?,?,?,datetime('now'))`)

@@ -1,0 +1,117 @@
+{
+ "title": "Periodontium: The Tooth-Supporting Tissues",
+ "subtitle": "Gingiva, ligament, bone and cementum",
+ "audience": "2nd-year students",
+ "slides": [
+  {
+   "layout": "title",
+   "title": "Periodontium",
+   "bullets": [
+    "The tissues that support the tooth"
+   ],
+   "image": "hero"
+  },
+  {
+   "layout": "image-right",
+   "title": "What Is the Periodontium?",
+   "bullets": [
+    "The complex of tissues that surround and support the tooth",
+    "Gingiva, alveolar bone, periodontal ligament and root cementum"
+   ],
+   "image": "cutaway",
+   "caption": "Tooth cross-section"
+  },
+  {
+   "layout": "bullets",
+   "title": "Components of the Periodontium",
+   "bullets": [
+    "Gingiva — the soft tissue that covers the area around the neck of the tooth",
+    "Alveolar bone — the part of the jawbone that forms the socket holding the tooth root",
+    "Periodontal ligament — connects the tooth to the bone",
+    "Cementum — the root surface, where the ligament fibers attach"
+   ]
+  },
+  {
+   "layout": "image-left",
+   "title": "How the Tooth Is Held Firmly",
+   "bullets": [
+    "Ligament fibers attach to cementum at one end and to bone at the other",
+    "They help distribute chewing forces evenly to the bone"
+   ],
+   "image": "right",
+   "caption": "The roots sit within the jawbone"
+  },
+  {
+   "layout": "bullets",
+   "title": "Gingivitis and Periodontitis",
+   "bullets": [
+    "Gingivitis — inflammation of the gingiva; it can reverse with proper hygiene and treatment",
+    "Periodontitis — inflammation that has spread to the tooth-supporting tissues, including bone",
+    "Signs: red, bleeding gums; a definitive diagnosis comes from a dentist"
+   ]
+  },
+  {
+   "layout": "closing",
+   "title": "Key Points",
+   "bullets": [
+    "The periodontium has four components",
+    "The ligament attaches the tooth to the bone",
+    "Bleeding gums are a reason to see a dentist"
+   ],
+   "image": "hero"
+  }
+ ],
+ "quiz": [
+  {
+   "q": "Which of the following is NOT part of the periodontium?",
+   "options": [
+    "Periodontal ligament",
+    "Enamel",
+    "Gingiva"
+   ],
+   "correct": 1,
+   "explanation": "Enamel is a layer of the crown; the periodontium is the tissue that supports the tooth."
+  },
+  {
+   "q": "To which root layer do the ligament fibers attach?",
+   "options": [
+    "Cementum",
+    "Pulp",
+    "Enamel"
+   ],
+   "correct": 0,
+   "explanation": "The fibers attach to cementum."
+  },
+  {
+   "q": "What is gingivitis?",
+   "options": [
+    "Loss of enamel",
+    "Bone growth",
+    "Inflammation of the gingiva"
+   ],
+   "correct": 2,
+   "explanation": "Gingivitis is inflammation of the gingiva."
+  },
+  {
+   "q": "How does periodontitis differ from gingivitis?",
+   "options": [
+    "The supporting tissues, including bone, are damaged",
+    "There is no difference at all",
+    "Only the tooth color changes"
+   ],
+   "correct": 0,
+   "explanation": "In periodontitis, the supporting tissues are damaged."
+  },
+  {
+   "q": "What should be done if the gums bleed?",
+   "options": [
+    "See a dentist",
+    "Self-treat",
+    "Do nothing"
+   ],
+   "correct": 0,
+   "explanation": "The exact cause and treatment are determined by a dentist."
+  }
+ ],
+ "id": "periodontium"
+}

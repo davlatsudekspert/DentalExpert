@@ -1,0 +1,356 @@
+[
+ {
+  "id": "caries-basics",
+  "title": "Karies: umumiy tushuncha",
+  "subtitle": "Qanday paydo bo‘ladi va nima ta’sir qiladi",
+  "audience": "Umumiy ta’lim, 1–2-kurs",
+  "slides": 7,
+  "quiz": [
+   {
+    "q": "Karies qaysi jarayonga asoslanadi?",
+    "options": [
+     "Faqat tishning rangi o‘zgarishi",
+     "Tishning yangi hujayra bilan to‘lishi",
+     "Tishning kislotalar ta’sirida mineralsizlanishi"
+    ],
+    "correct": 2,
+    "explanation": "Karies — mineralsizlanish jarayoni."
+   },
+   {
+    "q": "Qaysi omil kariesga ta’sir qiladi?",
+    "options": [
+     "Biofilm va uglevodlar",
+     "Faqat yosh",
+     "Faqat tish shakli"
+    ],
+    "correct": 0,
+    "explanation": "Biofilm va tez fermentlanadigan uglevodlar asosiy omillardan."
+   },
+   {
+    "q": "Nega fissuralarni tozalash qiyin?",
+    "options": [
+     "Ular pulpada joylashgan",
+     "Ular juda katta",
+     "Ular tor va chuqur bo‘lishi mumkin"
+    ],
+    "correct": 2,
+    "explanation": "Tor egatchalarga cho‘tka tukchalari yetib bormasligi mumkin."
+   },
+   {
+    "q": "Karies davolash qarorini kim qabul qiladi?",
+    "options": [
+     "Do‘st maslahati",
+     "Internetdagi video",
+     "Stomatolog"
+    ],
+    "correct": 2,
+    "explanation": "Tashxis va davolash stomatolog ko‘rigidan keyin belgilanadi."
+   },
+   {
+    "q": "Profilaktikaga nima kiradi?",
+    "options": [
+     "Faqat shirinlik",
+     "Tish tozalamaslik",
+     "Ftorli pasta bilan muntazam tozalash"
+    ],
+    "correct": 2,
+    "explanation": "Muntazam gigiyena karies xavfini kamaytiradi."
+   }
+  ]
+ },
+ {
+  "id": "oral-hygiene",
+  "title": "Og‘iz gigiyenasi asoslari",
+  "subtitle": "Kundalik parvarish qadamlari",
+  "audience": "Umumiy ta’lim",
+  "slides": 6,
+  "quiz": [
+   {
+    "q": "Tish yuzasida har kuni nima hosil bo‘ladi?",
+    "options": [
+     "Bakterial karash",
+     "Dentin",
+     "Yangi emal"
+    ],
+    "correct": 0,
+    "explanation": "Bakterial karash muntazam tozalanishi kerak."
+   },
+   {
+    "q": "Odatda necha marta tish tozalash tavsiya etiladi?",
+    "options": [
+     "Kuniga ikki marta",
+     "Faqat kasal bo‘lganda",
+     "Haftada bir marta"
+    ],
+    "correct": 0,
+    "explanation": "Ftorli pasta bilan kuniga ikki marta."
+   },
+   {
+    "q": "Tishlar orasi qanday tozalanadi?",
+    "options": [
+     "Faqat chayish bilan",
+     "Tish ipi yoki tishlararo cho‘tka bilan",
+     "Tozalash shart emas"
+    ],
+    "correct": 1,
+    "explanation": "Cho‘tka tishlar orasiga yetib bormaydi."
+   },
+   {
+    "q": "Qaysi yuzaga alohida e’tibor kerak?",
+    "options": [
+     "Chaynash yuzasi egatchalari",
+     "Faqat old yuza",
+     "Hech qaysi"
+    ],
+    "correct": 0,
+    "explanation": "Egatchalarda karash to‘planishi mumkin."
+   },
+   {
+    "q": "Profilaktik ko‘rik muddatini nima belgilaydi?",
+    "options": [
+     "Reklama",
+     "Stomatolog tavsiyasi bo‘yicha",
+     "Tasodif"
+    ],
+    "correct": 1,
+    "explanation": "Muddat stomatolog tavsiyasiga qarab belgilanadi."
+   }
+  ]
+ },
+ {
+  "id": "periodontium",
+  "title": "Parodont: tishni ushlab turuvchi to‘qimalar",
+  "subtitle": "Milk, boylam, suyak va sement",
+  "audience": "2-kurs talabalari",
+  "slides": 6,
+  "quiz": [
+   {
+    "q": "Parodont tarkibiga nima kirmaydi?",
+    "options": [
+     "Periodontal boylam",
+     "Emal",
+     "Milk"
+    ],
+    "correct": 1,
+    "explanation": "Emal tojning qatlami; parodont tishni ushlab turuvchi to‘qimalar."
+   },
+   {
+    "q": "Boylam tolalari ildizning qaysi qatlamiga birikadi?",
+    "options": [
+     "Sement",
+     "Pulpa",
+     "Emal"
+    ],
+    "correct": 0,
+    "explanation": "Tolalar sementga birikadi."
+   },
+   {
+    "q": "Gingivit nima?",
+    "options": [
+     "Emal yo‘qolishi",
+     "Suyak o‘sishi",
+     "Milk yallig‘lanishi"
+    ],
+    "correct": 2,
+    "explanation": "Gingivit — milkning yallig‘lanishi."
+   },
+   {
+    "q": "Parodontit gingivitdan nimasi bilan farq qiladi?",
+    "options": [
+     "Tayanch to‘qimalar, jumladan suyak jarohatlanadi",
+     "Umuman farq yo‘q",
+     "Faqat tish rangi o‘zgaradi"
+    ],
+    "correct": 0,
+    "explanation": "Parodontitda tayanch to‘qimalar zararlanadi."
+   },
+   {
+    "q": "Milk qonashi bo‘lsa nima qilish kerak?",
+    "options": [
+     "Stomatologga murojaat qilish",
+     "O‘zboshimchalik bilan davolash",
+     "Hech narsa qilmaslik"
+    ],
+    "correct": 0,
+    "explanation": "Aniq sabab va davo stomatolog tomonidan belgilanadi."
+   }
+  ]
+ },
+ {
+  "id": "tooth-layers",
+  "title": "Tish qatlamlari",
+  "subtitle": "Emal, dentin, pulpa va sement",
+  "audience": "1–2-kurs talabalari",
+  "slides": 8,
+  "quiz": [
+   {
+    "q": "Tojning tashqi qatlami qaysi?",
+    "options": [
+     "Emal",
+     "Pulpa",
+     "Sement"
+    ],
+    "correct": 0,
+    "explanation": "Emal tojni qoplaydi va eng qattiq to‘qimadir."
+   },
+   {
+    "q": "Qon tomirlari va nervlar qayerda joylashgan?",
+    "options": [
+     "Emalda",
+     "Pulpada",
+     "Sementda"
+    ],
+    "correct": 1,
+    "explanation": "Pulpa tishning yumshoq, tirik to‘qimasi."
+   },
+   {
+    "q": "Periodont boylamlari qaysi qatlamga birikadi?",
+    "options": [
+     "Sement",
+     "Emal",
+     "Dentin kanalchalari"
+    ],
+    "correct": 0,
+    "explanation": "Boylamlar ildiz sementiga mustahkamlanadi."
+   },
+   {
+    "q": "Dentin qayerda joylashgan?",
+    "options": [
+     "Emal ustida",
+     "Emal va sement ostida",
+     "Faqat ildiz uchida"
+    ],
+    "correct": 1,
+    "explanation": "Dentin emal va sement ostida, pulpa atrofida joylashadi."
+   },
+   {
+    "q": "Emal nima uchun o‘zi tiklanmaydi?",
+    "options": [
+     "Unda hujayralar yo‘q",
+     "U juda yumshoq",
+     "U pulpa ichida"
+    ],
+    "correct": 0,
+    "explanation": "Emal tirik hujayralarni saqlamaydi."
+   }
+  ]
+ },
+ {
+  "id": "tooth-surfaces",
+  "title": "Tish yuzalari va yo‘nalish atamalari",
+  "subtitle": "Stomatologiyada joylashuvni to‘g‘ri aytish",
+  "audience": "1-kurs talabalari",
+  "slides": 7,
+  "quiz": [
+   {
+    "q": "Chaynash yuzasi qanday ataladi?",
+    "options": [
+     "Okklyuzal",
+     "Lingval",
+     "Distal"
+    ],
+    "correct": 0,
+    "explanation": "Okklyuzal yuza chaynashda qarshi tish bilan uchrashadi."
+   },
+   {
+    "q": "Til tomonga qaragan yuza qaysi?",
+    "options": [
+     "Vestibulyar",
+     "Lingval",
+     "Mezial"
+    ],
+    "correct": 1,
+    "explanation": "Lingval yuza til tomonga qaragan."
+   },
+   {
+    "q": "Jag yoyining o‘rtasiga yaqin proksimal yuza qaysi?",
+    "options": [
+     "Distal",
+     "Mezial",
+     "Okklyuzal"
+    ],
+    "correct": 1,
+    "explanation": "Mezial yuza o‘rta chiziqqa yaqin tomonda."
+   },
+   {
+    "q": "Fissuralar qaysi yuzada joylashadi?",
+    "options": [
+     "Okklyuzal",
+     "Distal",
+     "Vestibulyar"
+    ],
+    "correct": 0,
+    "explanation": "Egatchalar chaynash yuzasida joylashadi."
+   },
+   {
+    "q": "Lunj tomonga qaragan yuza qaysi?",
+    "options": [
+     "Lingval",
+     "Vestibulyar",
+     "Mezial"
+    ],
+    "correct": 1,
+    "explanation": "Vestibulyar yuza lunj yoki lab tomonga qaraydi."
+   }
+  ]
+ },
+ {
+  "id": "tooth-types-fdi",
+  "title": "Tish turlari va FDI raqamlash",
+  "subtitle": "Doimiy va sut tishlari tizimi",
+  "audience": "1–2-kurs talabalari",
+  "slides": 6,
+  "quiz": [
+   {
+    "q": "Doimiy tishlar soni (aql tishlari bilan) nechta?",
+    "options": [
+     "20",
+     "28",
+     "32"
+    ],
+    "correct": 2,
+    "explanation": "To‘liq doimiy tish yoyida 32 ta tish bo‘ladi."
+   },
+   {
+    "q": "Sut tishlari nechta?",
+    "options": [
+     "20",
+     "24",
+     "32"
+    ],
+    "correct": 0,
+    "explanation": "Sut tishlari soni 20 ta."
+   },
+   {
+    "q": "FDI raqamining birinchi raqami nimani bildiradi?",
+    "options": [
+     "Kvadrantni",
+     "Tish rangini",
+     "Ildizlar sonini"
+    ],
+    "correct": 0,
+    "explanation": "Birinchi raqam tish qatorining choragi — kvadrantni ko‘rsatadi."
+   },
+   {
+    "q": "Qaysi tishlar asosan maydalaydi?",
+    "options": [
+     "Kesuvchi",
+     "Molyar",
+     "Qoziq"
+    ],
+    "correct": 1,
+    "explanation": "Molyarlar katta chaynash yuzasiga ega va ovqatni maydalaydi."
+   },
+   {
+    "q": "Doimiy tishlarda kvadrantlar qaysi raqamlar bilan belgilanadi?",
+    "options": [
+     "1–4",
+     "5–8",
+     "Faqat 1"
+    ],
+    "correct": 0,
+    "explanation": "Doimiy tishlarda 1–4, sut tishlarida 5–8."
+   }
+  ]
+ }
+]

@@ -1,0 +1,119 @@
+{
+ "title": "Tooth Types and FDI Numbering",
+ "subtitle": "The system for permanent and primary teeth",
+ "audience": "1st–2nd year students",
+ "slides": [
+  {
+   "layout": "title",
+   "title": "Tooth Types and FDI Numbering",
+   "bullets": [
+    "A two-digit system"
+   ],
+   "image": "hero"
+  },
+  {
+   "layout": "image-right",
+   "title": "Tooth Types",
+   "bullets": [
+    "Incisors — cut food",
+    "Canines — tear food",
+    "Premolars and molars — grind food"
+   ],
+   "image": "front",
+   "caption": "Molar: a multi-cusped chewing tooth"
+  },
+  {
+   "layout": "bullets",
+   "title": "Number of Teeth",
+   "bullets": [
+    "Permanent teeth: 32 in a complete dentition (including wisdom teeth)",
+    "Primary teeth: 20",
+    "As a child grows, the primary teeth are replaced by permanent teeth"
+   ]
+  },
+  {
+   "layout": "bullets",
+   "title": "The FDI System",
+   "bullets": [
+    "Each tooth is designated by a two-digit number",
+    "First digit — the quadrant (one quarter of the dentition)",
+    "Second digit — the tooth’s position, counted from the midline",
+    "Quadrants 1–4 for permanent teeth, 5–8 for primary teeth"
+   ]
+  },
+  {
+   "layout": "image-left",
+   "title": "Example: The Molar",
+   "bullets": [
+    "Molars are located in the posterior part of the dental arch",
+    "They have a large chewing surface",
+    "The number of roots varies by tooth and jaw"
+   ],
+   "image": "occlusal",
+   "caption": "Chewing surface of a molar"
+  },
+  {
+   "layout": "closing",
+   "title": "Key Points",
+   "bullets": [
+    "32 permanent and 20 primary teeth",
+    "FDI — a two-digit number",
+    "The first digit indicates the quadrant"
+   ],
+   "image": "hero"
+  }
+ ],
+ "quiz": [
+  {
+   "q": "How many permanent teeth are there (including wisdom teeth)?",
+   "options": [
+    "20",
+    "28",
+    "32"
+   ],
+   "correct": 2,
+   "explanation": "A complete permanent dentition has 32 teeth."
+  },
+  {
+   "q": "How many primary teeth are there?",
+   "options": [
+    "20",
+    "24",
+    "32"
+   ],
+   "correct": 0,
+   "explanation": "There are 20 primary teeth."
+  },
+  {
+   "q": "What does the first digit of an FDI number indicate?",
+   "options": [
+    "The quadrant",
+    "The tooth color",
+    "The number of roots"
+   ],
+   "correct": 0,
+   "explanation": "The first digit indicates the quadrant, one quarter of the dentition."
+  },
+  {
+   "q": "Which teeth mainly grind food?",
+   "options": [
+    "Incisors",
+    "Molars",
+    "Canines"
+   ],
+   "correct": 1,
+   "explanation": "Molars have a large chewing surface and grind food."
+  },
+  {
+   "q": "Which digits designate the quadrants for permanent teeth?",
+   "options": [
+    "1–4",
+    "5–8",
+    "Only 1"
+   ],
+   "correct": 0,
+   "explanation": "1–4 for permanent teeth, 5–8 for primary teeth."
+  }
+ ],
+ "id": "tooth-types-fdi"
+}

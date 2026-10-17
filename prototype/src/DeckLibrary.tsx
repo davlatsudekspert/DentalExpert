@@ -6,9 +6,9 @@ type Quiz={q:string;options:string[];correct:number;explanation:string};
 type Deck={id:string;title:string;subtitle:string;audience:string;slides:number;quiz:Quiz[]};
 
 const words={
- uz:{title:'Taqdimotlar',hint:'Faqat ekranda ko‘rish va ulashish uchun. Yuklab olish yo‘q.',slides:'slayd',present:'Butun ekran',close:'Yopish',prev:'Oldingi',next:'Keyingi',quiz:'Testga o‘tish',back:'Slaydlarga qaytish',result:'Natija',again:'Qayta urinish',note:'Matn faqat o‘zbek tilida. O‘quv namuna: mutaxassis tasdig‘idan o‘tmagan, klinik ko‘rsatma emas.',loading:'Yuklanmoqda…',none:'Taqdimotlar hozir mavjud emas.'},
- ru:{title:'Презентации',hint:'Только для показа на экране. Скачивание отключено.',slides:'слайдов',present:'Во весь экран',close:'Закрыть',prev:'Назад',next:'Далее',quiz:'К тесту',back:'Назад к слайдам',result:'Результат',again:'Ещё раз',note:'Текст только на узбекском. Учебный образец: не проверен специалистом, не клиническое руководство.',loading:'Загрузка…',none:'Презентации пока недоступны.'},
- en:{title:'Presentations',hint:'View and share on screen only. Downloads are disabled.',slides:'slides',present:'Full screen',close:'Close',prev:'Previous',next:'Next',quiz:'Take the quiz',back:'Back to slides',result:'Score',again:'Try again',note:'Text is in Uzbek only. Learning sample: not reviewed by a specialist and not clinical guidance.',loading:'Loading…',none:'Presentations are not available right now.'}
+ uz:{title:'Taqdimotlar',hint:'Faqat ekranda ko‘rish va ulashish uchun. Yuklab olish yo‘q.',slides:'slayd',present:'Butun ekran',close:'Yopish',prev:'Oldingi',next:'Keyingi',quiz:'Testga o‘tish',back:'Slaydlarga qaytish',result:'Natija',again:'Qayta urinish',note:'O‘quv namuna: mutaxassis tasdig‘idan o‘tmagan, klinik ko‘rsatma emas.',loading:'Yuklanmoqda…',none:'Taqdimotlar hozir mavjud emas.'},
+ ru:{title:'Презентации',hint:'Только для показа на экране. Скачивание отключено.',slides:'слайдов',present:'Во весь экран',close:'Закрыть',prev:'Назад',next:'Далее',quiz:'К тесту',back:'Назад к слайдам',result:'Результат',again:'Ещё раз',note:'Учебный образец: не проверен специалистом, не клиническое руководство.',loading:'Загрузка…',none:'Презентации пока недоступны.'},
+ en:{title:'Presentations',hint:'View and share on screen only. Downloads are disabled.',slides:'slides',present:'Full screen',close:'Close',prev:'Previous',next:'Next',quiz:'Take the quiz',back:'Back to slides',result:'Score',again:'Try again',note:'Learning sample: not reviewed by a specialist and not clinical guidance.',loading:'Loading…',none:'Presentations are not available right now.'}
 };
 
 export type Progress=Record<string,{viewed?:boolean;best?:number;total?:number}>;
@@ -20,7 +20,7 @@ export const saveProgress=(uid:string|null|undefined,deckId:string,patch:{viewed
  try{localStorage.setItem(pkey(uid),JSON.stringify(all))}catch{/* storage unavailable */}
  return all;
 };
-const slideUrl=(deck:string,n:number)=>`/decks/${deck}/${String(n).padStart(2,'0')}.webp`;
+const slideUrl=(deck:string,lang:Lang,n:number)=>`/decks/${deck}/${lang}/${String(n).padStart(2,'0')}.webp`;
 
 function Viewer({deck,lang,onClose,onProgress}:{deck:Deck;lang:Lang;onClose:()=>void;onProgress:(p:{viewed?:boolean;score?:number;total?:number})=>void}){
  const t=words[lang];
@@ -51,7 +51,7 @@ function Viewer({deck,lang,onClose,onProgress}:{deck:Deck;lang:Lang;onClose:()=>
   </div>
   {mode==='slides'?<>
    <div className="deck-stage" onTouchStart={e=>{touch.current=e.touches[0].clientX}} onTouchEnd={e=>{if(touch.current===null)return;const dx=e.changedTouches[0].clientX-touch.current;touch.current=null;if(Math.abs(dx)>40)go(dx<0?1:-1)}}>
-    <img src={slideUrl(deck.id,n)} alt={`${deck.title} ${n}`} draggable={false}/>
+    <img src={slideUrl(deck.id,lang,n)} alt={`${deck.title} ${n}`} draggable={false}/>
     <div className="deck-shield"/>
    </div>
    <div className="deck-controls">
@@ -84,15 +84,15 @@ export default function DeckLibrary({lang,uid}:{lang:Lang;uid?:string|null}){
  useEffect(()=>setProgress(loadProgress(uid)),[uid]);
  useEffect(()=>{
   const c=new AbortController();
-  fetch('/decks/manifest.json',{signal:c.signal}).then(r=>r.ok&&(r.headers.get('content-type')||'').includes('json')?r.json():Promise.reject()).then(d=>{if(!c.signal.aborted)setDecks(d)}).catch(()=>{if(!c.signal.aborted)setFailed(true)});
+  fetch(`/decks/manifest.${lang}.json`,{signal:c.signal}).then(r=>r.ok&&(r.headers.get('content-type')||'').includes('json')?r.json():Promise.reject()).then(d=>{if(!c.signal.aborted)setDecks(d)}).catch(()=>{if(!c.signal.aborted)setFailed(true)});
   return()=>c.abort();
- },[]);
+ },[lang]);
  if(failed)return null;
  return <section className="deck-library" aria-label={t.title}>
   <div className="deck-heading"><Presentation size={20}/><div><h2>{t.title}</h2><p>{t.hint}</p></div></div>
   {!decks?<p className="muted">{t.loading}</p>:decks.length===0?<p className="muted">{t.none}</p>:<div className="deck-grid">
    {decks.map(d=><button key={d.id} className="deck-card" onClick={()=>setOpen(d)}>
-    <img src={slideUrl(d.id,1)} alt="" draggable={false} loading="lazy"/>
+    <img src={slideUrl(d.id,lang,1)} alt="" draggable={false} loading="lazy"/>
     <span><strong>{d.title}</strong><small>{d.slides} {t.slides} · {d.audience}</small>{progress[d.id]?.viewed&&<small className="deck-done">{progress[d.id].best!==undefined?`✓ ${progress[d.id].best}/${progress[d.id].total}`:'✓'}</small>}</span>
    </button>)}
   </div>}

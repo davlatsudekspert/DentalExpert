@@ -2,9 +2,9 @@ import {CreditCard, Instagram, Mail, MapPin, Phone, Send} from 'lucide-react';
 import type {Lang} from './discoveryData';
 
 const words={
- uz:{heading:'Bog‘lanish',phone:'Qo‘ng‘iroq',telegram:'Telegram',instagram:'Instagram',email:'Email',map:'Xarita',card:'Karta',note:'Demo profil: haqiqiy kontaktlar tasdiqlanmaguncha havolalar ochilmaydi.'},
- ru:{heading:'Контакты',phone:'Звонок',telegram:'Telegram',instagram:'Instagram',email:'Email',map:'Карта',card:'Реквизиты',note:'Демо-профиль: ссылки не откроются до проверки настоящих контактов.'},
- en:{heading:'Connect',phone:'Call',telegram:'Telegram',instagram:'Instagram',email:'Email',map:'Map',card:'Card',note:'Sample profile: links stay inactive until real contact details are verified.'}
+ uz:{heading:'Bog‘lanish',phone:'Qo‘ng‘iroq',telegram:'Telegram',instagram:'Instagram',email:'Email',map:'Xarita',card:'To‘lov',note:'Demo profil: haqiqiy kontaktlar tasdiqlanmaguncha havolalar ochilmaydi.'},
+ ru:{heading:'Контакты',phone:'Позвонить',telegram:'Telegram',instagram:'Instagram',email:'Email',map:'Карта',card:'Оплата',note:'Демо-профиль: ссылки не откроются до проверки настоящих контактов.'},
+ en:{heading:'Contact',phone:'Call',telegram:'Telegram',instagram:'Instagram',email:'Email',map:'Map',card:'Payment',note:'Sample profile: links stay inactive until real contact details are verified.'}
 };
 
 type Channel={kind:string;value:string};

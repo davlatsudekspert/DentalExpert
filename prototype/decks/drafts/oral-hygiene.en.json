@@ -1,0 +1,118 @@
+{
+ "title": "Oral Hygiene Basics",
+ "subtitle": "Steps of daily care",
+ "audience": "General education",
+ "slides": [
+  {
+   "layout": "title",
+   "title": "Oral Hygiene Basics",
+   "bullets": [
+    "Steps of daily care"
+   ],
+   "image": "hero"
+  },
+  {
+   "layout": "image-right",
+   "title": "Why Is Cleaning Necessary?",
+   "bullets": [
+    "Bacterial plaque forms on the tooth surface every day",
+    "Removing it regularly reduces the risk of caries and gingival inflammation"
+   ],
+   "image": "healthy",
+   "caption": "Healthy tooth"
+  },
+  {
+   "layout": "bullets",
+   "title": "Toothbrushing",
+   "bullets": [
+    "Twice a day with fluoride toothpaste",
+    "Clean all surfaces: lip and cheek sides, tongue side and chewing surfaces",
+    "Allow enough time for brushing; do not rush",
+    "Replace the toothbrush when it becomes worn"
+   ]
+  },
+  {
+   "layout": "image-left",
+   "title": "Focus on the Chewing Surface",
+   "bullets": [
+    "Direct the toothbrush bristles into the grooves",
+    "Clean the back teeth thoroughly as well"
+   ],
+   "image": "occlusal",
+   "caption": "Chewing surface with grooves"
+  },
+  {
+   "layout": "bullets",
+   "title": "Interdental Cleaning and Check-ups",
+   "bullets": [
+    "Clean between the teeth with dental floss or interdental brushes",
+    "Gently clean the coating on the tongue",
+    "Attend preventive check-ups at the intervals recommended by a dentist"
+   ]
+  },
+  {
+   "layout": "closing",
+   "title": "Key Points",
+   "bullets": [
+    "Fluoride toothpaste twice a day",
+    "Clean all surfaces",
+    "Do not forget the spaces between the teeth",
+    "Regular check-ups"
+   ],
+   "image": "hero"
+  }
+ ],
+ "quiz": [
+  {
+   "q": "What forms on the tooth surface every day?",
+   "options": [
+    "Bacterial plaque",
+    "Dentin",
+    "New enamel"
+   ],
+   "correct": 0,
+   "explanation": "Bacterial plaque must be removed regularly."
+  },
+  {
+   "q": "How often is toothbrushing usually recommended?",
+   "options": [
+    "Twice a day",
+    "Only when ill",
+    "Once a week"
+   ],
+   "correct": 0,
+   "explanation": "Twice a day with fluoride toothpaste."
+  },
+  {
+   "q": "How are the spaces between the teeth cleaned?",
+   "options": [
+    "By rinsing only",
+    "With dental floss or an interdental brush",
+    "Cleaning is not necessary"
+   ],
+   "correct": 1,
+   "explanation": "A toothbrush does not reach between the teeth."
+  },
+  {
+   "q": "Which surface needs particular attention?",
+   "options": [
+    "The grooves of the chewing surface",
+    "Only the front surface",
+    "None"
+   ],
+   "correct": 0,
+   "explanation": "Plaque can accumulate in the grooves."
+  },
+  {
+   "q": "What determines when to have a preventive check-up?",
+   "options": [
+    "Advertising",
+    "A dentist’s recommendation",
+    "Chance"
+   ],
+   "correct": 1,
+   "explanation": "The interval is set according to the dentist’s recommendation."
+  }
+ ],
+ "id": "oral-hygiene"
+}

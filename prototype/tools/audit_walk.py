@@ -3,7 +3,7 @@ from playwright.sync_api import sync_playwright
 import os,json,time,sys
 BASE='http://127.0.0.1:8788';OUT='/tmp/audit';os.makedirs(OUT,exist_ok=True)
 SCREENS={'patient':['home','search','profile','clinics','booking','anatomy','courses','settings'],
- 'dentist':['dashboard','record','chart','edit','adManager','plans','settings'],
+ 'dentist':['dashboard','record','chart','edit','settings'],
  'teacher':['teacher','courses','settings'],'student':['student','courses','caseStudy','settings']}
 with sync_playwright() as p:
     b=p.chromium.launch(executable_path=os.environ['CHROMIUM_PATH'],args=['--no-sandbox'])

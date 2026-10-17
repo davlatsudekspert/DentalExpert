@@ -1,13 +1,13 @@
 import {useId} from 'react';
 
-type Props={person?:0|1|2;large?:boolean};
+type Props={person?:0|1|2;large?:boolean;label?:string};
 /* Original local vector illustrations of fictional demo clinicians. */
-export default function Portrait({person=0,large=false}:Props){
+export default function Portrait({person=0,large=false,label}:Props){
  const id=useId().replaceAll(':','');
  const woman=person!==1;
  const skin=person===1?'#b98261':person===2?'#d19a78':'#e8ad88';
  const hair=person===1?'#182b39':person===2?'#44302f':'#543930';
- return <span className={'portrait-art '+(large?'portrait-art-large':'')+' portrait-art-'+person} role="img" aria-label="Fictional AI-generated demo clinician portrait">
+ return <span className={'portrait-art '+(large?'portrait-art-large':'')+' portrait-art-'+person} role="img" translate="no" aria-label={label}>
  <svg viewBox="0 0 160 176" preserveAspectRatio="xMidYMid slice"><defs>
  <linearGradient id={id+'bg'} x1="0" y1="0" x2="1" y2="1"><stop stopColor={person===0?'#e8f6f8':person===1?'#e5edf5':'#f5edf3'}/><stop offset="1" stopColor={person===0?'#c6e5e8':person===1?'#b7d5e4':'#dfd4e7'}/></linearGradient>
  <linearGradient id={id+'skin'} x1="0" y1="0" x2="1" y2="1"><stop stopColor="#fff0d7"/><stop offset=".52" stopColor={skin}/><stop offset="1" stopColor={person===1?'#885946':'#b87562'}/></linearGradient>

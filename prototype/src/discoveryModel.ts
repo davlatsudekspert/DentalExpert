@@ -11,12 +11,5 @@ export type ClinicianProfile={clinician:Clinician;clinics:Clinic[];contacts:Cont
 
 export const activeContacts=(p:ClinicianProfile)=>p.clinician.isDemo?[]:p.contacts.filter(c=>c.verified);
 
-/** Up to 4 visible sponsors from up to 5 active; the extra one rotates fairly by day seed. */
-export const pickSponsors=<T,>(active:T[],daySeed:number,slots=4):T[]=>{
- if(active.length<=slots) return active;
- const start=((daySeed%active.length)+active.length)%active.length;
- return Array.from({length:slots},(_,i)=>active[(start+i)%active.length]);
-};
-
 export const nearbyMode=(permission:'granted'|'denied'|'prompt',manualCityId?:string)=>
  permission==='granted'?'gps':manualCityId?'manual':'ask-city';

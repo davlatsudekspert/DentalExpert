@@ -37,5 +37,16 @@ with sync_playwright() as p:
  check('viewer closes',page.locator('.deck-viewer').count()==0)
  check('nothing was downloaded',not downloads)
  check('no browser exceptions',not errors)
+ # every language has its own decks, slides and quizzes
+ for lang,cyr in (('uz',False),('ru',True),('en',False)):
+  page.goto(f'{BASE}/?screen=student&lang={lang}');page.wait_for_selector('.deck-card')
+  check(f'{lang}: six decks',page.locator('.deck-card').count()==6)
+  titles=' '.join(page.locator('.deck-card strong').all_inner_texts())
+  import re
+  check(f'{lang}: deck titles are in the right script',bool(re.search('[А-Яа-я]',titles))==cyr)
+  check(f'{lang}: card images load',all(page.locator('.deck-card img').nth(i).evaluate('(e)=>e.complete&&e.naturalWidth>0') for i in range(6)))
+  page.locator('.deck-card').first.click();page.wait_for_selector('.deck-viewer')
+  check(f'{lang}: slide image loads from its language folder',f'/decks/' in page.locator('.deck-stage img').get_attribute('src') and f'/{lang}/' in page.locator('.deck-stage img').get_attribute('src') and page.locator('.deck-stage img').evaluate('(e)=>e.complete&&e.naturalWidth>=1000'))
+  page.keyboard.press('Escape')
  b.close()
 print('PASS',len(checks),'checks')
