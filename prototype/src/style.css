@@ -284,3 +284,15 @@ html.native::after{content:'';position:fixed;left:0;right:0;bottom:0;height:calc
 .quiz-run-options button.right{border-color:#1a9a6b;background:#e6f6ee}.quiz-run-options button.wrong{border-color:#c9453d;background:#fdeceb}
 .quiz-run-why{font-size:13px;color:#3d6270;padding:10px 12px;border-radius:12px;background:#e9f6f5}
 .quiz-run-result{align-items:center;justify-content:center;text-align:center}.quiz-run-result b{font-size:46px;color:#127f7d}
+
+/* Patients and odontogram */
+.patients{display:flex;flex-direction:column;gap:12px}.patients h2{font-size:18px}.patients h3{font-size:13px;margin-top:6px}
+.pt-head{display:flex;align-items:center;gap:12px;padding:14px}.pt-avatar{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:#dcf1ef;color:#127f7d;font-weight:750}
+.pt-chart{display:flex;flex-direction:column;gap:8px}.pt-jaw{font-size:10px;letter-spacing:1.4px;text-transform:uppercase;color:#6d848c}
+.pt-teeth{display:grid;grid-template-columns:repeat(8,1fr);gap:4px}
+.pt-tooth{display:flex;flex-direction:column;align-items:center;gap:2px;padding:4px 0;border-radius:10px;background:#fff;border:1px solid #d6e5e6}.pt-tooth.on{border-color:#168d8b;box-shadow:0 0 0 2px #bfe7e4}.pt-tooth span{font-size:9px;color:#6d848c}.pt-tooth svg{width:24px;height:32px}
+.pt-picker{display:flex;flex-wrap:wrap;gap:6px;align-items:center;padding:10px;border-radius:14px;background:#fff;border:1px solid #cfdfe0}.pt-picker b{width:100%;font-size:13px}
+.pt-picker button{display:inline-flex;align-items:center;gap:6px;padding:8px 10px;border-radius:10px;border:1px solid #d6e5e6;font-size:12px;background:#f6fbfb}.pt-picker button.on{border-color:#168d8b;background:#e2f4f3;font-weight:700}
+.pt-picker i,.pt-legend i{display:inline-block;width:10px;height:10px;border-radius:50%}
+.pt-legend{display:flex;flex-wrap:wrap;gap:4px 12px;font-size:10px;color:#6d848c}.pt-legend span{display:inline-flex;align-items:center;gap:5px}
+.avatar.big{width:96px;height:96px;font-size:30px;margin:0 auto}

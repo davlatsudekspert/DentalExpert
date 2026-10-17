@@ -49,10 +49,10 @@ export async function fetchDoctors(cityId:string,signal?:AbortSignal):Promise<Ap
  }catch{return null}
 }
 
-export type AuthUser={id:string;email:string;name:string|null;role:'patient'|'dentist'|'teacher'|'student';countryCode:string|null;cityId:string|null};
+export type AuthUser={id:string;email:string;name:string|null;role:'patient'|'dentist'|'teacher'|'student';countryCode:string|null;cityId:string|null;phone?:string|null;workplace?:string|null;bio?:string|null};
 export type AuthState={enabled:boolean;user:AuthUser|null};
 
-async function post<T>(path:string,body:unknown,method='POST'):Promise<{ok:boolean;status:number;data:T&{error?:string;retryAfterSec?:number;attemptsLeft?:number}}>{
+async function post<T>(path:string,body:unknown,method:'POST'|'PUT'|'DELETE'='POST'):Promise<{ok:boolean;status:number;data:T&{error?:string;retryAfterSec?:number;attemptsLeft?:number}}>{
  try{
   const res=await fetch(url(path),{method,headers:{'content-type':'application/json',...authHeaders()},body:method==='DELETE'?undefined:JSON.stringify(body),credentials:'same-origin'});
   const data=await res.json().catch(()=>({})) as never;
@@ -92,3 +92,5 @@ export async function callApi<T=Record<string,unknown>>(path:string,method:'GET'
   return {ok:res.ok,status:res.status,data};
  }catch{return {ok:false,status:0,data:{error:'network'} as never}}
 }
+
+export const saveProfile=(b:{name:string;phone:string;workplace:string;bio:string})=>post<{user?:AuthUser}>('/api/auth/profile',b,'PUT');

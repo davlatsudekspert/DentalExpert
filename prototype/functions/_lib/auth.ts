@@ -58,16 +58,16 @@ export function readCookie(request:Request,name:string){
 export const cookieHeader=(request:Request,value:string,maxAge:number)=>
  `${COOKIE}=${value}; Path=/; HttpOnly; SameSite=Lax; Max-Age=${maxAge}${isLocal(request)?'':'; Secure'}`;
 
-export type SessionUser={id:string;email:string;name:string|null;role:Role;countryCode:string|null;cityId:string|null};
+export type SessionUser={id:string;email:string;name:string|null;role:Role;countryCode:string|null;cityId:string|null;phone:string|null;workplace:string|null;bio:string|null};
 
 export async function sessionUser(env:Env,request:Request):Promise<SessionUser|null>{
  const token=sessionToken(request);
  if(!token)return null;
  const row=await env.DB.prepare(
-  `SELECT u.id,u.email,u.name,u.role,u.country_code,u.city_id FROM sessions s JOIN users u ON u.id=s.user_id
+  `SELECT u.id,u.email,u.name,u.role,u.country_code,u.city_id,u.phone,u.workplace,u.bio FROM sessions s JOIN users u ON u.id=s.user_id
    WHERE s.token_hash=? AND s.expires_at>datetime('now')`
  ).bind(await sha256(token)).first<Record<string,string|null>>();
- return row?{id:row.id!,email:row.email!,name:row.name,role:row.role as Role,countryCode:row.country_code,cityId:row.city_id}:null;
+ return row?{id:row.id!,email:row.email!,name:row.name,role:row.role as Role,countryCode:row.country_code,cityId:row.city_id,phone:row.phone,workplace:row.workplace,bio:row.bio}:null;
 }
 
 export async function createSession(env:Env,request:Request,userId:string){
