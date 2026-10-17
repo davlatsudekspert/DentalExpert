@@ -1,0 +1,1015 @@
+{
+  "id": "surg-05",
+  "subject": "surg",
+  "n": 5,
+  "week": 5,
+  "type": "lecture",
+  "hours": 2,
+  "title": {
+    "en": "Tooth extraction: indications, contraindications and instruments",
+    "ru": "Удаление зуба: показания, противопоказания и инструменты",
+    "uz": "Tish olish: ko‘rsatmalar, qarshi ko‘rsatmalar va asboblar"
+  },
+  "goals": [
+    {
+      "en": "Identify indications and contraindications for extraction",
+      "ru": "Определять показания и противопоказания к удалению",
+      "uz": "Tish olishga ko‘rsatma va qarshi ko‘rsatmalarni aniqlash"
+    },
+    {
+      "en": "Select forceps for each tooth group",
+      "ru": "Подбирать щипцы для каждой группы зубов",
+      "uz": "Har bir tish guruhi uchun qisqich tanlash"
+    },
+    {
+      "en": "Know elevator types and principles",
+      "ru": "Знать виды и принципы работы элеваторов",
+      "uz": "Elevatorlarning turlari va ishlash tamoyillarini bilish"
+    }
+  ],
+  "links": [
+    "tooth-types-fdi",
+    "atlas"
+  ],
+  "sources": [
+    "Hupp JR, Ellis E, Tucker MR. Contemporary Oral and Maxillofacial Surgery, 7th ed., 2018",
+    "Miloro M et al. Peterson's Principles of Oral and Maxillofacial Surgery, 3rd ed., 2012"
+  ],
+  "slides": [
+    {
+      "layout": "title",
+      "title": {
+        "en": "Tooth extraction: indications, contraindications and instruments",
+        "ru": "Удаление зуба: показания, противопоказания и инструменты",
+        "uz": "Tish olish: ko‘rsatmalar, qarshi ko‘rsatmalar va asboblar"
+      },
+      "subtitle": {
+        "en": "Principles of forceps and elevators",
+        "ru": "Принципы работы щипцами и элеваторами",
+        "uz": "Qisqichlar va elevatorlar bilan ishlash tamoyillari"
+      }
+    },
+    {
+      "layout": "tree",
+      "title": {
+        "en": "Indications for extraction",
+        "ru": "Показания к удалению зуба",
+        "uz": "Tish olishga ko‘rsatmalar"
+      },
+      "root": {
+        "en": "Indications",
+        "ru": "Показания",
+        "uz": "Ko‘rsatmalar"
+      },
+      "children": [
+        {
+          "label": {
+            "en": "Tooth condition",
+            "ru": "Состояние зуба",
+            "uz": "Tish holati"
+          },
+          "items": [
+            {
+              "en": "Non-restorable caries",
+              "ru": "Неизлечимый кариес",
+              "uz": "Tiklab bo‘lmaydigan karies"
+            },
+            {
+              "en": "Root fracture",
+              "ru": "Перелом корня",
+              "uz": "Ildiz sinishi"
+            },
+            {
+              "en": "Endodontics not feasible",
+              "ru": "Эндодонтия невозможна",
+              "uz": "Endodontik davolash imkonsiz"
+            }
+          ]
+        },
+        {
+          "label": {
+            "en": "Periodontal",
+            "ru": "Пародонт",
+            "uz": "Parodont"
+          },
+          "items": [
+            {
+              "en": "Severe periodontitis, mobility",
+              "ru": "Тяжёлый пародонтит, подвижность",
+              "uz": "Og‘ir parodontit, kuchli qimirlash"
+            }
+          ]
+        },
+        {
+          "label": {
+            "en": "Position",
+            "ru": "Положение",
+            "uz": "Joylashuv"
+          },
+          "items": [
+            {
+              "en": "Impacted teeth",
+              "ru": "Ретинированные зубы",
+              "uz": "Retensiyalangan tishlar"
+            },
+            {
+              "en": "Supernumerary teeth",
+              "ru": "Сверхкомплектные зубы",
+              "uz": "Ortiqcha tishlar"
+            },
+            {
+              "en": "Orthodontic reasons",
+              "ru": "Ортодонтические показания",
+              "uz": "Ortodontik sabab"
+            }
+          ]
+        },
+        {
+          "label": {
+            "en": "Other",
+            "ru": "Другие",
+            "uz": "Boshqa"
+          },
+          "items": [
+            {
+              "en": "Before prosthetics",
+              "ru": "Перед протезированием",
+              "uz": "Protezlashdan oldin"
+            },
+            {
+              "en": "Hopeless tooth before radiotherapy",
+              "ru": "Бесперспективный зуб перед облучением",
+              "uz": "Nurlanishdan oldin istiqbolsiz tish"
+            },
+            {
+              "en": "Tooth in a fracture line",
+              "ru": "Зуб в линии перелома",
+              "uz": "Jag‘ sinishi chizig‘idagi tish"
+            }
+          ]
+        }
+      ],
+      "note": {
+        "en": "Always discuss with the patient whether the tooth could be saved before extracting it.",
+        "ru": "Перед удалением обязательно обсудите с пациентом возможность сохранить зуб.",
+        "uz": "Tish olishdan oldin uni davolab saqlash imkoniyatini bemor bilan albatta muhokama qiling."
+      }
+    },
+    {
+      "layout": "compare",
+      "title": {
+        "en": "Contraindications",
+        "ru": "Противопоказания",
+        "uz": "Qarshi ko‘rsatmalar"
+      },
+      "columns": [
+        {
+          "head": {
+            "en": "Systemic",
+            "ru": "Общие",
+            "uz": "Tizimli"
+          },
+          "items": [
+            {
+              "en": "Uncontrolled diabetes or heart disease",
+              "ru": "Некомпенсированный диабет или болезнь сердца",
+              "uz": "Nazoratsiz diabet yoki yurak kasalligi"
+            },
+            {
+              "en": "Severe bleeding disorders",
+              "ru": "Тяжёлые нарушения свёртывания",
+              "uz": "Og‘ir qon ivish buzilishi"
+            },
+            {
+              "en": "Leukaemia, severe immunosuppression",
+              "ru": "Лейкоз, тяжёлый иммунодефицит",
+              "uz": "Leykoz, og‘ir immunodefitsit"
+            },
+            {
+              "en": "Antiresorptives, radiotherapy: high risk",
+              "ru": "Антирезорбтивы, облучение — высокий риск",
+              "uz": "Antirezorbtiv dorilar, nurlanish – yuqori xavf"
+            }
+          ]
+        },
+        {
+          "head": {
+            "en": "Local",
+            "ru": "Местные",
+            "uz": "Mahalliy"
+          },
+          "items": [
+            {
+              "en": "Tooth within a malignant tumour",
+              "ru": "Зуб в злокачественной опухоли",
+              "uz": "Xavfli o‘sma ichidagi tish"
+            },
+            {
+              "en": "Previously irradiated bone",
+              "ru": "Зона облучённой кости",
+              "uz": "Nurlangan suyak sohasi"
+            },
+            {
+              "en": "Acute pericoronitis (treat first)",
+              "ru": "Острый перикоронит (сначала лечение)",
+              "uz": "O‘tkir perikoronarit (avval davolanadi)"
+            }
+          ]
+        }
+      ],
+      "note": {
+        "en": "Most contraindications are relative: extract once the patient is stabilised or in hospital. In pregnancy elective care is usually done in the second trimester.",
+        "ru": "Большинство противопоказаний относительны: удаление проводят после компенсации или в стационаре. При беременности плановые вмешательства обычно проводят во втором триместре.",
+        "uz": "Ko‘pchilik qarshi ko‘rsatmalar nisbiy: bemor holati yaxshilangach yoki shifoxonada tish olinadi. Homiladorlikda rejali aralashuvlar odatda ikkinchi trimestrda o‘tkaziladi."
+      }
+    },
+    {
+      "layout": "table",
+      "title": {
+        "en": "Maxillary forceps",
+        "ru": "Щипцы для верхней челюсти",
+        "uz": "Yuqori jag‘ qisqichlari"
+      },
+      "head": [
+        {
+          "en": "Teeth",
+          "ru": "Зубы",
+          "uz": "Tishlar"
+        },
+        {
+          "en": "Forceps design",
+          "ru": "Форма щипцов",
+          "uz": "Qisqich shakli"
+        },
+        {
+          "en": "Beaks",
+          "ru": "Щёчки",
+          "uz": "Jag‘lari"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "en": "Incisors and canines",
+            "ru": "Резцы и клыки",
+            "uz": "Kesuvchi va qoziq tishlar"
+          },
+          {
+            "en": "Straight forceps",
+            "ru": "Прямые щипцы",
+            "uz": "To‘g‘ri qisqich"
+          },
+          {
+            "en": "Non-pointed",
+            "ru": "Без шипов",
+            "uz": "Tikansiz"
+          }
+        ],
+        [
+          {
+            "en": "Premolars",
+            "ru": "Премоляры",
+            "uz": "Premolyarlar"
+          },
+          {
+            "en": "S-shaped forceps",
+            "ru": "S-образные щипцы",
+            "uz": "S-simon qisqich"
+          },
+          {
+            "en": "Non-pointed",
+            "ru": "Без шипов",
+            "uz": "Tikansiz"
+          }
+        ],
+        [
+          {
+            "en": "Molars",
+            "ru": "Моляры",
+            "uz": "Molyarlar"
+          },
+          {
+            "en": "S-shaped, right and left",
+            "ru": "S-образные, правые и левые",
+            "uz": "S-simon, o‘ng va chap"
+          },
+          {
+            "en": "Buccal beak pointed into the furcation",
+            "ru": "Шип на щёчной щёчке — в фуркацию",
+            "uz": "Lunj jag‘ida tikan furkatsiyaga"
+          }
+        ],
+        [
+          {
+            "en": "Roots and third molars",
+            "ru": "Корни и зубы мудрости",
+            "uz": "Ildizlar va aql tishlari"
+          },
+          {
+            "en": "Bayonet forceps",
+            "ru": "Штыковидные щипцы",
+            "uz": "Nayzasimon (bayonet) qisqich"
+          },
+          {
+            "en": "Narrow or wide",
+            "ru": "Узкие или широкие",
+            "uz": "Tor yoki keng"
+          }
+        ]
+      ]
+    },
+    {
+      "layout": "table",
+      "title": {
+        "en": "Mandibular forceps",
+        "ru": "Щипцы для нижней челюсти",
+        "uz": "Pastki jag‘ qisqichlari"
+      },
+      "head": [
+        {
+          "en": "Teeth",
+          "ru": "Зубы",
+          "uz": "Tishlar"
+        },
+        {
+          "en": "Forceps design",
+          "ru": "Форма щипцов",
+          "uz": "Qisqich shakli"
+        },
+        {
+          "en": "Beaks",
+          "ru": "Щёчки",
+          "uz": "Jag‘lari"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "en": "Incisors, canines, premolars",
+            "ru": "Резцы, клыки, премоляры",
+            "uz": "Kesuvchi, qoziq, premolyarlar"
+          },
+          {
+            "en": "Beak-shaped, bent at right angle",
+            "ru": "Клювовидные щипцы, изогнутые по плоскости",
+            "uz": "Tekislikda egilgan qisqich"
+          },
+          {
+            "en": "Non-pointed",
+            "ru": "Без шипов",
+            "uz": "Tikansiz"
+          }
+        ],
+        [
+          {
+            "en": "Molars",
+            "ru": "Моляры",
+            "uz": "Molyarlar"
+          },
+          {
+            "en": "Beak-shaped forceps",
+            "ru": "Клювовидные щипцы",
+            "uz": "Tekislikda egilgan qisqich"
+          },
+          {
+            "en": "Both beaks pointed",
+            "ru": "Шипы на обеих щёчках",
+            "uz": "Ikkala jag‘ida tikan"
+          }
+        ],
+        [
+          {
+            "en": "Third molars",
+            "ru": "Зубы мудрости",
+            "uz": "Aql tishlari"
+          },
+          {
+            "en": "Forceps bent on the edge",
+            "ru": "Щипцы, изогнутые по ребру",
+            "uz": "Qirrasi bo‘yicha egilgan qisqich"
+          },
+          {
+            "en": "Non-pointed",
+            "ru": "Без шипов",
+            "uz": "Tikansiz"
+          }
+        ],
+        [
+          {
+            "en": "Roots",
+            "ru": "Корни",
+            "uz": "Ildizlar"
+          },
+          {
+            "en": "Forceps with converging beaks",
+            "ru": "Щипцы со сходящимися щёчками",
+            "uz": "Jag‘lari yaqinlashadigan qisqich"
+          },
+          {
+            "en": "Narrow",
+            "ru": "Узкие",
+            "uz": "Tor"
+          }
+        ]
+      ],
+      "note": {
+        "en": "Key rule: mandibular forceps are bent at right angles to the handles, maxillary forceps are straight or S-shaped.",
+        "ru": "Основное правило: щипцы для нижней челюсти изогнуты под прямым углом к ручкам, для верхней — прямые или S-образные.",
+        "uz": "Asosiy qoida: pastki jag‘ qisqichi tutqichga nisbatan to‘g‘ri burchak ostida, yuqori jag‘ qisqichi esa to‘g‘ri yoki S-simon bo‘ladi."
+      }
+    },
+    {
+      "layout": "compare",
+      "title": {
+        "en": "Elevators",
+        "ru": "Элеваторы",
+        "uz": "Elevatorlar"
+      },
+      "columns": [
+        {
+          "head": {
+            "en": "Types",
+            "ru": "Виды",
+            "uz": "Turlari"
+          },
+          "items": [
+            {
+              "en": "Straight elevator",
+              "ru": "Прямой элеватор",
+              "uz": "To‘g‘ri elevator"
+            },
+            {
+              "en": "Angled elevators (right and left)",
+              "ru": "Угловые элеваторы (правый и левый)",
+              "uz": "Burchakli elevatorlar (o‘ng va chap)"
+            },
+            {
+              "en": "Lecluse elevator for lower third molars",
+              "ru": "Элеватор Леклюза — для нижнего зуба мудрости",
+              "uz": "Leklyuz elevatori – pastki aql tishi uchun"
+            },
+            {
+              "en": "Luxators",
+              "ru": "Люксаторы",
+              "uz": "Lyuksatorlar"
+            }
+          ]
+        },
+        {
+          "head": {
+            "en": "Principle",
+            "ru": "Принцип действия",
+            "uz": "Ishlash tamoyili"
+          },
+          "items": [
+            {
+              "en": "Wedge",
+              "ru": "Клин",
+              "uz": "Pona"
+            },
+            {
+              "en": "Lever",
+              "ru": "Рычаг",
+              "uz": "Richag"
+            },
+            {
+              "en": "Wheel and axle",
+              "ru": "Колесо и ось",
+              "uz": "G‘ildirak va o‘q"
+            }
+          ]
+        }
+      ],
+      "note": {
+        "en": "The elevator fulcrum must be bone, never the adjacent tooth; the other hand guards bone and soft tissue.",
+        "ru": "Опорой элеватора должна быть только кость, а не соседний зуб; второй рукой защищают кость и мягкие ткани.",
+        "uz": "Elevatorning tayanchi faqat suyak bo‘lishi kerak, qo‘shni tish emas; ikkinchi qo‘l bilan suyak va yumshoq to‘qimani himoya qiling."
+      }
+    },
+    {
+      "layout": "bullets",
+      "title": {
+        "en": "Other instruments",
+        "ru": "Вспомогательные инструменты",
+        "uz": "Qo‘shimcha asboblar"
+      },
+      "bullets": [
+        {
+          "en": "Syndesmotome to detach the gingival cuff",
+          "ru": "Синдесмотом — отслоение круговой связки",
+          "uz": "Sindesmotom – milk birikmasini ajratish"
+        },
+        {
+          "en": "Periosteal elevator to raise a flap",
+          "ru": "Распатор — отслоение слизисто-надкостничного лоскута",
+          "uz": "Raspator – shilliq-suyak usti laxtagini ko‘tarish"
+        },
+        {
+          "en": "Curette to clean the socket",
+          "ru": "Кюретажная ложка — ревизия лунки",
+          "uz": "Kyuretaj qoshig‘i – lunkani tozalash"
+        },
+        {
+          "en": "Needle holder and sutures",
+          "ru": "Иглодержатель и шовный материал",
+          "uz": "Igna ushlagich va tikuv materiali"
+        }
+      ]
+    },
+    {
+      "layout": "summary",
+      "title": {
+        "en": "Summary",
+        "ru": "Итоги",
+        "uz": "Xulosa"
+      },
+      "bullets": [
+        {
+          "en": "Consider saving the tooth before extracting",
+          "ru": "Перед удалением оценивают возможность сохранения",
+          "uz": "Tish olishdan oldin uni saqlash imkoniyati baholanadi"
+        },
+        {
+          "en": "Most contraindications are relative",
+          "ru": "Большинство противопоказаний относительны",
+          "uz": "Ko‘p qarshi ko‘rsatmalar nisbiy"
+        },
+        {
+          "en": "Choose forceps by tooth group and jaw",
+          "ru": "Щипцы подбирают по группе зубов и челюсти",
+          "uz": "Qisqich tish guruhi va jag‘ga mos tanlanadi"
+        },
+        {
+          "en": "Elevators rest on bone, not neighbouring teeth",
+          "ru": "Опора элеватора — кость, а не соседний зуб",
+          "uz": "Elevatorning tayanchi – suyak, qo‘shni tish emas"
+        }
+      ]
+    }
+  ],
+  "oral": [
+    {
+      "q": {
+        "en": "List the main indications for tooth extraction.",
+        "ru": "Перечислите основные показания к удалению зуба.",
+        "uz": "Tish olishga asosiy ko‘rsatmalarni sanab bering."
+      },
+      "plan": [
+        {
+          "en": "Non-restorable caries or fracture",
+          "ru": "Неизлечимый кариес или перелом",
+          "uz": "Tiklab bo‘lmaydigan karies yoki sinish"
+        },
+        {
+          "en": "Severe periodontal disease",
+          "ru": "Тяжёлый пародонтит",
+          "uz": "Og‘ir parodontit"
+        },
+        {
+          "en": "Impacted, supernumerary or malposed teeth",
+          "ru": "Ретинированные, сверхкомплектные, дистопированные зубы",
+          "uz": "Retensiyalangan, ortiqcha, noto‘g‘ri joylashgan tishlar"
+        },
+        {
+          "en": "Orthodontic, prosthetic and pre-radiotherapy reasons",
+          "ru": "Ортодонтические, ортопедические показания, перед облучением",
+          "uz": "Ortodontik, protez va nurlanish oldidan ko‘rsatmalar"
+        }
+      ]
+    },
+    {
+      "q": {
+        "en": "Explain the contraindications to extraction.",
+        "ru": "Объясните противопоказания к удалению зуба.",
+        "uz": "Tish olishga qarshi ko‘rsatmalarni tushuntiring."
+      },
+      "plan": [
+        {
+          "en": "Systemic: uncontrolled disease, bleeding disorders",
+          "ru": "Общие: декомпенсированные болезни, нарушения свёртывания",
+          "uz": "Tizimli: nazoratsiz kasalliklar, qon ivish buzilishi"
+        },
+        {
+          "en": "Antiresorptives and radiotherapy: osteonecrosis risk",
+          "ru": "Антирезорбтивы и облучение — риск остеонекроза",
+          "uz": "Antirezorbtiv dorilar va nurlanish – osteonekroz xavfi"
+        },
+        {
+          "en": "Local: malignancy, acute pericoronitis",
+          "ru": "Местные: злокачественная опухоль, острый перикоронит",
+          "uz": "Mahalliy: xavfli o‘sma, o‘tkir perikoronarit"
+        },
+        {
+          "en": "Most are relative; extract after preparation",
+          "ru": "Большинство относительны, удаляют после подготовки",
+          "uz": "Ko‘pchiligi nisbiy, tayyorgarlikdan keyin olinadi"
+        }
+      ]
+    },
+    {
+      "q": {
+        "en": "How do maxillary and mandibular forceps differ?",
+        "ru": "Чем различаются щипцы для верхней и нижней челюсти?",
+        "uz": "Yuqori va pastki jag‘ qisqichlarining farqi nimada?"
+      },
+      "plan": [
+        {
+          "en": "Maxillary: straight, S-shaped, bayonet",
+          "ru": "Верхние: прямые, S-образные, штыковидные",
+          "uz": "Yuqori: to‘g‘ri, S-simon, nayzasimon"
+        },
+        {
+          "en": "Mandibular: right-angled (on flat or edge)",
+          "ru": "Нижние: изогнутые под прямым углом (по плоскости или ребру)",
+          "uz": "Pastki: to‘g‘ri burchakli (tekislik yoki qirra bo‘yicha)"
+        },
+        {
+          "en": "Molar forceps have a pointed beak for the furcation",
+          "ru": "У моляров шип для фуркации",
+          "uz": "Molyar qisqichlarida furkatsiyaga kiradigan tikan"
+        }
+      ]
+    },
+    {
+      "q": {
+        "en": "Types of elevators and how they work.",
+        "ru": "Виды элеваторов и принципы их работы.",
+        "uz": "Elevatorlarning turlari va ishlash tamoyillari."
+      },
+      "plan": [
+        {
+          "en": "Straight, angled, Lecluse elevator",
+          "ru": "Прямой, угловые, элеватор Леклюза",
+          "uz": "To‘g‘ri, burchakli, Leklyuz elevatori"
+        },
+        {
+          "en": "Principles: wedge, lever, wheel and axle",
+          "ru": "Принципы: клин, рычаг, колесо и ось",
+          "uz": "Tamoyillar: pona, richag, g‘ildirak va o‘q"
+        },
+        {
+          "en": "Fulcrum on bone, not the adjacent tooth",
+          "ru": "Опора на кость, не на соседний зуб",
+          "uz": "Tayanch suyakda, qo‘shni tishda emas"
+        },
+        {
+          "en": "Guard with the other hand",
+          "ru": "Защита второй рукой",
+          "uz": "Ikkinchi qo‘l bilan himoya"
+        }
+      ]
+    }
+  ],
+  "test": [
+    {
+      "q": {
+        "en": "Which condition is an indication for extraction?",
+        "ru": "Какое состояние является показанием к удалению?",
+        "uz": "Qaysi holat tish olishga ko‘rsatma hisoblanadi?"
+      },
+      "options": [
+        {
+          "en": "A non-restorable, badly broken-down tooth",
+          "ru": "Неподлежащий восстановлению разрушенный зуб",
+          "uz": "Tiklab bo‘lmaydigan, chuqur buzilgan tish"
+        },
+        {
+          "en": "Reversible pulpitis",
+          "ru": "Обратимый пульпит",
+          "uz": "Qaytar pulpit"
+        },
+        {
+          "en": "Enamel caries",
+          "ru": "Кариес эмали",
+          "uz": "Emal kariesi"
+        },
+        {
+          "en": "Gingivitis",
+          "ru": "Гингивит",
+          "uz": "Gingivit"
+        }
+      ],
+      "correct": 0,
+      "explain": {
+        "en": "When a tooth cannot be restored, extraction is the treatment; the other conditions are treated conservatively.",
+        "ru": "Если зуб нельзя восстановить, удаление становится основным методом; остальные состояния лечат консервативно.",
+        "uz": "Tishni tiklab bo‘lmasa, tish olish asosiy davolash usuli bo‘ladi; boshqa holatlar konservativ davolanadi."
+      }
+    },
+    {
+      "q": {
+        "en": "Which forceps are used for maxillary premolars?",
+        "ru": "Какие щипцы применяют для удаления верхних премоляров?",
+        "uz": "Yuqori premolyarlarni olish uchun qaysi qisqich ishlatiladi?"
+      },
+      "options": [
+        {
+          "en": "Straight forceps",
+          "ru": "Прямые щипцы",
+          "uz": "To‘g‘ri qisqich"
+        },
+        {
+          "en": "S-shaped forceps without points",
+          "ru": "S-образные щипцы без шипов",
+          "uz": "S-simon, tikansiz qisqich"
+        },
+        {
+          "en": "Mandibular molar forceps",
+          "ru": "Щипцы для нижних моляров",
+          "uz": "Pastki molyar qisqichi"
+        },
+        {
+          "en": "Edge-bent forceps",
+          "ru": "Щипцы, изогнутые по ребру",
+          "uz": "Qirrasi bo‘yicha egilgan qisqich"
+        }
+      ],
+      "correct": 1,
+      "explain": {
+        "en": "Maxillary premolars are extracted with S-shaped forceps with non-pointed beaks.",
+        "ru": "Для верхних премоляров используют S-образные щипцы с щёчками без шипов.",
+        "uz": "Yuqori premolyarlar uchun S-simon, tikansiz jag‘li qisqichlar ishlatiladi."
+      }
+    },
+    {
+      "q": {
+        "en": "On which beak of forceps for the upper right first molar is the point, and why?",
+        "ru": "На какой щёчке щипцов для верхнего правого первого моляра шип и зачем?",
+        "uz": "Yuqori o‘ng birinchi molyar qisqichida tikan qaysi jag‘da bo‘ladi va nima uchun?"
+      },
+      "options": [
+        {
+          "en": "Palatal beak, for the palatal root",
+          "ru": "На нёбной, для нёбного корня",
+          "uz": "Tanglay jag‘ida, tanglay ildizi uchun"
+        },
+        {
+          "en": "On both beaks",
+          "ru": "На обеих щёчках",
+          "uz": "Ikkala jag‘ida"
+        },
+        {
+          "en": "Buccal beak, into the buccal furcation",
+          "ru": "На щёчной, в фуркацию между щёчными корнями",
+          "uz": "Lunj jag‘ida, ikki lunj ildizi orasidagi furkatsiyaga"
+        },
+        {
+          "en": "There is no point",
+          "ru": "Шипа нет",
+          "uz": "Tikan bo‘lmaydi"
+        }
+      ],
+      "correct": 2,
+      "explain": {
+        "en": "The maxillary molar has two buccal roots; the pointed beak engages the furcation between them.",
+        "ru": "У верхнего моляра два щёчных корня; щёчка с шипом входит в фуркацию между ними.",
+        "uz": "Yuqori molyarning lunj tomonida ikki ildiz bor, tikanli jag‘ ular orasidagi furkatsiyaga kiradi."
+      }
+    },
+    {
+      "q": {
+        "en": "What is characteristic of mandibular molar forceps?",
+        "ru": "В чём особенность щипцов для нижних моляров?",
+        "uz": "Pastki molyar qisqichining o‘ziga xosligi nima?"
+      },
+      "options": [
+        {
+          "en": "S-shaped design",
+          "ru": "S-образная форма",
+          "uz": "S-simon shakl"
+        },
+        {
+          "en": "Straight design",
+          "ru": "Прямая форма",
+          "uz": "To‘g‘ri shakl"
+        },
+        {
+          "en": "Bayonet design",
+          "ru": "Штыковидная форма",
+          "uz": "Nayzasimon shakl"
+        },
+        {
+          "en": "Both beaks pointed",
+          "ru": "Шипы на обеих щёчках",
+          "uz": "Ikkala jag‘ida tikan"
+        }
+      ],
+      "correct": 3,
+      "explain": {
+        "en": "The mandibular molar has buccal and lingual furcations, so both beaks are pointed.",
+        "ru": "У нижнего моляра фуркация есть с щёчной и язычной сторон, поэтому шипы на обеих щёчках.",
+        "uz": "Pastki molyarning lunj va til tomonida furkatsiya bor, shuning uchun ikkala jag‘da tikan bo‘ladi."
+      }
+    },
+    {
+      "q": {
+        "en": "What should the elevator's fulcrum be?",
+        "ru": "Что должно служить опорой для элеватора?",
+        "uz": "Elevator bilan ishlaganda tayanch nima bo‘lishi kerak?"
+      },
+      "options": [
+        {
+          "en": "The adjacent tooth",
+          "ru": "Соседний зуб",
+          "uz": "Qo‘shni tish"
+        },
+        {
+          "en": "Alveolar bone",
+          "ru": "Альвеолярная кость",
+          "uz": "Alveolyar suyak"
+        },
+        {
+          "en": "The gingiva",
+          "ru": "Десна",
+          "uz": "Milk"
+        },
+        {
+          "en": "An opposing tooth",
+          "ru": "Зуб противоположной челюсти",
+          "uz": "Qarama-qarshi jag‘ tishi"
+        }
+      ],
+      "correct": 1,
+      "explain": {
+        "en": "Using the neighbouring tooth can luxate or fracture it; the fulcrum must be bone.",
+        "ru": "Опора на соседний зуб может его вывихнуть или сломать; опорой служит только кость.",
+        "uz": "Qo‘shni tishga tayanish uni lyuksatsiya qilishi yoki sindirishi mumkin; tayanch faqat suyak bo‘ladi."
+      }
+    },
+    {
+      "q": {
+        "en": "A patient receives IV bisphosphonates for cancer. The main extraction risk is:",
+        "ru": "Пациент получает внутривенные бисфосфонаты по онкологическим показаниям. Главный риск при удалении?",
+        "uz": "Bemor bisfosfonatlarni vena ichiga qabul qiladi (onkologik ko‘rsatma bilan). Tish olishda asosiy xavf?"
+      },
+      "options": [
+        {
+          "en": "Medication-related osteonecrosis of the jaw",
+          "ru": "Медикаментозный остеонекроз челюсти",
+          "uz": "Dori bilan bog‘liq jag‘ osteonekrozi"
+        },
+        {
+          "en": "Anaphylaxis",
+          "ru": "Анафилаксия",
+          "uz": "Anafilaksiya"
+        },
+        {
+          "en": "Excess bone formation",
+          "ru": "Избыточное костеобразование",
+          "uz": "Ortiqcha suyak hosil bo‘lishi"
+        },
+        {
+          "en": "Hypoglycaemia",
+          "ru": "Гипогликемия",
+          "uz": "Gipoglikemiya"
+        }
+      ],
+      "correct": 0,
+      "explain": {
+        "en": "Antiresorptives, especially at oncology doses, raise the risk of jaw osteonecrosis after extraction.",
+        "ru": "Антирезорбтивы, особенно в онкологических дозах, повышают риск остеонекроза челюсти после удаления.",
+        "uz": "Antirezorbtiv dorilar, ayniqsa onkologik dozalarda, tish olishdan keyin jag‘ osteonekrozi xavfini oshiradi."
+      }
+    },
+    {
+      "q": {
+        "en": "Which forceps suit maxillary roots and third molars?",
+        "ru": "Какие щипцы удобны для корней и зубов мудрости верхней челюсти?",
+        "uz": "Yuqori jag‘ ildizlari va aql tishlarini olishda qaysi qisqich qulay?"
+      },
+      "options": [
+        {
+          "en": "Mandibular edge-bent forceps",
+          "ru": "Нижние, изогнутые по ребру",
+          "uz": "Pastki jag‘ uchun qirrasi bo‘yicha egilgan qisqich"
+        },
+        {
+          "en": "Straight forceps",
+          "ru": "Прямые щипцы",
+          "uz": "To‘g‘ri qisqich"
+        },
+        {
+          "en": "Bayonet forceps",
+          "ru": "Штыковидные щипцы",
+          "uz": "Nayzasimon (bayonet) qisqich"
+        },
+        {
+          "en": "Mandibular molar forceps",
+          "ru": "Щипцы для нижних моляров",
+          "uz": "Pastki molyar qisqichi"
+        }
+      ],
+      "correct": 2,
+      "explain": {
+        "en": "Bayonet forceps reach posterior maxillary teeth and roots well.",
+        "ru": "Штыковидные щипцы хорошо достигают задних отделов и корней верхней челюсти.",
+        "uz": "Nayzasimon qisqich og‘izning orqa qismiga va yuqori ildizlarga yaxshi yetib boradi."
+      }
+    },
+    {
+      "q": {
+        "en": "What is a syndesmotome used for?",
+        "ru": "Для чего применяют синдесмотом?",
+        "uz": "Sindesmotom nima uchun ishlatiladi?"
+      },
+      "options": [
+        {
+          "en": "Curetting the socket",
+          "ru": "Кюретаж лунки",
+          "uz": "Lunkani kyuretaj qilish"
+        },
+        {
+          "en": "Placing sutures",
+          "ru": "Наложение швов",
+          "uz": "Tikuv qo‘yish"
+        },
+        {
+          "en": "Sectioning roots",
+          "ru": "Разделение корней",
+          "uz": "Ildizni bo‘lish"
+        },
+        {
+          "en": "Detaching the gingival attachment around the neck",
+          "ru": "Отслоение десны вокруг шейки зуба",
+          "uz": "Tish bo‘yni atrofidagi milk birikmasini ajratish"
+        }
+      ],
+      "correct": 3,
+      "explain": {
+        "en": "Detaching the gingival cuff lets the forceps beaks seat subgingivally and prevents gingival tearing.",
+        "ru": "Синдесмотомия позволяет правильно наложить щёчки щипцов под десну и предупредить её разрыв.",
+        "uz": "Sindesmotom qisqich jag‘larini milk ostiga to‘g‘ri qo‘yish va milk yirtilishining oldini olish uchun ishlatiladi."
+      }
+    },
+    {
+      "q": {
+        "en": "Which elevator is widely used in CIS countries for lower third molars?",
+        "ru": "Какой элеватор широко используют в странах СНГ для удаления нижнего зуба мудрости?",
+        "uz": "Pastki aql tishini olish uchun MDH mamlakatlarida keng qo‘llaniladigan elevator qaysi?"
+      },
+      "options": [
+        {
+          "en": "Lecluse elevator",
+          "ru": "Элеватор Леклюза",
+          "uz": "Leklyuz elevatori"
+        },
+        {
+          "en": "Straight elevator",
+          "ru": "Прямой элеватор",
+          "uz": "To‘g‘ri elevator"
+        },
+        {
+          "en": "Periosteal elevator",
+          "ru": "Распатор",
+          "uz": "Raspator"
+        },
+        {
+          "en": "Curette",
+          "ru": "Кюретажная ложка",
+          "uz": "Kyuretaj qoshig‘i"
+        }
+      ],
+      "correct": 0,
+      "explain": {
+        "en": "The Lecluse elevator is inserted between the second and third molars to luxate the third molar distally.",
+        "ru": "Элеватор Леклюза вводят между вторым и третьим моляром и вывихивают зуб мудрости дистально.",
+        "uz": "Leklyuz elevatori ikkinchi va uchinchi molyarlar orasiga kiritiladi va aql tishini distal tomonga siljitadi."
+      }
+    },
+    {
+      "q": {
+        "en": "When is elective extraction best timed in pregnancy?",
+        "ru": "Когда плановое удаление зуба у беременной предпочтительно?",
+        "uz": "Homilador bemorga rejali tish olishni qachon o‘tkazish ma’qul?"
+      },
+      "options": [
+        {
+          "en": "In the first trimester",
+          "ru": "В первом триместре",
+          "uz": "Birinchi trimestrda"
+        },
+        {
+          "en": "In the second trimester",
+          "ru": "Во втором триместре",
+          "uz": "Ikkinchi trimestrda"
+        },
+        {
+          "en": "Late in the third trimester",
+          "ru": "В конце третьего триместра",
+          "uz": "Uchinchi trimestr oxirida"
+        },
+        {
+          "en": "Only a year after delivery",
+          "ru": "Только через год после родов",
+          "uz": "Faqat tug‘ruqdan keyin bir yil o‘tib"
+        }
+      ],
+      "correct": 1,
+      "explain": {
+        "en": "The second trimester is the safest period; urgent care is given at any stage.",
+        "ru": "Второй триместр считается наиболее безопасным; неотложную помощь оказывают в любом сроке.",
+        "uz": "Ikkinchi trimestr homila va ona uchun eng xavfsiz davr hisoblanadi; shoshilinch yordam esa istalgan vaqtda ko‘rsatiladi."
+      }
+    }
+  ]
+}

@@ -1,0 +1,1070 @@
+{
+  "id": "endo-04",
+  "subject": "endo",
+  "n": 4,
+  "week": 4,
+  "type": "practical",
+  "hours": 2,
+  "title": {
+    "en": "Access cavity preparation by tooth group",
+    "ru": "Эндодонтический доступ по группам зубов",
+    "uz": "Tish guruhlari bo‘yicha endodontik kirish"
+  },
+  "goals": [
+    {
+      "en": "Know the principles of access cavity preparation",
+      "ru": "Знать принципы эндодонтического доступа",
+      "uz": "Endodontik kirish tamoyillarini bilish"
+    },
+    {
+      "en": "Choose the access outline for each tooth group",
+      "ru": "Выбирать контур доступа для каждой группы зубов",
+      "uz": "Har bir tish guruhi uchun kirish konturini tanlash"
+    },
+    {
+      "en": "Locate orifices and prevent errors",
+      "ru": "Находить устья и предупреждать ошибки",
+      "uz": "Kanal og‘izlarini topish va xatolarning oldini olish"
+    }
+  ],
+  "links": [
+    "tooth-types-fdi",
+    "tooth-surfaces",
+    "atlas"
+  ],
+  "sources": [
+    "Berman LH, Hargreaves KM. Cohen's Pathways of the Pulp, 12th ed., 2020",
+    "Krasner P, Rankow HJ. Anatomy of the pulp-chamber floor. J Endod 2004",
+    "Torabinejad M, Fouad AF, Shabahang S. Endodontics: Principles and Practice, 6th ed., 2020"
+  ],
+  "slides": [
+    {
+      "layout": "title",
+      "title": {
+        "en": "Access cavity preparation by tooth group",
+        "ru": "Формирование эндодонтического доступа по группам зубов",
+        "uz": "Tish guruhlari bo‘yicha endodontik kirishni shakllantirish"
+      },
+      "subtitle": {
+        "en": "Straight-line access to canals while preserving tooth tissue",
+        "ru": "Прямолинейный доступ к каналам и сохранение тканей зуба",
+        "uz": "Kanallarga to‘g‘ri chiziqli kirish va tish to‘qimasini saqlash"
+      }
+    },
+    {
+      "layout": "bullets",
+      "title": {
+        "en": "Goals of the access cavity",
+        "ru": "Цели эндодонтического доступа",
+        "uz": "Endodontik kirishning maqsadlari"
+      },
+      "bullets": [
+        {
+          "en": "Remove the pulp chamber roof completely",
+          "ru": "Полностью удалить крышу полости зуба",
+          "uz": "Pulpa kamerasi tomini to‘liq olib tashlash"
+        },
+        {
+          "en": "Locate and see all canal orifices",
+          "ru": "Найти и увидеть все устья каналов",
+          "uz": "Barcha kanal og‘izlarini topish va ko‘rish"
+        },
+        {
+          "en": "Straight-line entry of instruments into canals",
+          "ru": "Прямолинейный вход инструментов в канал",
+          "uz": "Asboblar uchun kanalga to‘g‘ri chiziqli kirish"
+        },
+        {
+          "en": "Preserve pericervical dentin as far as possible",
+          "ru": "Максимально сохранить пришеечный дентин",
+          "uz": "Bo‘yin sohasidagi dentinni imkon qadar saqlash"
+        }
+      ],
+      "note": {
+        "en": "Access is the foundation of endodontics: errors lead to missed canals, ledges and perforations.",
+        "ru": "Доступ — основа эндодонтии: ошибки ведут к пропуску каналов, ступенькам и перфорациям.",
+        "uz": "Kirish – endodontiyaning asosi: noto‘g‘ri kirish kanal topilmasligi, pog‘ona va perforatsiyaga olib keladi."
+      }
+    },
+    {
+      "layout": "flow",
+      "title": {
+        "en": "Steps of access preparation",
+        "ru": "Этапы создания доступа",
+        "uz": "Kirish bosqichlari"
+      },
+      "steps": [
+        {
+          "label": {
+            "en": "Study the radiograph",
+            "ru": "Анализ рентгенограммы",
+            "uz": "Rentgenogrammani tahlil qilish"
+          },
+          "detail": {
+            "en": "Chamber size, canal direction",
+            "ru": "Размер полости, направление каналов",
+            "uz": "Kamera hajmi, kanallar yo‘nalishi"
+          }
+        },
+        {
+          "label": {
+            "en": "Remove caries and old fillings",
+            "ru": "Удаление кариеса и старой пломбы",
+            "uz": "Karies va eski plombani olish"
+          },
+          "detail": {
+            "en": "Sound walls remain",
+            "ru": "Остаются прочные стенки",
+            "uz": "Mustahkam devorlar qoladi"
+          }
+        },
+        {
+          "label": {
+            "en": "Place the rubber dam",
+            "ru": "Наложение коффердама",
+            "uz": "Kofferdamni qo‘yish"
+          },
+          "detail": {
+            "en": "Before entering the chamber",
+            "ru": "До вскрытия полости",
+            "uz": "Kameraga kirishdan oldin"
+          }
+        },
+        {
+          "label": {
+            "en": "Penetrate the chamber",
+            "ru": "Вскрытие полости",
+            "uz": "Kamerani ochish"
+          },
+          "detail": {
+            "en": "Round bur over the largest pulp horn",
+            "ru": "Шаровидным бором над самым крупным рогом",
+            "uz": "Shar bor bilan eng katta shox ustidan"
+          }
+        },
+        {
+          "label": {
+            "en": "Unroof and refine walls",
+            "ru": "Удаление крыши и выравнивание стенок",
+            "uz": "Tomni olish va devorlarni tekislash"
+          },
+          "detail": {
+            "en": "With a safe-ended bur",
+            "ru": "Бором с нережущим кончиком",
+            "uz": "Uchi kesmaydigan bor bilan"
+          }
+        },
+        {
+          "label": {
+            "en": "Locate orifices",
+            "ru": "Поиск устьев каналов",
+            "uz": "Kanal og‘izlarini topish"
+          },
+          "detail": {
+            "en": "Endodontic explorer and magnification",
+            "ru": "Эндодонтический зонд и увеличение",
+            "uz": "Endodontik zond va kattalashtirish"
+          }
+        }
+      ]
+    },
+    {
+      "layout": "table",
+      "title": {
+        "en": "Access outline: maxilla",
+        "ru": "Форма доступа: верхняя челюсть",
+        "uz": "Kirish shakli: yuqori jag‘"
+      },
+      "head": [
+        {
+          "en": "Tooth",
+          "ru": "Зуб",
+          "uz": "Tish"
+        },
+        {
+          "en": "Site and outline",
+          "ru": "Место и форма доступа",
+          "uz": "Kirish joyi va shakli"
+        },
+        {
+          "en": "Note",
+          "ru": "Обратите внимание",
+          "uz": "E’tibor bering"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "en": "Incisors",
+            "ru": "Резцы",
+            "uz": "Kesuvchi tishlar"
+          },
+          {
+            "en": "Palatal surface, triangular",
+            "ru": "Нёбная поверхность, треугольная",
+            "uz": "Tanglay yuzasida, uchburchak"
+          },
+          {
+            "en": "Remove the palatal shoulder",
+            "ru": "Удалить нёбный уступ",
+            "uz": "Tanglay «yelkasi»ni olish"
+          }
+        ],
+        [
+          {
+            "en": "Canine",
+            "ru": "Клык",
+            "uz": "Qoziq tish"
+          },
+          {
+            "en": "Palatal surface, oval",
+            "ru": "Нёбная поверхность, овальная",
+            "uz": "Tanglay yuzasida, oval"
+          },
+          {
+            "en": "Long root, wide canal",
+            "ru": "Длинный корень, широкий канал",
+            "uz": "Uzun ildiz, keng kanal"
+          }
+        ],
+        [
+          {
+            "en": "Premolars",
+            "ru": "Премоляры",
+            "uz": "Premolyarlar"
+          },
+          {
+            "en": "Occlusal, buccopalatal oval",
+            "ru": "Жевательная поверхность, щёчно-нёбный овал",
+            "uz": "Chaynov yuzasida, lunj-tanglay ovali"
+          },
+          {
+            "en": "Look for two canals",
+            "ru": "Ищите два канала",
+            "uz": "Ikki kanalni qidiring"
+          }
+        ],
+        [
+          {
+            "en": "Molars",
+            "ru": "Моляры",
+            "uz": "Molyarlar"
+          },
+          {
+            "en": "Triangular or rhomboid, mesially placed",
+            "ru": "Треугольная или ромбовидная, в мезиальной части",
+            "uz": "Uchburchak yoki romb, mezial qismda"
+          },
+          {
+            "en": "Extend mesiobuccally for MB2",
+            "ru": "Расширьте к MB для поиска MB2",
+            "uz": "MB2 uchun mezio-lunj tomonga kengaytiring"
+          }
+        ]
+      ],
+      "note": {
+        "en": "In maxillary molars preserve the oblique ridge where possible; look for MB2 on the line between the MB and palatal orifices.",
+        "ru": "В верхнем моляре по возможности сохраняйте косой валик; MB2 ищите на линии между MB и нёбным устьем.",
+        "uz": "Yuqori molyarda qiyshiq qirrani imkon qadar saqlang va MB2ni MB va tanglay kanali orasidagi chiziqda qidiring."
+      }
+    },
+    {
+      "layout": "table",
+      "title": {
+        "en": "Access outline: mandible",
+        "ru": "Форма доступа: нижняя челюсть",
+        "uz": "Kirish shakli: pastki jag‘"
+      },
+      "head": [
+        {
+          "en": "Tooth",
+          "ru": "Зуб",
+          "uz": "Tish"
+        },
+        {
+          "en": "Site and outline",
+          "ru": "Место и форма доступа",
+          "uz": "Kirish joyi va shakli"
+        },
+        {
+          "en": "Note",
+          "ru": "Обратите внимание",
+          "uz": "E’tibor bering"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "en": "Incisors",
+            "ru": "Резцы",
+            "uz": "Kesuvchi tishlar"
+          },
+          {
+            "en": "Lingual surface, narrow oval",
+            "ru": "Язычная поверхность, узкий овал",
+            "uz": "Til yuzasida, tor oval"
+          },
+          {
+            "en": "Look for a second lingual canal",
+            "ru": "Ищите второй язычный канал",
+            "uz": "Ikkinchi til kanalini qidiring"
+          }
+        ],
+        [
+          {
+            "en": "Canine",
+            "ru": "Клык",
+            "uz": "Qoziq tish"
+          },
+          {
+            "en": "Lingual surface, oval",
+            "ru": "Язычная поверхность, овальная",
+            "uz": "Til yuzasida, oval"
+          },
+          {
+            "en": "Sometimes two canals",
+            "ru": "Иногда два канала",
+            "uz": "Ba’zan ikki kanal"
+          }
+        ],
+        [
+          {
+            "en": "Premolars",
+            "ru": "Премоляры",
+            "uz": "Premolyarlar"
+          },
+          {
+            "en": "Occlusal oval, shifted buccally",
+            "ru": "Жевательная, овал смещён щёчно",
+            "uz": "Chaynov yuzasi, lunj tomonga siljigan oval"
+          },
+          {
+            "en": "Crown tilts lingually",
+            "ru": "Коронка наклонена язычно",
+            "uz": "Toj tilga qiyshaygan"
+          }
+        ],
+        [
+          {
+            "en": "Molars",
+            "ru": "Моляры",
+            "uz": "Molyarlar"
+          },
+          {
+            "en": "Trapezoid or rectangle, mesially placed",
+            "ru": "Трапеция или прямоугольник, мезиально",
+            "uz": "Trapetsiya yoki to‘rtburchak, mezial qismda"
+          },
+          {
+            "en": "One or two distal canals",
+            "ru": "Дистальных каналов один или два",
+            "uz": "Distal kanal bitta yoki ikkita"
+          }
+        ]
+      ]
+    },
+    {
+      "layout": "figure",
+      "title": {
+        "en": "Access outline on the occlusal surface",
+        "ru": "Контур доступа на жевательной поверхности",
+        "uz": "Kirish konturi chaynov yuzasida"
+      },
+      "image": "occlusal",
+      "callouts": [
+        {
+          "at": "fossa",
+          "label": {
+            "en": "Central fossa: entry point",
+            "ru": "Центральная ямка — точка входа",
+            "uz": "Markaziy chuqurcha – kirish nuqtasi"
+          }
+        },
+        {
+          "at": "cusp",
+          "label": {
+            "en": "Preserve the cusps",
+            "ru": "Сохранять бугры",
+            "uz": "Do‘mboqlarni saqlash"
+          }
+        },
+        {
+          "at": "ridge",
+          "label": {
+            "en": "Ridges give strength",
+            "ru": "Валики придают прочность",
+            "uz": "Qirralar mustahkamlik beradi"
+          }
+        },
+        {
+          "at": "fissure",
+          "label": {
+            "en": "Outline follows fissures",
+            "ru": "Контур по фиссурам",
+            "uz": "Kontur fissuralar bo‘ylab"
+          }
+        }
+      ],
+      "bullets": [
+        {
+          "en": "The outline mirrors the chamber projection",
+          "ru": "Контур соответствует проекции полости",
+          "uz": "Kontur kamera proyeksiyasiga mos bo‘lishi kerak"
+        }
+      ]
+    },
+    {
+      "layout": "tree",
+      "title": {
+        "en": "Laws of the chamber floor (Krasner and Rankow)",
+        "ru": "Законы дна полости (Краснер и Ранков)",
+        "uz": "Kamera tubi qonunlari (Krasner va Rankow)"
+      },
+      "root": {
+        "en": "Finding canal orifices",
+        "ru": "Поиск устьев каналов",
+        "uz": "Kanal og‘izlarini topish"
+      },
+      "children": [
+        {
+          "label": {
+            "en": "Centrality",
+            "ru": "Центральность",
+            "uz": "Markaziylik"
+          },
+          "items": [
+            {
+              "en": "Floor is centred in the tooth",
+              "ru": "Дно в центре зуба",
+              "uz": "Kamera tubi tish markazida joylashadi"
+            }
+          ]
+        },
+        {
+          "label": {
+            "en": "Concentricity",
+            "ru": "Концентричность",
+            "uz": "Konsentriklik"
+          },
+          "items": [
+            {
+              "en": "Walls mirror the outer contour",
+              "ru": "Стенки повторяют наружный контур",
+              "uz": "Kamera devorlari tashqi konturga mos"
+            }
+          ]
+        },
+        {
+          "label": {
+            "en": "Colour change",
+            "ru": "Изменение цвета",
+            "uz": "Rang o‘zgarishi"
+          },
+          "items": [
+            {
+              "en": "Floor is darker than walls",
+              "ru": "Дно темнее стенок",
+              "uz": "Tub devorlardan to‘qroq"
+            }
+          ]
+        },
+        {
+          "label": {
+            "en": "Symmetry",
+            "ru": "Симметрия",
+            "uz": "Simmetriya"
+          },
+          "items": [
+            {
+              "en": "Orifices lie symmetrically",
+              "ru": "Устья расположены симметрично",
+              "uz": "Og‘izlar simmetrik joylashadi"
+            }
+          ]
+        },
+        {
+          "label": {
+            "en": "Orifice location",
+            "ru": "Расположение устьев",
+            "uz": "Og‘iz joylashuvi"
+          },
+          "items": [
+            {
+              "en": "At floor-wall junctions",
+              "ru": "В углах дна и стенок",
+              "uz": "Tub-devor tutashgan joyda"
+            }
+          ]
+        }
+      ],
+      "note": {
+        "en": "Never grind the floor: its natural map shows where the orifices are.",
+        "ru": "Не сошлифовывайте дно бором: его естественная «карта» указывает на устья.",
+        "uz": "Kamera tubini bor bilan qirib tashlamang: tubning tabiiy xaritasi kanal og‘izlarini ko‘rsatadi."
+      }
+    },
+    {
+      "layout": "compare",
+      "title": {
+        "en": "Common errors and prevention",
+        "ru": "Основные ошибки и их профилактика",
+        "uz": "Asosiy xatolar va ularning oldini olish"
+      },
+      "columns": [
+        {
+          "head": {
+            "en": "Error",
+            "ru": "Ошибка",
+            "uz": "Xato"
+          },
+          "items": [
+            {
+              "en": "Residual chamber roof",
+              "ru": "Остатки крыши полости",
+              "uz": "Tomning bir qismi qolgan"
+            },
+            {
+              "en": "Floor or cervical perforation",
+              "ru": "Перфорация дна или шейки",
+              "uz": "Tub yoki bo‘yin perforatsiyasi"
+            },
+            {
+              "en": "Missed canal",
+              "ru": "Пропущенный канал",
+              "uz": "Topilmagan kanal"
+            },
+            {
+              "en": "Over-extension",
+              "ru": "Чрезмерное расширение",
+              "uz": "Haddan tashqari kengaytirish"
+            }
+          ]
+        },
+        {
+          "head": {
+            "en": "Prevention",
+            "ru": "Профилактика",
+            "uz": "Oldini olish"
+          },
+          "items": [
+            {
+              "en": "Check for roof remnants with an explorer",
+              "ru": "Проверять крышу зондом",
+              "uz": "Tom qoldiqlarini zond bilan tekshirish"
+            },
+            {
+              "en": "Align the bur with the tooth axis",
+              "ru": "Ориентировать бор по оси зуба",
+              "uz": "Bor o‘qini tish o‘qiga moslash"
+            },
+            {
+              "en": "Magnification and good light",
+              "ru": "Увеличение и хорошее освещение",
+              "uz": "Kattalashtirish, yaxshi yoritish"
+            },
+            {
+              "en": "Plan from the radiograph",
+              "ru": "Планирование по снимку",
+              "uz": "Rentgen bo‘yicha rejalashtirish"
+            }
+          ]
+        }
+      ],
+      "note": {
+        "en": "In the practical, students prepare access on extracted teeth and assess each other using this table.",
+        "ru": "На практике студенты готовят доступ на удалённых зубах и оценивают работы друг друга по этой таблице.",
+        "uz": "Amaliy mashg‘ulotda talabalar olingan tishlarda kirishni tayyorlab, bir-birining ishini shu jadval bo‘yicha baholasin."
+      }
+    },
+    {
+      "layout": "summary",
+      "title": {
+        "en": "Summary",
+        "ru": "Итоги",
+        "uz": "Xulosa"
+      },
+      "bullets": [
+        {
+          "en": "Remove the roof fully, keep the floor intact",
+          "ru": "Крыша удаляется полностью, дно сохраняется",
+          "uz": "Tom to‘liq olinadi, tub saqlanadi"
+        },
+        {
+          "en": "Anterior teeth: palatal or lingual access",
+          "ru": "У фронтальных зубов доступ с нёбной или язычной стороны",
+          "uz": "Old tishlarda kirish tanglay yoki til yuzasidan"
+        },
+        {
+          "en": "Molar outlines are placed mesially",
+          "ru": "У моляров контур смещён мезиально",
+          "uz": "Molyarlarda kontur mezial qismda joylashadi"
+        },
+        {
+          "en": "Floor laws help locate canals",
+          "ru": "Законы дна помогают найти каналы",
+          "uz": "Kamera tubi qonunlari kanallarni topishga yordam beradi"
+        }
+      ]
+    }
+  ],
+  "oral": [
+    {
+      "q": {
+        "en": "What are the requirements of an access cavity?",
+        "ru": "Какие требования предъявляют к эндодонтическому доступу?",
+        "uz": "Endodontik kirishga qanday talablar qo‘yiladi?"
+      },
+      "plan": [
+        {
+          "en": "Complete removal of the chamber roof",
+          "ru": "Полное удаление крыши полости",
+          "uz": "Kamera tomini to‘liq olib tashlash"
+        },
+        {
+          "en": "Visibility of all orifices",
+          "ru": "Визуализация всех устьев",
+          "uz": "Barcha kanal og‘izlarini ko‘rish"
+        },
+        {
+          "en": "Straight-line access",
+          "ru": "Прямолинейный доступ",
+          "uz": "To‘g‘ri chiziqli kirish"
+        },
+        {
+          "en": "Conservation of sound tissue, especially cervical dentin",
+          "ru": "Сохранение здоровых тканей, особенно пришеечного дентина",
+          "uz": "Sog‘lom to‘qimani, ayniqsa bo‘yin dentinini saqlash"
+        }
+      ]
+    },
+    {
+      "q": {
+        "en": "How is access prepared in a maxillary first molar?",
+        "ru": "Как формируют доступ в верхнем первом моляре?",
+        "uz": "Yuqori birinchi molyarda kirish qanday tayyorlanadi?"
+      },
+      "plan": [
+        {
+          "en": "Triangular or rhomboid outline in the mesial part",
+          "ru": "Треугольный или ромбовидный контур в мезиальной части",
+          "uz": "Chaynov yuzasining mezial qismida uchburchak yoki romb kontur"
+        },
+        {
+          "en": "Three main orifices: MB, DB, palatal",
+          "ru": "Три основных устья: MB, DB, нёбное",
+          "uz": "Uch asosiy og‘iz: MB, DB, tanglay"
+        },
+        {
+          "en": "Search for MB2 between MB and palatal orifices",
+          "ru": "Поиск MB2 между MB и нёбным устьем",
+          "uz": "MB2ni MB va tanglay og‘izlari orasida qidirish"
+        }
+      ]
+    },
+    {
+      "q": {
+        "en": "How is access made in anterior teeth and which errors occur?",
+        "ru": "Как формируют доступ во фронтальных зубах и какие бывают ошибки?",
+        "uz": "Old tishlarda kirish qanday shakllanadi va qanday xatolar uchraydi?"
+      },
+      "plan": [
+        {
+          "en": "Start at the centre of the palatal or lingual surface",
+          "ru": "Начинать с центра нёбной или язычной поверхности",
+          "uz": "Tanglay yoki til yuzasi markazidan boshlash"
+        },
+        {
+          "en": "Bur first perpendicular, then parallel to the long axis",
+          "ru": "Бор сначала перпендикулярно, затем параллельно оси зуба",
+          "uz": "Bor yo‘nalishini avval perpendikulyar, keyin tish o‘qiga parallel qilish"
+        },
+        {
+          "en": "Remove the lingual shoulder",
+          "ru": "Удаление язычного уступа",
+          "uz": "Til tomon «yelka»ni olish"
+        },
+        {
+          "en": "Errors: labial perforation, missed second canal",
+          "ru": "Ошибки: перфорация вестибулярной стенки, пропуск второго канала",
+          "uz": "Xatolar: lab tomon perforatsiyasi, topilmagan ikkinchi kanal"
+        }
+      ]
+    },
+    {
+      "q": {
+        "en": "Explain the Krasner and Rankow laws of the chamber floor.",
+        "ru": "Объясните законы дна полости по Краснеру и Ранкову.",
+        "uz": "Krasner va Rankow bo‘yicha kamera tubi qonunlarini tushuntiring."
+      },
+      "plan": [
+        {
+          "en": "Centrality and concentricity",
+          "ru": "Центральность и концентричность",
+          "uz": "Markaziylik va konsentriklik"
+        },
+        {
+          "en": "Colour change: floor is darker",
+          "ru": "Изменение цвета: дно темнее",
+          "uz": "Rang o‘zgarishi: tub to‘qroq"
+        },
+        {
+          "en": "Symmetry; orifices at floor-wall junctions",
+          "ru": "Симметрия; устья в углах дна и стенок",
+          "uz": "Simmetriya va og‘izlar tub-devor burchaklarida"
+        }
+      ]
+    }
+  ],
+  "test": [
+    {
+      "q": {
+        "en": "What is the main aim of the access cavity?",
+        "ru": "Какова главная цель эндодонтического доступа?",
+        "uz": "Endodontik kirishning asosiy maqsadi nima?"
+      },
+      "options": [
+        {
+          "en": "Complete caries removal",
+          "ru": "Полное удаление кариеса",
+          "uz": "Kariesni to‘liq olib tashlash"
+        },
+        {
+          "en": "Retention for the filling",
+          "ru": "Создание ретенции для пломбы",
+          "uz": "Plomba uchun retensiya yaratish"
+        },
+        {
+          "en": "Straight-line access to the canals",
+          "ru": "Прямолинейный доступ к каналам",
+          "uz": "Kanallarga to‘g‘ri chiziqli kirish"
+        },
+        {
+          "en": "Levelling the chamber floor",
+          "ru": "Выравнивание дна полости",
+          "uz": "Kamera tubini tekislash"
+        }
+      ],
+      "correct": 2,
+      "explain": {
+        "en": "Straight-line access reduces instrument stress on canal walls and prevents errors.",
+        "ru": "Прямолинейный доступ уменьшает давление инструмента на стенки и предупреждает ошибки.",
+        "uz": "To‘g‘ri chiziqli kirish asbobning kanal devorlariga keraksiz bosimini kamaytiradi va xatolarning oldini oladi."
+      }
+    },
+    {
+      "q": {
+        "en": "Where does access begin in a maxillary central incisor?",
+        "ru": "Откуда начинают доступ в верхнем центральном резце?",
+        "uz": "Yuqori markaziy kesuvchi tishda kirish qayerdan boshlanadi?"
+      },
+      "options": [
+        {
+          "en": "From the incisal edge",
+          "ru": "С режущего края",
+          "uz": "Kesuvchi qirradan"
+        },
+        {
+          "en": "From the centre of the palatal surface",
+          "ru": "С центра нёбной поверхности",
+          "uz": "Tanglay yuzasi markazidan"
+        },
+        {
+          "en": "From the labial surface",
+          "ru": "С вестибулярной поверхности",
+          "uz": "Lab yuzasidan"
+        },
+        {
+          "en": "From the cervical area",
+          "ru": "С пришеечной области",
+          "uz": "Bo‘yin sohasidan"
+        }
+      ],
+      "correct": 1,
+      "explain": {
+        "en": "Access starts in the centre of the palatal surface above the cingulum and is extended into a triangle.",
+        "ru": "Доступ начинают в центре нёбной поверхности над бугорком и расширяют в форме треугольника.",
+        "uz": "Kirish tanglay yuzasining markazidan, singulumdan yuqorida boshlanadi va uchburchak shaklda kengaytiriladi."
+      }
+    },
+    {
+      "q": {
+        "en": "Which bur is preferred for unroofing and refining the walls?",
+        "ru": "Какой бор предпочтителен для удаления крыши и обработки стенок?",
+        "uz": "Kamera tomini olib tashlash va devorlarni tekislashda qaysi bor afzal?"
+      },
+      "options": [
+        {
+          "en": "A safe-ended tapered bur",
+          "ru": "Конусный бор с нережущим кончиком",
+          "uz": "Uchi kesmaydigan konussimon bor"
+        },
+        {
+          "en": "An inverted-cone bur",
+          "ru": "Обратноконусный бор",
+          "uz": "Teskari konussimon bor"
+        },
+        {
+          "en": "An end-cutting fissure bur",
+          "ru": "Фиссурный бор с режущим торцом",
+          "uz": "Fissura bor, kesuvchi uchli"
+        },
+        {
+          "en": "A large round bur on the floor",
+          "ru": "Крупный шаровидный бор по дну",
+          "uz": "Katta shar bor tub ustida"
+        }
+      ],
+      "correct": 0,
+      "explain": {
+        "en": "A safe-ended bur shapes the walls without damaging the chamber floor.",
+        "ru": "Бор с нережущим кончиком формирует стенки, не повреждая дно полости.",
+        "uz": "Uchi kesmaydigan bor devorlarni shakllantiradi, lekin kamera tubini shikastlamaydi."
+      }
+    },
+    {
+      "q": {
+        "en": "Where is the MB2 orifice usually located in a maxillary first molar?",
+        "ru": "Где обычно расположено устье MB2 в верхнем первом моляре?",
+        "uz": "Yuqori birinchi molyarda MB2 kanali odatda qayerda joylashadi?"
+      },
+      "options": [
+        {
+          "en": "Next to the distobuccal orifice",
+          "ru": "Рядом с дистально-щёчным устьем",
+          "uz": "Distal-lunj og‘zi yonida"
+        },
+        {
+          "en": "Inside the palatal canal",
+          "ru": "Внутри нёбного канала",
+          "uz": "Tanglay kanali ichida"
+        },
+        {
+          "en": "In the centre of the floor",
+          "ru": "В центре дна полости",
+          "uz": "Kamera tubining markazida"
+        },
+        {
+          "en": "Palatal to MB, on the line between MB and palatal",
+          "ru": "От MB к нёбному, на линии между ними",
+          "uz": "MB og‘zidan tanglay tomon, ular orasidagi chiziqda"
+        }
+      ],
+      "correct": 3,
+      "explain": {
+        "en": "The MB2 orifice usually lies palatal and slightly mesial to MB, along the MB–palatal line.",
+        "ru": "Устье MB2 обычно лежит нёбно и чуть мезиальнее MB, на линии MB–нёбное.",
+        "uz": "MB2 og‘zi odatda MB og‘zidan tanglay va biroz mezial tomonda, MB-tanglay chizig‘ida joylashadi."
+      }
+    },
+    {
+      "q": {
+        "en": "How does the chamber floor colour compare with the walls?",
+        "ru": "Каков цвет дна полости по сравнению со стенками?",
+        "uz": "Kamera tubining rangi devorlarga nisbatan qanday?"
+      },
+      "options": [
+        {
+          "en": "Lighter, whitish",
+          "ru": "Светлее, беловатый",
+          "uz": "Och, oqish"
+        },
+        {
+          "en": "Identical",
+          "ru": "Одинаковый",
+          "uz": "Bir xil"
+        },
+        {
+          "en": "Darker",
+          "ru": "Темнее",
+          "uz": "To‘qroq"
+        },
+        {
+          "en": "Pink",
+          "ru": "Розовый",
+          "uz": "Pushti"
+        }
+      ],
+      "correct": 2,
+      "explain": {
+        "en": "By the colour-change law the floor is darker than the walls, marking the junction and orifices.",
+        "ru": "По закону изменения цвета дно темнее стенок, что указывает на границу и устья.",
+        "uz": "Rang o‘zgarishi qonuniga ko‘ra tub devorlardan to‘qroq; bu tub-devor chegarasini va og‘izlarni ko‘rsatadi."
+      }
+    },
+    {
+      "q": {
+        "en": "What is the access outline in a mandibular first molar?",
+        "ru": "Какова форма доступа в нижнем первом моляре?",
+        "uz": "Pastki birinchi molyarda kirish konturi qanday?"
+      },
+      "options": [
+        {
+          "en": "A mesially placed trapezoid or rectangle",
+          "ru": "Трапеция или прямоугольник, смещённые мезиально",
+          "uz": "Mezial joylashgan trapetsiya yoki to‘rtburchak"
+        },
+        {
+          "en": "A distally placed triangle",
+          "ru": "Треугольник, смещённый дистально",
+          "uz": "Distal joylashgan uchburchak"
+        },
+        {
+          "en": "The whole occlusal surface",
+          "ru": "Вся жевательная поверхность",
+          "uz": "Butun chaynov yuzasi"
+        },
+        {
+          "en": "An oval on the buccal surface",
+          "ru": "Овал на щёчной поверхности",
+          "uz": "Lunj yuzasidagi oval"
+        }
+      ],
+      "correct": 0,
+      "explain": {
+        "en": "The mandibular molar chamber lies mesially; the outline includes two mesial and one or two distal orifices.",
+        "ru": "Полость нижнего моляра смещена мезиально; контур включает два мезиальных и одно-два дистальных устья.",
+        "uz": "Pastki molyar kamerasi mezial joylashgan; kontur ikki mezial va bir yoki ikki distal og‘izni o‘z ichiga oladi."
+      }
+    },
+    {
+      "q": {
+        "en": "A student treated one canal in a mandibular incisor; a periapical lesion developed later. The likely cause is:",
+        "ru": "Студент нашёл и обработал один канал в нижнем резце; позже возник периапикальный очаг. Наиболее вероятная причина?",
+        "uz": "Talaba pastki kesuvchi tishda faqat bitta kanalni topdi va uni davoladi; keyinroq periapikal o‘choq paydo bo‘ldi. Eng ehtimolli sabab?"
+      },
+      "options": [
+        {
+          "en": "The access was too large",
+          "ru": "Слишком широкий доступ",
+          "uz": "Kirish juda katta bo‘lgan"
+        },
+        {
+          "en": "A missed lingual canal",
+          "ru": "Пропущенный язычный канал",
+          "uz": "Topilmagan til tomon kanali"
+        },
+        {
+          "en": "A rubber dam was used",
+          "ru": "Использовали коффердам",
+          "uz": "Kofferdam ishlatilgan"
+        },
+        {
+          "en": "The palatal shoulder was removed",
+          "ru": "Удалили нёбный уступ",
+          "uz": "Tanglay yelkasi olingan"
+        }
+      ],
+      "correct": 1,
+      "explain": {
+        "en": "Mandibular incisors often have a second lingual canal; if missed, infection persists.",
+        "ru": "В нижних резцах часто есть второй язычный канал; если его пропустить, инфекция сохраняется.",
+        "uz": "Pastki kesuvchi tishlarda ikkinchi til tomon kanali ko‘p uchraydi; u qolib ketsa infeksiya saqlanadi."
+      }
+    },
+    {
+      "q": {
+        "en": "When is the rubber dam placed?",
+        "ru": "Когда накладывают коффердам?",
+        "uz": "Kofferdam qachon qo‘yiladi?"
+      },
+      "options": [
+        {
+          "en": "After canal obturation",
+          "ru": "После пломбирования каналов",
+          "uz": "Kanallar plombalangandan keyin"
+        },
+        {
+          "en": "Only on maxillary teeth",
+          "ru": "Только на верхние зубы",
+          "uz": "Faqat yuqori jag‘ tishlarida"
+        },
+        {
+          "en": "Only if the patient asks",
+          "ru": "Только по просьбе пациента",
+          "uz": "Faqat bemor so‘rasa"
+        },
+        {
+          "en": "Before entering the pulp chamber",
+          "ru": "До вскрытия полости зуба",
+          "uz": "Pulpa kamerasiga kirishdan oldin"
+        }
+      ],
+      "correct": 3,
+      "explain": {
+        "en": "The rubber dam keeps saliva and bacteria out and prevents instruments being swallowed or inhaled.",
+        "ru": "Коффердам защищает канал от слюны и микробов и предупреждает аспирацию инструментов.",
+        "uz": "Kofferdam kanalni so‘lak va mikroblardan himoya qiladi va asboblar yutib yuborilishining oldini oladi."
+      }
+    },
+    {
+      "q": {
+        "en": "Why is access in a mandibular premolar shifted buccally?",
+        "ru": "Почему доступ в нижнем премоляре смещают щёчно?",
+        "uz": "Pastki premolyarda kirish nima uchun lunj tomonga siljitiladi?"
+      },
+      "options": [
+        {
+          "en": "The crown tilts lingually",
+          "ru": "Коронка наклонена язычно",
+          "uz": "Toj tilga qiyshaygani uchun"
+        },
+        {
+          "en": "The buccal cusp is low",
+          "ru": "Щёчный бугор низкий",
+          "uz": "Lunj do‘mbog‘i past bo‘lgani uchun"
+        },
+        {
+          "en": "The canal is in the buccal root",
+          "ru": "Канал в щёчном корне",
+          "uz": "Kanal lunj ildizida joylashgani uchun"
+        },
+        {
+          "en": "The enamel is thin",
+          "ru": "Тонкая эмаль",
+          "uz": "Emali yupqa bo‘lgani uchun"
+        }
+      ],
+      "correct": 0,
+      "explain": {
+        "en": "The mandibular premolar crown tilts lingually, so access is moved toward the buccal cusp to follow the root axis.",
+        "ru": "Коронка нижнего премоляра наклонена язычно, поэтому для совпадения с осью корня доступ смещают к щёчному бугру.",
+        "uz": "Pastki premolyar toji til tomonga og‘gan, shuning uchun ildiz o‘qiga mos kelishi uchun kirish lunj do‘mbog‘i tomon siljiydi."
+      }
+    },
+    {
+      "q": {
+        "en": "During access the bur penetrated the chamber floor and bleeding started. This is:",
+        "ru": "При доступе бор прошёл через дно полости, появилось кровотечение. Что это?",
+        "uz": "Kirish paytida bor kamera tubini teshib yubordi va qon ketdi. Bu nima?"
+      },
+      "options": [
+        {
+          "en": "A lateral canal",
+          "ru": "Латеральный канал",
+          "uz": "Lateral kanal"
+        },
+        {
+          "en": "A pulp polyp",
+          "ru": "Полип пульпы",
+          "uz": "Pulpa polipi"
+        },
+        {
+          "en": "A furcation perforation",
+          "ru": "Перфорация в области фуркации",
+          "uz": "Furkatsiya perforatsiyasi"
+        },
+        {
+          "en": "The apical foramen",
+          "ru": "Апикальное отверстие",
+          "uz": "Apikal teshik"
+        }
+      ],
+      "correct": 2,
+      "explain": {
+        "en": "Penetrating the floor causes a furcation perforation, which should be sealed promptly with a biocompatible material.",
+        "ru": "Прохождение через дно — перфорация фуркации; её нужно быстро закрыть биосовместимым материалом.",
+        "uz": "Tubdan o‘tish furkatsiya perforatsiyasini keltirib chiqaradi; uni tezda biomos material bilan yopish kerak."
+      }
+    }
+  ]
+}

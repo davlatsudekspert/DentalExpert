@@ -1,0 +1,1030 @@
+{
+  "id": "oralmed-05",
+  "subject": "oralmed",
+  "n": 5,
+  "week": 5,
+  "type": "lecture",
+  "hours": 2,
+  "title": {
+    "en": "Oral lichen planus and lichenoid reactions",
+    "ru": "Красный плоский лишай полости рта и лихеноидные реакции",
+    "uz": "Og‘iz bo‘shlig‘i qizil yassi temiratkisi va lixenoid reaksiyalar"
+  },
+  "goals": [
+    {
+      "en": "Recognise the clinical forms of lichen planus",
+      "ru": "Распознавать клинические формы красного плоского лишая",
+      "uz": "Qizil yassi temiratkining klinik shakllarini tanish"
+    },
+    {
+      "en": "Distinguish a lichenoid reaction from lichen planus",
+      "ru": "Отличать лихеноидную реакцию от красного плоского лишая",
+      "uz": "Lixenoid reaksiyani qizil yassi temiratkidan farqlash"
+    },
+    {
+      "en": "Know the biopsy indications and histological features",
+      "ru": "Знать показания к биопсии и гистологические признаки",
+      "uz": "Biopsiya ko‘rsatmalari va gistologik belgilarni bilish"
+    },
+    {
+      "en": "Plan treatment and long-term review",
+      "ru": "Составлять план лечения и длительного наблюдения",
+      "uz": "Davolash va uzoq muddat kuzatuv rejasini tuzish"
+    }
+  ],
+  "links": [],
+  "sources": [
+    "Glick M et al. Burket's Oral Medicine, 13th ed., 2021",
+    "Scully C. Oral and Maxillofacial Medicine: The Basis of Diagnosis and Treatment, 3rd ed., 2013",
+    "Warnakulasuriya S et al. Oral potentially malignant disorders: a consensus report on nomenclature and classification. Oral Dis 2021"
+  ],
+  "slides": [
+    {
+      "layout": "title",
+      "title": {
+        "en": "Oral lichen planus and lichenoid reactions",
+        "ru": "Красный плоский лишай полости рта и лихеноидные реакции",
+        "uz": "Og‘iz bo‘shlig‘i qizil yassi temiratkisi va lixenoid reaksiyalar"
+      },
+      "subtitle": {
+        "en": "Clinical forms, diagnosis, treatment and follow-up",
+        "ru": "Клинические формы, диагностика, лечение и наблюдение",
+        "uz": "Klinik shakllar, tashxis, davolash va kuzatuv"
+      }
+    },
+    {
+      "layout": "key",
+      "title": {
+        "en": "Definition",
+        "ru": "Определение",
+        "uz": "Ta’rif"
+      },
+      "term": {
+        "en": "Oral lichen planus",
+        "ru": "Красный плоский лишай полости рта",
+        "uz": "Og‘iz bo‘shlig‘i qizil yassi temiratkisi"
+      },
+      "definition": {
+        "en": "A chronic T-cell-mediated inflammatory disease of the oral mucosa. It is most common in middle-aged women, is usually symmetrical, runs a relapsing course and is classed as an oral potentially malignant disorder.",
+        "ru": "Хроническое воспалительное заболевание слизистой оболочки полости рта, опосредованное Т-лимфоцитами. Чаще встречается у женщин среднего возраста, поражения симметричны, течение рецидивирующее; относится к потенциально злокачественным заболеваниям.",
+        "uz": "Og‘iz bo‘shlig‘i shilliq qavatining T-limfotsitlar vositachiligidagi surunkali yallig‘lanish kasalligi. Ko‘pincha o‘rta yoshdagi ayollarda uchraydi, simmetrik joylashadi, qaytalanib turadi va potensial xavfli kasalliklar qatoriga kiradi."
+      },
+      "note": {
+        "en": "Stress that the disease is not infectious and has no cure, but can be controlled.",
+        "ru": "Подчеркните, что заболевание не заразно и не излечивается полностью, но поддаётся контролю.",
+        "uz": "Kasallik yuqumli emasligini va to‘liq davosi yo‘qligini, ammo nazorat qilish mumkinligini ta’kidlang."
+      }
+    },
+    {
+      "layout": "tree",
+      "title": {
+        "en": "Clinical forms",
+        "ru": "Клинические формы",
+        "uz": "Klinik shakllar"
+      },
+      "root": {
+        "en": "Forms of lichen planus",
+        "ru": "Формы красного плоского лишая",
+        "uz": "Qizil yassi temiratki shakllari"
+      },
+      "children": [
+        {
+          "label": {
+            "en": "Reticular",
+            "ru": "Сетчатая",
+            "uz": "Retikulyar"
+          },
+          "items": [
+            {
+              "en": "Wickham striae",
+              "ru": "Сетка Уикхема",
+              "uz": "Uikxem chiziqlari"
+            },
+            {
+              "en": "Usually painless",
+              "ru": "Чаще бессимптомна",
+              "uz": "Ko‘pincha simptomsiz"
+            }
+          ]
+        },
+        {
+          "label": {
+            "en": "Papular and plaque",
+            "ru": "Папулёзная и бляшечная",
+            "uz": "Papulyoz va plakchasimon"
+          },
+          "items": [
+            {
+              "en": "White papules, plaques",
+              "ru": "Белые папулы, бляшки",
+              "uz": "Oq tugunchalar, pilakchalar"
+            }
+          ]
+        },
+        {
+          "label": {
+            "en": "Atrophic (erythematous)",
+            "ru": "Атрофическая (эритематозная)",
+            "uz": "Atrofik (eritematoz)"
+          },
+          "items": [
+            {
+              "en": "Red, thinned mucosa",
+              "ru": "Красная, истончённая",
+              "uz": "Qizil, yupqalashgan"
+            },
+            {
+              "en": "Desquamative gingivitis",
+              "ru": "Десквамативный гингивит",
+              "uz": "Deskvamativ gingivit"
+            }
+          ]
+        },
+        {
+          "label": {
+            "en": "Erosive",
+            "ru": "Эрозивно-язвенная",
+            "uz": "Eroziv-yarali"
+          },
+          "items": [
+            {
+              "en": "Painful erosions",
+              "ru": "Болезненные эрозии",
+              "uz": "Og‘riqli eroziyalar"
+            }
+          ]
+        },
+        {
+          "label": {
+            "en": "Bullous",
+            "ru": "Буллёзная",
+            "uz": "Bulyoz"
+          },
+          "items": [
+            {
+              "en": "Rare",
+              "ru": "Встречается редко",
+              "uz": "Kam uchraydi"
+            }
+          ]
+        }
+      ],
+      "note": {
+        "en": "The reticular form is the most common; pain usually comes from atrophic and erosive forms — ask students about this.",
+        "ru": "Сетчатая форма самая частая; боль обычно вызывают атрофическая и эрозивная формы — спросите об этом студентов.",
+        "uz": "Retikulyar shakl eng ko‘p uchraydi; og‘riq odatda atrofik va eroziv shakllarda bo‘ladi — talabalardan shuni so‘rang."
+      }
+    },
+    {
+      "layout": "bullets",
+      "title": {
+        "en": "Clinical features",
+        "ru": "Клиническая картина",
+        "uz": "Klinik ko‘rinish"
+      },
+      "bullets": [
+        {
+          "en": "Bilateral white lacy striae on the buccal mucosa",
+          "ru": "Двусторонние белые сетчатые линии на слизистой щёк",
+          "uz": "Ikki tomonlama lunj shilliq qavatida oq to‘rsimon chiziqlar"
+        },
+        {
+          "en": "Dorsum of tongue, gingiva and lips may also be involved",
+          "ru": "Могут поражаться спинка языка, десна и губы",
+          "uz": "Til orqasi, milk va lablar ham zararlanishi mumkin"
+        },
+        {
+          "en": "On the gingiva — red, peeling desquamative gingivitis",
+          "ru": "На десне — красный, слущивающийся десквамативный гингивит",
+          "uz": "Milkda — qizargan, ko‘chib tushuvchi deskvamativ gingivit"
+        },
+        {
+          "en": "Burning and pain with spicy or acidic food",
+          "ru": "Жжение и боль от острой и кислой пищи",
+          "uz": "Achchiq va nordon ovqatdan achishish, og‘riq"
+        },
+        {
+          "en": "Skin may show purple, itchy, flat-topped papules",
+          "ru": "На коже возможны фиолетовые зудящие плоские папулы",
+          "uz": "Terida binafsharang, qichiydigan yassi tugunchalar bo‘lishi mumkin"
+        }
+      ],
+      "note": {
+        "en": "Remember to ask about the flexor wrists, nails and genital mucosa.",
+        "ru": "Не забудьте спросить о сгибательной поверхности запястий, ногтях и слизистой гениталий.",
+        "uz": "Bilak bukuvchi yuzasini, tirnoqlarni va jinsiy a’zolar shilliq qavati haqida so‘rashni unutmang."
+      }
+    },
+    {
+      "layout": "compare",
+      "title": {
+        "en": "Lichen planus vs lichenoid reaction",
+        "ru": "Красный плоский лишай и лихеноидная реакция",
+        "uz": "Qizil yassi temiratki va lixenoid reaksiya"
+      },
+      "columns": [
+        {
+          "head": {
+            "en": "Lichen planus",
+            "ru": "Красный плоский лишай",
+            "uz": "Qizil yassi temiratki"
+          },
+          "items": [
+            {
+              "en": "Cause unknown, immune-mediated",
+              "ru": "Причина неизвестна, иммунное заболевание",
+              "uz": "Sababi noma’lum, immun kasallik"
+            },
+            {
+              "en": "Bilateral and symmetrical",
+              "ru": "Двусторонний и симметричный",
+              "uz": "Ikki tomonlama va simmetrik"
+            },
+            {
+              "en": "Skin may be involved",
+              "ru": "Возможно поражение кожи",
+              "uz": "Teri zararlanishi bo‘lishi mumkin"
+            }
+          ]
+        },
+        {
+          "head": {
+            "en": "Lichenoid reaction",
+            "ru": "Лихеноидная реакция",
+            "uz": "Lixenoid reaksiya"
+          },
+          "items": [
+            {
+              "en": "Has a cause: filling, drug or other factor",
+              "ru": "Есть причина: пломба, лекарство или другой фактор",
+              "uz": "Aniq sabab: plomba, dori yoki boshqa omil"
+            },
+            {
+              "en": "Often unilateral, next to the cause",
+              "ru": "Часто односторонняя, рядом с причиной",
+              "uz": "Ko‘pincha bir tomonlama, sabab yonida"
+            },
+            {
+              "en": "Often improves once the cause is removed",
+              "ru": "После устранения причины часто уменьшается",
+              "uz": "Sabab yo‘qotilsa, ko‘pincha kamayadi"
+            }
+          ]
+        }
+      ],
+      "note": {
+        "en": "A lesion in direct contact with an amalgam filling suggests a lichenoid reaction.",
+        "ru": "Очаг, непосредственно прилегающий к амальгамовой пломбе, заставляет заподозрить лихеноидную реакцию.",
+        "uz": "Amalgama plomba bilan bevosita tegib turgan o‘choq lixenoid reaksiyaga shubha uyg‘otadi."
+      }
+    },
+    {
+      "layout": "table",
+      "title": {
+        "en": "Causes of lichenoid reactions",
+        "ru": "Причины лихеноидных реакций",
+        "uz": "Lixenoid reaksiyalar sabablari"
+      },
+      "head": [
+        {
+          "en": "Type",
+          "ru": "Тип",
+          "uz": "Turi"
+        },
+        {
+          "en": "Example",
+          "ru": "Пример",
+          "uz": "Misol"
+        },
+        {
+          "en": "Clue",
+          "ru": "Признак",
+          "uz": "Belgisi"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "en": "Contact",
+            "ru": "Контактная",
+            "uz": "Kontakt"
+          },
+          {
+            "en": "Amalgam filling, metal crown",
+            "ru": "Амальгамовая пломба, металлическая коронка",
+            "uz": "Amalgama plomba, metall koronka"
+          },
+          {
+            "en": "Lesion touches the material",
+            "ru": "Очаг прилегает к материалу",
+            "uz": "O‘choq material bilan tegib turadi"
+          }
+        ],
+        [
+          {
+            "en": "Drug-induced",
+            "ru": "Лекарственная",
+            "uz": "Dori ta’sirida"
+          },
+          {
+            "en": "NSAIDs, ACE inhibitors, beta-blockers",
+            "ru": "НПВС, ингибиторы АПФ, бета-блокаторы",
+            "uz": "NYaQV, AAF ingibitorlari, beta-blokatorlar"
+          },
+          {
+            "en": "Appears after the drug is started",
+            "ru": "Появляется после начала приёма",
+            "uz": "Dori boshlangandan keyin paydo bo‘ladi"
+          }
+        ],
+        [
+          {
+            "en": "Graft-versus-host disease",
+            "ru": "Реакция «трансплантат против хозяина»",
+            "uz": "Transplantat-xo‘jayinga qarshi kasallik"
+          },
+          {
+            "en": "After bone marrow transplant",
+            "ru": "После трансплантации костного мозга",
+            "uz": "Suyak iligi ko‘chirilgandan keyin"
+          },
+          {
+            "en": "Transplant in the history",
+            "ru": "Трансплантация в анамнезе",
+            "uz": "Anamnezda transplantatsiya"
+          }
+        ]
+      ]
+    },
+    {
+      "layout": "flow",
+      "title": {
+        "en": "Diagnostic steps",
+        "ru": "Этапы диагностики",
+        "uz": "Tashxis qo‘yish bosqichlari"
+      },
+      "steps": [
+        {
+          "label": {
+            "en": "History",
+            "ru": "Анамнез",
+            "uz": "Anamnez"
+          },
+          "detail": {
+            "en": "Drugs, fillings, skin signs",
+            "ru": "Лекарства, пломбы, кожные проявления",
+            "uz": "Dorilar, plombalar, teri belgilari"
+          }
+        },
+        {
+          "label": {
+            "en": "Examination",
+            "ru": "Осмотр",
+            "uz": "Ko‘rik"
+          },
+          "detail": {
+            "en": "Form, site, symmetry",
+            "ru": "Форма, локализация, симметрия",
+            "uz": "Shakl, joylashuv, simmetriya"
+          }
+        },
+        {
+          "label": {
+            "en": "Biopsy",
+            "ru": "Биопсия",
+            "uz": "Biopsiya"
+          },
+          "detail": {
+            "en": "Confirm and exclude dysplasia",
+            "ru": "Подтверждение и исключение дисплазии",
+            "uz": "Tasdiqlash va displaziyani istisno qilish"
+          }
+        },
+        {
+          "label": {
+            "en": "Histology",
+            "ru": "Гистология",
+            "uz": "Gistologiya"
+          },
+          "detail": {
+            "en": "Band-like lymphocytic infiltrate below the basal layer",
+            "ru": "Лентовидный лимфоцитарный инфильтрат под базальным слоем",
+            "uz": "Bazal qavat ostida tasmasimon limfotsitar infiltrat"
+          }
+        },
+        {
+          "label": {
+            "en": "Diagnosis and plan",
+            "ru": "Диагноз и план",
+            "uz": "Tashxis va reja"
+          },
+          "detail": {
+            "en": "Treatment and regular review",
+            "ru": "Лечение и регулярное наблюдение",
+            "uz": "Davolash va muntazam kuzatuv"
+          }
+        }
+      ],
+      "note": {
+        "en": "Explain that the biopsy should be taken from the most changed area, especially an indurated or red one.",
+        "ru": "Объясните, что для биопсии выбирают наиболее изменённый участок, особенно уплотнённый или красный.",
+        "uz": "Biopsiya uchun eng o‘zgargan, ayniqsa qattiqlashgan yoki qizil sohani tanlash kerakligini tushuntiring."
+      }
+    },
+    {
+      "layout": "cycle",
+      "title": {
+        "en": "Treatment and follow-up cycle",
+        "ru": "Цикл лечения и наблюдения",
+        "uz": "Davolash va kuzatuv sikli"
+      },
+      "center": {
+        "en": "Long-term control",
+        "ru": "Долгосрочный контроль",
+        "uz": "Uzoq muddatli nazorat"
+      },
+      "steps": [
+        {
+          "label": {
+            "en": "Explanation and hygiene",
+            "ru": "Объяснение и гигиена",
+            "uz": "Tushuntirish va gigiyena"
+          }
+        },
+        {
+          "label": {
+            "en": "Remove irritants",
+            "ru": "Устранение раздражителей",
+            "uz": "Qo‘zg‘atuvchilarni yo‘qotish"
+          }
+        },
+        {
+          "label": {
+            "en": "Topical corticosteroid",
+            "ru": "Местный кортикостероид",
+            "uz": "Mahalliy kortikosteroid"
+          }
+        },
+        {
+          "label": {
+            "en": "Treat candidiasis",
+            "ru": "Лечение кандидоза",
+            "uz": "Kandidozni davolash"
+          }
+        },
+        {
+          "label": {
+            "en": "Regular review",
+            "ru": "Регулярный осмотр",
+            "uz": "Muntazam ko‘rik"
+          }
+        }
+      ],
+      "note": {
+        "en": "Asymptomatic reticular disease needs no drug — explanation and review are enough.",
+        "ru": "При бессимптомной сетчатой форме лекарства не обязательны — достаточно объяснения и наблюдения.",
+        "uz": "Simptomsiz retikulyar shaklda dori shart emas — tushuntirish va kuzatuv yetarli."
+      }
+    },
+    {
+      "layout": "bullets",
+      "title": {
+        "en": "Malignant change and review",
+        "ru": "Малигнизация и наблюдение",
+        "uz": "Xavfli o‘zgarish va kuzatuv"
+      },
+      "bullets": [
+        {
+          "en": "The risk of malignant change is small but real",
+          "ru": "Риск озлокачествления небольшой, но существует",
+          "uz": "Saratonga aylanish xavfi kichik, ammo bor"
+        },
+        {
+          "en": "Erosive and atrophic forms need closer attention",
+          "ru": "Эрозивная и атрофическая формы требуют большего внимания",
+          "uz": "Eroziv va atrofik shakllar ko‘proq e’tibor talab qiladi"
+        },
+        {
+          "en": "Review at least yearly, sooner if it changes",
+          "ru": "Осмотр не реже раза в год, при изменениях раньше",
+          "uz": "Kamida yiliga bir marta ko‘rik, o‘zgarsa tezroq"
+        },
+        {
+          "en": "Re-biopsy any new induration or non-healing ulcer",
+          "ru": "При новом уплотнении или незаживающей язве — повторная биопсия",
+          "uz": "Yangi qattiqlashuv yoki bitmaydigan yarada qayta biopsiya"
+        },
+        {
+          "en": "Encourage stopping smoking and alcohol",
+          "ru": "Побуждать отказаться от курения и алкоголя",
+          "uz": "Chekish va spirtli ichimlikni tashlashga undash"
+        }
+      ]
+    },
+    {
+      "layout": "summary",
+      "title": {
+        "en": "Summary",
+        "ru": "Итоги",
+        "uz": "Xulosa"
+      },
+      "bullets": [
+        {
+          "en": "Lichen planus is a chronic immune disease, usually bilateral",
+          "ru": "Красный плоский лишай — хроническое иммунное заболевание, чаще двустороннее",
+          "uz": "Qizil yassi temiratki — surunkali immun kasallik, ko‘pincha ikki tomonlama"
+        },
+        {
+          "en": "A lichenoid reaction has a cause: a filling or a drug",
+          "ru": "У лихеноидной реакции есть причина: пломба или лекарство",
+          "uz": "Lixenoid reaksiyaning aniq sababi bor: plomba yoki dori"
+        },
+        {
+          "en": "Biopsy confirms the diagnosis",
+          "ru": "Диагноз подтверждает биопсия",
+          "uz": "Tashxisni biopsiya tasdiqlaydi"
+        },
+        {
+          "en": "Symptomatic forms: topical corticosteroids",
+          "ru": "При симптомных формах — местные кортикостероиды",
+          "uz": "Simptomli shakllarda mahalliy kortikosteroid"
+        },
+        {
+          "en": "Potentially malignant — needs lifelong review",
+          "ru": "Потенциально злокачественное — нужно пожизненное наблюдение",
+          "uz": "Potensial xavfli — umrbod kuzatuv kerak"
+        }
+      ]
+    }
+  ],
+  "oral": [
+    {
+      "q": {
+        "en": "Name the clinical forms of oral lichen planus.",
+        "ru": "Назовите клинические формы красного плоского лишая полости рта.",
+        "uz": "Og‘iz bo‘shlig‘i qizil yassi temiratkisining klinik shakllarini ayting."
+      },
+      "plan": [
+        {
+          "en": "Reticular: Wickham striae, usually painless",
+          "ru": "Сетчатая: сетка Уикхема, чаще бессимптомна",
+          "uz": "Retikulyar: Uikxem chiziqlari, ko‘pincha simptomsiz"
+        },
+        {
+          "en": "Papular and plaque forms",
+          "ru": "Папулёзная и бляшечная формы",
+          "uz": "Papulyoz va plakchasimon shakllar"
+        },
+        {
+          "en": "Atrophic and erosive forms are painful",
+          "ru": "Атрофическая и эрозивная формы — болезненные",
+          "uz": "Atrofik va eroziv shakllar — og‘riq beradi"
+        },
+        {
+          "en": "The bullous form is rare",
+          "ru": "Буллёзная форма встречается редко",
+          "uz": "Bulyoz shakl kam uchraydi"
+        }
+      ]
+    },
+    {
+      "q": {
+        "en": "How do you distinguish a lichenoid reaction from lichen planus?",
+        "ru": "Как отличить лихеноидную реакцию от красного плоского лишая?",
+        "uz": "Lixenoid reaksiyani qizil yassi temiratkidan qanday farqlaysiz?"
+      },
+      "plan": [
+        {
+          "en": "A lichenoid reaction has a cause: a filling or a drug",
+          "ru": "У лихеноидной реакции есть причина: пломба или лекарство",
+          "uz": "Lixenoid reaksiyada aniq sabab bor: plomba yoki dori"
+        },
+        {
+          "en": "Often unilateral, next to the material",
+          "ru": "Часто односторонняя, рядом с материалом",
+          "uz": "Ko‘pincha bir tomonlama, material yonida"
+        },
+        {
+          "en": "Ask about drugs and time of onset",
+          "ru": "Уточнить лекарственный анамнез и время начала",
+          "uz": "Dori anamnezi va boshlanish vaqtini so‘rash"
+        },
+        {
+          "en": "Improvement after removing the cause supports it",
+          "ru": "Улучшение после устранения причины подтверждает диагноз",
+          "uz": "Sabab yo‘qotilgach kamayishi tashxisni qo‘llaydi"
+        }
+      ]
+    },
+    {
+      "q": {
+        "en": "Why and where is a biopsy taken in lichen planus?",
+        "ru": "Зачем и откуда берут биопсию при красном плоском лишае?",
+        "uz": "Qizil yassi temiratkida biopsiya nima uchun va qayerdan olinadi?"
+      },
+      "plan": [
+        {
+          "en": "To confirm the diagnosis",
+          "ru": "Для подтверждения диагноза",
+          "uz": "Tashxisni tasdiqlash uchun"
+        },
+        {
+          "en": "To exclude dysplasia and cancer",
+          "ru": "Для исключения дисплазии и рака",
+          "uz": "Displaziya va saratonni istisno qilish uchun"
+        },
+        {
+          "en": "From the most changed, indurated or red area",
+          "ru": "Из наиболее изменённого, уплотнённого или красного участка",
+          "uz": "Eng o‘zgargan, qattiqlashgan yoki qizil sohadan"
+        },
+        {
+          "en": "Histology: band-like lymphocytic infiltrate",
+          "ru": "Гистология: лентовидный лимфоцитарный инфильтрат",
+          "uz": "Gistologiya: tasmasimon limfotsitar infiltrat"
+        }
+      ]
+    },
+    {
+      "q": {
+        "en": "Explain how symptomatic lichen planus is treated and followed up.",
+        "ru": "Объясните принципы лечения и наблюдения при симптомном красном плоском лишае.",
+        "uz": "Simptomli qizil yassi temiratkini davolash va kuzatish tamoyillarini tushuntiring."
+      },
+      "plan": [
+        {
+          "en": "Explain the nature of the disease",
+          "ru": "Объяснить пациенту природу заболевания",
+          "uz": "Bemorga kasallik tabiatini tushuntirish"
+        },
+        {
+          "en": "Hygiene, smooth sharp edges, remove irritants",
+          "ru": "Гигиена, устранение острых краёв пломб и раздражителей",
+          "uz": "Og‘iz gigiyenasi, o‘tkir plomba qirralari va qo‘zg‘atuvchilarni yo‘qotish"
+        },
+        {
+          "en": "Topical corticosteroid; refer severe cases",
+          "ru": "Местные кортикостероиды, при тяжёлом течении — направление к специалисту",
+          "uz": "Mahalliy kortikosteroid, og‘ir holatda mutaxassisga yo‘llash"
+        },
+        {
+          "en": "Regular review; re-biopsy if it changes",
+          "ru": "Регулярные осмотры, при изменениях — повторная биопсия",
+          "uz": "Muntazam ko‘rik, o‘zgarsa qayta biopsiya"
+        }
+      ]
+    }
+  ],
+  "test": [
+    {
+      "q": {
+        "en": "Which form of oral lichen planus is the most common?",
+        "ru": "Какая форма красного плоского лишая полости рта встречается чаще всего?",
+        "uz": "Og‘iz bo‘shlig‘i qizil yassi temiratkisining eng ko‘p uchraydigan shakli qaysi?"
+      },
+      "options": [
+        {
+          "en": "Erosive form",
+          "ru": "Эрозивная форма",
+          "uz": "Eroziv shakl"
+        },
+        {
+          "en": "Reticular form",
+          "ru": "Сетчатая форма",
+          "uz": "Retikulyar shakl"
+        },
+        {
+          "en": "Bullous form",
+          "ru": "Буллёзная форма",
+          "uz": "Bulyoz shakl"
+        },
+        {
+          "en": "Atrophic form",
+          "ru": "Атрофическая форма",
+          "uz": "Atrofik shakl"
+        }
+      ],
+      "correct": 1,
+      "explain": {
+        "en": "The reticular form with Wickham striae is the most common and usually painless.",
+        "ru": "Сетчатая форма с сеткой Уикхема встречается чаще всего и обычно бессимптомна.",
+        "uz": "Retikulyar shakl Uikxem chiziqlari bilan eng ko‘p uchraydi va odatda simptomsiz bo‘ladi."
+      }
+    },
+    {
+      "q": {
+        "en": "What do Wickham striae look like?",
+        "ru": "Как выглядит сетка Уикхема?",
+        "uz": "Uikxem chiziqlari qanday ko‘rinishga ega?"
+      },
+      "options": [
+        {
+          "en": "Red pinpoint spots",
+          "ru": "Красные точечные пятна",
+          "uz": "Qizil nuqtali dog‘lar"
+        },
+        {
+          "en": "Clusters of yellow granules",
+          "ru": "Скопление жёлтых гранул",
+          "uz": "Sariq donachalar to‘plami"
+        },
+        {
+          "en": "White lacy lines",
+          "ru": "Белые сетчатые линии",
+          "uz": "Oq to‘rsimon chiziqlar"
+        },
+        {
+          "en": "Black pigmented patches",
+          "ru": "Чёрные пигментные пятна",
+          "uz": "Qora pigment dog‘lari"
+        }
+      ],
+      "correct": 2,
+      "explain": {
+        "en": "Wickham striae are white, lace-like lines on the mucosa.",
+        "ru": "Сетка Уикхема — белые сетчатые линии на слизистой оболочке.",
+        "uz": "Uikxem chiziqlari — shilliq qavatdagi oq, to‘rsimon chiziqlar."
+      }
+    },
+    {
+      "q": {
+        "en": "A 50-year-old woman has painless white lacy striae on both cheeks; biopsy confirmed lichen planus. Best approach?",
+        "ru": "У женщины 50 лет на обеих щеках белые сетчатые линии, жалоб нет, биопсия подтвердила красный плоский лишай. Тактика?",
+        "uz": "50 yoshli ayolning ikkala lunjida oq to‘rsimon chiziqlar bor, shikoyati yo‘q, biopsiya qizil yassi temiratkini tasdiqlagan. Eng to‘g‘ri yo‘l?"
+      },
+      "options": [
+        {
+          "en": "Explanation and regular review",
+          "ru": "Объяснение и регулярное наблюдение",
+          "uz": "Tushuntirish va muntazam kuzatuv"
+        },
+        {
+          "en": "Course of systemic corticosteroids",
+          "ru": "Курс системных кортикостероидов",
+          "uz": "Tizimli kortikosteroid kursi"
+        },
+        {
+          "en": "Surgical excision of the lesions",
+          "ru": "Хирургическое иссечение очагов",
+          "uz": "O‘choqlarni jarrohlik yo‘li bilan kesish"
+        },
+        {
+          "en": "Long-term antibiotic treatment",
+          "ru": "Длительная антибиотикотерапия",
+          "uz": "Antibiotik bilan uzoq davolash"
+        }
+      ],
+      "correct": 0,
+      "explain": {
+        "en": "Asymptomatic reticular disease needs no drug, but review is needed because it is potentially malignant.",
+        "ru": "При бессимптомной сетчатой форме лекарства не нужны, но из-за потенциальной злокачественности необходимо наблюдение.",
+        "uz": "Simptomsiz retikulyar shaklda dori shart emas, ammo potensial xavfli bo‘lgani uchun kuzatuv kerak."
+      }
+    },
+    {
+      "q": {
+        "en": "A unilateral white lesion lies on the cheek in contact with a large amalgam filling in a lower molar. Most likely diagnosis?",
+        "ru": "На щеке в месте контакта с большой амальгамовой пломбой нижнего моляра — односторонний белый очаг. Наиболее вероятный диагноз?",
+        "uz": "Pastki molyardagi katta amalgama plomba bilan tegib turgan lunj sohasida bir tomonlama oq o‘choq bor. Eng ehtimoliy tashxis?"
+      },
+      "options": [
+        {
+          "en": "Pseudomembranous candidiasis",
+          "ru": "Псевдомембранозный кандидоз",
+          "uz": "Psevdomembranoz kandidoz"
+        },
+        {
+          "en": "Leukoedema",
+          "ru": "Лейкоэдема",
+          "uz": "Leykoedema"
+        },
+        {
+          "en": "White sponge naevus",
+          "ru": "Белый губчатый невус",
+          "uz": "Oq gubkasimon nevus"
+        },
+        {
+          "en": "Contact lichenoid reaction",
+          "ru": "Контактная лихеноидная реакция",
+          "uz": "Kontakt lixenoid reaksiya"
+        }
+      ],
+      "correct": 3,
+      "explain": {
+        "en": "A unilateral lesion in direct contact with a filling is typical of a contact lichenoid reaction to amalgam.",
+        "ru": "Односторонний очаг в месте контакта с пломбой типичен для контактной лихеноидной реакции на амальгаму.",
+        "uz": "Plomba bilan bevosita tegib turgan bir tomonlama o‘choq amalgamaga kontakt lixenoid reaksiyaga xos."
+      }
+    },
+    {
+      "q": {
+        "en": "How does lichen planus most often present on the gingiva?",
+        "ru": "Как красный плоский лишай чаще всего проявляется на десне?",
+        "uz": "Qizil yassi temiratki milkda ko‘pincha qanday ko‘rinishda namoyon bo‘ladi?"
+      },
+      "options": [
+        {
+          "en": "Desquamative gingivitis",
+          "ru": "Десквамативный гингивит",
+          "uz": "Deskvamativ gingivit"
+        },
+        {
+          "en": "Gingival overgrowth",
+          "ru": "Гиперплазия десны",
+          "uz": "Milk giperplaziyasi"
+        },
+        {
+          "en": "Necrotising gingivitis",
+          "ru": "Некротический гингивит",
+          "uz": "Nekrotik gingivit"
+        },
+        {
+          "en": "Gingival abscess",
+          "ru": "Абсцесс десны",
+          "uz": "Milk xo‘ppozi"
+        }
+      ],
+      "correct": 0,
+      "explain": {
+        "en": "Atrophic or erosive lichen planus on the gingiva gives red, peeling desquamative gingivitis.",
+        "ru": "Атрофически-эрозивный лишай на десне проявляется красным слущивающимся десквамативным гингивитом.",
+        "uz": "Milkdagi atrofik-eroziv qizil yassi temiratki qizargan, ko‘chib tushuvchi deskvamativ gingivit beradi."
+      }
+    },
+    {
+      "q": {
+        "en": "Which histological feature is characteristic of lichen planus?",
+        "ru": "Какой гистологический признак характерен для красного плоского лишая?",
+        "uz": "Qizil yassi temiratkining xarakterli gistologik belgisi qaysi?"
+      },
+      "options": [
+        {
+          "en": "Intraepithelial acantholytic blister",
+          "ru": "Внутриэпителиальный акантолитический пузырь",
+          "uz": "Epiteliy ichidagi akantolitik pufak"
+        },
+        {
+          "en": "Band-like lymphocytic infiltrate below the basal layer",
+          "ru": "Лентовидный лимфоцитарный инфильтрат под базальным слоем",
+          "uz": "Bazal qavat ostida tasmasimon limfotsitar infiltrat"
+        },
+        {
+          "en": "Fungal hyphae in the surface layer",
+          "ru": "Гифы грибов в поверхностном слое",
+          "uz": "Zamburug‘ giflari yuza qavatda"
+        },
+        {
+          "en": "Multinucleated giant cells",
+          "ru": "Многоядерные гигантские клетки",
+          "uz": "Ko‘p yadroli gigant hujayralar"
+        }
+      ],
+      "correct": 1,
+      "explain": {
+        "en": "Basal cell damage with a band-like T-lymphocyte infiltrate beneath is typical of lichen planus.",
+        "ru": "Для лишая типичны повреждение базальных клеток и лентовидный Т-лимфоцитарный инфильтрат под ними.",
+        "uz": "Bazal hujayralar shikastlanishi va ular ostidagi tasmasimon T-limfotsitar infiltrat qizil yassi temiratkiga xos."
+      }
+    },
+    {
+      "q": {
+        "en": "What is the first-line treatment for symptomatic erosive lichen planus?",
+        "ru": "Какое лечение первой линии при симптомном эрозивном красном плоском лишае?",
+        "uz": "Simptomli eroziv qizil yassi temiratkida birinchi navbatdagi davo qaysi?"
+      },
+      "options": [
+        {
+          "en": "Systemic antibiotic",
+          "ru": "Системный антибиотик",
+          "uz": "Tizimli antibiotik"
+        },
+        {
+          "en": "Topical antiviral ointment",
+          "ru": "Местная противовирусная мазь",
+          "uz": "Mahalliy antivirus malham"
+        },
+        {
+          "en": "Topical corticosteroid",
+          "ru": "Местный кортикостероид",
+          "uz": "Mahalliy kortikosteroid"
+        },
+        {
+          "en": "Cryotherapy",
+          "ru": "Криотерапия",
+          "uz": "Krioterapiya"
+        }
+      ],
+      "correct": 2,
+      "explain": {
+        "en": "Topical corticosteroids reduce inflammation and pain and are the first choice.",
+        "ru": "Местные кортикостероиды уменьшают воспаление и боль и являются средством первого выбора.",
+        "uz": "Mahalliy kortikosteroidlar yallig‘lanish va og‘riqni kamaytiradi va birinchi tanlov hisoblanadi."
+      }
+    },
+    {
+      "q": {
+        "en": "Why is long-term review needed in lichen planus?",
+        "ru": "Почему при красном плоском лишае необходимо длительное наблюдение?",
+        "uz": "Qizil yassi temiratkida uzoq muddat kuzatuv nima uchun zarur?"
+      },
+      "options": [
+        {
+          "en": "The disease is contagious",
+          "ru": "Заболевание заразно для окружающих",
+          "uz": "Kasallik boshqalarga yuqadi"
+        },
+        {
+          "en": "It always causes malocclusion",
+          "ru": "Он всегда вызывает нарушение прикуса",
+          "uz": "U har doim tishlam buzilishiga olib keladi"
+        },
+        {
+          "en": "It always resolves in a month",
+          "ru": "Он самостоятельно проходит за месяц",
+          "uz": "Kasallik bir oyda o‘z-o‘zidan yo‘qoladi"
+        },
+        {
+          "en": "There is a small risk of malignant change",
+          "ru": "Существует небольшой риск озлокачествления",
+          "uz": "Saratonga aylanish xavfi kichik, ammo bor"
+        }
+      ],
+      "correct": 3,
+      "explain": {
+        "en": "Lichen planus is an oral potentially malignant disorder, so regular review is needed.",
+        "ru": "Красный плоский лишай относится к потенциально злокачественным заболеваниям, поэтому нужны регулярные осмотры.",
+        "uz": "Qizil yassi temiratki potensial xavfli kasalliklar qatoriga kiradi, shuning uchun muntazam ko‘rik kerak."
+      }
+    },
+    {
+      "q": {
+        "en": "Which feature points more to a lichenoid reaction than to lichen planus?",
+        "ru": "Какой признак больше указывает на лихеноидную реакцию, чем на красный плоский лишай?",
+        "uz": "Qaysi belgi qizil yassi temiratkidan ko‘ra lixenoid reaksiyani ko‘proq ko‘rsatadi?"
+      },
+      "options": [
+        {
+          "en": "Bilateral symmetrical distribution",
+          "ru": "Двусторонняя симметричная локализация",
+          "uz": "Ikki tomonlama simmetrik joylashuv"
+        },
+        {
+          "en": "Itchy papules on the wrists",
+          "ru": "Зудящие папулы на запястьях",
+          "uz": "Bilakda qichiydigan tugunchalar"
+        },
+        {
+          "en": "Onset after starting a new drug",
+          "ru": "Появление после начала нового лекарства",
+          "uz": "Yangi dori boshlangandan keyin paydo bo‘lishi"
+        },
+        {
+          "en": "Presence of Wickham striae",
+          "ru": "Наличие сетки Уикхема",
+          "uz": "Uikxem chiziqlarining borligi"
+        }
+      ],
+      "correct": 2,
+      "explain": {
+        "en": "A time link with a new drug suggests a drug-induced lichenoid reaction.",
+        "ru": "Связь по времени с новым лекарством заставляет заподозрить лекарственную лихеноидную реакцию.",
+        "uz": "Yangi dori bilan vaqt bo‘yicha bog‘liqlik dori ta’sirida lixenoid reaksiyaga shubha uyg‘otadi."
+      }
+    },
+    {
+      "q": {
+        "en": "A patient on topical corticosteroids develops a white coating that wipes off. Most likely cause?",
+        "ru": "У пациента на местных кортикостероидах появился белый налёт, который снимается. Наиболее вероятная причина?",
+        "uz": "Mahalliy kortikosteroid bilan davolanayotgan bemorda oq, artib olinadigan karash paydo bo‘ldi. Eng ehtimoliy sabab?"
+      },
+      "options": [
+        {
+          "en": "Secondary candidiasis",
+          "ru": "Вторичный кандидоз",
+          "uz": "Ikkilamchi kandidoz"
+        },
+        {
+          "en": "Worsening lichen planus",
+          "ru": "Обострение красного плоского лишая",
+          "uz": "Qizil yassi temiratki yomonlashuvi"
+        },
+        {
+          "en": "Development of leukoplakia",
+          "ru": "Развитие лейкоплакии",
+          "uz": "Leykoplakiya rivojlanishi"
+        },
+        {
+          "en": "Chemical burn",
+          "ru": "Химический ожог",
+          "uz": "Kimyoviy kuyish"
+        }
+      ],
+      "correct": 0,
+      "explain": {
+        "en": "Corticosteroids lower local immunity and favour Candida; a coating that wipes off is typical of candidiasis.",
+        "ru": "Кортикостероиды снижают местный иммунитет и способствуют росту Candida; снимаемый налёт типичен для кандидоза.",
+        "uz": "Kortikosteroidlar mahalliy immunitetni pasaytiradi va Candida ko‘payishiga sharoit yaratadi; artib olinadigan karash kandidozga xos."
+      }
+    }
+  ]
+}

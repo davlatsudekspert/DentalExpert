@@ -1,0 +1,1036 @@
+{
+  "id": "card-06",
+  "subject": "card",
+  "n": 6,
+  "week": 6,
+  "type": "practical",
+  "hours": 2,
+  "title": {
+    "en": "Direct composite restoration step by step",
+    "ru": "Прямая композитная реставрация шаг за шагом",
+    "uz": "Bevosita kompozit restavratsiya bosqichma-bosqich"
+  },
+  "goals": [
+    {
+      "en": "Carry out isolation and the adhesive protocol",
+      "ru": "Правильно выполнять изоляцию и адгезивный протокол",
+      "uz": "Izolyatsiya va adgeziv protokolni to‘g‘ri bajarish"
+    },
+    {
+      "en": "Use matrices and layering techniques",
+      "ru": "Применять матрицы и технику послойного внесения",
+      "uz": "Matritsa va qatlamlash texnikasini qo‘llash"
+    },
+    {
+      "en": "Finish the restoration and check occlusion",
+      "ru": "Выполнять финишную обработку и проверку окклюзии",
+      "uz": "Restavratsiyani pardozlash va okklyuziyani tekshirish"
+    }
+  ],
+  "links": [
+    "tooth-surfaces",
+    "tooth-types-fdi"
+  ],
+  "sources": [
+    "Heymann HO, Swift EJ, Ritter AV. Sturdevant's Art and Science of Operative Dentistry, 6th ed., 2013",
+    "Sakaguchi R et al. Craig's Restorative Dental Materials, 15th ed., 2018"
+  ],
+  "slides": [
+    {
+      "layout": "title",
+      "title": {
+        "en": "Direct composite restoration step by step",
+        "ru": "Прямая композитная реставрация шаг за шагом",
+        "uz": "Bevosita kompozit restavratsiya bosqichma-bosqich"
+      },
+      "subtitle": {
+        "en": "Isolation, adhesion, incremental layering, finishing",
+        "ru": "Изоляция, адгезия, послойное внесение, финишная обработка",
+        "uz": "Izolyatsiya, adgeziya, qatlamlab kiritish, pardozlash"
+      }
+    },
+    {
+      "layout": "key",
+      "title": {
+        "en": "Rubber dam",
+        "ru": "Коффердам",
+        "uz": "Kofferdam"
+      },
+      "term": {
+        "en": "Rubber dam isolation",
+        "ru": "Изоляция коффердамом",
+        "uz": "Kofferdam bilan izolyatsiya"
+      },
+      "definition": {
+        "en": "A latex or latex-free sheet that fully isolates the tooth from saliva, blood and crevicular fluid. It improves bond quality and visibility and protects the patient from swallowing instruments and chemicals.",
+        "ru": "Латексный или безлатексный платок, полностью изолирующий зуб от слюны, крови и десневой жидкости. Он повышает качество адгезии, улучшает обзор и защищает пациента от аспирации инструментов и химических веществ.",
+        "uz": "Tishni so‘lak, qon va milk suyuqligidan to‘liq ajratuvchi lateks yoki lateksiz plastina. U adgeziv bog‘lanish sifatini oshiradi, ish maydonini yaxshi ko‘rsatadi, bemorni asboblar va kimyoviy moddalarni yutib yuborishdan himoya qiladi."
+      },
+      "note": {
+        "en": "Demonstrate rubber dam placement on a manikin.",
+        "ru": "Покажите наложение коффердама на фантоме.",
+        "uz": "Kofferdamni qo‘yishni fantomda amaliy ko‘rsating."
+      }
+    },
+    {
+      "layout": "compare",
+      "title": {
+        "en": "Isolation methods",
+        "ru": "Методы изоляции",
+        "uz": "Izolyatsiya usullari"
+      },
+      "columns": [
+        {
+          "head": {
+            "en": "Absolute: rubber dam",
+            "ru": "Абсолютная: коффердам",
+            "uz": "Mutlaq: kofferdam"
+          },
+          "items": [
+            {
+              "en": "Reliable dry field",
+              "ru": "Надёжно сухое поле",
+              "uz": "Ishonchli quruq maydon"
+            },
+            {
+              "en": "Best for bonding",
+              "ru": "Лучшая для адгезии",
+              "uz": "Adgeziya uchun eng yaxshi"
+            },
+            {
+              "en": "Patient safety",
+              "ru": "Безопасность пациента",
+              "uz": "Bemor xavfsizligi"
+            },
+            {
+              "en": "Needs time and skill",
+              "ru": "Требует времени и навыка",
+              "uz": "Vaqt va ko‘nikma talab qiladi"
+            }
+          ]
+        },
+        {
+          "head": {
+            "en": "Relative",
+            "ru": "Относительная",
+            "uz": "Nisbiy"
+          },
+          "items": [
+            {
+              "en": "Cotton rolls, saliva ejector",
+              "ru": "Ватные валики, слюноотсос",
+              "uz": "Paxta valiklari, so‘lak so‘rg‘ich"
+            },
+            {
+              "en": "Quick and simple",
+              "ru": "Быстро и просто",
+              "uz": "Tez va oddiy"
+            },
+            {
+              "en": "Less reliable moisture control",
+              "ru": "Контроль влаги менее надёжен",
+              "uz": "Namlik nazorati kamroq ishonchli"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "layout": "flow",
+      "title": {
+        "en": "Phase 1: preparation",
+        "ru": "Этап 1: подготовка",
+        "uz": "1-bosqich: tayyorgarlik"
+      },
+      "steps": [
+        {
+          "label": {
+            "en": "Shade selection",
+            "ru": "Выбор цвета",
+            "uz": "Rang tanlash"
+          },
+          "detail": {
+            "en": "Before isolation, tooth moist",
+            "ru": "До изоляции, на влажном зубе",
+            "uz": "Izolyatsiyadan oldin, nam tishda"
+          }
+        },
+        {
+          "label": {
+            "en": "Anaesthesia",
+            "ru": "Анестезия",
+            "uz": "Anesteziya"
+          },
+          "detail": {
+            "en": "When needed",
+            "ru": "При необходимости",
+            "uz": "Kerak bo‘lsa"
+          }
+        },
+        {
+          "label": {
+            "en": "Isolation",
+            "ru": "Изоляция",
+            "uz": "Izolyatsiya"
+          },
+          "detail": {
+            "en": "Rubber dam",
+            "ru": "Коффердам",
+            "uz": "Kofferdam"
+          }
+        },
+        {
+          "label": {
+            "en": "Preparation",
+            "ru": "Препарирование",
+            "uz": "Preparatsiya"
+          },
+          "detail": {
+            "en": "Minimal, enamel bevel where useful",
+            "ru": "Минимально, скос эмали",
+            "uz": "Minimal, emal chekkasida bevel"
+          }
+        },
+        {
+          "label": {
+            "en": "Matrix and wedge",
+            "ru": "Матрица и клин",
+            "uz": "Matritsa va pona"
+          },
+          "detail": {
+            "en": "For the contact in Class II",
+            "ru": "Для контакта при II классе",
+            "uz": "II sinfda kontakt uchun"
+          }
+        }
+      ],
+      "note": {
+        "en": "Ask why shade is chosen before isolation: a dried tooth looks lighter.",
+        "ru": "Спросите, почему цвет выбирают до изоляции: пересушенный зуб светлеет.",
+        "uz": "Quritilgan tish oqarib ketgani uchun rang izolyatsiyadan oldin tanlanishini so‘rang: nima uchun?"
+      }
+    },
+    {
+      "layout": "flow",
+      "title": {
+        "en": "Phase 2: restoration",
+        "ru": "Этап 2: реставрация",
+        "uz": "2-bosqich: restavratsiya"
+      },
+      "steps": [
+        {
+          "label": {
+            "en": "Adhesive protocol",
+            "ru": "Адгезивный протокол",
+            "uz": "Adgeziv protokol"
+          },
+          "detail": {
+            "en": "As the chosen system directs",
+            "ru": "По инструкции выбранной системы",
+            "uz": "Tanlangan tizim ko‘rsatmasi bo‘yicha"
+          }
+        },
+        {
+          "label": {
+            "en": "Liner (optional)",
+            "ru": "Прокладка (по показаниям)",
+            "uz": "Astar qavat (ixtiyoriy)"
+          },
+          "detail": {
+            "en": "Flowable composite or GIC",
+            "ru": "Текучий композит или СИЦ",
+            "uz": "Oquvchan kompozit yoki SIS"
+          }
+        },
+        {
+          "label": {
+            "en": "Incremental placement",
+            "ru": "Послойное внесение",
+            "uz": "Qatlamlab kiritish"
+          },
+          "detail": {
+            "en": "Up to 2 mm, oblique",
+            "ru": "Порции до 2 мм, косо",
+            "uz": "Har biri 2 mm gacha, qiya"
+          }
+        },
+        {
+          "label": {
+            "en": "Curing",
+            "ru": "Засвечивание",
+            "uz": "Yoritish"
+          },
+          "detail": {
+            "en": "Each increment",
+            "ru": "Каждую порцию",
+            "uz": "Har bir qatlamni"
+          }
+        },
+        {
+          "label": {
+            "en": "Finish and check bite",
+            "ru": "Обработка и окклюзия",
+            "uz": "Pardozlash va okklyuziya"
+          },
+          "detail": {
+            "en": "Check contacts and bite",
+            "ru": "Проверка контакта и прикуса",
+            "uz": "Kontakt va tishlashni tekshirish"
+          }
+        }
+      ]
+    },
+    {
+      "layout": "tree",
+      "title": {
+        "en": "Matrix systems",
+        "ru": "Матричные системы",
+        "uz": "Matritsa tizimlari"
+      },
+      "root": {
+        "en": "Matrices",
+        "ru": "Матрицы",
+        "uz": "Matritsalar"
+      },
+      "children": [
+        {
+          "label": {
+            "en": "Circumferential",
+            "ru": "Кольцевые матрицы",
+            "uz": "Aylana matritsalar"
+          },
+          "items": [
+            {
+              "en": "With a band holder",
+              "ru": "С матрицедержателем",
+              "uz": "Matritsa ushlagich bilan"
+            },
+            {
+              "en": "Large cavities",
+              "ru": "Большие полости",
+              "uz": "Katta kovaklar"
+            }
+          ]
+        },
+        {
+          "label": {
+            "en": "Sectional",
+            "ru": "Секционные матрицы",
+            "uz": "Seksion matritsalar"
+          },
+          "items": [
+            {
+              "en": "With a separating ring",
+              "ru": "С кольцом",
+              "uz": "Halqa bilan"
+            },
+            {
+              "en": "Good contact point",
+              "ru": "Хороший контактный пункт",
+              "uz": "Yaxshi kontakt nuqtasi"
+            }
+          ]
+        },
+        {
+          "label": {
+            "en": "Clear strips",
+            "ru": "Прозрачные полоски",
+            "uz": "Shaffof lentalar"
+          },
+          "items": [
+            {
+              "en": "Anterior teeth",
+              "ru": "Фронтальные зубы",
+              "uz": "Old tishlar"
+            }
+          ]
+        }
+      ],
+      "note": {
+        "en": "Ask why a sectional matrix with a ring restores contacts better.",
+        "ru": "Спросите, почему секционная матрица с кольцом лучше восстанавливает контактный пункт.",
+        "uz": "Seksion matritsa va halqa kontakt nuqtasini tiklashda nima uchun afzal ekanini so‘rang."
+      }
+    },
+    {
+      "layout": "table",
+      "title": {
+        "en": "Layering technique",
+        "ru": "Техника послойного внесения",
+        "uz": "Qatlamlash texnikasi"
+      },
+      "head": [
+        {
+          "en": "Area",
+          "ru": "Область",
+          "uz": "Soha"
+        },
+        {
+          "en": "Layers",
+          "ru": "Слои",
+          "uz": "Qatlamlar"
+        },
+        {
+          "en": "Goal",
+          "ru": "Цель",
+          "uz": "Maqsad"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "en": "Anterior teeth",
+            "ru": "Фронтальные зубы",
+            "uz": "Old tishlar"
+          },
+          {
+            "en": "Palatal shell, dentin, enamel",
+            "ru": "Нёбная стенка, дентин, эмаль",
+            "uz": "Tanglay devori, dentin, emal"
+          },
+          {
+            "en": "Natural translucency",
+            "ru": "Естественная прозрачность",
+            "uz": "Tabiiy shaffoflik"
+          }
+        ],
+        [
+          {
+            "en": "Anterior teeth",
+            "ru": "Фронтальные зубы",
+            "uz": "Old tishlar"
+          },
+          {
+            "en": "Using a silicone key",
+            "ru": "С силиконовым ключом",
+            "uz": "Silikon kalit bilan"
+          },
+          {
+            "en": "Correct shape and length",
+            "ru": "Правильная форма и длина",
+            "uz": "To‘g‘ri shakl va uzunlik"
+          }
+        ],
+        [
+          {
+            "en": "Posterior teeth",
+            "ru": "Боковые зубы",
+            "uz": "Yon tishlar"
+          },
+          {
+            "en": "Oblique increments",
+            "ru": "Косые порции",
+            "uz": "Qiya qatlamlar"
+          },
+          {
+            "en": "Lower shrinkage stress",
+            "ru": "Снижение усадочного напряжения",
+            "uz": "Kirishish kuchlanishini kamaytirish"
+          }
+        ],
+        [
+          {
+            "en": "Posterior teeth",
+            "ru": "Боковые зубы",
+            "uz": "Yon tishlar"
+          },
+          {
+            "en": "Cusp-by-cusp build-up",
+            "ru": "Последовательное восстановление бугров",
+            "uz": "Do‘mboqma-do‘mboq tiklash"
+          },
+          {
+            "en": "Natural anatomy",
+            "ru": "Естественная анатомия",
+            "uz": "Tabiiy anatomiya"
+          }
+        ]
+      ]
+    },
+    {
+      "layout": "figure",
+      "title": {
+        "en": "Shaping the occlusal surface",
+        "ru": "Восстановление жевательной поверхности",
+        "uz": "Chaynov yuzasini tiklash"
+      },
+      "image": "occlusal",
+      "callouts": [
+        {
+          "at": "cusp",
+          "label": {
+            "en": "Cusps: check contacts",
+            "ru": "Бугры: проверка контактов",
+            "uz": "Do‘mboqlar: kontaktni tekshirish"
+          }
+        },
+        {
+          "at": "fissure",
+          "label": {
+            "en": "Fissure anatomy",
+            "ru": "Анатомия фиссур",
+            "uz": "Fissuralar anatomiyasi"
+          }
+        },
+        {
+          "at": "ridge",
+          "label": {
+            "en": "Marginal ridge height",
+            "ru": "Высота краевого гребня",
+            "uz": "Qirg‘oq qirrasi balandligi"
+          }
+        },
+        {
+          "at": "fossa",
+          "label": {
+            "en": "Fossa depth",
+            "ru": "Глубина ямок",
+            "uz": "Chuqurchalar chuqurligi"
+          }
+        }
+      ],
+      "bullets": [
+        {
+          "en": "Check occlusion with articulating paper",
+          "ru": "Проверить окклюзию артикуляционной бумагой",
+          "uz": "Artikulyatsion qog‘oz bilan okklyuziyani tekshirish"
+        }
+      ]
+    },
+    {
+      "layout": "bullets",
+      "title": {
+        "en": "Finishing and polishing",
+        "ru": "Финишная обработка и полировка",
+        "uz": "Pardozlash va silliqlash"
+      },
+      "bullets": [
+        {
+          "en": "Remove excess with fine diamonds or multi-blade carbides",
+          "ru": "Излишки — мелкозернистыми алмазными или многолезвийными борами",
+          "uz": "Ortiqchani mayda olmos yoki ko‘p qirrali karbid borlar bilan olish"
+        },
+        {
+          "en": "Proximal: discs and finishing strips",
+          "ru": "Контактные поверхности: диски и штрипсы",
+          "uz": "Kontakt yuzalar: disk va abraziv lentalar"
+        },
+        {
+          "en": "Polish with rubbers and pastes",
+          "ru": "Полировка: резиновые головки и пасты",
+          "uz": "Silliqlash: rezina kallaklar va pastalar"
+        },
+        {
+          "en": "Check contact with floss and occlusion with paper",
+          "ru": "Контакт — флоссом, окклюзию — бумагой",
+          "uz": "Kontaktni ip bilan, okklyuziyani qog‘oz bilan tekshirish"
+        }
+      ],
+      "note": {
+        "en": "Stress that a smooth surface collects less plaque and stain.",
+        "ru": "Подчеркните, что гладкая поверхность меньше накапливает налёт и окрашивается.",
+        "uz": "Silliq yuza karash to‘planishini va rang o‘zgarishini kamaytirishini ta’kidlang."
+      }
+    },
+    {
+      "layout": "summary",
+      "title": {
+        "en": "Summary",
+        "ru": "Итоги",
+        "uz": "Xulosa"
+      },
+      "bullets": [
+        {
+          "en": "Select shade before isolation on a moist tooth",
+          "ru": "Цвет выбирают до изоляции на влажном зубе",
+          "uz": "Rang izolyatsiyadan oldin, nam tishda tanlanadi"
+        },
+        {
+          "en": "Rubber dam improves bond quality",
+          "ru": "Коффердам повышает качество адгезии",
+          "uz": "Kofferdam adgeziya sifatini oshiradi"
+        },
+        {
+          "en": "Layering lowers shrinkage stress",
+          "ru": "Послойное внесение снижает усадочное напряжение",
+          "uz": "Qatlamlab kiritish kirishish kuchlanishini kamaytiradi"
+        },
+        {
+          "en": "Finish, then check contacts and occlusion",
+          "ru": "Завершают обработкой, проверкой контакта и окклюзии",
+          "uz": "Pardozlash, kontakt va okklyuziya tekshiruvi bilan yakunlanadi"
+        }
+      ]
+    }
+  ],
+  "oral": [
+    {
+      "q": {
+        "en": "List the steps of a direct composite restoration.",
+        "ru": "Перечислите этапы прямой композитной реставрации.",
+        "uz": "Bevosita kompozit restavratsiya bosqichlarini sanab bering."
+      },
+      "plan": [
+        {
+          "en": "Shade, anaesthesia, isolation",
+          "ru": "Выбор цвета, анестезия, изоляция",
+          "uz": "Rang tanlash, anesteziya, izolyatsiya"
+        },
+        {
+          "en": "Preparation, matrix and wedge",
+          "ru": "Препарирование, матрица и клин",
+          "uz": "Preparatsiya, matritsa va pona"
+        },
+        {
+          "en": "Adhesive protocol and layering",
+          "ru": "Адгезивный протокол и послойное внесение",
+          "uz": "Adgeziv protokol va qatlamlab kiritish"
+        },
+        {
+          "en": "Finishing, polishing, occlusion check",
+          "ru": "Обработка, полировка, проверка окклюзии",
+          "uz": "Pardozlash, silliqlash, okklyuziya tekshiruvi"
+        }
+      ]
+    },
+    {
+      "q": {
+        "en": "What are the advantages of rubber dam?",
+        "ru": "Каковы преимущества коффердама?",
+        "uz": "Kofferdamning afzalliklari nimada?"
+      },
+      "plan": [
+        {
+          "en": "Dry field and better bonding",
+          "ru": "Сухое поле и качественная адгезия",
+          "uz": "Quruq maydon va yaxshi adgeziya"
+        },
+        {
+          "en": "Better visibility and access",
+          "ru": "Хороший обзор и доступ",
+          "uz": "Yaxshi ko‘rinish va kirish"
+        },
+        {
+          "en": "Protection from swallowing and aspiration",
+          "ru": "Защита от проглатывания и аспирации",
+          "uz": "Bemorni yutish va aspiratsiyadan himoya"
+        },
+        {
+          "en": "Infection control",
+          "ru": "Инфекционный контроль",
+          "uz": "Infeksiya nazorati"
+        }
+      ]
+    },
+    {
+      "q": {
+        "en": "How do you restore a contact point in a Class II cavity?",
+        "ru": "Как восстановить контактный пункт в полости II класса?",
+        "uz": "II sinf kovakda kontakt nuqtasini qanday tiklaysiz?"
+      },
+      "plan": [
+        {
+          "en": "Sectional matrix and separating ring",
+          "ru": "Секционная матрица и разделяющее кольцо",
+          "uz": "Seksion matritsa va ajratuvchi halqa"
+        },
+        {
+          "en": "Wedge: seal the matrix, protect gingiva",
+          "ru": "Клин: прижать матрицу, защитить десну",
+          "uz": "Pona: matritsani zich qilish, milkni himoya"
+        },
+        {
+          "en": "Build the proximal wall first",
+          "ru": "Сначала построить контактную стенку",
+          "uz": "Avval kontakt devorini qurish"
+        },
+        {
+          "en": "Check the contact with floss",
+          "ru": "Проверить контакт флоссом",
+          "uz": "Ip bilan kontaktni tekshirish"
+        }
+      ]
+    },
+    {
+      "q": {
+        "en": "Compare layering in anterior and posterior teeth.",
+        "ru": "Сравните технику послойного внесения во фронтальных и боковых зубах.",
+        "uz": "Old va yon tishlarda qatlamlash texnikasini solishtiring."
+      },
+      "plan": [
+        {
+          "en": "Anterior: silicone key and palatal shell",
+          "ru": "Фронт: силиконовый ключ и нёбная стенка",
+          "uz": "Old: silikon kalit va tanglay devori"
+        },
+        {
+          "en": "Anterior: dentin and enamel shades",
+          "ru": "Фронт: дентиновые и эмалевые оттенки",
+          "uz": "Old: dentin va emal ranglari"
+        },
+        {
+          "en": "Posterior: oblique increments up to 2 mm",
+          "ru": "Боковые: косые порции до 2 мм",
+          "uz": "Yon: qiya qatlamlar, 2 mm gacha"
+        },
+        {
+          "en": "Posterior: cusp-by-cusp anatomy",
+          "ru": "Боковые: последовательное моделирование бугров",
+          "uz": "Yon: do‘mboqma-do‘mboq anatomiya"
+        }
+      ]
+    }
+  ],
+  "test": [
+    {
+      "q": {
+        "en": "When should the composite shade be selected?",
+        "ru": "Когда следует выбирать цвет композита?",
+        "uz": "Kompozit rangini qachon tanlash kerak?"
+      },
+      "options": [
+        {
+          "en": "Before isolation, tooth moist",
+          "ru": "До изоляции, на влажном зубе",
+          "uz": "Izolyatsiyadan oldin, tish nam holatda"
+        },
+        {
+          "en": "After preparation",
+          "ru": "После препарирования",
+          "uz": "Preparatsiyadan keyin"
+        },
+        {
+          "en": "After placing rubber dam",
+          "ru": "После наложения коффердама",
+          "uz": "Kofferdam qo‘yilgandan keyin"
+        },
+        {
+          "en": "After finishing",
+          "ru": "После обработки",
+          "uz": "Pardozlashdan keyin"
+        }
+      ],
+      "correct": 0,
+      "explain": {
+        "en": "Dried enamel dehydrates and lightens, so a shade chosen later will be too light.",
+        "ru": "Высушенная эмаль обезвоживается и светлеет, поэтому выбранный позже цвет окажется слишком светлым.",
+        "uz": "Quritilgan emal suvsizlanib oqaradi, shuning uchun keyin tanlangan rang juda och bo‘lib chiqadi."
+      }
+    },
+    {
+      "q": {
+        "en": "What is the main benefit of rubber dam for composite restorations?",
+        "ru": "Главная польза коффердама при композитной реставрации?",
+        "uz": "Kompozit restavratsiyada kofferdam qo‘yishning asosiy foydasi nima?"
+      },
+      "options": [
+        {
+          "en": "It improves shade",
+          "ru": "Улучшает цвет",
+          "uz": "Rangni yaxshilaydi"
+        },
+        {
+          "en": "It removes shrinkage",
+          "ru": "Устраняет усадку",
+          "uz": "Kirishishni yo‘qotadi"
+        },
+        {
+          "en": "It provides a dry field for bonding",
+          "ru": "Обеспечивает сухое поле для адгезии",
+          "uz": "Adgeziya uchun quruq maydon beradi"
+        },
+        {
+          "en": "It replaces anaesthesia",
+          "ru": "Заменяет анестезию",
+          "uz": "Anesteziyani almashtiradi"
+        }
+      ],
+      "correct": 2,
+      "explain": {
+        "en": "Saliva and blood contamination weakens the bond; rubber dam prevents it.",
+        "ru": "Загрязнение слюной и кровью резко ослабляет адгезию; коффердам это предотвращает.",
+        "uz": "So‘lak va qon bilan ifloslanish adgeziv bog‘lanishni keskin susaytiradi; kofferdam buni oldini oladi."
+      }
+    },
+    {
+      "q": {
+        "en": "How should conventional composite be placed in posterior teeth?",
+        "ru": "Как рекомендуют вносить традиционный композит в боковых зубах?",
+        "uz": "Yon tishlarda an’anaviy kompozitni qanday kiritish tavsiya etiladi?"
+      },
+      "options": [
+        {
+          "en": "In one bulk increment",
+          "ru": "Сразу на всю полость",
+          "uz": "Bir martada butun kovakka"
+        },
+        {
+          "en": "With flowable composite only",
+          "ru": "Только текучим композитом",
+          "uz": "Faqat oquvchan kompozit bilan"
+        },
+        {
+          "en": "In thick horizontal layers",
+          "ru": "Толстыми горизонтальными слоями",
+          "uz": "Gorizontal qalin qatlamlar"
+        },
+        {
+          "en": "Oblique increments up to 2 mm",
+          "ru": "Косыми порциями до 2 мм",
+          "uz": "Qiya qatlamlar, har biri 2 mm gacha"
+        }
+      ],
+      "correct": 3,
+      "explain": {
+        "en": "Oblique increments touch fewer walls, lower the C-factor and cure fully.",
+        "ru": "Косые порции контактируют с меньшим числом стенок, снижают C-фактор и полностью отверждаются.",
+        "uz": "Qiya qatlamlar kam devorga tegadi, C-omil kamayadi va har bir qatlam to‘liq qotadi."
+      }
+    },
+    {
+      "q": {
+        "en": "Why is a wedge used in a Class II restoration?",
+        "ru": "Зачем ставят клин при реставрации II класса?",
+        "uz": "II sinf restavratsiyada pona nima uchun qo‘yiladi?"
+      },
+      "options": [
+        {
+          "en": "To seal the matrix and prevent overhangs",
+          "ru": "Прижать матрицу и предотвратить нависание",
+          "uz": "Matritsani zich qilib, ortiqcha osilib turishning oldini olish"
+        },
+        {
+          "en": "To select the shade",
+          "ru": "Для выбора цвета",
+          "uz": "Rangni tanlash uchun"
+        },
+        {
+          "en": "To cure the composite",
+          "ru": "Для отверждения композита",
+          "uz": "Kompozitni qotirish uchun"
+        },
+        {
+          "en": "For anaesthesia",
+          "ru": "Для анестезии",
+          "uz": "Anesteziya uchun"
+        }
+      ],
+      "correct": 0,
+      "explain": {
+        "en": "The wedge presses the matrix to the margin, separates teeth slightly and protects the gingiva.",
+        "ru": "Клин прижимает матрицу к придесневому краю, слегка разводит зубы и защищает десну.",
+        "uz": "Pona matritsani milk chekkasiga bosadi, tishlarni biroz ajratadi va milkni himoya qiladi."
+      }
+    },
+    {
+      "q": {
+        "en": "Which matrix system best restores a proximal contact?",
+        "ru": "Какая матричная система лучше всего восстанавливает контактный пункт?",
+        "uz": "Kontakt nuqtasini tiklashda qaysi matritsa tizimi eng yaxshi natija beradi?"
+      },
+      "options": [
+        {
+          "en": "Clear strip",
+          "ru": "Прозрачная полоска",
+          "uz": "Shaffof lenta"
+        },
+        {
+          "en": "Sectional matrix with ring",
+          "ru": "Секционная матрица с кольцом",
+          "uz": "Seksion matritsa va ajratuvchi halqa"
+        },
+        {
+          "en": "No matrix",
+          "ru": "Без матрицы",
+          "uz": "Matritsasiz"
+        },
+        {
+          "en": "A cotton roll only",
+          "ru": "Только ватный валик",
+          "uz": "Faqat paxta valigi"
+        }
+      ],
+      "correct": 1,
+      "explain": {
+        "en": "A sectional matrix gives a natural contour; the ring separates teeth to offset matrix thickness.",
+        "ru": "Секционная матрица даёт естественный контур, а кольцо разводит зубы, компенсируя толщину матрицы.",
+        "uz": "Seksion matritsa tabiiy kontur beradi, halqa esa tishlarni ajratib, matritsa qalinligini qoplaydi."
+      }
+    },
+    {
+      "q": {
+        "en": "What helps build an accurate palatal wall in a Class IV restoration?",
+        "ru": "Что используют для точного построения нёбной стенки при реставрации IV класса?",
+        "uz": "Old tishda IV sinf restavratsiyada tanglay devorini aniq qurish uchun nima ishlatiladi?"
+      },
+      "options": [
+        {
+          "en": "Metal band",
+          "ru": "Металлическая матрица",
+          "uz": "Metall matritsa"
+        },
+        {
+          "en": "Excavator",
+          "ru": "Экскаватор",
+          "uz": "Ekskavator"
+        },
+        {
+          "en": "Silicone key",
+          "ru": "Силиконовый ключ",
+          "uz": "Silikon kalit"
+        },
+        {
+          "en": "Articulating paper",
+          "ru": "Артикуляционная бумага",
+          "uz": "Artikulyatsion qog‘oz"
+        }
+      ],
+      "correct": 2,
+      "explain": {
+        "en": "A silicone key from a wax-up or mock-up sets the shape and length of the palatal layer.",
+        "ru": "Силиконовый ключ по восковому моделированию или макету задаёт форму и длину нёбного слоя.",
+        "uz": "Mum modelash yoki og‘izda maket asosida olingan silikon kalit tanglay qatlamining shakli va uzunligini belgilaydi."
+      }
+    },
+    {
+      "q": {
+        "en": "After a restoration the patient says it feels high. What should you do?",
+        "ru": "После реставрации пациент жалуется, что пломба «высокая». Что делать?",
+        "uz": "Restavratsiyadan keyin bemor plomba «baland» ekanini aytdi. Nima qilish kerak?"
+      },
+      "options": [
+        {
+          "en": "Wait for the patient to adapt",
+          "ru": "Ждать, пока пациент привыкнет",
+          "uz": "Bemorni ko‘nikishini kutish"
+        },
+        {
+          "en": "Remove the whole filling",
+          "ru": "Полностью удалить пломбу",
+          "uz": "Plombani to‘liq olib tashlash"
+        },
+        {
+          "en": "Prescribe antibiotics",
+          "ru": "Назначить антибиотик",
+          "uz": "Antibiotik buyurish"
+        },
+        {
+          "en": "Check with articulating paper and adjust",
+          "ru": "Проверить артикуляционной бумагой и сошлифовать",
+          "uz": "Artikulyatsion qog‘oz bilan tekshirib, ortiqchani olish"
+        }
+      ],
+      "correct": 3,
+      "explain": {
+        "en": "A high contact causes pain and periodontal overload and should be adjusted at once.",
+        "ru": "Суперконтакт вызывает боль и перегрузку периодонта, его нужно сразу устранить.",
+        "uz": "Okklyuziyadagi ortiqcha kontakt og‘riq va periodontga yuklama beradi, uni darhol tuzatish kerak."
+      }
+    },
+    {
+      "q": {
+        "en": "What is useful for removing proximal composite excess?",
+        "ru": "Чем удобно удалять излишки композита на контактных поверхностях?",
+        "uz": "Kontakt yuzalardagi ortiqcha kompozitni olib tashlash uchun qaysi vosita qulay?"
+      },
+      "options": [
+        {
+          "en": "Finishing strips",
+          "ru": "Абразивные полоски (штрипсы)",
+          "uz": "Abraziv lentalar (shtrips)"
+        },
+        {
+          "en": "Excavator",
+          "ru": "Экскаватор",
+          "uz": "Ekskavator"
+        },
+        {
+          "en": "Cotton roll",
+          "ru": "Ватный валик",
+          "uz": "Paxta valigi"
+        },
+        {
+          "en": "Fluoride varnish",
+          "ru": "Фторлак",
+          "uz": "Ftor laki"
+        }
+      ],
+      "correct": 0,
+      "explain": {
+        "en": "Strips remove excess and smooth the surface without breaking the contact.",
+        "ru": "Штрипсы удаляют излишки и полируют поверхность, не нарушая контакт.",
+        "uz": "Shtripslar kontakt nuqtasini buzmasdan ortiqchani olib, yuzani silliqlaydi."
+      }
+    },
+    {
+      "q": {
+        "en": "Why should a composite restoration be well polished?",
+        "ru": "Почему композитную реставрацию нужно хорошо полировать?",
+        "uz": "Nima uchun kompozit restavratsiya yaxshi silliqlanishi kerak?"
+      },
+      "options": [
+        {
+          "en": "To increase shrinkage",
+          "ru": "Чтобы увеличить усадку",
+          "uz": "Kirishishni oshirish uchun"
+        },
+        {
+          "en": "To reduce plaque and staining",
+          "ru": "Чтобы уменьшить налёт и окрашивание",
+          "uz": "Karash va rang to‘planishini kamaytirish uchun"
+        },
+        {
+          "en": "To weaken the bond",
+          "ru": "Чтобы ослабить адгезию",
+          "uz": "Adgeziyani susaytirish uchun"
+        },
+        {
+          "en": "To increase radiopacity",
+          "ru": "Чтобы повысить рентгеноконтрастность",
+          "uz": "Rentgenokontrastlikni oshirish uchun"
+        }
+      ],
+      "correct": 1,
+      "explain": {
+        "en": "Rough surfaces hold plaque and pigment, leading to secondary caries and poor aesthetics.",
+        "ru": "На шероховатой поверхности легко задерживаются налёт и пигменты, что ведёт к вторичному кариесу и потере эстетики.",
+        "uz": "G‘adir-budur yuzada karash va pigmentlar oson ushlanadi, bu ikkilamchi karies va estetik muammoga olib keladi."
+      }
+    },
+    {
+      "q": {
+        "en": "What is sometimes placed under composite in a deep cavity?",
+        "ru": "Что иногда помещают под композит в глубокой полости?",
+        "uz": "Chuqur kovakda kompozit ostiga ba’zan nima qo‘yiladi?"
+      },
+      "options": [
+        {
+          "en": "Zinc oxide eugenol",
+          "ru": "Цинк-оксид-эвгенол",
+          "uz": "Rux oksid-evgenol"
+        },
+        {
+          "en": "Amalgam",
+          "ru": "Амальгама",
+          "uz": "Amalgama"
+        },
+        {
+          "en": "A GIC or flowable composite liner",
+          "ru": "Прокладка из СИЦ или текучего композита",
+          "uz": "SIS yoki oquvchan kompozit astar"
+        },
+        {
+          "en": "Gypsum",
+          "ru": "Гипс",
+          "uz": "Gips"
+        }
+      ],
+      "correct": 2,
+      "explain": {
+        "en": "GIC or flowable composite reduces stress and adapts well; eugenol would inhibit curing.",
+        "ru": "СИЦ или текучий композит снижают напряжение и хорошо адаптируются ко дну; эвгенол нарушает полимеризацию.",
+        "uz": "SIS yoki oquvchan kompozit kirishish kuchlanishini kamaytiradi va kovak tubiga yaxshi moslashadi; evgenol esa polimerizatsiyani buzadi."
+      }
+    }
+  ]
+}

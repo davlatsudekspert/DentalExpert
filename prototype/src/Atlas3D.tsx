@@ -219,7 +219,7 @@ export default function Atlas3D({lang,onClose}:{lang:Lang;onClose:()=>void}){
   </div>
   {ok?<div className="atlas3d-stage" ref={mount}>
     {loading&&<div className="atlas3d-loading"><i/></div>}
-    <svg className="atlas3d-lines" aria-hidden="true"><line ref={svg} stroke="#fff" strokeOpacity={selected?0.85:0} strokeWidth="1.5" strokeDasharray="4 4"/><circle ref={dot} r="5" fill={selected?COLORS[selected]:'#fff'} fillOpacity={selected?1:0} stroke="#fff" strokeWidth="2"/></svg>
+    <svg className="atlas3d-lines" aria-hidden="true"><line ref={svg} stroke="#fff" strokeOpacity={selected?0.85:0} strokeWidth="1.5" strokeDasharray="4 4"/><circle ref={dot} r="5" fill={selected?COLORS[selected]:'#fff'} fillOpacity={selected?1:0} stroke="#fff" strokeOpacity={selected?1:0} strokeWidth="2"/></svg>
   </div>:<div className="atlas3d-stage fallback"><img src={fallbackImage} alt={t.title} draggable={false}/><p>{t.nowebgl}</p></div>}
   <div className="atlas3d-bottom">
    {info&&<div className="atlas3d-card" ref={cardRef} style={{borderColor:COLORS[selected!]}}><i style={{background:COLORS[selected!]}}/><div><strong>{info[0]}</strong><p>{info[1]}</p></div></div>}

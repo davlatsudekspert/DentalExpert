@@ -1,0 +1,939 @@
+{
+  "id": "endo-05",
+  "subject": "endo",
+  "n": 5,
+  "week": 5,
+  "type": "practical",
+  "hours": 2,
+  "title": {
+    "en": "Working length determination",
+    "ru": "Определение рабочей длины",
+    "uz": "Ishchi uzunlikni aniqlash"
+  },
+  "goals": [
+    {
+      "en": "Know apical anatomy and the concept of working length",
+      "ru": "Знать анатомию апекса и понятие рабочей длины",
+      "uz": "Apeks sohasi anatomiyasi va ishchi uzunlik tushunchasini bilish"
+    },
+    {
+      "en": "Determine length radiographically and with an apex locator",
+      "ru": "Определять длину рентгенологически и апекслокатором",
+      "uz": "Rentgenologik usul va apeks lokator bilan uzunlikni aniqlash"
+    },
+    {
+      "en": "Explain causes and consequences of measurement errors",
+      "ru": "Объяснять причины и последствия ошибок измерения",
+      "uz": "O‘lchov xatolarining sabablari va oqibatlarini tushuntirish"
+    }
+  ],
+  "links": [
+    "atlas"
+  ],
+  "sources": [
+    "Berman LH, Hargreaves KM. Cohen's Pathways of the Pulp, 12th ed., 2020",
+    "Gordon MP, Chandler NP. Electronic apex locators. Int Endod J 2004",
+    "European Society of Endodontology. Quality guidelines for endodontic treatment. Int Endod J 2006"
+  ],
+  "slides": [
+    {
+      "layout": "title",
+      "title": {
+        "en": "Working length determination",
+        "ru": "Определение рабочей длины",
+        "uz": "Ishchi uzunlikni aniqlash"
+      },
+      "subtitle": {
+        "en": "Radiographic method and electronic apex locator",
+        "ru": "Рентгенологический метод и электронный апекслокатор",
+        "uz": "Rentgenologik usul va elektron apeks lokator"
+      }
+    },
+    {
+      "layout": "key",
+      "title": {
+        "en": "Working length",
+        "ru": "Рабочая длина",
+        "uz": "Ishchi uzunlik"
+      },
+      "term": {
+        "en": "Limit of shaping and filling",
+        "ru": "Граница обработки и пломбирования",
+        "uz": "Ishlov va plomba chegarasi"
+      },
+      "definition": {
+        "en": "The distance from a coronal reference point to the point where canal preparation and obturation should end.",
+        "ru": "Расстояние от коронковой референтной точки до точки, где должны заканчиваться обработка и пломбирование канала.",
+        "uz": "Tojdagi tayanch nuqtadan kanalga ishlov berish va plombalash tugashi kerak bo‘lgan nuqtagacha bo‘lgan masofa."
+      },
+      "note": {
+        "en": "The reference point must be stable and reproducible: a cusp tip or incisal edge, not a weakened wall.",
+        "ru": "Референтная точка должна быть стабильной и воспроизводимой: вершина бугра или режущий край, а не ослабленная стенка.",
+        "uz": "Tayanch nuqta barqaror va qayta topiladigan bo‘lishi kerak: do‘mboq uchi yoki kesuvchi qirra, sinuvchi devor emas."
+      }
+    },
+    {
+      "layout": "figure",
+      "title": {
+        "en": "Anatomy of the apical region",
+        "ru": "Анатомия апикальной области",
+        "uz": "Apeks sohasining anatomiyasi"
+      },
+      "image": "cutaway",
+      "callouts": [
+        {
+          "at": "canal",
+          "label": {
+            "en": "Canal narrowing",
+            "ru": "Сужение канала",
+            "uz": "Kanal toraygan qismi"
+          }
+        },
+        {
+          "at": "apex",
+          "label": {
+            "en": "Radiographic apex",
+            "ru": "Рентгенологическая верхушка",
+            "uz": "Rentgenologik apeks"
+          }
+        },
+        {
+          "at": "root",
+          "label": {
+            "en": "Cementodentinal junction",
+            "ru": "Цементно-дентинная граница",
+            "uz": "Sement-dentin chegarasi"
+          }
+        }
+      ],
+      "bullets": [
+        {
+          "en": "The apical constriction usually lies 0.5–1 mm short of the foramen",
+          "ru": "Апикальное сужение обычно на 0,5–1 мм выше отверстия",
+          "uz": "Apikal toraygan joy odatda teshikdan 0,5–1 mm yuqorida"
+        },
+        {
+          "en": "The apical foramen often lies short of the radiographic apex",
+          "ru": "Апикальное отверстие часто не совпадает с рентгенологической верхушкой",
+          "uz": "Apikal teshik ko‘pincha rentgenologik apeksga yetmaydi"
+        }
+      ],
+      "note": {
+        "en": "Ending at the apical constriction protects the periapex and helps retain the filling.",
+        "ru": "Завершение обработки у апикального сужения щадит периапекс и удерживает пломбу.",
+        "uz": "Ishlovni apikal toraygan joyda tugatish periapikal to‘qimalarni shikastlamaslik va plombani ushlab turish uchun muhim."
+      }
+    },
+    {
+      "layout": "flow",
+      "title": {
+        "en": "Radiographic method (Ingle)",
+        "ru": "Рентгенологический метод (по Инглу)",
+        "uz": "Rentgenologik usul (Ingle bo‘yicha)"
+      },
+      "steps": [
+        {
+          "label": {
+            "en": "Preoperative radiograph",
+            "ru": "Исходный снимок",
+            "uz": "Dastlabki rentgenogramma"
+          },
+          "detail": {
+            "en": "Measure tooth length",
+            "ru": "Измерение длины зуба",
+            "uz": "Tish uzunligini o‘lchash"
+          }
+        },
+        {
+          "label": {
+            "en": "Estimated length",
+            "ru": "Ориентировочная длина",
+            "uz": "Taxminiy uzunlik"
+          },
+          "detail": {
+            "en": "1 mm less than measured",
+            "ru": "На 1 мм меньше измеренной",
+            "uz": "O‘lchamdan 1 mm kam"
+          }
+        },
+        {
+          "label": {
+            "en": "Insert file and radiograph",
+            "ru": "Введение файла и снимок",
+            "uz": "Fayl kiritish va rentgen"
+          },
+          "detail": {
+            "en": "File of at least size 10–15",
+            "ru": "Файл не меньше 10–15",
+            "uz": "Kamida 10–15 o‘lchamli fayl"
+          }
+        },
+        {
+          "label": {
+            "en": "Measure the difference",
+            "ru": "Измерение разницы",
+            "uz": "Farqni o‘lchash"
+          },
+          "detail": {
+            "en": "File tip to radiographic apex",
+            "ru": "От кончика файла до верхушки",
+            "uz": "Fayl uchidan apeksgacha"
+          }
+        },
+        {
+          "label": {
+            "en": "Set working length",
+            "ru": "Установление рабочей длины",
+            "uz": "Ishchi uzunlikni belgilash"
+          },
+          "detail": {
+            "en": "Usually 0.5–1 mm short of the apex",
+            "ru": "Обычно на 0,5–1 мм короче верхушки",
+            "uz": "Odatda apeksdan 0,5–1 mm qisqa"
+          }
+        }
+      ]
+    },
+    {
+      "layout": "compare",
+      "title": {
+        "en": "Comparison of methods",
+        "ru": "Сравнение методов",
+        "uz": "Usullarni solishtirish"
+      },
+      "columns": [
+        {
+          "head": {
+            "en": "Radiographic",
+            "ru": "Рентгенологический",
+            "uz": "Rentgenologik"
+          },
+          "items": [
+            {
+              "en": "Two-dimensional, superimposition",
+              "ru": "Двухмерное изображение, наложение",
+              "uz": "Ikki o‘lchamli tasvir, qatlamlanish"
+            },
+            {
+              "en": "Does not show the foramen position",
+              "ru": "Не показывает положение отверстия",
+              "uz": "Apikal teshik holatini ko‘rsatmaydi"
+            },
+            {
+              "en": "Additional radiation",
+              "ru": "Дополнительное облучение",
+              "uz": "Qo‘shimcha nurlanish"
+            },
+            {
+              "en": "Shows canal curvature",
+              "ru": "Показывает кривизну канала",
+              "uz": "Kanal egriligini ko‘rsatadi"
+            }
+          ]
+        },
+        {
+          "head": {
+            "en": "Apex locator",
+            "ru": "Апекслокатор",
+            "uz": "Apeks lokator"
+          },
+          "items": [
+            {
+              "en": "No radiation",
+              "ru": "Без облучения",
+              "uz": "Nurlanishsiz"
+            },
+            {
+              "en": "Locates the foramen more accurately",
+              "ru": "Точнее находит апикальное отверстие",
+              "uz": "Apikal teshikni aniqroq topadi"
+            },
+            {
+              "en": "Errors with open apex or perforation",
+              "ru": "Ошибается при открытом апексе, перфорации",
+              "uz": "Ochiq apeks, perforatsiyada xato beradi"
+            },
+            {
+              "en": "False readings on metal contact",
+              "ru": "Ложные данные при контакте с металлом",
+              "uz": "Metallga tegishda yolg‘on o‘lchov"
+            }
+          ]
+        }
+      ],
+      "note": {
+        "en": "The most reliable approach combines both: measure with the apex locator and confirm with a radiograph.",
+        "ru": "Надёжнее всего сочетать методы: измерить апекслокатором и подтвердить снимком.",
+        "uz": "Eng ishonchli yondashuv – ikkala usulni birga qo‘llash: apeks lokator bilan o‘lchash va rentgenogramma bilan tasdiqlash."
+      }
+    },
+    {
+      "layout": "timeline",
+      "title": {
+        "en": "Generations of apex locators",
+        "ru": "Поколения апекслокаторов",
+        "uz": "Apeks lokatorlar avlodlari"
+      },
+      "events": [
+        {
+          "when": {
+            "en": "1st generation",
+            "ru": "1-е поколение",
+            "uz": "1-avlod"
+          },
+          "label": {
+            "en": "Resistance-based, need a dry canal",
+            "ru": "По сопротивлению, нужен сухой канал",
+            "uz": "Qarshilik bo‘yicha, quruq kanal kerak"
+          }
+        },
+        {
+          "when": {
+            "en": "2nd generation",
+            "ru": "2-е поколение",
+            "uz": "2-avlod"
+          },
+          "label": {
+            "en": "Impedance-based, single frequency",
+            "ru": "По импедансу, одна частота",
+            "uz": "Impedans bo‘yicha, bitta chastota"
+          }
+        },
+        {
+          "when": {
+            "en": "3rd generation",
+            "ru": "3-е поколение",
+            "uz": "3-avlod"
+          },
+          "label": {
+            "en": "Difference or ratio of two frequencies",
+            "ru": "Разница или отношение двух частот",
+            "uz": "Ikki chastota farqi yoki nisbati"
+          }
+        },
+        {
+          "when": {
+            "en": "Modern",
+            "ru": "Современные",
+            "uz": "Zamonaviy"
+          },
+          "label": {
+            "en": "Multi-frequency, work in electrolytes",
+            "ru": "Многочастотные, работают в электролите",
+            "uz": "Ko‘p chastotali, elektrolitda ishlaydi"
+          }
+        }
+      ]
+    },
+    {
+      "layout": "flow",
+      "title": {
+        "en": "Using an apex locator",
+        "ru": "Работа с апекслокатором",
+        "uz": "Apeks lokator bilan ishlash"
+      },
+      "steps": [
+        {
+          "label": {
+            "en": "Attach the lip clip",
+            "ru": "Подключить губной зажим",
+            "uz": "Lab qisqichini ulash"
+          }
+        },
+        {
+          "label": {
+            "en": "Connect the file holder",
+            "ru": "Подключить держатель к файлу",
+            "uz": "Fayl tutqichini ulash"
+          }
+        },
+        {
+          "label": {
+            "en": "Advance the file slowly to “0”",
+            "ru": "Медленно ввести файл до «0»",
+            "uz": "Faylni sekin «0» belgigacha kiritish"
+          }
+        },
+        {
+          "label": {
+            "en": "Set the stopper to the reference point",
+            "ru": "Установить стоппер по референтной точке",
+            "uz": "Stopperni tayanch nuqtaga to‘g‘rilash"
+          }
+        },
+        {
+          "label": {
+            "en": "Subtract the chosen margin",
+            "ru": "Учесть нужное укорочение",
+            "uz": "Kerakli qisqartirishni hisoblash"
+          }
+        }
+      ],
+      "note": {
+        "en": "The canal may be moist, but excess fluid in the chamber or metal contact gives false readings.",
+        "ru": "Канал может быть влажным, но избыток жидкости в полости или контакт с металлом дают ложные показания.",
+        "uz": "Kanal namligi suyuq bo‘lishi mumkin, lekin kamerada ortiqcha suyuqlik yoki metall bilan aloqa yolg‘on o‘lchov beradi."
+      }
+    },
+    {
+      "layout": "table",
+      "title": {
+        "en": "Errors and consequences",
+        "ru": "Ошибки и их последствия",
+        "uz": "Xatolar va oqibatlari"
+      },
+      "head": [
+        {
+          "en": "Error",
+          "ru": "Ошибка",
+          "uz": "Xato"
+        },
+        {
+          "en": "Consequence",
+          "ru": "Последствие",
+          "uz": "Oqibat"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "en": "Working length too short",
+            "ru": "Рабочая длина короткая",
+            "uz": "Ishchi uzunlik qisqa"
+          },
+          {
+            "en": "Bacteria and tissue left apically",
+            "ru": "В апикальной части остаются микробы и ткани",
+            "uz": "Apikal qismda mikroblar va to‘qima qoladi"
+          }
+        ],
+        [
+          {
+            "en": "Working length too long",
+            "ru": "Рабочая длина длинная",
+            "uz": "Ishchi uzunlik uzun"
+          },
+          {
+            "en": "Apical damage and extrusion",
+            "ru": "Травма апекса, выведение материала",
+            "uz": "Apeks shikastlanadi, material chiqadi"
+          }
+        ],
+        [
+          {
+            "en": "Stopper moved",
+            "ru": "Смещение стоппера",
+            "uz": "Stopper siljigan"
+          },
+          {
+            "en": "Preparation length changes",
+            "ru": "Меняется длина обработки",
+            "uz": "Ishlov uzunligi o‘zgaradi"
+          }
+        ],
+        [
+          {
+            "en": "Reference point broke",
+            "ru": "Разрушение референтной точки",
+            "uz": "Tayanch nuqta sindi"
+          },
+          {
+            "en": "Length is lost; re-measure",
+            "ru": "Длина теряется, нужно повторное измерение",
+            "uz": "Uzunlik yo‘qoladi, qayta o‘lchash kerak"
+          }
+        ]
+      ]
+    },
+    {
+      "layout": "summary",
+      "title": {
+        "en": "Summary",
+        "ru": "Итоги",
+        "uz": "Xulosa"
+      },
+      "bullets": [
+        {
+          "en": "Measure from a stable reference point",
+          "ru": "Рабочую длину измеряют от стабильной точки",
+          "uz": "Ishchi uzunlik barqaror tayanch nuqtadan o‘lchanadi"
+        },
+        {
+          "en": "The target is the apical constriction",
+          "ru": "Цель — апикальное сужение",
+          "uz": "Maqsad – apikal toraygan joy"
+        },
+        {
+          "en": "Combine apex locator and radiograph",
+          "ru": "Сочетайте апекслокатор и рентгенограмму",
+          "uz": "Apeks lokator va rentgenogrammani birga qo‘llang"
+        },
+        {
+          "en": "Recheck length during shaping",
+          "ru": "Перепроверяйте длину в ходе обработки",
+          "uz": "Uzunlikni ishlov davomida qayta tekshiring"
+        }
+      ]
+    }
+  ],
+  "oral": [
+    {
+      "q": {
+        "en": "What is working length and which anatomical point does it target?",
+        "ru": "Что такое рабочая длина и на какую анатомическую точку она ориентирована?",
+        "uz": "Ishchi uzunlik nima va u qaysi anatomik nuqtaga mo‘ljallanadi?"
+      },
+      "plan": [
+        {
+          "en": "Distance from reference point to the preparation limit",
+          "ru": "Расстояние от референтной точки до границы обработки",
+          "uz": "Tayanch nuqtadan ishlov chegarasigacha masofa"
+        },
+        {
+          "en": "Apical constriction, the narrowest part of the canal",
+          "ru": "Апикальное сужение — самая узкая часть канала",
+          "uz": "Apikal toraygan joy – kanalning eng tor qismi"
+        },
+        {
+          "en": "The foramen is often short of the radiographic apex",
+          "ru": "Отверстие часто короче рентгенологической верхушки",
+          "uz": "Teshik ko‘pincha rentgenologik apeksdan qisqa"
+        }
+      ]
+    },
+    {
+      "q": {
+        "en": "Describe Ingle's radiographic method.",
+        "ru": "Опишите рентгенологический метод по Инглу.",
+        "uz": "Ingle bo‘yicha rentgenologik usulni tavsiflang."
+      },
+      "plan": [
+        {
+          "en": "Measure length on the preoperative film",
+          "ru": "Измерение длины на исходном снимке",
+          "uz": "Dastlabki rentgenogrammada uzunlikni o‘lchash"
+        },
+        {
+          "en": "Insert a file 1 mm shorter and take a radiograph",
+          "ru": "Введение файла на 1 мм короче и снимок",
+          "uz": "1 mm kam uzunlikda fayl kiritib rentgen olish"
+        },
+        {
+          "en": "Correct the length by the measured difference",
+          "ru": "Коррекция длины с учётом разницы",
+          "uz": "Farqni hisobga olib uzunlikni to‘g‘rilash"
+        },
+        {
+          "en": "Final length 0.5–1 mm short of the apex",
+          "ru": "Итоговая длина на 0,5–1 мм короче",
+          "uz": "Yakuniy uzunlik apeksdan 0,5–1 mm qisqa"
+        }
+      ]
+    },
+    {
+      "q": {
+        "en": "How does an electronic apex locator work and when does it err?",
+        "ru": "Как работает апекслокатор и когда он ошибается?",
+        "uz": "Elektron apeks lokator qanday ishlaydi va qachon xato beradi?"
+      },
+      "plan": [
+        {
+          "en": "Measures impedance between canal and periodontium",
+          "ru": "Измеряет импеданс между каналом и периодонтом",
+          "uz": "Kanal va periodont orasidagi elektr impedansini o‘lchaydi"
+        },
+        {
+          "en": "Modern devices are multi-frequency",
+          "ru": "Современные приборы многочастотные",
+          "uz": "Zamonaviy qurilmalar ko‘p chastotali"
+        },
+        {
+          "en": "Errors: open apex, perforation, metal contact",
+          "ru": "Ошибки: открытый апекс, перфорация, контакт с металлом",
+          "uz": "Xato: ochiq apeks, perforatsiya, metallga tegish"
+        },
+        {
+          "en": "Excess fluid in the chamber",
+          "ru": "Избыток жидкости в полости",
+          "uz": "Kamerada ortiqcha suyuqlik bo‘lishi"
+        }
+      ]
+    },
+    {
+      "q": {
+        "en": "What are the consequences of working length errors?",
+        "ru": "К чему приводят ошибки рабочей длины?",
+        "uz": "Ishchi uzunlikdagi xatolar qanday oqibatlarga olib keladi?"
+      },
+      "plan": [
+        {
+          "en": "Too short: infected tissue remains",
+          "ru": "Короткая: остаются инфицированные ткани",
+          "uz": "Qisqa: infeksiyalangan to‘qima qoladi"
+        },
+        {
+          "en": "Too long: apical damage and extrusion",
+          "ru": "Длинная: травма апекса, выведение материала",
+          "uz": "Uzun: apeks shikastlanadi, material chiqadi"
+        },
+        {
+          "en": "Post-operative pain and poorer outcome",
+          "ru": "Послеоперационная боль, худший исход",
+          "uz": "Operatsiyadan keyingi og‘riq va davolash natijasi yomonlashadi"
+        }
+      ]
+    }
+  ],
+  "test": [
+    {
+      "q": {
+        "en": "To which point is working length ideally set?",
+        "ru": "До какой точки определяют рабочую длину?",
+        "uz": "Ishchi uzunlik qaysi nuqtagacha o‘lchanadi?"
+      },
+      "options": [
+        {
+          "en": "To the anatomical apex",
+          "ru": "До анатомической верхушки",
+          "uz": "Anatomik apeksgacha"
+        },
+        {
+          "en": "To the apical constriction",
+          "ru": "До апикального сужения",
+          "uz": "Apikal toraygan joygacha"
+        },
+        {
+          "en": "3 mm beyond the radiographic apex",
+          "ru": "На 3 мм за рентгенологическую верхушку",
+          "uz": "Rentgenologik apeksdan 3 mm o‘tib"
+        },
+        {
+          "en": "To the middle of the canal",
+          "ru": "До середины канала",
+          "uz": "Kanal o‘rtasigacha"
+        }
+      ],
+      "correct": 1,
+      "explain": {
+        "en": "The apical constriction is the narrowest part of the canal and the natural limit for shaping and filling.",
+        "ru": "Апикальное сужение — самая узкая часть канала и естественная граница обработки и пломбы.",
+        "uz": "Apikal toraygan joy kanalning eng tor qismi bo‘lib, ishlov va plomba uchun tabiiy chegara hisoblanadi."
+      }
+    },
+    {
+      "q": {
+        "en": "How far from the apical foramen does the apical constriction usually lie?",
+        "ru": "На каком расстоянии от апикального отверстия обычно находится апикальное сужение?",
+        "uz": "Apikal toraygan joy apikal teshikdan odatda qancha masofada joylashadi?"
+      },
+      "options": [
+        {
+          "en": "0.5–1 mm",
+          "ru": "0,5–1 мм",
+          "uz": "0,5–1 mm"
+        },
+        {
+          "en": "3–4 mm",
+          "ru": "3–4 мм",
+          "uz": "3–4 mm"
+        },
+        {
+          "en": "More than 5 mm",
+          "ru": "Более 5 мм",
+          "uz": "5 mm dan ortiq"
+        },
+        {
+          "en": "Always at the foramen",
+          "ru": "Всегда совпадает с отверстием",
+          "uz": "Doimo teshik bilan bir joyda"
+        }
+      ],
+      "correct": 0,
+      "explain": {
+        "en": "The constriction usually lies 0.5–1 mm coronal to the foramen, though variation is large.",
+        "ru": "Апикальное сужение обычно на 0,5–1 мм коронковее отверстия, но индивидуальная вариабельность велика.",
+        "uz": "Apikal toraygan joy odatda teshikdan 0,5–1 mm koronal joylashadi, lekin individual farq katta."
+      }
+    },
+    {
+      "q": {
+        "en": "Why does a radiograph not show the position of the apical foramen accurately?",
+        "ru": "Почему рентгенограмма не показывает точно положение апикального отверстия?",
+        "uz": "Nima uchun rentgenogramma apikal teshik holatini aniq ko‘rsatmaydi?"
+      },
+      "options": [
+        {
+          "en": "Files are not radiopaque",
+          "ru": "Файлы не рентгеноконтрастны",
+          "uz": "Fayllar rentgenokontrast emas"
+        },
+        {
+          "en": "The canal is always straight",
+          "ru": "Канал всегда прямой",
+          "uz": "Kanal har doim to‘g‘ri"
+        },
+        {
+          "en": "The foramen often exits laterally and the image is 2D",
+          "ru": "Отверстие часто открывается латерально, а снимок двухмерный",
+          "uz": "Teshik ko‘pincha lateral ochiladi va tasvir ikki o‘lchamli"
+        },
+        {
+          "en": "Radiographs do not show bone",
+          "ru": "Снимок не показывает кость",
+          "uz": "Rentgen suyakni ko‘rsatmaydi"
+        }
+      ],
+      "correct": 2,
+      "explain": {
+        "en": "The foramen often exits to the side of the root tip, which a 2D image cannot show.",
+        "ru": "Апикальное отверстие часто открывается сбоку от верхушки, и двухмерный снимок этого не отражает.",
+        "uz": "Apikal teshik ko‘pincha ildiz uchidan yon tomonda ochiladi, ikki o‘lchamli tasvir buni ko‘rsatmaydi."
+      }
+    },
+    {
+      "q": {
+        "en": "In which situation is an apex locator unreliable?",
+        "ru": "В какой ситуации апекслокатор даёт ненадёжный результат?",
+        "uz": "Apeks lokator qaysi holatda ishonchsiz natija beradi?"
+      },
+      "options": [
+        {
+          "en": "The canal is slightly moist",
+          "ru": "Канал слегка влажный",
+          "uz": "Kanal biroz nam bo‘lganda"
+        },
+        {
+          "en": "Hypochlorite is in the canal",
+          "ru": "В канале раствор гипохлорита",
+          "uz": "Gipoxlorit eritmasi kanalda bo‘lganda"
+        },
+        {
+          "en": "The canal is curved",
+          "ru": "Канал изогнут",
+          "uz": "Kanal egri bo‘lganda"
+        },
+        {
+          "en": "The apex is open (immature)",
+          "ru": "Апекс открыт (несформирован)",
+          "uz": "Apeks ochiq (shakllanmagan) bo‘lganda"
+        }
+      ],
+      "correct": 3,
+      "explain": {
+        "en": "With a wide open apex there is no constriction, impedance changes are unclear and readings unreliable.",
+        "ru": "При широком открытом апексе сужения нет, изменение импеданса нечёткое, измерение ненадёжно.",
+        "uz": "Keng ochiq apeksda toraygan joy yo‘q, impedans o‘zgarishi aniq bo‘lmaydi va o‘lchov ishonchsiz."
+      }
+    },
+    {
+      "q": {
+        "en": "In Ingle's method, at what length is the file first inserted?",
+        "ru": "На какую длину вводят файл первый раз по методу Ингла?",
+        "uz": "Ingle usulida fayl birinchi marta qanday uzunlikda kiritiladi?"
+      },
+      "options": [
+        {
+          "en": "1 mm less than the length on the preoperative film",
+          "ru": "На 1 мм меньше длины по исходному снимку",
+          "uz": "Dastlabki rentgenogrammadagi uzunlikdan 1 mm kam"
+        },
+        {
+          "en": "2 mm more than the film length",
+          "ru": "На 2 мм больше длины по снимку",
+          "uz": "Rentgenogrammadagi uzunlikdan 2 mm ko‘p"
+        },
+        {
+          "en": "To the middle of the canal",
+          "ru": "До середины канала",
+          "uz": "Kanal o‘rtasigacha"
+        },
+        {
+          "en": "Until resistance, without measuring",
+          "ru": "До упора, без измерения",
+          "uz": "Qarshilik sezilguncha, o‘lchovsiz"
+        }
+      ],
+      "correct": 0,
+      "explain": {
+        "en": "For safety the file is inserted 1 mm short of the estimate, then corrected from the radiograph.",
+        "ru": "Для безопасности файл вводят на 1 мм короче исходной длины и затем корректируют по снимку.",
+        "uz": "Xavfsizlik uchun fayl dastlabki o‘lchamdan 1 mm qisqa kiritiladi, so‘ng rentgen bo‘yicha to‘g‘rilanadi."
+      }
+    },
+    {
+      "q": {
+        "en": "During treatment the buccal cusp used as the reference point fractured. What should be done?",
+        "ru": "Во время лечения откололся щёчный бугор моляра — референтная точка. Что делать?",
+        "uz": "Davolash paytida molyarning lunj do‘mbog‘i sinib ketdi; u tayanch nuqta edi. Nima qilish kerak?"
+      },
+      "options": [
+        {
+          "en": "Continue with the previous length",
+          "ru": "Продолжить работу с прежней длиной",
+          "uz": "Avvalgi uzunlikni saqlab ishlashni davom ettirish"
+        },
+        {
+          "en": "Stop and extract the tooth",
+          "ru": "Прекратить лечение и удалить зуб",
+          "uz": "Ishlovni to‘xtatib, tishni olib tashlash"
+        },
+        {
+          "en": "Choose a new reference and re-measure",
+          "ru": "Выбрать новую точку и заново измерить длину",
+          "uz": "Yangi tayanch nuqtani tanlab, uzunlikni qayta o‘lchash"
+        },
+        {
+          "en": "Add 2 mm to the length",
+          "ru": "Прибавить 2 мм к длине",
+          "uz": "Uzunlikka 2 mm qo‘shish"
+        }
+      ],
+      "correct": 2,
+      "explain": {
+        "en": "Losing the reference point loses the working length; re-measure from a new stable point.",
+        "ru": "При утрате референтной точки рабочая длина теряется; нужно измерить заново от новой стабильной точки.",
+        "uz": "Tayanch nuqta yo‘qolsa ishchi uzunlik ham yo‘qoladi; yangi barqaror nuqtadan qayta o‘lchash kerak."
+      }
+    },
+    {
+      "q": {
+        "en": "What principle do modern apex locators use?",
+        "ru": "На каком принципе основаны современные апекслокаторы?",
+        "uz": "Zamonaviy apeks lokatorlar qanday tamoyilga asoslanadi?"
+      },
+      "options": [
+        {
+          "en": "Ratio of impedance at several frequencies",
+          "ru": "Отношение импеданса на нескольких частотах",
+          "uz": "Bir nechta chastotadagi impedans nisbati"
+        },
+        {
+          "en": "A single constant resistance",
+          "ru": "Одно постоянное сопротивление",
+          "uz": "Bitta doimiy qarshilik"
+        },
+        {
+          "en": "Measuring canal temperature",
+          "ru": "Измерение температуры канала",
+          "uz": "Kanal haroratini o‘lchash"
+        },
+        {
+          "en": "Ultrasonic echo",
+          "ru": "Ультразвуковое эхо",
+          "uz": "Ultratovush aks-sadosi"
+        }
+      ],
+      "correct": 0,
+      "explain": {
+        "en": "Multi-frequency devices compare impedance ratios and work even in the presence of electrolytes.",
+        "ru": "Многочастотные приборы сравнивают отношение импедансов и работают даже в присутствии электролитов.",
+        "uz": "Ko‘p chastotali qurilmalar impedans nisbatini solishtiradi va elektrolitlar borligida ham ishlaydi."
+      }
+    },
+    {
+      "q": {
+        "en": "What happens if the working length is too short?",
+        "ru": "Что произойдёт, если рабочая длина слишком короткая?",
+        "uz": "Ishchi uzunlik haddan tashqari qisqa bo‘lsa nima bo‘ladi?"
+      },
+      "options": [
+        {
+          "en": "Filling material extrudes",
+          "ru": "Материал выходит за апекс",
+          "uz": "Plomba materiali apeksdan chiqadi"
+        },
+        {
+          "en": "Infected tissue remains apically",
+          "ru": "В апикальной части остаются инфицированные ткани",
+          "uz": "Apikal qismda infeksiyalangan to‘qima qoladi"
+        },
+        {
+          "en": "The apical foramen is enlarged",
+          "ru": "Расширяется апикальное отверстие",
+          "uz": "Apikal teshik kengayadi"
+        },
+        {
+          "en": "A root perforation occurs",
+          "ru": "Возникает перфорация корня",
+          "uz": "Ildiz perforatsiyasi yuz beradi"
+        }
+      ],
+      "correct": 1,
+      "explain": {
+        "en": "With short preparation the apical canal remains uncleaned and bacteria sustain periodontitis.",
+        "ru": "При короткой обработке апикальная часть остаётся неочищенной, микробы поддерживают периодонтит.",
+        "uz": "Qisqa ishlovda kanalning apikal qismi tozalanmay qoladi va mikroblar periodontitni saqlaydi."
+      }
+    },
+    {
+      "q": {
+        "en": "Which factor gives a falsely short apex locator reading?",
+        "ru": "Какой фактор даёт ложно короткое показание апекслокатора?",
+        "uz": "Apeks lokator bilan o‘lchashda qaysi omil yolg‘on qisqa ko‘rsatkich beradi?"
+      },
+      "options": [
+        {
+          "en": "A little irrigant in the canal",
+          "ru": "Немного ирриганта в канале",
+          "uz": "Kanalda oz miqdorda irrigant"
+        },
+        {
+          "en": "A small file",
+          "ru": "Файл малого размера",
+          "uz": "Kichik o‘lchamli fayl"
+        },
+        {
+          "en": "A correctly attached lip clip",
+          "ru": "Правильно подключённый губной зажим",
+          "uz": "Lab qisqichining to‘g‘ri ulanishi"
+        },
+        {
+          "en": "The file touching a metal restoration",
+          "ru": "Контакт файла с металлической пломбой",
+          "uz": "Fayl metall plombaga tegishi"
+        }
+      ],
+      "correct": 3,
+      "explain": {
+        "en": "Current leaks through the metal restoration to the periodontium, so the device signals the apex too early.",
+        "ru": "Через металлическую пломбу ток уходит в периодонт, и прибор показывает «апекс» раньше времени.",
+        "uz": "Metall plomba orqali tok periodontga o‘tadi va qurilma apeksga yetgandek ko‘rsatadi."
+      }
+    },
+    {
+      "q": {
+        "en": "Which approach to working length is most reliable?",
+        "ru": "Какой подход к определению рабочей длины наиболее надёжен?",
+        "uz": "Ishchi uzunlikni aniqlashda eng ishonchli yondashuv qaysi?"
+      },
+      "options": [
+        {
+          "en": "Patient sensation alone",
+          "ru": "Только ощущения пациента",
+          "uz": "Faqat bemorning sezgisi"
+        },
+        {
+          "en": "Average tooth-length tables alone",
+          "ru": "Только таблица средних длин зубов",
+          "uz": "Faqat o‘rtacha tish uzunligi jadvali"
+        },
+        {
+          "en": "Apex locator combined with a radiograph",
+          "ru": "Апекслокатор вместе с рентгенограммой",
+          "uz": "Apeks lokator va rentgenogramma birga"
+        },
+        {
+          "en": "Tactile sense alone",
+          "ru": "Только тактильное ощущение",
+          "uz": "Faqat qo‘l sezgisi"
+        }
+      ],
+      "correct": 2,
+      "explain": {
+        "en": "The apex locator finds the foramen more accurately, and the radiograph confirms file position and curvature.",
+        "ru": "Апекслокатор точнее находит отверстие, а снимок подтверждает положение файла и кривизну.",
+        "uz": "Apeks lokator teshikni aniqroq topadi, rentgenogramma esa fayl holati va kanal egriligini tasdiqlaydi."
+      }
+    }
+  ]
+}

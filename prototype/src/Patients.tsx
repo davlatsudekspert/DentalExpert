@@ -1,3 +1,4 @@
+import emptyArt from '../assets/tooth3d/turntable-front.webp';
 import {useEffect,useState} from 'react';
 import {ChevronLeft,Plus,Trash2,UserRound} from 'lucide-react';
 import type {Lang} from './discoveryData';
@@ -11,7 +12,7 @@ const UPPER=[18,17,16,15,14,13,12,11,21,22,23,24,25,26,27,28];
 const LOWER=[48,47,46,45,44,43,42,41,31,32,33,34,35,36,37,38];
 
 export const loadPatients=(uid?:string|null):Patient[]=>{try{const v=JSON.parse(localStorage.getItem(keyFor(uid))||'[]');return Array.isArray(v)?v:[]}catch{return []}};
-export const clearLocalData=(uid?:string|null)=>{try{localStorage.removeItem(keyFor(uid));localStorage.removeItem('de_daily')}catch{/* storage unavailable */}};
+export const clearLocalData=(uid?:string|null)=>{try{localStorage.removeItem(keyFor(uid));localStorage.removeItem('de_daily');localStorage.removeItem('de_practice');for(const k of ['de_seen','de_last_topic','de_study_days','de_exam','de_review'])localStorage.removeItem(k);for(const k of Object.keys(localStorage))if(k.startsWith('de_oral:')||k.startsWith('de_alias:'))localStorage.removeItem(k)}catch{/* storage unavailable */}};
 const save=(uid:string|null|undefined,p:Patient[])=>{try{localStorage.setItem(keyFor(uid),JSON.stringify(p))}catch{/* storage unavailable */}};
 
 const words={
@@ -64,7 +65,7 @@ export default function Patients({lang,uid,onChange}:{lang:Lang;uid?:string|null
  </section>;
  return <section className="patients">
   <h2>{t.title}</h2>
-  {list.length===0&&!adding&&<p className="muted">{t.empty}</p>}
+  {list.length===0&&!adding&&<div className="pt-empty"><img src={emptyArt} alt=""/><p>{t.empty}</p></div>}
   <div className="cr-list">{list.map(p=>{const n=Object.values(p.teeth).filter(s=>s!=='healthy').length;return <button key={p.id} className="cr-row" onClick={()=>setOpen(p.id)}><UserRound size={18}/><span><strong>{p.name}</strong><small>{p.phone||'—'} · {t.count}: {n}</small></span></button>})}</div>
   {adding?<div className="cr-form">
    <label>{t.name}<input value={f.name} maxLength={80} onChange={e=>setF({...f,name:e.target.value})}/></label>

@@ -1,0 +1,1082 @@
+{
+  "id": "impl-06",
+  "subject": "impl",
+  "n": 6,
+  "week": 6,
+  "type": "practical",
+  "hours": 2,
+  "title": {
+    "en": "Medical emergencies in the dental office",
+    "ru": "Неотложные состояния в стоматологическом кабинете",
+    "uz": "Stomatologik kabinetdagi shoshilinch holatlar"
+  },
+  "goals": [
+    {
+      "en": "Assess emergencies with the ABCDE approach",
+      "ru": "Оценивать неотложные состояния по алгоритму ABCDE",
+      "uz": "Shoshilinch holatlarni ABCDE yondashuvi bilan baholash"
+    },
+    {
+      "en": "Manage syncope, anaphylaxis and hypoglycaemia",
+      "ru": "Оказывать помощь при обмороке, анафилаксии и гипогликемии",
+      "uz": "Hushdan ketish, anafilaksiya va gipoglikemiyada yordam ko‘rsatish"
+    },
+    {
+      "en": "Perform adult basic life support",
+      "ru": "Выполнять базовую сердечно-лёгочную реанимацию у взрослых",
+      "uz": "Kattalarda asosiy yurak-o‘pka reanimatsiyasini bajarish"
+    },
+    {
+      "en": "Know the contents of the emergency kit",
+      "ru": "Знать состав аптечки неотложной помощи",
+      "uz": "Kabinetdagi shoshilinch yordam to‘plamini bilish"
+    }
+  ],
+  "links": [],
+  "sources": [
+    "Malamed SF. Medical Emergencies in the Dental Office, 7th ed., 2015",
+    "Perkins GD et al. European Resuscitation Council Guidelines 2021: executive summary. Resuscitation 2021"
+  ],
+  "slides": [
+    {
+      "layout": "title",
+      "title": {
+        "en": "Medical emergencies in the dental office",
+        "ru": "Неотложные состояния в стоматологическом кабинете",
+        "uz": "Stomatologik kabinetdagi shoshilinch holatlar"
+      },
+      "subtitle": {
+        "en": "Prevention, recognition and the first minutes",
+        "ru": "Профилактика, распознавание и действия в первые минуты",
+        "uz": "Oldini olish, tanib olish va birinchi daqiqalardagi harakat"
+      }
+    },
+    {
+      "layout": "bullets",
+      "title": {
+        "en": "Prevention",
+        "ru": "Профилактика",
+        "uz": "Oldini olish"
+      },
+      "bullets": [
+        {
+          "en": "Full medical history and drug list for every patient",
+          "ru": "Полный анамнез и список препаратов у каждого пациента",
+          "uz": "Har bir bemordan to‘liq tibbiy anamnez va dorilar ro‘yxati"
+        },
+        {
+          "en": "Reduce anxiety; ask patients not to come fasting",
+          "ru": "Снижение тревоги, не приходить натощак",
+          "uz": "Qo‘rquvni kamaytirish, och qolmaslikni so‘rash"
+        },
+        {
+          "en": "Respect local anaesthetic maximum doses",
+          "ru": "Соблюдение максимальной дозы анестетика",
+          "uz": "Mahalliy anestetikning maksimal dozasiga amal qilish"
+        },
+        {
+          "en": "Team drills and a ready emergency kit",
+          "ru": "Тренировки команды и готовая аптечка",
+          "uz": "Jamoa mashg‘ulotlari va tayyor shoshilinch to‘plam"
+        }
+      ],
+      "note": {
+        "en": "Ask who calls the ambulance and who fetches the kit; roles must be set in advance.",
+        "ru": "Спросите, кто вызывает скорую и кто приносит аптечку — роли нужно распределить заранее.",
+        "uz": "Kabinetda kim tez yordam chaqiradi, kim to‘plamni olib keladi — rollarni oldindan taqsimlashni so‘rang."
+      }
+    },
+    {
+      "layout": "flow",
+      "title": {
+        "en": "The ABCDE approach",
+        "ru": "Алгоритм ABCDE",
+        "uz": "ABCDE yondashuvi"
+      },
+      "steps": [
+        {
+          "label": {
+            "en": "A — Airway",
+            "ru": "A — дыхательные пути",
+            "uz": "A — havo yo‘li"
+          },
+          "detail": {
+            "en": "Patent, no foreign body",
+            "ru": "Проходимы ли, нет ли инородного тела",
+            "uz": "Ochiqmi, begona jism yo‘qmi"
+          }
+        },
+        {
+          "label": {
+            "en": "B — Breathing",
+            "ru": "B — дыхание",
+            "uz": "B — nafas"
+          },
+          "detail": {
+            "en": "Rate, wheeze, oxygen",
+            "ru": "Частота, хрипы, кислород",
+            "uz": "Tezligi, xirillash, kislorod"
+          }
+        },
+        {
+          "label": {
+            "en": "C — Circulation",
+            "ru": "C — кровообращение",
+            "uz": "C — qon aylanishi"
+          },
+          "detail": {
+            "en": "Pulse, pressure, skin colour",
+            "ru": "Пульс, давление, цвет кожи",
+            "uz": "Puls, bosim, teri rangi"
+          }
+        },
+        {
+          "label": {
+            "en": "D — Disability",
+            "ru": "D — сознание",
+            "uz": "D — hush"
+          },
+          "detail": {
+            "en": "Responsiveness, glucose",
+            "ru": "Реакция, уровень глюкозы",
+            "uz": "Javob berishi, glyukoza"
+          }
+        },
+        {
+          "label": {
+            "en": "E — Exposure",
+            "ru": "E — осмотр",
+            "uz": "E — ko‘rik"
+          },
+          "detail": {
+            "en": "Rash, swelling, other signs",
+            "ru": "Сыпь, отёк, другие признаки",
+            "uz": "Toshma, shish, boshqa belgilar"
+          }
+        }
+      ],
+      "note": {
+        "en": "Stress that each problem is treated as found before moving on.",
+        "ru": "Подчеркните: проблему на каждом этапе решают сразу, потом переходят к следующему.",
+        "uz": "Har bir bosqichda topilgan muammo darhol hal qilinishi, keyin keyingisiga o‘tilishini ta’kidlang."
+      }
+    },
+    {
+      "layout": "table",
+      "title": {
+        "en": "Key emergencies",
+        "ru": "Основные неотложные состояния",
+        "uz": "Asosiy shoshilinch holatlar"
+      },
+      "head": [
+        {
+          "en": "Condition",
+          "ru": "Состояние",
+          "uz": "Holat"
+        },
+        {
+          "en": "Signs",
+          "ru": "Признаки",
+          "uz": "Belgilar"
+        },
+        {
+          "en": "First action",
+          "ru": "Первая помощь",
+          "uz": "Birinchi yordam"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "en": "Vasovagal syncope",
+            "ru": "Вазовагальный обморок",
+            "uz": "Vazovagal hushdan ketish"
+          },
+          {
+            "en": "Pallor, sweating, slow pulse, collapse",
+            "ru": "Бледность, пот, редкий пульс, потеря сознания",
+            "uz": "Rangparlik, ter, sekin puls, hush yo‘qolishi"
+          },
+          {
+            "en": "Lie flat, raise legs, oxygen",
+            "ru": "Уложить, приподнять ноги, кислород",
+            "uz": "Chalqancha yotqizish, oyoqlarni ko‘tarish, kislorod"
+          }
+        ],
+        [
+          {
+            "en": "Hypoglycaemia",
+            "ru": "Гипогликемия",
+            "uz": "Gipoglikemiya"
+          },
+          {
+            "en": "Sweating, tremor, confusion, irritability",
+            "ru": "Пот, тремор, спутанность, агрессия",
+            "uz": "Ter, titroq, chalkashlik, tajovuzkorlik"
+          },
+          {
+            "en": "Conscious: 15–20 g oral glucose",
+            "ru": "В сознании: 15–20 г глюкозы внутрь",
+            "uz": "Hushida: og‘iz orqali 15–20 g glyukoza"
+          }
+        ],
+        [
+          {
+            "en": "Asthma attack",
+            "ru": "Приступ астмы",
+            "uz": "Astma xuruji"
+          },
+          {
+            "en": "Wheeze, breathlessness",
+            "ru": "Свистящее дыхание, одышка",
+            "uz": "Xirillash, nafas qisishi"
+          },
+          {
+            "en": "Salbutamol inhaler, oxygen",
+            "ru": "Ингалятор сальбутамола, кислород",
+            "uz": "Salbutamol ingalyatori, kislorod"
+          }
+        ],
+        [
+          {
+            "en": "Angina",
+            "ru": "Стенокардия",
+            "uz": "Stenokardiya"
+          },
+          {
+            "en": "Crushing chest pain",
+            "ru": "Давящая боль за грудиной",
+            "uz": "Ko‘krakda siquvchi og‘riq"
+          },
+          {
+            "en": "Sublingual GTN, oxygen if needed",
+            "ru": "Нитроглицерин под язык, кислород по показаниям",
+            "uz": "Nitroglitserin til ostiga, kislorod kerak bo‘lsa"
+          }
+        ],
+        [
+          {
+            "en": "Epileptic seizure",
+            "ru": "Эпилептический припадок",
+            "uz": "Epileptik tutqanoq"
+          },
+          {
+            "en": "Convulsions",
+            "ru": "Судороги",
+            "uz": "Tutqanoq harakatlari"
+          },
+          {
+            "en": "Protect from injury, nothing in the mouth",
+            "ru": "Защита от травм, ничего не класть в рот",
+            "uz": "Jarohatdan himoya, og‘izga hech narsa solmaslik"
+          }
+        ]
+      ],
+      "note": {
+        "en": "Remind that syncope is the most common event and recovery is quick.",
+        "ru": "Напомните, что обморок — самое частое состояние и пациент быстро приходит в себя.",
+        "uz": "Hushdan ketish eng ko‘p uchraydigan holat ekanini va bemor tez o‘ziga kelishini eslating."
+      }
+    },
+    {
+      "layout": "flow",
+      "title": {
+        "en": "Anaphylaxis",
+        "ru": "Анафилаксия",
+        "uz": "Anafilaksiya"
+      },
+      "steps": [
+        {
+          "label": {
+            "en": "Recognise",
+            "ru": "Распознать",
+            "uz": "Tanib olish"
+          },
+          "detail": {
+            "en": "Sudden onset, airway, breathing or circulation problem, skin signs",
+            "ru": "Быстрое начало, нарушение дыхания или кровообращения, кожные признаки",
+            "uz": "Tez boshlanish, nafas yoki qon aylanishi buzilishi, teri belgilari"
+          }
+        },
+        {
+          "label": {
+            "en": "Call for help",
+            "ru": "Вызвать помощь",
+            "uz": "Yordam chaqirish"
+          },
+          "detail": {
+            "en": "Ambulance (103 in Uzbekistan)",
+            "ru": "Скорая помощь (103)",
+            "uz": "Tez yordam (103)"
+          }
+        },
+        {
+          "label": {
+            "en": "Adrenaline",
+            "ru": "Адреналин",
+            "uz": "Adrenalin"
+          },
+          "detail": {
+            "en": "Adults: 0.5 mg (1:1000, 0.5 ml) IM into the thigh",
+            "ru": "Взрослым 0,5 мг (1:1000, 0,5 мл) в/м в бедро",
+            "uz": "Kattalarga 0,5 mg (1:1000, 0,5 ml) son mushagiga"
+          }
+        },
+        {
+          "label": {
+            "en": "Position and oxygen",
+            "ru": "Положение и кислород",
+            "uz": "Holat va kislorod"
+          },
+          "detail": {
+            "en": "Lie flat, or sit up if breathless",
+            "ru": "Лёжа, при одышке полусидя",
+            "uz": "Chalqancha, nafas qiyin bo‘lsa yarim o‘tirgan"
+          }
+        },
+        {
+          "label": {
+            "en": "Repeat",
+            "ru": "Повтор",
+            "uz": "Takrorlash"
+          },
+          "detail": {
+            "en": "Repeat adrenaline after 5 minutes if no better",
+            "ru": "Без улучшения повторить через 5 минут",
+            "uz": "Yaxshilanmasa 5 daqiqadan keyin adrenalin"
+          }
+        }
+      ],
+      "note": {
+        "en": "Stress that adrenaline is the key drug; antihistamines do not replace it.",
+        "ru": "Подчеркните, что адреналин — главный препарат, антигистамины его не заменяют.",
+        "uz": "Adrenalin anafilaksiyaning asosiy dorisi ekanini, antigistaminlar uni almashtirmasligini ta’kidlang."
+      }
+    },
+    {
+      "layout": "compare",
+      "title": {
+        "en": "Hypoglycaemia: conscious versus unconscious",
+        "ru": "Гипогликемия: в сознании и без сознания",
+        "uz": "Gipoglikemiya: hushida va hushsiz"
+      },
+      "columns": [
+        {
+          "head": {
+            "en": "Conscious",
+            "ru": "В сознании",
+            "uz": "Hushida"
+          },
+          "items": [
+            {
+              "en": "15–20 g fast-acting carbohydrate by mouth",
+              "ru": "15–20 г быстрых углеводов внутрь",
+              "uz": "Og‘iz orqali 15–20 g tez so‘riladigan uglevod"
+            },
+            {
+              "en": "Recheck after 10–15 minutes",
+              "ru": "Повторная оценка через 10–15 минут",
+              "uz": "10–15 daqiqadan keyin qayta tekshirish"
+            },
+            {
+              "en": "Then a longer-acting snack",
+              "ru": "Затем сложные углеводы",
+              "uz": "Keyin murakkab uglevod"
+            }
+          ]
+        },
+        {
+          "head": {
+            "en": "Unconscious",
+            "ru": "Без сознания",
+            "uz": "Hushsiz"
+          },
+          "items": [
+            {
+              "en": "Nothing by mouth",
+              "ru": "Ничего не давать через рот",
+              "uz": "Og‘izga hech narsa bermaslik"
+            },
+            {
+              "en": "Glucagon 1 mg IM",
+              "ru": "Глюкагон 1 мг в/м",
+              "uz": "Glyukagon 1 mg mushak ichiga"
+            },
+            {
+              "en": "Call ambulance, recovery position",
+              "ru": "Вызов скорой, восстановительное положение",
+              "uz": "Tez yordam chaqirish, tiklanish holati"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "layout": "flow",
+      "title": {
+        "en": "Adult basic life support (ERC 2021)",
+        "ru": "Базовая реанимация у взрослых (ERC 2021)",
+        "uz": "Kattalarda asosiy reanimatsiya (ERC 2021)"
+      },
+      "steps": [
+        {
+          "label": {
+            "en": "Safety and response",
+            "ru": "Безопасность и реакция",
+            "uz": "Xavfsizlik va javob"
+          },
+          "detail": {
+            "en": "Shake shoulders, shout",
+            "ru": "Встряхнуть за плечи, громко окликнуть",
+            "uz": "Yelkasidan silkitib, baland ovozda chaqirish"
+          }
+        },
+        {
+          "label": {
+            "en": "Airway and breathing",
+            "ru": "Дыхательные пути и дыхание",
+            "uz": "Havo yo‘li va nafas"
+          },
+          "detail": {
+            "en": "Head tilt, chin lift, check for 10 seconds",
+            "ru": "Запрокинуть голову, поднять подбородок, 10 секунд",
+            "uz": "Boshni orqaga, iyakni ko‘tarish, 10 soniya tekshirish"
+          }
+        },
+        {
+          "label": {
+            "en": "Call for help",
+            "ru": "Вызов помощи",
+            "uz": "Yordam chaqirish"
+          },
+          "detail": {
+            "en": "Ambulance and AED",
+            "ru": "Скорая и дефибриллятор",
+            "uz": "Tez yordam va defibrillyator"
+          }
+        },
+        {
+          "label": {
+            "en": "Chest compressions",
+            "ru": "Компрессии грудной клетки",
+            "uz": "Ko‘krak qafasini bosish"
+          },
+          "detail": {
+            "en": "30:2, 100–120 per minute, 5–6 cm deep",
+            "ru": "30:2, 100–120 в минуту, глубина 5–6 см",
+            "uz": "30:2, daqiqasiga 100–120, chuqurligi 5–6 sm"
+          }
+        },
+        {
+          "label": {
+            "en": "AED",
+            "ru": "Дефибриллятор",
+            "uz": "Defibrillyator"
+          },
+          "detail": {
+            "en": "Attach at once and follow prompts",
+            "ru": "Подключить сразу и следовать подсказкам",
+            "uz": "Kelishi bilan ulash va ko‘rsatmaga amal qilish"
+          }
+        }
+      ],
+      "note": {
+        "en": "Have students take turns doing two-minute cycles on a manikin.",
+        "ru": "Пусть студенты по очереди выполнят двухминутный цикл на манекене.",
+        "uz": "Talabalar manekenda ikki daqiqalik siklni navbat bilan bajarsin."
+      }
+    },
+    {
+      "layout": "tree",
+      "title": {
+        "en": "Emergency kit",
+        "ru": "Аптечка неотложной помощи",
+        "uz": "Shoshilinch yordam to‘plami"
+      },
+      "root": {
+        "en": "Practice kit",
+        "ru": "Аптечка кабинета",
+        "uz": "Kabinet to‘plami"
+      },
+      "children": [
+        {
+          "label": {
+            "en": "Drugs",
+            "ru": "Препараты",
+            "uz": "Dorilar"
+          },
+          "items": [
+            {
+              "en": "Adrenaline",
+              "ru": "Адреналин",
+              "uz": "Adrenalin"
+            },
+            {
+              "en": "Glucose and glucagon",
+              "ru": "Глюкоза и глюкагон",
+              "uz": "Glyukoza va glyukagon"
+            },
+            {
+              "en": "Salbutamol, GTN, aspirin",
+              "ru": "Сальбутамол, нитроглицерин, аспирин",
+              "uz": "Salbutamol, nitroglitserin, aspirin"
+            },
+            {
+              "en": "Buccal midazolam",
+              "ru": "Мидазолам (буккальный)",
+              "uz": "Midazolam (bukkal)"
+            }
+          ]
+        },
+        {
+          "label": {
+            "en": "Equipment",
+            "ru": "Оборудование",
+            "uz": "Jihozlar"
+          },
+          "items": [
+            {
+              "en": "Oxygen cylinder and mask",
+              "ru": "Кислородный баллон и маска",
+              "uz": "Kislorod ballon va niqob"
+            },
+            {
+              "en": "Bag-valve-mask",
+              "ru": "Мешок Амбу",
+              "uz": "Ambu qopchasi"
+            },
+            {
+              "en": "AED",
+              "ru": "Дефибриллятор",
+              "uz": "Defibrillyator"
+            },
+            {
+              "en": "Suction",
+              "ru": "Аспиратор",
+              "uz": "Aspirator"
+            }
+          ]
+        },
+        {
+          "label": {
+            "en": "Organisation",
+            "ru": "Организационное",
+            "uz": "Tashkiliy"
+          },
+          "items": [
+            {
+              "en": "Regular expiry checks",
+              "ru": "Регулярная проверка сроков годности",
+              "uz": "Muddatlarni muntazam tekshirish"
+            },
+            {
+              "en": "Team training",
+              "ru": "Тренировки команды",
+              "uz": "Jamoa mashg‘uloti"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "layout": "summary",
+      "title": {
+        "en": "Summary",
+        "ru": "Итоги",
+        "uz": "Xulosa"
+      },
+      "bullets": [
+        {
+          "en": "Good history and preparation prevent most emergencies",
+          "ru": "Большинство ситуаций предотвращают анамнез и подготовка",
+          "uz": "Ko‘pchilik holatlarni yaxshi anamnez va tayyorgarlik bilan oldini olish mumkin"
+        },
+        {
+          "en": "Use ABCDE for every emergency",
+          "ru": "Алгоритм ABCDE применяют при любом состоянии",
+          "uz": "ABCDE yondashuvi har qanday holatda ishlatiladi"
+        },
+        {
+          "en": "Adrenaline IM is the first drug in anaphylaxis",
+          "ru": "При анафилаксии первый препарат — адреналин в/м",
+          "uz": "Anafilaksiyada birinchi dori — adrenalin mushak ichiga"
+        },
+        {
+          "en": "In cardiac arrest: CPR 30:2 and an AED",
+          "ru": "При остановке сердца — СЛР 30:2 и дефибриллятор",
+          "uz": "Yurak to‘xtaganda 30:2 nisbatda reanimatsiya va defibrillyator"
+        }
+      ]
+    }
+  ],
+  "oral": [
+    {
+      "q": {
+        "en": "How do you recognise and manage vasovagal syncope?",
+        "ru": "Как распознать вазовагальный обморок и оказать помощь?",
+        "uz": "Vazovagal hushdan ketishni qanday tanib olasiz va yordam ko‘rsatasiz?"
+      },
+      "plan": [
+        {
+          "en": "Warning signs: pallor, sweating, nausea",
+          "ru": "Предвестники: бледность, пот, тошнота",
+          "uz": "Oldingi belgilar: rangparlik, ter, ko‘ngil aynishi"
+        },
+        {
+          "en": "Lie flat and raise the legs",
+          "ru": "Уложить, приподнять ноги",
+          "uz": "Chalqancha yotqizish, oyoqlarni ko‘tarish"
+        },
+        {
+          "en": "Loosen clothing, give oxygen",
+          "ru": "Расстегнуть одежду, кислород",
+          "uz": "Kiyimni bo‘shatish, kislorod"
+        },
+        {
+          "en": "If slow to recover, look for another cause",
+          "ru": "При медленном восстановлении искать другую причину",
+          "uz": "Tez tiklanmasa boshqa sababni izlash"
+        }
+      ]
+    },
+    {
+      "q": {
+        "en": "Give the sequence of actions in anaphylaxis.",
+        "ru": "Назовите порядок действий при анафилаксии.",
+        "uz": "Anafilaksiyada harakatlar ketma-ketligini ayting."
+      },
+      "plan": [
+        {
+          "en": "Recognise and call for help",
+          "ru": "Распознать и вызвать помощь",
+          "uz": "Tanib olish va yordam chaqirish"
+        },
+        {
+          "en": "Adrenaline 0.5 mg IM",
+          "ru": "Адреналин 0,5 мг в/м",
+          "uz": "Adrenalin 0,5 mg mushak ichiga"
+        },
+        {
+          "en": "Position, oxygen, ABCDE",
+          "ru": "Положение, кислород, ABCDE",
+          "uz": "Holat, kislorod, ABCDE"
+        },
+        {
+          "en": "Repeat and start CPR if needed",
+          "ru": "Повтор и при необходимости СЛР",
+          "uz": "Takrorlash va kerak bo‘lsa reanimatsiya"
+        }
+      ]
+    },
+    {
+      "q": {
+        "en": "Compare care for conscious and unconscious hypoglycaemia.",
+        "ru": "Сравните помощь при гипогликемии в сознании и без сознания.",
+        "uz": "Hushidagi va hushsiz gipoglikemiyada yordamni taqqoslang."
+      },
+      "plan": [
+        {
+          "en": "Conscious: oral glucose",
+          "ru": "В сознании: глюкоза внутрь",
+          "uz": "Hushida: og‘iz orqali glyukoza"
+        },
+        {
+          "en": "Unconscious: nothing by mouth",
+          "ru": "Без сознания: ничего через рот",
+          "uz": "Hushsiz: og‘izga hech narsa bermaslik"
+        },
+        {
+          "en": "Glucagon 1 mg IM",
+          "ru": "Глюкагон 1 мг в/м",
+          "uz": "Glyukagon 1 mg mushak ichiga"
+        },
+        {
+          "en": "Ambulance and monitoring",
+          "ru": "Скорая и наблюдение",
+          "uz": "Tez yordam va kuzatuv"
+        }
+      ]
+    },
+    {
+      "q": {
+        "en": "Describe the adult basic life support algorithm.",
+        "ru": "Опишите алгоритм базовой СЛР у взрослых.",
+        "uz": "Kattalarda asosiy yurak-o‘pka reanimatsiyasi algoritmini tushuntiring."
+      },
+      "plan": [
+        {
+          "en": "Safety, response, airway, breathing",
+          "ru": "Безопасность, реакция, дыхательные пути, дыхание",
+          "uz": "Xavfsizlik, javob, havo yo‘li, nafas"
+        },
+        {
+          "en": "Call ambulance and get an AED",
+          "ru": "Вызов скорой и дефибриллятора",
+          "uz": "Tez yordam va defibrillyator chaqirish"
+        },
+        {
+          "en": "30 compressions and 2 breaths at 100–120 per minute",
+          "ru": "30 компрессий и 2 вдоха, 100–120 в минуту",
+          "uz": "30 bosish va 2 nafas, daqiqasiga 100–120"
+        },
+        {
+          "en": "Depth 5–6 cm, minimal pauses",
+          "ru": "Глубина 5–6 см, минимум перерывов",
+          "uz": "Bosish chuqurligi 5–6 sm, uzilishlarni kamaytirish"
+        }
+      ]
+    }
+  ],
+  "test": [
+    {
+      "q": {
+        "en": "What is the most common emergency in the dental office?",
+        "ru": "Какое неотложное состояние чаще всего встречается в стоматологическом кабинете?",
+        "uz": "Stomatologik kabinetda eng ko‘p uchraydigan shoshilinch holat qaysi?"
+      },
+      "options": [
+        {
+          "en": "Anaphylaxis",
+          "ru": "Анафилаксия",
+          "uz": "Anafilaksiya"
+        },
+        {
+          "en": "Vasovagal syncope",
+          "ru": "Вазовагальный обморок",
+          "uz": "Vazovagal hushdan ketish"
+        },
+        {
+          "en": "Heart attack",
+          "ru": "Инфаркт миокарда",
+          "uz": "Miokard infarkti"
+        },
+        {
+          "en": "Stroke",
+          "ru": "Инсульт",
+          "uz": "Insult"
+        }
+      ],
+      "correct": 1,
+      "explain": {
+        "en": "Fear and pain trigger vasovagal syncope, the commonest event.",
+        "ru": "Страх и боль вызывают вазовагальную реакцию — самое частое состояние.",
+        "uz": "Qo‘rquv va og‘riq vazovagal reaksiyani keltirib chiqaradi; bu eng ko‘p uchraydigan holat."
+      }
+    },
+    {
+      "q": {
+        "en": "After an injection the patient turns pale, sweaty and faints with a slow pulse. First action?",
+        "ru": "После анестезии пациент побледнел, вспотел и потерял сознание, пульс редкий. Первое действие?",
+        "uz": "Anestezidan keyin bemor rangpar, terlagan va hushini yo‘qotdi; puls sekin. Birinchi harakat?"
+      },
+      "options": [
+        {
+          "en": "Give adrenaline",
+          "ru": "Ввести адреналин",
+          "uz": "Adrenalin yuborish"
+        },
+        {
+          "en": "Keep the patient sitting",
+          "ru": "Оставить сидя",
+          "uz": "O‘tirgan holatda qoldirish"
+        },
+        {
+          "en": "Lay flat and raise the legs",
+          "ru": "Уложить и приподнять ноги",
+          "uz": "Chalqancha yotqizib oyoqlarini ko‘tarish"
+        },
+        {
+          "en": "Put sugar in the mouth",
+          "ru": "Положить сахар в рот",
+          "uz": "Og‘izga shakar solish"
+        }
+      ],
+      "correct": 2,
+      "explain": {
+        "en": "Lying flat with legs raised restores blood flow to the brain.",
+        "ru": "Горизонтальное положение с поднятыми ногами восстанавливает мозговой кровоток.",
+        "uz": "Gorizontal holat va oyoqlarni ko‘tarish miyaga qon oqimini tiklaydi."
+      }
+    },
+    {
+      "q": {
+        "en": "What is the standard adult adrenaline dose and route in anaphylaxis?",
+        "ru": "Какова стандартная доза и путь введения адреналина при анафилаксии у взрослых?",
+        "uz": "Kattalarda anafilaksiyada adrenalinning standart dozasi va yo‘li qaysi?"
+      },
+      "options": [
+        {
+          "en": "0.5 mg (1:1000) IM",
+          "ru": "0,5 мг (1:1000) в/м",
+          "uz": "0,5 mg (1:1000) mushak ichiga"
+        },
+        {
+          "en": "5 mg IV",
+          "ru": "5 мг в/в",
+          "uz": "5 mg vena ichiga"
+        },
+        {
+          "en": "0.05 mg sublingual",
+          "ru": "0,05 мг под язык",
+          "uz": "0,05 mg til ostiga"
+        },
+        {
+          "en": "1 mg by mouth",
+          "ru": "1 мг внутрь",
+          "uz": "1 mg og‘iz orqali"
+        }
+      ],
+      "correct": 0,
+      "explain": {
+        "en": "0.5 mg IM into the anterolateral thigh is the adult standard.",
+        "ru": "0,5 мг в/м в переднебоковую поверхность бедра — стандарт для взрослых.",
+        "uz": "Son old-yon mushagiga 0,5 mg adrenalin kattalar uchun standart doza."
+      }
+    },
+    {
+      "q": {
+        "en": "What is given to an unconscious hypoglycaemic patient?",
+        "ru": "Что вводят пациенту с гипогликемией без сознания?",
+        "uz": "Hushsiz gipoglikemiyali bemorga nima beriladi?"
+      },
+      "options": [
+        {
+          "en": "Sweet tea by mouth",
+          "ru": "Сладкий чай в рот",
+          "uz": "Og‘izga shirin choy"
+        },
+        {
+          "en": "Insulin",
+          "ru": "Инсулин",
+          "uz": "Insulin"
+        },
+        {
+          "en": "GTN",
+          "ru": "Нитроглицерин",
+          "uz": "Nitroglitserin"
+        },
+        {
+          "en": "Glucagon 1 mg IM",
+          "ru": "Глюкагон 1 мг в/м",
+          "uz": "Glyukagon 1 mg mushak ichiga"
+        }
+      ],
+      "correct": 3,
+      "explain": {
+        "en": "Nothing is given by mouth; glucagon releases glucose from the liver.",
+        "ru": "Без сознания ничего не дают через рот; глюкагон высвобождает глюкозу из печени.",
+        "uz": "Hushsiz bemorga og‘iz orqali hech narsa berilmaydi; glyukagon jigardan glyukoza chiqaradi."
+      }
+    },
+    {
+      "q": {
+        "en": "What is the correct adult chest compression rate?",
+        "ru": "Какова правильная частота компрессий у взрослых?",
+        "uz": "Kattalarda ko‘krak qafasini bosishning to‘g‘ri chastotasi qaysi?"
+      },
+      "options": [
+        {
+          "en": "60–80 per minute",
+          "ru": "60–80 в минуту",
+          "uz": "Daqiqasiga 60–80"
+        },
+        {
+          "en": "100–120 per minute",
+          "ru": "100–120 в минуту",
+          "uz": "Daqiqasiga 100–120"
+        },
+        {
+          "en": "150–180 per minute",
+          "ru": "150–180 в минуту",
+          "uz": "Daqiqasiga 150–180"
+        },
+        {
+          "en": "30–40 per minute",
+          "ru": "30–40 в минуту",
+          "uz": "Daqiqasiga 30–40"
+        }
+      ],
+      "correct": 1,
+      "explain": {
+        "en": "ERC 2021 advises 100–120 compressions per minute, 5–6 cm deep.",
+        "ru": "ERC 2021 рекомендует 100–120 компрессий в минуту на глубину 5–6 см.",
+        "uz": "ERC 2021 daqiqasiga 100–120 marta, 5–6 sm chuqurlikda bosishni tavsiya qiladi."
+      }
+    },
+    {
+      "q": {
+        "en": "What is the adult compression-to-ventilation ratio?",
+        "ru": "Каково соотношение компрессий и вдохов у взрослых?",
+        "uz": "Kattalarda bosish va nafas nisbati qanday?"
+      },
+      "options": [
+        {
+          "en": "15:1",
+          "ru": "15:1",
+          "uz": "15:1"
+        },
+        {
+          "en": "5:1",
+          "ru": "5:1",
+          "uz": "5:1"
+        },
+        {
+          "en": "30:2",
+          "ru": "30:2",
+          "uz": "30:2"
+        },
+        {
+          "en": "10:2",
+          "ru": "10:2",
+          "uz": "10:2"
+        }
+      ],
+      "correct": 2,
+      "explain": {
+        "en": "Adult BLS uses 30 compressions then 2 breaths.",
+        "ru": "При базовой СЛР у взрослых после 30 компрессий делают 2 вдоха.",
+        "uz": "Kattalarda asosiy reanimatsiyada 30 bosishdan keyin 2 nafas beriladi."
+      }
+    },
+    {
+      "q": {
+        "en": "An asthmatic patient develops wheeze and breathlessness during treatment. First drug?",
+        "ru": "У пациента с астмой во время лечения появились свистящее дыхание и одышка. Первый препарат?",
+        "uz": "Astma bilan og‘rigan bemorda muolaja paytida xirillash va nafas qisishi boshlandi. Birinchi dori?"
+      },
+      "options": [
+        {
+          "en": "Salbutamol inhaler",
+          "ru": "Ингалятор сальбутамола",
+          "uz": "Salbutamol ingalyatori"
+        },
+        {
+          "en": "Glucose",
+          "ru": "Глюкоза",
+          "uz": "Glyukoza"
+        },
+        {
+          "en": "Aspirin",
+          "ru": "Аспирин",
+          "uz": "Aspirin"
+        },
+        {
+          "en": "Midazolam",
+          "ru": "Мидазолам",
+          "uz": "Midazolam"
+        }
+      ],
+      "correct": 0,
+      "explain": {
+        "en": "Salbutamol rapidly opens the airways; oxygen is also given.",
+        "ru": "Сальбутамол быстро расширяет бронхи; также дают кислород.",
+        "uz": "Salbutamol bronxlarni tez kengaytiradi; kislorod ham beriladi."
+      }
+    },
+    {
+      "q": {
+        "en": "Crushing chest pain starts in a patient with known angina. First action?",
+        "ru": "Возникла давящая боль за грудиной у пациента со стенокардией. Первое действие?",
+        "uz": "Ko‘krak orqasida siquvchi og‘riq paydo bo‘ldi, bemor stenokardiya bilan og‘riydi. Birinchi harakat?"
+      },
+      "options": [
+        {
+          "en": "IM adrenaline",
+          "ru": "Адреналин в/м",
+          "uz": "Adrenalin mushak ichiga"
+        },
+        {
+          "en": "Glucagon",
+          "ru": "Глюкагон",
+          "uz": "Glyukagon"
+        },
+        {
+          "en": "Continue treatment",
+          "ru": "Продолжить лечение",
+          "uz": "Muolajani davom ettirish"
+        },
+        {
+          "en": "Stop and give sublingual GTN",
+          "ru": "Прекратить лечение, нитроглицерин под язык",
+          "uz": "Muolajani to‘xtatib, nitroglitserin til ostiga"
+        }
+      ],
+      "correct": 3,
+      "explain": {
+        "en": "GTN dilates coronary vessels; if pain persists, call an ambulance.",
+        "ru": "Нитроглицерин расширяет коронарные сосуды; если боль не проходит, вызывают скорую.",
+        "uz": "Nitroglitserin koronar tomirlarni kengaytiradi; og‘riq o‘tmasa tez yordam chaqiriladi."
+      }
+    },
+    {
+      "q": {
+        "en": "What must not be done during a seizure?",
+        "ru": "Чего нельзя делать во время судорожного припадка?",
+        "uz": "Tutqanoq paytida nima qilish mumkin emas?"
+      },
+      "options": [
+        {
+          "en": "Move instruments away",
+          "ru": "Убрать инструменты вокруг",
+          "uz": "Atrofdagi asboblarni olib qo‘yish"
+        },
+        {
+          "en": "Time the seizure",
+          "ru": "Засечь время",
+          "uz": "Vaqtni belgilash"
+        },
+        {
+          "en": "Put fingers or objects in the mouth",
+          "ru": "Класть в рот пальцы или предметы",
+          "uz": "Og‘izga barmoq yoki asbob solish"
+        },
+        {
+          "en": "Protect the head",
+          "ru": "Защитить голову",
+          "uz": "Boshni himoya qilish"
+        }
+      ],
+      "correct": 2,
+      "explain": {
+        "en": "Objects in the mouth cause injury and airway obstruction.",
+        "ru": "Предметы во рту могут травмировать и перекрыть дыхательные пути.",
+        "uz": "Og‘izga narsa solish jarohat va havo yo‘li to‘silishiga olib keladi."
+      }
+    },
+    {
+      "q": {
+        "en": "When should an AED be used in cardiac arrest?",
+        "ru": "Когда при остановке сердца следует применить дефибриллятор?",
+        "uz": "Yurak to‘xtaganda defibrillyator qachon qo‘llanilishi kerak?"
+      },
+      "options": [
+        {
+          "en": "As soon as it arrives",
+          "ru": "Как можно скорее, сразу по прибытии",
+          "uz": "Iloji boricha tez, kelishi bilan"
+        },
+        {
+          "en": "Only after 30 minutes",
+          "ru": "Только через 30 минут",
+          "uz": "Faqat 30 daqiqadan keyin"
+        },
+        {
+          "en": "Only in hospital",
+          "ru": "Только в больнице",
+          "uz": "Faqat shifoxonada"
+        },
+        {
+          "en": "After the patient wakes",
+          "ru": "После прихода в сознание",
+          "uz": "Bemor hushiga kelgach"
+        }
+      ],
+      "correct": 0,
+      "explain": {
+        "en": "Early defibrillation greatly improves survival.",
+        "ru": "Ранняя дефибрилляция значительно повышает выживаемость.",
+        "uz": "Erta defibrillyatsiya yashash ehtimolini keskin oshiradi."
+      }
+    }
+  ]
+}

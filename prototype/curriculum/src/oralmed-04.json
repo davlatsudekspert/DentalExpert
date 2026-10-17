@@ -1,0 +1,968 @@
+{
+  "id": "oralmed-04",
+  "subject": "oralmed",
+  "n": 4,
+  "week": 4,
+  "type": "practical",
+  "hours": 2,
+  "title": {
+    "en": "Oral candidiasis",
+    "ru": "Кандидоз полости рта",
+    "uz": "Og‘iz kandidozi"
+  },
+  "goals": [
+    {
+      "en": "Recognise the clinical forms of candidiasis",
+      "ru": "Распознавать клинические формы кандидоза",
+      "uz": "Kandidozning klinik shakllarini tanish"
+    },
+    {
+      "en": "Identify local and systemic predisposing factors",
+      "ru": "Выявлять местные и общие предрасполагающие факторы",
+      "uz": "Mahalliy va umumiy moyillik omillarini aniqlash"
+    },
+    {
+      "en": "Explain treatment principles and denture hygiene",
+      "ru": "Объяснять принципы лечения и гигиену протезов",
+      "uz": "Davolash tamoyillarini va protez gigiyenasini tushuntirish"
+    }
+  ],
+  "links": [
+    "oral-hygiene"
+  ],
+  "sources": [
+    "Scully C. Oral and Maxillofacial Medicine: The Basis of Diagnosis and Treatment, 3rd ed., 2013",
+    "Glick M et al. Burket's Oral Medicine, 13th ed., 2021"
+  ],
+  "slides": [
+    {
+      "layout": "title",
+      "title": {
+        "en": "Oral candidiasis",
+        "ru": "Кандидоз полости рта",
+        "uz": "Og‘iz kandidozi"
+      },
+      "subtitle": {
+        "en": "Forms, predisposing factors and treatment principles",
+        "ru": "Формы, предрасполагающие факторы и принципы лечения",
+        "uz": "Shakllar, moyillik omillari va davolash tamoyillari"
+      }
+    },
+    {
+      "layout": "key",
+      "title": {
+        "en": "An opportunistic infection",
+        "ru": "Оппортунистическая инфекция",
+        "uz": "Opportunistik infeksiya"
+      },
+      "term": {
+        "en": "Candida albicans",
+        "ru": "Гриб Candida albicans",
+        "uz": "Candida albicans zamburug‘i"
+      },
+      "definition": {
+        "en": "Candida lives harmlessly in many healthy mouths. Disease develops only when local or systemic defences fail, so treatment always means finding and correcting the predisposing factor as well as giving an antifungal.",
+        "ru": "Candida безвредно живёт во рту многих здоровых людей. Болезнь развивается только при нарушении местной или общей защиты. Поэтому основа лечения — вместе с противогрибковым препаратом найти и устранить предрасполагающий фактор.",
+        "uz": "Candida ko‘p sog‘lom odamlarning og‘zida zararsiz yashaydi. Kasallik faqat mahalliy yoki umumiy himoya buzilganda rivojlanadi. Shuning uchun davolashning asosi — antifungal dori bilan birga moyillik omilini topib tuzatish."
+      },
+      "note": {
+        "en": "Teach students to ask 'why now?' in every case of candidiasis.",
+        "ru": "Учите задавать в каждом случае кандидоза вопрос: «Почему именно сейчас?»",
+        "uz": "«Nima uchun aynan hozir?» degan savolni har bir kandidoz holatida berishni o‘rgating."
+      }
+    },
+    {
+      "layout": "tree",
+      "title": {
+        "en": "Clinical forms",
+        "ru": "Клинические формы",
+        "uz": "Klinik shakllar"
+      },
+      "root": {
+        "en": "Oral candidiasis",
+        "ru": "Кандидоз полости рта",
+        "uz": "Og‘iz kandidozi"
+      },
+      "children": [
+        {
+          "label": {
+            "en": "Pseudomembranous",
+            "ru": "Псевдомембранозный",
+            "uz": "Psevdomembranoz"
+          },
+          "items": [
+            {
+              "en": "Wipeable white plaques",
+              "ru": "Снимаемый белый налёт",
+              "uz": "Sidiriladigan oq parda"
+            },
+            {
+              "en": "Red base beneath",
+              "ru": "Под ним красная слизистая",
+              "uz": "Ostida qizil shilliq"
+            }
+          ]
+        },
+        {
+          "label": {
+            "en": "Erythematous",
+            "ru": "Эритематозный",
+            "uz": "Eritematoz"
+          },
+          "items": [
+            {
+              "en": "After antibiotics",
+              "ru": "После антибиотиков",
+              "uz": "Antibiotikdan keyin"
+            },
+            {
+              "en": "Red patch on dorsum",
+              "ru": "Красный участок на спинке языка",
+              "uz": "Til ustida qizil soha"
+            }
+          ]
+        },
+        {
+          "label": {
+            "en": "Denture stomatitis",
+            "ru": "Протезный стоматит",
+            "uz": "Protez stomatiti"
+          },
+          "items": [
+            {
+              "en": "Redness under denture",
+              "ru": "Покраснение под протезом",
+              "uz": "Protez ostida qizarish"
+            },
+            {
+              "en": "Often painless",
+              "ru": "Часто безболезненно",
+              "uz": "Ko‘pincha og‘riqsiz"
+            }
+          ]
+        },
+        {
+          "label": {
+            "en": "Hyperplastic",
+            "ru": "Гиперпластический",
+            "uz": "Giperplastik"
+          },
+          "items": [
+            {
+              "en": "Non-wipeable white plaque",
+              "ru": "Неснимаемая белая бляшка",
+              "uz": "Sidirilmaydigan oq pilakcha"
+            },
+            {
+              "en": "Inside commissures",
+              "ru": "У углов рта изнутри",
+              "uz": "Lab burchagi ichida"
+            },
+            {
+              "en": "Potentially malignant",
+              "ru": "Потенциально злокачественный",
+              "uz": "Potensial xavfli"
+            }
+          ]
+        },
+        {
+          "label": {
+            "en": "Others",
+            "ru": "Другие",
+            "uz": "Boshqalar"
+          },
+          "items": [
+            {
+              "en": "Angular cheilitis",
+              "ru": "Ангулярный хейлит",
+              "uz": "Burchak xeyliti"
+            },
+            {
+              "en": "Median rhomboid glossitis",
+              "ru": "Ромбовидный глоссит",
+              "uz": "Til o‘rta rombsimon glossiti"
+            }
+          ]
+        }
+      ],
+      "note": {
+        "en": "Stress that hyperplastic candidiasis resembles leukoplakia and may need biopsy.",
+        "ru": "Подчеркните: гиперпластический кандидоз похож на лейкоплакию и может требовать биопсии.",
+        "uz": "Giperplastik kandidoz leykoplakiyaga o‘xshaydi va biopsiya talab qilishi mumkin — buni alohida ta’kidlang."
+      }
+    },
+    {
+      "layout": "compare",
+      "title": {
+        "en": "Predisposing factors",
+        "ru": "Предрасполагающие факторы",
+        "uz": "Moyillik omillari"
+      },
+      "columns": [
+        {
+          "head": {
+            "en": "Local",
+            "ru": "Местные",
+            "uz": "Mahalliy"
+          },
+          "items": [
+            {
+              "en": "Removable denture, especially worn at night",
+              "ru": "Съёмный протез, особенно ночью",
+              "uz": "Olinadigan protez, ayniqsa kechasi taqish"
+            },
+            {
+              "en": "Dry mouth (xerostomia)",
+              "ru": "Сухость во рту (ксеростомия)",
+              "uz": "Og‘iz qurishi (kserostomiya)"
+            },
+            {
+              "en": "Inhaled corticosteroids",
+              "ru": "Ингаляционные кортикостероиды",
+              "uz": "Ingalyatsion kortikosteroidlar"
+            },
+            {
+              "en": "Smoking, poor hygiene",
+              "ru": "Курение, плохая гигиена",
+              "uz": "Chekish, yomon gigiyena"
+            }
+          ]
+        },
+        {
+          "head": {
+            "en": "Systemic",
+            "ru": "Общие",
+            "uz": "Umumiy"
+          },
+          "items": [
+            {
+              "en": "Infancy and old age",
+              "ru": "Младенчество и пожилой возраст",
+              "uz": "Go‘daklik va qarilik"
+            },
+            {
+              "en": "Diabetes mellitus",
+              "ru": "Сахарный диабет",
+              "uz": "Qandli diabet"
+            },
+            {
+              "en": "Broad-spectrum antibiotics",
+              "ru": "Антибиотики широкого спектра",
+              "uz": "Keng spektrli antibiotiklar"
+            },
+            {
+              "en": "Immune suppression (HIV, chemotherapy), anaemia",
+              "ru": "Иммунодефицит (ВИЧ, химиотерапия), анемия",
+              "uz": "Immunitet pasayishi (OIV, kimyoterapiya), anemiya"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "layout": "flow",
+      "title": {
+        "en": "Diagnosis and treatment principles",
+        "ru": "Принципы диагностики и лечения",
+        "uz": "Tashxis va davolash tamoyillari"
+      },
+      "steps": [
+        {
+          "label": {
+            "en": "Clinical diagnosis",
+            "ru": "Клинический диагноз",
+            "uz": "Klinik tashxis"
+          },
+          "detail": {
+            "en": "Appearance and history; smear or swab if needed",
+            "ru": "Вид и анамнез; при необходимости мазок или посев",
+            "uz": "Ko‘rinish va anamnez; kerak bo‘lsa surtma yoki ekma"
+          }
+        },
+        {
+          "label": {
+            "en": "Correct the cause",
+            "ru": "Коррекция фактора",
+            "uz": "Omilni tuzatish"
+          },
+          "detail": {
+            "en": "Denture hygiene, rinse after inhaler, diabetes control",
+            "ru": "Гигиена протеза, полоскание после ингалятора, контроль диабета",
+            "uz": "Protez gigiyenasi, inhalyatordan keyin chayish, diabet nazorati"
+          }
+        },
+        {
+          "label": {
+            "en": "Topical antifungal",
+            "ru": "Местный антимикотик",
+            "uz": "Mahalliy antifungal"
+          },
+          "detail": {
+            "en": "Nystatin or miconazole",
+            "ru": "Нистатин или миконазол",
+            "uz": "Nistatin yoki mikonazol"
+          }
+        },
+        {
+          "label": {
+            "en": "Systemic antifungal",
+            "ru": "Системный антимикотик",
+            "uz": "Tizimli antifungal"
+          },
+          "detail": {
+            "en": "Fluconazole for severe or resistant cases",
+            "ru": "Флуконазол — при тяжёлом или упорном течении",
+            "uz": "Flukonazol — og‘ir yoki chidamli holatda"
+          }
+        },
+        {
+          "label": {
+            "en": "Review",
+            "ru": "Повторный осмотр",
+            "uz": "Qayta ko‘rik"
+          },
+          "detail": {
+            "en": "If it recurs, look for a systemic cause",
+            "ru": "При рецидиве искать общую причину",
+            "uz": "Qaytalansa, umumiy sababni qidirish"
+          }
+        }
+      ],
+      "note": {
+        "en": "Miconazole potentiates warfarin, so avoid it in anticoagulated patients.",
+        "ru": "Миконазол усиливает действие варфарина — у пациентов на антикоагулянтах его избегают.",
+        "uz": "Mikonazol varfarin ta’sirini kuchaytiradi — antikoagulyant qabul qiluvchi bemorda undan saqlanish kerak."
+      }
+    },
+    {
+      "layout": "bullets",
+      "title": {
+        "en": "Denture hygiene",
+        "ru": "Гигиена протезов",
+        "uz": "Protez gigiyenasi"
+      },
+      "bullets": [
+        {
+          "en": "Take the denture out at night",
+          "ru": "Снимать протез на ночь",
+          "uz": "Protezni kechasi olib qo‘yish"
+        },
+        {
+          "en": "Brush it daily with soap",
+          "ru": "Ежедневно чистить щёткой и мылом",
+          "uz": "Har kuni cho‘tka va sovun bilan tozalash"
+        },
+        {
+          "en": "Soak it in a disinfectant solution",
+          "ru": "Хранить в дезинфицирующем растворе",
+          "uz": "Dezinfeksiyalovchi eritmada saqlash"
+        },
+        {
+          "en": "Treat the fitting surface, reline or replace old dentures",
+          "ru": "Обрабатывать и внутреннюю поверхность, исправлять старый протез",
+          "uz": "Protez ichki yuzasini ham davolash, eski protezni tuzatish"
+        }
+      ],
+      "note": {
+        "en": "Treating the mucosa without treating the denture leads to relapse.",
+        "ru": "Лечение только слизистой без обработки протеза ведёт к рецидиву.",
+        "uz": "Protezni davolamasdan faqat shilliqni davolash qaytalanishga olib keladi."
+      }
+    },
+    {
+      "layout": "table",
+      "title": {
+        "en": "Telling the forms apart",
+        "ru": "Дифференциация белых и красных очагов",
+        "uz": "Oq va qizil o‘choqlarni farqlash"
+      },
+      "head": [
+        {
+          "en": "Feature",
+          "ru": "Признак",
+          "uz": "Belgi"
+        },
+        {
+          "en": "Pseudomembranous",
+          "ru": "Псевдомембранозный",
+          "uz": "Psevdomembranoz"
+        },
+        {
+          "en": "Hyperplastic",
+          "ru": "Гиперпластический",
+          "uz": "Giperplastik"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "en": "Wipes off",
+            "ru": "Снимается ли",
+            "uz": "Sidirilishi"
+          },
+          {
+            "en": "Yes, leaving red base",
+            "ru": "Да, остаётся красная основа",
+            "uz": "Ha, qizil asos qoladi"
+          },
+          {
+            "en": "No",
+            "ru": "Нет",
+            "uz": "Yo‘q"
+          }
+        ],
+        [
+          {
+            "en": "Typical site",
+            "ru": "Типичное место",
+            "uz": "Odatiy joyi"
+          },
+          {
+            "en": "Cheek, palate, tongue",
+            "ru": "Щёки, нёбо, язык",
+            "uz": "Lunj, tanglay, til"
+          },
+          {
+            "en": "Inside the commissures",
+            "ru": "Изнутри у углов рта",
+            "uz": "Lab burchagi ichi"
+          }
+        ],
+        [
+          {
+            "en": "Course",
+            "ru": "Течение",
+            "uz": "Kechishi"
+          },
+          {
+            "en": "Acute",
+            "ru": "Острое",
+            "uz": "O‘tkir"
+          },
+          {
+            "en": "Chronic",
+            "ru": "Хроническое",
+            "uz": "Surunkali"
+          }
+        ],
+        [
+          {
+            "en": "Main concern",
+            "ru": "Главный риск",
+            "uz": "Asosiy xavf"
+          },
+          {
+            "en": "Marker of immune suppression",
+            "ru": "Признак иммунодефицита",
+            "uz": "Immunitet pasayishi belgisi"
+          },
+          {
+            "en": "May show dysplasia: biopsy",
+            "ru": "Возможна дисплазия — биопсия",
+            "uz": "Displaziya bo‘lishi mumkin — biopsiya"
+          }
+        ]
+      ]
+    },
+    {
+      "layout": "summary",
+      "title": {
+        "en": "Summary",
+        "ru": "Итоги",
+        "uz": "Xulosa"
+      },
+      "bullets": [
+        {
+          "en": "Candidiasis is opportunistic: always look for the cause",
+          "ru": "Кандидоз — оппортунистическая инфекция: всегда ищите предрасполагающий фактор",
+          "uz": "Kandidoz — opportunistik infeksiya: doim moyillik omilini qidiring"
+        },
+        {
+          "en": "Pseudomembranous plaques wipe off; hyperplastic ones do not",
+          "ru": "Псевдомембранозный налёт снимается, гиперпластическая бляшка — нет",
+          "uz": "Psevdomembranoz parda sidiriladi, giperplastik pilakcha sidirilmaydi"
+        },
+        {
+          "en": "Topical antifungal first, systemic if severe",
+          "ru": "Сначала местный антимикотик, при тяжёлом течении — системный",
+          "uz": "Avval mahalliy antifungal, og‘ir holatda tizimli"
+        },
+        {
+          "en": "In denture stomatitis treat the denture too",
+          "ru": "При протезном стоматите лечите и протез",
+          "uz": "Protez stomatitida protezni ham davolang"
+        }
+      ]
+    }
+  ],
+  "oral": [
+    {
+      "q": {
+        "en": "List the main forms of oral candidiasis.",
+        "ru": "Перечислите основные формы кандидоза полости рта.",
+        "uz": "Og‘iz kandidozining asosiy shakllarini sanab bering."
+      },
+      "plan": [
+        {
+          "en": "Pseudomembranous (wipeable plaques)",
+          "ru": "Псевдомембранозный (снимаемый налёт)",
+          "uz": "Psevdomembranoz (sidiriladigan oq parda)"
+        },
+        {
+          "en": "Erythematous and denture stomatitis",
+          "ru": "Эритематозный и протезный стоматит",
+          "uz": "Eritematoz va protez stomatiti"
+        },
+        {
+          "en": "Chronic hyperplastic",
+          "ru": "Хронический гиперпластический",
+          "uz": "Surunkali giperplastik"
+        },
+        {
+          "en": "Angular cheilitis and median rhomboid glossitis",
+          "ru": "Ангулярный хейлит и ромбовидный глоссит",
+          "uz": "Burchak xeyliti va til rombsimon glossiti"
+        }
+      ]
+    },
+    {
+      "q": {
+        "en": "Name the factors predisposing to candidiasis.",
+        "ru": "Назовите предрасполагающие к кандидозу факторы.",
+        "uz": "Kandidozga moyillik tug‘diruvchi omillarni ayting."
+      },
+      "plan": [
+        {
+          "en": "Dentures and poor hygiene",
+          "ru": "Съёмный протез и плохая гигиена",
+          "uz": "Olinadigan protez va yomon gigiyena"
+        },
+        {
+          "en": "Xerostomia and inhaled steroids",
+          "ru": "Ксеростомия и ингаляционные стероиды",
+          "uz": "Kserostomiya va ingalyatsion steroidlar"
+        },
+        {
+          "en": "Antibiotics and diabetes",
+          "ru": "Антибиотики и диабет",
+          "uz": "Antibiotiklar va diabet"
+        },
+        {
+          "en": "Immune suppression and age",
+          "ru": "Иммунодефицит и возраст",
+          "uz": "Immunitet pasayishi va yosh omili"
+        }
+      ]
+    },
+    {
+      "q": {
+        "en": "How do you treat denture stomatitis?",
+        "ru": "Как лечить протезный стоматит?",
+        "uz": "Protez stomatitini qanday davolaysiz?"
+      },
+      "plan": [
+        {
+          "en": "Remove the denture at night",
+          "ru": "Снимать протез на ночь",
+          "uz": "Protezni kechasi olib qo‘yish"
+        },
+        {
+          "en": "Clean and disinfect the denture",
+          "ru": "Чистить и дезинфицировать протез",
+          "uz": "Protezni tozalash va dezinfeksiya qilish"
+        },
+        {
+          "en": "Topical antifungal to mucosa and denture",
+          "ru": "Местный антимикотик на слизистую и протез",
+          "uz": "Mahalliy antifungal shilliq va protezga"
+        },
+        {
+          "en": "Reline or replace a poor denture",
+          "ru": "Исправить или заменить старый протез",
+          "uz": "Eski protezni tuzatish yoki almashtirish"
+        }
+      ]
+    },
+    {
+      "q": {
+        "en": "When is a systemic antifungal or referral needed?",
+        "ru": "Когда нужен системный антимикотик или направление?",
+        "uz": "Qaysi holatlarda tizimli antifungal yoki yo‘llanma kerak?"
+      },
+      "plan": [
+        {
+          "en": "When topical treatment fails",
+          "ru": "При неэффективности местного лечения",
+          "uz": "Mahalliy davoga javob bo‘lmaganda"
+        },
+        {
+          "en": "In immunocompromised patients",
+          "ru": "У пациентов с иммунодефицитом",
+          "uz": "Immuniteti past bemorlarda"
+        },
+        {
+          "en": "Frequent relapse: seek a systemic cause",
+          "ru": "При частых рецидивах — поиск общей причины",
+          "uz": "Tez-tez qaytalanishda — umumiy sababni qidirish"
+        },
+        {
+          "en": "Hyperplastic form: biopsy",
+          "ru": "При гиперпластической форме — биопсия",
+          "uz": "Giperplastik shaklda — biopsiya"
+        }
+      ]
+    }
+  ],
+  "test": [
+    {
+      "q": {
+        "en": "In which form does a white plaque wipe off to leave a red base?",
+        "ru": "При какой форме кандидоза белый налёт снимается, обнажая красную слизистую?",
+        "uz": "Qaysi kandidoz shaklida oq parda sidiriladi va ostida qizil shilliq qoladi?"
+      },
+      "options": [
+        {
+          "en": "Hyperplastic",
+          "ru": "Гиперпластический",
+          "uz": "Giperplastik"
+        },
+        {
+          "en": "Pseudomembranous",
+          "ru": "Псевдомембранозный",
+          "uz": "Psevdomembranoz"
+        },
+        {
+          "en": "Median rhomboid glossitis",
+          "ru": "Ромбовидный глоссит",
+          "uz": "Til rombsimon glossiti"
+        },
+        {
+          "en": "Denture stomatitis",
+          "ru": "Протезный стоматит",
+          "uz": "Protez stomatiti"
+        }
+      ],
+      "correct": 1,
+      "explain": {
+        "en": "In pseudomembranous candidiasis the plaque of fungi and debris wipes off easily.",
+        "ru": "При псевдомембранозном кандидозе налёт состоит из грибов и эпителия и легко снимается.",
+        "uz": "Psevdomembranoz kandidozda parda zamburug‘ va epiteliy qoldiqlaridan iborat va oson sidiriladi."
+      }
+    },
+    {
+      "q": {
+        "en": "An asthmatic using an inhaled corticosteroid has recurrent thrush. What is the simplest prevention?",
+        "ru": "У пациента с астмой на ингаляционном кортикостероиде повторный кандидоз. Простейшая профилактика?",
+        "uz": "Astma uchun ingalyatsion kortikosteroid qabul qiluvchi bemorda takroriy kandidoz. Eng oddiy profilaktika?"
+      },
+      "options": [
+        {
+          "en": "Stop the inhaler",
+          "ru": "Отменить ингалятор",
+          "uz": "Inhalyatorni to‘xtatish"
+        },
+        {
+          "en": "Daily fluconazole",
+          "ru": "Ежедневный флуконазол",
+          "uz": "Har kuni flukonazol"
+        },
+        {
+          "en": "Add an antibiotic",
+          "ru": "Добавить антибиотик",
+          "uz": "Antibiotik qo‘shish"
+        },
+        {
+          "en": "Rinse the mouth after each use",
+          "ru": "Полоскать рот после ингаляции",
+          "uz": "Inhalyatsiyadan keyin og‘izni chayish"
+        }
+      ],
+      "correct": 3,
+      "explain": {
+        "en": "Rinsing removes residual steroid; the drug itself must not be stopped.",
+        "ru": "Полоскание удаляет остатки стероида; самостоятельно отменять препарат нельзя.",
+        "uz": "Chayish og‘izda qolgan steroidni olib tashlaydi; dorini o‘zboshimchalik bilan to‘xtatish mumkin emas."
+      }
+    },
+    {
+      "q": {
+        "en": "Painless redness of the mucosa under a denture is most likely what?",
+        "ru": "Безболезненная гиперемия слизистой под протезом — наиболее вероятно?",
+        "uz": "Protez ostida qizargan, og‘riqsiz shilliq — eng ehtimoliy tashxis?"
+      },
+      "options": [
+        {
+          "en": "Denture stomatitis",
+          "ru": "Протезный стоматит",
+          "uz": "Protez stomatiti"
+        },
+        {
+          "en": "Erythroplakia",
+          "ru": "Эритроплакия",
+          "uz": "Eritroplakiya"
+        },
+        {
+          "en": "Lichen planus",
+          "ru": "Красный плоский лишай",
+          "uz": "Qizil yassi temiratki"
+        },
+        {
+          "en": "Herpangina",
+          "ru": "Герпангина",
+          "uz": "Gerpangina"
+        }
+      ],
+      "correct": 0,
+      "explain": {
+        "en": "Denture stomatitis is chronic erythematous candidiasis and is often symptom-free.",
+        "ru": "Протезный стоматит — хроническая эритематозная форма кандидоза, часто бессимптомная.",
+        "uz": "Protez stomatiti surunkali eritematoz kandidoz shakli va ko‘pincha simptomsiz."
+      }
+    },
+    {
+      "q": {
+        "en": "A non-wipeable white plaque inside the commissure of a smoker. Correct approach?",
+        "ru": "Неснимаемая белая бляшка у угла рта изнутри у курильщика. Правильная тактика?",
+        "uz": "Lab burchagi ichida sidirilmaydigan oq pilakcha, chekuvchi bemor. To‘g‘ri yondashuv?"
+      },
+      "options": [
+        {
+          "en": "Observe only",
+          "ru": "Только наблюдение",
+          "uz": "Faqat kuzatish"
+        },
+        {
+          "en": "Mouthwash only",
+          "ru": "Только полоскание",
+          "uz": "Faqat chayish"
+        },
+        {
+          "en": "Antifungal, stop smoking, biopsy if it persists",
+          "ru": "Антимикотик, отказ от курения, при сохранении — биопсия",
+          "uz": "Antifungal, chekishni tashlash, saqlansa biopsiya"
+        },
+        {
+          "en": "Immediate excision",
+          "ru": "Сразу иссечь",
+          "uz": "Darhol jarrohlik yo‘li bilan olib tashlash"
+        }
+      ],
+      "correct": 2,
+      "explain": {
+        "en": "Hyperplastic candidiasis is potentially malignant; if it persists after treatment, exclude dysplasia.",
+        "ru": "Гиперпластический кандидоз потенциально злокачествен; если после лечения сохраняется, исключают дисплазию.",
+        "uz": "Giperplastik kandidoz potensial xavfli; davodan keyin saqlansa, displaziyani istisno qilish kerak."
+      }
+    },
+    {
+      "q": {
+        "en": "Which antifungal should be avoided in a patient taking warfarin?",
+        "ru": "Какого антимикотика следует избегать у пациента на варфарине?",
+        "uz": "Varfarin qabul qiluvchi bemorda qaysi antifungaldan saqlanish kerak?"
+      },
+      "options": [
+        {
+          "en": "Nystatin",
+          "ru": "Нистатин",
+          "uz": "Nistatin"
+        },
+        {
+          "en": "Miconazole",
+          "ru": "Миконазол",
+          "uz": "Mikonazol"
+        },
+        {
+          "en": "Chlorhexidine",
+          "ru": "Хлоргексидин",
+          "uz": "Xlorgeksidin"
+        },
+        {
+          "en": "Denture disinfectant soak",
+          "ru": "Дезинфицирующий раствор для протезов",
+          "uz": "Dezinfeksiyalovchi protez eritmasi"
+        }
+      ],
+      "correct": 1,
+      "explain": {
+        "en": "Even topical miconazole potentiates warfarin and raises bleeding risk.",
+        "ru": "Миконазол даже местно усиливает действие варфарина и повышает риск кровотечения.",
+        "uz": "Mikonazol, hatto mahalliy shaklda ham, varfarin ta’sirini kuchaytirib qon ketish xavfini oshiradi."
+      }
+    },
+    {
+      "q": {
+        "en": "A red, depapillated rhomboid area in the posterior midline of the tongue. What is it?",
+        "ru": "В средне-заднем отделе спинки языка ромбовидный красный участок без сосочков. Что это?",
+        "uz": "Til ustki yuzasining o‘rta-orqa qismida rombsimon qizil papillasiz soha. Bu nima?"
+      },
+      "options": [
+        {
+          "en": "Median rhomboid glossitis",
+          "ru": "Срединный ромбовидный глоссит",
+          "uz": "Til o‘rta rombsimon glossiti"
+        },
+        {
+          "en": "Geographic tongue",
+          "ru": "Географический язык",
+          "uz": "Geografik til"
+        },
+        {
+          "en": "Fissured tongue",
+          "ru": "Складчатый язык",
+          "uz": "Burmali til"
+        },
+        {
+          "en": "Erythroplakia",
+          "ru": "Эритроплакия",
+          "uz": "Eritroplakiya"
+        }
+      ],
+      "correct": 0,
+      "explain": {
+        "en": "It is a chronic erythematous change linked to Candida at this typical site.",
+        "ru": "Это хроническое эритематозное изменение, связанное с кандидозом, в типичном месте.",
+        "uz": "Bu klassik joyda kandidoz bilan bog‘liq surunkali eritematoz o‘zgarish."
+      }
+    },
+    {
+      "q": {
+        "en": "An apparently healthy 30-year-old has thrush with no obvious cause. Which test should be considered?",
+        "ru": "У внешне здорового взрослого 30 лет беспричинный псевдомембранозный кандидоз. О каком обследовании подумать?",
+        "uz": "Sog‘lom ko‘ringan 30 yoshli kattada sababsiz psevdomembranoz kandidoz. Qaysi tekshiruvni o‘ylash kerak?"
+      },
+      "options": [
+        {
+          "en": "Panoramic radiograph",
+          "ru": "Панорамный снимок",
+          "uz": "Panoramik snimok"
+        },
+        {
+          "en": "Salivary gland biopsy",
+          "ru": "Биопсия слюнной железы",
+          "uz": "So‘lak bezi biopsiyasi"
+        },
+        {
+          "en": "Allergy patch test",
+          "ru": "Аллергопроба",
+          "uz": "Allergiya testi"
+        },
+        {
+          "en": "Blood glucose and HIV testing",
+          "ru": "Глюкоза крови и тест на ВИЧ",
+          "uz": "Qonda glyukoza va OIV tekshiruvi"
+        }
+      ],
+      "correct": 3,
+      "explain": {
+        "en": "Unexplained candidiasis may be the first sign of diabetes or immune deficiency.",
+        "ru": "Беспричинный кандидоз может быть первым признаком диабета или иммунодефицита.",
+        "uz": "Sababsiz kandidoz diabet yoki immunitet tanqisligining birinchi belgisi bo‘lishi mumkin."
+      }
+    },
+    {
+      "q": {
+        "en": "What is the key additional measure in treating denture stomatitis?",
+        "ru": "Какая дополнительная мера важнее всего при лечении протезного стоматита?",
+        "uz": "Protez stomatitini davolashda eng muhim qo‘shimcha chora qaysi?"
+      },
+      "options": [
+        {
+          "en": "Systemic antibiotic",
+          "ru": "Системный антибиотик",
+          "uz": "Tizimli antibiotik"
+        },
+        {
+          "en": "Wear the denture day and night",
+          "ru": "Носить протез круглосуточно",
+          "uz": "Protezni kun-u tun taqish"
+        },
+        {
+          "en": "Remove at night, clean and disinfect the denture",
+          "ru": "Снимать протез на ночь, чистить и дезинфицировать",
+          "uz": "Protezni kechasi olib, tozalab dezinfeksiya qilish"
+        },
+        {
+          "en": "Topical corticosteroid",
+          "ru": "Местный кортикостероид",
+          "uz": "Mahalliy kortikosteroid"
+        }
+      ],
+      "correct": 2,
+      "explain": {
+        "en": "Candida colonises the acrylic surface; without treating it, the disease relapses.",
+        "ru": "Грибы живут на акриловой поверхности протеза; без её обработки болезнь вернётся.",
+        "uz": "Zamburug‘ protez akril yuzasida yashaydi; uni davolamasdan kasallik qaytalanadi."
+      }
+    },
+    {
+      "q": {
+        "en": "After broad-spectrum antibiotics the tongue is red, sore and burning. Most likely?",
+        "ru": "После антибиотика широкого спектра на языке болезненное покраснение и жжение. Вероятнее всего?",
+        "uz": "Keng spektrli antibiotikdan keyin tilda og‘riqli qizarish va achishish paydo bo‘ldi. Eng ehtimoliy?"
+      },
+      "options": [
+        {
+          "en": "Geographic tongue",
+          "ru": "Географический язык",
+          "uz": "Geografik til"
+        },
+        {
+          "en": "Acute erythematous candidiasis",
+          "ru": "Острый эритематозный кандидоз",
+          "uz": "O‘tkir eritematoz kandidoz"
+        },
+        {
+          "en": "Lichen planus",
+          "ru": "Красный плоский лишай",
+          "uz": "Qizil yassi temiratki"
+        },
+        {
+          "en": "Fissured tongue",
+          "ru": "Складчатый язык",
+          "uz": "Burmali til"
+        }
+      ],
+      "correct": 1,
+      "explain": {
+        "en": "Antibiotics disturb normal flora and let Candida overgrow.",
+        "ru": "Антибиотик нарушает нормальную микрофлору и открывает путь Candida.",
+        "uz": "Antibiotik normal mikroflorani buzib, Candida ko‘payishiga yo‘l ochadi."
+      }
+    },
+    {
+      "q": {
+        "en": "A severely immunocompromised patient has widespread candidiasis. Which treatment is preferred?",
+        "ru": "У пациента с тяжёлым иммунодефицитом распространённый кандидоз. Какое лечение предпочтительнее?",
+        "uz": "Og‘ir immunitet tanqisligi bor bemorda keng tarqalgan kandidoz. Qaysi davo maqbulroq?"
+      },
+      "options": [
+        {
+          "en": "Denture hygiene only",
+          "ru": "Только гигиена протеза",
+          "uz": "Faqat protez gigiyenasi"
+        },
+        {
+          "en": "Topical corticosteroid",
+          "ru": "Местный кортикостероид",
+          "uz": "Mahalliy kortikosteroid"
+        },
+        {
+          "en": "Observation",
+          "ru": "Наблюдение",
+          "uz": "Kuzatish"
+        },
+        {
+          "en": "Systemic fluconazole with the medical team",
+          "ru": "Системный флуконазол совместно с лечащим врачом",
+          "uz": "Tizimli flukonazol, shifokor bilan hamkorlikda"
+        }
+      ],
+      "correct": 3,
+      "explain": {
+        "en": "Severe or widespread disease needs a systemic antifungal and care of the underlying condition.",
+        "ru": "При тяжёлом или распространённом процессе нужен системный антимикотик и лечение основного заболевания.",
+        "uz": "Og‘ir yoki keng tarqalgan holatda tizimli antifungal va umumiy kasallikni davolash kerak."
+      }
+    }
+  ]
+}

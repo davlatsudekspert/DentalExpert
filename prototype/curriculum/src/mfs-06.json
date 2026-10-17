@@ -1,0 +1,970 @@
+{
+  "id": "mfs-06",
+  "subject": "mfs",
+  "n": 6,
+  "week": 6,
+  "type": "practical",
+  "hours": 2,
+  "title": {
+    "en": "Oral potentially malignant disorders and oral cancer screening",
+    "ru": "Потенциально злокачественные заболевания полости рта и скрининг рака",
+    "uz": "Og‘iz bo‘shlig‘ining potensial xavfli kasalliklari va saratonni erta aniqlash"
+  },
+  "goals": [
+    {
+      "en": "Name and describe the oral potentially malignant disorders",
+      "ru": "Называть и описывать потенциально злокачественные заболевания полости рта",
+      "uz": "Og‘iz bo‘shlig‘ining potensial xavfli kasalliklarini nomlash va tavsiflash"
+    },
+    {
+      "en": "Perform a systematic oral examination and neck node palpation",
+      "ru": "Проводить систематический осмотр полости рта и пальпацию лимфоузлов шеи",
+      "uz": "Og‘iz bo‘shlig‘ini tizimli ko‘rikdan o‘tkazish va bo‘yin limfa tugunlarini paypaslash"
+    },
+    {
+      "en": "Recognise red flags and refer the patient in time",
+      "ru": "Распознавать тревожные признаки и своевременно направлять пациента",
+      "uz": "Xavfli belgilarni aniqlab, bemorni o‘z vaqtida yo‘llash"
+    }
+  ],
+  "links": [
+    "atlas"
+  ],
+  "sources": [
+    "Warnakulasuriya S et al. Oral potentially malignant disorders: a consensus report on nomenclature and classification. Oral Dis 2021",
+    "Neville BW et al. Oral and Maxillofacial Pathology, 4th ed., 2016"
+  ],
+  "slides": [
+    {
+      "layout": "title",
+      "title": {
+        "en": "Potentially malignant disorders and oral cancer screening",
+        "ru": "Потенциально злокачественные заболевания и скрининг рака полости рта",
+        "uz": "Potensial xavfli kasalliklar va og‘iz saratoni skriningi"
+      },
+      "subtitle": {
+        "en": "Cancer awareness at every visit",
+        "ru": "Онконастороженность на каждом приёме",
+        "uz": "Har bir ko‘rikda onkologik hushyorlik"
+      }
+    },
+    {
+      "layout": "key",
+      "title": {
+        "en": "Key concept",
+        "ru": "Ключевое понятие",
+        "uz": "Asosiy tushuncha"
+      },
+      "term": {
+        "en": "Potentially malignant disorder",
+        "ru": "Потенциально злокачественное заболевание",
+        "uz": "Potensial xavfli kasallik"
+      },
+      "definition": {
+        "en": "Any clinical condition of the oral mucosa with an increased risk of developing cancer. It does not mean cancer will develop, but it needs follow-up and often a biopsy.",
+        "ru": "Любое клиническое состояние слизистой полости рта с повышенным риском развития рака. Это не означает неизбежного озлокачествления, но требует наблюдения и часто биопсии.",
+        "uz": "Og‘iz shilliq qavatining saraton rivojlanish xavfi oshgan har qanday klinik holati. Bu holat albatta saratonga aylanadi degani emas, lekin kuzatuv va ko‘pincha biopsiya talab qiladi."
+      },
+      "note": {
+        "en": "Stress that this WHO consensus term replaces the older word precancer.",
+        "ru": "Подчеркните, что это термин консенсуса ВОЗ 2020–2021, заменивший «предрак».",
+        "uz": "JSST 2020–2021 kelishuvidagi atama ekanini ta’kidlang; eski «prekanser» atamasi o‘rniga ishlatiladi."
+      }
+    },
+    {
+      "layout": "tree",
+      "title": {
+        "en": "Main disorders",
+        "ru": "Основные заболевания",
+        "uz": "Asosiy kasalliklar"
+      },
+      "root": {
+        "en": "Potentially malignant disorders",
+        "ru": "Потенциально злокачественные",
+        "uz": "Potensial xavfli kasalliklar"
+      },
+      "children": [
+        {
+          "label": {
+            "en": "White lesions",
+            "ru": "Белые поражения",
+            "uz": "Oq o‘zgarishlar"
+          },
+          "items": [
+            {
+              "en": "Leukoplakia",
+              "ru": "Лейкоплакия",
+              "uz": "Leykoplakiya"
+            },
+            {
+              "en": "Proliferative verrucous leukoplakia",
+              "ru": "Пролиферативная веррукозная лейкоплакия",
+              "uz": "Proliferativ verrukoz leykoplakiya"
+            }
+          ]
+        },
+        {
+          "label": {
+            "en": "Red lesions",
+            "ru": "Красные поражения",
+            "uz": "Qizil o‘zgarishlar"
+          },
+          "items": [
+            {
+              "en": "Erythroplakia",
+              "ru": "Эритроплакия",
+              "uz": "Eritroplakiya"
+            },
+            {
+              "en": "Erythroleukoplakia",
+              "ru": "Эритролейкоплакия",
+              "uz": "Eritroleykoplakiya"
+            }
+          ]
+        },
+        {
+          "label": {
+            "en": "Others",
+            "ru": "Другие",
+            "uz": "Boshqalar"
+          },
+          "items": [
+            {
+              "en": "Oral submucous fibrosis",
+              "ru": "Подслизистый фиброз",
+              "uz": "Og‘iz submukoz fibrozi"
+            },
+            {
+              "en": "Oral lichen planus",
+              "ru": "Красный плоский лишай",
+              "uz": "Og‘iz qizil yassi temiratkisi"
+            },
+            {
+              "en": "Actinic cheilitis",
+              "ru": "Актинический хейлит",
+              "uz": "Labning aktinik keratozi"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "layout": "compare",
+      "title": {
+        "en": "Leukoplakia versus erythroplakia",
+        "ru": "Лейкоплакия и эритроплакия",
+        "uz": "Leykoplakiya va eritroplakiya"
+      },
+      "columns": [
+        {
+          "head": {
+            "en": "Leukoplakia",
+            "ru": "Лейкоплакия",
+            "uz": "Leykoplakiya"
+          },
+          "items": [
+            {
+              "en": "White patch that does not rub off",
+              "ru": "Белое пятно, не соскабливается",
+              "uz": "Qirib olinmaydigan oq dog‘"
+            },
+            {
+              "en": "Diagnosis of exclusion",
+              "ru": "Диагноз исключения",
+              "uz": "Istisno yo‘li bilan qo‘yiladigan tashxis"
+            },
+            {
+              "en": "Homogeneous or non-homogeneous",
+              "ru": "Гомогенная или негомогенная форма",
+              "uz": "Bir xil yoki notekis shakli"
+            }
+          ]
+        },
+        {
+          "head": {
+            "en": "Erythroplakia",
+            "ru": "Эритроплакия",
+            "uz": "Eritroplakiya"
+          },
+          "items": [
+            {
+              "en": "Velvety red patch",
+              "ru": "Бархатистое красное пятно",
+              "uz": "Baxmalsimon qizil dog‘"
+            },
+            {
+              "en": "Less common",
+              "ru": "Встречается редко",
+              "uz": "Kam uchraydi"
+            },
+            {
+              "en": "Highest risk of malignant change",
+              "ru": "Наибольший риск озлокачествления",
+              "uz": "Xavfli o‘sma xavfi eng yuqori"
+            }
+          ]
+        }
+      ],
+      "note": {
+        "en": "Ask why non-homogeneous, red-white or ulcerated lesions carry higher risk.",
+        "ru": "Спросите, почему негомогенные красно-белые и изъязвлённые очаги опаснее.",
+        "uz": "Notekis, qizil-oq va yarali o‘zgarishlar xavfi yuqoriroq ekanini so‘rang."
+      }
+    },
+    {
+      "layout": "bullets",
+      "title": {
+        "en": "Risk factors",
+        "ru": "Факторы риска",
+        "uz": "Xavf omillari"
+      },
+      "bullets": [
+        {
+          "en": "Smoking and smokeless tobacco, including nasvay",
+          "ru": "Курение и бездымный табак, включая насвай",
+          "uz": "Chekish va tutunsiz tamaki, jumladan nasvay"
+        },
+        {
+          "en": "Alcohol, especially combined with tobacco",
+          "ru": "Алкоголь, особенно вместе с табаком",
+          "uz": "Spirtli ichimliklar, ayniqsa tamaki bilan birga"
+        },
+        {
+          "en": "Areca (betel) nut chewing",
+          "ru": "Жевание ореха арека (бетель)",
+          "uz": "Areka (betel) yong‘og‘ini chaynash"
+        },
+        {
+          "en": "Sunlight for the lip, HPV for the oropharynx",
+          "ru": "Солнце для губы, ВПЧ для ротоглотки",
+          "uz": "Labda quyosh nuri, orofarinksda HPV"
+        }
+      ],
+      "note": {
+        "en": "Point out that nasvay is usually placed under the lip or tongue, so inspect that site carefully.",
+        "ru": "Скажите, что насвай обычно кладут под губу или язык, и эту зону нужно осматривать особенно тщательно.",
+        "uz": "Nasvay odatda pastki lab yoki til ostiga qo‘yilishini va o‘sha sohani diqqat bilan ko‘rish kerakligini ayting."
+      }
+    },
+    {
+      "layout": "flow",
+      "title": {
+        "en": "Systematic examination sequence",
+        "ru": "Порядок систематического осмотра",
+        "uz": "Tizimli ko‘rik ketma-ketligi"
+      },
+      "steps": [
+        {
+          "label": {
+            "en": "Face and neck",
+            "ru": "Лицо и шея",
+            "uz": "Yuz va bo‘yin"
+          },
+          "detail": {
+            "en": "Asymmetry, palpate lymph nodes",
+            "ru": "Асимметрия, пальпация лимфоузлов",
+            "uz": "Asimmetriya, limfa tugunlarini paypaslash"
+          }
+        },
+        {
+          "label": {
+            "en": "Lips and vestibule",
+            "ru": "Губы и преддверие",
+            "uz": "Lablar va dahliz"
+          },
+          "detail": {
+            "en": "Vermilion and mucosa",
+            "ru": "Красная кайма, слизистая",
+            "uz": "Qizil hoshiya, shilliq qavat"
+          }
+        },
+        {
+          "label": {
+            "en": "Cheeks and gingiva",
+            "ru": "Щёки и дёсны",
+            "uz": "Lunj va milklar"
+          },
+          "detail": {
+            "en": "Compare both sides",
+            "ru": "Сравнение сторон",
+            "uz": "Ikki tomonni taqqoslash"
+          }
+        },
+        {
+          "label": {
+            "en": "Tongue",
+            "ru": "Язык",
+            "uz": "Til"
+          },
+          "detail": {
+            "en": "Lateral borders and underside",
+            "ru": "Боковые и нижняя поверхности",
+            "uz": "Yon yuzalari va pastki yuzasi"
+          }
+        },
+        {
+          "label": {
+            "en": "Floor of mouth and palate",
+            "ru": "Дно рта и нёбо",
+            "uz": "Og‘iz tubi va tanglay"
+          },
+          "detail": {
+            "en": "Inspect and palpate bimanually",
+            "ru": "Осмотр и бимануальная пальпация",
+            "uz": "Ko‘rish va ikki qo‘llab paypaslash"
+          }
+        }
+      ],
+      "note": {
+        "en": "Have students perform the full examination on each other in five minutes.",
+        "ru": "Пусть студенты проведут полный осмотр друг у друга за 5 минут.",
+        "uz": "Talabalar bir-birida to‘liq ko‘rikni 5 daqiqada bajarib ko‘rsin."
+      }
+    },
+    {
+      "layout": "table",
+      "title": {
+        "en": "Red flags and action",
+        "ru": "Тревожные признаки и действия",
+        "uz": "Xavfli belgilar va harakat"
+      },
+      "head": [
+        {
+          "en": "Sign",
+          "ru": "Признак",
+          "uz": "Belgi"
+        },
+        {
+          "en": "Action",
+          "ru": "Действие",
+          "uz": "Harakat"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "en": "Ulcer not healing 2 weeks after removing the cause",
+            "ru": "Язва, не зажившая в течение 2 недель после устранения причины",
+            "uz": "Sabab bartaraf etilgandan keyin 2 hafta ichida bitmagan yara"
+          },
+          {
+            "en": "Urgent specialist referral",
+            "ru": "Срочное направление к специалисту",
+            "uz": "Mutaxassisga tezkor yo‘llash"
+          }
+        ],
+        [
+          {
+            "en": "Indurated lesion with rolled edges",
+            "ru": "Уплотнённый очаг с валикообразными краями",
+            "uz": "Qattiqlashgan, qirg‘oqlari ko‘tarilgan o‘choq"
+          },
+          {
+            "en": "Refer for biopsy",
+            "ru": "Направить на биопсию",
+            "uz": "Biopsiya uchun yo‘llash"
+          }
+        ],
+        [
+          {
+            "en": "Red or red-white patch",
+            "ru": "Красное или красно-белое пятно",
+            "uz": "Qizil yoki qizil-oq dog‘"
+          },
+          {
+            "en": "Refer for biopsy",
+            "ru": "Направить на биопсию",
+            "uz": "Biopsiya uchun yo‘llash"
+          }
+        ],
+        [
+          {
+            "en": "Hard, fixed lymph node",
+            "ru": "Плотный неподвижный лимфоузел",
+            "uz": "Qattiq, harakatsiz limfa tuguni"
+          },
+          {
+            "en": "Urgent referral",
+            "ru": "Срочное направление",
+            "uz": "Tezkor yo‘llash"
+          }
+        ],
+        [
+          {
+            "en": "Unexplained numbness or tooth mobility",
+            "ru": "Необъяснимое онемение или подвижность зуба",
+            "uz": "Sababsiz uvishish yoki tish qimirlashi"
+          },
+          {
+            "en": "Investigate and refer",
+            "ru": "Обследование и направление",
+            "uz": "Tekshiruv va yo‘llash"
+          }
+        ]
+      ],
+      "note": {
+        "en": "Stress that such patients must not be left on prolonged watchful waiting.",
+        "ru": "Подчеркните, что таких пациентов нельзя долго «наблюдать».",
+        "uz": "Bunday bemorni «kuzatib turamiz» deb uzoq muddatga qoldirmaslik kerakligini ta’kidlang."
+      }
+    },
+    {
+      "layout": "flow",
+      "title": {
+        "en": "Referral and biopsy",
+        "ru": "Направление и биопсия",
+        "uz": "Yo‘llash va biopsiya"
+      },
+      "steps": [
+        {
+          "label": {
+            "en": "Remove the cause",
+            "ru": "Устранить причину",
+            "uz": "Sababni bartaraf etish"
+          },
+          "detail": {
+            "en": "Sharp edge, denture, habit",
+            "ru": "Острый край, протез, привычка",
+            "uz": "O‘tkir qirra, protez, odat"
+          }
+        },
+        {
+          "label": {
+            "en": "Review",
+            "ru": "Повторный осмотр",
+            "uz": "Qayta ko‘rik"
+          },
+          "detail": {
+            "en": "Usually within 2 weeks",
+            "ru": "Обычно через 2 недели",
+            "uz": "Odatda 2 hafta ichida"
+          }
+        },
+        {
+          "label": {
+            "en": "Biopsy",
+            "ru": "Биопсия",
+            "uz": "Biopsiya"
+          },
+          "detail": {
+            "en": "Histology is the gold standard",
+            "ru": "Гистология — золотой стандарт",
+            "uz": "Gistologiya — oltin standart"
+          }
+        },
+        {
+          "label": {
+            "en": "Dysplasia grade",
+            "ru": "Степень дисплазии",
+            "uz": "Displaziya darajasi"
+          },
+          "detail": {
+            "en": "Plan treatment and follow-up",
+            "ru": "План лечения и наблюдения",
+            "uz": "Davo va kuzatuv rejasi"
+          }
+        }
+      ]
+    },
+    {
+      "layout": "summary",
+      "title": {
+        "en": "Summary",
+        "ru": "Итоги",
+        "uz": "Xulosa"
+      },
+      "bullets": [
+        {
+          "en": "Leukoplakia and erythroplakia are the key potentially malignant disorders",
+          "ru": "Лейкоплакия и эритроплакия — важнейшие потенциально злокачественные заболевания",
+          "uz": "Leykoplakiya va eritroplakiya — eng muhim potensial xavfli kasalliklar"
+        },
+        {
+          "en": "Examine every patient systematically, including the neck",
+          "ru": "Систематический осмотр и пальпация лимфоузлов у каждого пациента",
+          "uz": "Har bir bemorda tizimli ko‘rik va limfa tugunlarini paypaslash"
+        },
+        {
+          "en": "Non-healing ulcer or induration means urgent referral",
+          "ru": "Незаживающая язва и уплотнение — срочное направление",
+          "uz": "Bitmaydigan yara va qattiqlashgan o‘choq — tezkor yo‘llash"
+        },
+        {
+          "en": "Only biopsy gives the final diagnosis",
+          "ru": "Окончательный диагноз только по биопсии",
+          "uz": "Yakuniy tashxis faqat biopsiya orqali"
+        }
+      ]
+    }
+  ],
+  "oral": [
+    {
+      "q": {
+        "en": "Define leukoplakia and explain how to separate it from other white lesions.",
+        "ru": "Дайте определение лейкоплакии и как отличить её от других белых поражений?",
+        "uz": "Leykoplakiyani ta’riflang va uni boshqa oq o‘zgarishlardan qanday farqlaysiz?"
+      },
+      "plan": [
+        {
+          "en": "Non-removable white patch, diagnosis of exclusion",
+          "ru": "Несоскабливаемое белое пятно, диагноз исключения",
+          "uz": "Qirib olinmaydigan oq dog‘, istisno tashxisi"
+        },
+        {
+          "en": "Candidiasis rubs off",
+          "ru": "Кандидоз соскабливается",
+          "uz": "Kandidoz qirib olinadi"
+        },
+        {
+          "en": "Frictional keratosis resolves when the cause is removed",
+          "ru": "Травматический кератоз исчезает после устранения причины",
+          "uz": "Travmatik keratoz sabab yo‘qolgach o‘tadi"
+        },
+        {
+          "en": "Need for biopsy",
+          "ru": "Необходимость биопсии",
+          "uz": "Biopsiya zarurati"
+        }
+      ]
+    },
+    {
+      "q": {
+        "en": "Name the main risk factors for oral cancer.",
+        "ru": "Назовите основные факторы риска рака полости рта.",
+        "uz": "Og‘iz bo‘shlig‘i saratonining asosiy xavf omillarini ayting."
+      },
+      "plan": [
+        {
+          "en": "Smoking and smokeless tobacco",
+          "ru": "Курение и бездымный табак",
+          "uz": "Chekish va tutunsiz tamaki"
+        },
+        {
+          "en": "Alcohol",
+          "ru": "Алкоголь",
+          "uz": "Spirtli ichimliklar"
+        },
+        {
+          "en": "Areca nut",
+          "ru": "Орех арека",
+          "uz": "Areka yong‘og‘i"
+        },
+        {
+          "en": "Sunlight and HPV",
+          "ru": "Солнце и ВПЧ",
+          "uz": "Quyosh nuri va HPV"
+        }
+      ]
+    },
+    {
+      "q": {
+        "en": "Describe the order of a systematic oral examination.",
+        "ru": "Опишите порядок систематического осмотра полости рта.",
+        "uz": "Og‘iz bo‘shlig‘ini tizimli ko‘rikdan o‘tkazish tartibini tushuntiring."
+      },
+      "plan": [
+        {
+          "en": "Face, neck and lymph nodes",
+          "ru": "Лицо, шея, лимфоузлы",
+          "uz": "Yuz, bo‘yin, limfa tugunlari"
+        },
+        {
+          "en": "Lips, vestibule, cheeks, gingiva",
+          "ru": "Губы, преддверие, щёки, дёсны",
+          "uz": "Lablar, dahliz, lunj, milk"
+        },
+        {
+          "en": "All surfaces of the tongue",
+          "ru": "Все поверхности языка",
+          "uz": "Tilning barcha yuzalari"
+        },
+        {
+          "en": "Floor of mouth and palate with palpation",
+          "ru": "Дно рта и нёбо, пальпация",
+          "uz": "Og‘iz tubi va tanglay, paypaslash"
+        }
+      ]
+    },
+    {
+      "q": {
+        "en": "When must a patient be referred urgently?",
+        "ru": "Когда пациента нужно срочно направить к специалисту?",
+        "uz": "Qachon bemorni tezkor ravishda mutaxassisga yo‘llash kerak?"
+      },
+      "plan": [
+        {
+          "en": "Ulcer not healing after removing the cause",
+          "ru": "Незаживающая язва после устранения причины",
+          "uz": "Sabab bartaraf etilgach bitmagan yara"
+        },
+        {
+          "en": "Indurated or red lesion",
+          "ru": "Уплотнённый или красный очаг",
+          "uz": "Qattiqlashgan yoki qizil o‘choq"
+        },
+        {
+          "en": "Hard fixed lymph node",
+          "ru": "Плотный неподвижный лимфоузел",
+          "uz": "Qattiq harakatsiz limfa tuguni"
+        },
+        {
+          "en": "Unexplained numbness or pain",
+          "ru": "Необъяснимое онемение или боль",
+          "uz": "Sababsiz uvishish yoki og‘riq"
+        }
+      ]
+    }
+  ],
+  "test": [
+    {
+      "q": {
+        "en": "Which potentially malignant disorder has the highest risk of malignant change?",
+        "ru": "При каком потенциально злокачественном заболевании риск рака наибольший?",
+        "uz": "Qaysi potensial xavfli kasallikda saraton xavfi eng yuqori?"
+      },
+      "options": [
+        {
+          "en": "Homogeneous leukoplakia",
+          "ru": "Гомогенная лейкоплакия",
+          "uz": "Bir xil leykoplakiya"
+        },
+        {
+          "en": "Frictional keratosis",
+          "ru": "Травматический кератоз",
+          "uz": "Travmatik keratoz"
+        },
+        {
+          "en": "Erythroplakia",
+          "ru": "Эритроплакия",
+          "uz": "Eritroplakiya"
+        },
+        {
+          "en": "Geographic tongue",
+          "ru": "Географический язык",
+          "uz": "Geografik til"
+        }
+      ],
+      "correct": 2,
+      "explain": {
+        "en": "Erythroplakia often shows severe dysplasia or carcinoma on biopsy.",
+        "ru": "При эритроплакии часто выявляют тяжёлую дисплазию или карциному.",
+        "uz": "Eritroplakiyada ko‘pincha og‘ir displaziya yoki karsinoma topiladi."
+      }
+    },
+    {
+      "q": {
+        "en": "What kind of diagnosis is leukoplakia?",
+        "ru": "Каким диагнозом является лейкоплакия?",
+        "uz": "Leykoplakiya qanday tashxis hisoblanadi?"
+      },
+      "options": [
+        {
+          "en": "A clinical diagnosis of exclusion",
+          "ru": "Клинический диагноз исключения",
+          "uz": "Istisno yo‘li bilan qo‘yiladigan klinik tashxis"
+        },
+        {
+          "en": "A laboratory diagnosis only",
+          "ru": "Только лабораторный диагноз",
+          "uz": "Faqat laboratoriya tashxisi"
+        },
+        {
+          "en": "Always a cancer",
+          "ru": "Всегда рак",
+          "uz": "Har doim saraton"
+        },
+        {
+          "en": "An infectious disease",
+          "ru": "Инфекционное заболевание",
+          "uz": "Yuqumli kasallik"
+        }
+      ],
+      "correct": 0,
+      "explain": {
+        "en": "A white patch is called leukoplakia only after other known causes are excluded.",
+        "ru": "Белое пятно называют лейкоплакией после исключения других известных причин.",
+        "uz": "Oq dog‘ boshqa ma’lum sabablar istisno qilingandan keyin leykoplakiya deyiladi."
+      }
+    },
+    {
+      "q": {
+        "en": "A 55-year-old smoker has a firm ulcer on the lateral tongue that has not healed for 3 weeks. Best action?",
+        "ru": "У 55-летнего курильщика на боковой поверхности языка плотная язва, не заживающая 3 недели. Наилучшее действие?",
+        "uz": "55 yoshli chekuvchi erkakda til yon yuzasida 3 hafta bitmayotgan qattiq yara bor. Eng to‘g‘ri harakat qaysi?"
+      },
+      "options": [
+        {
+          "en": "Antiseptic rinse and review in a month",
+          "ru": "Антисептические полоскания и осмотр через месяц",
+          "uz": "Antiseptik chayish va bir oydan keyin ko‘rik"
+        },
+        {
+          "en": "Analgesic gel only",
+          "ru": "Только обезболивающий гель",
+          "uz": "Faqat og‘riqsizlantiruvchi gel"
+        },
+        {
+          "en": "Antibiotics and observation",
+          "ru": "Антибиотики и наблюдение",
+          "uz": "Antibiotik va kuzatuv"
+        },
+        {
+          "en": "Urgent referral for biopsy",
+          "ru": "Срочное направление на биопсию",
+          "uz": "Biopsiya uchun tezkor yo‘llash"
+        }
+      ],
+      "correct": 3,
+      "explain": {
+        "en": "A non-healing indurated ulcer in a smoker is suspicious for cancer.",
+        "ru": "Незаживающая плотная язва у пациента с факторами риска подозрительна на рак.",
+        "uz": "Xavf omili bor bemorda bitmaydigan qattiq yara saratonga shubha tug‘diradi."
+      }
+    },
+    {
+      "q": {
+        "en": "What is the gold standard for diagnosing a potentially malignant lesion?",
+        "ru": "Что является золотым стандартом диагностики потенциально злокачественного очага?",
+        "uz": "Potensial xavfli o‘choq tashxisida oltin standart nima?"
+      },
+      "options": [
+        {
+          "en": "Toluidine blue staining",
+          "ru": "Окраска толуидиновым синим",
+          "uz": "Toluidin ko‘ki bilan bo‘yash"
+        },
+        {
+          "en": "Biopsy with histology",
+          "ru": "Биопсия и гистологическое исследование",
+          "uz": "Biopsiya va gistologik tekshiruv"
+        },
+        {
+          "en": "Autofluorescence light",
+          "ru": "Флуоресцентная лампа",
+          "uz": "Lyuminessent chiroq"
+        },
+        {
+          "en": "Panoramic radiograph",
+          "ru": "Ортопантомограмма",
+          "uz": "Ortopantomogramma"
+        }
+      ],
+      "correct": 1,
+      "explain": {
+        "en": "Adjunct tests only assist; histology confirms dysplasia or cancer.",
+        "ru": "Вспомогательные методы лишь дополняют; дисплазию и рак подтверждает только гистология.",
+        "uz": "Qo‘shimcha usullar yordamchi bo‘lib, faqat gistologiya displaziya va saratonni tasdiqlaydi."
+      }
+    },
+    {
+      "q": {
+        "en": "What is the most common histological type of oral cancer?",
+        "ru": "Какой гистологический тип рака полости рта встречается чаще всего?",
+        "uz": "Og‘iz bo‘shlig‘i saratonining eng ko‘p uchraydigan gistologik turi qaysi?"
+      },
+      "options": [
+        {
+          "en": "Squamous cell carcinoma",
+          "ru": "Плоскоклеточный рак",
+          "uz": "Yassi hujayrali karsinoma"
+        },
+        {
+          "en": "Adenocarcinoma",
+          "ru": "Аденокарцинома",
+          "uz": "Adenokarsinoma"
+        },
+        {
+          "en": "Melanoma",
+          "ru": "Меланома",
+          "uz": "Melanoma"
+        },
+        {
+          "en": "Lymphoma",
+          "ru": "Лимфома",
+          "uz": "Limfoma"
+        }
+      ],
+      "correct": 0,
+      "explain": {
+        "en": "Most oral cancers are squamous cell carcinomas arising from the mucosal epithelium.",
+        "ru": "Большинство раков полости рта — плоскоклеточный рак из эпителия слизистой.",
+        "uz": "Og‘iz saratonining aksariyati shilliq qavat epiteliysidan rivojlanadigan yassi hujayrali karsinomadir."
+      }
+    },
+    {
+      "q": {
+        "en": "Oral submucous fibrosis is mainly linked to what?",
+        "ru": "С чем в основном связан подслизистый фиброз полости рта?",
+        "uz": "Og‘iz submukoz fibrozi asosan nima bilan bog‘liq?"
+      },
+      "options": [
+        {
+          "en": "Alcohol",
+          "ru": "Алкоголь",
+          "uz": "Alkogol"
+        },
+        {
+          "en": "Candida infection",
+          "ru": "Кандидозная инфекция",
+          "uz": "Kandida infeksiyasi"
+        },
+        {
+          "en": "Areca nut chewing",
+          "ru": "Жевание ореха арека",
+          "uz": "Areka yong‘og‘ini chaynash"
+        },
+        {
+          "en": "Poor hygiene",
+          "ru": "Плохая гигиена",
+          "uz": "Yomon gigiyena"
+        }
+      ],
+      "correct": 2,
+      "explain": {
+        "en": "Areca nut constituents drive fibrosis of the submucosa.",
+        "ru": "Компоненты ореха арека вызывают фиброз подслизистой ткани.",
+        "uz": "Areka yong‘og‘i komponentlari shilliq osti to‘qimasida fibrozni chaqiradi."
+      }
+    },
+    {
+      "q": {
+        "en": "A white patch under the tongue does not rub off; the patient has used nasvay for years. First correct step?",
+        "ru": "Под языком белое пятно, не соскабливается; пациент много лет употребляет насвай. Первый правильный шаг?",
+        "uz": "Til ostida oq dog‘ topildi, qirg‘ich bilan olinmaydi; bemor uzoq yillar nasvay ishlatadi. Birinchi to‘g‘ri qadam?"
+      },
+      "options": [
+        {
+          "en": "Antifungal and discharge",
+          "ru": "Противогрибковое средство и выписка",
+          "uz": "Zamburug‘ga qarshi dori va tugatish"
+        },
+        {
+          "en": "Advise stopping the habit and refer for biopsy",
+          "ru": "Совет отказаться от привычки и направление на биопсию",
+          "uz": "Odatni to‘xtatish bo‘yicha maslahat va biopsiyaga yo‘llash"
+        },
+        {
+          "en": "Immediate laser removal",
+          "ru": "Немедленное лазерное удаление",
+          "uz": "Lazer bilan darhol olib tashlash"
+        },
+        {
+          "en": "Review in a year",
+          "ru": "Повторный осмотр через год",
+          "uz": "Bir yildan keyin qayta ko‘rik"
+        }
+      ],
+      "correct": 1,
+      "explain": {
+        "en": "Leukoplakia with a risk habit needs habit cessation and histological diagnosis.",
+        "ru": "При лейкоплакии на фоне фактора риска нужно устранить привычку и подтвердить гистологически.",
+        "uz": "Xavf omili bilan bog‘liq leykoplakiyada odatni to‘xtatish va gistologik tasdiq zarur."
+      }
+    },
+    {
+      "q": {
+        "en": "Where in the mouth does cancer most commonly arise?",
+        "ru": "В каких зонах чаще всего возникает рак полости рта?",
+        "uz": "Og‘iz saratoni ko‘pincha qaysi sohalarda uchraydi?"
+      },
+      "options": [
+        {
+          "en": "Hard palate and interdental papilla",
+          "ru": "Твёрдое нёбо и десневой сосочек",
+          "uz": "Qattiq tanglay va milk so‘rg‘ichi"
+        },
+        {
+          "en": "Centre of the tongue dorsum",
+          "ru": "Центр спинки языка",
+          "uz": "Til ustki yuzasi markazi"
+        },
+        {
+          "en": "Inner upper lip",
+          "ru": "Внутренняя поверхность верхней губы",
+          "uz": "Yuqori lab ichki yuzasi"
+        },
+        {
+          "en": "Lateral tongue and floor of mouth",
+          "ru": "Боковая поверхность языка и дно рта",
+          "uz": "Til yon yuzasi va og‘iz tubi"
+        }
+      ],
+      "correct": 3,
+      "explain": {
+        "en": "The lateral tongue and floor of mouth are high-risk sites.",
+        "ru": "Боковая поверхность языка и дно рта — зоны высокого риска рака.",
+        "uz": "Til yon yuzasi va og‘iz tubi saraton uchun yuqori xavfli sohalardir."
+      }
+    },
+    {
+      "q": {
+        "en": "Which neck node feature is most suspicious for metastasis?",
+        "ru": "Какая особенность шейного лимфоузла наиболее подозрительна на метастаз?",
+        "uz": "Bo‘yin limfa tugunining qaysi xususiyati metastazga ko‘proq shubha tug‘diradi?"
+      },
+      "options": [
+        {
+          "en": "Soft and tender after an infection",
+          "ru": "Мягкий болезненный после инфекции",
+          "uz": "Yumshoq va og‘riqli, infeksiyadan keyin"
+        },
+        {
+          "en": "Small, mobile and symmetrical",
+          "ru": "Маленький подвижный симметричный",
+          "uz": "Kichik, harakatchan, simmetrik"
+        },
+        {
+          "en": "Hard, painless and fixed",
+          "ru": "Плотный безболезненный неподвижный",
+          "uz": "Qattiq, og‘riqsiz, harakatsiz"
+        },
+        {
+          "en": "Gone within a week",
+          "ru": "Исчез за неделю",
+          "uz": "Bir haftada yo‘qolgan"
+        }
+      ],
+      "correct": 2,
+      "explain": {
+        "en": "A hard, painless, fixed node is typical of metastasis.",
+        "ru": "Плотный безболезненный спаянный узел типичен для метастаза.",
+        "uz": "Qattiq, og‘riqsiz va atrof to‘qimaga yopishgan tugun metastazga xos."
+      }
+    },
+    {
+      "q": {
+        "en": "If an ulcer seems traumatic, when should it be reviewed after removing the cause?",
+        "ru": "Если язва предположительно травматическая, когда нужен повторный осмотр после устранения причины?",
+        "uz": "Travmatik yara deb gumon qilinsa, sabab bartaraf etilgandan keyin qachon qayta ko‘rish kerak?"
+      },
+      "options": [
+        {
+          "en": "Usually within 2 weeks",
+          "ru": "Обычно через 2 недели",
+          "uz": "Odatda 2 hafta ichida"
+        },
+        {
+          "en": "After six months",
+          "ru": "Через шесть месяцев",
+          "uz": "Olti oydan keyin"
+        },
+        {
+          "en": "Only if pain worsens",
+          "ru": "Только при усилении боли",
+          "uz": "Faqat og‘riq kuchaysa"
+        },
+        {
+          "en": "No review is needed",
+          "ru": "Повторный осмотр не нужен",
+          "uz": "Qayta ko‘rish shart emas"
+        }
+      ],
+      "correct": 0,
+      "explain": {
+        "en": "A traumatic ulcer usually heals within 2 weeks; if not, biopsy is needed.",
+        "ru": "Травматическая язва обычно заживает за 2 недели; если нет — нужна биопсия.",
+        "uz": "Travmatik yara sabab yo‘qolgach odatda 2 hafta ichida bitadi; bitmasa biopsiya kerak."
+      }
+    }
+  ]
+}

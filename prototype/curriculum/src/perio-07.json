@@ -1,0 +1,1033 @@
+{
+  "id": "perio-07",
+  "subject": "perio",
+  "n": 7,
+  "week": 7,
+  "type": "lecture",
+  "hours": 2,
+  "title": {
+    "en": "Risk factors and systemic links of periodontitis",
+    "ru": "Факторы риска и системные связи пародонтита",
+    "uz": "Parodontitning xavf omillari va tizimli bog‘liqliklari"
+  },
+  "goals": [
+    {
+      "en": "Explain how smoking affects periodontal tissues and treatment",
+      "ru": "Объяснить влияние курения на пародонт и лечение",
+      "uz": "Chekishning parodont to‘qimalari va davolashga ta’sirini tushuntirish"
+    },
+    {
+      "en": "Describe the two-way relationship between diabetes and periodontitis",
+      "ru": "Описать двустороннюю связь диабета и пародонтита",
+      "uz": "Diabet va parodontit o‘rtasidagi ikki tomonlama bog‘liqlikni tavsiflash"
+    },
+    {
+      "en": "Discuss other risk factors and systemic associations without overclaiming",
+      "ru": "Обсуждать другие факторы риска и системные связи без преувеличений",
+      "uz": "Boshqa xavf omillari va tizimli bog‘liqliklarni mubolag‘asiz muhokama qilish"
+    }
+  ],
+  "links": [
+    "periodontium"
+  ],
+  "sources": [
+    "Newman MG et al. Newman and Carranza's Clinical Periodontology, 13th ed., 2019",
+    "Lang NP, Lindhe J. Clinical Periodontology and Implant Dentistry, 6th ed., 2015",
+    "Tonetti MS, Greenwell H, Kornman KS. Staging and grading of periodontitis: framework and proposal. J Periodontol 2018"
+  ],
+  "slides": [
+    {
+      "layout": "title",
+      "title": {
+        "en": "Risk factors and systemic links",
+        "ru": "Факторы риска и системные связи",
+        "uz": "Xavf omillari va tizimli bog‘liqliklar"
+      },
+      "subtitle": {
+        "en": "Smoking, diabetes and the periodontal–systemic interface",
+        "ru": "Курение, диабет и связь пародонта с организмом",
+        "uz": "Chekish, diabet va parodontning organizm bilan bog‘liqligi"
+      }
+    },
+    {
+      "layout": "tree",
+      "title": {
+        "en": "Types of risk factors",
+        "ru": "Виды факторов риска",
+        "uz": "Xavf omillari turlari"
+      },
+      "root": {
+        "en": "Periodontitis risk",
+        "ru": "Риск пародонтита",
+        "uz": "Parodontit xavfi"
+      },
+      "children": [
+        {
+          "label": {
+            "en": "Modifiable",
+            "ru": "Модифицируемые",
+            "uz": "O‘zgartiriladigan"
+          },
+          "items": [
+            {
+              "en": "Smoking",
+              "ru": "Курение",
+              "uz": "Chekish"
+            },
+            {
+              "en": "Poorly controlled diabetes",
+              "ru": "Некомпенсированный диабет",
+              "uz": "Nazoratsiz diabet"
+            },
+            {
+              "en": "Plaque control",
+              "ru": "Гигиена полости рта",
+              "uz": "Og‘iz gigiyenasi"
+            },
+            {
+              "en": "Obesity, stress",
+              "ru": "Ожирение, стресс",
+              "uz": "Semizlik, stress"
+            }
+          ]
+        },
+        {
+          "label": {
+            "en": "Non-modifiable",
+            "ru": "Немодифицируемые",
+            "uz": "O‘zgartirilmaydigan"
+          },
+          "items": [
+            {
+              "en": "Genetic factors",
+              "ru": "Генетические факторы",
+              "uz": "Genetik omillar"
+            },
+            {
+              "en": "Age",
+              "ru": "Возраст",
+              "uz": "Yosh"
+            },
+            {
+              "en": "Some immune disorders",
+              "ru": "Некоторые иммунные нарушения",
+              "uz": "Ba’zi immun buzilishlar"
+            }
+          ]
+        },
+        {
+          "label": {
+            "en": "Local factors",
+            "ru": "Местные факторы",
+            "uz": "Mahalliy omillar"
+          },
+          "items": [
+            {
+              "en": "Calculus, overhangs",
+              "ru": "Камень, нависающие края",
+              "uz": "Tosh, osilgan chetlar"
+            },
+            {
+              "en": "Crowding, open contacts",
+              "ru": "Скученность, открытые контакты",
+              "uz": "Tishlar zichligi, ochiq kontaktlar"
+            }
+          ]
+        }
+      ],
+      "note": {
+        "en": "Explain the difference between a risk factor and a risk indicator or marker.",
+        "ru": "Объясните разницу между фактором риска и индикатором или маркером риска.",
+        "uz": "Xavf omili bilan xavf indikatori yoki markeri o‘rtasidagi farqni tushuntiring."
+      }
+    },
+    {
+      "layout": "compare",
+      "title": {
+        "en": "Effects of smoking",
+        "ru": "Влияние курения",
+        "uz": "Chekishning ta’siri"
+      },
+      "columns": [
+        {
+          "head": {
+            "en": "On the tissues",
+            "ru": "На ткани",
+            "uz": "To‘qimalarga"
+          },
+          "items": [
+            {
+              "en": "Vasoconstriction masks bleeding",
+              "ru": "Вазоконстрикция маскирует кровоточивость",
+              "uz": "Qon tomir torayishi qonashni yashiradi"
+            },
+            {
+              "en": "Impaired neutrophil function",
+              "ru": "Нарушение функции нейтрофилов",
+              "uz": "Neytrofillar faoliyati buziladi"
+            },
+            {
+              "en": "More bone loss and deeper pockets",
+              "ru": "Больше убыль кости и глубже карманы",
+              "uz": "Ko‘proq suyak yo‘qolishi va chuqurroq cho‘ntaklar"
+            }
+          ]
+        },
+        {
+          "head": {
+            "en": "On treatment",
+            "ru": "На лечение",
+            "uz": "Davolashga"
+          },
+          "items": [
+            {
+              "en": "Smaller pocket reduction",
+              "ru": "Меньшее уменьшение карманов",
+              "uz": "Cho‘ntaklar kamroq kichrayadi"
+            },
+            {
+              "en": "Poorer healing after surgery",
+              "ru": "Хуже заживление после операций",
+              "uz": "Jarrohlikdan keyin yomonroq bitish"
+            },
+            {
+              "en": "Higher implant failure risk",
+              "ru": "Выше риск неудачи имплантатов",
+              "uz": "Implant muvaffaqiyatsizligi xavfi yuqori"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "layout": "bullets",
+      "title": {
+        "en": "Smoking: what the clinician does",
+        "ru": "Курение: действия врача",
+        "uz": "Chekish: shifokor harakatlari"
+      },
+      "bullets": [
+        {
+          "en": "Ask about and record tobacco use at every visit",
+          "ru": "Спрашивать и фиксировать курение при каждом визите",
+          "uz": "Har bir tashrifda tamaki iste’molini so‘rash va qayd etish"
+        },
+        {
+          "en": "Give brief cessation advice and refer for support",
+          "ru": "Кратко советовать отказ и направлять за помощью",
+          "uz": "Qisqa tashlash maslahati berish va yordamga yo‘llash"
+        },
+        {
+          "en": "Count cigarettes per day for grading",
+          "ru": "Учитывать число сигарет в день для степени",
+          "uz": "Daraja uchun kunlik sigaret sonini hisoblash"
+        },
+        {
+          "en": "Expect low bleeding despite active disease",
+          "ru": "Ожидать слабую кровоточивость при активном процессе",
+          "uz": "Faol kasallikda ham qonash kam bo‘lishini kutish"
+        }
+      ],
+      "note": {
+        "en": "Stress that former smokers gradually move toward the risk of non-smokers.",
+        "ru": "Подчеркните, что у бросивших курить риск постепенно приближается к некурящим.",
+        "uz": "Chekishni tashlaganlarda xavf asta-sekin chekmaydiganlarnikiga yaqinlashishini ta’kidlang."
+      }
+    },
+    {
+      "layout": "cycle",
+      "title": {
+        "en": "Diabetes and periodontitis: a two-way link",
+        "ru": "Диабет и пародонтит: двусторонняя связь",
+        "uz": "Diabet va parodontit: ikki tomonlama bog‘liqlik"
+      },
+      "center": {
+        "en": "Inflammation",
+        "ru": "Воспаление",
+        "uz": "Yallig‘lanish"
+      },
+      "steps": [
+        {
+          "label": {
+            "en": "Hyperglycaemia",
+            "ru": "Гипергликемия",
+            "uz": "Giperglikemiya"
+          }
+        },
+        {
+          "label": {
+            "en": "Glycation end-products",
+            "ru": "Конечные продукты гликирования",
+            "uz": "Glikatsiya oxirgi mahsulotlari"
+          }
+        },
+        {
+          "label": {
+            "en": "More periodontal destruction",
+            "ru": "Больше разрушение пародонта",
+            "uz": "Parodont ko‘proq yemiriladi"
+          }
+        },
+        {
+          "label": {
+            "en": "Systemic inflammatory burden",
+            "ru": "Системная воспалительная нагрузка",
+            "uz": "Tizimli yallig‘lanish yuki"
+          }
+        },
+        {
+          "label": {
+            "en": "Worse glycaemic control",
+            "ru": "Хуже контроль гликемии",
+            "uz": "Qon qandi nazorati yomonlashadi"
+          }
+        }
+      ],
+      "note": {
+        "en": "Ask students what advice they would give a patient whose HbA1c is rising.",
+        "ru": "Спросите, что бы студенты посоветовали пациенту с растущим HbA1c.",
+        "uz": "HbA1c ko‘tarilayotgan bemorga qanday maslahat berishlarini so‘rang."
+      }
+    },
+    {
+      "layout": "table",
+      "title": {
+        "en": "Diabetes in practice",
+        "ru": "Диабет на практике",
+        "uz": "Amaliyotda diabet"
+      },
+      "head": [
+        {
+          "en": "Point",
+          "ru": "Аспект",
+          "uz": "Jihat"
+        },
+        {
+          "en": "Practical message",
+          "ru": "Практический вывод",
+          "uz": "Amaliy xulosa"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "en": "Grading",
+            "ru": "Степень",
+            "uz": "Daraja"
+          },
+          {
+            "en": "HbA1c ≥7.0% shifts to grade C",
+            "ru": "HbA1c ≥7,0% смещает к степени C",
+            "uz": "HbA1c ≥7,0% C darajaga suradi"
+          }
+        ],
+        [
+          {
+            "en": "History",
+            "ru": "Анамнез",
+            "uz": "Anamnez"
+          },
+          {
+            "en": "Ask about control, medicines, hypoglycaemia",
+            "ru": "Контроль, лекарства, гипогликемии",
+            "uz": "Nazorat, dorilar, gipoglikemiya"
+          }
+        ],
+        [
+          {
+            "en": "Treatment effect",
+            "ru": "Эффект лечения",
+            "uz": "Davolash samarasi"
+          },
+          {
+            "en": "Periodontal therapy may modestly lower HbA1c",
+            "ru": "Лечение пародонта может умеренно снизить HbA1c",
+            "uz": "Parodontni davolash HbA1c ni biroz kamaytirishi mumkin"
+          }
+        ],
+        [
+          {
+            "en": "Teamwork",
+            "ru": "Совместная работа",
+            "uz": "Hamkorlik"
+          },
+          {
+            "en": "Liaise with the physician",
+            "ru": "Взаимодействовать с терапевтом",
+            "uz": "Shifokor-terapevt bilan hamkorlik"
+          }
+        ]
+      ]
+    },
+    {
+      "layout": "table",
+      "title": {
+        "en": "Systemic associations",
+        "ru": "Системные ассоциации",
+        "uz": "Tizimli bog‘liqliklar"
+      },
+      "head": [
+        {
+          "en": "Condition",
+          "ru": "Состояние",
+          "uz": "Holat"
+        },
+        {
+          "en": "Current view",
+          "ru": "Современное представление",
+          "uz": "Hozirgi qarash"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "en": "Cardiovascular disease",
+            "ru": "Сердечно-сосудистые болезни",
+            "uz": "Yurak-qon tomir kasalliklari"
+          },
+          {
+            "en": "Consistent association; causality not proven",
+            "ru": "Устойчивая ассоциация; причинность не доказана",
+            "uz": "Barqaror bog‘liqlik; sababiyat isbotlanmagan"
+          }
+        ],
+        [
+          {
+            "en": "Adverse pregnancy outcomes",
+            "ru": "Неблагоприятный исход беременности",
+            "uz": "Homiladorlikning noqulay oqibatlari"
+          },
+          {
+            "en": "Association reported; treatment is safe in pregnancy",
+            "ru": "Ассоциация описана; лечение безопасно при беременности",
+            "uz": "Bog‘liqlik qayd etilgan; davolash homiladorlikda xavfsiz"
+          }
+        ],
+        [
+          {
+            "en": "Rheumatoid arthritis",
+            "ru": "Ревматоидный артрит",
+            "uz": "Revmatoid artrit"
+          },
+          {
+            "en": "Shared inflammatory pathways",
+            "ru": "Общие воспалительные механизмы",
+            "uz": "Umumiy yallig‘lanish mexanizmlari"
+          }
+        ],
+        [
+          {
+            "en": "Chronic kidney disease",
+            "ru": "Хроническая болезнь почек",
+            "uz": "Surunkali buyrak kasalligi"
+          },
+          {
+            "en": "Association reported",
+            "ru": "Описана ассоциация",
+            "uz": "Bog‘liqlik qayd etilgan"
+          }
+        ]
+      ],
+      "note": {
+        "en": "Emphasise association, not proven causation, for most of these conditions.",
+        "ru": "Подчеркните, что для большинства состояний доказана ассоциация, а не причинность.",
+        "uz": "Bu holatlarning ko‘pchiligida sabab emas, balki bog‘liqlik isbotlanganini ta’kidlang."
+      }
+    },
+    {
+      "layout": "bullets",
+      "title": {
+        "en": "Other modifying factors",
+        "ru": "Другие модифицирующие факторы",
+        "uz": "Boshqa o‘zgartiruvchi omillar"
+      },
+      "bullets": [
+        {
+          "en": "Genetic disorders: Down syndrome, Papillon–Lefèvre syndrome",
+          "ru": "Генетические: синдром Дауна, синдром Папийона–Лефевра",
+          "uz": "Genetik: Daun sindromi, Papiyon–Lefevr sindromi"
+        },
+        {
+          "en": "Neutrophil disorders and immune suppression",
+          "ru": "Нарушения нейтрофилов и иммуносупрессия",
+          "uz": "Neytrofil buzilishlari va immunosupressiya"
+        },
+        {
+          "en": "Psychological stress and obesity",
+          "ru": "Психологический стресс и ожирение",
+          "uz": "Psixologik stress va semizlik"
+        },
+        {
+          "en": "Medicines causing dry mouth or gingival enlargement",
+          "ru": "Лекарства, вызывающие сухость или гиперплазию десны",
+          "uz": "Og‘iz qurishi yoki milk kattalashuviga olib keluvchi dorilar"
+        }
+      ]
+    },
+    {
+      "layout": "flow",
+      "title": {
+        "en": "Risk factor management",
+        "ru": "Управление факторами риска",
+        "uz": "Xavf omillarini boshqarish"
+      },
+      "steps": [
+        {
+          "label": {
+            "en": "Identify",
+            "ru": "Выявить",
+            "uz": "Aniqlash"
+          },
+          "detail": {
+            "en": "History and questionnaire",
+            "ru": "Анамнез и анкета",
+            "uz": "Anamnez va so‘rovnoma"
+          }
+        },
+        {
+          "label": {
+            "en": "Inform",
+            "ru": "Информировать",
+            "uz": "Xabardor qilish"
+          },
+          "detail": {
+            "en": "Explain the link to the patient",
+            "ru": "Объяснить связь пациенту",
+            "uz": "Bog‘liqlikni bemorga tushuntirish"
+          }
+        },
+        {
+          "label": {
+            "en": "Intervene",
+            "ru": "Вмешаться",
+            "uz": "Aralashish"
+          },
+          "detail": {
+            "en": "Cessation advice, physician liaison",
+            "ru": "Совет по отказу, связь с врачом",
+            "uz": "Tashlash maslahati, shifokor bilan aloqa"
+          }
+        },
+        {
+          "label": {
+            "en": "Record in diagnosis",
+            "ru": "Учесть в диагнозе",
+            "uz": "Tashxisda aks ettirish"
+          },
+          "detail": {
+            "en": "Grade modifiers",
+            "ru": "Модификаторы степени",
+            "uz": "Daraja omillari"
+          }
+        },
+        {
+          "label": {
+            "en": "Review",
+            "ru": "Контроль",
+            "uz": "Nazorat"
+          },
+          "detail": {
+            "en": "Reassess at each recall",
+            "ru": "Переоценка на каждом визите",
+            "uz": "Har nazoratda qayta baholash"
+          }
+        }
+      ]
+    },
+    {
+      "layout": "summary",
+      "title": {
+        "en": "Summary",
+        "ru": "Итоги",
+        "uz": "Xulosa"
+      },
+      "bullets": [
+        {
+          "en": "Smoking is a major modifiable risk factor",
+          "ru": "Курение — главный модифицируемый фактор риска",
+          "uz": "Chekish asosiy o‘zgartiriladigan xavf omili"
+        },
+        {
+          "en": "Diabetes and periodontitis affect each other",
+          "ru": "Диабет и пародонтит влияют друг на друга",
+          "uz": "Diabet va parodontit bir-biriga ta’sir qiladi"
+        },
+        {
+          "en": "Both factors are used in grading",
+          "ru": "Оба фактора учитываются в степени",
+          "uz": "Ikkala omil darajada hisobga olinadi"
+        },
+        {
+          "en": "Other systemic links are associations, not proven causes",
+          "ru": "Другие системные связи — ассоциации, а не доказанные причины",
+          "uz": "Boshqa tizimli bog‘liqliklar isbotlangan sabab emas, bog‘liqlikdir"
+        }
+      ]
+    }
+  ],
+  "oral": [
+    {
+      "q": {
+        "en": "How does smoking affect periodontitis and its treatment?",
+        "ru": "Как курение влияет на пародонтит и его лечение?",
+        "uz": "Chekish parodontit va uni davolashga qanday ta’sir qiladi?"
+      },
+      "plan": [
+        {
+          "en": "Greater attachment and bone loss",
+          "ru": "Большая потеря прикрепления и кости",
+          "uz": "Ko‘proq birikish va suyak yo‘qolishi"
+        },
+        {
+          "en": "Reduced bleeding masks inflammation",
+          "ru": "Меньшая кровоточивость маскирует воспаление",
+          "uz": "Kam qonash yallig‘lanishni yashiradi"
+        },
+        {
+          "en": "Impaired immune response and healing",
+          "ru": "Нарушение иммунного ответа и заживления",
+          "uz": "Immun javob va bitish buziladi"
+        },
+        {
+          "en": "Poorer response to therapy and implants",
+          "ru": "Хуже ответ на лечение и имплантацию",
+          "uz": "Davolash va implantatsiyaga javob yomonroq"
+        }
+      ]
+    },
+    {
+      "q": {
+        "en": "Explain the two-way relationship between diabetes and periodontitis.",
+        "ru": "Объясните двустороннюю связь диабета и пародонтита.",
+        "uz": "Diabet va parodontit o‘rtasidagi ikki tomonlama bog‘liqlikni tushuntiring."
+      },
+      "plan": [
+        {
+          "en": "Hyperglycaemia increases periodontal destruction",
+          "ru": "Гипергликемия усиливает разрушение пародонта",
+          "uz": "Giperglikemiya parodont yemirilishini kuchaytiradi"
+        },
+        {
+          "en": "Periodontal inflammation worsens glycaemic control",
+          "ru": "Воспаление пародонта ухудшает контроль гликемии",
+          "uz": "Parodont yallig‘lanishi qon qandi nazoratini yomonlashtiradi"
+        },
+        {
+          "en": "Periodontal treatment may modestly lower HbA1c",
+          "ru": "Лечение пародонта может умеренно снизить HbA1c",
+          "uz": "Parodontni davolash HbA1c ni biroz kamaytirishi mumkin"
+        }
+      ]
+    },
+    {
+      "q": {
+        "en": "Which systemic conditions are associated with periodontitis?",
+        "ru": "Какие системные состояния ассоциированы с пародонтитом?",
+        "uz": "Qaysi tizimli holatlar parodontit bilan bog‘liq?"
+      },
+      "plan": [
+        {
+          "en": "Cardiovascular disease",
+          "ru": "Сердечно-сосудистые заболевания",
+          "uz": "Yurak-qon tomir kasalliklari"
+        },
+        {
+          "en": "Adverse pregnancy outcomes",
+          "ru": "Неблагоприятные исходы беременности",
+          "uz": "Homiladorlikning noqulay oqibatlari"
+        },
+        {
+          "en": "Rheumatoid arthritis and chronic kidney disease",
+          "ru": "Ревматоидный артрит и болезнь почек",
+          "uz": "Revmatoid artrit va buyrak kasalligi"
+        },
+        {
+          "en": "Mostly association, causality not established",
+          "ru": "В основном ассоциация, причинность не установлена",
+          "uz": "Asosan bog‘liqlik, sababiyat aniqlanmagan"
+        }
+      ]
+    },
+    {
+      "q": {
+        "en": "What should the dentist do when a patient smokes?",
+        "ru": "Что должен сделать стоматолог, если пациент курит?",
+        "uz": "Bemor cheksa, stomatolog nima qilishi kerak?"
+      },
+      "plan": [
+        {
+          "en": "Record amount and duration",
+          "ru": "Записать количество и стаж",
+          "uz": "Miqdor va muddatni qayd etish"
+        },
+        {
+          "en": "Give brief cessation advice",
+          "ru": "Дать краткий совет об отказе",
+          "uz": "Qisqa tashlash maslahatini berish"
+        },
+        {
+          "en": "Refer to cessation services",
+          "ru": "Направить в службу помощи",
+          "uz": "Tashlashga yordam xizmatiga yo‘llash"
+        },
+        {
+          "en": "Use smoking status in grading",
+          "ru": "Учитывать курение при определении степени",
+          "uz": "Daraja belgilashda chekishni hisobga olish"
+        }
+      ]
+    }
+  ],
+  "test": [
+    {
+      "q": {
+        "en": "Why may a heavy smoker with active periodontitis show little bleeding on probing?",
+        "ru": "Почему у заядлого курильщика с активным пародонтитом может быть слабая кровоточивость?",
+        "uz": "Nima uchun faol parodontitli ko‘p chekuvchida zondlashda qonash kam bo‘lishi mumkin?"
+      },
+      "options": [
+        {
+          "en": "The disease is inactive",
+          "ru": "Заболевание неактивно",
+          "uz": "Kasallik faol emas"
+        },
+        {
+          "en": "Vasoconstriction and fibrotic gingiva",
+          "ru": "Вазоконстрикция и фиброз десны",
+          "uz": "Qon tomir torayishi va milk fibrozi"
+        },
+        {
+          "en": "Plaque is absent",
+          "ru": "Налёт отсутствует",
+          "uz": "Karash yo‘q"
+        },
+        {
+          "en": "Bone loss is reversed",
+          "ru": "Убыль кости обратима",
+          "uz": "Suyak yo‘qolishi qaytgan"
+        }
+      ],
+      "correct": 1,
+      "explain": {
+        "en": "Nicotine-related vasoconstriction and fibrotic tissue reduce bleeding, masking the true inflammation.",
+        "ru": "Сосудосуживающее действие никотина и фиброз уменьшают кровоточивость и маскируют воспаление.",
+        "uz": "Nikotin tufayli qon tomir torayishi va fibroz qonashni kamaytirib, haqiqiy yallig‘lanishni yashiradi."
+      }
+    },
+    {
+      "q": {
+        "en": "A patient with diabetes has an HbA1c of 9%. How does this affect periodontitis grading?",
+        "ru": "У пациента с диабетом HbA1c 9%. Как это влияет на степень пародонтита?",
+        "uz": "Diabetli bemorda HbA1c 9%. Bu parodontit darajasiga qanday ta’sir qiladi?"
+      },
+      "options": [
+        {
+          "en": "No effect",
+          "ru": "Не влияет",
+          "uz": "Ta’sir qilmaydi"
+        },
+        {
+          "en": "Lowers to grade A",
+          "ru": "Снижает до степени A",
+          "uz": "A darajaga tushiradi"
+        },
+        {
+          "en": "Changes the stage to IV",
+          "ru": "Меняет стадию на IV",
+          "uz": "Bosqichni IV ga o‘zgartiradi"
+        },
+        {
+          "en": "Shifts to grade C",
+          "ru": "Смещает к степени C",
+          "uz": "C darajaga suradi"
+        }
+      ],
+      "correct": 3,
+      "explain": {
+        "en": "HbA1c of 7.0% or more in diabetes is a grade C modifier in the 2017 framework.",
+        "ru": "HbA1c 7,0% и более при диабете — модификатор степени C по классификации 2017 года.",
+        "uz": "2017 yilgi tizimda diabetda HbA1c 7,0% va undan yuqori bo‘lishi C daraja omili."
+      }
+    },
+    {
+      "q": {
+        "en": "Which statement about periodontitis and cardiovascular disease is most accurate?",
+        "ru": "Какое утверждение о пародонтите и сердечно-сосудистых болезнях наиболее точно?",
+        "uz": "Parodontit va yurak-qon tomir kasalliklari haqidagi qaysi fikr eng aniq?"
+      },
+      "options": [
+        {
+          "en": "There is a consistent association, but causality is not proven",
+          "ru": "Есть устойчивая ассоциация, но причинность не доказана",
+          "uz": "Barqaror bog‘liqlik bor, lekin sababiyat isbotlanmagan"
+        },
+        {
+          "en": "Periodontitis is the main cause of heart attacks",
+          "ru": "Пародонтит — главная причина инфарктов",
+          "uz": "Parodontit yurak xurujining asosiy sababi"
+        },
+        {
+          "en": "There is no link at all",
+          "ru": "Связи нет совсем",
+          "uz": "Umuman bog‘liqlik yo‘q"
+        },
+        {
+          "en": "Treating periodontitis cures heart disease",
+          "ru": "Лечение пародонтита излечивает болезни сердца",
+          "uz": "Parodontitni davolash yurak kasalligini davolaydi"
+        }
+      ],
+      "correct": 0,
+      "explain": {
+        "en": "Studies show an association, but causation and the effect of periodontal treatment on cardiac events remain unproven.",
+        "ru": "Исследования показывают ассоциацию, но причинность и влияние лечения на сердечные события не доказаны.",
+        "uz": "Tadqiqotlar bog‘liqlikni ko‘rsatadi, lekin sababiyat va davolashning yurak hodisalariga ta’siri isbotlanmagan."
+      }
+    },
+    {
+      "q": {
+        "en": "For grading, smoking 10 or more cigarettes a day indicates:",
+        "ru": "Для определения степени курение 10 и более сигарет в день указывает на:",
+        "uz": "Daraja uchun kuniga 10 va undan ko‘p sigaret chekish nimani bildiradi?"
+      },
+      "options": [
+        {
+          "en": "Grade A",
+          "ru": "Степень A",
+          "uz": "A daraja"
+        },
+        {
+          "en": "Grade B",
+          "ru": "Степень B",
+          "uz": "B daraja"
+        },
+        {
+          "en": "Grade C",
+          "ru": "Степень C",
+          "uz": "C daraja"
+        },
+        {
+          "en": "Stage III",
+          "ru": "Стадию III",
+          "uz": "III bosqich"
+        }
+      ],
+      "correct": 2,
+      "explain": {
+        "en": "Smoking under 10 a day suggests grade B and 10 or more suggests grade C.",
+        "ru": "Курение менее 10 сигарет — степень B, 10 и более — степень C.",
+        "uz": "Kuniga 10 dan kam chekish B, 10 va undan ko‘p esa C darajani ko‘rsatadi."
+      }
+    },
+    {
+      "q": {
+        "en": "A pregnant patient in the second trimester has periodontitis. Which is most appropriate?",
+        "ru": "У беременной во втором триместре пародонтит. Что наиболее уместно?",
+        "uz": "Ikkinchi trimestrdagi homilador bemorda parodontit bor. Eng to‘g‘ri yondashuv qaysi?"
+      },
+      "options": [
+        {
+          "en": "Postpone all care until after delivery",
+          "ru": "Отложить всё лечение до родов",
+          "uz": "Barcha davolashni tug‘ruqdan keyinga qoldirish"
+        },
+        {
+          "en": "Prescribe long antibiotic courses",
+          "ru": "Назначить длительные курсы антибиотиков",
+          "uz": "Uzoq antibiotik kurslarini buyurish"
+        },
+        {
+          "en": "Extract all affected teeth",
+          "ru": "Удалить все поражённые зубы",
+          "uz": "Barcha zararlangan tishlarni olib tashlash"
+        },
+        {
+          "en": "Provide non-surgical periodontal therapy",
+          "ru": "Провести нехирургическое лечение пародонта",
+          "uz": "Parodontni jarrohliksiz davolash"
+        }
+      ],
+      "correct": 3,
+      "explain": {
+        "en": "Non-surgical periodontal therapy is considered safe in pregnancy and improves maternal oral health.",
+        "ru": "Нехирургическое лечение пародонта считается безопасным при беременности и улучшает здоровье полости рта матери.",
+        "uz": "Jarrohliksiz parodont davolash homiladorlikda xavfsiz hisoblanadi va onaning og‘iz salomatligini yaxshilaydi."
+      }
+    },
+    {
+      "q": {
+        "en": "Which mechanism best explains increased periodontal destruction in poorly controlled diabetes?",
+        "ru": "Какой механизм лучше объясняет усиленное разрушение пародонта при некомпенсированном диабете?",
+        "uz": "Nazoratsiz diabetda parodont yemirilishining kuchayishini qaysi mexanizm eng yaxshi tushuntiradi?"
+      },
+      "options": [
+        {
+          "en": "Advanced glycation end-products amplify inflammation",
+          "ru": "Конечные продукты гликирования усиливают воспаление",
+          "uz": "Glikatsiya oxirgi mahsulotlari yallig‘lanishni kuchaytiradi"
+        },
+        {
+          "en": "Increased enamel thickness",
+          "ru": "Увеличение толщины эмали",
+          "uz": "Emal qalinligining ortishi"
+        },
+        {
+          "en": "Reduced plaque formation",
+          "ru": "Уменьшение образования налёта",
+          "uz": "Karash hosil bo‘lishining kamayishi"
+        },
+        {
+          "en": "Higher salivary fluoride",
+          "ru": "Повышение фтора в слюне",
+          "uz": "So‘lakda ftorning ortishi"
+        }
+      ],
+      "correct": 0,
+      "explain": {
+        "en": "AGEs bind their receptors on immune cells and boost the inflammatory response and tissue breakdown.",
+        "ru": "Конечные продукты гликирования связываются с рецепторами иммунных клеток и усиливают воспаление и распад тканей.",
+        "uz": "Glikatsiya oxirgi mahsulotlari immun hujayra retseptorlariga bog‘lanib, yallig‘lanish va to‘qima parchalanishini kuchaytiradi."
+      }
+    },
+    {
+      "q": {
+        "en": "Which is a NON-modifiable risk factor for periodontitis?",
+        "ru": "Какой фактор риска пародонтита НЕ модифицируемый?",
+        "uz": "Parodontitning qaysi xavf omili O‘ZGARTIRILMAYDI?"
+      },
+      "options": [
+        {
+          "en": "Smoking",
+          "ru": "Курение",
+          "uz": "Chekish"
+        },
+        {
+          "en": "Plaque control",
+          "ru": "Гигиена полости рта",
+          "uz": "Og‘iz gigiyenasi"
+        },
+        {
+          "en": "Genetic predisposition",
+          "ru": "Генетическая предрасположенность",
+          "uz": "Genetik moyillik"
+        },
+        {
+          "en": "Glycaemic control",
+          "ru": "Контроль гликемии",
+          "uz": "Qon qandi nazorati"
+        }
+      ],
+      "correct": 2,
+      "explain": {
+        "en": "Genetic factors cannot be changed, while smoking, hygiene and glycaemic control can be modified.",
+        "ru": "Генетику изменить нельзя, а курение, гигиену и гликемию можно скорректировать.",
+        "uz": "Genetik omillarni o‘zgartirib bo‘lmaydi, chekish, gigiyena va qon qandini esa tuzatish mumkin."
+      }
+    },
+    {
+      "q": {
+        "en": "Effective periodontal therapy in people with type 2 diabetes has been shown to:",
+        "ru": "Эффективное лечение пародонта у людей с диабетом 2 типа, как показано:",
+        "uz": "2-tur diabetli odamlarda samarali parodont davolash nimani ko‘rsatgan?"
+      },
+      "options": [
+        {
+          "en": "Cure diabetes",
+          "ru": "Излечивает диабет",
+          "uz": "Diabetni davolaydi"
+        },
+        {
+          "en": "Modestly reduce HbA1c",
+          "ru": "Умеренно снижает HbA1c",
+          "uz": "HbA1c ni biroz kamaytiradi"
+        },
+        {
+          "en": "Increase insulin needs",
+          "ru": "Повышает потребность в инсулине",
+          "uz": "Insulinga ehtiyojni oshiradi"
+        },
+        {
+          "en": "Have no effect on inflammation",
+          "ru": "Не влияет на воспаление",
+          "uz": "Yallig‘lanishga ta’sir qilmaydi"
+        }
+      ],
+      "correct": 1,
+      "explain": {
+        "en": "Trials show a modest short-term fall in HbA1c, which supports periodontal care as part of diabetes management.",
+        "ru": "Исследования показывают умеренное краткосрочное снижение HbA1c, что поддерживает лечение пародонта при диабете.",
+        "uz": "Tadqiqotlar HbA1c ning qisqa muddatli biroz pasayishini ko‘rsatadi, bu diabetda parodontni davolashni qo‘llab-quvvatlaydi."
+      }
+    },
+    {
+      "q": {
+        "en": "A 14-year-old with palmoplantar hyperkeratosis has severe periodontal destruction of primary and permanent teeth. The likely condition is:",
+        "ru": "У 14-летнего пациента с ладонно-подошвенным гиперкератозом тяжёлое разрушение пародонта временных и постоянных зубов. Вероятное состояние:",
+        "uz": "Kaft-tovon giperkeratozi bor 14 yoshli bemorda sut va doimiy tishlar parodonti kuchli yemirilgan. Ehtimoliy holat:"
+      },
+      "options": [
+        {
+          "en": "Papillon–Lefèvre syndrome",
+          "ru": "Синдром Папийона–Лефевра",
+          "uz": "Papiyon–Lefevr sindromi"
+        },
+        {
+          "en": "Drug-induced enlargement",
+          "ru": "Медикаментозная гиперплазия",
+          "uz": "Dori ta’siridagi kattalashuv"
+        },
+        {
+          "en": "Plaque-induced gingivitis",
+          "ru": "Гингивит от налёта",
+          "uz": "Karashdan gingivit"
+        },
+        {
+          "en": "Necrotising gingivitis",
+          "ru": "Некротический гингивит",
+          "uz": "Nekrotik gingivit"
+        }
+      ],
+      "correct": 0,
+      "explain": {
+        "en": "Papillon–Lefèvre syndrome combines palmoplantar keratosis with early severe periodontitis.",
+        "ru": "Синдром Папийона–Лефевра сочетает ладонно-подошвенный кератоз с ранним тяжёлым пародонтитом.",
+        "uz": "Papiyon–Lefevr sindromi kaft-tovon keratozini erta og‘ir parodontit bilan birlashtiradi."
+      }
+    },
+    {
+      "q": {
+        "en": "Which local factor most increases the risk of periodontal breakdown at a single tooth?",
+        "ru": "Какой местный фактор сильнее всего повышает риск разрушения пародонта у отдельного зуба?",
+        "uz": "Qaysi mahalliy omil bitta tishda parodont yemirilishi xavfini eng ko‘p oshiradi?"
+      },
+      "options": [
+        {
+          "en": "A smooth composite filling",
+          "ru": "Гладкая композитная пломба",
+          "uz": "Silliq kompozit plomba"
+        },
+        {
+          "en": "Fluoride varnish",
+          "ru": "Фторлак",
+          "uz": "Ftorlak"
+        },
+        {
+          "en": "Subgingival calculus and an overhang",
+          "ru": "Поддесневой камень и нависающий край",
+          "uz": "Milk osti toshi va osilgan chet"
+        },
+        {
+          "en": "A sealed fissure",
+          "ru": "Запечатанная фиссура",
+          "uz": "Germetiklangan fissura"
+        }
+      ],
+      "correct": 2,
+      "explain": {
+        "en": "Subgingival calculus and overhangs retain biofilm close to the attachment and promote breakdown.",
+        "ru": "Поддесневой камень и нависающие края удерживают биоплёнку у прикрепления и способствуют разрушению.",
+        "uz": "Milk osti toshi va osilgan chetlar biofilmni birikish yaqinida ushlab, yemirilishga sabab bo‘ladi."
+      }
+    }
+  ]
+}

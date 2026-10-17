@@ -1,0 +1,155 @@
+{
+ "note": "Structure follows how Uzbek dental faculties organise teaching (course year -> department subject -> topics). Content is original teaching material, not an institution's official syllabus.",
+ "subjects": [
+  {
+   "id": "prop",
+   "course": 1,
+   "semester": 2,
+   "title": {
+    "en": "Propaedeutics of dentistry",
+    "ru": "Пропедевтика стоматологии",
+    "uz": "Propedevtik stomatologiya"
+   }
+  },
+  {
+   "id": "prev",
+   "course": 2,
+   "semester": 3,
+   "title": {
+    "en": "Prevention of dental diseases",
+    "ru": "Профилактика стоматологических заболеваний",
+    "uz": "Stomatologik kasalliklar profilaktikasi"
+   }
+  },
+  {
+   "id": "mat",
+   "course": 2,
+   "semester": 4,
+   "title": {
+    "en": "Dental materials",
+    "ru": "Стоматологическое материаловедение",
+    "uz": "Stomatologik materialshunoslik"
+   }
+  },
+  {
+   "id": "card",
+   "course": 3,
+   "semester": 5,
+   "title": {
+    "en": "Operative dentistry: cariology",
+    "ru": "Терапевтическая стоматология: кариесология",
+    "uz": "Terapevtik stomatologiya: kariesologiya"
+   }
+  },
+  {
+   "id": "radio",
+   "course": 3,
+   "semester": 5,
+   "title": {
+    "en": "Dental radiology",
+    "ru": "Стоматологическая рентгенология",
+    "uz": "Dental radiologiya"
+   }
+  },
+  {
+   "id": "endo",
+   "course": 3,
+   "semester": 6,
+   "title": {
+    "en": "Endodontics",
+    "ru": "Эндодонтия",
+    "uz": "Endodontiya"
+   }
+  },
+  {
+   "id": "surg",
+   "course": 3,
+   "semester": 6,
+   "title": {
+    "en": "Oral surgery",
+    "ru": "Хирургическая стоматология",
+    "uz": "Jarrohlik stomatologiyasi"
+   }
+  },
+  {
+   "id": "pros",
+   "course": 4,
+   "semester": 7,
+   "title": {
+    "en": "Prosthodontics",
+    "ru": "Ортопедическая стоматология",
+    "uz": "Ortopedik stomatologiya"
+   }
+  },
+  {
+   "id": "perio",
+   "course": 4,
+   "semester": 7,
+   "title": {
+    "en": "Periodontology",
+    "ru": "Пародонтология",
+    "uz": "Parodontologiya"
+   }
+  },
+  {
+   "id": "oralmed",
+   "course": 4,
+   "semester": 7,
+   "title": {
+    "en": "Oral medicine and diagnosis",
+    "ru": "Заболевания слизистой оболочки рта и диагностика",
+    "uz": "Og‘iz bo‘shlig‘i kasalliklari va diagnostikasi"
+   }
+  },
+  {
+   "id": "ped",
+   "course": 4,
+   "semester": 8,
+   "title": {
+    "en": "Paediatric dentistry",
+    "ru": "Детская стоматология",
+    "uz": "Bolalar stomatologiyasi"
+   }
+  },
+  {
+   "id": "ortho",
+   "course": 4,
+   "semester": 8,
+   "title": {
+    "en": "Orthodontics",
+    "ru": "Ортодонтия",
+    "uz": "Ortodontiya"
+   }
+  },
+  {
+   "id": "mfs",
+   "course": 5,
+   "semester": 9,
+   "title": {
+    "en": "Maxillofacial surgery",
+    "ru": "Челюстно-лицевая хирургия",
+    "uz": "Yuz-jag‘ jarrohligi"
+   }
+  },
+  {
+   "id": "esth",
+   "course": 5,
+   "semester": 9,
+   "title": {
+    "en": "Aesthetic and restorative dentistry",
+    "ru": "Эстетическая и реставрационная стоматология",
+    "uz": "Estetik va restavratsion stomatologiya"
+   }
+  },
+  {
+   "id": "impl",
+   "course": 5,
+   "semester": 10,
+   "title": {
+    "en": "Implantology and clinical practice",
+    "ru": "Имплантология и клиническая практика",
+    "uz": "Implantologiya va klinik amaliyot"
+   }
+  }
+ ]
+}

@@ -1,0 +1,993 @@
+{
+  "id": "pros-01",
+  "subject": "pros",
+  "n": 1,
+  "week": 1,
+  "type": "lecture",
+  "hours": 2,
+  "title": {
+    "en": "Occlusion and articulation",
+    "ru": "Окклюзия и артикуляция",
+    "uz": "Okklyuziya va artikulyatsiya"
+  },
+  "goals": [
+    {
+      "en": "Define centric relation and intercuspal position and explain how they differ",
+      "ru": "Дать определение центрального соотношения челюстей и положения максимального межбугоркового контакта, объяснить их различие",
+      "uz": "Jag‘larning markaziy nisbati va maksimal do‘mboqlararo kontakt holatini ta’riflash hamda ularning farqini tushuntirish"
+    },
+    {
+      "en": "Describe canine guidance, group function and balanced occlusion",
+      "ru": "Описать клыковое ведение, групповую функцию и сбалансированную окклюзию",
+      "uz": "Qoziq tish yo‘naltiruvchiligi, guruhli funksiya va muvozanatlashgan okklyuziyani tavsiflash"
+    },
+    {
+      "en": "Explain the role of the facebow and articulator in prosthodontics",
+      "ru": "Объяснить роль лицевой дуги и артикулятора в ортопедической стоматологии",
+      "uz": "Ortopedik stomatologiyada yuz yoyi va artikulyatorning vazifasini tushuntirish"
+    }
+  ],
+  "links": [
+    "tooth-surfaces",
+    "tooth-types-fdi"
+  ],
+  "sources": [
+    "Okeson JP. Management of Temporomandibular Disorders and Occlusion, 8th ed., 2019",
+    "The Glossary of Prosthodontic Terms, 9th ed. J Prosthet Dent 2017",
+    "Nelson SJ. Wheeler's Dental Anatomy, Physiology and Occlusion, 11th ed., 2019"
+  ],
+  "slides": [
+    {
+      "layout": "title",
+      "title": {
+        "en": "Occlusion and articulation",
+        "ru": "Окклюзия и артикуляция",
+        "uz": "Okklyuziya va artikulyatsiya"
+      },
+      "subtitle": {
+        "en": "Reference positions, occlusal schemes and articulators",
+        "ru": "Референтные положения, окклюзионные схемы и артикуляторы",
+        "uz": "Tayanch holatlar, okklyuzion sxemalar va artikulyatorlar"
+      }
+    },
+    {
+      "layout": "key",
+      "title": {
+        "en": "Centric relation",
+        "ru": "Центральное соотношение челюстей",
+        "uz": "Jag‘larning markaziy nisbati"
+      },
+      "term": {
+        "en": "Centric relation (CR)",
+        "ru": "Центральное соотношение (ЦС)",
+        "uz": "Markaziy nisbat (MN)"
+      },
+      "definition": {
+        "en": "Jaw relation with the condyles in the anterior-superior position against the articular eminences, independent of tooth contact; used when the intercuspal position is lost or must be changed.",
+        "ru": "Соотношение челюстей, при котором мыщелки занимают передне-верхнее положение у суставных бугорков, независимо от контакта зубов; используется, когда положение смыкания утрачено или подлежит изменению.",
+        "uz": "Bo‘g‘im boshchalari bo‘g‘im do‘mbog‘iga nisbatan oldingi-yuqori holatda turgan, tishlar kontaktiga bog‘liq bo‘lmagan jag‘lar nisbati; tishlar jipslashuv holati yo‘qolganda yoki uni o‘zgartirish kerak bo‘lganda qo‘llanadi."
+      },
+      "note": {
+        "en": "Stress that CR is a joint-based position, independent of tooth contact, and is reproducible.",
+        "ru": "Подчеркните, что ЦС определяется положением суставов, не зависит от контакта зубов и воспроизводимо.",
+        "uz": "Markaziy nisbat bo‘g‘imga asoslangan, tishlar kontaktiga bog‘liq emas va qayta takrorlanadigan holat ekanini alohida ta’kidlang."
+      }
+    },
+    {
+      "layout": "compare",
+      "title": {
+        "en": "CR versus intercuspal position",
+        "ru": "ЦС и положение межбугоркового контакта",
+        "uz": "MN va do‘mboqlararo kontakt holati"
+      },
+      "columns": [
+        {
+          "head": {
+            "en": "Centric relation",
+            "ru": "Центральное соотношение",
+            "uz": "Markaziy nisbat"
+          },
+          "items": [
+            {
+              "en": "Determined by the joints",
+              "ru": "Определяется суставами",
+              "uz": "Bo‘g‘imlar bilan belgilanadi"
+            },
+            {
+              "en": "Independent of teeth",
+              "ru": "Не зависит от зубов",
+              "uz": "Tishlarga bog‘liq emas"
+            },
+            {
+              "en": "Reproducible after tooth loss",
+              "ru": "Воспроизводимо после потери зубов",
+              "uz": "Tishlar yo‘qolgandan keyin ham takrorlanadi"
+            }
+          ]
+        },
+        {
+          "head": {
+            "en": "Intercuspal position (ICP)",
+            "ru": "Положение МБК (ICP)",
+            "uz": "Do‘mboqlararo kontakt (ICP)"
+          },
+          "items": [
+            {
+              "en": "Determined by the teeth",
+              "ru": "Определяется зубами",
+              "uz": "Tishlar bilan belgilanadi"
+            },
+            {
+              "en": "Maximal cusp–fossa contact",
+              "ru": "Максимальный контакт бугров и ямок",
+              "uz": "Do‘mboq va chuqurchalarning eng ko‘p kontakti"
+            },
+            {
+              "en": "Usually slightly anterior to CR",
+              "ru": "Обычно немного кпереди от ЦС",
+              "uz": "Odatda MNdan biroz oldinda joylashadi"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "layout": "figure",
+      "title": {
+        "en": "Cusp–fossa contacts",
+        "ru": "Контакты бугров и ямок",
+        "uz": "Do‘mboq va chuqurcha kontaktlari"
+      },
+      "image": "occlusal",
+      "callouts": [
+        {
+          "at": "cusp",
+          "label": {
+            "en": "Supporting cusp",
+            "ru": "Опорный бугор",
+            "uz": "Tayanch do‘mboq"
+          }
+        },
+        {
+          "at": "fossa",
+          "label": {
+            "en": "Opposing cusp contacts",
+            "ru": "Контакт бугра-антагониста",
+            "uz": "Antagonist do‘mboq kontakti"
+          }
+        },
+        {
+          "at": "ridge",
+          "label": {
+            "en": "Marginal ridge stop",
+            "ru": "Опора на краевом гребне",
+            "uz": "Chekka qirradagi tayanch"
+          }
+        }
+      ],
+      "bullets": [
+        {
+          "en": "Supporting cusps: maxillary palatal, mandibular buccal",
+          "ru": "Опорные бугры: нёбные верхних, щёчные нижних зубов",
+          "uz": "Tayanch do‘mboqlar: yuqori tishlarda tanglay, pastki tishlarda lunj do‘mboqlari"
+        },
+        {
+          "en": "Stable axial loading needs many point contacts",
+          "ru": "Для осевой нагрузки нужны множественные точечные контакты",
+          "uz": "Barqaror o‘q bo‘yicha yuklanish uchun ko‘plab nuqtali kontaktlar kerak"
+        }
+      ],
+      "note": {
+        "en": "Ask which cusps are supporting in each jaw and why they must not be over-reduced.",
+        "ru": "Спросите, какие бугры являются опорными на каждой челюсти и почему их нельзя чрезмерно сошлифовывать.",
+        "uz": "Har bir jag‘da qaysi do‘mboqlar tayanch ekanini va nima uchun ularni ortiqcha charxlash mumkin emasligini so‘rang."
+      }
+    },
+    {
+      "layout": "tree",
+      "title": {
+        "en": "Occlusal schemes",
+        "ru": "Окклюзионные схемы",
+        "uz": "Okklyuzion sxemalar"
+      },
+      "root": {
+        "en": "Occlusal scheme",
+        "ru": "Окклюзионная схема",
+        "uz": "Okklyuzion sxema"
+      },
+      "children": [
+        {
+          "label": {
+            "en": "Canine guidance",
+            "ru": "Клыковое ведение",
+            "uz": "Qoziq tish yo‘naltiruvchiligi"
+          },
+          "items": [
+            {
+              "en": "Disclusion on canine",
+              "ru": "Дизокклюзия на клыке",
+              "uz": "Qoziq tishda ajralish"
+            },
+            {
+              "en": "Natural dentition",
+              "ru": "Естественные зубы",
+              "uz": "Tabiiy tishlar"
+            }
+          ]
+        },
+        {
+          "label": {
+            "en": "Group function",
+            "ru": "Групповая функция",
+            "uz": "Guruhli funksiya"
+          },
+          "items": [
+            {
+              "en": "Several working-side teeth",
+              "ru": "Несколько зубов рабочей стороны",
+              "uz": "Ishchi tomonning bir necha tishi"
+            },
+            {
+              "en": "Worn or weak canine",
+              "ru": "Стёртый или слабый клык",
+              "uz": "Yemirilgan yoki zaif qoziq tish"
+            }
+          ]
+        },
+        {
+          "label": {
+            "en": "Bilateral balanced",
+            "ru": "Двусторонняя сбалансированная",
+            "uz": "Ikki tomonlama muvozanatlashgan"
+          },
+          "items": [
+            {
+              "en": "Contacts on both sides",
+              "ru": "Контакты с обеих сторон",
+              "uz": "Ikkala tomonda kontakt"
+            },
+            {
+              "en": "Complete dentures",
+              "ru": "Полные съёмные протезы",
+              "uz": "To‘liq olinadigan protezlar"
+            }
+          ]
+        },
+        {
+          "label": {
+            "en": "Lingualized",
+            "ru": "Лингвализированная",
+            "uz": "Lingvallashgan"
+          },
+          "items": [
+            {
+              "en": "Palatal cusps in fossae",
+              "ru": "Нёбные бугры в ямках",
+              "uz": "Tanglay do‘mboqlari chuqurchalarda"
+            },
+            {
+              "en": "Resorbed ridges",
+              "ru": "Атрофированные гребни",
+              "uz": "So‘rilgan alveolyar qirralar"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "layout": "bullets",
+      "title": {
+        "en": "Mutually protected occlusion",
+        "ru": "Взаимозащищённая окклюзия",
+        "uz": "O‘zaro himoyalangan okklyuziya"
+      },
+      "bullets": [
+        {
+          "en": "In ICP, posterior teeth carry the load and protect the anterior teeth",
+          "ru": "В ICP боковые зубы несут нагрузку и защищают передние",
+          "uz": "ICP holatida yon tishlar yukni ko‘taradi va old tishlarni himoya qiladi"
+        },
+        {
+          "en": "In protrusion, incisors separate the posterior teeth",
+          "ru": "При протрузии резцы разобщают боковые зубы",
+          "uz": "Pastki jag‘ oldinga surilganda kesuvchi tishlar yon tishlarni ajratadi"
+        },
+        {
+          "en": "In lateral movement, the canine separates the other teeth",
+          "ru": "При боковом движении клык разобщает остальные зубы",
+          "uz": "Yon harakatda qoziq tish qolgan tishlarni ajratadi"
+        },
+        {
+          "en": "Non-working side contacts are avoided in natural teeth",
+          "ru": "На естественных зубах избегают контактов на балансирующей стороне",
+          "uz": "Tabiiy tishlarda balans tomonidagi kontaktlardan qochiladi"
+        }
+      ],
+      "note": {
+        "en": "Link each statement to a clinical example, such as a crown on a canine.",
+        "ru": "Свяжите каждое утверждение с клиническим примером, например коронкой на клыке.",
+        "uz": "Har bir fikrni klinik misol bilan bog‘lang, masalan qoziq tishdagi koronka."
+      }
+    },
+    {
+      "layout": "flow",
+      "title": {
+        "en": "Mounting casts on an articulator",
+        "ru": "Загипсовка моделей в артикулятор",
+        "uz": "Modellarni artikulyatorga gipslash"
+      },
+      "steps": [
+        {
+          "label": {
+            "en": "Facebow record",
+            "ru": "Регистрация лицевой дугой",
+            "uz": "Yuz yoyi bilan qayd etish"
+          },
+          "detail": {
+            "en": "Relates the maxilla to the hinge axis",
+            "ru": "Связывает верхнюю челюсть с шарнирной осью",
+            "uz": "Yuqori jag‘ni sharnir o‘qiga bog‘laydi"
+          }
+        },
+        {
+          "label": {
+            "en": "Mount maxillary cast",
+            "ru": "Загипсовка верхней модели",
+            "uz": "Yuqori modelni gipslash"
+          },
+          "detail": {
+            "en": "Orientation copied to the articulator",
+            "ru": "Ориентация переносится в артикулятор",
+            "uz": "Yo‘nalish artikulyatorga ko‘chiriladi"
+          }
+        },
+        {
+          "label": {
+            "en": "Interocclusal record",
+            "ru": "Межокклюзионный регистрат",
+            "uz": "Okklyuziyalararo qayd"
+          },
+          "detail": {
+            "en": "CR or ICP record as planned",
+            "ru": "Регистрат ЦС или ICP по плану",
+            "uz": "Rejaga ko‘ra MN yoki ICP qaydi"
+          }
+        },
+        {
+          "label": {
+            "en": "Mount mandibular cast",
+            "ru": "Загипсовка нижней модели",
+            "uz": "Pastki modelni gipslash"
+          },
+          "detail": {
+            "en": "Using the record",
+            "ru": "По регистрату",
+            "uz": "Qayd yordamida"
+          }
+        },
+        {
+          "label": {
+            "en": "Programme guidance",
+            "ru": "Настройка путей",
+            "uz": "Yo‘llarni sozlash"
+          },
+          "detail": {
+            "en": "Protrusive and lateral records set condylar paths",
+            "ru": "Протрузионный и боковые регистраты задают суставные пути",
+            "uz": "Protruziv va yon qaydlar bo‘g‘im yo‘llarini belgilaydi"
+          }
+        }
+      ]
+    },
+    {
+      "layout": "table",
+      "title": {
+        "en": "Types of articulators",
+        "ru": "Типы артикуляторов",
+        "uz": "Artikulyator turlari"
+      },
+      "head": [
+        {
+          "en": "Type",
+          "ru": "Тип",
+          "uz": "Turi"
+        },
+        {
+          "en": "What it reproduces",
+          "ru": "Что воспроизводит",
+          "uz": "Nimani takrorlaydi"
+        },
+        {
+          "en": "Typical use",
+          "ru": "Типичное применение",
+          "uz": "Odatiy qo‘llanilishi"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "en": "Simple hinge",
+            "ru": "Простой шарнирный",
+            "uz": "Oddiy sharnirli"
+          },
+          {
+            "en": "Opening and closing only",
+            "ru": "Только открывание и закрывание",
+            "uz": "Faqat ochilish va yopilish"
+          },
+          {
+            "en": "Single small restorations",
+            "ru": "Одиночные небольшие реставрации",
+            "uz": "Yakka kichik restavratsiyalar"
+          }
+        ],
+        [
+          {
+            "en": "Average-value",
+            "ru": "Среднеанатомический",
+            "uz": "O‘rtacha anatomik"
+          },
+          {
+            "en": "Fixed average condylar paths",
+            "ru": "Фиксированные средние суставные пути",
+            "uz": "Belgilangan o‘rtacha bo‘g‘im yo‘llari"
+          },
+          {
+            "en": "Teaching, simple dentures",
+            "ru": "Обучение, простые протезы",
+            "uz": "O‘qitish, oddiy protezlar"
+          }
+        ],
+        [
+          {
+            "en": "Semi-adjustable",
+            "ru": "Полурегулируемый",
+            "uz": "Yarim sozlanadigan"
+          },
+          {
+            "en": "Adjustable condylar guidance and Bennett angle",
+            "ru": "Регулируемые суставной путь и угол Беннетта",
+            "uz": "Sozlanadigan bo‘g‘im yo‘li va Bennett burchagi"
+          },
+          {
+            "en": "Most fixed and removable work",
+            "ru": "Большинство несъёмных и съёмных работ",
+            "uz": "Ko‘pchilik olinmaydigan va olinadigan ishlar"
+          }
+        ],
+        [
+          {
+            "en": "Fully adjustable",
+            "ru": "Полностью регулируемый",
+            "uz": "To‘liq sozlanadigan"
+          },
+          {
+            "en": "Individual movement paths",
+            "ru": "Индивидуальные траектории движений",
+            "uz": "Individual harakat yo‘llari"
+          },
+          {
+            "en": "Complex full-mouth rehabilitation",
+            "ru": "Сложная реабилитация всего зубного ряда",
+            "uz": "Butun tish qatorini murakkab tiklash"
+          }
+        ]
+      ],
+      "note": {
+        "en": "Explain that a semi-adjustable articulator is the usual choice for most crown and denture work.",
+        "ru": "Поясните, что полурегулируемый артикулятор — обычный выбор для большинства коронок и протезов.",
+        "uz": "Ko‘pchilik koronka va protez ishlarida yarim sozlanadigan artikulyator odatiy tanlov ekanini tushuntiring."
+      }
+    },
+    {
+      "layout": "bullets",
+      "title": {
+        "en": "Vertical dimension",
+        "ru": "Высота нижнего отдела лица",
+        "uz": "Yuzning pastki qismi balandligi"
+      },
+      "bullets": [
+        {
+          "en": "Vertical dimension of occlusion (VDO): height with teeth in contact",
+          "ru": "Окклюзионная высота: высота при сомкнутых зубах",
+          "uz": "Okklyuzion balandlik: tishlar jipslashgandagi balandlik"
+        },
+        {
+          "en": "Vertical dimension at rest: mandible in physiological rest",
+          "ru": "Высота покоя: нижняя челюсть в физиологическом покое",
+          "uz": "Tinch holat balandligi: pastki jag‘ fiziologik tinch holatda"
+        },
+        {
+          "en": "Interocclusal rest space is commonly 2–4 mm",
+          "ru": "Межокклюзионное расстояние обычно 2–4 мм",
+          "uz": "Okklyuziyalararo tinch masofa odatda 2–4 mm"
+        }
+      ]
+    },
+    {
+      "layout": "summary",
+      "title": {
+        "en": "Summary",
+        "ru": "Итоги",
+        "uz": "Xulosa"
+      },
+      "bullets": [
+        {
+          "en": "CR is joint-based; ICP is tooth-based",
+          "ru": "ЦС определяют суставы, ICP — зубы",
+          "uz": "MN bo‘g‘imga, ICP tishlarga asoslangan"
+        },
+        {
+          "en": "Canine guidance suits most natural dentitions",
+          "ru": "Клыковое ведение подходит большинству естественных зубных рядов",
+          "uz": "Qoziq tish yo‘naltiruvchiligi ko‘pchilik tabiiy tish qatorlariga mos"
+        },
+        {
+          "en": "Complete dentures use balanced or lingualized schemes",
+          "ru": "В полных протезах применяют сбалансированную или лингвализированную схему",
+          "uz": "To‘liq protezlarda muvozanatlashgan yoki lingvallashgan sxema qo‘llanadi"
+        },
+        {
+          "en": "Facebow and records transfer the patient to the articulator",
+          "ru": "Лицевая дуга и регистраты переносят данные пациента в артикулятор",
+          "uz": "Yuz yoyi va qaydlar bemor ma’lumotlarini artikulyatorga ko‘chiradi"
+        }
+      ]
+    }
+  ],
+  "oral": [
+    {
+      "q": {
+        "en": "Define centric relation and explain when it is used as a reference position.",
+        "ru": "Дайте определение ЦС и объясните, когда его используют как референтное положение.",
+        "uz": "Markaziy nisbatni ta’riflang va u qachon tayanch holat sifatida qo‘llanishini tushuntiring."
+      },
+      "plan": [
+        {
+          "en": "Condyles anterior-superior against the eminences",
+          "ru": "Мыщелки в передне-верхнем положении у бугорков",
+          "uz": "Bo‘g‘im boshchalari do‘mboqqa nisbatan oldingi-yuqori holatda"
+        },
+        {
+          "en": "Independent of tooth contact and reproducible",
+          "ru": "Не зависит от контакта зубов, воспроизводимо",
+          "uz": "Tishlar kontaktiga bog‘liq emas, takrorlanadi"
+        },
+        {
+          "en": "Used in edentulous patients and when ICP is changed",
+          "ru": "Применяется при полной потере зубов и изменении ICP",
+          "uz": "Tishsiz bemorlarda va ICP o‘zgartirilganda qo‘llanadi"
+        }
+      ]
+    },
+    {
+      "q": {
+        "en": "Compare canine guidance and group function.",
+        "ru": "Сравните клыковое ведение и групповую функцию.",
+        "uz": "Qoziq tish yo‘naltiruvchiligi va guruhli funksiyani solishtiring."
+      },
+      "plan": [
+        {
+          "en": "Canine alone discludes posterior teeth in lateral movement",
+          "ru": "При боковом движении только клык разобщает боковые зубы",
+          "uz": "Yon harakatda faqat qoziq tish yon tishlarni ajratadi"
+        },
+        {
+          "en": "Group function shares load among working-side teeth",
+          "ru": "При групповой функции нагрузка распределяется на зубы рабочей стороны",
+          "uz": "Guruhli funksiyada yuk ishchi tomon tishlariga taqsimlanadi"
+        },
+        {
+          "en": "Choice depends on canine support and existing pattern",
+          "ru": "Выбор зависит от опоры клыка и имеющейся схемы",
+          "uz": "Tanlov qoziq tish tayanchi va mavjud sxemaga bog‘liq"
+        },
+        {
+          "en": "Non-working contacts are avoided in both",
+          "ru": "В обоих случаях избегают балансирующих контактов",
+          "uz": "Ikkalasida ham balans tomon kontaktlaridan qochiladi"
+        }
+      ]
+    },
+    {
+      "q": {
+        "en": "Why is a facebow record taken?",
+        "ru": "Зачем проводят регистрацию лицевой дугой?",
+        "uz": "Yuz yoyi bilan qayd nima uchun olinadi?"
+      },
+      "plan": [
+        {
+          "en": "Records the maxilla relative to the hinge axis",
+          "ru": "Фиксирует положение верхней челюсти относительно шарнирной оси",
+          "uz": "Yuqori jag‘ning sharnir o‘qiga nisbatan holatini qayd etadi"
+        },
+        {
+          "en": "Allows correct arc of closure on the articulator",
+          "ru": "Обеспечивает правильную дугу закрывания в артикуляторе",
+          "uz": "Artikulyatorda to‘g‘ri yopilish yoyini ta’minlaydi"
+        },
+        {
+          "en": "Important when vertical dimension is changed",
+          "ru": "Важно при изменении окклюзионной высоты",
+          "uz": "Okklyuzion balandlik o‘zgartirilganda muhim"
+        }
+      ]
+    },
+    {
+      "q": {
+        "en": "Which occlusal schemes are used for complete dentures and why?",
+        "ru": "Какие окклюзионные схемы применяют в полных протезах и почему?",
+        "uz": "To‘liq protezlarda qaysi okklyuzion sxemalar qo‘llanadi va nima uchun?"
+      },
+      "plan": [
+        {
+          "en": "Bilateral balanced occlusion stabilises the bases",
+          "ru": "Двусторонняя сбалансированная окклюзия стабилизирует базисы",
+          "uz": "Ikki tomonlama muvozanatlashgan okklyuziya bazislarni barqarorlashtiradi"
+        },
+        {
+          "en": "Lingualized occlusion for resorbed ridges",
+          "ru": "Лингвализированная окклюзия при атрофии гребней",
+          "uz": "So‘rilgan qirralarda lingvallashgan okklyuziya"
+        },
+        {
+          "en": "Canine guidance would tip the dentures",
+          "ru": "Клыковое ведение опрокидывало бы протезы",
+          "uz": "Qoziq tish yo‘naltiruvchiligi protezlarni ag‘darib yuboradi"
+        }
+      ]
+    }
+  ],
+  "test": [
+    {
+      "q": {
+        "en": "Which statement best describes centric relation?",
+        "ru": "Какое утверждение лучше всего описывает центральное соотношение?",
+        "uz": "Qaysi fikr markaziy nisbatni eng to‘g‘ri tavsiflaydi?"
+      },
+      "options": [
+        {
+          "en": "A position of maximal cusp–fossa contact",
+          "ru": "Положение максимального контакта бугров и ямок",
+          "uz": "Do‘mboq va chuqurchalar eng ko‘p kontakt holati"
+        },
+        {
+          "en": "A joint-based position independent of tooth contact",
+          "ru": "Положение, определяемое суставами, без контакта зубов",
+          "uz": "Tishlar kontaktiga bog‘liq bo‘lmagan bo‘g‘imga asoslangan holat"
+        },
+        {
+          "en": "The position of the mandible at physiological rest",
+          "ru": "Положение нижней челюсти в физиологическом покое",
+          "uz": "Pastki jag‘ning fiziologik tinch holati"
+        },
+        {
+          "en": "The most protrusive position of the mandible",
+          "ru": "Крайнее переднее положение нижней челюсти",
+          "uz": "Pastki jag‘ning eng oldingi holati"
+        }
+      ],
+      "correct": 1,
+      "explain": {
+        "en": "CR is defined by condylar position and does not depend on teeth, which makes it reproducible in edentulous patients.",
+        "ru": "ЦС определяется положением мыщелков и не зависит от зубов, поэтому воспроизводимо у беззубых пациентов.",
+        "uz": "MN bo‘g‘im boshchalari holati bilan belgilanadi va tishlarga bog‘liq emas, shuning uchun tishsiz bemorlarda ham takrorlanadi."
+      }
+    },
+    {
+      "q": {
+        "en": "The intercuspal position is mainly determined by:",
+        "ru": "Положение максимального межбугоркового контакта определяется в основном:",
+        "uz": "Maksimal do‘mboqlararo kontakt holati asosan nima bilan belgilanadi?"
+      },
+      "options": [
+        {
+          "en": "The occlusal anatomy of the teeth",
+          "ru": "Окклюзионной анатомией зубов",
+          "uz": "Tishlarning okklyuzion anatomiyasi"
+        },
+        {
+          "en": "The shape of the articular disc",
+          "ru": "Формой суставного диска",
+          "uz": "Bo‘g‘im diskining shakli"
+        },
+        {
+          "en": "The tone of the lateral pterygoid",
+          "ru": "Тонусом латеральной крыловидной мышцы",
+          "uz": "Lateral qanotsimon mushak tonusi"
+        },
+        {
+          "en": "The position of the hyoid bone",
+          "ru": "Положением подъязычной кости",
+          "uz": "Til osti suyagining holati"
+        }
+      ],
+      "correct": 0,
+      "explain": {
+        "en": "ICP is the position of complete intercuspation, so it is dictated by the teeth rather than the joints.",
+        "ru": "ICP — положение полного смыкания зубов, поэтому его задают зубы, а не суставы.",
+        "uz": "ICP tishlarning to‘liq jipslashuv holati bo‘lib, uni bo‘g‘imlar emas, tishlar belgilaydi."
+      }
+    },
+    {
+      "q": {
+        "en": "In canine-guided occlusion, during a right lateral movement the posterior teeth:",
+        "ru": "При клыковом ведении во время бокового движения вправо боковые зубы:",
+        "uz": "Qoziq tish yo‘naltiruvchiligida o‘ngga yon harakat paytida yon tishlar:"
+      },
+      "options": [
+        {
+          "en": "Contact on the left side only",
+          "ru": "Контактируют только слева",
+          "uz": "Faqat chap tomonda tegadi"
+        },
+        {
+          "en": "Contact on both sides evenly",
+          "ru": "Равномерно контактируют с обеих сторон",
+          "uz": "Ikkala tomonda bir tekis tegadi"
+        },
+        {
+          "en": "Are separated by the right canines",
+          "ru": "Разобщаются правыми клыками",
+          "uz": "O‘ng qoziq tishlar tomonidan ajratiladi"
+        },
+        {
+          "en": "Carry the main lateral load",
+          "ru": "Несут основную боковую нагрузку",
+          "uz": "Asosiy yon yukni ko‘taradi"
+        }
+      ],
+      "correct": 2,
+      "explain": {
+        "en": "The working-side canines guide the movement and disclude all posterior teeth on both sides.",
+        "ru": "Клыки рабочей стороны направляют движение и разобщают все боковые зубы с обеих сторон.",
+        "uz": "Ishchi tomon qoziq tishlari harakatni yo‘naltiradi va ikkala tomondagi barcha yon tishlarni ajratadi."
+      }
+    },
+    {
+      "q": {
+        "en": "Bilateral balanced occlusion is mainly indicated for:",
+        "ru": "Двусторонняя сбалансированная окклюзия показана в основном для:",
+        "uz": "Ikki tomonlama muvozanatlashgan okklyuziya asosan qayerda ko‘rsatma hisoblanadi?"
+      },
+      "options": [
+        {
+          "en": "Single metal-ceramic crowns",
+          "ru": "Одиночных металлокерамических коронок",
+          "uz": "Yakka metallokeramik koronkalarda"
+        },
+        {
+          "en": "Anterior resin-bonded bridges",
+          "ru": "Передних адгезивных мостовидных протезов",
+          "uz": "Old adgeziv ko‘prik protezlarda"
+        },
+        {
+          "en": "Orthodontic retainers",
+          "ru": "Ортодонтических ретейнеров",
+          "uz": "Ortodontik retaynerlarda"
+        },
+        {
+          "en": "Conventional complete dentures",
+          "ru": "Традиционных полных съёмных протезов",
+          "uz": "An’anaviy to‘liq olinadigan protezlarda"
+        }
+      ],
+      "correct": 3,
+      "explain": {
+        "en": "Simultaneous contacts on both sides during excursions help keep complete denture bases stable.",
+        "ru": "Одновременные контакты с обеих сторон при движениях помогают удерживать базисы полных протезов.",
+        "uz": "Harakatlar paytida ikkala tomondagi bir vaqtli kontaktlar to‘liq protez bazislarini barqaror ushlab turadi."
+      }
+    },
+    {
+      "q": {
+        "en": "The interocclusal rest space is commonly about:",
+        "ru": "Межокклюзионное расстояние в покое обычно составляет около:",
+        "uz": "Okklyuziyalararo tinch masofa odatda qancha bo‘ladi?"
+      },
+      "options": [
+        {
+          "en": "0.5–1 mm",
+          "ru": "0,5–1 мм",
+          "uz": "0,5–1 mm"
+        },
+        {
+          "en": "2–4 mm",
+          "ru": "2–4 мм",
+          "uz": "2–4 mm"
+        },
+        {
+          "en": "6–8 mm",
+          "ru": "6–8 мм",
+          "uz": "6–8 mm"
+        },
+        {
+          "en": "10–12 mm",
+          "ru": "10–12 мм",
+          "uz": "10–12 mm"
+        }
+      ],
+      "correct": 1,
+      "explain": {
+        "en": "The usual freeway space is about 2–4 mm, though it varies between individuals.",
+        "ru": "Обычно межокклюзионное расстояние около 2–4 мм, но оно индивидуально.",
+        "uz": "Odatda tinch masofa 2–4 mm atrofida bo‘ladi, lekin u individual farq qiladi."
+      }
+    },
+    {
+      "q": {
+        "en": "The main purpose of a facebow record is to:",
+        "ru": "Основная цель регистрации лицевой дугой:",
+        "uz": "Yuz yoyi bilan qayd olishning asosiy maqsadi:"
+      },
+      "options": [
+        {
+          "en": "Record the vertical dimension of occlusion",
+          "ru": "Зафиксировать окклюзионную высоту",
+          "uz": "Okklyuzion balandlikni qayd etish"
+        },
+        {
+          "en": "Select the shade of artificial teeth",
+          "ru": "Подобрать цвет искусственных зубов",
+          "uz": "Sun’iy tishlar rangini tanlash"
+        },
+        {
+          "en": "Relate the maxillary cast to the hinge axis",
+          "ru": "Соотнести верхнюю модель с шарнирной осью",
+          "uz": "Yuqori modelni sharnir o‘qiga bog‘lash"
+        },
+        {
+          "en": "Measure the Bennett angle directly",
+          "ru": "Непосредственно измерить угол Беннетта",
+          "uz": "Bennett burchagini bevosita o‘lchash"
+        }
+      ],
+      "correct": 2,
+      "explain": {
+        "en": "The facebow transfers the spatial relationship of the maxilla to the condylar hinge axis onto the articulator.",
+        "ru": "Лицевая дуга переносит пространственное положение верхней челюсти относительно шарнирной оси в артикулятор.",
+        "uz": "Yuz yoyi yuqori jag‘ning sharnir o‘qiga nisbatan fazoviy holatini artikulyatorga ko‘chiradi."
+      }
+    },
+    {
+      "q": {
+        "en": "A patient's canine is periodontally weakened. Which lateral scheme is most reasonable for a new posterior bridge?",
+        "ru": "У пациента клык ослаблен пародонтологически. Какую схему боковых движений разумнее выбрать для нового бокового мостовидного протеза?",
+        "uz": "Bemorning qoziq tishi parodont jihatidan zaiflashgan. Yangi yon ko‘prik protez uchun qaysi yon harakat sxemasi maqsadga muvofiq?"
+      },
+      "options": [
+        {
+          "en": "Group function on the working side",
+          "ru": "Групповую функцию на рабочей стороне",
+          "uz": "Ishchi tomonda guruhli funksiya"
+        },
+        {
+          "en": "Contacts on the non-working side",
+          "ru": "Контакты на балансирующей стороне",
+          "uz": "Balans tomonida kontaktlar"
+        },
+        {
+          "en": "Steep isolated canine guidance",
+          "ru": "Крутое изолированное клыковое ведение",
+          "uz": "Tik alohida qoziq tish yo‘naltiruvchiligi"
+        },
+        {
+          "en": "No contacts in intercuspal position",
+          "ru": "Отсутствие контактов в положении смыкания",
+          "uz": "Jipslashuv holatida kontaktlarning yo‘qligi"
+        }
+      ],
+      "correct": 0,
+      "explain": {
+        "en": "Group function shares lateral forces among several working-side teeth and spares a weak canine.",
+        "ru": "Групповая функция распределяет боковые силы на несколько зубов рабочей стороны и щадит слабый клык.",
+        "uz": "Guruhli funksiya yon kuchlarni ishchi tomonning bir necha tishiga taqsimlaydi va zaif qoziq tishni asraydi."
+      }
+    },
+    {
+      "q": {
+        "en": "Which articulator allows adjustment of condylar guidance and the Bennett angle and is used for most routine work?",
+        "ru": "Какой артикулятор позволяет настраивать суставной путь и угол Беннетта и используется в большинстве рутинных работ?",
+        "uz": "Qaysi artikulyator bo‘g‘im yo‘li va Bennett burchagini sozlash imkonini beradi va ko‘pchilik odatiy ishlarda qo‘llanadi?"
+      },
+      "options": [
+        {
+          "en": "Simple hinge articulator",
+          "ru": "Простой шарнирный окклюдатор",
+          "uz": "Oddiy sharnirli okklyudator"
+        },
+        {
+          "en": "Average-value articulator",
+          "ru": "Среднеанатомический артикулятор",
+          "uz": "O‘rtacha anatomik artikulyator"
+        },
+        {
+          "en": "Fully adjustable articulator",
+          "ru": "Полностью регулируемый артикулятор",
+          "uz": "To‘liq sozlanadigan artikulyator"
+        },
+        {
+          "en": "Semi-adjustable articulator",
+          "ru": "Полурегулируемый артикулятор",
+          "uz": "Yarim sozlanadigan artikulyator"
+        }
+      ],
+      "correct": 3,
+      "explain": {
+        "en": "Semi-adjustable articulators accept facebow and check-bite records and suit most crown, bridge and denture work.",
+        "ru": "Полурегулируемые артикуляторы работают с лицевой дугой и регистратами и подходят для большинства коронок, мостов и протезов.",
+        "uz": "Yarim sozlanadigan artikulyatorlar yuz yoyi va qaydlar bilan ishlaydi va ko‘pchilik koronka, ko‘prik va protezlar uchun mos."
+      }
+    },
+    {
+      "q": {
+        "en": "Which cusps are the supporting (centric holding) cusps in a normal Class I occlusion?",
+        "ru": "Какие бугры являются опорными при нормальной окклюзии I класса?",
+        "uz": "Normal I sinf okklyuziyada qaysi do‘mboqlar tayanch hisoblanadi?"
+      },
+      "options": [
+        {
+          "en": "Maxillary buccal and mandibular lingual",
+          "ru": "Щёчные верхних и язычные нижних",
+          "uz": "Yuqori lunj va pastki til do‘mboqlari"
+        },
+        {
+          "en": "All buccal cusps in both arches",
+          "ru": "Все щёчные бугры обеих челюстей",
+          "uz": "Ikkala jag‘dagi barcha lunj do‘mboqlari"
+        },
+        {
+          "en": "Maxillary palatal and mandibular buccal",
+          "ru": "Нёбные верхних и щёчные нижних",
+          "uz": "Yuqori tanglay va pastki lunj do‘mboqlari"
+        },
+        {
+          "en": "All lingual cusps in both arches",
+          "ru": "Все язычные бугры обеих челюстей",
+          "uz": "Ikkala jag‘dagi barcha til do‘mboqlari"
+        }
+      ],
+      "correct": 2,
+      "explain": {
+        "en": "Maxillary palatal and mandibular buccal cusps occlude into opposing fossae and marginal ridges and hold the vertical dimension.",
+        "ru": "Нёбные бугры верхних и щёчные бугры нижних зубов входят в ямки и краевые гребни антагонистов и удерживают высоту.",
+        "uz": "Yuqori tanglay va pastki lunj do‘mboqlari antagonist chuqurcha va chekka qirralariga tushib, balandlikni ushlab turadi."
+      }
+    },
+    {
+      "q": {
+        "en": "A crown on a lower molar creates a contact on the non-working side during lateral movement. What is the main concern?",
+        "ru": "Коронка на нижнем моляре даёт контакт на балансирующей стороне при боковом движении. В чём основная проблема?",
+        "uz": "Pastki katta oziq tishdagi koronka yon harakatda balans tomonida kontakt hosil qiladi. Asosiy xavf nimada?"
+      },
+      "options": [
+        {
+          "en": "Improved chewing efficiency",
+          "ru": "Повышение эффективности жевания",
+          "uz": "Chaynash samaradorligining oshishi"
+        },
+        {
+          "en": "Harmful lateral loading and interference",
+          "ru": "Вредная боковая нагрузка и интерференция",
+          "uz": "Zararli yon yuklanish va to‘siq"
+        },
+        {
+          "en": "Better protection of the canine",
+          "ru": "Лучшая защита клыка",
+          "uz": "Qoziq tishning yaxshiroq himoyasi"
+        },
+        {
+          "en": "Reduced freeway space",
+          "ru": "Уменьшение межокклюзионного расстояния",
+          "uz": "Tinch masofaning kamayishi"
+        }
+      ],
+      "correct": 1,
+      "explain": {
+        "en": "Non-working side contacts on natural teeth are interferences that load teeth obliquely and should be adjusted.",
+        "ru": "Балансирующие контакты на естественных зубах являются интерференциями, дают косую нагрузку и требуют коррекции.",
+        "uz": "Tabiiy tishlarda balans tomon kontaktlari to‘siq bo‘lib, tishlarni qiya yuklaydi va tuzatilishi kerak."
+      }
+    }
+  ]
+}

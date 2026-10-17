@@ -1,0 +1,1018 @@
+{
+  "id": "ped-02",
+  "subject": "ped",
+  "n": 2,
+  "week": 2,
+  "type": "practical",
+  "hours": 2,
+  "title": {
+    "en": "Child behaviour management",
+    "ru": "Управление поведением ребёнка на приёме",
+    "uz": "Bolaning xulq-atvorini boshqarish"
+  },
+  "goals": [
+    {
+      "en": "Rate a child's behaviour on the Frankl scale",
+      "ru": "Оценивать поведение ребёнка по шкале Франкла",
+      "uz": "Bolaning xulqini Frankl shkalasi bo‘yicha baholay olish"
+    },
+    {
+      "en": "Use tell-show-do and positive reinforcement",
+      "ru": "Применять методику «расскажи – покажи – сделай» и положительное подкрепление",
+      "uz": "«Ayt – ko‘rsat – bajar» usuli va ijobiy rag‘batlantirishni qo‘llay olish"
+    },
+    {
+      "en": "Communicate with parents and obtain consent",
+      "ru": "Грамотно общаться с родителями и получать согласие",
+      "uz": "Ota-onalar bilan to‘g‘ri muloqot qilish va rozilik olish"
+    },
+    {
+      "en": "Recognise when pharmacological methods are needed",
+      "ru": "Понимать, когда нужны фармакологические методы",
+      "uz": "Qachon farmakologik usullar kerakligini bilish"
+    }
+  ],
+  "links": [],
+  "sources": [
+    "American Academy of Pediatric Dentistry. Behavior guidance for the pediatric dental patient. The Reference Manual of Pediatric Dentistry, 2023",
+    "Dean JA. McDonald and Avery's Dentistry for the Child and Adolescent, 11th ed., 2021",
+    "Welbury R, Duggal MS, Hosey MT. Paediatric Dentistry, 5th ed., 2018"
+  ],
+  "slides": [
+    {
+      "layout": "title",
+      "title": {
+        "en": "Working with the child patient",
+        "ru": "Работа с ребёнком на приёме",
+        "uz": "Bemor bola bilan ishlash"
+      },
+      "subtitle": {
+        "en": "Behaviour management and communication with parents",
+        "ru": "Управление поведением и общение с родителями",
+        "uz": "Xulq-atvorni boshqarish va ota-onalar bilan muloqot"
+      }
+    },
+    {
+      "layout": "table",
+      "title": {
+        "en": "Frankl behaviour rating scale",
+        "ru": "Шкала Франкла",
+        "uz": "Frankl xulq-atvor shkalasi"
+      },
+      "head": [
+        {
+          "en": "Rating",
+          "ru": "Оценка",
+          "uz": "Baho"
+        },
+        {
+          "en": "Behaviour",
+          "ru": "Поведение",
+          "uz": "Xulq-atvor"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "en": "1 – definitely negative",
+            "ru": "1 – резко отрицательное",
+            "uz": "1 – qat’iy salbiy"
+          },
+          {
+            "en": "Refuses treatment, cries forcefully",
+            "ru": "Отказывается от лечения, сильно плачет",
+            "uz": "Davolashdan bosh tortadi, qattiq yig‘laydi"
+          }
+        ],
+        [
+          {
+            "en": "2 – negative",
+            "ru": "2 – отрицательное",
+            "uz": "2 – salbiy"
+          },
+          {
+            "en": "Reluctant, some uncooperative behaviour",
+            "ru": "Неохотно подчиняется, частично сопротивляется",
+            "uz": "Istamay ko‘nadi, qisman qarshilik qiladi"
+          }
+        ],
+        [
+          {
+            "en": "3 – positive",
+            "ru": "3 – положительное",
+            "uz": "3 – ijobiy"
+          },
+          {
+            "en": "Cautious but follows instructions",
+            "ru": "Насторожен, но выполняет указания",
+            "uz": "Ehtiyotkor, lekin ko‘rsatmalarni bajaradi"
+          }
+        ],
+        [
+          {
+            "en": "4 – definitely positive",
+            "ru": "4 – отчётливо положительное",
+            "uz": "4 – qat’iy ijobiy"
+          },
+          {
+            "en": "Good rapport, shows interest",
+            "ru": "Хороший контакт, проявляет интерес",
+            "uz": "Yaxshi aloqada, qiziqish bildiradi"
+          }
+        ]
+      ],
+      "note": {
+        "en": "Stress that the rating is recorded at every visit; it guides planning for the next one.",
+        "ru": "Подчеркните, что оценку нужно записывать в карту на каждом приёме: это помогает планировать следующий визит.",
+        "uz": "Har bir qabulda bahoni kartaga yozish kerakligini ta’kidlang: bu keyingi rejani tanlashga yordam beradi."
+      }
+    },
+    {
+      "layout": "compare",
+      "title": {
+        "en": "Approach by age",
+        "ru": "Подход в зависимости от возраста",
+        "uz": "Yoshga qarab yondashuv"
+      },
+      "columns": [
+        {
+          "head": {
+            "en": "Under 3 years",
+            "ru": "До 3 лет",
+            "uz": "3 yoshgacha"
+          },
+          "items": [
+            {
+              "en": "Pre-cooperative stage",
+              "ru": "Ещё не готов к сотрудничеству",
+              "uz": "Muloqotga hali tayyor emas"
+            },
+            {
+              "en": "Knee-to-knee examination",
+              "ru": "Осмотр на коленях у родителя",
+              "uz": "Ko‘rik ota-onaning tizzasida"
+            },
+            {
+              "en": "Short, calm procedures",
+              "ru": "Короткие и спокойные процедуры",
+              "uz": "Qisqa va tinch muolajalar"
+            }
+          ]
+        },
+        {
+          "head": {
+            "en": "3–6 years",
+            "ru": "3–6 лет",
+            "uz": "3–6 yosh"
+          },
+          "items": [
+            {
+              "en": "Fears the unknown",
+              "ru": "Боится неизвестного",
+              "uz": "Noma’lum narsadan qo‘rqadi"
+            },
+            {
+              "en": "Simple words and play",
+              "ru": "Простые слова и игра",
+              "uz": "Oddiy so‘zlar va o‘yin"
+            },
+            {
+              "en": "Tell-show-do works very well",
+              "ru": "«Расскажи – покажи – сделай» очень эффективна",
+              "uz": "«Ayt – ko‘rsat – bajar» juda samarali"
+            }
+          ]
+        },
+        {
+          "head": {
+            "en": "School age",
+            "ru": "Школьный возраст",
+            "uz": "Maktab yoshi"
+          },
+          "items": [
+            {
+              "en": "Can follow reasoning",
+              "ru": "Понимает объяснения",
+              "uz": "Tushuntirishni qabul qiladi"
+            },
+            {
+              "en": "Wants a sense of control",
+              "ru": "Хочет чувствовать контроль",
+              "uz": "Nazoratni his qilishni xohlaydi"
+            },
+            {
+              "en": "Agree a stop signal",
+              "ru": "Договориться о сигнале «стоп»",
+              "uz": "«To‘xta» ishorasini kelishib olish"
+            }
+          ]
+        }
+      ],
+      "note": {
+        "en": "Ask students for one concrete phrase or technique for each age group.",
+        "ru": "Попросите студентов привести для каждой возрастной группы одну конкретную фразу или приём.",
+        "uz": "Talabalardan har bir yosh guruhi uchun bitta aniq ibora yoki usulni misol qilib aytishni so‘rang."
+      }
+    },
+    {
+      "layout": "flow",
+      "title": {
+        "en": "Tell-show-do",
+        "ru": "«Расскажи – покажи – сделай»",
+        "uz": "«Ayt – ko‘rsat – bajar»"
+      },
+      "steps": [
+        {
+          "label": {
+            "en": "Tell",
+            "ru": "Расскажи",
+            "uz": "Ayt"
+          },
+          "detail": {
+            "en": "Explain in age-appropriate words",
+            "ru": "Объяснить словами, понятными по возрасту",
+            "uz": "Yoshga mos so‘zlar bilan tushuntirish"
+          }
+        },
+        {
+          "label": {
+            "en": "Show",
+            "ru": "Покажи",
+            "uz": "Ko‘rsat"
+          },
+          "detail": {
+            "en": "Demonstrate sound, smell and feel on a finger",
+            "ru": "Показать звук, запах и ощущение на пальце",
+            "uz": "Ovoz, hid va sezgini barmoqda namoyish qilish"
+          }
+        },
+        {
+          "label": {
+            "en": "Do",
+            "ru": "Сделай",
+            "uz": "Bajar"
+          },
+          "detail": {
+            "en": "Carry out exactly as described",
+            "ru": "Выполнить точно так, как описано",
+            "uz": "Aytilganidek, chetga chiqmasdan bajarish"
+          }
+        },
+        {
+          "label": {
+            "en": "Praise",
+            "ru": "Похвали",
+            "uz": "Maqta"
+          },
+          "detail": {
+            "en": "Praise the specific behaviour",
+            "ru": "Похвалить конкретное поведение",
+            "uz": "Aniq xulqni maqtash"
+          }
+        }
+      ],
+      "note": {
+        "en": "Have students practise in pairs, introducing a handpiece or polishing brush with this method.",
+        "ru": "Пусть студенты в парах представят друг другу наконечник или полировочную щётку по этой методике.",
+        "uz": "Talabalar juft bo‘lib bir-biriga uchlik (nakonechnik) yoki pardozlash cho‘tkasini shu usulda tanishtirib ko‘rsin."
+      }
+    },
+    {
+      "layout": "key",
+      "title": {
+        "en": "Positive reinforcement",
+        "ru": "Положительное подкрепление",
+        "uz": "Ijobiy rag‘batlantirish"
+      },
+      "term": {
+        "en": "Descriptive praise",
+        "ru": "Описательная похвала",
+        "uz": "Tavsifiy maqtov"
+      },
+      "definition": {
+        "en": "Immediate praise that names the wanted behaviour: \"Thank you for keeping your mouth wide open.\" It works better than a general \"well done\"; a small reward is given at the end of the visit.",
+        "ru": "Немедленная похвала с точным называнием нужного поведения: «Спасибо, что держишь рот широко открытым». Эффективнее общего «молодец»; небольшой подарок дают в конце приёма.",
+        "uz": "Kerakli xulqni darhol va aniq nomlab maqtash: «Og‘zingni katta ochib turganing uchun rahmat». Umumiy «barakalla» so‘zidan samaraliroq; kichik sovg‘a qabul oxirida beriladi."
+      }
+    },
+    {
+      "layout": "tree",
+      "title": {
+        "en": "Behaviour guidance techniques",
+        "ru": "Методы управления поведением",
+        "uz": "Xulqni boshqarish usullari"
+      },
+      "root": {
+        "en": "Techniques",
+        "ru": "Методы",
+        "uz": "Usullar"
+      },
+      "children": [
+        {
+          "label": {
+            "en": "Communicative",
+            "ru": "Коммуникативные",
+            "uz": "Muloqot usullari"
+          },
+          "items": [
+            {
+              "en": "Tell-show-do",
+              "ru": "Расскажи – покажи – сделай",
+              "uz": "Ayt – ko‘rsat – bajar"
+            },
+            {
+              "en": "Voice control",
+              "ru": "Контроль голоса",
+              "uz": "Ovoz nazorati"
+            },
+            {
+              "en": "Non-verbal communication",
+              "ru": "Невербальное общение",
+              "uz": "Noverbal muloqot"
+            },
+            {
+              "en": "Distraction",
+              "ru": "Отвлечение",
+              "uz": "Chalg‘itish"
+            }
+          ]
+        },
+        {
+          "label": {
+            "en": "Shaping behaviour",
+            "ru": "Формирование поведения",
+            "uz": "Xulqni shakllantirish"
+          },
+          "items": [
+            {
+              "en": "Positive reinforcement",
+              "ru": "Положительное подкрепление",
+              "uz": "Ijobiy rag‘batlantirish"
+            },
+            {
+              "en": "Modelling",
+              "ru": "Моделирование",
+              "uz": "Namuna ko‘rsatish"
+            },
+            {
+              "en": "Enhancing control",
+              "ru": "Передача контроля",
+              "uz": "Nazoratni berish"
+            }
+          ]
+        },
+        {
+          "label": {
+            "en": "Parental involvement",
+            "ru": "Участие родителей",
+            "uz": "Ota-onaning ishtiroki"
+          },
+          "items": [
+            {
+              "en": "Presence or absence",
+              "ru": "Присутствие или отсутствие",
+              "uz": "Kabinetda bo‘lish yoki chiqib turish"
+            },
+            {
+              "en": "Preparation at home",
+              "ru": "Подготовка дома",
+              "uz": "Uyda tayyorlash"
+            }
+          ]
+        },
+        {
+          "label": {
+            "en": "Pharmacological",
+            "ru": "Фармакологические",
+            "uz": "Farmakologik"
+          },
+          "items": [
+            {
+              "en": "Nitrous oxide sedation",
+              "ru": "Седация закисью азота",
+              "uz": "Azot oksidi bilan sedatsiya"
+            },
+            {
+              "en": "General anaesthesia",
+              "ru": "Общая анестезия",
+              "uz": "Umumiy anesteziya"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "layout": "cycle",
+      "title": {
+        "en": "The dental fear cycle",
+        "ru": "Порочный круг стоматофобии",
+        "uz": "Stomatologik qo‘rquv halqasi"
+      },
+      "center": {
+        "en": "Fear",
+        "ru": "Страх",
+        "uz": "Qo‘rquv"
+      },
+      "steps": [
+        {
+          "label": {
+            "en": "Fear and anxiety",
+            "ru": "Страх и тревога",
+            "uz": "Qo‘rquv va xavotir"
+          }
+        },
+        {
+          "label": {
+            "en": "Avoiding visits",
+            "ru": "Избегание визитов",
+            "uz": "Tashrifdan qochish"
+          }
+        },
+        {
+          "label": {
+            "en": "Disease gets worse",
+            "ru": "Заболевание прогрессирует",
+            "uz": "Kasallik zo‘rayadi"
+          }
+        },
+        {
+          "label": {
+            "en": "Painful emergency care",
+            "ru": "Болезненное неотложное лечение",
+            "uz": "Og‘riqli shoshilinch davolash"
+          }
+        }
+      ],
+      "note": {
+        "en": "Explain that an early, painless first visit breaks this cycle.",
+        "ru": "Объясните, что этот круг разрывают ранним и безболезненным первым визитом.",
+        "uz": "Bu halqani erta va og‘riqsiz birinchi tashrif bilan uzish mumkinligini tushuntiring."
+      }
+    },
+    {
+      "layout": "bullets",
+      "title": {
+        "en": "Communicating with parents",
+        "ru": "Общение с родителями",
+        "uz": "Ota-onalar bilan muloqot"
+      },
+      "bullets": [
+        {
+          "en": "Explain the plan and techniques in advance",
+          "ru": "Заранее объясните план лечения и методы",
+          "uz": "Davolash rejasi va usullarni oldindan tushuntiring"
+        },
+        {
+          "en": "Obtain informed consent for each technique",
+          "ru": "Получите информированное согласие на каждый метод",
+          "uz": "Har bir usul uchun xabardor rozilik oling"
+        },
+        {
+          "en": "Ask parents to avoid words like \"hurt\" or \"needle\"",
+          "ru": "Попросите дома не говорить «не больно», «укол»",
+          "uz": "Uyda «og‘rimaydi», «igna» kabi so‘zlarni ishlatmaslikni so‘rang"
+        },
+        {
+          "en": "Agree the parent's role in the surgery",
+          "ru": "Определите роль родителя в кабинете",
+          "uz": "Kabinetda ota-onaning vazifasini belgilang"
+        },
+        {
+          "en": "Give diet and hygiene advice",
+          "ru": "Дайте советы по питанию и гигиене",
+          "uz": "Shirinlik va gigiyena bo‘yicha maslahat bering"
+        }
+      ],
+      "note": {
+        "en": "Remind students that consent is obtained for each technique, especially sedation and general anaesthesia.",
+        "ru": "Напомните, что согласие на каждый метод, особенно на седацию и наркоз, получают отдельно.",
+        "uz": "Rozilik har bir usul uchun, ayniqsa sedatsiya va narkoz uchun, alohida olinishini eslating."
+      }
+    },
+    {
+      "layout": "bullets",
+      "title": {
+        "en": "Child-friendly language",
+        "ru": "Слова, понятные ребёнку",
+        "uz": "Bolaga mos so‘zlar"
+      },
+      "bullets": [
+        {
+          "en": "\"Sleepy juice\" instead of injection",
+          "ru": "Вместо шприца – «лекарство, чтобы зуб уснул»",
+          "uz": "Shprits o‘rniga «tishni uxlatadigan dori»"
+        },
+        {
+          "en": "Saliva ejector – \"tooth vacuum\"",
+          "ru": "Слюноотсос – «пылесос для зубов»",
+          "uz": "So‘rg‘ich – «tish changyutgichi»"
+        },
+        {
+          "en": "Bur – \"spinning brush\"",
+          "ru": "Бор – «крутящаяся щёточка»",
+          "uz": "Bor – «aylanuvchi cho‘tkacha»"
+        },
+        {
+          "en": "Avoid frightening words and false promises",
+          "ru": "Избегайте пугающих слов и ложных обещаний",
+          "uz": "Qo‘rqituvchi va yolg‘on va’dalardan saqlaning"
+        }
+      ]
+    },
+    {
+      "layout": "summary",
+      "title": {
+        "en": "Summary",
+        "ru": "Итоги",
+        "uz": "Xulosa"
+      },
+      "bullets": [
+        {
+          "en": "Rate behaviour on the Frankl scale at each visit",
+          "ru": "Оценивайте поведение по шкале Франкла на каждом визите",
+          "uz": "Xulqni har tashrifda Frankl shkalasi bilan baholang"
+        },
+        {
+          "en": "Tell-show-do and descriptive praise are the core tools",
+          "ru": "Основные методы – «расскажи – покажи – сделай» и описательная похвала",
+          "uz": "«Ayt – ko‘rsat – bajar» va tavsifiy maqtov asosiy usullardir"
+        },
+        {
+          "en": "Parents are partners in care",
+          "ru": "Родители – партнёры в лечении",
+          "uz": "Ota-onalar – davolashdagi sherik"
+        },
+        {
+          "en": "Sedation or general anaesthesia when communication is not enough",
+          "ru": "Если общения недостаточно, рассматривают седацию или наркоз",
+          "uz": "Muloqot yetarli bo‘lmasa, sedatsiya yoki narkoz ko‘riladi"
+        }
+      ]
+    }
+  ],
+  "oral": [
+    {
+      "q": {
+        "en": "Explain tell-show-do and give an example.",
+        "ru": "Объясните методику «расскажи – покажи – сделай» и приведите пример.",
+        "uz": "«Ayt – ko‘rsat – bajar» usulini tushuntiring va misol keltiring."
+      },
+      "plan": [
+        {
+          "en": "Three steps: explain, demonstrate, perform",
+          "ru": "Три этапа: объяснение, демонстрация, выполнение",
+          "uz": "Uch bosqich: tushuntirish, namoyish, bajarish"
+        },
+        {
+          "en": "Age-appropriate, non-threatening words",
+          "ru": "Слова по возрасту, без пугающих терминов",
+          "uz": "Yoshga mos, qo‘rqitmaydigan so‘zlar"
+        },
+        {
+          "en": "Do exactly what was described",
+          "ru": "При выполнении не отступать от сказанного",
+          "uz": "Bajarishda aytilgandan chetga chiqmaslik"
+        },
+        {
+          "en": "Finish with descriptive praise",
+          "ru": "В конце – описательная похвала",
+          "uz": "Oxirida tavsifiy maqtov"
+        }
+      ]
+    },
+    {
+      "q": {
+        "en": "Describe the Frankl scale and its practical use.",
+        "ru": "Опишите шкалу Франкла и её практическое значение.",
+        "uz": "Frankl shkalasini ta’riflang va uning amaliy ahamiyatini ayting."
+      },
+      "plan": [
+        {
+          "en": "Four ratings from definitely negative to definitely positive",
+          "ru": "Четыре степени: от резко отрицательного до отчётливо положительного",
+          "uz": "To‘rt daraja: qat’iy salbiydan qat’iy ijobiygacha"
+        },
+        {
+          "en": "Recorded at each visit",
+          "ru": "Записывается в карту на каждом визите",
+          "uz": "Har tashrifda kartaga yoziladi"
+        },
+        {
+          "en": "Guides choice of technique and plan",
+          "ru": "Помогает выбрать метод и план",
+          "uz": "Keyingi usul va rejani tanlashga yordam beradi"
+        }
+      ]
+    },
+    {
+      "q": {
+        "en": "What matters when communicating with parents?",
+        "ru": "На что обращать внимание при общении с родителями?",
+        "uz": "Ota-onalar bilan muloqotda nimalarga e’tibor berish kerak?"
+      },
+      "plan": [
+        {
+          "en": "Explain plan, risks and alternatives",
+          "ru": "Объяснить план, риски и альтернативы",
+          "uz": "Reja, xavf va muqobillarni tushuntirish"
+        },
+        {
+          "en": "Obtain informed consent",
+          "ru": "Получить информированное согласие",
+          "uz": "Xabardor rozilik olish"
+        },
+        {
+          "en": "Prepare the child at home without frightening words",
+          "ru": "Правильная подготовка дома без пугающих слов",
+          "uz": "Uyda to‘g‘ri tayyorlash, qo‘rqituvchi so‘zlardan qochish"
+        },
+        {
+          "en": "Agree their role in the surgery",
+          "ru": "Согласовать роль в кабинете",
+          "uz": "Kabinetdagi rolini kelishib olish"
+        }
+      ]
+    },
+    {
+      "q": {
+        "en": "When are pharmacological methods considered?",
+        "ru": "Когда переходят к фармакологическим методам?",
+        "uz": "Qachon farmakologik usullarga o‘tiladi?"
+      },
+      "plan": [
+        {
+          "en": "When communicative methods fail",
+          "ru": "Если коммуникативные методы не помогли",
+          "uz": "Muloqot usullari natija bermasa"
+        },
+        {
+          "en": "Extensive treatment or a very young child",
+          "ru": "При большом объёме лечения или очень раннем возрасте",
+          "uz": "Davolash hajmi katta yoki bola juda kichik bo‘lsa"
+        },
+        {
+          "en": "Patients with special needs",
+          "ru": "У пациентов с особыми потребностями",
+          "uz": "Maxsus ehtiyojli bemorlarda"
+        },
+        {
+          "en": "Separate consent and preparation for sedation or anaesthesia",
+          "ru": "Отдельное согласие и подготовка к седации и наркозу",
+          "uz": "Sedatsiya va narkoz uchun alohida rozilik va tayyorgarlik"
+        }
+      ]
+    }
+  ],
+  "test": [
+    {
+      "q": {
+        "en": "What happens in the \"show\" step of tell-show-do?",
+        "ru": "Что делают на этапе «покажи» в методике «расскажи – покажи – сделай»?",
+        "uz": "«Ayt – ko‘rsat – bajar» usulida «ko‘rsat» bosqichida nima qilinadi?"
+      },
+      "options": [
+        {
+          "en": "The procedure is started at once",
+          "ru": "Сразу начинают процедуру",
+          "uz": "Muolajani darhol boshlash"
+        },
+        {
+          "en": "The sound and feel of the instrument are shown",
+          "ru": "Демонстрируют звук и ощущение от инструмента",
+          "uz": "Asbobning ovozi va sezgisi namoyish qilinadi"
+        },
+        {
+          "en": "The child is given a reward",
+          "ru": "Ребёнку дают подарок",
+          "uz": "Bolaga sovg‘a beriladi"
+        },
+        {
+          "en": "The parent is asked to leave",
+          "ru": "Родителя просят выйти",
+          "uz": "Ota-ona kabinetdan chiqariladi"
+        }
+      ],
+      "correct": 1,
+      "explain": {
+        "en": "In the show step the child safely experiences the sound, smell and feel of the instrument.",
+        "ru": "На этапе «покажи» ребёнка безопасно знакомят со звуком, запахом и ощущением инструмента.",
+        "uz": "«Ko‘rsat» bosqichida bola asbobning ovozi, hidi va sezgisi bilan xavfsiz tarzda tanishtiriladi."
+      }
+    },
+    {
+      "q": {
+        "en": "What does a Frankl rating of 3 mean?",
+        "ru": "Что означает оценка «3» по шкале Франкла?",
+        "uz": "Frankl shkalasida «3» bahosi nimani anglatadi?"
+      },
+      "options": [
+        {
+          "en": "Definite refusal of treatment",
+          "ru": "Категорический отказ от лечения",
+          "uz": "Davolashdan qat’iy bosh tortish"
+        },
+        {
+          "en": "Reluctance with some resistance",
+          "ru": "Неохотное подчинение, частичное сопротивление",
+          "uz": "Istamay ko‘nish, qisman qarshilik"
+        },
+        {
+          "en": "Excellent rapport and interest",
+          "ru": "Отличный контакт и интерес",
+          "uz": "Juda yaxshi aloqa va qiziqish"
+        },
+        {
+          "en": "Cautious but follows instructions",
+          "ru": "Насторожен, но выполняет указания",
+          "uz": "Ehtiyotkor, ammo ko‘rsatmalarni bajaradi"
+        }
+      ],
+      "correct": 3,
+      "explain": {
+        "en": "Frankl 3 is positive behaviour: the child is cautious but cooperates.",
+        "ru": "Франкл 3 – положительное поведение: ребёнок насторожен, но сотрудничает.",
+        "uz": "Frankl 3 – ijobiy xulq: bola ehtiyotkor bo‘lsa ham hamkorlik qiladi."
+      }
+    },
+    {
+      "q": {
+        "en": "Which form of praise is most effective?",
+        "ru": "Какая похвала считается наиболее эффективной?",
+        "uz": "Qaysi maqtov eng samarali hisoblanadi?"
+      },
+      "options": [
+        {
+          "en": "\"Thank you for keeping your mouth wide open\"",
+          "ru": "«Спасибо, что держишь рот широко открытым»",
+          "uz": "«Og‘zingni katta ochib turganing uchun rahmat»"
+        },
+        {
+          "en": "\"Good boy, well done\"",
+          "ru": "«Молодец, хороший мальчик»",
+          "uz": "«Barakalla, yaxshi bola»"
+        },
+        {
+          "en": "\"You won't cry next time, will you?\"",
+          "ru": "«В следующий раз не будешь плакать?»",
+          "uz": "«Keyingi safar yig‘lamaysan-a?»"
+        },
+        {
+          "en": "\"That didn't hurt at all, did it?\"",
+          "ru": "«Ведь ничего не болело»",
+          "uz": "«Hech narsa og‘rimadi-ku»"
+        }
+      ],
+      "correct": 0,
+      "explain": {
+        "en": "Descriptive praise names the wanted behaviour and reinforces it.",
+        "ru": "Описательная похвала точно называет нужное поведение и закрепляет его.",
+        "uz": "Tavsifiy maqtov kerakli xulqni aniq nomlaydi va uni mustahkamlaydi."
+      }
+    },
+    {
+      "q": {
+        "en": "A 4-year-old on a first visit is anxious. Which technique comes first?",
+        "ru": "Ребёнок 4 лет пришёл впервые и тревожится. Какой метод выбрать в первую очередь?",
+        "uz": "4 yoshli bola birinchi marta kelgan va xavotirda. Qaysi usul birinchi navbatda tanlanadi?"
+      },
+      "options": [
+        {
+          "en": "Treatment under general anaesthesia",
+          "ru": "Лечение под общей анестезией",
+          "uz": "Umumiy anesteziya ostida davolash"
+        },
+        {
+          "en": "Nitrous oxide sedation",
+          "ru": "Седация закисью азота",
+          "uz": "Azot oksidi bilan sedatsiya"
+        },
+        {
+          "en": "Tell-show-do with praise",
+          "ru": "«Расскажи – покажи – сделай» и похвала",
+          "uz": "«Ayt – ko‘rsat – bajar» va maqtov"
+        },
+        {
+          "en": "Postpone care for a year",
+          "ru": "Отложить лечение на год",
+          "uz": "Davolashni bir yilga qoldirish"
+        }
+      ],
+      "correct": 2,
+      "explain": {
+        "en": "Communicative techniques come first; pharmacological methods are for when they are not enough.",
+        "ru": "Сначала применяют коммуникативные методы; фармакологические рассматривают, если их недостаточно.",
+        "uz": "Birinchi navbatda muloqot usullari qo‘llanadi; farmakologik usullar ular yetarli bo‘lmaganda ko‘riladi."
+      }
+    },
+    {
+      "q": {
+        "en": "Which advice to parents on preparing the child at home is correct?",
+        "ru": "Какой совет родителям по подготовке ребёнка дома правильный?",
+        "uz": "Ota-onaga uyda bolani tayyorlash bo‘yicha qaysi maslahat to‘g‘ri?"
+      },
+      "options": [
+        {
+          "en": "Promise there will be no needle",
+          "ru": "Пообещать, что «уколов не будет»",
+          "uz": "«Igna sanchilmaydi» deb ishontirish"
+        },
+        {
+          "en": "Describe the visit simply and calmly",
+          "ru": "Рассказать о визите просто и спокойно",
+          "uz": "Tashrifni oddiy, xotirjam ohangda tushuntirish"
+        },
+        {
+          "en": "Use the dentist as a threat for bad behaviour",
+          "ru": "Пугать врачом за плохое поведение",
+          "uz": "Yomon xulq uchun shifokor bilan qo‘rqitish"
+        },
+        {
+          "en": "Describe their own painful experiences",
+          "ru": "Подробно рассказать о своём болезненном опыте",
+          "uz": "O‘z og‘riqli tajribasini batafsil aytib berish"
+        }
+      ],
+      "correct": 1,
+      "explain": {
+        "en": "A calm, simple explanation reduces anxiety; false promises and threats increase it.",
+        "ru": "Спокойное простое объяснение снижает тревогу, а ложные обещания и угрозы её усиливают.",
+        "uz": "Xotirjam, oddiy tushuntirish xavotirni kamaytiradi; yolg‘on va’da va qo‘rqitish uni kuchaytiradi."
+      }
+    },
+    {
+      "q": {
+        "en": "What does the \"enhancing control\" technique mean?",
+        "ru": "Что означает метод «передачи контроля»?",
+        "uz": "«Nazoratni berish» usuli nimani anglatadi?"
+      },
+      "options": [
+        {
+          "en": "Letting the child hold the instruments",
+          "ru": "Разрешить ребёнку самому держать инструменты",
+          "uz": "Bolaga asboblarni o‘zi ushlashga ruxsat berish"
+        },
+        {
+          "en": "Restraining the child in the chair",
+          "ru": "Фиксация ребёнка в кресле",
+          "uz": "Bolani kreslo bilan mahkamlash"
+        },
+        {
+          "en": "Letting the parent carry out treatment",
+          "ru": "Поручить процедуру родителю",
+          "uz": "Ota-onaga muolajani o‘tkazishni topshirish"
+        },
+        {
+          "en": "Agreeing a signal to stop",
+          "ru": "Договориться о сигнале для остановки",
+          "uz": "To‘xtatish uchun ishorani kelishib olish"
+        }
+      ],
+      "correct": 3,
+      "explain": {
+        "en": "Knowing that a raised hand will pause treatment reduces the child's anxiety.",
+        "ru": "Когда ребёнок знает, что может остановить врача поднятой рукой, тревога снижается.",
+        "uz": "Bola qo‘l ko‘tarib to‘xtatishni so‘rashi mumkinligini bilsa, xavotiri kamayadi."
+      }
+    },
+    {
+      "q": {
+        "en": "Which position suits examining a 2-year-old best?",
+        "ru": "Какое положение удобнее всего для осмотра ребёнка 2 лет?",
+        "uz": "2 yoshli bolani ko‘rikdan o‘tkazishda qaysi holat eng qulay?"
+      },
+      "options": [
+        {
+          "en": "Knee-to-knee with the parent",
+          "ru": "Положение «колени к коленям» с родителем",
+          "uz": "«Tizzama-tizza» holati, ota-ona bilan"
+        },
+        {
+          "en": "Alone in a fully reclined chair",
+          "ru": "Один в полностью откинутом кресле",
+          "uz": "Kreslo to‘liq yotqizilgan holatda yolg‘iz"
+        },
+        {
+          "en": "Standing up",
+          "ru": "Стоя",
+          "uz": "Tik turgan holatda"
+        },
+        {
+          "en": "In the play room without the parent",
+          "ru": "В игровой комнате без родителя",
+          "uz": "Bolalar xonasida, ota-onasiz"
+        }
+      ],
+      "correct": 0,
+      "explain": {
+        "en": "For toddlers the knee-to-knee position is safe and keeps contact with the parent.",
+        "ru": "У маленьких детей положение «колени к коленям» безопасно и сохраняет контакт с родителем.",
+        "uz": "Kichik bolalarda «tizzama-tizza» holati xavfsiz va ota-ona bilan aloqani saqlaydi."
+      }
+    },
+    {
+      "q": {
+        "en": "What is voice control?",
+        "ru": "Что такое контроль голоса?",
+        "uz": "Ovoz nazorati (voice control) nima?"
+      },
+      "options": [
+        {
+          "en": "Shouting at the child",
+          "ru": "Крик на ребёнка",
+          "uz": "Bolaga baqirib buyruq berish"
+        },
+        {
+          "en": "Not talking to the child at all",
+          "ru": "Полный отказ от разговора с ребёнком",
+          "uz": "Bola bilan umuman gaplashmaslik"
+        },
+        {
+          "en": "Deliberately changing voice volume and tone",
+          "ru": "Намеренное изменение громкости и тона голоса",
+          "uz": "Ovoz balandligi va ohangini ataylab o‘zgartirish"
+        },
+        {
+          "en": "Speaking only through the parent",
+          "ru": "Общение только через родителя",
+          "uz": "Faqat ota-ona orqali gaplashish"
+        }
+      ],
+      "correct": 2,
+      "explain": {
+        "en": "Voice control is a controlled change in volume, tone or pace to gain attention; it is not shouting.",
+        "ru": "Контроль голоса – это контролируемое изменение громкости, тона или темпа речи для привлечения внимания, а не крик.",
+        "uz": "Ovoz nazorati diqqatni jalb qilish uchun ovoz balandligi, ohangi yoki tezligini nazorat ostida o‘zgartirishdir; bu baqirish emas."
+      }
+    },
+    {
+      "q": {
+        "en": "A 3-year-old with extensive caries does not respond to communicative techniques. Best option?",
+        "ru": "Ребёнок 3 лет с множественным кариесом не поддаётся коммуникативным методам. Наиболее правильный путь?",
+        "uz": "Ko‘p tishlari kariesli 3 yoshli bola muloqot usullariga ko‘nmayapti. Eng to‘g‘ri yo‘l qaysi?"
+      },
+      "options": [
+        {
+          "en": "Hold the child and treat everything at once",
+          "ru": "Удерживать силой и пролечить всё за визит",
+          "uz": "Kuch bilan ushlab, hammasini bir tashrifda davolash"
+        },
+        {
+          "en": "Decline all treatment",
+          "ru": "Полностью отказаться от лечения",
+          "uz": "Davolashni butunlay rad etish"
+        },
+        {
+          "en": "Give the parents painkillers only",
+          "ru": "Дать родителям только обезболивающее",
+          "uz": "Ota-onaga faqat og‘riq qoldiruvchi berish"
+        },
+        {
+          "en": "Consider treatment under general anaesthesia with consent",
+          "ru": "Рассмотреть лечение под общей анестезией с согласием",
+          "uz": "Rozilik bilan umumiy anesteziya ostida davolashni ko‘rish"
+        }
+      ],
+      "correct": 3,
+      "explain": {
+        "en": "With extensive needs and no cooperation, treatment under general anaesthesia is planned with informed consent.",
+        "ru": "При большом объёме лечения и отсутствии сотрудничества планируют лечение под наркозом с информированным согласием.",
+        "uz": "Katta hajmli davolash va hamkorlik yo‘qligida narkoz ostida davolash xabardor rozilik bilan rejalashtiriladi."
+      }
+    },
+    {
+      "q": {
+        "en": "Which phrase is best when explaining treatment to a child?",
+        "ru": "Какое выражение лучше всего использовать при объяснении ребёнку?",
+        "uz": "Qaysi so‘z bolaga muolajani tushuntirishda eng to‘g‘ri?"
+      },
+      "options": [
+        {
+          "en": "\"Now for the big needle\"",
+          "ru": "«Сейчас сделаем большой укол»",
+          "uz": "«Endi katta igna sanchamiz»"
+        },
+        {
+          "en": "\"We'll put your tooth to sleep\"",
+          "ru": "«Нанесём лекарство, чтобы зуб уснул»",
+          "uz": "«Tishingni uxlatadigan dori surtamiz»"
+        },
+        {
+          "en": "\"It will hurt a bit, be brave\"",
+          "ru": "«Будет немного больно, потерпи»",
+          "uz": "«Biroz og‘riydi, chida»"
+        },
+        {
+          "en": "\"We're going to pull your tooth\"",
+          "ru": "«Сейчас вырвем зуб»",
+          "uz": "«Tishingni sug‘urib olamiz»"
+        }
+      ],
+      "correct": 1,
+      "explain": {
+        "en": "Use clear, non-threatening phrases and avoid words like \"needle\" or \"hurt\".",
+        "ru": "Используют понятные непугающие выражения; избегают слов «укол», «больно».",
+        "uz": "Bolaga qo‘rqitmaydigan, tushunarli iboralar ishlatiladi; «igna», «og‘riydi» kabi so‘zlardan saqlaniladi."
+      }
+    }
+  ]
+}

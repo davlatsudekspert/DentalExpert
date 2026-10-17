@@ -1,0 +1,1117 @@
+{
+  "id": "perio-03",
+  "subject": "perio",
+  "n": 3,
+  "week": 3,
+  "type": "practical",
+  "hours": 2,
+  "title": {
+    "en": "Gingivitis: plaque-induced and non-plaque-induced",
+    "ru": "Гингивит: ассоциированный и не ассоциированный с налётом",
+    "uz": "Gingivit: karash bilan bog‘liq va bog‘liq bo‘lmagan"
+  },
+  "goals": [
+    {
+      "en": "Recognise the clinical signs of plaque-induced gingivitis",
+      "ru": "Распознавать клинические признаки гингивита, ассоциированного с налётом",
+      "uz": "Karash bilan bog‘liq gingivitning klinik belgilarini aniqlash"
+    },
+    {
+      "en": "Name local and systemic factors that modify gingivitis",
+      "ru": "Назвать местные и системные факторы, модифицирующие гингивит",
+      "uz": "Gingivitni o‘zgartiruvchi mahalliy va tizimli omillarni aytish"
+    },
+    {
+      "en": "Distinguish non-plaque-induced gingival lesions that need further investigation",
+      "ru": "Отличать поражения десны, не связанные с налётом, требующие дообследования",
+      "uz": "Qo‘shimcha tekshiruv talab qiladigan, karash bilan bog‘liq bo‘lmagan milk shikastlanishlarini farqlash"
+    }
+  ],
+  "links": [
+    "oral-hygiene",
+    "periodontium"
+  ],
+  "sources": [
+    "Chapple ILC et al. Periodontal health and gingival diseases: Consensus report of workgroup 1. J Periodontol 2018",
+    "Newman MG et al. Newman and Carranza's Clinical Periodontology, 13th ed., 2019",
+    "Löe H, Theilade E, Jensen SB. Experimental gingivitis in man. J Periodontol 1965"
+  ],
+  "slides": [
+    {
+      "layout": "title",
+      "title": {
+        "en": "Gingivitis",
+        "ru": "Гингивит",
+        "uz": "Gingivit"
+      },
+      "subtitle": {
+        "en": "Clinical signs, modifying factors and non-plaque lesions",
+        "ru": "Клинические признаки, модифицирующие факторы и поражения без налёта",
+        "uz": "Klinik belgilar, o‘zgartiruvchi omillar va karashsiz shikastlanishlar"
+      }
+    },
+    {
+      "layout": "timeline",
+      "title": {
+        "en": "Experimental gingivitis",
+        "ru": "Экспериментальный гингивит",
+        "uz": "Eksperimental gingivit"
+      },
+      "events": [
+        {
+          "when": {
+            "en": "Day 0",
+            "ru": "День 0",
+            "uz": "0-kun"
+          },
+          "label": {
+            "en": "Healthy gingiva, oral hygiene stopped",
+            "ru": "Здоровая десна, гигиена прекращена",
+            "uz": "Sog‘lom milk, gigiyena to‘xtatildi"
+          }
+        },
+        {
+          "when": {
+            "en": "Days 1–7",
+            "ru": "Дни 1–7",
+            "uz": "1–7-kunlar"
+          },
+          "label": {
+            "en": "Plaque builds up, early inflammation",
+            "ru": "Накопление налёта, начальное воспаление",
+            "uz": "Karash to‘planadi, boshlang‘ich yallig‘lanish"
+          }
+        },
+        {
+          "when": {
+            "en": "Days 10–21",
+            "ru": "Дни 10–21",
+            "uz": "10–21-kunlar"
+          },
+          "label": {
+            "en": "Clinical gingivitis in all subjects",
+            "ru": "Клинический гингивит у всех участников",
+            "uz": "Barcha ishtirokchilarda klinik gingivit"
+          }
+        },
+        {
+          "when": {
+            "en": "After hygiene resumed",
+            "ru": "После возобновления гигиены",
+            "uz": "Gigiyena tiklangandan keyin"
+          },
+          "label": {
+            "en": "Health returns within about a week",
+            "ru": "Здоровье восстанавливается примерно за неделю",
+            "uz": "Salomatlik taxminan bir haftada tiklanadi"
+          }
+        }
+      ],
+      "note": {
+        "en": "Use Löe's classic study to show that gingivitis is caused by plaque and is reversible.",
+        "ru": "Используйте классическое исследование Лоэ, чтобы показать, что гингивит вызван налётом и обратим.",
+        "uz": "Gingivit karash tufayli kelib chiqishi va qaytar ekanini ko‘rsatish uchun Loening klassik tadqiqotidan foydalaning."
+      }
+    },
+    {
+      "layout": "table",
+      "title": {
+        "en": "Clinical signs",
+        "ru": "Клинические признаки",
+        "uz": "Klinik belgilar"
+      },
+      "head": [
+        {
+          "en": "Feature",
+          "ru": "Признак",
+          "uz": "Belgi"
+        },
+        {
+          "en": "Health",
+          "ru": "Норма",
+          "uz": "Me’yor"
+        },
+        {
+          "en": "Gingivitis",
+          "ru": "Гингивит",
+          "uz": "Gingivit"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "en": "Colour",
+            "ru": "Цвет",
+            "uz": "Rangi"
+          },
+          {
+            "en": "Coral pink",
+            "ru": "Бледно-розовый",
+            "uz": "Och pushti"
+          },
+          {
+            "en": "Red or bluish-red",
+            "ru": "Красный или синюшный",
+            "uz": "Qizil yoki ko‘kimtir-qizil"
+          }
+        ],
+        [
+          {
+            "en": "Contour",
+            "ru": "Контур",
+            "uz": "Kontur"
+          },
+          {
+            "en": "Knife-edge margin",
+            "ru": "Тонкий край",
+            "uz": "Yupqa chet"
+          },
+          {
+            "en": "Rolled margin, swollen papillae",
+            "ru": "Утолщённый край, отёчные сосочки",
+            "uz": "Qalinlashgan chet, shishgan so‘rg‘ichlar"
+          }
+        ],
+        [
+          {
+            "en": "Consistency",
+            "ru": "Консистенция",
+            "uz": "Zichlik"
+          },
+          {
+            "en": "Firm",
+            "ru": "Плотная",
+            "uz": "Zich"
+          },
+          {
+            "en": "Soft, oedematous",
+            "ru": "Мягкая, отёчная",
+            "uz": "Yumshoq, shishgan"
+          }
+        ],
+        [
+          {
+            "en": "Bleeding on probing",
+            "ru": "Кровоточивость",
+            "uz": "Zondlashda qonash"
+          },
+          {
+            "en": "Absent",
+            "ru": "Нет",
+            "uz": "Yo‘q"
+          },
+          {
+            "en": "Present, earliest sign",
+            "ru": "Есть, ранний признак",
+            "uz": "Bor, eng erta belgi"
+          }
+        ],
+        [
+          {
+            "en": "Attachment level",
+            "ru": "Уровень прикрепления",
+            "uz": "Birikish darajasi"
+          },
+          {
+            "en": "Normal",
+            "ru": "Норма",
+            "uz": "Me’yoriy"
+          },
+          {
+            "en": "No loss; false pockets possible",
+            "ru": "Без потери; возможны ложные карманы",
+            "uz": "Yo‘qolmagan; soxta cho‘ntaklar bo‘lishi mumkin"
+          }
+        ]
+      ]
+    },
+    {
+      "layout": "tree",
+      "title": {
+        "en": "Plaque-induced gingivitis",
+        "ru": "Гингивит, ассоциированный с налётом",
+        "uz": "Karash bilan bog‘liq gingivit"
+      },
+      "root": {
+        "en": "Plaque-induced gingivitis",
+        "ru": "Гингивит от налёта",
+        "uz": "Karashdan gingivit"
+      },
+      "children": [
+        {
+          "label": {
+            "en": "Biofilm alone",
+            "ru": "Только биоплёнка",
+            "uz": "Faqat biofilm"
+          }
+        },
+        {
+          "label": {
+            "en": "Systemic modifiers",
+            "ru": "Системные факторы",
+            "uz": "Tizimli omillar"
+          },
+          "items": [
+            {
+              "en": "Smoking",
+              "ru": "Курение",
+              "uz": "Chekish"
+            },
+            {
+              "en": "Hyperglycaemia",
+              "ru": "Гипергликемия",
+              "uz": "Giperglikemiya"
+            },
+            {
+              "en": "Sex hormones, pregnancy",
+              "ru": "Половые гормоны, беременность",
+              "uz": "Jinsiy gormonlar, homiladorlik"
+            },
+            {
+              "en": "Blood disorders",
+              "ru": "Болезни крови",
+              "uz": "Qon kasalliklari"
+            }
+          ]
+        },
+        {
+          "label": {
+            "en": "Local modifiers",
+            "ru": "Местные факторы",
+            "uz": "Mahalliy omillar"
+          },
+          "items": [
+            {
+              "en": "Overhangs, calculus",
+              "ru": "Нависающие края, камень",
+              "uz": "Osilgan chetlar, tish toshi"
+            },
+            {
+              "en": "Mouth dryness",
+              "ru": "Сухость полости рта",
+              "uz": "Og‘iz qurishi"
+            }
+          ]
+        },
+        {
+          "label": {
+            "en": "Drug-influenced enlargement",
+            "ru": "Медикаментозная гиперплазия",
+            "uz": "Dori ta’siridagi kattalashuv"
+          },
+          "items": [
+            {
+              "en": "Phenytoin",
+              "ru": "Фенитоин",
+              "uz": "Fenitoin"
+            },
+            {
+              "en": "Ciclosporin",
+              "ru": "Циклоспорин",
+              "uz": "Siklosporin"
+            },
+            {
+              "en": "Calcium channel blockers",
+              "ru": "Блокаторы кальциевых каналов",
+              "uz": "Kalsiy kanali blokatorlari"
+            }
+          ]
+        }
+      ],
+      "note": {
+        "en": "Ask students to give one example of each modifying factor from their clinic patients.",
+        "ru": "Попросите привести пример каждого модифицирующего фактора из клинической практики.",
+        "uz": "Talabalardan klinikadagi bemorlardan har bir o‘zgartiruvchi omilga misol keltirishni so‘rang."
+      }
+    },
+    {
+      "layout": "table",
+      "title": {
+        "en": "Gingival index (Löe and Silness)",
+        "ru": "Гингивальный индекс (Лоэ и Силнесс)",
+        "uz": "Milk indeksi (Loe va Silness)"
+      },
+      "head": [
+        {
+          "en": "Score",
+          "ru": "Балл",
+          "uz": "Ball"
+        },
+        {
+          "en": "Description",
+          "ru": "Описание",
+          "uz": "Tavsifi"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "en": "0",
+            "ru": "0",
+            "uz": "0"
+          },
+          {
+            "en": "Normal gingiva",
+            "ru": "Нормальная десна",
+            "uz": "Me’yoriy milk"
+          }
+        ],
+        [
+          {
+            "en": "1",
+            "ru": "1",
+            "uz": "1"
+          },
+          {
+            "en": "Mild inflammation, no bleeding on probing",
+            "ru": "Лёгкое воспаление, без кровоточивости",
+            "uz": "Yengil yallig‘lanish, zondlashda qonamaydi"
+          }
+        ],
+        [
+          {
+            "en": "2",
+            "ru": "2",
+            "uz": "2"
+          },
+          {
+            "en": "Moderate inflammation, bleeding on probing",
+            "ru": "Умеренное воспаление, кровоточивость при зондировании",
+            "uz": "O‘rtacha yallig‘lanish, zondlashda qonaydi"
+          }
+        ],
+        [
+          {
+            "en": "3",
+            "ru": "3",
+            "uz": "3"
+          },
+          {
+            "en": "Severe inflammation, spontaneous bleeding, ulceration",
+            "ru": "Выраженное воспаление, спонтанная кровоточивость, изъязвление",
+            "uz": "Kuchli yallig‘lanish, o‘z-o‘zidan qonash, yaralanish"
+          }
+        ]
+      ]
+    },
+    {
+      "layout": "tree",
+      "title": {
+        "en": "Non-plaque-induced gingival lesions",
+        "ru": "Поражения десны, не связанные с налётом",
+        "uz": "Karash bilan bog‘liq bo‘lmagan milk shikastlanishlari"
+      },
+      "root": {
+        "en": "Non-plaque-induced",
+        "ru": "Не связанные с налётом",
+        "uz": "Karashga bog‘liq bo‘lmagan"
+      },
+      "children": [
+        {
+          "label": {
+            "en": "Genetic",
+            "ru": "Генетические",
+            "uz": "Genetik"
+          },
+          "items": [
+            {
+              "en": "Hereditary gingival fibromatosis",
+              "ru": "Наследственный фиброматоз десны",
+              "uz": "Irsiy milk fibromatozi"
+            }
+          ]
+        },
+        {
+          "label": {
+            "en": "Specific infections",
+            "ru": "Специфические инфекции",
+            "uz": "Maxsus infeksiyalar"
+          },
+          "items": [
+            {
+              "en": "Herpetic gingivostomatitis",
+              "ru": "Герпетический гингивостоматит",
+              "uz": "Gerpetik gingivostomatit"
+            },
+            {
+              "en": "Candidosis",
+              "ru": "Кандидоз",
+              "uz": "Kandidoz"
+            }
+          ]
+        },
+        {
+          "label": {
+            "en": "Immune conditions",
+            "ru": "Иммунные состояния",
+            "uz": "Immun holatlar"
+          },
+          "items": [
+            {
+              "en": "Lichen planus",
+              "ru": "Красный плоский лишай",
+              "uz": "Qizil yassi temiratki"
+            },
+            {
+              "en": "Pemphigoid, pemphigus",
+              "ru": "Пемфигоид, пузырчатка",
+              "uz": "Pemfigoid, pemfigus"
+            }
+          ]
+        },
+        {
+          "label": {
+            "en": "Other",
+            "ru": "Другие",
+            "uz": "Boshqalar"
+          },
+          "items": [
+            {
+              "en": "Trauma, neoplasms",
+              "ru": "Травма, новообразования",
+              "uz": "Jarohat, o‘smalar"
+            },
+            {
+              "en": "Vitamin C deficiency",
+              "ru": "Дефицит витамина C",
+              "uz": "C vitamini yetishmovchiligi"
+            }
+          ]
+        }
+      ],
+      "note": {
+        "en": "Stress that lesions not improving after plaque control need biopsy or referral.",
+        "ru": "Подчеркните: поражения без улучшения после устранения налёта требуют биопсии или направления.",
+        "uz": "Karash nazoratidan keyin yaxshilanmagan shikastlanishlar biopsiya yoki yo‘llanma talab qilishini ta’kidlang."
+      }
+    },
+    {
+      "layout": "compare",
+      "title": {
+        "en": "Necrotising gingivitis versus plaque gingivitis",
+        "ru": "Некротический гингивит и гингивит от налёта",
+        "uz": "Nekrotik gingivit va karashdan gingivit"
+      },
+      "columns": [
+        {
+          "head": {
+            "en": "Necrotising gingivitis",
+            "ru": "Некротический гингивит",
+            "uz": "Nekrotik gingivit"
+          },
+          "items": [
+            {
+              "en": "Painful, punched-out papillae",
+              "ru": "Боль, «срезанные» сосочки",
+              "uz": "Og‘riqli, «kesilgan» so‘rg‘ichlar"
+            },
+            {
+              "en": "Grey pseudomembrane, bad odour",
+              "ru": "Серый налёт, неприятный запах",
+              "uz": "Kulrang parda, yoqimsiz hid"
+            },
+            {
+              "en": "Stress, smoking, low immunity",
+              "ru": "Стресс, курение, сниженный иммунитет",
+              "uz": "Stress, chekish, past immunitet"
+            }
+          ]
+        },
+        {
+          "head": {
+            "en": "Plaque gingivitis",
+            "ru": "Гингивит от налёта",
+            "uz": "Karashdan gingivit"
+          },
+          "items": [
+            {
+              "en": "Usually painless",
+              "ru": "Обычно безболезненный",
+              "uz": "Odatda og‘riqsiz"
+            },
+            {
+              "en": "Bleeding on brushing",
+              "ru": "Кровоточивость при чистке",
+              "uz": "Tish yuvganda qonash"
+            },
+            {
+              "en": "Papillae intact",
+              "ru": "Сосочки сохранены",
+              "uz": "So‘rg‘ichlar butun"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "layout": "flow",
+      "title": {
+        "en": "Managing plaque-induced gingivitis",
+        "ru": "Лечение гингивита от налёта",
+        "uz": "Karashdan gingivitni davolash"
+      },
+      "steps": [
+        {
+          "label": {
+            "en": "Show the patient the plaque",
+            "ru": "Показать пациенту налёт",
+            "uz": "Bemorga karashni ko‘rsatish"
+          },
+          "detail": {
+            "en": "Disclosing agent",
+            "ru": "Индикатор налёта",
+            "uz": "Karash indikatori"
+          }
+        },
+        {
+          "label": {
+            "en": "Teach brushing and interdental cleaning",
+            "ru": "Обучить чистке и межзубной гигиене",
+            "uz": "Tish yuvish va tishlararo tozalashga o‘rgatish"
+          },
+          "detail": {
+            "en": "Brushes sized to spaces",
+            "ru": "Ёршики по размеру промежутков",
+            "uz": "Oraliqqa mos cho‘tkalar"
+          }
+        },
+        {
+          "label": {
+            "en": "Professional plaque removal",
+            "ru": "Профессиональное удаление налёта",
+            "uz": "Professional karash olib tashlash"
+          },
+          "detail": {
+            "en": "Supragingival calculus too",
+            "ru": "Включая наддесневой камень",
+            "uz": "Milk usti toshi ham"
+          }
+        },
+        {
+          "label": {
+            "en": "Remove retentive factors",
+            "ru": "Устранить ретенционные факторы",
+            "uz": "Ushlab qoluvchi omillarni bartaraf etish"
+          },
+          "detail": {
+            "en": "Overhangs, open margins",
+            "ru": "Нависающие и открытые края",
+            "uz": "Osilgan va ochiq chetlar"
+          }
+        },
+        {
+          "label": {
+            "en": "Review in 2–4 weeks",
+            "ru": "Контроль через 2–4 недели",
+            "uz": "2–4 haftadan keyin nazorat"
+          },
+          "detail": {
+            "en": "Bleeding should fall",
+            "ru": "Кровоточивость должна уменьшиться",
+            "uz": "Qonash kamayishi kerak"
+          }
+        }
+      ],
+      "note": {
+        "en": "Have students practise disclosing and oral hygiene instruction on each other.",
+        "ru": "Пусть студенты отработают окрашивание налёта и обучение гигиене друг на друге.",
+        "uz": "Talabalar bir-birida karashni bo‘yash va gigiyenaga o‘rgatishni mashq qilsin."
+      }
+    },
+    {
+      "layout": "summary",
+      "title": {
+        "en": "Summary",
+        "ru": "Итоги",
+        "uz": "Xulosa"
+      },
+      "bullets": [
+        {
+          "en": "Gingivitis is plaque-caused and reversible",
+          "ru": "Гингивит вызван налётом и обратим",
+          "uz": "Gingivit karash tufayli yuzaga keladi va qaytar"
+        },
+        {
+          "en": "Bleeding on probing is the earliest reliable sign",
+          "ru": "Кровоточивость при зондировании — ранний надёжный признак",
+          "uz": "Zondlashda qonash eng erta ishonchli belgi"
+        },
+        {
+          "en": "Hormones, smoking, diabetes and drugs modify the response",
+          "ru": "Гормоны, курение, диабет и лекарства меняют ответ",
+          "uz": "Gormonlar, chekish, diabet va dorilar javobni o‘zgartiradi"
+        },
+        {
+          "en": "Non-plaque lesions that persist need further investigation",
+          "ru": "Стойкие поражения без связи с налётом требуют дообследования",
+          "uz": "Saqlanib qolgan karashsiz shikastlanishlar qo‘shimcha tekshiruv talab qiladi"
+        }
+      ]
+    }
+  ],
+  "oral": [
+    {
+      "q": {
+        "en": "Describe the clinical signs of plaque-induced gingivitis.",
+        "ru": "Опишите клинические признаки гингивита, ассоциированного с налётом.",
+        "uz": "Karash bilan bog‘liq gingivitning klinik belgilarini tavsiflang."
+      },
+      "plan": [
+        {
+          "en": "Redness and swelling of margin and papillae",
+          "ru": "Покраснение и отёк края и сосочков",
+          "uz": "Chet va so‘rg‘ichlarning qizarishi va shishi"
+        },
+        {
+          "en": "Bleeding on probing",
+          "ru": "Кровоточивость при зондировании",
+          "uz": "Zondlashda qonash"
+        },
+        {
+          "en": "Soft consistency, loss of knife-edge contour",
+          "ru": "Мягкая консистенция, потеря тонкого края",
+          "uz": "Yumshoq konsistensiya, yupqa chetning yo‘qolishi"
+        },
+        {
+          "en": "No attachment loss",
+          "ru": "Нет потери прикрепления",
+          "uz": "Birikish yo‘qolmaydi"
+        }
+      ]
+    },
+    {
+      "q": {
+        "en": "What did the experimental gingivitis study show?",
+        "ru": "Что показало исследование экспериментального гингивита?",
+        "uz": "Eksperimental gingivit tadqiqoti nimani ko‘rsatdi?"
+      },
+      "plan": [
+        {
+          "en": "Stopping hygiene led to plaque build-up",
+          "ru": "Прекращение гигиены вело к накоплению налёта",
+          "uz": "Gigiyenani to‘xtatish karash to‘planishiga olib keldi"
+        },
+        {
+          "en": "Gingivitis developed within about 10–21 days",
+          "ru": "Гингивит развивался примерно за 10–21 день",
+          "uz": "Gingivit taxminan 10–21 kunda rivojlandi"
+        },
+        {
+          "en": "Resuming hygiene restored health",
+          "ru": "Возобновление гигиены восстанавливало здоровье",
+          "uz": "Gigiyenani tiklash salomatlikni qaytardi"
+        }
+      ]
+    },
+    {
+      "q": {
+        "en": "Which systemic factors modify plaque-induced gingivitis?",
+        "ru": "Какие системные факторы модифицируют гингивит от налёта?",
+        "uz": "Qaysi tizimli omillar karashdan gingivitni o‘zgartiradi?"
+      },
+      "plan": [
+        {
+          "en": "Sex steroid hormones: puberty, pregnancy",
+          "ru": "Половые гормоны: пубертат, беременность",
+          "uz": "Jinsiy gormonlar: balog‘at, homiladorlik"
+        },
+        {
+          "en": "Hyperglycaemia and smoking",
+          "ru": "Гипергликемия и курение",
+          "uz": "Giperglikemiya va chekish"
+        },
+        {
+          "en": "Blood disorders such as leukaemia",
+          "ru": "Болезни крови, например лейкоз",
+          "uz": "Qon kasalliklari, masalan leykoz"
+        },
+        {
+          "en": "Drugs causing gingival enlargement",
+          "ru": "Лекарства, вызывающие гиперплазию",
+          "uz": "Milk kattalashuviga olib keluvchi dorilar"
+        }
+      ]
+    },
+    {
+      "q": {
+        "en": "Give examples of non-plaque-induced gingival lesions.",
+        "ru": "Приведите примеры поражений десны, не связанных с налётом.",
+        "uz": "Karash bilan bog‘liq bo‘lmagan milk shikastlanishlariga misollar keltiring."
+      },
+      "plan": [
+        {
+          "en": "Primary herpetic gingivostomatitis",
+          "ru": "Первичный герпетический гингивостоматит",
+          "uz": "Birlamchi gerpetik gingivostomatit"
+        },
+        {
+          "en": "Lichen planus and mucous membrane pemphigoid",
+          "ru": "Красный плоский лишай и пемфигоид",
+          "uz": "Qizil yassi temiratki va pemfigoid"
+        },
+        {
+          "en": "Hereditary gingival fibromatosis",
+          "ru": "Наследственный фиброматоз десны",
+          "uz": "Irsiy milk fibromatozi"
+        },
+        {
+          "en": "Traumatic lesions and neoplasms",
+          "ru": "Травматические поражения и опухоли",
+          "uz": "Jarohat shikastlanishlari va o‘smalar"
+        }
+      ]
+    }
+  ],
+  "test": [
+    {
+      "q": {
+        "en": "The earliest reliable clinical sign of gingivitis is usually:",
+        "ru": "Самый ранний надёжный клинический признак гингивита обычно:",
+        "uz": "Gingivitning eng erta ishonchli klinik belgisi odatda qaysi?"
+      },
+      "options": [
+        {
+          "en": "Bleeding on gentle probing",
+          "ru": "Кровоточивость при бережном зондировании",
+          "uz": "Yengil zondlashda qonash"
+        },
+        {
+          "en": "Tooth mobility",
+          "ru": "Подвижность зубов",
+          "uz": "Tishlarning qimirlashi"
+        },
+        {
+          "en": "Radiographic bone loss",
+          "ru": "Рентгенологическая убыль кости",
+          "uz": "Rentgenda suyak yo‘qolishi"
+        },
+        {
+          "en": "Gingival recession",
+          "ru": "Рецессия десны",
+          "uz": "Milk retsessiyasi"
+        }
+      ],
+      "correct": 0,
+      "explain": {
+        "en": "Bleeding on probing appears early, often before visible colour change, and reflects inflamed sulcus tissue.",
+        "ru": "Кровоточивость появляется рано, часто до изменения цвета, и отражает воспаление тканей борозды.",
+        "uz": "Qonash erta, ko‘pincha rang o‘zgarishidan oldin paydo bo‘ladi va egatcha to‘qimasi yallig‘lanishini ko‘rsatadi."
+      }
+    },
+    {
+      "q": {
+        "en": "A pregnant patient has bright red, swollen, bleeding gingiva with plaque present. The best classification is:",
+        "ru": "У беременной пациентки ярко-красная отёчная кровоточащая десна при наличии налёта. Лучшая классификация:",
+        "uz": "Homilador bemorda karash bor, milk yorqin qizil, shishgan va qonaydi. Eng to‘g‘ri tasnif:"
+      },
+      "options": [
+        {
+          "en": "Non-plaque-induced gingival disease",
+          "ru": "Заболевание десны без связи с налётом",
+          "uz": "Karashga bog‘liq bo‘lmagan milk kasalligi"
+        },
+        {
+          "en": "Necrotising gingivitis",
+          "ru": "Некротический гингивит",
+          "uz": "Nekrotik gingivit"
+        },
+        {
+          "en": "Plaque-induced gingivitis modified by sex hormones",
+          "ru": "Гингивит от налёта, модифицированный гормонами",
+          "uz": "Jinsiy gormonlar o‘zgartirgan karashdan gingivit"
+        },
+        {
+          "en": "Stage II periodontitis",
+          "ru": "Пародонтит II стадии",
+          "uz": "II bosqich parodontit"
+        }
+      ],
+      "correct": 2,
+      "explain": {
+        "en": "Pregnancy exaggerates the inflammatory response to plaque, but plaque remains the cause.",
+        "ru": "Беременность усиливает воспалительный ответ на налёт, но причиной остаётся налёт.",
+        "uz": "Homiladorlik karashga yallig‘lanish javobini kuchaytiradi, lekin sabab karash bo‘lib qoladi."
+      }
+    },
+    {
+      "q": {
+        "en": "Which drug group is associated with gingival enlargement?",
+        "ru": "Какая группа препаратов связана с гиперплазией десны?",
+        "uz": "Qaysi dorilar guruhi milk kattalashuvi bilan bog‘liq?"
+      },
+      "options": [
+        {
+          "en": "Penicillins",
+          "ru": "Пенициллины",
+          "uz": "Penitsillinlar"
+        },
+        {
+          "en": "Proton pump inhibitors",
+          "ru": "Ингибиторы протонной помпы",
+          "uz": "Proton pompasi ingibitorlari"
+        },
+        {
+          "en": "Antihistamines",
+          "ru": "Антигистаминные",
+          "uz": "Antigistaminlar"
+        },
+        {
+          "en": "Calcium channel blockers",
+          "ru": "Блокаторы кальциевых каналов",
+          "uz": "Kalsiy kanali blokatorlari"
+        }
+      ],
+      "correct": 3,
+      "explain": {
+        "en": "Calcium channel blockers such as nifedipine, along with phenytoin and ciclosporin, can cause enlargement.",
+        "ru": "Блокаторы кальциевых каналов, например нифедипин, а также фенитоин и циклоспорин могут вызывать гиперплазию.",
+        "uz": "Nifedipin kabi kalsiy kanali blokatorlari, shuningdek fenitoin va siklosporin kattalashuvga sabab bo‘lishi mumkin."
+      }
+    },
+    {
+      "q": {
+        "en": "In gingivitis, a probing depth of 4 mm with no attachment loss is called:",
+        "ru": "При гингивите глубина зондирования 4 мм без потери прикрепления называется:",
+        "uz": "Gingivitda birikish yo‘qolmasdan 4 mm zondlash chuqurligi qanday ataladi?"
+      },
+      "options": [
+        {
+          "en": "A true periodontal pocket",
+          "ru": "Истинный пародонтальный карман",
+          "uz": "Haqiqiy parodontal cho‘ntak"
+        },
+        {
+          "en": "A false (gingival) pocket",
+          "ru": "Ложный (десневой) карман",
+          "uz": "Soxta (milk) cho‘ntak"
+        },
+        {
+          "en": "Recession",
+          "ru": "Рецессия",
+          "uz": "Retsessiya"
+        },
+        {
+          "en": "Furcation involvement",
+          "ru": "Поражение фуркации",
+          "uz": "Furkatsiya shikastlanishi"
+        }
+      ],
+      "correct": 1,
+      "explain": {
+        "en": "Swelling moves the margin coronally, deepening the sulcus without apical migration of attachment.",
+        "ru": "Отёк смещает край коронально и углубляет борозду без апикального смещения прикрепления.",
+        "uz": "Shish chetni toj tomonga suradi va birikish apikal siljimasdan egatchani chuqurlashtiradi."
+      }
+    },
+    {
+      "q": {
+        "en": "A patient has painful, punched-out interdental papillae, grey pseudomembrane and bad breath. The most likely diagnosis is:",
+        "ru": "У пациента болезненные «срезанные» межзубные сосочки, серый налёт и неприятный запах. Вероятный диагноз:",
+        "uz": "Bemorda og‘riqli «kesilgan» tishlararo so‘rg‘ichlar, kulrang parda va og‘izdan yoqimsiz hid bor. Ehtimoliy tashxis:"
+      },
+      "options": [
+        {
+          "en": "Necrotising gingivitis",
+          "ru": "Некротический гингивит",
+          "uz": "Nekrotik gingivit"
+        },
+        {
+          "en": "Drug-influenced enlargement",
+          "ru": "Медикаментозная гиперплазия",
+          "uz": "Dori ta’siridagi kattalashuv"
+        },
+        {
+          "en": "Hereditary fibromatosis",
+          "ru": "Наследственный фиброматоз",
+          "uz": "Irsiy fibromatoz"
+        },
+        {
+          "en": "Lichen planus",
+          "ru": "Красный плоский лишай",
+          "uz": "Qizil yassi temiratki"
+        }
+      ],
+      "correct": 0,
+      "explain": {
+        "en": "Pain, papillary necrosis and pseudomembrane are characteristic of necrotising gingivitis.",
+        "ru": "Боль, некроз сосочков и псевдомембрана характерны для некротического гингивита.",
+        "uz": "Og‘riq, so‘rg‘ichlar nekrozi va soxta parda nekrotik gingivitga xos."
+      }
+    },
+    {
+      "q": {
+        "en": "A Gingival Index score of 2 indicates:",
+        "ru": "Балл 2 гингивального индекса означает:",
+        "uz": "Milk indeksining 2 balli nimani bildiradi?"
+      },
+      "options": [
+        {
+          "en": "Normal gingiva",
+          "ru": "Нормальную десну",
+          "uz": "Me’yoriy milk"
+        },
+        {
+          "en": "Mild inflammation without bleeding",
+          "ru": "Лёгкое воспаление без кровоточивости",
+          "uz": "Qonashsiz yengil yallig‘lanish"
+        },
+        {
+          "en": "Severe inflammation with ulceration",
+          "ru": "Выраженное воспаление с изъязвлением",
+          "uz": "Yaralanishli kuchli yallig‘lanish"
+        },
+        {
+          "en": "Moderate inflammation with bleeding on probing",
+          "ru": "Умеренное воспаление с кровоточивостью",
+          "uz": "Zondlashda qonashli o‘rtacha yallig‘lanish"
+        }
+      ],
+      "correct": 3,
+      "explain": {
+        "en": "Score 2 means redness, oedema and glazing with bleeding on probing.",
+        "ru": "Балл 2 — покраснение, отёк, блеск и кровоточивость при зондировании.",
+        "uz": "2 ball — qizarish, shish, yaltirash va zondlashda qonash."
+      }
+    },
+    {
+      "q": {
+        "en": "Desquamative gingival lesions that do not improve with plaque control most need:",
+        "ru": "Десквамативные поражения десны, не улучшающиеся после устранения налёта, прежде всего требуют:",
+        "uz": "Karash nazoratidan keyin yaxshilanmagan deskvamativ milk shikastlanishlari eng avvalo nimani talab qiladi?"
+      },
+      "options": [
+        {
+          "en": "More frequent scaling only",
+          "ru": "Только более частого скейлинга",
+          "uz": "Faqat tez-tez skeyling"
+        },
+        {
+          "en": "Immediate extraction",
+          "ru": "Немедленного удаления зубов",
+          "uz": "Tishlarni darhol olib tashlash"
+        },
+        {
+          "en": "Biopsy or specialist referral",
+          "ru": "Биопсии или направления к специалисту",
+          "uz": "Biopsiya yoki mutaxassisga yo‘llash"
+        },
+        {
+          "en": "A stronger toothpaste",
+          "ru": "Более сильной зубной пасты",
+          "uz": "Kuchliroq tish pastasi"
+        }
+      ],
+      "correct": 2,
+      "explain": {
+        "en": "Persistent desquamative lesions may reflect lichen planus or pemphigoid, which need tissue diagnosis.",
+        "ru": "Стойкие десквамативные поражения могут быть проявлением лишая или пемфигоида и требуют гистологии.",
+        "uz": "Saqlanib qolgan deskvamativ shikastlanishlar temiratki yoki pemfigoid bo‘lishi mumkin va gistologik tashxis talab qiladi."
+      }
+    },
+    {
+      "q": {
+        "en": "Primary herpetic gingivostomatitis is best classified as:",
+        "ru": "Первичный герпетический гингивостоматит лучше классифицировать как:",
+        "uz": "Birlamchi gerpetik gingivostomatit qanday tasniflanadi?"
+      },
+      "options": [
+        {
+          "en": "Plaque-induced gingivitis",
+          "ru": "Гингивит от налёта",
+          "uz": "Karashdan gingivit"
+        },
+        {
+          "en": "Non-plaque-induced gingival disease of specific infection",
+          "ru": "Поражение десны без налёта, специфическая инфекция",
+          "uz": "Maxsus infeksiyali karashga bog‘liq bo‘lmagan milk kasalligi"
+        },
+        {
+          "en": "Periodontitis as a systemic manifestation",
+          "ru": "Пародонтит как системное проявление",
+          "uz": "Tizimli ko‘rinish sifatidagi parodontit"
+        },
+        {
+          "en": "Mucogingival deformity",
+          "ru": "Мукогингивальная деформация",
+          "uz": "Mukogingival deformatsiya"
+        }
+      ],
+      "correct": 1,
+      "explain": {
+        "en": "It is caused by herpes simplex virus, so it belongs to specific infections among non-plaque-induced lesions.",
+        "ru": "Его вызывает вирус простого герпеса, поэтому оно относится к специфическим инфекциям среди поражений без налёта.",
+        "uz": "Uni oddiy gerpes virusi chaqiradi, shuning uchun u karashga bog‘liq bo‘lmagan shikastlanishlardagi maxsus infeksiyalarga kiradi."
+      }
+    },
+    {
+      "q": {
+        "en": "After two weeks of improved hygiene a patient's gingival bleeding falls markedly. This shows that gingivitis is:",
+        "ru": "Через две недели улучшенной гигиены кровоточивость десны заметно снизилась. Это показывает, что гингивит:",
+        "uz": "Ikki hafta gigiyena yaxshilangandan keyin milk qonashi sezilarli kamaydi. Bu gingivit haqida nimani ko‘rsatadi?"
+      },
+      "options": [
+        {
+          "en": "Irreversible",
+          "ru": "Необратим",
+          "uz": "Qaytmas"
+        },
+        {
+          "en": "Caused by occlusal trauma",
+          "ru": "Вызван окклюзионной травмой",
+          "uz": "Okklyuzion jarohat tufayli"
+        },
+        {
+          "en": "Always genetic",
+          "ru": "Всегда генетический",
+          "uz": "Doimo genetik"
+        },
+        {
+          "en": "Reversible with plaque control",
+          "ru": "Обратим при контроле налёта",
+          "uz": "Karash nazorati bilan qaytar"
+        }
+      ],
+      "correct": 3,
+      "explain": {
+        "en": "Plaque-induced gingivitis resolves when the biofilm is removed regularly.",
+        "ru": "Гингивит от налёта проходит при регулярном удалении биоплёнки.",
+        "uz": "Karashdan gingivit biofilm muntazam olib tashlansa o‘tib ketadi."
+      }
+    },
+    {
+      "q": {
+        "en": "Which local factor most promotes plaque retention and gingivitis?",
+        "ru": "Какой местный фактор сильнее всего способствует задержке налёта и гингивиту?",
+        "uz": "Qaysi mahalliy omil karash to‘planishi va gingivitga eng ko‘p sabab bo‘ladi?"
+      },
+      "options": [
+        {
+          "en": "A well-polished crown margin",
+          "ru": "Хорошо отполированный край коронки",
+          "uz": "Yaxshi silliqlangan koronka cheti"
+        },
+        {
+          "en": "Overhanging restoration margin",
+          "ru": "Нависающий край реставрации",
+          "uz": "Restavratsiyaning osilgan cheti"
+        },
+        {
+          "en": "Fluoride varnish",
+          "ru": "Фторлак",
+          "uz": "Ftorlak"
+        },
+        {
+          "en": "Normal salivary flow",
+          "ru": "Нормальное слюноотделение",
+          "uz": "Me’yoriy so‘lak ajralishi"
+        }
+      ],
+      "correct": 1,
+      "explain": {
+        "en": "Overhangs create sheltered niches where plaque accumulates and cannot be cleaned.",
+        "ru": "Нависающие края создают ниши, где налёт скапливается и не очищается.",
+        "uz": "Osilgan chetlar karash to‘planadigan va tozalanmaydigan joylar hosil qiladi."
+      }
+    }
+  ]
+}

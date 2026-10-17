@@ -1,0 +1,1004 @@
+{
+  "id": "surg-06",
+  "subject": "surg",
+  "n": 6,
+  "week": 6,
+  "type": "practical",
+  "hours": 2,
+  "title": {
+    "en": "Extraction technique and postoperative instructions",
+    "ru": "Техника удаления зуба и послеоперационные рекомендации",
+    "uz": "Tish olish texnikasi va operatsiyadan keyingi tavsiyalar"
+  },
+  "goals": [
+    {
+      "en": "Position patient and operator correctly",
+      "ru": "Обеспечивать правильное положение пациента и врача",
+      "uz": "Bemor va shifokorning to‘g‘ri holatini ta’minlash"
+    },
+    {
+      "en": "Perform the stages of extraction correctly",
+      "ru": "Правильно выполнять этапы удаления",
+      "uz": "Tish olish bosqichlarini to‘g‘ri bajarish"
+    },
+    {
+      "en": "Explain postoperative instructions to the patient",
+      "ru": "Объяснять пациенту послеоперационные рекомендации",
+      "uz": "Bemorga operatsiyadan keyingi tavsiyalarni tushuntirish"
+    }
+  ],
+  "links": [
+    "tooth-types-fdi"
+  ],
+  "sources": [
+    "Hupp JR, Ellis E, Tucker MR. Contemporary Oral and Maxillofacial Surgery, 7th ed., 2018",
+    "Miloro M et al. Peterson's Principles of Oral and Maxillofacial Surgery, 3rd ed., 2012"
+  ],
+  "slides": [
+    {
+      "layout": "title",
+      "title": {
+        "en": "Extraction technique and postoperative instructions",
+        "ru": "Техника удаления зуба и послеоперационные рекомендации",
+        "uz": "Tish olish texnikasi va operatsiyadan keyingi tavsiyalar"
+      },
+      "subtitle": {
+        "en": "Positioning, stages and socket care",
+        "ru": "Положение пациента и врача, этапы и уход за лункой",
+        "uz": "Bemor va shifokor holati, bosqichlar va lunka parvarishi"
+      }
+    },
+    {
+      "layout": "compare",
+      "title": {
+        "en": "Patient and operator position",
+        "ru": "Положение пациента и врача",
+        "uz": "Bemor va shifokor holati"
+      },
+      "columns": [
+        {
+          "head": {
+            "en": "Maxilla",
+            "ru": "Верхняя челюсть",
+            "uz": "Yuqori jag‘"
+          },
+          "items": [
+            {
+              "en": "Chair reclined",
+              "ru": "Кресло откинуто назад",
+              "uz": "Kreslo orqaga yotqizilgan"
+            },
+            {
+              "en": "Upper occlusal plane about 60° to the floor",
+              "ru": "Верхняя окклюзионная плоскость около 60° к полу",
+              "uz": "Yuqori chaynov sathi polga taxminan 60°"
+            },
+            {
+              "en": "Mouth at the operator's shoulder level",
+              "ru": "Рот пациента на уровне плеча врача",
+              "uz": "Bemor og‘zi shifokor yelkasi balandligida"
+            }
+          ]
+        },
+        {
+          "head": {
+            "en": "Mandible",
+            "ru": "Нижняя челюсть",
+            "uz": "Pastki jag‘"
+          },
+          "items": [
+            {
+              "en": "Chair lower and more upright",
+              "ru": "Кресло ниже и вертикальнее",
+              "uz": "Kreslo tikroq va pastroq"
+            },
+            {
+              "en": "Lower occlusal plane parallel to the floor",
+              "ru": "Нижняя окклюзионная плоскость параллельна полу",
+              "uz": "Pastki chaynov sathi polga parallel"
+            },
+            {
+              "en": "Mouth at the operator's elbow level",
+              "ru": "Рот пациента на уровне локтя врача",
+              "uz": "Bemor og‘zi shifokor tirsagi balandligida"
+            }
+          ]
+        }
+      ],
+      "note": {
+        "en": "A right-handed operator stands in front and to the right; for lower right posterior teeth many stand behind the patient.",
+        "ru": "Правша работает спереди и справа от пациента; при удалении нижних правых премоляров и моляров нередко встаёт сзади.",
+        "uz": "O‘ng qo‘lli shifokor ko‘pchilik tishlarda bemorning old-o‘ng tomonida turadi; pastki o‘ng premolyar va molyarlarda ko‘pincha bemor orqasida turiladi."
+      }
+    },
+    {
+      "layout": "flow",
+      "title": {
+        "en": "Stages of extraction",
+        "ru": "Этапы удаления зуба",
+        "uz": "Tish olish bosqichlari"
+      },
+      "steps": [
+        {
+          "label": {
+            "en": "Confirm anaesthesia",
+            "ru": "Проверка анестезии",
+            "uz": "Anesteziyani tekshirish"
+          },
+          "detail": {
+            "en": "Test the gingiva with a probe",
+            "ru": "Проверить зондом десну",
+            "uz": "Zond bilan milkni sinash"
+          }
+        },
+        {
+          "label": {
+            "en": "Syndesmotomy",
+            "ru": "Синдесмотомия",
+            "uz": "Sindesmotomiya"
+          },
+          "detail": {
+            "en": "Detach the gingival cuff",
+            "ru": "Отслоение круговой связки",
+            "uz": "Milk birikmasini ajratish"
+          }
+        },
+        {
+          "label": {
+            "en": "Apply the forceps",
+            "ru": "Наложение щипцов",
+            "uz": "Qisqichni qo‘yish"
+          },
+          "detail": {
+            "en": "Beaks subgingival, parallel to the long axis",
+            "ru": "Щёчки под десной, параллельно оси зуба",
+            "uz": "Jag‘lar milk ostida, tish o‘qiga parallel"
+          }
+        },
+        {
+          "label": {
+            "en": "Grip",
+            "ru": "Фиксация",
+            "uz": "Mahkamlash"
+          },
+          "detail": {
+            "en": "Firm hold without crushing",
+            "ru": "Плотно, не раздавливая зуб",
+            "uz": "Tishni ezmasdan mahkam ushlash"
+          }
+        },
+        {
+          "label": {
+            "en": "Luxation",
+            "ru": "Люксация",
+            "uz": "Lyuksatsiya"
+          },
+          "detail": {
+            "en": "Buccolingual or rotational movements",
+            "ru": "Щёчно-язычные или ротационные движения",
+            "uz": "Lunj-til yoki rotatsion harakatlar"
+          }
+        },
+        {
+          "label": {
+            "en": "Traction",
+            "ru": "Тракция",
+            "uz": "Traksiya"
+          },
+          "detail": {
+            "en": "Deliver the tooth from the socket",
+            "ru": "Выведение зуба из лунки",
+            "uz": "Tishni lunkadan chiqarish"
+          }
+        }
+      ],
+      "note": {
+        "en": "Increase luxation force gradually; sudden force fractures roots or the alveolus.",
+        "ru": "Усилие при люксации наращивают постепенно; резкое усилие ведёт к перелому корня или альвеолы.",
+        "uz": "Lyuksatsiya kuchi asta-sekin oshiriladi; keskin kuch ildiz yoki alveola sinishiga olib keladi."
+      }
+    },
+    {
+      "layout": "table",
+      "title": {
+        "en": "Luxation by tooth group",
+        "ru": "Люксация по группам зубов",
+        "uz": "Tish guruhlari bo‘yicha lyuksatsiya"
+      },
+      "head": [
+        {
+          "en": "Tooth",
+          "ru": "Зуб",
+          "uz": "Tish"
+        },
+        {
+          "en": "Main movement",
+          "ru": "Основное движение",
+          "uz": "Asosiy harakat"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "en": "Maxillary central incisor",
+            "ru": "Верхний центральный резец",
+            "uz": "Yuqori markaziy kesuvchi tish"
+          },
+          {
+            "en": "Rotation (conical root)",
+            "ru": "Ротация (корень конусовидный)",
+            "uz": "Rotatsiya (ildiz konussimon)"
+          }
+        ],
+        [
+          {
+            "en": "Maxillary premolars",
+            "ru": "Верхние премоляры",
+            "uz": "Yuqori premolyarlar"
+          },
+          {
+            "en": "Gentle buccopalatal, no rotation",
+            "ru": "Осторожно щёчно-нёбно, без ротации",
+            "uz": "Ehtiyotkor lunj-tanglay, rotatsiyasiz"
+          }
+        ],
+        [
+          {
+            "en": "Maxillary molars",
+            "ru": "Верхние моляры",
+            "uz": "Yuqori molyarlar"
+          },
+          {
+            "en": "First movement buccally",
+            "ru": "Первое движение в щёчную сторону",
+            "uz": "Avval lunj tomonga"
+          }
+        ],
+        [
+          {
+            "en": "Mandibular premolars",
+            "ru": "Нижние премоляры",
+            "uz": "Pastki premolyarlar"
+          },
+          {
+            "en": "Rotation possible (round root)",
+            "ru": "Возможна ротация (корень округлый)",
+            "uz": "Rotatsiya mumkin (ildiz yumaloq)"
+          }
+        ],
+        [
+          {
+            "en": "Mandibular molars",
+            "ru": "Нижние моляры",
+            "uz": "Pastki molyarlar"
+          },
+          {
+            "en": "Buccolingual, often more buccally",
+            "ru": "Щёчно-язычно, чаще больше в щёчную",
+            "uz": "Lunj-til, ko‘pincha lunj tomonga ko‘proq"
+          }
+        ]
+      ],
+      "note": {
+        "en": "Rotate only single round or conical roots; flattened or multiple roots will fracture.",
+        "ru": "Ротацию выполняют только у однокорневых зубов с округлым или конусовидным корнем; у уплощённых и многокорневых корень сломается.",
+        "uz": "Rotatsiya faqat bitta yumaloq yoki konussimon ildizli tishlarda qilinadi; yassi yoki ko‘p ildizli tishda ildiz sinadi."
+      }
+    },
+    {
+      "layout": "figure",
+      "title": {
+        "en": "Where the forceps beaks seat",
+        "ru": "Куда накладывают щёчки щипцов",
+        "uz": "Qisqich jag‘lari qayerga qo‘yiladi"
+      },
+      "image": "front",
+      "callouts": [
+        {
+          "at": "cej",
+          "label": {
+            "en": "Beaks below the CEJ",
+            "ru": "Щёчки ниже эмалево-цементной границы",
+            "uz": "Jag‘lar emal-sement chegarasidan pastga"
+          }
+        },
+        {
+          "at": "root",
+          "label": {
+            "en": "Advance apically along the root",
+            "ru": "Продвижение апикально по корню",
+            "uz": "Ildiz bo‘ylab apikal siljitish"
+          }
+        },
+        {
+          "at": "furcation",
+          "label": {
+            "en": "Molar point into the furcation",
+            "ru": "У моляров шип — в фуркацию",
+            "uz": "Molyarlarda tikan furkatsiyaga"
+          }
+        },
+        {
+          "at": "crown",
+          "label": {
+            "en": "Do not grip the crown",
+            "ru": "Не захватывать коронку",
+            "uz": "Tojni ushlamaslik"
+          }
+        }
+      ],
+      "bullets": [
+        {
+          "en": "Gripping the crown risks fracturing it",
+          "ru": "При захвате коронки она может отломиться",
+          "uz": "Toj ushlansa, u sinib qolishi mumkin"
+        }
+      ]
+    },
+    {
+      "layout": "flow",
+      "title": {
+        "en": "Socket management",
+        "ru": "Обработка лунки",
+        "uz": "Lunka bilan ishlash"
+      },
+      "steps": [
+        {
+          "label": {
+            "en": "Inspect the tooth",
+            "ru": "Осмотр удалённого зуба",
+            "uz": "Tishni tekshirish"
+          },
+          "detail": {
+            "en": "Roots intact",
+            "ru": "Целостность корней",
+            "uz": "Ildizlar butunligi"
+          }
+        },
+        {
+          "label": {
+            "en": "Inspect the socket",
+            "ru": "Ревизия лунки",
+            "uz": "Lunkani ko‘rish"
+          },
+          "detail": {
+            "en": "Granulation, bone fragments",
+            "ru": "Грануляции, костные осколки",
+            "uz": "Granulyatsiya, suyak bo‘laklari"
+          }
+        },
+        {
+          "label": {
+            "en": "Compress the walls",
+            "ru": "Сближение стенок",
+            "uz": "Devorlarni siqish"
+          },
+          "detail": {
+            "en": "Finger pressure buccolingually",
+            "ru": "Пальцами с щёчной и язычной сторон",
+            "uz": "Barmoqlar bilan lunj-til tomondan"
+          }
+        },
+        {
+          "label": {
+            "en": "Blood clot",
+            "ru": "Кровяной сгусток",
+            "uz": "Qon laxtasi"
+          },
+          "detail": {
+            "en": "Socket should fill with blood",
+            "ru": "Лунка должна заполниться кровью",
+            "uz": "Lunka qon bilan to‘lishi kerak"
+          }
+        },
+        {
+          "label": {
+            "en": "Gauze pack",
+            "ru": "Марлевый тампон",
+            "uz": "Doka tampon"
+          },
+          "detail": {
+            "en": "Patient bites for 20–30 minutes",
+            "ru": "Пациент прикусывает 20–30 минут",
+            "uz": "Bemor 20–30 daqiqa tishlab turadi"
+          }
+        }
+      ]
+    },
+    {
+      "layout": "timeline",
+      "title": {
+        "en": "Postoperative instructions",
+        "ru": "Рекомендации после удаления зуба",
+        "uz": "Tish olishdan keyingi tavsiyalar"
+      },
+      "events": [
+        {
+          "when": {
+            "en": "First hour",
+            "ru": "Первый час",
+            "uz": "Birinchi soat"
+          },
+          "label": {
+            "en": "Bite on gauze, avoid talking",
+            "ru": "Держать тампон, меньше разговаривать",
+            "uz": "Tamponni tishlab turish, gapirmaslik"
+          }
+        },
+        {
+          "when": {
+            "en": "2–3 hours",
+            "ru": "2–3 часа",
+            "uz": "2–3 soat"
+          },
+          "label": {
+            "en": "No food until numbness wears off",
+            "ru": "Не есть до прохождения онемения",
+            "uz": "Uvishish o‘tguncha ovqat yemaslik"
+          }
+        },
+        {
+          "when": {
+            "en": "First 24 hours",
+            "ru": "Первые сутки",
+            "uz": "Birinchi kun"
+          },
+          "label": {
+            "en": "No rinsing, smoking or hot drinks; cold on the cheek",
+            "ru": "Не полоскать, не курить, не пить горячее, холод на щёку",
+            "uz": "Chayqamaslik, chekmaslik, issiq ichmaslik, yuzga sovuq"
+          }
+        },
+        {
+          "when": {
+            "en": "From day 2",
+            "ru": "Со 2-го дня",
+            "uz": "2-kundan"
+          },
+          "label": {
+            "en": "Gentle warm salt-water rinses after meals",
+            "ru": "Осторожные тёплые солевые ванночки после еды",
+            "uz": "Ovqatdan keyin iliq tuzli suv bilan ehtiyot chayish"
+          }
+        },
+        {
+          "when": {
+            "en": "5–7 days",
+            "ru": "5–7 дней",
+            "uz": "5–7 kun"
+          },
+          "label": {
+            "en": "Remove sutures if placed",
+            "ru": "При необходимости снять швы",
+            "uz": "Kerak bo‘lsa choklarni olish"
+          }
+        }
+      ],
+      "note": {
+        "en": "Give instructions verbally and in writing, and explain when to return: persistent bleeding, fever, or pain worsening after 2–3 days.",
+        "ru": "Рекомендации дают устно и письменно; объясните, когда обращаться: продолжающееся кровотечение, температура, усиление боли через 2–3 дня.",
+        "uz": "Tavsiyalar og‘zaki va yozma beriladi; bemorga qachon murojaat qilish kerakligini ayting: davomli qon ketish, isitma, 2–3 kundan keyin og‘riqning kuchayishi."
+      }
+    },
+    {
+      "layout": "bullets",
+      "title": {
+        "en": "Pain and swelling control",
+        "ru": "Контроль боли и отёка",
+        "uz": "Og‘riq va shishni boshqarish"
+      },
+      "bullets": [
+        {
+          "en": "Analgesia: usually an NSAID or paracetamol",
+          "ru": "Обезболивание: обычно НПВС или парацетамол",
+          "uz": "Og‘riq qoldiruvchi: odatda NSAID yoki paratsetamol"
+        },
+        {
+          "en": "Intermittent cold on the cheek on day one",
+          "ru": "В первые сутки — холод на щёку с перерывами",
+          "uz": "Birinchi kun yuzga vaqti-vaqti bilan sovuq"
+        },
+        {
+          "en": "Sleep with the head raised",
+          "ru": "Сон с приподнятой головой",
+          "uz": "Uxlashda boshni biroz baland qilish"
+        },
+        {
+          "en": "Antibiotics are not routine for simple extractions",
+          "ru": "При обычном удалении антибиотик не нужен",
+          "uz": "Antibiotik odatdagi tish olishda kerak emas"
+        }
+      ]
+    },
+    {
+      "layout": "summary",
+      "title": {
+        "en": "Summary",
+        "ru": "Итоги",
+        "uz": "Xulosa"
+      },
+      "bullets": [
+        {
+          "en": "Good positioning improves access and control",
+          "ru": "Правильное положение улучшает обзор и контроль усилия",
+          "uz": "To‘g‘ri holat ko‘rinish va kuchni nazorat qilishni yaxshilaydi"
+        },
+        {
+          "en": "Stages: syndesmotomy, forceps, luxation, traction",
+          "ru": "Этапы: синдесмотомия, щипцы, люксация, тракция",
+          "uz": "Bosqichlar: sindesmotomiya, qisqich, lyuksatsiya, traksiya"
+        },
+        {
+          "en": "Rotate only single round roots",
+          "ru": "Ротация — только при одном округлом корне",
+          "uz": "Rotatsiya faqat yumaloq bitta ildizda"
+        },
+        {
+          "en": "Protecting the clot is the basis of healing",
+          "ru": "Сохранение сгустка — основа заживления",
+          "uz": "Qon laxtasini saqlash – tuzalishning asosi"
+        }
+      ]
+    }
+  ],
+  "oral": [
+    {
+      "q": {
+        "en": "Describe patient and operator positions for upper and lower extractions.",
+        "ru": "Опишите положение пациента и врача при удалении верхних и нижних зубов.",
+        "uz": "Yuqori va pastki jag‘ tishlarini olishda bemor va shifokor holatini tavsiflang."
+      },
+      "plan": [
+        {
+          "en": "Upper: reclined, occlusal plane 60°, shoulder level",
+          "ru": "Верхние: кресло откинуто, окклюзия 60°, уровень плеча",
+          "uz": "Yuqori: kreslo orqaga, chaynov sathi 60°, yelka balandligi"
+        },
+        {
+          "en": "Lower: occlusal plane parallel to floor, elbow level",
+          "ru": "Нижние: окклюзия параллельна полу, уровень локтя",
+          "uz": "Pastki: chaynov sathi polga parallel, tirsak balandligi"
+        },
+        {
+          "en": "Operator in front-right, behind for lower right posteriors",
+          "ru": "Врач спереди справа, при нижних правых — сзади",
+          "uz": "Shifokor old-o‘ngda, pastki o‘ng orqa tishlarda orqada"
+        }
+      ]
+    },
+    {
+      "q": {
+        "en": "List the stages of extraction in order.",
+        "ru": "Назовите последовательно этапы удаления зуба.",
+        "uz": "Tish olish bosqichlarini ketma-ket aytib bering."
+      },
+      "plan": [
+        {
+          "en": "Confirm anaesthesia and syndesmotomy",
+          "ru": "Проверка анестезии и синдесмотомия",
+          "uz": "Anesteziyani tekshirish va sindesmotomiya"
+        },
+        {
+          "en": "Apply and secure the forceps",
+          "ru": "Наложение и фиксация щипцов",
+          "uz": "Qisqichni qo‘yish va mahkamlash"
+        },
+        {
+          "en": "Luxation and traction",
+          "ru": "Люксация и тракция",
+          "uz": "Lyuksatsiya va traksiya"
+        },
+        {
+          "en": "Inspect socket, compress walls, gauze pack",
+          "ru": "Ревизия лунки, сближение стенок, тампон",
+          "uz": "Lunkani tekshirish, devorlarni siqish, tampon"
+        }
+      ]
+    },
+    {
+      "q": {
+        "en": "Which teeth may be rotated, and why?",
+        "ru": "У каких зубов допустима ротация и почему?",
+        "uz": "Qaysi tishlarda rotatsion harakat qilish mumkin va nima uchun?"
+      },
+      "plan": [
+        {
+          "en": "Upper central incisor: conical root",
+          "ru": "Верхний центральный резец — конусовидный корень",
+          "uz": "Yuqori markaziy kesuvchi tish – konussimon ildiz"
+        },
+        {
+          "en": "Lower premolars: round root",
+          "ru": "Нижние премоляры — округлый корень",
+          "uz": "Pastki premolyarlar – yumaloq ildiz"
+        },
+        {
+          "en": "Not for flattened or multi-rooted teeth: fracture risk",
+          "ru": "Нельзя у уплощённых и многокорневых — перелом",
+          "uz": "Yassi va ko‘p ildizli tishlarda mumkin emas – sinish"
+        }
+      ]
+    },
+    {
+      "q": {
+        "en": "What instructions are given after extraction?",
+        "ru": "Какие рекомендации дают пациенту после удаления?",
+        "uz": "Tish olishdan keyin bemorga qanday tavsiyalar beriladi?"
+      },
+      "plan": [
+        {
+          "en": "Bite on gauze for 20–30 minutes",
+          "ru": "Держать тампон 20–30 минут",
+          "uz": "Tamponni 20–30 daqiqa tishlab turish"
+        },
+        {
+          "en": "First day: no rinsing, smoking or hot drinks",
+          "ru": "В первые сутки не полоскать, не курить, не пить горячее",
+          "uz": "Birinchi kun chayqamaslik, chekmaslik, issiq ichmaslik"
+        },
+        {
+          "en": "Cold compress, analgesics, soft diet",
+          "ru": "Холод, обезболивающие, мягкая пища",
+          "uz": "Sovuq, og‘riq qoldiruvchi, yumshoq ovqat"
+        },
+        {
+          "en": "Return for bleeding, fever or worsening pain",
+          "ru": "Обратиться при кровотечении, температуре, усилении боли",
+          "uz": "Qon ketish, isitma, og‘riq kuchaysa murojaat"
+        }
+      ]
+    }
+  ],
+  "test": [
+    {
+      "q": {
+        "en": "At what height should the patient's mouth be for maxillary extractions?",
+        "ru": "На каком уровне должен быть рот пациента при удалении верхних зубов?",
+        "uz": "Yuqori jag‘ tishlarini olishda bemor og‘zi qaysi balandlikda bo‘lishi kerak?"
+      },
+      "options": [
+        {
+          "en": "Operator's knee",
+          "ru": "Колена врача",
+          "uz": "Shifokor tizzasi"
+        },
+        {
+          "en": "Operator's waist",
+          "ru": "Пояса врача",
+          "uz": "Shifokor beli"
+        },
+        {
+          "en": "Operator's shoulder",
+          "ru": "Плеча врача",
+          "uz": "Shifokor yelkasi"
+        },
+        {
+          "en": "Above the operator's head",
+          "ru": "Выше головы врача",
+          "uz": "Shifokor boshi ustida"
+        }
+      ],
+      "correct": 2,
+      "explain": {
+        "en": "For maxillary teeth the mouth at shoulder level gives good vision and control.",
+        "ru": "При удалении верхних зубов рот пациента на уровне плеча врача обеспечивает обзор и контроль усилия.",
+        "uz": "Yuqori jag‘da bemor og‘zi shifokor yelkasi balandligida bo‘lsa ko‘rinish va kuchni nazorat qilish qulay."
+      }
+    },
+    {
+      "q": {
+        "en": "What is the purpose of syndesmotomy?",
+        "ru": "Какова цель синдесмотомии?",
+        "uz": "Sindesmotomiyaning maqsadi nima?"
+      },
+      "options": [
+        {
+          "en": "Detach the gingiva so the forceps seat deeper",
+          "ru": "Отделить десну и глубже наложить щипцы",
+          "uz": "Milk birikmasini ajratib, qisqichni chuqur qo‘yish"
+        },
+        {
+          "en": "Section the roots",
+          "ru": "Разделить корни",
+          "uz": "Ildizlarni bo‘lish"
+        },
+        {
+          "en": "Curette the socket",
+          "ru": "Выполнить кюретаж лунки",
+          "uz": "Lunkani kyuretaj qilish"
+        },
+        {
+          "en": "Place sutures",
+          "ru": "Наложить швы",
+          "uz": "Tikuv qo‘yish"
+        }
+      ],
+      "correct": 0,
+      "explain": {
+        "en": "Detaching the cuff lets the beaks go subgingivally without tearing the gingiva.",
+        "ru": "После отслоения связки щёчки щипцов продвигаются под десну, и десна не разрывается.",
+        "uz": "Milk birikmasi ajratilsa qisqich jag‘lari milk ostiga siljiydi va milk yirtilmaydi."
+      }
+    },
+    {
+      "q": {
+        "en": "For which tooth is rotation the main extraction movement?",
+        "ru": "Для какого зуба ротация — основное движение при удалении?",
+        "uz": "Qaysi tishni olishda rotatsion harakat asosiy hisoblanadi?"
+      },
+      "options": [
+        {
+          "en": "Maxillary first premolar",
+          "ru": "Верхний первый премоляр",
+          "uz": "Yuqori birinchi premolyar"
+        },
+        {
+          "en": "Mandibular first molar",
+          "ru": "Нижний первый моляр",
+          "uz": "Pastki birinchi molyar"
+        },
+        {
+          "en": "Maxillary first molar",
+          "ru": "Верхний первый моляр",
+          "uz": "Yuqori birinchi molyar"
+        },
+        {
+          "en": "Maxillary central incisor",
+          "ru": "Верхний центральный резец",
+          "uz": "Yuqori markaziy kesuvchi tish"
+        }
+      ],
+      "correct": 3,
+      "explain": {
+        "en": "The maxillary central incisor has a single conical root, so rotation is safe and effective.",
+        "ru": "У верхнего центрального резца один конусовидный корень, поэтому ротация безопасна и эффективна.",
+        "uz": "Yuqori markaziy kesuvchi tishning ildizi konussimon va bitta, shuning uchun rotatsiya xavfsiz va samarali."
+      }
+    },
+    {
+      "q": {
+        "en": "Why is rotation avoided for a maxillary first premolar?",
+        "ru": "Почему при удалении верхнего первого премоляра не делают ротацию?",
+        "uz": "Yuqori birinchi premolyarni olishda nima uchun rotatsiya qilinmaydi?"
+      },
+      "options": [
+        {
+          "en": "The crown is too large",
+          "ru": "Слишком большая коронка",
+          "uz": "Toj juda katta"
+        },
+        {
+          "en": "It usually has two thin roots",
+          "ru": "Обычно два тонких корня",
+          "uz": "Odatda ikki ingichka ildiz bor"
+        },
+        {
+          "en": "The tooth is too mobile",
+          "ru": "Зуб слишком подвижен",
+          "uz": "Tish juda qimirlaydi"
+        },
+        {
+          "en": "Anaesthesia is inadequate",
+          "ru": "Недостаточна анестезия",
+          "uz": "Anesteziya yetarli emas"
+        }
+      ],
+      "correct": 1,
+      "explain": {
+        "en": "Two thin roots fracture easily on rotation, so gentle buccopalatal movements are used.",
+        "ru": "Два тонких корня легко ломаются при ротации; применяют осторожные щёчно-нёбные движения.",
+        "uz": "Ikki ingichka ildiz rotatsiyada osonlikcha sinadi; ehtiyotkor lunj-tanglay harakatlari qo‘llanadi."
+      }
+    },
+    {
+      "q": {
+        "en": "Where should the forceps beaks be placed?",
+        "ru": "Куда накладывают щёчки щипцов?",
+        "uz": "Qisqich jag‘larini qayerga qo‘yish kerak?"
+      },
+      "options": [
+        {
+          "en": "Apical to the CEJ, on the root",
+          "ru": "Апикальнее эмалево-цементной границы, на корень",
+          "uz": "Emal-sement chegarasidan apikalroq, ildizga"
+        },
+        {
+          "en": "On the crown only",
+          "ru": "Только на коронку",
+          "uz": "Faqat tojga"
+        },
+        {
+          "en": "On the adjacent tooth",
+          "ru": "На соседний зуб",
+          "uz": "Qo‘shni tishga"
+        },
+        {
+          "en": "On the gingiva",
+          "ru": "На десну",
+          "uz": "Milk ustiga"
+        }
+      ],
+      "correct": 0,
+      "explain": {
+        "en": "Gripping the root transmits force along it and reduces the risk of crown fracture.",
+        "ru": "Захват корня передаёт усилие по его оси и снижает риск отлома коронки.",
+        "uz": "Jag‘lar ildizni ushlasa kuch ildiz bo‘ylab uzatiladi va toj sinishi xavfi kamayadi."
+      }
+    },
+    {
+      "q": {
+        "en": "How long should the patient bite on the gauze after extraction?",
+        "ru": "Сколько пациент должен держать тампон после удаления?",
+        "uz": "Tish olingandan keyin bemorga tamponni qancha vaqt tishlab turish tavsiya qilinadi?"
+      },
+      "options": [
+        {
+          "en": "2–3 minutes",
+          "ru": "2–3 минуты",
+          "uz": "2–3 daqiqa"
+        },
+        {
+          "en": "Overnight",
+          "ru": "Всю ночь",
+          "uz": "Bir kecha"
+        },
+        {
+          "en": "20–30 minutes",
+          "ru": "20–30 минут",
+          "uz": "20–30 daqiqa"
+        },
+        {
+          "en": "3 hours",
+          "ru": "3 часа",
+          "uz": "3 soat"
+        }
+      ],
+      "correct": 2,
+      "explain": {
+        "en": "Pressure for 20–30 minutes helps a stable clot form in the socket.",
+        "ru": "Давление в течение 20–30 минут способствует образованию стабильного сгустка.",
+        "uz": "20–30 daqiqa bosim lunkada barqaror qon laxtasi hosil bo‘lishiga yordam beradi."
+      }
+    },
+    {
+      "q": {
+        "en": "On the day of extraction the patient rinsed vigorously and the socket emptied. Which complication becomes more likely?",
+        "ru": "В день удаления пациент интенсивно полоскал рот, лунка опустела. Риск какого осложнения растёт?",
+        "uz": "Tish olingan kuni bemor og‘zini kuchli chayqadi va lunka bo‘sh qoldi. Qanday asorat xavfi ortadi?"
+      },
+      "options": [
+        {
+          "en": "Facial nerve palsy",
+          "ru": "Парез лицевого нерва",
+          "uz": "Yuz nervi falaji"
+        },
+        {
+          "en": "Gingivitis",
+          "ru": "Гингивит",
+          "uz": "Gingivit"
+        },
+        {
+          "en": "Pulpitis",
+          "ru": "Пульпит",
+          "uz": "Pulpit"
+        },
+        {
+          "en": "Alveolar osteitis (dry socket)",
+          "ru": "Альвеолит (сухая лунка)",
+          "uz": "Alveolit (quruq lunka)"
+        }
+      ],
+      "correct": 3,
+      "explain": {
+        "en": "Losing the clot exposes bone and raises the risk of dry socket.",
+        "ru": "При утрате сгустка кость обнажается и растёт риск альвеолита.",
+        "uz": "Qon laxtasi yo‘qolsa suyak ochiq qoladi va alveolit rivojlanish xavfi ortadi."
+      }
+    },
+    {
+      "q": {
+        "en": "How is the lower occlusal plane positioned for mandibular extractions?",
+        "ru": "Как располагается нижняя окклюзионная плоскость при удалении нижних зубов?",
+        "uz": "Pastki jag‘ tishlarini olishda pastki chaynov sathi qanday joylashadi?"
+      },
+      "options": [
+        {
+          "en": "Parallel to the floor",
+          "ru": "Параллельно полу",
+          "uz": "Polga parallel"
+        },
+        {
+          "en": "Perpendicular to the floor",
+          "ru": "Перпендикулярно полу",
+          "uz": "Polga perpendikulyar"
+        },
+        {
+          "en": "At 60° to the floor",
+          "ru": "Под углом 60° к полу",
+          "uz": "Polga 60°"
+        },
+        {
+          "en": "It does not matter",
+          "ru": "Не имеет значения",
+          "uz": "Ahamiyati yo‘q"
+        }
+      ],
+      "correct": 0,
+      "explain": {
+        "en": "With the mouth open the lower occlusal plane should be parallel to the floor, at elbow level.",
+        "ru": "При открытом рте нижняя окклюзионная плоскость параллельна полу, рот — на уровне локтя врача.",
+        "uz": "Bemor og‘zini ochganda pastki chaynov sathi polga parallel bo‘lishi kerak, og‘iz esa tirsak balandligida."
+      }
+    },
+    {
+      "q": {
+        "en": "What is usually advised for pain after a simple extraction?",
+        "ru": "Что обычно рекомендуют для обезболивания после простого удаления?",
+        "uz": "Oddiy tish olishdan keyin og‘riqni qoldirish uchun odatda nima tavsiya etiladi?"
+      },
+      "options": [
+        {
+          "en": "Strong opioids",
+          "ru": "Сильные опиоиды",
+          "uz": "Kuchli opioidlar"
+        },
+        {
+          "en": "An NSAID or paracetamol",
+          "ru": "НПВС или парацетамол",
+          "uz": "NSAID yoki paratsetamol"
+        },
+        {
+          "en": "Antibiotics",
+          "ru": "Антибиотики",
+          "uz": "Antibiotiklar"
+        },
+        {
+          "en": "Heat on the first day",
+          "ru": "Тепло в первые сутки",
+          "uz": "Issiq kompress birinchi kuni"
+        }
+      ],
+      "correct": 1,
+      "explain": {
+        "en": "Pain after simple extraction is usually well controlled with an NSAID or paracetamol.",
+        "ru": "Боль после простого удаления обычно хорошо купируется НПВС или парацетамолом.",
+        "uz": "Oddiy tish olishdan keyingi og‘riq odatda NSAID yoki paratsetamol bilan yaxshi nazorat qilinadi."
+      }
+    },
+    {
+      "q": {
+        "en": "Why are the socket walls compressed with the fingers after extraction?",
+        "ru": "Зачем после удаления сдавливают стенки лунки пальцами?",
+        "uz": "Tish olingach, lunka devorlarini barmoq bilan siqish nima uchun kerak?"
+      },
+      "options": [
+        {
+          "en": "To replace sutures",
+          "ru": "Вместо наложения швов",
+          "uz": "Tikuvni almashtirish uchun"
+        },
+        {
+          "en": "To relieve pain",
+          "ru": "Для обезболивания",
+          "uz": "Og‘riqni yo‘qotish uchun"
+        },
+        {
+          "en": "To restore the expanded alveolus",
+          "ru": "Чтобы вернуть расширенную альвеолу на место",
+          "uz": "Kengaygan alveolani joyiga qaytarish uchun"
+        },
+        {
+          "en": "To keep it bleeding",
+          "ru": "Чтобы не останавливать кровь",
+          "uz": "Qonni to‘xtatmaslik uchun"
+        }
+      ],
+      "correct": 2,
+      "explain": {
+        "en": "Compressing walls expanded during luxation restores alveolar shape and aids healing.",
+        "ru": "Сдавление расширенных при люксации стенок восстанавливает форму альвеолы и улучшает заживление.",
+        "uz": "Lyuksatsiya paytida kengaygan alveola devorlari siqilsa, suyak shakli tiklanadi va tuzalish yaxshilanadi."
+      }
+    }
+  ]
+}

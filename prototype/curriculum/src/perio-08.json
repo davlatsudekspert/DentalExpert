@@ -1,0 +1,985 @@
+{
+  "id": "perio-08",
+  "subject": "perio",
+  "n": 8,
+  "week": 8,
+  "type": "lecture",
+  "hours": 2,
+  "title": {
+    "en": "Supportive periodontal care and peri-implant diseases",
+    "ru": "Поддерживающая терапия и периимплантные заболевания",
+    "uz": "Qo‘llab-quvvatlovchi parodontal davolash va implant atrofi kasalliklari"
+  },
+  "goals": [
+    {
+      "en": "Plan supportive periodontal care with risk-based recall intervals",
+      "ru": "Планировать поддерживающую терапию с интервалами по риску",
+      "uz": "Xavfga asoslangan oraliqlar bilan qo‘llab-quvvatlovchi davolashni rejalashtirish"
+    },
+    {
+      "en": "Distinguish peri-implant health, mucositis and peri-implantitis",
+      "ru": "Различать здоровье тканей вокруг имплантата, мукозит и периимплантит",
+      "uz": "Implant atrofi salomatligi, mukozit va periimplantitni farqlash"
+    },
+    {
+      "en": "Outline prevention and first-line management of peri-implant diseases",
+      "ru": "Изложить профилактику и первичное лечение периимплантных заболеваний",
+      "uz": "Implant atrofi kasalliklarining oldini olish va birlamchi davolashni bayon qilish"
+    }
+  ],
+  "links": [
+    "oral-hygiene",
+    "periodontium"
+  ],
+  "sources": [
+    "Sanz M et al. Treatment of stage I–III periodontitis: The EFP S3 level clinical practice guideline. J Clin Periodontol 2020",
+    "Berglundh T et al. Peri-implant diseases and conditions: Consensus report of workgroup 4. J Clin Periodontol 2018",
+    "Lang NP, Lindhe J. Clinical Periodontology and Implant Dentistry, 6th ed., 2015"
+  ],
+  "slides": [
+    {
+      "layout": "title",
+      "title": {
+        "en": "Supportive care and peri-implant diseases",
+        "ru": "Поддерживающая терапия и периимплантные заболевания",
+        "uz": "Qo‘llab-quvvatlovchi davolash va implant atrofi kasalliklari"
+      },
+      "subtitle": {
+        "en": "Keeping teeth and implants healthy for life",
+        "ru": "Сохранение зубов и имплантатов здоровыми на всю жизнь",
+        "uz": "Tish va implantlarni umrbod sog‘lom saqlash"
+      }
+    },
+    {
+      "layout": "key",
+      "title": {
+        "en": "Supportive periodontal care",
+        "ru": "Поддерживающая пародонтальная терапия",
+        "uz": "Qo‘llab-quvvatlovchi parodontal davolash"
+      },
+      "term": {
+        "en": "Step 4: SPC",
+        "ru": "Этап 4: поддерживающая терапия",
+        "uz": "4-bosqich: qo‘llab-quvvatlovchi davolash"
+      },
+      "definition": {
+        "en": "Regular recall visits after active therapy that monitor periodontal status, reinforce hygiene, control risk factors and re-treat sites that relapse; the patient remains a periodontitis patient for life.",
+        "ru": "Регулярные визиты после активного лечения для контроля состояния пародонта, укрепления гигиены, контроля факторов риска и повторного лечения участков с рецидивом; пациент остаётся пациентом с пародонтитом пожизненно.",
+        "uz": "Faol davolashdan keyin parodont holatini kuzatish, gigiyenani mustahkamlash, xavf omillarini nazorat qilish va qaytalangan nuqtalarni qayta davolash uchun muntazam tashriflar; bemor umrbod parodontitli bemor bo‘lib qoladi."
+      },
+      "note": {
+        "en": "Stress that without supportive care, recurrence and tooth loss are common after successful therapy.",
+        "ru": "Подчеркните, что без поддерживающей терапии рецидив и потеря зубов после успешного лечения часты.",
+        "uz": "Qo‘llab-quvvatlovchi davolashsiz muvaffaqiyatli davolashdan keyin ham qaytalanish va tish yo‘qolishi ko‘p uchrashini ta’kidlang."
+      }
+    },
+    {
+      "layout": "flow",
+      "title": {
+        "en": "A supportive care visit",
+        "ru": "Визит поддерживающей терапии",
+        "uz": "Qo‘llab-quvvatlovchi davolash tashrifi"
+      },
+      "steps": [
+        {
+          "label": {
+            "en": "Update history",
+            "ru": "Обновить анамнез",
+            "uz": "Anamnezni yangilash"
+          },
+          "detail": {
+            "en": "Health, medicines, smoking",
+            "ru": "Здоровье, лекарства, курение",
+            "uz": "Salomatlik, dorilar, chekish"
+          }
+        },
+        {
+          "label": {
+            "en": "Re-examine",
+            "ru": "Повторное обследование",
+            "uz": "Qayta tekshirish"
+          },
+          "detail": {
+            "en": "Plaque, BOP, PD, implants",
+            "ru": "Налёт, кровоточивость, карманы, имплантаты",
+            "uz": "Karash, qonash, cho‘ntaklar, implantlar"
+          }
+        },
+        {
+          "label": {
+            "en": "Reinforce hygiene",
+            "ru": "Укрепить гигиену",
+            "uz": "Gigiyenani mustahkamlash"
+          },
+          "detail": {
+            "en": "Target problem sites",
+            "ru": "Проблемные участки",
+            "uz": "Muammoli nuqtalar"
+          }
+        },
+        {
+          "label": {
+            "en": "Professional cleaning",
+            "ru": "Профессиональная чистка",
+            "uz": "Professional tozalash"
+          },
+          "detail": {
+            "en": "Supra- and subgingival",
+            "ru": "Над- и поддесневая",
+            "uz": "Milk usti va osti"
+          }
+        },
+        {
+          "label": {
+            "en": "Set next recall",
+            "ru": "Назначить следующий визит",
+            "uz": "Keyingi tashrifni belgilash"
+          },
+          "detail": {
+            "en": "Based on risk",
+            "ru": "С учётом риска",
+            "uz": "Xavfga ko‘ra"
+          }
+        }
+      ]
+    },
+    {
+      "layout": "cycle",
+      "title": {
+        "en": "Periodontal risk assessment",
+        "ru": "Оценка пародонтального риска",
+        "uz": "Parodontal xavfni baholash"
+      },
+      "center": {
+        "en": "Recall interval",
+        "ru": "Интервал визитов",
+        "uz": "Tashriflar oralig‘i"
+      },
+      "steps": [
+        {
+          "label": {
+            "en": "Percentage of BOP",
+            "ru": "Процент кровоточивости",
+            "uz": "Qonash foizi"
+          }
+        },
+        {
+          "label": {
+            "en": "Pockets ≥5 mm",
+            "ru": "Карманы ≥5 мм",
+            "uz": "≥5 mm cho‘ntaklar"
+          }
+        },
+        {
+          "label": {
+            "en": "Teeth lost",
+            "ru": "Потерянные зубы",
+            "uz": "Yo‘qolgan tishlar"
+          }
+        },
+        {
+          "label": {
+            "en": "Bone loss for age",
+            "ru": "Убыль кости к возрасту",
+            "uz": "Yoshga nisbatan suyak yo‘qolishi"
+          }
+        },
+        {
+          "label": {
+            "en": "Systemic conditions",
+            "ru": "Системные состояния",
+            "uz": "Tizimli holatlar"
+          }
+        },
+        {
+          "label": {
+            "en": "Smoking",
+            "ru": "Курение",
+            "uz": "Chekish"
+          }
+        }
+      ],
+      "note": {
+        "en": "Show how a patient with many residual pockets and smoking moves to shorter recall.",
+        "ru": "Покажите, как пациент с остаточными карманами и курением переходит на частые визиты.",
+        "uz": "Ko‘p qolgan cho‘ntaklari bo‘lgan chekuvchi bemor qanday qilib qisqaroq oraliqqa o‘tishini ko‘rsating."
+      }
+    },
+    {
+      "layout": "bullets",
+      "title": {
+        "en": "Recall intervals",
+        "ru": "Интервалы визитов",
+        "uz": "Tashriflar oralig‘i"
+      },
+      "bullets": [
+        {
+          "en": "Commonly every 3–12 months, set by individual risk",
+          "ru": "Обычно каждые 3–12 месяцев, по индивидуальному риску",
+          "uz": "Odatda har 3–12 oyda, individual xavfga qarab"
+        },
+        {
+          "en": "Often about 3 months in the first period after therapy",
+          "ru": "Часто около 3 месяцев в первый период после лечения",
+          "uz": "Davolashdan keyingi birinchi davrda ko‘pincha taxminan 3 oy"
+        },
+        {
+          "en": "Low-risk stable patients may be seen less often",
+          "ru": "Стабильных пациентов низкого риска можно видеть реже",
+          "uz": "Barqaror past xavfli bemorlarni kamroq ko‘rish mumkin"
+        },
+        {
+          "en": "Relapsing sites are re-treated",
+          "ru": "Участки с рецидивом лечат повторно",
+          "uz": "Qaytalangan nuqtalar qayta davolanadi"
+        }
+      ]
+    },
+    {
+      "layout": "table",
+      "title": {
+        "en": "Peri-implant conditions",
+        "ru": "Состояния тканей вокруг имплантата",
+        "uz": "Implant atrofi to‘qimalari holatlari"
+      },
+      "head": [
+        {
+          "en": "Condition",
+          "ru": "Состояние",
+          "uz": "Holat"
+        },
+        {
+          "en": "Bleeding or pus",
+          "ru": "Кровоточивость или гной",
+          "uz": "Qonash yoki yiring"
+        },
+        {
+          "en": "Bone loss",
+          "ru": "Убыль кости",
+          "uz": "Suyak yo‘qolishi"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "en": "Peri-implant health",
+            "ru": "Здоровье тканей",
+            "uz": "To‘qimalar salomatligi"
+          },
+          {
+            "en": "Absent",
+            "ru": "Нет",
+            "uz": "Yo‘q"
+          },
+          {
+            "en": "None beyond initial remodelling",
+            "ru": "Нет сверх начального ремоделирования",
+            "uz": "Boshlang‘ich qayta tuzilishdan ortiq yo‘q"
+          }
+        ],
+        [
+          {
+            "en": "Peri-implant mucositis",
+            "ru": "Периимплантный мукозит",
+            "uz": "Implant atrofi mukoziti"
+          },
+          {
+            "en": "Present",
+            "ru": "Есть",
+            "uz": "Bor"
+          },
+          {
+            "en": "None beyond initial remodelling",
+            "ru": "Нет сверх начального ремоделирования",
+            "uz": "Boshlang‘ich qayta tuzilishdan ortiq yo‘q"
+          }
+        ],
+        [
+          {
+            "en": "Peri-implantitis",
+            "ru": "Периимплантит",
+            "uz": "Periimplantit"
+          },
+          {
+            "en": "Present",
+            "ru": "Есть",
+            "uz": "Bor"
+          },
+          {
+            "en": "Progressive loss",
+            "ru": "Прогрессирующая убыль",
+            "uz": "Zo‘rayib boruvchi yo‘qolish"
+          }
+        ]
+      ],
+      "note": {
+        "en": "Stress that bone loss beyond initial remodelling separates peri-implantitis from mucositis.",
+        "ru": "Подчеркните: убыль кости сверх начального ремоделирования отличает периимплантит от мукозита.",
+        "uz": "Boshlang‘ich qayta tuzilishdan ortiq suyak yo‘qolishi periimplantitni mukozitdan ajratishini ta’kidlang."
+      }
+    },
+    {
+      "layout": "bullets",
+      "title": {
+        "en": "Peri-implantitis without baseline data",
+        "ru": "Периимплантит без исходных данных",
+        "uz": "Boshlang‘ich ma’lumotsiz periimplantit"
+      },
+      "bullets": [
+        {
+          "en": "Bleeding and/or suppuration on gentle probing",
+          "ru": "Кровоточивость и/или гноетечение при бережном зондировании",
+          "uz": "Yengil zondlashda qonash va/yoki yiringlash"
+        },
+        {
+          "en": "Probing depth of 6 mm or more",
+          "ru": "Глубина зондирования 6 мм и более",
+          "uz": "Zondlash chuqurligi 6 mm va undan ko‘p"
+        },
+        {
+          "en": "Bone level 3 mm or more apical to the implant's intraosseous top",
+          "ru": "Кость на 3 мм и более апикальнее верхней внутрикостной части",
+          "uz": "Suyak implant suyak ichi qismining yuqorisidan 3 mm va undan ko‘p pastda"
+        },
+        {
+          "en": "Take baseline radiograph and probing at prosthesis delivery",
+          "ru": "Исходный снимок и зондирование при установке протеза",
+          "uz": "Protez o‘rnatilganda boshlang‘ich rentgen va zondlash"
+        }
+      ]
+    },
+    {
+      "layout": "compare",
+      "title": {
+        "en": "Risk indicators for peri-implantitis",
+        "ru": "Индикаторы риска периимплантита",
+        "uz": "Periimplantit xavf indikatorlari"
+      },
+      "columns": [
+        {
+          "head": {
+            "en": "Strong evidence",
+            "ru": "Сильные доказательства",
+            "uz": "Kuchli dalillar"
+          },
+          "items": [
+            {
+              "en": "History of severe periodontitis",
+              "ru": "Тяжёлый пародонтит в анамнезе",
+              "uz": "Anamnezda og‘ir parodontit"
+            },
+            {
+              "en": "Poor plaque control",
+              "ru": "Плохая гигиена",
+              "uz": "Yomon gigiyena"
+            },
+            {
+              "en": "No regular maintenance",
+              "ru": "Отсутствие регулярной поддержки",
+              "uz": "Muntazam parvarishning yo‘qligi"
+            }
+          ]
+        },
+        {
+          "head": {
+            "en": "Weaker or less clear evidence",
+            "ru": "Менее чёткие данные",
+            "uz": "Kamroq aniq dalillar"
+          },
+          "items": [
+            {
+              "en": "Smoking",
+              "ru": "Курение",
+              "uz": "Chekish"
+            },
+            {
+              "en": "Diabetes",
+              "ru": "Диабет",
+              "uz": "Diabet"
+            },
+            {
+              "en": "Excess cement, uncleanable prosthesis",
+              "ru": "Избыток цемента, неочищаемый протез",
+              "uz": "Ortiqcha sement, tozalanmaydigan protez"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "layout": "flow",
+      "title": {
+        "en": "Managing peri-implant disease",
+        "ru": "Лечение периимплантных заболеваний",
+        "uz": "Implant atrofi kasalliklarini davolash"
+      },
+      "steps": [
+        {
+          "label": {
+            "en": "Diagnose",
+            "ru": "Диагностика",
+            "uz": "Tashxis"
+          },
+          "detail": {
+            "en": "Probe gently, compare radiographs",
+            "ru": "Бережное зондирование, сравнение снимков",
+            "uz": "Yengil zondlash, rentgenlarni solishtirish"
+          }
+        },
+        {
+          "label": {
+            "en": "Remove causes",
+            "ru": "Устранить причины",
+            "uz": "Sabablarni bartaraf etish"
+          },
+          "detail": {
+            "en": "Excess cement, poor contours",
+            "ru": "Избыток цемента, плохой контур",
+            "uz": "Ortiqcha sement, yomon kontur"
+          }
+        },
+        {
+          "label": {
+            "en": "Non-surgical debridement",
+            "ru": "Нехирургическая обработка",
+            "uz": "Jarrohliksiz tozalash"
+          },
+          "detail": {
+            "en": "Mucositis usually resolves",
+            "ru": "Мукозит обычно проходит",
+            "uz": "Mukozit odatda o‘tib ketadi"
+          }
+        },
+        {
+          "label": {
+            "en": "Surgery if needed",
+            "ru": "Хирургия при необходимости",
+            "uz": "Zarur bo‘lsa jarrohlik"
+          },
+          "detail": {
+            "en": "Peri-implantitis often needs it",
+            "ru": "При периимплантите часто нужна",
+            "uz": "Periimplantitda ko‘pincha kerak"
+          }
+        },
+        {
+          "label": {
+            "en": "Maintain",
+            "ru": "Поддержка",
+            "uz": "Parvarish"
+          },
+          "detail": {
+            "en": "Regular implant recall",
+            "ru": "Регулярные визиты",
+            "uz": "Muntazam tashriflar"
+          }
+        }
+      ],
+      "note": {
+        "en": "Ask why mucositis should be treated promptly even though it is reversible.",
+        "ru": "Спросите, почему мукозит нужно лечить сразу, хотя он обратим.",
+        "uz": "Mukozit qaytar bo‘lsa ham nima uchun darhol davolash kerakligini so‘rang."
+      }
+    },
+    {
+      "layout": "summary",
+      "title": {
+        "en": "Summary",
+        "ru": "Итоги",
+        "uz": "Xulosa"
+      },
+      "bullets": [
+        {
+          "en": "Supportive care is lifelong and risk-based",
+          "ru": "Поддерживающая терапия пожизненна и зависит от риска",
+          "uz": "Qo‘llab-quvvatlovchi davolash umrbod va xavfga asoslangan"
+        },
+        {
+          "en": "Mucositis: bleeding without bone loss, reversible",
+          "ru": "Мукозит: кровоточивость без убыли кости, обратим",
+          "uz": "Mukozit: suyak yo‘qolmasdan qonash, qaytar"
+        },
+        {
+          "en": "Peri-implantitis: inflammation with progressive bone loss",
+          "ru": "Периимплантит: воспаление с прогрессирующей убылью кости",
+          "uz": "Periimplantit: zo‘rayib boruvchi suyak yo‘qolishi bilan yallig‘lanish"
+        },
+        {
+          "en": "Periodontitis history and poor maintenance raise implant risk",
+          "ru": "Пародонтит в анамнезе и отсутствие поддержки повышают риск",
+          "uz": "Parodontit anamnezi va parvarishsizlik implant xavfini oshiradi"
+        }
+      ]
+    }
+  ],
+  "oral": [
+    {
+      "q": {
+        "en": "What is done at a supportive periodontal care visit?",
+        "ru": "Что выполняется на визите поддерживающей терапии?",
+        "uz": "Qo‘llab-quvvatlovchi davolash tashrifida nimalar bajariladi?"
+      },
+      "plan": [
+        {
+          "en": "Update medical history and risk factors",
+          "ru": "Обновление анамнеза и факторов риска",
+          "uz": "Anamnez va xavf omillarini yangilash"
+        },
+        {
+          "en": "Re-examination: plaque, BOP, probing depths",
+          "ru": "Повторное обследование: налёт, кровоточивость, карманы",
+          "uz": "Qayta tekshiruv: karash, qonash, cho‘ntaklar"
+        },
+        {
+          "en": "Reinforce hygiene and professional cleaning",
+          "ru": "Укрепление гигиены и профессиональная чистка",
+          "uz": "Gigiyenani mustahkamlash va professional tozalash"
+        },
+        {
+          "en": "Re-treat relapsing sites, set recall by risk",
+          "ru": "Лечение рецидивов, интервал по риску",
+          "uz": "Qaytalanganlarni davolash, oraliqni xavfga ko‘ra belgilash"
+        }
+      ]
+    },
+    {
+      "q": {
+        "en": "How is the recall interval decided?",
+        "ru": "Как определяют интервал между визитами?",
+        "uz": "Tashriflar oralig‘i qanday belgilanadi?"
+      },
+      "plan": [
+        {
+          "en": "Individual risk assessment",
+          "ru": "Индивидуальная оценка риска",
+          "uz": "Individual xavfni baholash"
+        },
+        {
+          "en": "BOP percentage, residual pockets, tooth loss",
+          "ru": "Процент кровоточивости, остаточные карманы, потеря зубов",
+          "uz": "Qonash foizi, qolgan cho‘ntaklar, tish yo‘qolishi"
+        },
+        {
+          "en": "Smoking and systemic conditions",
+          "ru": "Курение и системные состояния",
+          "uz": "Chekish va tizimli holatlar"
+        },
+        {
+          "en": "Commonly 3–12 months",
+          "ru": "Обычно 3–12 месяцев",
+          "uz": "Odatda 3–12 oy"
+        }
+      ]
+    },
+    {
+      "q": {
+        "en": "Compare peri-implant mucositis and peri-implantitis.",
+        "ru": "Сравните периимплантный мукозит и периимплантит.",
+        "uz": "Implant atrofi mukoziti va periimplantitni solishtiring."
+      },
+      "plan": [
+        {
+          "en": "Both show bleeding and/or suppuration",
+          "ru": "При обоих — кровоточивость и/или гной",
+          "uz": "Ikkalasida qonash va/yoki yiring bor"
+        },
+        {
+          "en": "Mucositis: no bone loss beyond remodelling",
+          "ru": "Мукозит: нет убыли кости сверх ремоделирования",
+          "uz": "Mukozit: qayta tuzilishdan ortiq suyak yo‘qolmagan"
+        },
+        {
+          "en": "Peri-implantitis: progressive bone loss, deeper pockets",
+          "ru": "Периимплантит: прогрессирующая убыль кости, глубже карманы",
+          "uz": "Periimplantit: zo‘rayib boruvchi suyak yo‘qolishi, chuqurroq cho‘ntaklar"
+        },
+        {
+          "en": "Mucositis is reversible; peri-implantitis is harder to treat",
+          "ru": "Мукозит обратим; периимплантит лечить сложнее",
+          "uz": "Mukozit qaytar; periimplantitni davolash qiyinroq"
+        }
+      ]
+    },
+    {
+      "q": {
+        "en": "Which factors increase the risk of peri-implantitis?",
+        "ru": "Какие факторы повышают риск периимплантита?",
+        "uz": "Qaysi omillar periimplantit xavfini oshiradi?"
+      },
+      "plan": [
+        {
+          "en": "History of severe periodontitis",
+          "ru": "Тяжёлый пародонтит в анамнезе",
+          "uz": "Anamnezda og‘ir parodontit"
+        },
+        {
+          "en": "Poor plaque control",
+          "ru": "Плохая гигиена",
+          "uz": "Yomon gigiyena"
+        },
+        {
+          "en": "No regular maintenance",
+          "ru": "Отсутствие регулярной поддержки",
+          "uz": "Muntazam parvarishning yo‘qligi"
+        },
+        {
+          "en": "Residual cement and uncleanable prostheses",
+          "ru": "Остатки цемента и неочищаемые протезы",
+          "uz": "Sement qoldiqlari va tozalanmaydigan protezlar"
+        }
+      ]
+    }
+  ],
+  "test": [
+    {
+      "q": {
+        "en": "Supportive periodontal care corresponds to which step of the EFP S3 guideline?",
+        "ru": "Поддерживающая терапия соответствует какому этапу руководства EFP S3?",
+        "uz": "Qo‘llab-quvvatlovchi davolash EFP S3 qo‘llanmasining qaysi bosqichiga mos?"
+      },
+      "options": [
+        {
+          "en": "Step 1",
+          "ru": "Этап 1",
+          "uz": "1-bosqich"
+        },
+        {
+          "en": "Step 2",
+          "ru": "Этап 2",
+          "uz": "2-bosqich"
+        },
+        {
+          "en": "Step 3",
+          "ru": "Этап 3",
+          "uz": "3-bosqich"
+        },
+        {
+          "en": "Step 4",
+          "ru": "Этап 4",
+          "uz": "4-bosqich"
+        }
+      ],
+      "correct": 3,
+      "explain": {
+        "en": "Step 4 is supportive periodontal care, which maintains the results of steps 1–3.",
+        "ru": "Этап 4 — поддерживающая терапия, сохраняющая результаты этапов 1–3.",
+        "uz": "4-bosqich 1–3-bosqichlar natijalarini saqlovchi qo‘llab-quvvatlovchi davolashdir."
+      }
+    },
+    {
+      "q": {
+        "en": "Recall intervals in supportive care are commonly:",
+        "ru": "Интервалы визитов поддерживающей терапии обычно составляют:",
+        "uz": "Qo‘llab-quvvatlovchi davolashda tashriflar oralig‘i odatda qancha?"
+      },
+      "options": [
+        {
+          "en": "Every week for life",
+          "ru": "Каждую неделю пожизненно",
+          "uz": "Umrbod har hafta"
+        },
+        {
+          "en": "3–12 months based on risk",
+          "ru": "3–12 месяцев по риску",
+          "uz": "Xavfga ko‘ra 3–12 oy"
+        },
+        {
+          "en": "Every five years",
+          "ru": "Каждые пять лет",
+          "uz": "Har besh yilda"
+        },
+        {
+          "en": "Only when symptoms appear",
+          "ru": "Только при появлении симптомов",
+          "uz": "Faqat belgilar paydo bo‘lganda"
+        }
+      ],
+      "correct": 1,
+      "explain": {
+        "en": "Intervals are tailored to individual risk, commonly between 3 and 12 months.",
+        "ru": "Интервалы подбираются по индивидуальному риску, обычно от 3 до 12 месяцев.",
+        "uz": "Oraliqlar individual xavfga moslanadi, odatda 3 oydan 12 oygacha."
+      }
+    },
+    {
+      "q": {
+        "en": "An implant shows bleeding on probing, no suppuration and no bone loss beyond initial remodelling. Diagnosis:",
+        "ru": "У имплантата кровоточивость при зондировании, гноя нет, убыли кости сверх начального ремоделирования нет. Диагноз:",
+        "uz": "Implantda zondlashda qonash bor, yiring yo‘q, boshlang‘ich qayta tuzilishdan ortiq suyak yo‘qolmagan. Tashxis:"
+      },
+      "options": [
+        {
+          "en": "Peri-implant mucositis",
+          "ru": "Периимплантный мукозит",
+          "uz": "Implant atrofi mukoziti"
+        },
+        {
+          "en": "Peri-implantitis",
+          "ru": "Периимплантит",
+          "uz": "Periimplantit"
+        },
+        {
+          "en": "Peri-implant health",
+          "ru": "Здоровье тканей вокруг имплантата",
+          "uz": "Implant atrofi salomatligi"
+        },
+        {
+          "en": "Hard tissue deficiency",
+          "ru": "Дефицит твёрдых тканей",
+          "uz": "Qattiq to‘qima yetishmovchiligi"
+        }
+      ],
+      "correct": 0,
+      "explain": {
+        "en": "Inflammation without bone loss beyond initial remodelling defines peri-implant mucositis.",
+        "ru": "Воспаление без убыли кости сверх начального ремоделирования соответствует мукозиту.",
+        "uz": "Boshlang‘ich qayta tuzilishdan ortiq suyak yo‘qolmagan yallig‘lanish mukozitni belgilaydi."
+      }
+    },
+    {
+      "q": {
+        "en": "Without previous records, peri-implantitis can be diagnosed with BOP or pus plus:",
+        "ru": "При отсутствии прежних данных периимплантит можно диагностировать при кровоточивости или гное плюс:",
+        "uz": "Avvalgi ma’lumotlar bo‘lmasa, qonash yoki yiringdan tashqari periimplantit tashxisi uchun nima kerak?"
+      },
+      "options": [
+        {
+          "en": "PD ≥3 mm and any radiolucency",
+          "ru": "Глубина ≥3 мм и любое просветление",
+          "uz": "Chuqurlik ≥3 mm va har qanday yorug‘lanish"
+        },
+        {
+          "en": "Implant mobility only",
+          "ru": "Только подвижность имплантата",
+          "uz": "Faqat implant qimirlashi"
+        },
+        {
+          "en": "PD ≥6 mm and bone level ≥3 mm apical to the intraosseous top",
+          "ru": "Глубина ≥6 мм и кость ≥3 мм апикальнее внутрикостной части",
+          "uz": "Chuqurlik ≥6 mm va suyak ichi qism yuqorisidan suyak ≥3 mm pastda"
+        },
+        {
+          "en": "Pain on chewing",
+          "ru": "Боль при жевании",
+          "uz": "Chaynaganda og‘riq"
+        }
+      ],
+      "correct": 2,
+      "explain": {
+        "en": "The 2017 consensus uses PD ≥6 mm and bone levels ≥3 mm apical to the most coronal intraosseous part when no baseline exists.",
+        "ru": "Консенсус 2017 года использует глубину ≥6 мм и уровень кости ≥3 мм апикальнее внутрикостной части при отсутствии исходных данных.",
+        "uz": "2017 yilgi kelishuv boshlang‘ich ma’lumot bo‘lmaganda ≥6 mm chuqurlik va suyakning eng yuqori suyak ichi qismdan ≥3 mm pastda bo‘lishini qo‘llaydi."
+      }
+    },
+    {
+      "q": {
+        "en": "Which factor has the strongest evidence as a risk indicator for peri-implantitis?",
+        "ru": "Какой фактор имеет наиболее сильные доказательства как индикатор риска периимплантита?",
+        "uz": "Qaysi omil periimplantit xavf indikatori sifatida eng kuchli dalillarga ega?"
+      },
+      "options": [
+        {
+          "en": "Implant surface colour",
+          "ru": "Цвет поверхности имплантата",
+          "uz": "Implant yuzasi rangi"
+        },
+        {
+          "en": "History of severe periodontitis",
+          "ru": "Тяжёлый пародонтит в анамнезе",
+          "uz": "Anamnezda og‘ir parodontit"
+        },
+        {
+          "en": "Patient's height",
+          "ru": "Рост пациента",
+          "uz": "Bemorning bo‘yi"
+        },
+        {
+          "en": "Shade of the crown",
+          "ru": "Цвет коронки",
+          "uz": "Koronka rangi"
+        }
+      ],
+      "correct": 1,
+      "explain": {
+        "en": "A history of severe periodontitis, poor plaque control and lack of maintenance have the strongest evidence.",
+        "ru": "Наиболее доказаны тяжёлый пародонтит в анамнезе, плохая гигиена и отсутствие поддержки.",
+        "uz": "Anamnezdagi og‘ir parodontit, yomon gigiyena va parvarishsizlik eng kuchli dalillarga ega."
+      }
+    },
+    {
+      "q": {
+        "en": "Peri-implant mucositis is best managed first by:",
+        "ru": "Периимплантный мукозит лучше всего лечить в первую очередь:",
+        "uz": "Implant atrofi mukoziti avvalo qanday davolanadi?"
+      },
+      "options": [
+        {
+          "en": "Implant removal",
+          "ru": "Удалением имплантата",
+          "uz": "Implantni olib tashlash"
+        },
+        {
+          "en": "Bone grafting",
+          "ru": "Костной пластикой",
+          "uz": "Suyak plastikasi"
+        },
+        {
+          "en": "Long systemic antibiotic courses",
+          "ru": "Длительными курсами антибиотиков",
+          "uz": "Uzoq tizimli antibiotik kurslari"
+        },
+        {
+          "en": "Hygiene reinforcement and professional debridement",
+          "ru": "Укреплением гигиены и профессиональной обработкой",
+          "uz": "Gigiyenani mustahkamlash va professional tozalash"
+        }
+      ],
+      "correct": 3,
+      "explain": {
+        "en": "Mucositis is reversible with improved plaque control and professional mechanical debridement.",
+        "ru": "Мукозит обратим при улучшении гигиены и профессиональной механической обработке.",
+        "uz": "Mukozit gigiyena yaxshilanishi va professional mexanik tozalash bilan qaytadi."
+      }
+    },
+    {
+      "q": {
+        "en": "A cemented implant crown shows deep bleeding and a radiopaque mass at the margin. The first action is to:",
+        "ru": "У цементируемой коронки на имплантате кровоточивость и рентгеноконтрастная масса у края. Первое действие:",
+        "uz": "Sementlangan implant koronkasida chuqur qonash va chetda rentgenokontrast massa bor. Birinchi harakat:"
+      },
+      "options": [
+        {
+          "en": "Remove the excess cement",
+          "ru": "Удалить избыток цемента",
+          "uz": "Ortiqcha sementni olib tashlash"
+        },
+        {
+          "en": "Prescribe antibiotics only",
+          "ru": "Назначить только антибиотики",
+          "uz": "Faqat antibiotik buyurish"
+        },
+        {
+          "en": "Remove the implant",
+          "ru": "Удалить имплантат",
+          "uz": "Implantni olib tashlash"
+        },
+        {
+          "en": "Ignore it",
+          "ru": "Не обращать внимания",
+          "uz": "E’tibor bermaslik"
+        }
+      ],
+      "correct": 0,
+      "explain": {
+        "en": "Residual cement is a known cause of peri-implant inflammation and must be removed first.",
+        "ru": "Остатки цемента — известная причина воспаления вокруг имплантата, их удаляют в первую очередь.",
+        "uz": "Sement qoldiqlari implant atrofi yallig‘lanishining ma’lum sababi va avval olib tashlanishi kerak."
+      }
+    },
+    {
+      "q": {
+        "en": "When should baseline probing and a radiograph be recorded for an implant?",
+        "ru": "Когда нужно зафиксировать исходное зондирование и снимок имплантата?",
+        "uz": "Implant uchun boshlang‘ich zondlash va rentgenogramma qachon qayd etilishi kerak?"
+      },
+      "options": [
+        {
+          "en": "Only if pain appears",
+          "ru": "Только при появлении боли",
+          "uz": "Faqat og‘riq paydo bo‘lganda"
+        },
+        {
+          "en": "Before implant placement only",
+          "ru": "Только до установки имплантата",
+          "uz": "Faqat implant o‘rnatishdan oldin"
+        },
+        {
+          "en": "At completion of the implant prosthesis",
+          "ru": "При завершении протезирования на имплантате",
+          "uz": "Implant protezi yakunlanganda"
+        },
+        {
+          "en": "Ten years after placement",
+          "ru": "Через десять лет после установки",
+          "uz": "O‘rnatilgandan o‘n yil keyin"
+        }
+      ],
+      "correct": 2,
+      "explain": {
+        "en": "Baseline data at prosthesis delivery allow later changes in probing depth and bone level to be detected.",
+        "ru": "Исходные данные при сдаче протеза позволяют выявлять последующие изменения глубины и уровня кости.",
+        "uz": "Protez topshirilgandagi boshlang‘ich ma’lumotlar keyinchalik chuqurlik va suyak darajasi o‘zgarishlarini aniqlash imkonini beradi."
+      }
+    },
+    {
+      "q": {
+        "en": "A treated periodontitis patient stops attending recall visits. The most likely long-term outcome is:",
+        "ru": "Пролеченный пациент с пародонтитом перестал посещать поддерживающие визиты. Наиболее вероятный исход:",
+        "uz": "Davolangan parodontitli bemor nazorat tashriflariga kelmay qo‘ydi. Eng ehtimoliy uzoq muddatli natija:"
+      },
+      "options": [
+        {
+          "en": "Guaranteed stability",
+          "ru": "Гарантированная стабильность",
+          "uz": "Kafolatlangan barqarorlik"
+        },
+        {
+          "en": "Higher risk of recurrence and tooth loss",
+          "ru": "Выше риск рецидива и потери зубов",
+          "uz": "Qaytalanish va tish yo‘qolishi xavfi yuqoriroq"
+        },
+        {
+          "en": "Spontaneous bone regeneration",
+          "ru": "Спонтанная регенерация кости",
+          "uz": "Suyakning o‘z-o‘zidan tiklanishi"
+        },
+        {
+          "en": "Conversion to gingivitis only",
+          "ru": "Переход только в гингивит",
+          "uz": "Faqat gingivitga o‘tish"
+        }
+      ],
+      "correct": 1,
+      "explain": {
+        "en": "Without supportive care, recurrent disease and tooth loss are more frequent.",
+        "ru": "Без поддерживающей терапии рецидивы и потеря зубов встречаются чаще.",
+        "uz": "Qo‘llab-quvvatlovchi davolashsiz qaytalanish va tish yo‘qolishi ko‘proq uchraydi."
+      }
+    },
+    {
+      "q": {
+        "en": "Which finding in supportive care most suggests the need for a shorter recall interval?",
+        "ru": "Какая находка при поддерживающей терапии больше всего указывает на необходимость сократить интервал?",
+        "uz": "Qo‘llab-quvvatlovchi davolashda qaysi topilma oraliqni qisqartirish zaruratini eng ko‘p ko‘rsatadi?"
+      },
+      "options": [
+        {
+          "en": "BOP at 5% of sites",
+          "ru": "Кровоточивость в 5% участков",
+          "uz": "Nuqtalarning 5% da qonash"
+        },
+        {
+          "en": "No pockets over 4 mm",
+          "ru": "Нет карманов глубже 4 мм",
+          "uz": "4 mm dan chuqur cho‘ntak yo‘q"
+        },
+        {
+          "en": "Non-smoker",
+          "ru": "Не курит",
+          "uz": "Chekmaydi"
+        },
+        {
+          "en": "Several 5–6 mm pockets that bleed",
+          "ru": "Несколько кровоточащих карманов 5–6 мм",
+          "uz": "Bir nechta qonayotgan 5–6 mm cho‘ntaklar"
+        }
+      ],
+      "correct": 3,
+      "explain": {
+        "en": "Multiple bleeding residual pockets indicate high risk of progression and need closer follow-up and re-treatment.",
+        "ru": "Несколько кровоточащих остаточных карманов указывают на высокий риск и требуют частого наблюдения и лечения.",
+        "uz": "Bir nechta qonayotgan qolgan cho‘ntaklar yuqori xavfni ko‘rsatadi va tez-tez kuzatuv hamda davolashni talab qiladi."
+      }
+    }
+  ]
+}

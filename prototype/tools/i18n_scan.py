@@ -41,7 +41,7 @@ BRAND_PHRASES = ['DENTAL EXPERT PLUS', 'Dental Expert Plus', 'DENTAL EXPERT', 'D
 RU_LATIN_OK = {
     'dental', 'expert', 'fdi', '3d', 'uzs', 'aed', 'usd', 'email', 'e-mail', 'google', 'apple', 'testflight', 'app', 'store',
     'telegram', 'instagram', 'pptx', 'pdf', 'gps', 'sdk', 'gdpr', 'https', 'httponly', 'cookie', 'ip', 'cloudflare', 'resend',
-    'id', 'ok', 'tsdi', 'sammu', 'adti', 'afu', 'ios', 'android', 'plus', 'ru',  # 'RU' = the current-language badge
+    'id', 'ok', 'ph', 'ohi-s', 'linea', 'alba', 'in', 'vitro', 'leeway', 'space', 'tsdi', 'sammu', 'adti', 'afu', 'ios', 'android', 'plus', 'ru',  # 'RU' = the current-language badge
 }
 # Common Uzbek words that must not appear in English text (compared lower-case, apostrophes normalised).
 UZ_WORDS = {
@@ -128,10 +128,17 @@ def check_text(lang, text):
             for w in LATIN_WORD.findall(chunk):
                 if len(w) == 1 and w in 'xX':
                     continue
+                # Clinical abbreviations and single-letter labels stay Latin in Russian dental texts (ASA, CBCT, A-delta, C).
+                if re.fullmatch(r"[A-Z][A-Z0-9]{0,6}-?", w):
+                    continue
                 if w.lower().strip("'‘’-") not in RU_LATIN_OK:
                     out.append(('Latin word in Russian', w))
         for m in re.finditer(r'(\d+)\+?\s+([а-яё]+)', t):
             n, word = int(m.group(1)), m.group(2)
+            before = t[:m.start()]
+            # Fractions (1,5 года), ranges (2–3 лет) and genitive after до/от/ребёнка/возрасте take other forms.
+            if re.search(r'(\d[,.]|[–-]|\b(до|от|ребёнка|возрасте|старше|младше)\s)$', before):
+                continue
             if word in RU_FORM:
                 forms, _ = RU_FORM[word]
                 want = forms[ru_plural(n)]
@@ -310,9 +317,25 @@ def main():
                         if try_(lambda: page.locator('.contact-action').first.click()):
                             collect(lang, 'profile › toast')
                     if s == 'courses':
-                        for i in range(3):
-                            if try_(lambda: page.locator('.learn .chips button').nth(i).click()):
+                        for i in range(page.locator('.learn > .chips button').count()):
+                            if try_(lambda: page.locator('.learn > .chips button').nth(i).click()):
                                 page.wait_for_timeout(500); collect(lang, f'courses › tab {i+1}')
+                        # Curriculum: every subject page, its first topic and all of that topic's slides.
+                        go(s, lang)
+                        try_(lambda: page.locator('.learn > .chips button').first.click())
+                        n_subj = page.locator('.lg-section .lg-row').count()
+                        for k in range(n_subj):
+                            go(s, lang); try_(lambda: page.locator('.learn > .chips button').first.click())
+                            if not try_(lambda: page.locator('.lg-section .lg-row').nth(k).click()): continue
+                            collect(lang, f'curriculum › subject {k+1}')
+                            if not try_(lambda: page.locator('.lg-section .lg-row').first.click()): continue
+                            page.wait_for_timeout(300); collect(lang, f'curriculum › subject {k+1} › topic 1')
+                            if try_(lambda: page.locator('.lg-section > .button').first.click()):
+                                for j in range(14):
+                                    collect(lang, f'curriculum › subject {k+1} › slide {j+1}')
+                                    nxt = page.locator('.sl-nav .button').last
+                                    if page.locator('.sl-nav .button:has(svg.lucide-chevron-right)').count() == 0: break
+                                    try_(lambda: nxt.click()); page.wait_for_timeout(120)
                     if s == 'lessonPage':
                         if try_(lambda: [q.locator('button').first.click() for q in page.locator('.academy-question').all()]):
                             collect(lang, 'lessonPage › answered')

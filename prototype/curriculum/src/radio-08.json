@@ -1,0 +1,1014 @@
+{
+  "id": "radio-08",
+  "subject": "radio",
+  "n": 8,
+  "week": 8,
+  "type": "lecture",
+  "hours": 2,
+  "title": {
+    "en": "Cysts, impacted teeth and red flags for referral",
+    "ru": "Кисты, ретинированные зубы и тревожные признаки для направления",
+    "uz": "Kistalar, retensiyalangan tishlar va yo‘llanma uchun xavf belgilari"
+  },
+  "goals": [
+    {
+      "en": "Describe a radiographic lesion systematically",
+      "ru": "Систематически описывать очаг на снимке",
+      "uz": "Rentgen o‘choqni tizimli tasvirlash"
+    },
+    {
+      "en": "Know the radiographic features of common jaw cysts",
+      "ru": "Знать рентгенологическую картину основных кист челюстей",
+      "uz": "Asosiy jag‘ kistalarining rentgen ko‘rinishini bilish"
+    },
+    {
+      "en": "Assess an impacted third molar and its relation to the canal",
+      "ru": "Оценивать связь ретинированного третьего моляра с каналом",
+      "uz": "Retensiyalangan uchinchi molyar va kanal munosabatini baholash"
+    },
+    {
+      "en": "Recognise signs of malignancy and refer urgently",
+      "ru": "Распознавать признаки злокачественности и срочно направлять",
+      "uz": "Xavfli o‘sma belgilarini tanib, shoshilinch yo‘llanma berish"
+    }
+  ],
+  "links": [
+    "atlas"
+  ],
+  "sources": [
+    "Mallya SM, Lam EWN. White and Pharoah's Oral Radiology: Principles and Interpretation, 8th ed., 2019",
+    "Neville BW et al. Oral and Maxillofacial Pathology, 4th ed., 2016",
+    "Whaites E, Drage N. Essentials of Dental Radiography and Radiology, 6th ed., 2021"
+  ],
+  "slides": [
+    {
+      "layout": "title",
+      "title": {
+        "en": "Cysts, impacted teeth and red flags",
+        "ru": "Кисты, ретинированные зубы и тревожные признаки",
+        "uz": "Kistalar, retensiyalangan tishlar va xavf belgilari"
+      },
+      "subtitle": {
+        "en": "Describe it, recognise it, know when to refer",
+        "ru": "Описать очаг, узнать его и понять, когда направлять",
+        "uz": "O‘choqni tasvirlash, tanish va qachon yo‘llash kerakligi"
+      }
+    },
+    {
+      "layout": "flow",
+      "title": {
+        "en": "How to describe a lesion",
+        "ru": "Схема описания очага",
+        "uz": "O‘choqni tasvirlash tartibi"
+      },
+      "steps": [
+        {
+          "label": {
+            "en": "Location",
+            "ru": "Локализация",
+            "uz": "Joylashuvi"
+          },
+          "detail": {
+            "en": "Jaw, region, relation to teeth",
+            "ru": "Челюсть, отдел, связь с зубом",
+            "uz": "Qaysi jag‘, soha, tish bilan bog‘liqligi"
+          }
+        },
+        {
+          "label": {
+            "en": "Size and shape",
+            "ru": "Размер и форма",
+            "uz": "O‘lchami va shakli"
+          },
+          "detail": {
+            "en": "Round, oval, multilocular",
+            "ru": "Округлый, овальный, многокамерный",
+            "uz": "Yumaloq, oval, ko‘p kamerali"
+          }
+        },
+        {
+          "label": {
+            "en": "Margins",
+            "ru": "Границы",
+            "uz": "Chegarasi"
+          },
+          "detail": {
+            "en": "Well-defined corticated or ill-defined",
+            "ru": "Чёткие кортикальные или нечёткие",
+            "uz": "Aniq va kortikal yoki noaniq"
+          }
+        },
+        {
+          "label": {
+            "en": "Internal structure",
+            "ru": "Внутренняя структура",
+            "uz": "Ichki tuzilishi"
+          },
+          "detail": {
+            "en": "Radiolucent, radiopaque or mixed",
+            "ru": "Прозрачный, плотный или смешанный",
+            "uz": "Qora, oq yoki aralash"
+          }
+        },
+        {
+          "label": {
+            "en": "Effect on surroundings",
+            "ru": "Влияние на окружение",
+            "uz": "Atrofga ta’siri"
+          },
+          "detail": {
+            "en": "Tooth displacement, resorption, expansion",
+            "ru": "Смещение зубов, резорбция, вздутие кортикальной пластинки",
+            "uz": "Tish siljishi, rezorbsiya, kortikal kengayish"
+          }
+        }
+      ],
+      "note": {
+        "en": "Description comes before diagnosis; ask students to describe every image using these five steps.",
+        "ru": "Описание предшествует диагнозу; просите студентов описывать каждый снимок по этим пяти шагам.",
+        "uz": "Tasvirlash tashxisdan oldin keladi; talabalardan har bir rentgenogrammani shu besh qadam bilan og‘zaki tasvirlashni so‘rang."
+      }
+    },
+    {
+      "layout": "table",
+      "title": {
+        "en": "Common odontogenic cysts",
+        "ru": "Основные одонтогенные кисты",
+        "uz": "Asosiy odontogen kistalar"
+      },
+      "head": [
+        {
+          "en": "Cyst",
+          "ru": "Киста",
+          "uz": "Kista"
+        },
+        {
+          "en": "Location",
+          "ru": "Локализация",
+          "uz": "Joylashuvi"
+        },
+        {
+          "en": "Radiographic sign",
+          "ru": "Рентгенопризнак",
+          "uz": "Rentgen belgisi"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "en": "Radicular",
+            "ru": "Радикулярная",
+            "uz": "Radikulyar"
+          },
+          {
+            "en": "Apex of a non-vital tooth",
+            "ru": "У апекса зуба с некротизированной пульпой",
+            "uz": "Pulpasi nobud tish apeksida"
+          },
+          {
+            "en": "Round radiolucency, corticated rim",
+            "ru": "Округлое разрежение, кортикальный контур",
+            "uz": "Yumaloq qora o‘choq, kortikal chegara"
+          }
+        ],
+        [
+          {
+            "en": "Dentigerous",
+            "ru": "Фолликулярная (зубосодержащая)",
+            "uz": "Follikulyar (dentigeroz)"
+          },
+          {
+            "en": "Around the crown of an unerupted tooth",
+            "ru": "Вокруг коронки непрорезавшегося зуба",
+            "uz": "Chiqmagan tish toji atrofida"
+          },
+          {
+            "en": "Attaches at the CEJ",
+            "ru": "Прикрепляется к эмалево-цементной границе",
+            "uz": "Emal-sement chegarasiga birikadi"
+          }
+        ],
+        [
+          {
+            "en": "Odontogenic keratocyst",
+            "ru": "Одонтогенная кератокиста",
+            "uz": "Odontogen keratokista"
+          },
+          {
+            "en": "Often posterior mandible and ramus",
+            "ru": "Чаще тело и ветвь нижней челюсти сзади",
+            "uz": "Ko‘pincha pastki jag‘ tanasi orqasi va shoxchasi"
+          },
+          {
+            "en": "Grows along bone, little expansion, recurs",
+            "ru": "Растёт вдоль кости, мало вздувает, рецидивирует",
+            "uz": "Suyak bo‘ylab o‘sadi, kam kengaytiradi, qaytalanadi"
+          }
+        ],
+        [
+          {
+            "en": "Residual cyst",
+            "ru": "Остаточная киста",
+            "uz": "Qoldiq kista"
+          },
+          {
+            "en": "Site of an extracted tooth",
+            "ru": "В области удалённого зуба",
+            "uz": "Tish olingan joyda"
+          },
+          {
+            "en": "Radiolucency in an edentulous area",
+            "ru": "Разрежение в беззубом участке",
+            "uz": "Tishsiz sohada qora o‘choq"
+          }
+        ]
+      ],
+      "note": {
+        "en": "A large follicle and an early dentigerous cyst are hard to separate by size alone; when unsure, review or investigate further.",
+        "ru": "Нормальный фолликул и фолликулярную кисту трудно различить только по размеру; при сомнении — наблюдение или дообследование.",
+        "uz": "Normal follikul bilan follikulyar kistani faqat o‘lchamga qarab farqlash qiyin; shubhada kuzatish yoki qo‘shimcha tekshiruv."
+      }
+    },
+    {
+      "layout": "compare",
+      "title": {
+        "en": "Benign vs aggressive features",
+        "ru": "Признаки доброкачественности и злокачественности",
+        "uz": "Yaxshi va yomon sifatli belgilar"
+      },
+      "columns": [
+        {
+          "head": {
+            "en": "Usually benign",
+            "ru": "Обычно доброкачественное",
+            "uz": "Odatda yaxshi sifatli"
+          },
+          "items": [
+            {
+              "en": "Well-defined corticated margin",
+              "ru": "Чёткий кортикальный контур",
+              "uz": "Aniq, kortikal chegara"
+            },
+            {
+              "en": "Slow growth, smooth expansion",
+              "ru": "Медленный рост, ровное вздутие",
+              "uz": "Sekin o‘sish, silliq kengayish"
+            },
+            {
+              "en": "Displaces teeth",
+              "ru": "Смещает зубы",
+              "uz": "Tishlarni siljitadi"
+            },
+            {
+              "en": "Painless, normal sensation",
+              "ru": "Безболезненно, чувствительность сохранена",
+              "uz": "Og‘riqsiz, sezgi saqlangan"
+            }
+          ]
+        },
+        {
+          "head": {
+            "en": "Worrying (urgent)",
+            "ru": "Настораживающее (срочно)",
+            "uz": "Xavotirli (shoshilinch)"
+          },
+          "items": [
+            {
+              "en": "Ill-defined 'moth-eaten' margin",
+              "ru": "Нечёткий, «изъеденный молью» край",
+              "uz": "Noaniq, «kuya yegan» chegara"
+            },
+            {
+              "en": "Cortical destruction, soft-tissue mass",
+              "ru": "Разрушение кортикальной пластинки, мягкотканный компонент",
+              "uz": "Kortikal buzilish, yumshoq to‘qima komponenti"
+            },
+            {
+              "en": "Teeth 'floating in air'",
+              "ru": "Зубы «висят в воздухе»",
+              "uz": "Tishlar «havoda suzib yurgandek»"
+            },
+            {
+              "en": "Numb lip or chin",
+              "ru": "Онемение губы или подбородка",
+              "uz": "Lab yoki iyakda uvishish"
+            }
+          ]
+        }
+      ],
+      "note": {
+        "en": "Stress the contrast: malignancy destroys bone around teeth rather than pushing them aside.",
+        "ru": "Подчеркните разницу: злокачественная опухоль не смещает зубы, а разрушает кость вокруг них.",
+        "uz": "Yomon sifatli o‘sma tishlarni siljitmay, atrofidagi suyakni yemiradi — farqni ta’kidlang."
+      }
+    },
+    {
+      "layout": "tree",
+      "title": {
+        "en": "Impacted lower third molar",
+        "ru": "Ретинированный нижний третий моляр",
+        "uz": "Retensiyalangan pastki uchinchi molyar"
+      },
+      "root": {
+        "en": "Assessment",
+        "ru": "Оценка",
+        "uz": "Baholash"
+      },
+      "children": [
+        {
+          "label": {
+            "en": "Winter: angulation",
+            "ru": "Winter: наклон",
+            "uz": "Winter: burchak"
+          },
+          "items": [
+            {
+              "en": "Mesioangular",
+              "ru": "Мезиоангулярный",
+              "uz": "Mezioangulyar"
+            },
+            {
+              "en": "Vertical",
+              "ru": "Вертикальный",
+              "uz": "Vertikal"
+            },
+            {
+              "en": "Distoangular",
+              "ru": "Дистоангулярный",
+              "uz": "Distoangulyar"
+            },
+            {
+              "en": "Horizontal",
+              "ru": "Горизонтальный",
+              "uz": "Gorizontal"
+            }
+          ]
+        },
+        {
+          "label": {
+            "en": "Pell–Gregory: depth",
+            "ru": "Pell–Gregory: глубина",
+            "uz": "Pell–Gregory: chuqurlik"
+          },
+          "items": [
+            {
+              "en": "Levels A, B, C",
+              "ru": "Уровни A, B, C",
+              "uz": "A, B, C darajalar"
+            }
+          ]
+        },
+        {
+          "label": {
+            "en": "Pell–Gregory: ramus",
+            "ru": "Pell–Gregory: ветвь",
+            "uz": "Pell–Gregory: shoxcha"
+          },
+          "items": [
+            {
+              "en": "Classes I, II, III",
+              "ru": "Классы I, II, III",
+              "uz": "I, II, III sinflar"
+            }
+          ]
+        },
+        {
+          "label": {
+            "en": "Canal relation",
+            "ru": "Связь с каналом",
+            "uz": "Kanal munosabati"
+          },
+          "items": [
+            {
+              "en": "Rood's signs",
+              "ru": "Признаки Руда",
+              "uz": "Rood belgilari"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "layout": "bullets",
+      "title": {
+        "en": "Signs of canal proximity on panoramic (Rood)",
+        "ru": "Признаки близости к каналу на ОПТГ (Руд)",
+        "uz": "OPTGda kanalga yaqinlik belgilari (Rood)"
+      },
+      "bullets": [
+        {
+          "en": "Darkening of the root",
+          "ru": "Просветление корня на снимке",
+          "uz": "Ildizning qorayishi"
+        },
+        {
+          "en": "Interruption of the canal's white lines",
+          "ru": "Прерывание светлых линий канала",
+          "uz": "Kanal oq chiziqlarining uzilishi"
+        },
+        {
+          "en": "Diversion or narrowing of the canal",
+          "ru": "Отклонение или сужение канала",
+          "uz": "Kanal yo‘nalishining o‘zgarishi yoki torayishi"
+        },
+        {
+          "en": "Deflection or narrowing of the root",
+          "ru": "Изгиб или сужение корня",
+          "uz": "Ildizning bukilishi yoki torayishi"
+        },
+        {
+          "en": "If present, consider CBCT",
+          "ru": "При этих признаках рассмотрите КЛКТ",
+          "uz": "Bu belgilar bo‘lsa — KLKTni ko‘rib chiqing"
+        }
+      ],
+      "note": {
+        "en": "Interruption of the canal lines and root darkening are the most often cited high-risk signs.",
+        "ru": "Прерывание линий канала и затемнение корня — наиболее часто упоминаемые признаки высокого риска.",
+        "uz": "Kanal oq chiziqlarining uzilishi va ildiz qorayishi eng ko‘p tilga olinadigan yuqori xavf belgilari."
+      }
+    },
+    {
+      "layout": "table",
+      "title": {
+        "en": "Red flags and action",
+        "ru": "Тревожные признаки и действия",
+        "uz": "Xavf belgilari va harakat"
+      },
+      "head": [
+        {
+          "en": "Sign",
+          "ru": "Признак",
+          "uz": "Belgi"
+        },
+        {
+          "en": "Action",
+          "ru": "Действие",
+          "uz": "Harakat"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "en": "Ill-defined bone destruction",
+            "ru": "Деструкция кости с нечёткими краями",
+            "uz": "Noaniq chegarali suyak yemirilishi"
+          },
+          {
+            "en": "Urgent referral to oral and maxillofacial surgery",
+            "ru": "Срочное направление к челюстно-лицевому хирургу",
+            "uz": "Shoshilinch yo‘llanma: jag‘-yuz jarrohi"
+          }
+        ],
+        [
+          {
+            "en": "Multilocular expansile lesion",
+            "ru": "Многокамерный вздувающий очаг",
+            "uz": "Ko‘p kamerali kengaytiruvchi o‘choq"
+          },
+          {
+            "en": "Refer for biopsy",
+            "ru": "Направление, биопсия",
+            "uz": "Yo‘llanma, biopsiya"
+          }
+        ],
+        [
+          {
+            "en": "Resorption of adjacent roots",
+            "ru": "Резорбция корней соседних зубов",
+            "uz": "Tishlar ildizining o‘tkir rezorbsiyasi"
+          },
+          {
+            "en": "Refer, further imaging",
+            "ru": "Направление, доп. визуализация",
+            "uz": "Yo‘llanma, qo‘shimcha tasvir"
+          }
+        ],
+        [
+          {
+            "en": "Lip numbness or rapid growth",
+            "ru": "Онемение губы или быстрый рост",
+            "uz": "Lab uvishishi yoki tez o‘sish"
+          },
+          {
+            "en": "Urgent referral",
+            "ru": "Срочное направление",
+            "uz": "Shoshilinch yo‘llanma"
+          }
+        ],
+        [
+          {
+            "en": "Non-healing socket, loose teeth",
+            "ru": "Незаживающая лунка, подвижные зубы",
+            "uz": "Bitmaydigan tish o‘rni, qimirlovchi tishlar"
+          },
+          {
+            "en": "Urgent referral",
+            "ru": "Срочное направление",
+            "uz": "Shoshilinch yo‘llanma"
+          }
+        ]
+      ]
+    },
+    {
+      "layout": "summary",
+      "title": {
+        "en": "Summary",
+        "ru": "Итоги",
+        "uz": "Xulosa"
+      },
+      "bullets": [
+        {
+          "en": "Describe location, size, margins, internal structure and effects",
+          "ru": "Описывайте очаг: место, размер, края, структура, влияние",
+          "uz": "O‘choqni joy, o‘lcham, chegara, ichki tuzilish va ta’sir bo‘yicha tasvirlang"
+        },
+        {
+          "en": "A slow, corticated radiolucency is usually a cyst",
+          "ru": "Медленно растущее разрежение с кортикальным краем — чаще киста",
+          "uz": "Kortikal chegarali sekin o‘suvchi qora o‘choq odatda kista"
+        },
+        {
+          "en": "Classify third molars by Winter and Pell–Gregory; check Rood's signs",
+          "ru": "Третий моляр — по Winter и Pell–Gregory, канал — по признакам Руда",
+          "uz": "Uchinchi molyarni Winter va Pell–Gregory bo‘yicha, kanalni Rood belgilari bilan baholang"
+        },
+        {
+          "en": "Ill-defined margins, cortical loss or numbness mean urgent referral",
+          "ru": "Нечёткие края, разрушение кортикальной пластинки, онемение — срочное направление",
+          "uz": "Noaniq chegara, kortikal yemirilish va uvishish — shoshilinch yo‘llanma"
+        }
+      ]
+    }
+  ],
+  "oral": [
+    {
+      "q": {
+        "en": "In what order do you describe a jaw lesion on a radiograph?",
+        "ru": "В каком порядке вы опишете очаг в челюсти на снимке?",
+        "uz": "Jag‘dagi rentgen o‘choqni qanday tartibda tasvirlaysiz?"
+      },
+      "plan": [
+        {
+          "en": "Location and relation to teeth",
+          "ru": "Локализация и связь с зубом",
+          "uz": "Joylashuvi va tish bilan bog‘liqligi"
+        },
+        {
+          "en": "Size, shape and locularity",
+          "ru": "Размер, форма и число камер",
+          "uz": "O‘lchami, shakli va kameralar soni"
+        },
+        {
+          "en": "Margins and internal structure",
+          "ru": "Границы и внутренняя структура",
+          "uz": "Chegarasi va ichki tuzilishi"
+        },
+        {
+          "en": "Effect on surrounding structures",
+          "ru": "Влияние на окружающие структуры",
+          "uz": "Atrofdagi tuzilmalarga ta’siri"
+        }
+      ]
+    },
+    {
+      "q": {
+        "en": "Compare radicular and dentigerous cysts.",
+        "ru": "Сравните радикулярную и фолликулярную кисты.",
+        "uz": "Radikulyar va follikulyar kistani solishtiring."
+      },
+      "plan": [
+        {
+          "en": "Radicular: apex of a non-vital tooth",
+          "ru": "Радикулярная — у апекса зуба с некрозом пульпы",
+          "uz": "Radikulyar — pulpasi nobud tish apeksida"
+        },
+        {
+          "en": "Dentigerous: around an unerupted crown",
+          "ru": "Фолликулярная — вокруг коронки непрорезавшегося зуба",
+          "uz": "Follikulyar — chiqmagan tish toji atrofida"
+        },
+        {
+          "en": "Dentigerous attaches at the CEJ",
+          "ru": "Фолликулярная крепится к эмалево-цементной границе",
+          "uz": "Follikulyar emal-sement chegarasiga birikadi"
+        },
+        {
+          "en": "Both well-defined and corticated",
+          "ru": "Обе с чётким кортикальным контуром",
+          "uz": "Ikkalasi ham aniq kortikal chegarali"
+        }
+      ]
+    },
+    {
+      "q": {
+        "en": "How do you assess a lower third molar's relation to the canal?",
+        "ru": "Как оценить связь нижнего третьего моляра с каналом?",
+        "uz": "Pastki uchinchi molyar va kanal munosabatini qanday baholaysiz?"
+      },
+      "plan": [
+        {
+          "en": "Panoramic or periapical image",
+          "ru": "ОПТГ или периапикальный снимок",
+          "uz": "OPTG yoki periapikal rentgenogramma"
+        },
+        {
+          "en": "Look for Rood's signs",
+          "ru": "Поиск признаков Руда",
+          "uz": "Rood belgilarini qidirish"
+        },
+        {
+          "en": "CBCT if high risk",
+          "ru": "При высоком риске — КЛКТ",
+          "uz": "Yuqori xavfda KLKT"
+        },
+        {
+          "en": "Inform the patient of nerve injury risk",
+          "ru": "Информировать пациента о риске повреждения нерва",
+          "uz": "Bemorga nerv shikasti xavfini tushuntirish"
+        }
+      ]
+    },
+    {
+      "q": {
+        "en": "Which radiographic and clinical signs need urgent referral?",
+        "ru": "Какие рентгенологические и клинические признаки требуют срочного направления?",
+        "uz": "Qaysi rentgen va klinik belgilar shoshilinch yo‘llanmani talab qiladi?"
+      },
+      "plan": [
+        {
+          "en": "Ill-defined or moth-eaten margins",
+          "ru": "Нечёткий или «изъеденный» край",
+          "uz": "Noaniq yoki «kuya yegan» chegara"
+        },
+        {
+          "en": "Cortical destruction and soft-tissue mass",
+          "ru": "Разрушение кортикальной пластинки и мягкотканный компонент",
+          "uz": "Kortikal yemirilish va yumshoq to‘qima komponenti"
+        },
+        {
+          "en": "Floating teeth, root resorption",
+          "ru": "Зубы «висят в воздухе», резорбция корней",
+          "uz": "Tishlar «havoda suzadi», ildiz rezorbsiyasi"
+        },
+        {
+          "en": "Lip numbness, rapid growth, non-healing socket",
+          "ru": "Онемение губы, быстрый рост, незаживающая лунка",
+          "uz": "Lab uvishishi, tez o‘sish, bitmaydigan tish o‘rni"
+        }
+      ]
+    }
+  ],
+  "test": [
+    {
+      "q": {
+        "en": "Which radiographic feature is typical of a benign cyst?",
+        "ru": "Какой рентгенопризнак характерен для доброкачественной кисты?",
+        "uz": "Qaysi rentgen belgisi yaxshi sifatli kistaga xos?"
+      },
+      "options": [
+        {
+          "en": "Well-defined corticated margin",
+          "ru": "Чёткий кортикальный контур",
+          "uz": "Aniq, kortikal chegara"
+        },
+        {
+          "en": "Moth-eaten margin",
+          "ru": "«Изъеденный молью» край",
+          "uz": "«Kuya yegan» chegara"
+        },
+        {
+          "en": "Teeth floating in air",
+          "ru": "Зубы «висят в воздухе»",
+          "uz": "Tishlar «havoda suzadi»"
+        },
+        {
+          "en": "Cortical destruction",
+          "ru": "Разрушение кортикальной пластинки",
+          "uz": "Kortikal buzilish"
+        }
+      ],
+      "correct": 0,
+      "explain": {
+        "en": "Around a slow-growing cyst, bone has time to form a cortical rim.",
+        "ru": "Вокруг медленно растущей кисты кость успевает образовать кортикальный контур.",
+        "uz": "Sekin o‘suvchi kista atrofida suyak kortikal chegara hosil qilishga ulguradi."
+      }
+    },
+    {
+      "q": {
+        "en": "A round corticated radiolucency at the apex of a non-vital tooth. Most likely diagnosis?",
+        "ru": "У апекса зуба с некротизированной пульпой округлое разрежение с кортикальным краем. Наиболее вероятно?",
+        "uz": "Pulpasi nobud bo‘lgan tish apeksida yumaloq, kortikal chegarali qora o‘choq. Eng ehtimoliy tashxis?"
+      },
+      "options": [
+        {
+          "en": "Dentigerous cyst",
+          "ru": "Фолликулярная киста",
+          "uz": "Follikulyar kista"
+        },
+        {
+          "en": "Ameloblastoma",
+          "ru": "Амелобластома",
+          "uz": "Ameloblastoma"
+        },
+        {
+          "en": "Radicular cyst",
+          "ru": "Радикулярная киста",
+          "uz": "Radikulyar kista"
+        },
+        {
+          "en": "Stafne defect",
+          "ru": "Дефект Стафне",
+          "uz": "Stafne nuqsoni"
+        }
+      ],
+      "correct": 2,
+      "explain": {
+        "en": "A radicular cyst develops at the apex after pulp necrosis.",
+        "ru": "Радикулярная киста развивается у апекса вследствие некроза пульпы.",
+        "uz": "Radikulyar kista pulpa nekrozi oqibatida apeksda rivojlanadi."
+      }
+    },
+    {
+      "q": {
+        "en": "A radiolucency surrounds the crown of an unerupted lower third molar and attaches at the CEJ. What is it?",
+        "ru": "Вокруг коронки непрорезавшегося нижнего третьего моляра разрежение, прикреплённое к эмалево-цементной границе. Что это?",
+        "uz": "Chiqmagan pastki uchinchi molyar toji atrofida emal-sement chegarasiga birikkan qora o‘choq. Bu nima?"
+      },
+      "options": [
+        {
+          "en": "Radicular cyst",
+          "ru": "Радикулярная киста",
+          "uz": "Radikulyar kista"
+        },
+        {
+          "en": "Dentigerous cyst",
+          "ru": "Фолликулярная (зубосодержащая) киста",
+          "uz": "Follikulyar (dentigeroz) kista"
+        },
+        {
+          "en": "Residual cyst",
+          "ru": "Остаточная киста",
+          "uz": "Qoldiq kista"
+        },
+        {
+          "en": "Nasopalatine cyst",
+          "ru": "Киста резцового канала",
+          "uz": "Kesuv kanali kistasi"
+        }
+      ],
+      "correct": 1,
+      "explain": {
+        "en": "A dentigerous cyst arises from the follicle and encloses the crown.",
+        "ru": "Фолликулярная киста развивается из фолликула и охватывает коронку.",
+        "uz": "Follikulyar kista tish follikulidan rivojlanib, tojni o‘rab oladi."
+      }
+    },
+    {
+      "q": {
+        "en": "A large lesion in the mandibular ramus grows along the bone with little expansion. What should be considered first?",
+        "ru": "В ветви нижней челюсти крупный очаг, растущий вдоль кости с малым вздутием. О чём думать в первую очередь?",
+        "uz": "Pastki jag‘ shoxchasida suyak bo‘ylab o‘sgan, kam kengaytirgan katta o‘choq. Qaysi tashxisni birinchi o‘ylash kerak?"
+      },
+      "options": [
+        {
+          "en": "Radicular cyst",
+          "ru": "Радикулярная киста",
+          "uz": "Radikulyar kista"
+        },
+        {
+          "en": "Nasopalatine cyst",
+          "ru": "Киста резцового канала",
+          "uz": "Kesuv kanali kistasi"
+        },
+        {
+          "en": "Condensing osteitis",
+          "ru": "Конденсирующий остеит",
+          "uz": "Kondensatsiyalovchi osteit"
+        },
+        {
+          "en": "Odontogenic keratocyst",
+          "ru": "Одонтогенная кератокиста",
+          "uz": "Odontogen keratokista"
+        }
+      ],
+      "correct": 3,
+      "explain": {
+        "en": "A keratocyst favours the posterior mandible, spreads along the bone and tends to recur.",
+        "ru": "Кератокиста чаще в задних отделах, растёт вдоль кости и склонна к рецидиву.",
+        "uz": "Keratokista ko‘pincha jag‘ orqa qismida, suyak bo‘ylab tarqaladi va qaytalanishga moyil."
+      }
+    },
+    {
+      "q": {
+        "en": "What does Winter's classification describe?",
+        "ru": "Что оценивает классификация Winter?",
+        "uz": "Winter tasnifi nimani baholaydi?"
+      },
+      "options": [
+        {
+          "en": "The angulation of the third molar",
+          "ru": "Наклон третьего моляра",
+          "uz": "Uchinchi molyar burchagini"
+        },
+        {
+          "en": "Position relative to the ramus",
+          "ru": "Положение относительно ветви",
+          "uz": "Shoxchaga nisbatan joyni"
+        },
+        {
+          "en": "Distance to the canal",
+          "ru": "Расстояние до канала",
+          "uz": "Kanalgacha masofani"
+        },
+        {
+          "en": "Number of roots",
+          "ru": "Число корней",
+          "uz": "Ildizlar sonini"
+        }
+      ],
+      "correct": 0,
+      "explain": {
+        "en": "Winter classifies teeth as mesioangular, vertical, distoangular or horizontal.",
+        "ru": "Winter делит наклон на мезиоангулярный, вертикальный, дистоангулярный и горизонтальный.",
+        "uz": "Winter tishni mezioangulyar, vertikal, distoangulyar va gorizontal turlarga ajratadi."
+      }
+    },
+    {
+      "q": {
+        "en": "Which panoramic sign suggests a third molar root is close to the canal?",
+        "ru": "Какой признак на ОПТГ указывает на близость корня третьего моляра к каналу?",
+        "uz": "OPTGda qaysi belgi uchinchi molyar ildizining kanalga yaqinligini ko‘rsatadi?"
+      },
+      "options": [
+        {
+          "en": "Intact lamina dura around the root",
+          "ru": "Целая lamina dura вокруг корня",
+          "uz": "Ildiz atrofida butun lamina dura"
+        },
+        {
+          "en": "Interruption of the canal's white lines",
+          "ru": "Прерывание светлых линий канала",
+          "uz": "Kanal oq chiziqlarining uzilishi"
+        },
+        {
+          "en": "Narrow follicle around the crown",
+          "ru": "Узкий фолликул вокруг коронки",
+          "uz": "Toj atrofida tor follikul"
+        },
+        {
+          "en": "Vertical angulation",
+          "ru": "Вертикальное положение",
+          "uz": "Vertikal joylashuv"
+        }
+      ],
+      "correct": 1,
+      "explain": {
+        "en": "This is one of Rood's signs; CBCT may then be considered.",
+        "ru": "Это один из признаков Руда; в такой ситуации можно рассмотреть КЛКТ.",
+        "uz": "Rood belgilaridan biri; bunday holatda KLKTni ko‘rib chiqish mumkin."
+      }
+    },
+    {
+      "q": {
+        "en": "Ill-defined mandibular destruction, teeth 'floating in air' and a numb chin. What is the correct action?",
+        "ru": "В нижней челюсти деструкция с нечёткими краями, зубы «висят в воздухе», подбородок онемел. Правильное действие?",
+        "uz": "Pastki jag‘da noaniq chegarali yemirilish, tishlar «havoda suzadi», iyak uvishgan. Qanday harakat to‘g‘ri?"
+      },
+      "options": [
+        {
+          "en": "Repeat imaging in 6 months",
+          "ru": "Повторный снимок через 6 месяцев",
+          "uz": "6 oydan keyin qayta rentgenogramma"
+        },
+        {
+          "en": "Antibiotics and review",
+          "ru": "Антибиотик и наблюдение",
+          "uz": "Antibiotik va kuzatuv"
+        },
+        {
+          "en": "Urgent referral to oral and maxillofacial surgery",
+          "ru": "Срочно направить к челюстно-лицевому хирургу",
+          "uz": "Shoshilinch jag‘-yuz jarrohiga yo‘llash"
+        },
+        {
+          "en": "Extract the teeth",
+          "ru": "Удалить зубы",
+          "uz": "Tishlarni olib tashlash"
+        }
+      ],
+      "correct": 2,
+      "explain": {
+        "en": "These features suggest malignancy and must not be delayed.",
+        "ru": "Эти признаки подозрительны на злокачественную опухоль, откладывать нельзя.",
+        "uz": "Bu belgilar yomon sifatli o‘smaga shubha tug‘diradi va kechiktirib bo‘lmaydi."
+      }
+    },
+    {
+      "q": {
+        "en": "A well-defined oval radiolucency below the canal near the mandibular angle, symptom-free. Likely diagnosis?",
+        "ru": "В углу нижней челюсти ниже канала чёткое овальное разрежение без симптомов. Вероятный диагноз?",
+        "uz": "Pastki jag‘ burchagida, kanaldan pastda aniq chegarali oval qora soha, simptomsiz. Ehtimoliy tashxis?"
+      },
+      "options": [
+        {
+          "en": "Radicular cyst",
+          "ru": "Радикулярная киста",
+          "uz": "Radikulyar kista"
+        },
+        {
+          "en": "Ameloblastoma",
+          "ru": "Амелобластома",
+          "uz": "Ameloblastoma"
+        },
+        {
+          "en": "Osteosarcoma",
+          "ru": "Остеосаркома",
+          "uz": "Osteosarkoma"
+        },
+        {
+          "en": "Stafne bone defect",
+          "ru": "Костный дефект Стафне",
+          "uz": "Stafne suyak nuqsoni"
+        }
+      ],
+      "correct": 3,
+      "explain": {
+        "en": "A lingual depression containing salivary gland tissue; no treatment is needed.",
+        "ru": "Это язычное углубление с тканью слюнной железы; лечения не требует.",
+        "uz": "So‘lak bezi to‘qimasi kirib turgan til tomondagi chuqurcha; davolash talab qilmaydi."
+      }
+    },
+    {
+      "q": {
+        "en": "A multilocular 'soap-bubble' expansile lesion with root resorption. Which is more likely?",
+        "ru": "Многокамерный вздувающий очаг вида «мыльных пузырей» с резорбцией корней. Что вероятнее?",
+        "uz": "Ko‘p kamerali «sovun pufagi» ko‘rinishidagi, kengaytiruvchi va ildiz rezorbsiyasi bilan kechuvchi o‘choq. Qaysi biri ehtimolroq?"
+      },
+      "options": [
+        {
+          "en": "Ameloblastoma",
+          "ru": "Амелобластома",
+          "uz": "Ameloblastoma"
+        },
+        {
+          "en": "Radicular cyst",
+          "ru": "Радикулярная киста",
+          "uz": "Radikulyar kista"
+        },
+        {
+          "en": "Condensing osteitis",
+          "ru": "Конденсирующий остеит",
+          "uz": "Kondensatsiyalovchi osteit"
+        },
+        {
+          "en": "Mental foramen",
+          "ru": "Подбородочное отверстие",
+          "uz": "Iyak teshigi"
+        }
+      ],
+      "correct": 0,
+      "explain": {
+        "en": "Ameloblastoma is typically multilocular, expansile and resorbs roots; refer for biopsy.",
+        "ru": "Амелобластома обычно многокамерная, вздувает кость и резорбирует корни; требуется направление на биопсию.",
+        "uz": "Ameloblastoma odatda pastki jag‘ orqasida ko‘p kamerali, kengaytiruvchi va ildizlarni rezorbsiya qiladi; biopsiya uchun yo‘llanadi."
+      }
+    },
+    {
+      "q": {
+        "en": "How does a malignant tumour typically affect teeth?",
+        "ru": "Как злокачественная опухоль обычно влияет на зубы?",
+        "uz": "Yomon sifatli o‘sma tishlarga odatda qanday ta’sir qiladi?"
+      },
+      "options": [
+        {
+          "en": "Smoothly displaces them",
+          "ru": "Плавно смещает их",
+          "uz": "Ularni silliq siljitadi"
+        },
+        {
+          "en": "Destroys surrounding bone, teeth float",
+          "ru": "Разрушает кость вокруг, зубы «висят»",
+          "uz": "Atrofidagi suyakni yemiradi, tishlar «suzadi»"
+        },
+        {
+          "en": "Has no effect",
+          "ru": "Не влияет",
+          "uz": "Ta’sir qilmaydi"
+        },
+        {
+          "en": "Speeds eruption",
+          "ru": "Ускоряет прорезывание",
+          "uz": "Tishlarni chiqarib yuboradi"
+        }
+      ],
+      "correct": 1,
+      "explain": {
+        "en": "Malignancy grows infiltratively and destroys bone, leaving teeth unsupported.",
+        "ru": "Злокачественная опухоль растёт инфильтративно и разрушает кость, оставляя зубы без опоры.",
+        "uz": "Yomon sifatli o‘sma infiltrativ o‘sadi va suyakni yemirib, tishlarni tayanchsiz qoldiradi."
+      }
+    }
+  ]
+}

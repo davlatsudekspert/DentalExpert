@@ -1,0 +1,1050 @@
+{
+  "id": "perio-06",
+  "subject": "perio",
+  "n": 6,
+  "week": 6,
+  "type": "practical",
+  "hours": 2,
+  "title": {
+    "en": "Non-surgical periodontal therapy (EFP steps 1–2)",
+    "ru": "Нехирургическое лечение пародонтита (этапы 1–2 EFP)",
+    "uz": "Parodontitni jarrohliksiz davolash (EFP 1–2 bosqichlari)"
+  },
+  "goals": [
+    {
+      "en": "Describe the four-step EFP S3 treatment approach",
+      "ru": "Описать четырёхэтапный подход руководства EFP S3",
+      "uz": "EFP S3 qo‘llanmasining to‘rt bosqichli yondashuvini tavsiflash"
+    },
+    {
+      "en": "Carry out step 1: behaviour change, biofilm and risk factor control",
+      "ru": "Выполнять этап 1: изменение поведения, контроль биоплёнки и факторов риска",
+      "uz": "1-bosqichni bajarish: xulq-atvorni o‘zgartirish, biofilm va xavf omillarini nazorat qilish"
+    },
+    {
+      "en": "Perform step 2 subgingival instrumentation and judge re-evaluation results",
+      "ru": "Проводить поддесневую инструментальную обработку этапа 2 и оценивать результаты",
+      "uz": "2-bosqich milk osti ishlovini bajarish va qayta baholash natijalarini baholash"
+    }
+  ],
+  "links": [
+    "oral-hygiene",
+    "periodontium"
+  ],
+  "sources": [
+    "Sanz M et al. Treatment of stage I–III periodontitis: The EFP S3 level clinical practice guideline. J Clin Periodontol 2020",
+    "Newman MG et al. Newman and Carranza's Clinical Periodontology, 13th ed., 2019"
+  ],
+  "slides": [
+    {
+      "layout": "title",
+      "title": {
+        "en": "Non-surgical periodontal therapy",
+        "ru": "Нехирургическое лечение пародонтита",
+        "uz": "Parodontitni jarrohliksiz davolash"
+      },
+      "subtitle": {
+        "en": "Steps 1 and 2 of the EFP S3 guideline",
+        "ru": "Этапы 1 и 2 руководства EFP S3",
+        "uz": "EFP S3 qo‘llanmasining 1 va 2-bosqichlari"
+      }
+    },
+    {
+      "layout": "timeline",
+      "title": {
+        "en": "The four treatment steps",
+        "ru": "Четыре этапа лечения",
+        "uz": "Davolashning to‘rt bosqichi"
+      },
+      "events": [
+        {
+          "when": {
+            "en": "Step 1",
+            "ru": "Этап 1",
+            "uz": "1-bosqich"
+          },
+          "label": {
+            "en": "Behaviour change, supragingival biofilm and risk factor control",
+            "ru": "Изменение поведения, контроль наддесневой биоплёнки и факторов риска",
+            "uz": "Xulq-atvorni o‘zgartirish, milk usti biofilmi va xavf omillarini nazorat"
+          }
+        },
+        {
+          "when": {
+            "en": "Step 2",
+            "ru": "Этап 2",
+            "uz": "2-bosqich"
+          },
+          "label": {
+            "en": "Subgingival instrumentation",
+            "ru": "Поддесневая инструментальная обработка",
+            "uz": "Milk osti asboblar bilan ishlov"
+          }
+        },
+        {
+          "when": {
+            "en": "Re-evaluation",
+            "ru": "Повторная оценка",
+            "uz": "Qayta baholash"
+          },
+          "label": {
+            "en": "Chart again after healing",
+            "ru": "Повторная карта после заживления",
+            "uz": "Bitishdan keyin qayta xarita"
+          }
+        },
+        {
+          "when": {
+            "en": "Step 3",
+            "ru": "Этап 3",
+            "uz": "3-bosqich"
+          },
+          "label": {
+            "en": "Treat residual pockets, often surgically",
+            "ru": "Лечение остаточных карманов, часто хирургически",
+            "uz": "Qolgan cho‘ntaklarni davolash, ko‘pincha jarrohlik yo‘li bilan"
+          }
+        },
+        {
+          "when": {
+            "en": "Step 4",
+            "ru": "Этап 4",
+            "uz": "4-bosqich"
+          },
+          "label": {
+            "en": "Supportive periodontal care",
+            "ru": "Поддерживающая пародонтальная терапия",
+            "uz": "Qo‘llab-quvvatlovchi parodontal davolash"
+          }
+        }
+      ],
+      "note": {
+        "en": "Stress that every patient enters step 1, and step 2 follows without waiting for full hygiene perfection.",
+        "ru": "Подчеркните: все пациенты начинают с этапа 1, а этап 2 не ждёт идеальной гигиены.",
+        "uz": "Har bir bemor 1-bosqichdan boshlashini va 2-bosqich mukammal gigiyenani kutmasligini ta’kidlang."
+      }
+    },
+    {
+      "layout": "tree",
+      "title": {
+        "en": "Step 1 components",
+        "ru": "Компоненты этапа 1",
+        "uz": "1-bosqich tarkibi"
+      },
+      "root": {
+        "en": "Step 1",
+        "ru": "Этап 1",
+        "uz": "1-bosqich"
+      },
+      "children": [
+        {
+          "label": {
+            "en": "Patient education",
+            "ru": "Обучение пациента",
+            "uz": "Bemorni o‘qitish"
+          },
+          "items": [
+            {
+              "en": "Explain disease and goals",
+              "ru": "Объяснить болезнь и цели",
+              "uz": "Kasallik va maqsadlarni tushuntirish"
+            },
+            {
+              "en": "Motivation",
+              "ru": "Мотивация",
+              "uz": "Motivatsiya"
+            }
+          ]
+        },
+        {
+          "label": {
+            "en": "Biofilm control",
+            "ru": "Контроль биоплёнки",
+            "uz": "Biofilm nazorati"
+          },
+          "items": [
+            {
+              "en": "Toothbrushing",
+              "ru": "Чистка зубов",
+              "uz": "Tish yuvish"
+            },
+            {
+              "en": "Interdental brushes",
+              "ru": "Межзубные ёршики",
+              "uz": "Tishlararo cho‘tkalar"
+            }
+          ]
+        },
+        {
+          "label": {
+            "en": "Professional care",
+            "ru": "Профессиональная помощь",
+            "uz": "Professional yordam"
+          },
+          "items": [
+            {
+              "en": "Supragingival PMPR",
+              "ru": "Наддесневое удаление налёта",
+              "uz": "Milk usti professional tozalash"
+            },
+            {
+              "en": "Remove retentive factors",
+              "ru": "Устранить ретенционные факторы",
+              "uz": "Ushlab qoluvchi omillarni yo‘qotish"
+            }
+          ]
+        },
+        {
+          "label": {
+            "en": "Risk factor control",
+            "ru": "Контроль факторов риска",
+            "uz": "Xavf omillarini nazorat"
+          },
+          "items": [
+            {
+              "en": "Smoking cessation",
+              "ru": "Отказ от курения",
+              "uz": "Chekishni tashlash"
+            },
+            {
+              "en": "Diabetes control",
+              "ru": "Контроль диабета",
+              "uz": "Diabetni nazorat qilish"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "layout": "compare",
+      "title": {
+        "en": "Instruments for step 2",
+        "ru": "Инструменты этапа 2",
+        "uz": "2-bosqich asboblari"
+      },
+      "columns": [
+        {
+          "head": {
+            "en": "Hand instruments",
+            "ru": "Ручные инструменты",
+            "uz": "Qo‘l asboblari"
+          },
+          "items": [
+            {
+              "en": "Area-specific curettes",
+              "ru": "Зоноспецифические кюреты",
+              "uz": "Sohaga mos kyuretkalar"
+            },
+            {
+              "en": "Good tactile feedback",
+              "ru": "Хорошая тактильная чувствительность",
+              "uz": "Yaxshi sezgi"
+            },
+            {
+              "en": "Need sharpening",
+              "ru": "Требуют заточки",
+              "uz": "Charxlash talab qiladi"
+            }
+          ]
+        },
+        {
+          "head": {
+            "en": "Sonic and ultrasonic",
+            "ru": "Звуковые и ультразвуковые",
+            "uz": "Tovushli va ultratovushli"
+          },
+          "items": [
+            {
+              "en": "Faster, less hand fatigue",
+              "ru": "Быстрее, меньше утомление",
+              "uz": "Tezroq, qo‘l kamroq charchaydi"
+            },
+            {
+              "en": "Thin tips reach furcations",
+              "ru": "Тонкие насадки входят в фуркации",
+              "uz": "Ingichka uchlar furkatsiyaga kiradi"
+            },
+            {
+              "en": "Aerosol needs control",
+              "ru": "Требуют контроля аэрозоля",
+              "uz": "Aerozolni nazorat qilish kerak"
+            }
+          ]
+        }
+      ],
+      "note": {
+        "en": "Point out that the guideline found hand and powered instruments similarly effective.",
+        "ru": "Отметьте, что по руководству ручные и машинные инструменты одинаково эффективны.",
+        "uz": "Qo‘llanmaga ko‘ra qo‘l va mashina asboblari bir xil samarali ekanini ta’kidlang."
+      }
+    },
+    {
+      "layout": "key",
+      "title": {
+        "en": "Subgingival instrumentation",
+        "ru": "Поддесневая инструментальная обработка",
+        "uz": "Milk osti asboblar bilan ishlov"
+      },
+      "term": {
+        "en": "Subgingival instrumentation",
+        "ru": "Поддесневая обработка",
+        "uz": "Milk osti ishlov"
+      },
+      "definition": {
+        "en": "Removal of subgingival biofilm and calculus from the root surface with hand or powered instruments, formerly called scaling and root planing; aggressive removal of cementum is not the aim.",
+        "ru": "Удаление поддесневой биоплёнки и камня с поверхности корня ручными или машинными инструментами, прежде «скейлинг и сглаживание корней»; целью не является агрессивное удаление цемента.",
+        "uz": "Ildiz yuzasidagi milk osti biofilmi va toshni qo‘l yoki mashina asboblari bilan olib tashlash, ilgari «skeyling va ildizni silliqlash» deb atalgan; sementni qo‘pol olib tashlash maqsad emas."
+      }
+    },
+    {
+      "layout": "flow",
+      "title": {
+        "en": "Step 2 procedure",
+        "ru": "Процедура этапа 2",
+        "uz": "2-bosqich jarayoni"
+      },
+      "steps": [
+        {
+          "label": {
+            "en": "Local anaesthesia",
+            "ru": "Местная анестезия",
+            "uz": "Mahalliy anesteziya"
+          },
+          "detail": {
+            "en": "For deep pockets",
+            "ru": "При глубоких карманах",
+            "uz": "Chuqur cho‘ntaklarda"
+          }
+        },
+        {
+          "label": {
+            "en": "Explore the root",
+            "ru": "Обследовать корень",
+            "uz": "Ildizni tekshirish"
+          },
+          "detail": {
+            "en": "Find calculus and anatomy",
+            "ru": "Камень и анатомия",
+            "uz": "Tosh va anatomiyani aniqlash"
+          }
+        },
+        {
+          "label": {
+            "en": "Instrument systematically",
+            "ru": "Систематическая обработка",
+            "uz": "Tizimli ishlov berish"
+          },
+          "detail": {
+            "en": "Overlapping strokes, all surfaces",
+            "ru": "Перекрывающиеся движения, все поверхности",
+            "uz": "Bir-birini qoplovchi harakatlar, barcha yuzalar"
+          }
+        },
+        {
+          "label": {
+            "en": "Check with explorer",
+            "ru": "Проверить зондом",
+            "uz": "Zond bilan tekshirish"
+          },
+          "detail": {
+            "en": "Smooth, calculus-free root",
+            "ru": "Гладкий корень без камня",
+            "uz": "Silliq, toshsiz ildiz"
+          }
+        },
+        {
+          "label": {
+            "en": "Post-operative advice",
+            "ru": "Рекомендации после процедуры",
+            "uz": "Muolajadan keyingi maslahatlar"
+          },
+          "detail": {
+            "en": "Sensitivity, hygiene",
+            "ru": "Чувствительность, гигиена",
+            "uz": "Sezuvchanlik, gigiyena"
+          }
+        }
+      ]
+    },
+    {
+      "layout": "bullets",
+      "title": {
+        "en": "Adjuncts in step 2",
+        "ru": "Дополнительные средства на этапе 2",
+        "uz": "2-bosqichdagi qo‘shimcha vositalar"
+      },
+      "bullets": [
+        {
+          "en": "Full-mouth or quadrant approach: both acceptable",
+          "ru": "Одномоментно или по квадрантам: оба подхода приемлемы",
+          "uz": "Bir vaqtda yoki kvadrant bo‘yicha: ikkalasi ham maqbul"
+        },
+        {
+          "en": "Systemic antibiotics not used routinely",
+          "ru": "Системные антибиотики рутинно не применяются",
+          "uz": "Tizimli antibiotiklar muntazam qo‘llanmaydi"
+        },
+        {
+          "en": "May be considered for specific groups, such as young adults with generalised stage III",
+          "ru": "Могут рассматриваться для отдельных групп, например молодых с генерализованной стадией III",
+          "uz": "Ayrim guruhlar uchun ko‘rib chiqilishi mumkin, masalan tarqalgan III bosqichli yosh kattalar"
+        },
+        {
+          "en": "Chlorhexidine rinse can be a short-term adjunct",
+          "ru": "Хлоргексидин — краткосрочное дополнение",
+          "uz": "Xlorgeksidin chayqash qisqa muddatli qo‘shimcha bo‘lishi mumkin"
+        }
+      ],
+      "note": {
+        "en": "Discuss antibiotic stewardship: systemic antibiotics are not routine.",
+        "ru": "Обсудите рациональное применение антибиотиков: системные антибиотики не назначают рутинно.",
+        "uz": "Antibiotiklardan oqilona foydalanishni muhokama qiling: tizimli antibiotiklar muntazam berilmaydi."
+      }
+    },
+    {
+      "layout": "table",
+      "title": {
+        "en": "Re-evaluation endpoints",
+        "ru": "Критерии повторной оценки",
+        "uz": "Qayta baholash mezonlari"
+      },
+      "head": [
+        {
+          "en": "Finding at a site",
+          "ru": "Находка в участке",
+          "uz": "Nuqtadagi topilma"
+        },
+        {
+          "en": "Interpretation",
+          "ru": "Интерпретация",
+          "uz": "Talqin"
+        },
+        {
+          "en": "Next step",
+          "ru": "Следующий шаг",
+          "uz": "Keyingi qadam"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "en": "PD ≤4 mm, no BOP",
+            "ru": "Глубина ≤4 мм, без кровоточивости",
+            "uz": "Chuqurlik ≤4 mm, qonash yo‘q"
+          },
+          {
+            "en": "Endpoint reached",
+            "ru": "Цель достигнута",
+            "uz": "Maqsadga erishildi"
+          },
+          {
+            "en": "Step 4 care",
+            "ru": "Этап 4",
+            "uz": "4-bosqich"
+          }
+        ],
+        [
+          {
+            "en": "PD 4 mm with BOP",
+            "ru": "Глубина 4 мм с кровоточивостью",
+            "uz": "Chuqurlik 4 mm, qonash bor"
+          },
+          {
+            "en": "Residual pocket",
+            "ru": "Остаточный карман",
+            "uz": "Qolgan cho‘ntak"
+          },
+          {
+            "en": "Repeat instrumentation",
+            "ru": "Повторная обработка",
+            "uz": "Qayta ishlov"
+          }
+        ],
+        [
+          {
+            "en": "PD 5 mm with BOP",
+            "ru": "Глубина 5 мм с кровоточивостью",
+            "uz": "Chuqurlik 5 mm, qonash bor"
+          },
+          {
+            "en": "Residual pocket",
+            "ru": "Остаточный карман",
+            "uz": "Qolgan cho‘ntak"
+          },
+          {
+            "en": "Step 3: re-instrument or surgery",
+            "ru": "Этап 3: повторная обработка или хирургия",
+            "uz": "3-bosqich: qayta ishlov yoki jarrohlik"
+          }
+        ],
+        [
+          {
+            "en": "PD ≥6 mm",
+            "ru": "Глубина ≥6 мм",
+            "uz": "Chuqurlik ≥6 mm"
+          },
+          {
+            "en": "Residual deep pocket",
+            "ru": "Глубокий остаточный карман",
+            "uz": "Chuqur qolgan cho‘ntak"
+          },
+          {
+            "en": "Step 3, often surgery",
+            "ru": "Этап 3, часто хирургия",
+            "uz": "3-bosqich, ko‘pincha jarrohlik"
+          }
+        ]
+      ],
+      "note": {
+        "en": "Ask students what they would do for a 6 mm pocket that still bleeds at re-evaluation.",
+        "ru": "Спросите, что делать с карманом 6 мм, который кровоточит при повторной оценке.",
+        "uz": "Qayta baholashda hamon qonayotgan 6 mm cho‘ntak bilan nima qilishlarini so‘rang."
+      }
+    },
+    {
+      "layout": "cycle",
+      "title": {
+        "en": "Expected healing",
+        "ru": "Ожидаемое заживление",
+        "uz": "Kutilgan bitish"
+      },
+      "center": {
+        "en": "After instrumentation",
+        "ru": "После обработки",
+        "uz": "Ishlovdan keyin"
+      },
+      "steps": [
+        {
+          "label": {
+            "en": "Less bleeding",
+            "ru": "Меньше кровоточивости",
+            "uz": "Qonash kamayadi"
+          }
+        },
+        {
+          "label": {
+            "en": "Gingival shrinkage",
+            "ru": "Уменьшение отёка десны",
+            "uz": "Milk shishi qaytadi"
+          }
+        },
+        {
+          "label": {
+            "en": "Long junctional epithelium",
+            "ru": "Длинный соединительный эпителий",
+            "uz": "Uzun birikma epiteliy"
+          }
+        },
+        {
+          "label": {
+            "en": "Shallower pockets",
+            "ru": "Меньшая глубина карманов",
+            "uz": "Cho‘ntaklar sayozlashadi"
+          }
+        },
+        {
+          "label": {
+            "en": "Some recession",
+            "ru": "Некоторая рецессия",
+            "uz": "Biroz retsessiya"
+          }
+        }
+      ]
+    },
+    {
+      "layout": "summary",
+      "title": {
+        "en": "Summary",
+        "ru": "Итоги",
+        "uz": "Xulosa"
+      },
+      "bullets": [
+        {
+          "en": "Step 1 builds behaviour change and controls risk",
+          "ru": "Этап 1 меняет поведение и контролирует риск",
+          "uz": "1-bosqich xulq-atvorni o‘zgartiradi va xavfni nazorat qiladi"
+        },
+        {
+          "en": "Step 2 is thorough subgingival instrumentation",
+          "ru": "Этап 2 — тщательная поддесневая обработка",
+          "uz": "2-bosqich — puxta milk osti ishlov"
+        },
+        {
+          "en": "Hand and powered instruments work equally well",
+          "ru": "Ручные и машинные инструменты одинаково эффективны",
+          "uz": "Qo‘l va mashina asboblari bir xil samarali"
+        },
+        {
+          "en": "Re-evaluate: endpoint PD ≤4 mm without BOP",
+          "ru": "Повторная оценка: цель — глубина ≤4 мм без кровоточивости",
+          "uz": "Qayta baholash: maqsad — qonashsiz chuqurlik ≤4 mm"
+        }
+      ]
+    }
+  ],
+  "oral": [
+    {
+      "q": {
+        "en": "What does step 1 of the EFP S3 guideline include?",
+        "ru": "Что включает этап 1 руководства EFP S3?",
+        "uz": "EFP S3 qo‘llanmasining 1-bosqichi nimalarni o‘z ichiga oladi?"
+      },
+      "plan": [
+        {
+          "en": "Patient education and motivation",
+          "ru": "Обучение и мотивацию пациента",
+          "uz": "Bemorni o‘qitish va rag‘batlantirish"
+        },
+        {
+          "en": "Supragingival biofilm control, interdental cleaning",
+          "ru": "Контроль наддесневой биоплёнки, межзубная гигиена",
+          "uz": "Milk usti biofilm nazorati, tishlararo tozalash"
+        },
+        {
+          "en": "Professional supragingival plaque and calculus removal",
+          "ru": "Профессиональное удаление наддесневого налёта и камня",
+          "uz": "Milk usti karash va toshni professional olib tashlash"
+        },
+        {
+          "en": "Risk factor control: smoking, diabetes",
+          "ru": "Контроль факторов риска: курение, диабет",
+          "uz": "Xavf omillarini nazorat: chekish, diabet"
+        }
+      ]
+    },
+    {
+      "q": {
+        "en": "Describe subgingival instrumentation.",
+        "ru": "Опишите поддесневую инструментальную обработку.",
+        "uz": "Milk osti asboblar bilan ishlovni tavsiflang."
+      },
+      "plan": [
+        {
+          "en": "Removes subgingival biofilm and calculus",
+          "ru": "Удаляет поддесневую биоплёнку и камень",
+          "uz": "Milk osti biofilmi va toshni olib tashlaydi"
+        },
+        {
+          "en": "Hand or powered instruments, alone or combined",
+          "ru": "Ручные или машинные инструменты, отдельно или вместе",
+          "uz": "Qo‘l yoki mashina asboblari, alohida yoki birga"
+        },
+        {
+          "en": "Local anaesthesia when needed",
+          "ru": "Местная анестезия при необходимости",
+          "uz": "Zarur bo‘lsa mahalliy anesteziya"
+        },
+        {
+          "en": "Full-mouth or quadrant delivery both acceptable",
+          "ru": "Одномоментно или по квадрантам — оба варианта приемлемы",
+          "uz": "Bir vaqtda yoki kvadrant bo‘yicha — ikkalasi maqbul"
+        }
+      ]
+    },
+    {
+      "q": {
+        "en": "When are systemic antibiotics considered as an adjunct?",
+        "ru": "Когда рассматривают системные антибиотики как дополнение?",
+        "uz": "Tizimli antibiotiklar qachon qo‘shimcha sifatida ko‘rib chiqiladi?"
+      },
+      "plan": [
+        {
+          "en": "Not routinely, because of resistance and side effects",
+          "ru": "Не рутинно — из-за резистентности и побочных эффектов",
+          "uz": "Muntazam emas — rezistentlik va nojo‘ya ta’sirlar tufayli"
+        },
+        {
+          "en": "Possibly for specific patient groups",
+          "ru": "Возможно для отдельных групп пациентов",
+          "uz": "Ehtimol, ayrim bemor guruhlari uchun"
+        },
+        {
+          "en": "For example young adults with generalised stage III",
+          "ru": "Например, молодые с генерализованной стадией III",
+          "uz": "Masalan, tarqalgan III bosqichli yosh kattalar"
+        }
+      ]
+    },
+    {
+      "q": {
+        "en": "How do you interpret the re-evaluation after step 2?",
+        "ru": "Как интерпретировать повторную оценку после этапа 2?",
+        "uz": "2-bosqichdan keyingi qayta baholash qanday talqin qilinadi?"
+      },
+      "plan": [
+        {
+          "en": "Endpoint: no PD over 4 mm with BOP, no PD ≥6 mm",
+          "ru": "Цель: нет глубины более 4 мм с кровоточивостью и нет ≥6 мм",
+          "uz": "Maqsad: qonashli 4 mm dan chuqur va ≥6 mm cho‘ntak yo‘q"
+        },
+        {
+          "en": "Endpoint met: move to supportive care",
+          "ru": "Цель достигнута: поддерживающая терапия",
+          "uz": "Maqsadga erishilsa: qo‘llab-quvvatlovchi davolash"
+        },
+        {
+          "en": "Residual pockets: step 3 therapy",
+          "ru": "Остаточные карманы: этап 3",
+          "uz": "Qolgan cho‘ntaklar: 3-bosqich"
+        },
+        {
+          "en": "Check plaque control and risk factors again",
+          "ru": "Повторно оценить гигиену и факторы риска",
+          "uz": "Gigiyena va xavf omillarini qayta baholash"
+        }
+      ]
+    }
+  ],
+  "test": [
+    {
+      "q": {
+        "en": "According to the EFP S3 guideline, step 1 of therapy mainly aims to:",
+        "ru": "Согласно руководству EFP S3, этап 1 лечения в основном направлен на:",
+        "uz": "EFP S3 qo‘llanmasiga ko‘ra davolashning 1-bosqichi asosan nimaga qaratilgan?"
+      },
+      "options": [
+        {
+          "en": "Perform periodontal surgery",
+          "ru": "Проведение хирургии пародонта",
+          "uz": "Parodont jarrohligini bajarish"
+        },
+        {
+          "en": "Change behaviour and control supragingival biofilm and risk factors",
+          "ru": "Изменение поведения, контроль наддесневой биоплёнки и факторов риска",
+          "uz": "Xulq-atvorni o‘zgartirish, milk usti biofilmi va xavf omillarini nazorat"
+        },
+        {
+          "en": "Place dental implants",
+          "ru": "Установку имплантатов",
+          "uz": "Implantlar o‘rnatish"
+        },
+        {
+          "en": "Prescribe antibiotics to all patients",
+          "ru": "Назначение антибиотиков всем",
+          "uz": "Barcha bemorlarga antibiotik buyurish"
+        }
+      ],
+      "correct": 1,
+      "explain": {
+        "en": "Step 1 is the foundation for all patients: education, oral hygiene, PMPR and risk factor control.",
+        "ru": "Этап 1 — основа для всех пациентов: обучение, гигиена, профессиональная чистка и контроль риска.",
+        "uz": "1-bosqich barcha bemorlar uchun asos: o‘qitish, gigiyena, professional tozalash va xavf nazorati."
+      }
+    },
+    {
+      "q": {
+        "en": "For subgingival instrumentation, hand instruments compared with sonic or ultrasonic instruments are:",
+        "ru": "При поддесневой обработке ручные инструменты по сравнению со звуковыми и ультразвуковыми:",
+        "uz": "Milk osti ishlovda qo‘l asboblari tovushli va ultratovushli asboblarga nisbatan:"
+      },
+      "options": [
+        {
+          "en": "Clearly superior",
+          "ru": "Явно лучше",
+          "uz": "Aniq ustun"
+        },
+        {
+          "en": "Clearly inferior",
+          "ru": "Явно хуже",
+          "uz": "Aniq past"
+        },
+        {
+          "en": "Contraindicated",
+          "ru": "Противопоказаны",
+          "uz": "Mumkin emas"
+        },
+        {
+          "en": "Similarly effective",
+          "ru": "Сопоставимо эффективны",
+          "uz": "Bir xil samarali"
+        }
+      ],
+      "correct": 3,
+      "explain": {
+        "en": "The guideline found similar clinical outcomes, so hand, powered or combined instrumentation is recommended.",
+        "ru": "Руководство показало сходные результаты, поэтому рекомендуется ручная, машинная или комбинированная обработка.",
+        "uz": "Qo‘llanma o‘xshash natijalarni ko‘rsatdi, shuning uchun qo‘l, mashina yoki aralash ishlov tavsiya etiladi."
+      }
+    },
+    {
+      "q": {
+        "en": "A 4 mm site that still bleeds on probing at re-evaluation is regarded as:",
+        "ru": "Участок 4 мм, кровоточащий при повторной оценке, считается:",
+        "uz": "Qayta baholashda hamon qonayotgan 4 mm nuqta qanday baholanadi?"
+      },
+      "options": [
+        {
+          "en": "A residual pocket needing further treatment",
+          "ru": "Остаточным карманом, требующим лечения",
+          "uz": "Davolashni talab qiluvchi qolgan cho‘ntak"
+        },
+        {
+          "en": "A healthy closed pocket",
+          "ru": "Здоровым закрытым карманом",
+          "uz": "Sog‘lom yopilgan cho‘ntak"
+        },
+        {
+          "en": "An indication for extraction",
+          "ru": "Показанием к удалению",
+          "uz": "Tish olishga ko‘rsatma"
+        },
+        {
+          "en": "A sign of gingival recession",
+          "ru": "Признаком рецессии",
+          "uz": "Retsessiya belgisi"
+        }
+      ],
+      "correct": 0,
+      "explain": {
+        "en": "The treatment endpoint is no PD >4 mm with BOP and closed 4 mm sites without bleeding; a bleeding 4 mm site is residual.",
+        "ru": "Цель лечения — отсутствие карманов >4 мм с кровоточивостью и 4 мм без неё; кровоточащий 4 мм участок — остаточный.",
+        "uz": "Davolash maqsadi — qonashli >4 mm cho‘ntak yo‘qligi va 4 mm nuqtalar qonamasligi; qonayotgan 4 mm nuqta qolgan cho‘ntakdir."
+      }
+    },
+    {
+      "q": {
+        "en": "Which statement about systemic antibiotics in step 2 is correct?",
+        "ru": "Какое утверждение о системных антибиотиках на этапе 2 верно?",
+        "uz": "2-bosqichdagi tizimli antibiotiklar haqidagi qaysi fikr to‘g‘ri?"
+      },
+      "options": [
+        {
+          "en": "They replace instrumentation",
+          "ru": "Они заменяют инструментальную обработку",
+          "uz": "Ular asboblar bilan ishlov o‘rnini bosadi"
+        },
+        {
+          "en": "They should be given to every patient",
+          "ru": "Их нужно назначать всем",
+          "uz": "Ular har bir bemorga berilishi kerak"
+        },
+        {
+          "en": "They are not used routinely",
+          "ru": "Их не применяют рутинно",
+          "uz": "Ular muntazam qo‘llanmaydi"
+        },
+        {
+          "en": "They are given before step 1",
+          "ru": "Их назначают до этапа 1",
+          "uz": "Ular 1-bosqichdan oldin beriladi"
+        }
+      ],
+      "correct": 2,
+      "explain": {
+        "en": "Because of resistance concerns, antibiotics are reserved for specific patient categories and always combined with instrumentation.",
+        "ru": "Из-за риска резистентности антибиотики применяют только у отдельных групп и всегда вместе с обработкой.",
+        "uz": "Rezistentlik xavfi tufayli antibiotiklar faqat ayrim guruhlarda va doimo asboblar bilan ishlov bilan birga qo‘llanadi."
+      }
+    },
+    {
+      "q": {
+        "en": "Full-mouth instrumentation within 24 hours compared with quadrant-wise treatment is:",
+        "ru": "Обработка всей полости рта за 24 часа по сравнению с обработкой по квадрантам:",
+        "uz": "24 soat ichida butun og‘izga ishlov berish kvadrant bo‘yicha davolashga nisbatan:"
+      },
+      "options": [
+        {
+          "en": "Contraindicated in all patients",
+          "ru": "Противопоказана всем",
+          "uz": "Barcha bemorlarga mumkin emas"
+        },
+        {
+          "en": "Clinically similar; either can be chosen",
+          "ru": "Клинически сопоставима; можно выбрать любую",
+          "uz": "Klinik jihatdan o‘xshash; istalganini tanlash mumkin"
+        },
+        {
+          "en": "Much more effective",
+          "ru": "Значительно эффективнее",
+          "uz": "Ancha samaraliroq"
+        },
+        {
+          "en": "Only for implants",
+          "ru": "Только для имплантатов",
+          "uz": "Faqat implantlar uchun"
+        }
+      ],
+      "correct": 1,
+      "explain": {
+        "en": "The guideline found no clinically important difference, so the choice depends on patient and practice factors.",
+        "ru": "Руководство не выявило клинически значимой разницы; выбор зависит от пациента и условий.",
+        "uz": "Qo‘llanma klinik ahamiyatli farq topmadi; tanlov bemor va sharoitga bog‘liq."
+      }
+    },
+    {
+      "q": {
+        "en": "A smoker with stage III periodontitis starts therapy. Which step-1 action is most important beyond hygiene instruction?",
+        "ru": "Курильщик с пародонтитом III стадии начинает лечение. Какое действие этапа 1 важнее всего помимо обучения гигиене?",
+        "uz": "III bosqich parodontitli chekuvchi bemor davolanishni boshlamoqda. Gigiyenaga o‘rgatishdan tashqari 1-bosqichning eng muhim harakati qaysi?"
+      },
+      "options": [
+        {
+          "en": "Immediate surgery",
+          "ru": "Немедленная операция",
+          "uz": "Darhol jarrohlik"
+        },
+        {
+          "en": "Placing implants",
+          "ru": "Установка имплантатов",
+          "uz": "Implant o‘rnatish"
+        },
+        {
+          "en": "Long-term antibiotics",
+          "ru": "Длительные антибиотики",
+          "uz": "Uzoq muddatli antibiotiklar"
+        },
+        {
+          "en": "Smoking cessation support",
+          "ru": "Помощь в отказе от курения",
+          "uz": "Chekishni tashlashga yordam"
+        }
+      ],
+      "correct": 3,
+      "explain": {
+        "en": "Smoking cessation is a key step-1 intervention because smoking impairs healing and response to therapy.",
+        "ru": "Отказ от курения — ключевое вмешательство этапа 1, так как курение ухудшает заживление и ответ на лечение.",
+        "uz": "Chekishni tashlash 1-bosqichning asosiy tadbiri, chunki chekish bitishni va davolashga javobni yomonlashtiradi."
+      }
+    },
+    {
+      "q": {
+        "en": "Healing after successful subgingival instrumentation mainly occurs by:",
+        "ru": "Заживление после успешной поддесневой обработки происходит в основном за счёт:",
+        "uz": "Muvaffaqiyatli milk osti ishlovdan keyin bitish asosan nima hisobiga bo‘ladi?"
+      },
+      "options": [
+        {
+          "en": "Long junctional epithelium and reduced inflammation",
+          "ru": "Длинного соединительного эпителия и уменьшения воспаления",
+          "uz": "Uzun birikma epiteliy va yallig‘lanishning kamayishi"
+        },
+        {
+          "en": "Complete regeneration of bone",
+          "ru": "Полной регенерации кости",
+          "uz": "Suyakning to‘liq regeneratsiyasi"
+        },
+        {
+          "en": "New enamel formation",
+          "ru": "Образования новой эмали",
+          "uz": "Yangi emal hosil bo‘lishi"
+        },
+        {
+          "en": "Ankylosis of the root",
+          "ru": "Анкилоза корня",
+          "uz": "Ildiz ankilozi"
+        }
+      ],
+      "correct": 0,
+      "explain": {
+        "en": "Repair is mainly by a long junctional epithelium with shrinkage of inflamed tissue, not true regeneration.",
+        "ru": "Восстановление идёт в основном за счёт длинного соединительного эпителия и уменьшения отёка, а не регенерации.",
+        "uz": "Tiklanish asosan uzun birikma epiteliy va shishning qaytishi hisobiga bo‘ladi, haqiqiy regeneratsiya emas."
+      }
+    },
+    {
+      "q": {
+        "en": "A patient asks why their gums look 'longer' after deep cleaning. The best explanation is:",
+        "ru": "Пациент спрашивает, почему после глубокой чистки зубы выглядят «длиннее». Лучшее объяснение:",
+        "uz": "Bemor chuqur tozalashdan keyin tishlari nega «uzunroq» ko‘rinishini so‘ramoqda. Eng to‘g‘ri izoh:"
+      },
+      "options": [
+        {
+          "en": "The teeth have erupted",
+          "ru": "Зубы прорезались дальше",
+          "uz": "Tishlar ko‘proq chiqib kelgan"
+        },
+        {
+          "en": "The enamel was removed",
+          "ru": "Удалена эмаль",
+          "uz": "Emal olib tashlangan"
+        },
+        {
+          "en": "Swelling resolved, causing some recession",
+          "ru": "Отёк спал, и появилась небольшая рецессия",
+          "uz": "Shish qaytdi va biroz retsessiya yuzaga keldi"
+        },
+        {
+          "en": "A sign of treatment failure",
+          "ru": "Признак неудачи лечения",
+          "uz": "Davolash muvaffaqiyatsizligi belgisi"
+        }
+      ],
+      "correct": 2,
+      "explain": {
+        "en": "As inflammation resolves the gingiva shrinks, so some recession is an expected result of successful therapy.",
+        "ru": "При стихании воспаления десна уменьшается, поэтому некоторая рецессия — ожидаемый результат успешного лечения.",
+        "uz": "Yallig‘lanish qaytishi bilan milk kichrayadi, shuning uchun biroz retsessiya muvaffaqiyatli davolashning kutilgan natijasi."
+      }
+    },
+    {
+      "q": {
+        "en": "Which term does the EFP guideline use in place of 'scaling and root planing'?",
+        "ru": "Какой термин руководство EFP использует вместо «скейлинга и сглаживания корней»?",
+        "uz": "EFP qo‘llanmasi «skeyling va ildizni silliqlash» o‘rniga qaysi atamani ishlatadi?"
+      },
+      "options": [
+        {
+          "en": "Root resection",
+          "ru": "Резекция корня",
+          "uz": "Ildiz rezeksiyasi"
+        },
+        {
+          "en": "Subgingival instrumentation",
+          "ru": "Поддесневая инструментальная обработка",
+          "uz": "Milk osti asboblar bilan ishlov"
+        },
+        {
+          "en": "Gingivectomy",
+          "ru": "Гингивэктомия",
+          "uz": "Gingivektomiya"
+        },
+        {
+          "en": "Polishing",
+          "ru": "Полировка",
+          "uz": "Silliqlash"
+        }
+      ],
+      "correct": 1,
+      "explain": {
+        "en": "The term reflects the aim of removing biofilm and calculus rather than deliberately removing cementum.",
+        "ru": "Термин отражает цель — удаление биоплёнки и камня, а не намеренное удаление цемента.",
+        "uz": "Atama sementni ataylab olib tashlash emas, biofilm va toshni olib tashlash maqsadini aks ettiradi."
+      }
+    },
+    {
+      "q": {
+        "en": "At re-evaluation a site has PD 7 mm with BOP despite good hygiene. The next step is usually:",
+        "ru": "При повторной оценке, несмотря на хорошую гигиену, в участке остаётся кровоточащий карман 7 мм. Обычно следующий шаг:",
+        "uz": "Qayta baholashda gigiyena yaxshi bo‘lsa ham nuqtada qonashli 7 mm cho‘ntak bor. Odatda keyingi qadam:"
+      },
+      "options": [
+        {
+          "en": "Step 3, often periodontal surgery",
+          "ru": "Этап 3, часто хирургия пародонта",
+          "uz": "3-bosqich, ko‘pincha parodont jarrohligi"
+        },
+        {
+          "en": "Discharge from care",
+          "ru": "Завершение лечения",
+          "uz": "Davolashni yakunlash"
+        },
+        {
+          "en": "Polishing only",
+          "ru": "Только полировка",
+          "uz": "Faqat silliqlash"
+        },
+        {
+          "en": "Return to step 1 only",
+          "ru": "Только возврат к этапу 1",
+          "uz": "Faqat 1-bosqichga qaytish"
+        }
+      ],
+      "correct": 0,
+      "explain": {
+        "en": "Deep residual pockets of 6 mm or more often need step 3 surgical access or regenerative treatment.",
+        "ru": "Глубокие остаточные карманы 6 мм и более часто требуют хирургического доступа или регенерации на этапе 3.",
+        "uz": "6 mm va undan chuqur qolgan cho‘ntaklar ko‘pincha 3-bosqichda jarrohlik yoki regenerativ davolashni talab qiladi."
+      }
+    }
+  ]
+}

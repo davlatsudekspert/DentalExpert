@@ -1,0 +1,960 @@
+{
+  "id": "impl-05",
+  "subject": "impl",
+  "n": 5,
+  "week": 5,
+  "type": "practical",
+  "hours": 2,
+  "title": {
+    "en": "Peri-implant diseases: diagnosis and prevention",
+    "ru": "Периимплантные заболевания: диагностика и профилактика",
+    "uz": "Implant atrofi kasalliklari: tashxis va profilaktika"
+  },
+  "goals": [
+    {
+      "en": "Distinguish peri-implant health, mucositis and peri-implantitis by AAP/EFP 2017",
+      "ru": "Различать здоровье, мукозит и периимплантит по классификации AAP/EFP 2017",
+      "uz": "AAP/EFP 2017 tasnifi bo‘yicha implant atrofi sog‘lom holati, mukozit va periimplantitni farqlash"
+    },
+    {
+      "en": "Perform peri-implant probing and radiographic assessment",
+      "ru": "Выполнять зондирование и рентгенологическую оценку вокруг имплантата",
+      "uz": "Implant atrofini zondlash va rentgenologik baholashni bajarish"
+    },
+    {
+      "en": "Identify risk factors and plan prevention and supportive care",
+      "ru": "Выявлять факторы риска и планировать профилактику и поддерживающую терапию",
+      "uz": "Xavf omillarini aniqlab, profilaktika va qo‘llab-quvvatlovchi davolashni rejalashtirish"
+    }
+  ],
+  "links": [
+    "periodontium",
+    "oral-hygiene"
+  ],
+  "sources": [
+    "Berglundh T et al. Peri-implant diseases and conditions: consensus report of workgroup 4 of the 2017 World Workshop. J Clin Periodontol 2018",
+    "Caton JG et al. A new classification scheme for periodontal and peri-implant diseases. J Clin Periodontol 2018",
+    "Newman MG et al. Newman and Carranza's Clinical Periodontology, 13th ed., 2019"
+  ],
+  "slides": [
+    {
+      "layout": "title",
+      "title": {
+        "en": "Peri-implant diseases",
+        "ru": "Периимплантные заболевания",
+        "uz": "Implant atrofi kasalliklari"
+      },
+      "subtitle": {
+        "en": "AAP/EFP 2017 classification, diagnosis and prevention",
+        "ru": "Классификация AAP/EFP 2017, диагностика и профилактика",
+        "uz": "AAP/EFP 2017 tasnifi, tashxis va profilaktika"
+      }
+    },
+    {
+      "layout": "table",
+      "title": {
+        "en": "AAP/EFP 2017 classification",
+        "ru": "Классификация AAP/EFP 2017",
+        "uz": "AAP/EFP 2017 tasnifi"
+      },
+      "head": [
+        {
+          "en": "Condition",
+          "ru": "Состояние",
+          "uz": "Holat"
+        },
+        {
+          "en": "Bleeding or pus",
+          "ru": "Кровоточивость или гной",
+          "uz": "Qon ketish yoki yiring"
+        },
+        {
+          "en": "Bone loss",
+          "ru": "Убыль кости",
+          "uz": "Suyak yo‘qolishi"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "en": "Peri-implant health",
+            "ru": "Периимплантное здоровье",
+            "uz": "Implant atrofi to‘qimalari sog‘lom"
+          },
+          {
+            "en": "Absent",
+            "ru": "Нет",
+            "uz": "Yo‘q"
+          },
+          {
+            "en": "No more than initial remodelling",
+            "ru": "Не больше начального ремоделирования",
+            "uz": "Dastlabki qayta qurilishdan ortiq emas"
+          }
+        ],
+        [
+          {
+            "en": "Peri-implant mucositis",
+            "ru": "Периимплантный мукозит",
+            "uz": "Implant atrofi mukoziti"
+          },
+          {
+            "en": "Bleeding on probing",
+            "ru": "Кровоточивость при зондировании",
+            "uz": "Zondlashda qon ketadi"
+          },
+          {
+            "en": "No more than initial remodelling",
+            "ru": "Не больше начального ремоделирования",
+            "uz": "Dastlabki qayta qurilishdan ortiq emas"
+          }
+        ],
+        [
+          {
+            "en": "Peri-implantitis",
+            "ru": "Периимплантит",
+            "uz": "Periimplantit"
+          },
+          {
+            "en": "Bleeding and/or suppuration",
+            "ru": "Кровоточивость и/или нагноение",
+            "uz": "Qon ketish va/yoki yiring"
+          },
+          {
+            "en": "Progressive bone loss",
+            "ru": "Прогрессирующая убыль кости",
+            "uz": "Progressiv suyak yo‘qolishi"
+          }
+        ]
+      ],
+      "note": {
+        "en": "Compare: mucositis is reversible, peri-implantitis involves bone loss, like gingivitis and periodontitis.",
+        "ru": "Сравните: мукозит обратим, периимплантит сопровождается убылью кости — как гингивит и пародонтит.",
+        "uz": "Mukozit qaytar jarayon, periimplantit esa suyak yo‘qolishi bilan kechishini — xuddi gingivit va parodontit kabi — taqqoslang."
+      }
+    },
+    {
+      "layout": "key",
+      "title": {
+        "en": "Without baseline records",
+        "ru": "При отсутствии исходных данных",
+        "uz": "Boshlang‘ich ma’lumot bo‘lmaganda"
+      },
+      "term": {
+        "en": "Peri-implantitis criteria",
+        "ru": "Критерии периимплантита",
+        "uz": "Periimplantit mezonlari"
+      },
+      "definition": {
+        "en": "If no baseline data exist, peri-implantitis is diagnosed by bleeding and/or suppuration, probing depth of 6 mm or more, and bone level 3 mm or more apical to the implant shoulder.",
+        "ru": "Если нет исходных данных, периимплантит диагностируют по кровоточивости и/или нагноению, глубине зондирования 6 мм и более и уровню кости на 3 мм и более апикальнее шейки имплантата.",
+        "uz": "Oldingi rentgen va zondlash ma’lumotlari bo‘lmasa, periimplantit quyidagicha tashxislanadi: qon ketish va/yoki yiring, cho‘ntak chuqurligi 6 mm va undan ortiq hamda suyak sathi implant yelkasidan 3 mm va undan pastda."
+      },
+      "note": {
+        "en": "Stress that a baseline radiograph and probing record at delivery are therefore essential.",
+        "ru": "Подчеркните, что поэтому при сдаче протеза обязательно фиксируют исходный снимок и данные зондирования.",
+        "uz": "Shu sababli protez topshirilganda boshlang‘ich rentgen va zondlash ma’lumotlarini yozib qo‘yish shartligini ta’kidlang."
+      }
+    },
+    {
+      "layout": "flow",
+      "title": {
+        "en": "Clinical examination",
+        "ru": "Клиническое обследование",
+        "uz": "Klinik tekshiruv"
+      },
+      "steps": [
+        {
+          "label": {
+            "en": "Plaque and mucosa",
+            "ru": "Налёт и десна",
+            "uz": "Karash va milk"
+          },
+          "detail": {
+            "en": "Redness, swelling",
+            "ru": "Покраснение, отёк",
+            "uz": "Qizarish, shish"
+          }
+        },
+        {
+          "label": {
+            "en": "Probing",
+            "ru": "Зондирование",
+            "uz": "Zondlash"
+          },
+          "detail": {
+            "en": "Light force, six sites",
+            "ru": "С лёгким усилием, в шести точках",
+            "uz": "Yengil kuch bilan, olti nuqtada"
+          }
+        },
+        {
+          "label": {
+            "en": "Bleeding and pus",
+            "ru": "Кровоточивость и гной",
+            "uz": "Qon ketish va yiring"
+          },
+          "detail": {
+            "en": "Key sign of inflammation",
+            "ru": "Главный признак воспаления",
+            "uz": "Yallig‘lanish asosiy belgisi"
+          }
+        },
+        {
+          "label": {
+            "en": "Mobility",
+            "ru": "Подвижность",
+            "uz": "Harakatchanlik"
+          },
+          "detail": {
+            "en": "Mobility means lost integration",
+            "ru": "Подвижность — признак потери интеграции",
+            "uz": "Harakat — integratsiya yo‘qolishi belgisi"
+          }
+        },
+        {
+          "label": {
+            "en": "Radiograph",
+            "ru": "Рентген",
+            "uz": "Rentgen"
+          },
+          "detail": {
+            "en": "Compare with baseline",
+            "ru": "Сравнение с исходным снимком",
+            "uz": "Boshlang‘ich bilan taqqoslash"
+          }
+        }
+      ],
+      "note": {
+        "en": "Explain that probing does not harm the implant and is an essential diagnostic step.",
+        "ru": "Объясните, что зондирование не вредит имплантату и является важным методом диагностики.",
+        "uz": "Zondlash implantga zarar yetkazmasligini, balki muhim tashxis usuli ekanini tushuntiring."
+      }
+    },
+    {
+      "layout": "tree",
+      "title": {
+        "en": "Risk factors",
+        "ru": "Факторы риска",
+        "uz": "Xavf omillari"
+      },
+      "root": {
+        "en": "Peri-implantitis risk",
+        "ru": "Риск периимплантита",
+        "uz": "Periimplantit xavfi"
+      },
+      "children": [
+        {
+          "label": {
+            "en": "Strong evidence",
+            "ru": "Убедительные данные",
+            "uz": "Kuchli dalillar"
+          },
+          "items": [
+            {
+              "en": "History of periodontitis",
+              "ru": "Пародонтит в анамнезе",
+              "uz": "Parodontit anamnezi"
+            },
+            {
+              "en": "Poor plaque control",
+              "ru": "Плохой контроль налёта",
+              "uz": "Yomon karash nazorati"
+            },
+            {
+              "en": "No supportive care",
+              "ru": "Отсутствие поддерживающей терапии",
+              "uz": "Muntazam ko‘rikka kelmaslik"
+            }
+          ]
+        },
+        {
+          "label": {
+            "en": "Possible",
+            "ru": "Возможные",
+            "uz": "Ehtimoliy"
+          },
+          "items": [
+            {
+              "en": "Smoking",
+              "ru": "Курение",
+              "uz": "Chekish"
+            },
+            {
+              "en": "Diabetes",
+              "ru": "Сахарный диабет",
+              "uz": "Qandli diabet"
+            },
+            {
+              "en": "Residual cement",
+              "ru": "Остатки цемента",
+              "uz": "Sement qoldig‘i"
+            }
+          ]
+        },
+        {
+          "label": {
+            "en": "Local",
+            "ru": "Местные",
+            "uz": "Mahalliy"
+          },
+          "items": [
+            {
+              "en": "Uncleanable prosthesis design",
+              "ru": "Конструкция, неудобная для гигиены",
+              "uz": "Tozalab bo‘lmaydigan protez shakli"
+            },
+            {
+              "en": "Poor implant position",
+              "ru": "Неправильная позиция имплантата",
+              "uz": "Implantning noto‘g‘ri joylashuvi"
+            }
+          ]
+        }
+      ],
+      "note": {
+        "en": "Remind that evidence on lack of keratinised mucosa is still inconclusive.",
+        "ru": "Напомните, что данные о роли недостатка кератинизированной слизистой пока неоднозначны.",
+        "uz": "Keratinlashgan shilliq qavat yetishmasligi bo‘yicha dalillar hali aniq emasligini eslating."
+      }
+    },
+    {
+      "layout": "compare",
+      "title": {
+        "en": "Treatment approach",
+        "ru": "Подход к лечению",
+        "uz": "Davolash yondashuvi"
+      },
+      "columns": [
+        {
+          "head": {
+            "en": "Mucositis",
+            "ru": "Мукозит",
+            "uz": "Mukozit"
+          },
+          "items": [
+            {
+              "en": "Professional mechanical debridement",
+              "ru": "Профессиональная механическая очистка",
+              "uz": "Professional mexanik tozalash"
+            },
+            {
+              "en": "Better home care",
+              "ru": "Улучшение гигиены пациента",
+              "uz": "Bemor gigiyenasini yaxshilash"
+            },
+            {
+              "en": "Usually reversible",
+              "ru": "Обычно обратим",
+              "uz": "Odatda qaytar"
+            }
+          ]
+        },
+        {
+          "head": {
+            "en": "Peri-implantitis",
+            "ru": "Периимплантит",
+            "uz": "Periimplantit"
+          },
+          "items": [
+            {
+              "en": "Non-surgical therapy first",
+              "ru": "Сначала нехирургическое лечение",
+              "uz": "Avval nojarrohlik davolash"
+            },
+            {
+              "en": "Then surgery: resective or regenerative",
+              "ru": "При необходимости хирургия: резективная или регенеративная",
+              "uz": "Kerak bo‘lsa jarrohlik: rezektiv yoki regenerativ"
+            },
+            {
+              "en": "Surface decontamination",
+              "ru": "Деконтаминация поверхности",
+              "uz": "Implant yuzasini dekontaminatsiya qilish"
+            }
+          ]
+        }
+      ],
+      "note": {
+        "en": "Note that in both cases the first step is removing plaque and any excess cement.",
+        "ru": "Скажите, что в обоих случаях первый шаг — устранить налёт и остатки цемента.",
+        "uz": "Har ikkala holatda sababni — karash va sement qoldig‘ini — bartaraf etish birinchi qadam ekanini ayting."
+      }
+    },
+    {
+      "layout": "cycle",
+      "title": {
+        "en": "Supportive care cycle",
+        "ru": "Цикл поддерживающей терапии",
+        "uz": "Qo‘llab-quvvatlovchi davolash sikli"
+      },
+      "center": {
+        "en": "Implant health",
+        "ru": "Здоровье имплантата",
+        "uz": "Implant salomatligi"
+      },
+      "steps": [
+        {
+          "label": {
+            "en": "Hygiene instruction",
+            "ru": "Обучение гигиене",
+            "uz": "Gigiyena bo‘yicha o‘qitish"
+          }
+        },
+        {
+          "label": {
+            "en": "Probing and bleeding check",
+            "ru": "Зондирование и оценка кровоточивости",
+            "uz": "Zondlash va qon ketishni baholash"
+          }
+        },
+        {
+          "label": {
+            "en": "Professional cleaning",
+            "ru": "Профессиональная чистка",
+            "uz": "Professional tozalash"
+          }
+        },
+        {
+          "label": {
+            "en": "Radiograph when needed",
+            "ru": "Рентген по показаниям",
+            "uz": "Kerak bo‘lsa rentgen"
+          }
+        },
+        {
+          "label": {
+            "en": "Set the next recall",
+            "ru": "Назначение следующего визита",
+            "uz": "Keyingi ko‘rikni belgilash"
+          }
+        }
+      ]
+    },
+    {
+      "layout": "bullets",
+      "title": {
+        "en": "Home care",
+        "ru": "Домашняя гигиена",
+        "uz": "Uyda gigiyena"
+      },
+      "bullets": [
+        {
+          "en": "Brush twice daily with a soft brush",
+          "ru": "Чистка мягкой щёткой дважды в день",
+          "uz": "Yumshoq cho‘tka bilan kuniga ikki marta tozalash"
+        },
+        {
+          "en": "Interdental brushes or implant floss",
+          "ru": "Межзубные ёршики или специальная нить",
+          "uz": "Tishlararo cho‘tkalar yoki maxsus ip"
+        },
+        {
+          "en": "Clean under bridges and bars",
+          "ru": "Очистка под мостом и балкой",
+          "uz": "Ko‘prik va balka ostini tozalash"
+        },
+        {
+          "en": "Stop smoking",
+          "ru": "Отказ от курения",
+          "uz": "Chekishni to‘xtatish"
+        }
+      ]
+    },
+    {
+      "layout": "summary",
+      "title": {
+        "en": "Summary",
+        "ru": "Итоги",
+        "uz": "Xulosa"
+      },
+      "bullets": [
+        {
+          "en": "Mucositis is reversible inflammation without bone loss",
+          "ru": "Мукозит — обратимое воспаление без убыли кости",
+          "uz": "Mukozit — suyak yo‘qolishisiz qaytar yallig‘lanish"
+        },
+        {
+          "en": "Peri-implantitis means bleeding, pus and progressive bone loss",
+          "ru": "Периимплантит — кровоточивость, гной и прогрессирующая убыль кости",
+          "uz": "Periimplantit — qon ketish, yiring va progressiv suyak yo‘qolishi"
+        },
+        {
+          "en": "Baseline radiograph and probing are vital",
+          "ru": "Исходные снимок и зондирование необходимы для диагноза",
+          "uz": "Boshlang‘ich rentgen va zondlash ma’lumotlari tashxis uchun zarur"
+        },
+        {
+          "en": "Regular supportive care is the main prevention",
+          "ru": "Регулярная поддерживающая терапия — главная профилактика",
+          "uz": "Muntazam qo‘llab-quvvatlovchi davolash asosiy profilaktika"
+        }
+      ]
+    }
+  ],
+  "oral": [
+    {
+      "q": {
+        "en": "Distinguish mucositis from peri-implantitis using AAP/EFP 2017.",
+        "ru": "Разграничьте мукозит и периимплантит по AAP/EFP 2017.",
+        "uz": "Mukozit va periimplantitni AAP/EFP 2017 bo‘yicha farqlang."
+      },
+      "plan": [
+        {
+          "en": "Both bleed on probing",
+          "ru": "В обоих случаях кровоточивость",
+          "uz": "Har ikkalasida zondlashda qon ketish"
+        },
+        {
+          "en": "Peri-implantitis: pus and deeper pockets",
+          "ru": "При периимплантите гной и глубокий карман",
+          "uz": "Periimplantitda yiring va chuqur cho‘ntak"
+        },
+        {
+          "en": "Peri-implantitis: progressive bone loss",
+          "ru": "При периимплантите прогрессирующая убыль кости",
+          "uz": "Periimplantitda progressiv suyak yo‘qolishi"
+        },
+        {
+          "en": "Mucositis is reversible",
+          "ru": "Мукозит обратим",
+          "uz": "Mukozit qaytar"
+        }
+      ]
+    },
+    {
+      "q": {
+        "en": "How is peri-implantitis diagnosed without baseline data?",
+        "ru": "Как диагностировать периимплантит без исходных данных?",
+        "uz": "Boshlang‘ich ma’lumot bo‘lmaganda periimplantit qanday tashxislanadi?"
+      },
+      "plan": [
+        {
+          "en": "Bleeding and/or suppuration",
+          "ru": "Кровоточивость и/или нагноение",
+          "uz": "Qon ketish va/yoki yiring"
+        },
+        {
+          "en": "Probing depth 6 mm or more",
+          "ru": "Глубина 6 мм и более",
+          "uz": "Cho‘ntak 6 mm va undan ortiq"
+        },
+        {
+          "en": "Bone level 3 mm or more apical",
+          "ru": "Уровень кости на 3 мм и более апикальнее",
+          "uz": "Suyak sathi 3 mm va undan pastda"
+        }
+      ]
+    },
+    {
+      "q": {
+        "en": "Name the main risk factors for peri-implantitis.",
+        "ru": "Назовите основные факторы риска периимплантита.",
+        "uz": "Periimplantitning asosiy xavf omillarini ayting."
+      },
+      "plan": [
+        {
+          "en": "History of periodontitis",
+          "ru": "Пародонтит в анамнезе",
+          "uz": "Parodontit anamnezi"
+        },
+        {
+          "en": "Poor hygiene and no maintenance",
+          "ru": "Плохая гигиена и отсутствие поддерживающей терапии",
+          "uz": "Yomon gigiyena va qo‘llab-quvvatlovchi davolashning yo‘qligi"
+        },
+        {
+          "en": "Smoking, diabetes",
+          "ru": "Курение, диабет",
+          "uz": "Chekish, diabet"
+        },
+        {
+          "en": "Excess cement and prosthesis design",
+          "ru": "Остатки цемента и конструкция протеза",
+          "uz": "Sement qoldig‘i va protez dizayni"
+        }
+      ]
+    },
+    {
+      "q": {
+        "en": "Outline a prevention programme for an implant patient.",
+        "ru": "Составьте программу профилактики для пациента с имплантатами.",
+        "uz": "Implantli bemor uchun profilaktika dasturini tuzing."
+      },
+      "plan": [
+        {
+          "en": "Baseline radiograph and probing",
+          "ru": "Исходный снимок и зондирование",
+          "uz": "Boshlang‘ich rentgen va zondlash"
+        },
+        {
+          "en": "Home care tools",
+          "ru": "Средства домашней гигиены",
+          "uz": "Uyda gigiyena vositalari"
+        },
+        {
+          "en": "Regular recalls and cleaning",
+          "ru": "Регулярные визиты и профчистка",
+          "uz": "Muntazam ko‘rik va professional tozalash"
+        },
+        {
+          "en": "Risk factor control",
+          "ru": "Контроль факторов риска",
+          "uz": "Xavf omillarini nazorat qilish"
+        }
+      ]
+    }
+  ],
+  "test": [
+    {
+      "q": {
+        "en": "What is the key sign of peri-implant mucositis?",
+        "ru": "Каков главный признак периимплантного мукозита?",
+        "uz": "Implant atrofi mukozitining asosiy belgisi qaysi?"
+      },
+      "options": [
+        {
+          "en": "Bleeding on probing without bone loss",
+          "ru": "Кровоточивость без убыли кости",
+          "uz": "Suyak yo‘qolishisiz zondlashda qon ketish"
+        },
+        {
+          "en": "Implant mobility",
+          "ru": "Подвижность имплантата",
+          "uz": "Implant harakatchanligi"
+        },
+        {
+          "en": "Progressive bone loss",
+          "ru": "Прогрессирующая убыль кости",
+          "uz": "Progressiv suyak yo‘qolishi"
+        },
+        {
+          "en": "Implant fracture",
+          "ru": "Перелом имплантата",
+          "uz": "Implant sinishi"
+        }
+      ],
+      "correct": 0,
+      "explain": {
+        "en": "Mucositis is confined to soft tissue without bone loss.",
+        "ru": "При мукозите воспаление ограничено мягкими тканями, кость не теряется.",
+        "uz": "Mukozitda yallig‘lanish faqat yumshoq to‘qimada, suyak yo‘qolmaydi."
+      }
+    },
+    {
+      "q": {
+        "en": "What separates peri-implantitis from mucositis?",
+        "ru": "Какой признак отличает периимплантит от мукозита?",
+        "uz": "Periimplantitni mukozitdan farqlaydigan asosiy belgi nima?"
+      },
+      "options": [
+        {
+          "en": "Mucosal redness",
+          "ru": "Покраснение десны",
+          "uz": "Milk qizarishi"
+        },
+        {
+          "en": "Presence of plaque",
+          "ru": "Наличие налёта",
+          "uz": "Karash borligi"
+        },
+        {
+          "en": "Progressive bone loss",
+          "ru": "Прогрессирующая убыль кости",
+          "uz": "Progressiv suyak yo‘qolishi"
+        },
+        {
+          "en": "Pain",
+          "ru": "Боль",
+          "uz": "Og‘riq"
+        }
+      ],
+      "correct": 2,
+      "explain": {
+        "en": "In peri-implantitis inflammation extends to bone, causing loss.",
+        "ru": "При периимплантите воспаление переходит на кость с её убылью.",
+        "uz": "Periimplantitda yallig‘lanish suyakka o‘tadi va suyak yo‘qoladi."
+      }
+    },
+    {
+      "q": {
+        "en": "Without baseline data, what probing depth criterion suggests peri-implantitis?",
+        "ru": "Каков критерий глубины зондирования для периимплантита при отсутствии исходных данных?",
+        "uz": "Boshlang‘ich ma’lumot bo‘lmaganda periimplantit uchun cho‘ntak chuqurligi mezoni qancha?"
+      },
+      "options": [
+        {
+          "en": "2 mm or more",
+          "ru": "2 мм и более",
+          "uz": "2 mm va undan ortiq"
+        },
+        {
+          "en": "6 mm or more",
+          "ru": "6 мм и более",
+          "uz": "6 mm va undan ortiq"
+        },
+        {
+          "en": "Under 1 mm",
+          "ru": "Менее 1 мм",
+          "uz": "1 mm dan kam"
+        },
+        {
+          "en": "Over 10 mm",
+          "ru": "Более 10 мм",
+          "uz": "10 mm dan ortiq"
+        }
+      ],
+      "correct": 1,
+      "explain": {
+        "en": "AAP/EFP 2017 uses 6 mm or more together with bleeding and bone loss.",
+        "ru": "По AAP/EFP 2017 критерий — 6 мм и более вместе с кровоточивостью и убылью кости.",
+        "uz": "AAP/EFP 2017 bo‘yicha 6 mm va undan ortiq cho‘ntak qon ketish va suyak yo‘qolishi bilan birga mezondir."
+      }
+    },
+    {
+      "q": {
+        "en": "Which risk factor for peri-implantitis has the strongest evidence?",
+        "ru": "Какой фактор риска периимплантита наиболее доказан?",
+        "uz": "Periimplantit uchun eng kuchli isbotlangan xavf omili qaysi?"
+      },
+      "options": [
+        {
+          "en": "Titanium allergy",
+          "ru": "Аллергия на титан",
+          "uz": "Titan allergiyasi"
+        },
+        {
+          "en": "Implant colour",
+          "ru": "Цвет имплантата",
+          "uz": "Implant rangi"
+        },
+        {
+          "en": "Patient height",
+          "ru": "Рост пациента",
+          "uz": "Bemorning bo‘yi"
+        },
+        {
+          "en": "History of periodontitis",
+          "ru": "Пародонтит в анамнезе",
+          "uz": "Parodontit anamnezi"
+        }
+      ],
+      "correct": 3,
+      "explain": {
+        "en": "Past periodontitis, poor hygiene and no maintenance have the strongest evidence.",
+        "ru": "Пародонтит в анамнезе, плохая гигиена и отсутствие визитов — наиболее доказанные факторы.",
+        "uz": "Parodontit anamnezi, yomon gigiyena va muntazam ko‘rikning yo‘qligi eng kuchli omillardir."
+      }
+    },
+    {
+      "q": {
+        "en": "A year after cementing an implant crown there is pus and bone loss. What should be checked first?",
+        "ru": "Через год после фиксации цементной коронки вокруг имплантата гной и убыль кости. Что проверить в первую очередь?",
+        "uz": "Sementli koronka o‘rnatilganidan bir yil o‘tib implant atrofida yiring va suyak yo‘qolishi aniqlandi. Avval nimani tekshirish kerak?"
+      },
+      "options": [
+        {
+          "en": "Residual subgingival cement",
+          "ru": "Остатки цемента под десной",
+          "uz": "Milk ostida sement qoldig‘i"
+        },
+        {
+          "en": "Crown shade",
+          "ru": "Цвет коронки",
+          "uz": "Koronka rangi"
+        },
+        {
+          "en": "Caries on the neighbour",
+          "ru": "Кариес соседнего зуба",
+          "uz": "Qo‘shni tishdagi karies"
+        },
+        {
+          "en": "Blood group",
+          "ru": "Группа крови пациента",
+          "uz": "Bemorning qon guruhi"
+        }
+      ],
+      "correct": 0,
+      "explain": {
+        "en": "Excess cement promotes plaque and peri-implantitis.",
+        "ru": "Остатки цемента способствуют налёту и периимплантиту.",
+        "uz": "Sement qoldig‘i karash to‘planishiga va periimplantitga olib keladi."
+      }
+    },
+    {
+      "q": {
+        "en": "Which statement about peri-implant probing is correct?",
+        "ru": "Какое утверждение о зондировании вокруг имплантата верно?",
+        "uz": "Implant atrofini zondlash haqida qaysi fikr to‘g‘ri?"
+      },
+      "options": [
+        {
+          "en": "Probing damages the implant",
+          "ru": "Зондирование повреждает имплантат",
+          "uz": "Zondlash implantni buzadi"
+        },
+        {
+          "en": "Radiographs alone suffice",
+          "ru": "Достаточно только рентгена",
+          "uz": "Faqat rentgen yetarli"
+        },
+        {
+          "en": "Light-force probing is an essential test",
+          "ru": "Зондирование с лёгким усилием — важный метод",
+          "uz": "Yengil kuch bilan zondlash muhim tashxis usuli"
+        },
+        {
+          "en": "Probe only if there is pain",
+          "ru": "Зондируют только при боли",
+          "uz": "Faqat og‘riq bo‘lsa zondlanadi"
+        }
+      ],
+      "correct": 2,
+      "explain": {
+        "en": "Probing reveals bleeding and depth; light force does not harm tissues.",
+        "ru": "Зондирование выявляет кровоточивость и глубину; лёгкое усилие не травмирует ткани.",
+        "uz": "Zondlash qon ketish va cho‘ntak chuqurligini aniqlaydi, yengil kuch to‘qimani shikastlamaydi."
+      }
+    },
+    {
+      "q": {
+        "en": "What is the first step in treating mucositis?",
+        "ru": "Каков первый шаг лечения мукозита?",
+        "uz": "Mukozitni davolashning birinchi qadami qaysi?"
+      },
+      "options": [
+        {
+          "en": "Remove the implant",
+          "ru": "Удаление имплантата",
+          "uz": "Implantni olib tashlash"
+        },
+        {
+          "en": "Bone grafting",
+          "ru": "Костная пластика",
+          "uz": "Suyak plastikasi"
+        },
+        {
+          "en": "Systemic antibiotics",
+          "ru": "Системные антибиотики",
+          "uz": "Tizimli antibiotik"
+        },
+        {
+          "en": "Mechanical cleaning and better hygiene",
+          "ru": "Механическая очистка и улучшение гигиены",
+          "uz": "Mexanik tozalash va gigiyenani yaxshilash"
+        }
+      ],
+      "correct": 3,
+      "explain": {
+        "en": "Mucositis is plaque-induced and usually resolves with cleaning.",
+        "ru": "Мукозит связан с налётом и обычно разрешается после очистки.",
+        "uz": "Mukozit karash bilan bog‘liq va tozalash bilan odatda qaytadi."
+      }
+    },
+    {
+      "q": {
+        "en": "What does implant mobility indicate?",
+        "ru": "О чём говорит подвижность имплантата?",
+        "uz": "Implant harakatchanligi nimani bildiradi?"
+      },
+      "options": [
+        {
+          "en": "A normal finding",
+          "ru": "Норма",
+          "uz": "Normal holat"
+        },
+        {
+          "en": "Loss of osseointegration",
+          "ru": "Утрата остеоинтеграции",
+          "uz": "Osteointegratsiyaning yo‘qolishi"
+        },
+        {
+          "en": "Mucositis only",
+          "ru": "Только мукозит",
+          "uz": "Faqat mukozit"
+        },
+        {
+          "en": "A tight abutment screw",
+          "ru": "Затянутый винт абатмента",
+          "uz": "Abatment vintining tortilganini"
+        }
+      ],
+      "correct": 1,
+      "explain": {
+        "en": "An integrated implant is immobile; mobility means lost integration, after ruling out a loose screw.",
+        "ru": "Интегрированный имплантат неподвижен; подвижность означает утрату интеграции, но сначала исключают раскручивание винта.",
+        "uz": "Integratsiyalangan implant harakatsiz bo‘ladi; harakat integratsiya yo‘qolganini bildiradi. Lekin avval protez yoki vint bo‘shashi istisno qilinadi."
+      }
+    },
+    {
+      "q": {
+        "en": "What must be done when an implant prosthesis is delivered?",
+        "ru": "Что обязательно делают при сдаче протеза на имплантате?",
+        "uz": "Implant protezi topshirilganda nima albatta qilinadi?"
+      },
+      "options": [
+        {
+          "en": "Record a baseline radiograph and probing",
+          "ru": "Фиксация исходного снимка и данных зондирования",
+          "uz": "Boshlang‘ich rentgen va zondlash ma’lumotlarini qayd etish"
+        },
+        {
+          "en": "Prescribe antibiotics",
+          "ru": "Назначение антибиотиков",
+          "uz": "Antibiotik buyurish"
+        },
+        {
+          "en": "Skip recall booking",
+          "ru": "Не назначать следующий визит",
+          "uz": "Keyingi ko‘rikni belgilamaslik"
+        },
+        {
+          "en": "Test-unscrew the implant",
+          "ru": "Пробное выкручивание имплантата",
+          "uz": "Implantni tortib ko‘rish"
+        }
+      ],
+      "correct": 0,
+      "explain": {
+        "en": "Baseline records are needed to detect later bone loss.",
+        "ru": "Исходные данные нужны, чтобы позже выявить убыль кости.",
+        "uz": "Boshlang‘ich ma’lumotlar keyinchalik suyak yo‘qolishini aniqlash uchun zarur."
+      }
+    },
+    {
+      "q": {
+        "en": "Which patient has the highest peri-implantitis risk?",
+        "ru": "Какой пациент в группе наибольшего риска периимплантита?",
+        "uz": "Qaysi bemor periimplantit xavfi eng yuqori guruhda?"
+      },
+      "options": [
+        {
+          "en": "Healthy non-smoker attending recalls",
+          "ru": "Здоровый, некурящий, регулярно приходит",
+          "uz": "Sog‘lom, chekmaydigan, muntazam keladigan"
+        },
+        {
+          "en": "Young patient with good hygiene",
+          "ru": "Молодой пациент с хорошей гигиеной",
+          "uz": "Yaxshi gigiyenali yosh bemor"
+        },
+        {
+          "en": "Past periodontitis, smoker, misses recalls",
+          "ru": "После пародонтита, курит, не приходит на визиты",
+          "uz": "Parodontit o‘tkazgan, chekuvchi, ko‘rikka kelmaydigan"
+        },
+        {
+          "en": "Healthy patient with a screw crown",
+          "ru": "Здоровый пациент с винтовой коронкой",
+          "uz": "Vintli koronka taqqan, sog‘lom bemor"
+        }
+      ],
+      "correct": 2,
+      "explain": {
+        "en": "Several combined risk factors greatly raise the risk.",
+        "ru": "Сочетание нескольких факторов резко повышает риск периимплантита.",
+        "uz": "Bir nechta xavf omillari birgalikda periimplantit ehtimolini keskin oshiradi."
+      }
+    }
+  ]
+}

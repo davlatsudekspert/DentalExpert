@@ -1,0 +1,1001 @@
+{
+  "id": "prev-04",
+  "subject": "prev",
+  "n": 4,
+  "week": 4,
+  "type": "practical",
+  "hours": 2,
+  "title": {
+    "en": "Pit and fissure sealants",
+    "ru": "Герметизация ямок и фиссур",
+    "uz": "Chuqurcha va fissuralarni germetizatsiya qilish"
+  },
+  "goals": [
+    {
+      "en": "State the indications and contraindications for sealants",
+      "ru": "Знать показания и противопоказания к герметизации",
+      "uz": "Germetizatsiyaga ko‘rsatma va qarshi ko‘rsatmalarni bilish"
+    },
+    {
+      "en": "Compare resin-based and glass ionomer sealants",
+      "ru": "Сравнивать полимерные и стеклоиономерные герметики",
+      "uz": "Smola asosidagi va shisha-ionomer germetiklarni solishtirish"
+    },
+    {
+      "en": "Place a resin sealant step by step",
+      "ru": "Пошагово накладывать полимерный герметик",
+      "uz": "Smola asosidagi germetikni bosqichma-bosqich qo‘yish"
+    },
+    {
+      "en": "Plan review and repair of sealants",
+      "ru": "Планировать контроль и восстановление герметиков",
+      "uz": "Germetiklarni nazorat qilish va tiklashni rejalashtirish"
+    }
+  ],
+  "links": [
+    "tooth-surfaces"
+  ],
+  "sources": [
+    "Wright JT et al. Evidence-based clinical practice guideline for the use of pit-and-fissure sealants. J Am Dent Assoc 2016",
+    "Dean JA. McDonald and Avery's Dentistry for the Child and Adolescent, 11th ed., 2021"
+  ],
+  "slides": [
+    {
+      "layout": "title",
+      "title": {
+        "en": "Pit and fissure sealants",
+        "ru": "Герметизация фиссур",
+        "uz": "Fissuralarni germetizatsiya qilish"
+      },
+      "subtitle": {
+        "en": "Sealing the sites where caries starts most often",
+        "ru": "Закрываем места, где кариес начинается чаще всего",
+        "uz": "Karies eng ko‘p boshlanadigan joylarni berkitish"
+      }
+    },
+    {
+      "layout": "key",
+      "title": {
+        "en": "What is a sealant?",
+        "ru": "Что такое герметик?",
+        "uz": "Germetik nima?"
+      },
+      "term": {
+        "en": "Fissure sealant",
+        "ru": "Герметик фиссур",
+        "uz": "Fissura germetigi"
+      },
+      "definition": {
+        "en": "A flowable material bonded into pits and fissures of posterior teeth. It forms a smooth barrier that keeps plaque out and can stop early non-cavitated lesions by cutting off their nutrient supply.",
+        "ru": "Текучий материал, фиксируемый в ямках и фиссурах боковых зубов. Он создаёт гладкий барьер против налёта и может остановить начальные некавитированные поражения, лишая бактерии питания.",
+        "uz": "Yon tishlarning chuqurcha va fissuralariga yopishtiriladigan oquvchan material. U karashni kiritmaydigan silliq to‘siq hosil qiladi va bakteriyalarni oziqdan mahrum qilib, boshlang‘ich kovaksiz shikastlarni to‘xtatishi mumkin."
+      }
+    },
+    {
+      "layout": "figure",
+      "title": {
+        "en": "Where sealants go",
+        "ru": "Куда наносят герметик",
+        "uz": "Germetik qayerga qo‘yiladi"
+      },
+      "image": "occlusal",
+      "callouts": [
+        {
+          "at": "fissure",
+          "label": {
+            "en": "Main fissure",
+            "ru": "Основная фиссура",
+            "uz": "Asosiy fissura"
+          }
+        },
+        {
+          "at": "fossa",
+          "label": {
+            "en": "Central pit",
+            "ru": "Центральная ямка",
+            "uz": "Markaziy chuqurcha"
+          }
+        },
+        {
+          "at": "cusp",
+          "label": {
+            "en": "Cusp slope left uncovered",
+            "ru": "Скат бугра без герметика",
+            "uz": "Germetiksiz do‘mboq qiyaligi"
+          }
+        },
+        {
+          "at": "ridge",
+          "label": {
+            "en": "Marginal ridge",
+            "ru": "Краевой валик",
+            "uz": "Chekka qirra"
+          }
+        }
+      ],
+      "bullets": [
+        {
+          "en": "Seal the whole fissure system in a thin layer",
+          "ru": "Герметизируют всю систему фиссур тонким слоем",
+          "uz": "Butun fissura tizimi yupqa qatlam bilan berkitiladi"
+        }
+      ],
+      "note": {
+        "en": "Ask students to point to the deepest parts of the fissure system on a model molar.",
+        "ru": "Попросите студентов показать на модели моляра самые глубокие участки фиссур.",
+        "uz": "Talabalardan model katta oziq tishda fissuralarning eng chuqur joylarini ko‘rsatishni so‘rang."
+      }
+    },
+    {
+      "layout": "compare",
+      "title": {
+        "en": "When to seal",
+        "ru": "Когда герметизировать",
+        "uz": "Qachon germetizatsiya qilinadi"
+      },
+      "columns": [
+        {
+          "head": {
+            "en": "Indicated",
+            "ru": "Показано",
+            "uz": "Ko‘rsatma bor"
+          },
+          "items": [
+            {
+              "en": "Deep, retentive fissures in caries-susceptible patients",
+              "ru": "Глубокие ретентивные фиссуры у пациентов с риском кариеса",
+              "uz": "Karies xavfi bor bemorlarda chuqur, ushlab qoluvchi fissuralar"
+            },
+            {
+              "en": "Sound or non-cavitated lesions (e.g. ICDAS 1–2)",
+              "ru": "Интактные или некавитированные поражения (например, ICDAS 1–2)",
+              "uz": "Sog‘lom yoki kovaksiz shikastlar (masalan ICDAS 1–2)"
+            },
+            {
+              "en": "Recently erupted permanent molars",
+              "ru": "Недавно прорезавшиеся постоянные моляры",
+              "uz": "Yaqinda chiqqan doimiy katta oziq tishlar"
+            }
+          ]
+        },
+        {
+          "head": {
+            "en": "Not indicated",
+            "ru": "Не показано",
+            "uz": "Ko‘rsatma yo‘q"
+          },
+          "items": [
+            {
+              "en": "Cavitated lesion into dentin: restore instead",
+              "ru": "Полость в дентине: нужна реставрация",
+              "uz": "Dentingacha kovak: restavratsiya kerak"
+            },
+            {
+              "en": "Shallow self-cleansing fissures, low risk",
+              "ru": "Мелкие самоочищающиеся фиссуры, низкий риск",
+              "uz": "Sayoz o‘z-o‘zini tozalovchi fissuralar, past xavf"
+            },
+            {
+              "en": "Resin when the field cannot be kept dry",
+              "ru": "Полимерный герметик при невозможности осушения",
+              "uz": "Maydonni quruq tutib bo‘lmasa smola germetik"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "layout": "compare",
+      "title": {
+        "en": "Sealant materials",
+        "ru": "Материалы для герметизации",
+        "uz": "Germetizatsiya materiallari"
+      },
+      "columns": [
+        {
+          "head": {
+            "en": "Resin-based",
+            "ru": "Полимерные",
+            "uz": "Smola asosidagi"
+          },
+          "items": [
+            {
+              "en": "Bond to acid-etched enamel",
+              "ru": "Сцепляются с протравленной эмалью",
+              "uz": "Yedirilgan emalga yopishadi"
+            },
+            {
+              "en": "Best long-term retention",
+              "ru": "Лучшая долговременная ретенция",
+              "uz": "Uzoq muddatli eng yaxshi ushlanish"
+            },
+            {
+              "en": "Need a dry field",
+              "ru": "Требуют сухого поля",
+              "uz": "Quruq maydon talab qiladi"
+            }
+          ]
+        },
+        {
+          "head": {
+            "en": "Glass ionomer",
+            "ru": "Стеклоиономерные",
+            "uz": "Shisha-ionomer"
+          },
+          "items": [
+            {
+              "en": "Chemical bond, release fluoride",
+              "ru": "Химическая адгезия, выделяют фторид",
+              "uz": "Kimyoviy bog‘lanish, ftor ajratadi"
+            },
+            {
+              "en": "More tolerant of moisture",
+              "ru": "Более устойчивы к влаге",
+              "uz": "Namlikka chidamliroq"
+            },
+            {
+              "en": "Lower retention; used as interim",
+              "ru": "Ниже ретенция; применяют временно",
+              "uz": "Ushlanishi pastroq; vaqtincha qo‘llanadi"
+            }
+          ]
+        }
+      ],
+      "note": {
+        "en": "Stress that a glass ionomer sealant is a useful interim choice when isolation is poor, as in a partly erupted molar.",
+        "ru": "Подчеркните: стеклоиономерный герметик — разумный временный выбор при плохой изоляции, например у частично прорезавшегося моляра.",
+        "uz": "Izolyatsiya yomon bo‘lsa, masalan qisman chiqqan katta oziq tishda, shisha-ionomer germetik vaqtinchalik yaxshi tanlov ekanini ta’kidlang."
+      }
+    },
+    {
+      "layout": "flow",
+      "title": {
+        "en": "Placing a resin sealant",
+        "ru": "Наложение полимерного герметика",
+        "uz": "Smola asosidagi germetikni qo‘yish"
+      },
+      "steps": [
+        {
+          "label": {
+            "en": "Clean",
+            "ru": "Очистка",
+            "uz": "Tozalash"
+          },
+          "detail": {
+            "en": "Brush or pumice the fissures, rinse",
+            "ru": "Очистить фиссуры щёткой или пемзой, промыть",
+            "uz": "Fissuralarni cho‘tka yoki pemza bilan tozalab, yuvish"
+          }
+        },
+        {
+          "label": {
+            "en": "Isolate",
+            "ru": "Изоляция",
+            "uz": "Izolyatsiya"
+          },
+          "detail": {
+            "en": "Rubber dam or cotton rolls with suction",
+            "ru": "Коффердам или валики с аспирацией",
+            "uz": "Kofferdam yoki paxta valiklari va aspiratsiya"
+          }
+        },
+        {
+          "label": {
+            "en": "Etch",
+            "ru": "Протравливание",
+            "uz": "Yedirish"
+          },
+          "detail": {
+            "en": "37% phosphoric acid, about 15–30 s",
+            "ru": "37% ортофосфорная кислота, около 15–30 с",
+            "uz": "37% ortofosfat kislota, taxminan 15–30 soniya"
+          }
+        },
+        {
+          "label": {
+            "en": "Rinse and dry",
+            "ru": "Промывание и сушка",
+            "uz": "Yuvish va quritish"
+          },
+          "detail": {
+            "en": "Enamel looks frosty white",
+            "ru": "Эмаль выглядит матово-белой",
+            "uz": "Emal xira oq ko‘rinadi"
+          }
+        },
+        {
+          "label": {
+            "en": "Apply and cure",
+            "ru": "Нанесение и полимеризация",
+            "uz": "Surtish va polimerizatsiya"
+          },
+          "detail": {
+            "en": "Thin layer, no bubbles, light-cure",
+            "ru": "Тонкий слой без пузырей, засветить",
+            "uz": "Pufakchasiz yupqa qatlam, yorug‘lik bilan qotirish"
+          }
+        },
+        {
+          "label": {
+            "en": "Check",
+            "ru": "Контроль",
+            "uz": "Tekshirish"
+          },
+          "detail": {
+            "en": "Probe retention, check occlusion",
+            "ru": "Проверить ретенцию зондом и окклюзию",
+            "uz": "Ushlanishni zond bilan, tishlamni tekshirish"
+          }
+        }
+      ],
+      "note": {
+        "en": "Have students practise on extracted teeth or models and check each other's frosted etch pattern.",
+        "ru": "Пусть студенты потренируются на удалённых зубах или моделях и проверят друг у друга вид протравленной эмали.",
+        "uz": "Talabalar olingan tishlarda yoki modellarda mashq qilib, bir-birining yedirilgan emal ko‘rinishini tekshirsin."
+      }
+    },
+    {
+      "layout": "bullets",
+      "title": {
+        "en": "Avoiding failure",
+        "ru": "Как избежать неудачи",
+        "uz": "Muvaffaqiyatsizlikning oldini olish"
+      },
+      "bullets": [
+        {
+          "en": "Saliva on etched enamel: rinse, dry and re-etch briefly",
+          "ru": "Слюна на протравленной эмали: промыть, высушить, кратко протравить заново",
+          "uz": "Yedirilgan emalga so‘lak tushsa: yuvish, quritish va qisqa qayta yedirish"
+        },
+        {
+          "en": "Do not leave sealant on cusp slopes or in contacts",
+          "ru": "Не оставлять герметик на скатах бугров и в контактах",
+          "uz": "Germetikni do‘mboq qiyaliklarida va kontaktlarda qoldirmaslik"
+        },
+        {
+          "en": "Partly erupted molar: consider glass ionomer first",
+          "ru": "Частично прорезавшийся моляр: сначала рассмотреть стеклоиономер",
+          "uz": "Qisman chiqqan katta oziq tish: avval shisha-ionomerni ko‘rib chiqish"
+        },
+        {
+          "en": "Record the sealed teeth in the chart",
+          "ru": "Отметить загерметизированные зубы в карте",
+          "uz": "Germetizatsiya qilingan tishlarni kartaga yozish"
+        }
+      ]
+    },
+    {
+      "layout": "timeline",
+      "title": {
+        "en": "Typical timing",
+        "ru": "Типичные сроки",
+        "uz": "Odatiy muddatlar"
+      },
+      "events": [
+        {
+          "when": {
+            "en": "About 6–7 years",
+            "ru": "Около 6–7 лет",
+            "uz": "Taxminan 6–7 yosh"
+          },
+          "label": {
+            "en": "First permanent molars",
+            "ru": "Первые постоянные моляры",
+            "uz": "Birinchi doimiy katta oziq tishlar"
+          }
+        },
+        {
+          "when": {
+            "en": "About 11–13 years",
+            "ru": "Около 11–13 лет",
+            "uz": "Taxminan 11–13 yosh"
+          },
+          "label": {
+            "en": "Second permanent molars",
+            "ru": "Вторые постоянные моляры",
+            "uz": "Ikkinchi doimiy katta oziq tishlar"
+          }
+        },
+        {
+          "when": {
+            "en": "When at risk",
+            "ru": "При риске",
+            "uz": "Xavf bo‘lganda"
+          },
+          "label": {
+            "en": "Premolars and primary molars with deep fissures",
+            "ru": "Премоляры и временные моляры с глубокими фиссурами",
+            "uz": "Chuqur fissurali kichik oziq va sut oziq tishlari"
+          }
+        },
+        {
+          "when": {
+            "en": "Every recall",
+            "ru": "Каждый осмотр",
+            "uz": "Har bir ko‘rik"
+          },
+          "label": {
+            "en": "Check retention; repair or reseal",
+            "ru": "Проверка ретенции; восстановить или повторить",
+            "uz": "Ushlanishni tekshirish; tiklash yoki qayta qo‘yish"
+          }
+        }
+      ]
+    },
+    {
+      "layout": "table",
+      "title": {
+        "en": "At the review visit",
+        "ru": "На контрольном осмотре",
+        "uz": "Nazorat ko‘rigida"
+      },
+      "head": [
+        {
+          "en": "Finding",
+          "ru": "Находка",
+          "uz": "Topilma"
+        },
+        {
+          "en": "Action",
+          "ru": "Действие",
+          "uz": "Harakat"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "en": "Sealant intact",
+            "ru": "Герметик сохранён",
+            "uz": "Germetik butun"
+          },
+          {
+            "en": "Record and continue routine review",
+            "ru": "Записать и продолжить плановое наблюдение",
+            "uz": "Yozib qo‘yish va rejali nazoratni davom ettirish"
+          }
+        ],
+        [
+          {
+            "en": "Partial loss",
+            "ru": "Частичная потеря",
+            "uz": "Qisman yo‘qolgan"
+          },
+          {
+            "en": "Clean, etch and add new sealant",
+            "ru": "Очистить, протравить и добавить герметик",
+            "uz": "Tozalash, yedirish va yangi germetik qo‘shish"
+          }
+        ],
+        [
+          {
+            "en": "Complete loss",
+            "ru": "Полная потеря",
+            "uz": "To‘liq yo‘qolgan"
+          },
+          {
+            "en": "Reassess risk and reseal",
+            "ru": "Переоценить риск и герметизировать повторно",
+            "uz": "Xavfni qayta baholash va qayta germetizatsiya"
+          }
+        ],
+        [
+          {
+            "en": "Cavitation under or next to it",
+            "ru": "Полость под герметиком или рядом",
+            "uz": "Germetik ostida yoki yonida kovak"
+          },
+          {
+            "en": "Diagnose and restore",
+            "ru": "Диагностика и реставрация",
+            "uz": "Tashxis qo‘yish va restavratsiya"
+          }
+        ]
+      ],
+      "note": {
+        "en": "Stress that sealants need regular checks: an unnoticed partial loss can trap plaque.",
+        "ru": "Подчеркните: герметики требуют регулярного контроля, незамеченная частичная потеря задерживает налёт.",
+        "uz": "Germetiklar muntazam nazorat talab qilishini ta’kidlang: sezilmagan qisman yo‘qolish karashni ushlab qoladi."
+      }
+    },
+    {
+      "layout": "summary",
+      "title": {
+        "en": "Summary",
+        "ru": "Итоги",
+        "uz": "Xulosa"
+      },
+      "bullets": [
+        {
+          "en": "Seal deep fissures and non-cavitated lesions in at-risk patients",
+          "ru": "Герметизируют глубокие фиссуры и некавитированные поражения при риске",
+          "uz": "Xavfli bemorlarda chuqur fissura va kovaksiz shikastlar germetizatsiya qilinadi"
+        },
+        {
+          "en": "Resin sealants retain best but need a dry field",
+          "ru": "Полимерные герметики держатся лучше, но требуют сухого поля",
+          "uz": "Smola germetiklar yaxshiroq ushlanadi, ammo quruq maydon talab qiladi"
+        },
+        {
+          "en": "Clean, isolate, etch, rinse and dry, apply, cure, check",
+          "ru": "Очистка, изоляция, протравливание, промывание и сушка, нанесение, засвечивание, контроль",
+          "uz": "Tozalash, izolyatsiya, yedirish, yuvish va quritish, surtish, qotirish, tekshirish"
+        },
+        {
+          "en": "Check sealants at every recall and repair when needed",
+          "ru": "Проверяйте герметики на каждом осмотре и восстанавливайте при необходимости",
+          "uz": "Har ko‘rikda germetiklarni tekshirib, kerak bo‘lsa tiklang"
+        }
+      ]
+    }
+  ],
+  "oral": [
+    {
+      "q": {
+        "en": "What are the indications and contraindications for fissure sealants?",
+        "ru": "Каковы показания и противопоказания к герметизации фиссур?",
+        "uz": "Fissura germetizatsiyasiga ko‘rsatma va qarshi ko‘rsatmalar qanday?"
+      },
+      "plan": [
+        {
+          "en": "Deep retentive fissures in caries-susceptible patients",
+          "ru": "Глубокие ретентивные фиссуры при восприимчивости к кариесу",
+          "uz": "Kariesga moyil bemorlarda chuqur ushlab qoluvchi fissuralar"
+        },
+        {
+          "en": "Sound or non-cavitated pit and fissure lesions",
+          "ru": "Интактные или некавитированные поражения фиссур",
+          "uz": "Sog‘lom yoki kovaksiz fissura shikastlari"
+        },
+        {
+          "en": "Not for cavitated dentin lesions",
+          "ru": "Не применяют при полостях в дентине",
+          "uz": "Dentingacha kovak bo‘lsa qo‘llanmaydi"
+        },
+        {
+          "en": "Resin not used if the field cannot be kept dry",
+          "ru": "Полимерный — не при невозможности осушения",
+          "uz": "Maydonni quruq tutib bo‘lmasa smola qo‘llanmaydi"
+        }
+      ]
+    },
+    {
+      "q": {
+        "en": "Compare resin-based and glass ionomer sealants.",
+        "ru": "Сравните полимерные и стеклоиономерные герметики.",
+        "uz": "Smola asosidagi va shisha-ionomer germetiklarni solishtiring."
+      },
+      "plan": [
+        {
+          "en": "Resin: micromechanical bond to etched enamel",
+          "ru": "Полимерный: микромеханическая связь с протравленной эмалью",
+          "uz": "Smola: yedirilgan emal bilan mikromexanik bog‘lanish"
+        },
+        {
+          "en": "Resin: best retention but moisture-sensitive",
+          "ru": "Полимерный: лучшая ретенция, но чувствителен к влаге",
+          "uz": "Smola: eng yaxshi ushlanish, ammo namlikka sezgir"
+        },
+        {
+          "en": "Glass ionomer: chemical bond, fluoride release",
+          "ru": "Стеклоиономер: химическая связь, выделение фторида",
+          "uz": "Shisha-ionomer: kimyoviy bog‘lanish, ftor ajratish"
+        },
+        {
+          "en": "Glass ionomer: for poor isolation, as interim",
+          "ru": "Стеклоиономер: при плохой изоляции, временно",
+          "uz": "Shisha-ionomer: izolyatsiya yomon bo‘lsa, vaqtincha"
+        }
+      ]
+    },
+    {
+      "q": {
+        "en": "Describe the steps of resin sealant placement.",
+        "ru": "Опишите этапы наложения полимерного герметика.",
+        "uz": "Smola asosidagi germetikni qo‘yish bosqichlarini tushuntiring."
+      },
+      "plan": [
+        {
+          "en": "Clean the fissures and isolate the tooth",
+          "ru": "Очистить фиссуры и изолировать зуб",
+          "uz": "Fissuralarni tozalash va tishni izolyatsiya qilish"
+        },
+        {
+          "en": "Etch with 37% phosphoric acid, rinse, dry",
+          "ru": "Протравить 37% ортофосфорной кислотой, промыть, высушить",
+          "uz": "37% ortofosfat kislota bilan yedirish, yuvish, quritish"
+        },
+        {
+          "en": "Apply a thin layer without bubbles and cure",
+          "ru": "Нанести тонкий слой без пузырей и засветить",
+          "uz": "Pufakchasiz yupqa qatlam surtib, qotirish"
+        },
+        {
+          "en": "Check retention and occlusion",
+          "ru": "Проверить ретенцию и окклюзию",
+          "uz": "Ushlanish va tishlamni tekshirish"
+        }
+      ]
+    },
+    {
+      "q": {
+        "en": "How are sealants followed up?",
+        "ru": "Как проводят контроль герметиков?",
+        "uz": "Germetiklar qanday nazorat qilinadi?"
+      },
+      "plan": [
+        {
+          "en": "Check retention at every recall",
+          "ru": "Проверять ретенцию на каждом осмотре",
+          "uz": "Har ko‘rikda ushlanishni tekshirish"
+        },
+        {
+          "en": "Partial loss: clean, etch and add sealant",
+          "ru": "Частичная потеря: очистить, протравить, добавить",
+          "uz": "Qisman yo‘qolsa: tozalash, yedirish, qo‘shish"
+        },
+        {
+          "en": "Complete loss: reassess risk and reseal",
+          "ru": "Полная потеря: переоценить риск и повторить",
+          "uz": "To‘liq yo‘qolsa: xavfni qayta baholab, qayta qo‘yish"
+        },
+        {
+          "en": "Cavitation: diagnose and restore",
+          "ru": "Полость: диагностика и реставрация",
+          "uz": "Kovak bo‘lsa: tashxis va restavratsiya"
+        }
+      ]
+    }
+  ],
+  "test": [
+    {
+      "q": {
+        "en": "Which tooth is the best candidate for a resin fissure sealant?",
+        "ru": "Какой зуб лучше всего подходит для полимерного герметика?",
+        "uz": "Smola asosidagi fissura germetigi uchun qaysi tish eng mos?"
+      },
+      "options": [
+        {
+          "en": "A molar with a large dentin cavity",
+          "ru": "Моляр с большой полостью в дентине",
+          "uz": "Dentinda katta kovakli katta oziq tish"
+        },
+        {
+          "en": "A lower incisor in a low-risk adult",
+          "ru": "Нижний резец у взрослого с низким риском",
+          "uz": "Past xavfli kattaning pastki kesuvchi tishi"
+        },
+        {
+          "en": "A fully erupted first molar with deep fissures in a high-risk child",
+          "ru": "Полностью прорезавшийся первый моляр с глубокими фиссурами у ребёнка с высоким риском",
+          "uz": "Yuqori xavfli bolada chuqur fissurali to‘liq chiqqan birinchi katta oziq tish"
+        },
+        {
+          "en": "A crowned premolar",
+          "ru": "Премоляр под коронкой",
+          "uz": "Koronkali kichik oziq tish"
+        }
+      ],
+      "correct": 2,
+      "explain": {
+        "en": "Deep fissures in a caries-susceptible child's newly erupted molar benefit most, and full eruption allows good isolation.",
+        "ru": "Наибольшую пользу получают глубокие фиссуры недавно прорезавшегося моляра у ребёнка с риском, а полное прорезывание позволяет хорошо изолировать зуб.",
+        "uz": "Kariesga moyil bolaning yangi chiqqan katta oziq tishidagi chuqur fissuralar eng ko‘p foyda oladi, to‘liq chiqqan tish esa yaxshi izolyatsiya qilinadi."
+      }
+    },
+    {
+      "q": {
+        "en": "The usual enamel etchant for resin sealants is:",
+        "ru": "Обычный травящий агент эмали для полимерных герметиков:",
+        "uz": "Smola germetiklari uchun emalni yedirishda odatda nima ishlatiladi:"
+      },
+      "options": [
+        {
+          "en": "37% phosphoric acid",
+          "ru": "37% ортофосфорная кислота",
+          "uz": "37% ortofosfat kislota"
+        },
+        {
+          "en": "3% hydrogen peroxide",
+          "ru": "3% перекись водорода",
+          "uz": "3% vodorod peroksid"
+        },
+        {
+          "en": "0.12% chlorhexidine",
+          "ru": "0,12% хлоргексидин",
+          "uz": "0,12% xlorgeksidin"
+        },
+        {
+          "en": "2% sodium fluoride",
+          "ru": "2% фторид натрия",
+          "uz": "2% natriy ftorid"
+        }
+      ],
+      "correct": 0,
+      "explain": {
+        "en": "Phosphoric acid gel at about 37% creates the microporous enamel surface that resin flows into.",
+        "ru": "Гель ортофосфорной кислоты около 37% создаёт микропористую поверхность эмали, в которую затекает полимер.",
+        "uz": "Taxminan 37% li ortofosfat kislota geli smola oqib kiradigan mikrog‘ovak emal yuzasini hosil qiladi."
+      }
+    },
+    {
+      "q": {
+        "en": "Correctly etched and dried enamel looks:",
+        "ru": "Правильно протравленная и высушенная эмаль выглядит:",
+        "uz": "To‘g‘ri yedirilgan va quritilgan emal qanday ko‘rinadi:"
+      },
+      "options": [
+        {
+          "en": "Shiny and transparent",
+          "ru": "блестящей и прозрачной",
+          "uz": "Yaltiroq va shaffof"
+        },
+        {
+          "en": "Yellow and sticky",
+          "ru": "жёлтой и липкой",
+          "uz": "Sariq va yopishqoq"
+        },
+        {
+          "en": "Pink and wet",
+          "ru": "розовой и влажной",
+          "uz": "Pushti va nam"
+        },
+        {
+          "en": "Frosty, chalky white",
+          "ru": "матовой, мелово-белой",
+          "uz": "Xira, bo‘rdek oq"
+        }
+      ],
+      "correct": 3,
+      "explain": {
+        "en": "A frosty white surface shows that etching has created the micro-roughness needed for bonding.",
+        "ru": "Матово-белая поверхность показывает, что протравливание создало нужную для адгезии микрошероховатость.",
+        "uz": "Xira oq yuza yedirish bog‘lanish uchun zarur mikrog‘adir-budurlikni hosil qilganini ko‘rsatadi."
+      }
+    },
+    {
+      "q": {
+        "en": "A partly erupted first molar in an uncooperative child cannot be kept dry. The most suitable option is:",
+        "ru": "Частично прорезавшийся первый моляр у беспокойного ребёнка невозможно осушить. Наиболее подходящий вариант:",
+        "uz": "Bezovta bolaning qisman chiqqan birinchi katta oziq tishini quruq tutib bo‘lmayapti. Eng mos yo‘l:"
+      },
+      "options": [
+        {
+          "en": "Resin sealant without etching",
+          "ru": "Полимерный герметик без протравливания",
+          "uz": "Yedirmasdan smola germetik"
+        },
+        {
+          "en": "Glass ionomer sealant as an interim measure",
+          "ru": "Стеклоиономерный герметик как временная мера",
+          "uz": "Vaqtinchalik chora sifatida shisha-ionomer germetik"
+        },
+        {
+          "en": "Extraction of the molar",
+          "ru": "Удаление моляра",
+          "uz": "Katta oziq tishni olib tashlash"
+        },
+        {
+          "en": "No prevention until age 12",
+          "ru": "Не проводить профилактику до 12 лет",
+          "uz": "12 yoshgacha profilaktika qilmaslik"
+        }
+      ],
+      "correct": 1,
+      "explain": {
+        "en": "Glass ionomer tolerates moisture better and releases fluoride; it can later be replaced by a resin sealant.",
+        "ru": "Стеклоиономер лучше переносит влагу и выделяет фторид; позже его можно заменить полимерным герметиком.",
+        "uz": "Shisha-ionomer namlikka yaxshiroq chidaydi va ftor ajratadi; keyinchalik uni smola germetik bilan almashtirish mumkin."
+      }
+    },
+    {
+      "q": {
+        "en": "Which situation is a contraindication to sealing?",
+        "ru": "Какая ситуация является противопоказанием к герметизации?",
+        "uz": "Qaysi holat germetizatsiyaga qarshi ko‘rsatma hisoblanadi?"
+      },
+      "options": [
+        {
+          "en": "Deep fissures in a high-risk child",
+          "ru": "Глубокие фиссуры у ребёнка с высоким риском",
+          "uz": "Yuqori xavfli bolada chuqur fissuralar"
+        },
+        {
+          "en": "Non-cavitated enamel lesion",
+          "ru": "Некавитированное поражение эмали",
+          "uz": "Kovaksiz emal shikasti"
+        },
+        {
+          "en": "Recently erupted second molar",
+          "ru": "Недавно прорезавшийся второй моляр",
+          "uz": "Yaqinda chiqqan ikkinchi katta oziq tish"
+        },
+        {
+          "en": "Cavitated lesion extending into dentin",
+          "ru": "Кариозная полость, достигающая дентина",
+          "uz": "Dentingacha yetgan karies kovagi"
+        }
+      ],
+      "correct": 3,
+      "explain": {
+        "en": "A cavitated dentin lesion needs a restoration; a sealant alone is not adequate.",
+        "ru": "Полость в дентине требует реставрации; одного герметика недостаточно.",
+        "uz": "Dentindagi kovak restavratsiyani talab qiladi; faqat germetik yetarli emas."
+      }
+    },
+    {
+      "q": {
+        "en": "During sealant placement, saliva touches the etched enamel before the sealant is applied. What should be done?",
+        "ru": "При герметизации слюна попала на протравленную эмаль до нанесения герметика. Что делать?",
+        "uz": "Germetizatsiya paytida germetik surtilishidan oldin yedirilgan emalga so‘lak tegdi. Nima qilish kerak?"
+      },
+      "options": [
+        {
+          "en": "Apply the sealant anyway",
+          "ru": "Всё равно нанести герметик",
+          "uz": "Baribir germetikni surtish"
+        },
+        {
+          "en": "Wipe with a cotton roll and continue",
+          "ru": "Протереть валиком и продолжить",
+          "uz": "Paxta valigi bilan artib, davom ettirish"
+        },
+        {
+          "en": "Rinse, dry and re-etch briefly",
+          "ru": "Промыть, высушить и кратко протравить заново",
+          "uz": "Yuvish, quritish va qisqa qayta yedirish"
+        },
+        {
+          "en": "Abandon sealing permanently",
+          "ru": "Навсегда отказаться от герметизации",
+          "uz": "Germetizatsiyadan butunlay voz kechish"
+        }
+      ],
+      "correct": 2,
+      "explain": {
+        "en": "Salivary proteins block the etched pores, so the surface is cleaned and re-etched to restore bonding.",
+        "ru": "Белки слюны закрывают протравленные поры, поэтому поверхность очищают и протравливают снова.",
+        "uz": "So‘lak oqsillari yedirilgan teshikchalarni berkitadi, shuning uchun yuza tozalanib, qayta yediriladi."
+      }
+    },
+    {
+      "q": {
+        "en": "After curing a sealant, the next step is to:",
+        "ru": "После полимеризации герметика следующий шаг:",
+        "uz": "Germetik qotirilgandan keyingi qadam:"
+      },
+      "options": [
+        {
+          "en": "Check retention with a probe and check occlusion",
+          "ru": "проверить ретенцию зондом и окклюзию",
+          "uz": "Zond bilan ushlanishni va tishlamni tekshirish"
+        },
+        {
+          "en": "Etch the surface again",
+          "ru": "снова протравить поверхность",
+          "uz": "Yuzani qayta yedirish"
+        },
+        {
+          "en": "Polish with a coarse diamond bur",
+          "ru": "отполировать грубым алмазным бором",
+          "uz": "Dag‘al olmos bor bilan silliqlash"
+        },
+        {
+          "en": "Apply a second etch and bond",
+          "ru": "повторно протравить и нанести адгезив",
+          "uz": "Qayta yedirib, adgeziv surtish"
+        }
+      ],
+      "correct": 0,
+      "explain": {
+        "en": "The sealant should resist dislodgement with a probe, and any high spots are adjusted.",
+        "ru": "Герметик не должен смещаться зондом, а завышения корректируют.",
+        "uz": "Germetik zond bilan ko‘chmasligi kerak, ortiqcha balandliklar esa to‘g‘rilanadi."
+      }
+    },
+    {
+      "q": {
+        "en": "How does sealing a non-cavitated fissure lesion stop its progress?",
+        "ru": "Как герметизация некавитированного поражения фиссуры останавливает его прогрессирование?",
+        "uz": "Kovaksiz fissura shikastini germetizatsiya qilish uning rivojini qanday to‘xtatadi?"
+      },
+      "options": [
+        {
+          "en": "It kills bacteria with high heat",
+          "ru": "Уничтожает бактерии высокой температурой",
+          "uz": "Bakteriyalarni yuqori harorat bilan o‘ldiradi"
+        },
+        {
+          "en": "It cuts off the bacteria's nutrient supply",
+          "ru": "Лишает бактерии питания",
+          "uz": "Bakteriyalarni oziqdan mahrum qiladi"
+        },
+        {
+          "en": "It removes the lesion mechanically",
+          "ru": "Механически удаляет поражение",
+          "uz": "Shikastni mexanik olib tashlaydi"
+        },
+        {
+          "en": "It regrows the lost enamel",
+          "ru": "Восстанавливает утраченную эмаль",
+          "uz": "Yo‘qolgan emalni qayta o‘stiradi"
+        }
+      ],
+      "correct": 1,
+      "explain": {
+        "en": "A sealed lesion receives no dietary sugars, so the bacteria under it become inactive.",
+        "ru": "Под герметиком поражение не получает сахаров пищи, и бактерии теряют активность.",
+        "uz": "Germetik ostidagi shikastga ovqat shakari yetib bormaydi, shuning uchun bakteriyalar faolligini yo‘qotadi."
+      }
+    },
+    {
+      "q": {
+        "en": "At a recall visit, half of a sealant has been lost from tooth 36. The best action is:",
+        "ru": "На контрольном осмотре на зубе 36 утрачена половина герметика. Лучшее действие:",
+        "uz": "Nazorat ko‘rigida 36-tishdagi germetikning yarmi yo‘qolgan. Eng to‘g‘ri harakat:"
+      },
+      "options": [
+        {
+          "en": "Ignore it until it is fully lost",
+          "ru": "Не трогать до полной утраты",
+          "uz": "To‘liq yo‘qolguncha e’tibor bermaslik"
+        },
+        {
+          "en": "Place a large composite filling",
+          "ru": "Поставить большую композитную пломбу",
+          "uz": "Katta kompozit plomba qo‘yish"
+        },
+        {
+          "en": "Extract the tooth",
+          "ru": "Удалить зуб",
+          "uz": "Tishni olib tashlash"
+        },
+        {
+          "en": "Clean, etch and repair the sealant",
+          "ru": "Очистить, протравить и восстановить герметик",
+          "uz": "Tozalash, yedirish va germetikni tiklash"
+        }
+      ],
+      "correct": 3,
+      "explain": {
+        "en": "Partial loss leaves an open, plaque-retentive margin, so the sealant is repaired after cleaning and etching.",
+        "ru": "Частичная потеря оставляет открытый край, задерживающий налёт, поэтому герметик восстанавливают после очистки и протравливания.",
+        "uz": "Qisman yo‘qolish karash ushlanadigan ochiq chet qoldiradi, shuning uchun tozalab, yedirib germetik tiklanadi."
+      }
+    },
+    {
+      "q": {
+        "en": "Why are fissures cleaned before etching?",
+        "ru": "Зачем очищают фиссуры перед протравливанием?",
+        "uz": "Nima uchun yedirishdan oldin fissuralar tozalanadi?"
+      },
+      "options": [
+        {
+          "en": "To widen them with a bur",
+          "ru": "Чтобы расширить их бором",
+          "uz": "Ularni bor bilan kengaytirish uchun"
+        },
+        {
+          "en": "To apply fluoride first",
+          "ru": "Чтобы сначала нанести фторид",
+          "uz": "Avval ftor surtish uchun"
+        },
+        {
+          "en": "To remove plaque and debris so the acid reaches enamel",
+          "ru": "Чтобы удалить налёт и остатки и кислота достигла эмали",
+          "uz": "Kislota emalga yetishi uchun karash va qoldiqlarni olib tashlash"
+        },
+        {
+          "en": "To make the patient salivate less",
+          "ru": "Чтобы уменьшить слюноотделение",
+          "uz": "So‘lak ajralishini kamaytirish uchun"
+        }
+      ],
+      "correct": 2,
+      "explain": {
+        "en": "Plaque and debris prevent the etchant and sealant from contacting enamel, which weakens retention.",
+        "ru": "Налёт и остатки мешают контакту кислоты и герметика с эмалью, что ухудшает ретенцию.",
+        "uz": "Karash va qoldiqlar kislota va germetikning emalga tegishiga to‘sqinlik qilib, ushlanishni zaiflashtiradi."
+      }
+    }
+  ]
+}

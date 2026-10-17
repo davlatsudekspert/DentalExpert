@@ -1,0 +1,1131 @@
+{
+  "id": "ortho-03",
+  "subject": "ortho",
+  "n": 3,
+  "week": 3,
+  "type": "practical",
+  "hours": 2,
+  "title": {
+    "en": "Orthodontic diagnosis and records: photos, models, panoramic and cephalometry",
+    "ru": "Ортодонтическая диагностика: фото, модели, ОПТГ и основы цефалометрии",
+    "uz": "Ortodontik tashxis va hujjatlar: foto, model, OPTG, sefalometriya asoslari"
+  },
+  "goals": [
+    {
+      "en": "Carry out an orthodontic examination in a logical order",
+      "ru": "Проводить ортодонтическое обследование в правильной последовательности",
+      "uz": "Ortodontik tekshiruvni to‘g‘ri tartibda o‘tkaza olish"
+    },
+    {
+      "en": "Know the standard set of photographs and study models",
+      "ru": "Знать стандартный набор фотографий и моделей",
+      "uz": "Standart fotosuratlar va modellar to‘plamini bilish"
+    },
+    {
+      "en": "Explain the indications for panoramic and lateral cephalometric radiographs",
+      "ru": "Объяснять показания к ОПТГ и боковой ТРГ",
+      "uz": "Panoramik va lateral sefalogrammaning ko‘rsatmalarini tushuntira olish"
+    },
+    {
+      "en": "Interpret the basic cephalometric angles",
+      "ru": "Интерпретировать основные цефалометрические углы",
+      "uz": "Asosiy sefalometrik burchaklarni talqin qila olish"
+    }
+  ],
+  "links": [
+    "odontogram",
+    "atlas"
+  ],
+  "sources": [
+    "Proffit WR et al. Contemporary Orthodontics, 6th ed., 2018",
+    "Mitchell L. An Introduction to Orthodontics, 5th ed., 2019",
+    "Jacobson A, Jacobson RL. Radiographic Cephalometry: From Basics to 3-D Imaging, 2nd ed., 2006"
+  ],
+  "slides": [
+    {
+      "layout": "title",
+      "title": {
+        "en": "Orthodontic diagnosis",
+        "ru": "Ортодонтическая диагностика",
+        "uz": "Ortodontik tashxis"
+      },
+      "subtitle": {
+        "en": "Examination, records and basic cephalometry",
+        "ru": "Обследование, документация и основы цефалометрии",
+        "uz": "Tekshiruv, hujjatlar va sefalometriya asoslari"
+      }
+    },
+    {
+      "layout": "flow",
+      "title": {
+        "en": "Diagnostic sequence",
+        "ru": "Этапы диагностики",
+        "uz": "Tashxis bosqichlari"
+      },
+      "steps": [
+        {
+          "label": {
+            "en": "History",
+            "ru": "Анамнез",
+            "uz": "Anamnez"
+          },
+          "detail": {
+            "en": "Complaint, medical and dental history",
+            "ru": "Жалобы, общий и стоматологический анамнез",
+            "uz": "Shikoyat, tibbiy va stomatologik tarix"
+          }
+        },
+        {
+          "label": {
+            "en": "Extraoral examination",
+            "ru": "Внеротовой осмотр",
+            "uz": "Og‘izdan tashqari ko‘rik"
+          },
+          "detail": {
+            "en": "Skeleton, soft tissues, symmetry",
+            "ru": "Скелет, мягкие ткани, симметрия",
+            "uz": "Skelet, yumshoq to‘qimalar, simmetriya"
+          }
+        },
+        {
+          "label": {
+            "en": "Intraoral examination",
+            "ru": "Внутриротовой осмотр",
+            "uz": "Og‘iz ichi ko‘rigi"
+          },
+          "detail": {
+            "en": "Teeth, occlusion, hygiene",
+            "ru": "Зубы, окклюзия, гигиена",
+            "uz": "Tishlar, okklyuziya, gigiyena"
+          }
+        },
+        {
+          "label": {
+            "en": "Records",
+            "ru": "Документация",
+            "uz": "Hujjatlar"
+          },
+          "detail": {
+            "en": "Photos, models, radiographs",
+            "ru": "Фото, модели, рентгенограммы",
+            "uz": "Foto, model, rentgenogrammalar"
+          }
+        },
+        {
+          "label": {
+            "en": "Problem list",
+            "ru": "Список проблем",
+            "uz": "Muammolar ro‘yxati"
+          },
+          "detail": {
+            "en": "Organise all findings",
+            "ru": "Систематизация всех находок",
+            "uz": "Barcha topilmalarni tartiblash"
+          }
+        },
+        {
+          "label": {
+            "en": "Treatment plan",
+            "ru": "План лечения",
+            "uz": "Davolash rejasi"
+          },
+          "detail": {
+            "en": "Aims and methods",
+            "ru": "Цели и методы",
+            "uz": "Maqsadlar va usullar"
+          }
+        }
+      ],
+      "note": {
+        "en": "Stress that the plan comes from the problem list, not from the records themselves.",
+        "ru": "Подчеркните, что план лечения вытекает из списка проблем, а не из самих записей.",
+        "uz": "Davolash rejasi hujjatlardan emas, muammolar ro‘yxatidan kelib chiqishini ta’kidlang."
+      }
+    },
+    {
+      "layout": "tree",
+      "title": {
+        "en": "History",
+        "ru": "Анамнез",
+        "uz": "Anamnez"
+      },
+      "root": {
+        "en": "History",
+        "ru": "Анамнез",
+        "uz": "Anamnez"
+      },
+      "children": [
+        {
+          "label": {
+            "en": "Complaint",
+            "ru": "Жалоба",
+            "uz": "Shikoyat"
+          },
+          "items": [
+            {
+              "en": "What the patient wants",
+              "ru": "Чего хочет пациент",
+              "uz": "Bemor nimani xohlaydi"
+            },
+            {
+              "en": "Motivation",
+              "ru": "Мотивация",
+              "uz": "Motivatsiya"
+            }
+          ]
+        },
+        {
+          "label": {
+            "en": "Medical history",
+            "ru": "Общий анамнез",
+            "uz": "Tibbiy tarix"
+          },
+          "items": [
+            {
+              "en": "Conditions and medicines",
+              "ru": "Заболевания и лекарства",
+              "uz": "Kasalliklar va dorilar"
+            },
+            {
+              "en": "Allergies",
+              "ru": "Аллергия",
+              "uz": "Allergiya"
+            }
+          ]
+        },
+        {
+          "label": {
+            "en": "Dental history",
+            "ru": "Стоматологический анамнез",
+            "uz": "Stomatologik tarix"
+          },
+          "items": [
+            {
+              "en": "Trauma",
+              "ru": "Травмы",
+              "uz": "Travma"
+            },
+            {
+              "en": "Habits",
+              "ru": "Вредные привычки",
+              "uz": "Odatlar"
+            },
+            {
+              "en": "Previous treatment",
+              "ru": "Предыдущее лечение",
+              "uz": "Oldingi davolash"
+            }
+          ]
+        },
+        {
+          "label": {
+            "en": "Growth",
+            "ru": "Рост",
+            "uz": "O‘sish"
+          },
+          "items": [
+            {
+              "en": "Pubertal status",
+              "ru": "Признаки пубертата",
+              "uz": "Balog‘at belgilari"
+            },
+            {
+              "en": "Recent height gain",
+              "ru": "Увеличение роста",
+              "uz": "Bo‘yning o‘sishi"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "layout": "compare",
+      "title": {
+        "en": "Extraoral assessment",
+        "ru": "Внеротовая оценка",
+        "uz": "Og‘izdan tashqari baholash"
+      },
+      "columns": [
+        {
+          "head": {
+            "en": "Skeletal pattern",
+            "ru": "Скелетные соотношения",
+            "uz": "Skelet munosabati"
+          },
+          "items": [
+            {
+              "en": "AP: straight, convex or concave profile",
+              "ru": "Сагиттально: профиль прямой, выпуклый или вогнутый",
+              "uz": "Sagittal: profil tekis, qavariq yoki botiq"
+            },
+            {
+              "en": "Vertical: lower face height",
+              "ru": "Вертикально: высота нижней трети лица",
+              "uz": "Vertikal: pastki yuz balandligi"
+            },
+            {
+              "en": "Transverse: facial asymmetry",
+              "ru": "Трансверсально: асимметрия лица",
+              "uz": "Ko‘ndalang: yuz asimmetriyasi"
+            }
+          ]
+        },
+        {
+          "head": {
+            "en": "Soft tissues",
+            "ru": "Мягкие ткани",
+            "uz": "Yumshoq to‘qimalar"
+          },
+          "items": [
+            {
+              "en": "Lip competence",
+              "ru": "Смыкание губ",
+              "uz": "Lablar yopiladimi"
+            },
+            {
+              "en": "Nasolabial angle",
+              "ru": "Носогубный угол",
+              "uz": "Burun-lab burchagi"
+            },
+            {
+              "en": "Incisor show on smiling",
+              "ru": "Видимость резцов при улыбке",
+              "uz": "Tabassumda kesuvchilar ko‘rinishi"
+            },
+            {
+              "en": "Temporomandibular joints",
+              "ru": "Височно-нижнечелюстной сустав",
+              "uz": "Chakka-pastki jag‘ bo‘g‘imi"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "layout": "tree",
+      "title": {
+        "en": "Standard photographs",
+        "ru": "Стандартные фотографии",
+        "uz": "Standart fotosuratlar"
+      },
+      "root": {
+        "en": "Photographs",
+        "ru": "Фотографии",
+        "uz": "Fotosuratlar"
+      },
+      "children": [
+        {
+          "label": {
+            "en": "Extraoral",
+            "ru": "Внеротовые",
+            "uz": "Og‘izdan tashqari"
+          },
+          "items": [
+            {
+              "en": "Frontal at rest",
+              "ru": "Анфас в покое",
+              "uz": "Old tomondan, tinch holatda"
+            },
+            {
+              "en": "Frontal smiling",
+              "ru": "Анфас с улыбкой",
+              "uz": "Old tomondan, tabassum"
+            },
+            {
+              "en": "Profile",
+              "ru": "Профиль",
+              "uz": "Profil"
+            }
+          ]
+        },
+        {
+          "label": {
+            "en": "Intraoral",
+            "ru": "Внутриротовые",
+            "uz": "Og‘iz ichi"
+          },
+          "items": [
+            {
+              "en": "Frontal view",
+              "ru": "Фронтальный вид",
+              "uz": "Old ko‘rinish"
+            },
+            {
+              "en": "Right and left buccal",
+              "ru": "Правый и левый боковой",
+              "uz": "O‘ng va chap bukkal"
+            },
+            {
+              "en": "Upper and lower occlusal",
+              "ru": "Верхний и нижний окклюзионный",
+              "uz": "Yuqori va pastki okklyuzion"
+            }
+          ]
+        }
+      ],
+      "note": {
+        "en": "Photos are taken before and after treatment in the same way; they are also a medico-legal record.",
+        "ru": "Фотографии делают до и после лечения в одинаковых условиях – это и медико-правовой документ.",
+        "uz": "Fotosuratlar davolashdan oldin va keyin bir xil sharoitda olinishi kerak – bu tibbiy-huquqiy hujjat ham."
+      }
+    },
+    {
+      "layout": "bullets",
+      "title": {
+        "en": "Study models",
+        "ru": "Диагностические модели",
+        "uz": "Diagnostik modellar"
+      },
+      "bullets": [
+        {
+          "en": "Plaster casts or digital scans",
+          "ru": "Гипсовые модели или цифровое сканирование",
+          "uz": "Gips yoki raqamli skanerlash"
+        },
+        {
+          "en": "Measure crowding or spacing (space analysis)",
+          "ru": "Оценка скученности или трем (анализ места)",
+          "uz": "Qisilish yoki oraliqlarni o‘lchash (joy tahlili)"
+        },
+        {
+          "en": "Arch form, symmetry, curve of Spee",
+          "ru": "Форма дуги, симметрия, кривая Шпее",
+          "uz": "Yoy shakli, simmetriya va Spee egriligi"
+        },
+        {
+          "en": "View the occlusion from all sides",
+          "ru": "Осмотр окклюзии со всех сторон",
+          "uz": "Okklyuziyani har tomondan ko‘rish"
+        }
+      ],
+      "note": {
+        "en": "Have students measure the crowding on a model in millimetres.",
+        "ru": "Пусть студенты на модели посчитают величину скученности в миллиметрах.",
+        "uz": "Talabalar modelda qisilish miqdorini millimetrda hisoblab ko‘rsin."
+      }
+    },
+    {
+      "layout": "table",
+      "title": {
+        "en": "Radiographs",
+        "ru": "Рентгенологические исследования",
+        "uz": "Rentgenologik tekshiruvlar"
+      },
+      "head": [
+        {
+          "en": "Type",
+          "ru": "Вид",
+          "uz": "Turi"
+        },
+        {
+          "en": "What it shows",
+          "ru": "Что даёт",
+          "uz": "Nima beradi"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "en": "Panoramic",
+            "ru": "Ортопантомограмма",
+            "uz": "Panoramik (OPTG)"
+          },
+          {
+            "en": "All teeth, development, pathology, roots",
+            "ru": "Все зубы, развитие, патология, корни",
+            "uz": "Barcha tishlar, rivojlanish, patologiya, ildizlar"
+          }
+        ],
+        [
+          {
+            "en": "Lateral cephalogram",
+            "ru": "Боковая телерентгенограмма",
+            "uz": "Lateral sefalogramma"
+          },
+          {
+            "en": "Skeletal pattern, incisor inclination, growth",
+            "ru": "Скелетные соотношения, наклон резцов, рост",
+            "uz": "Skelet munosabati, kesuvchilar qiyaligi, o‘sish"
+          }
+        ],
+        [
+          {
+            "en": "Periapical or occlusal",
+            "ru": "Прицельная или окклюзионная",
+            "uz": "Periapikal yoki okklyuzion"
+          },
+          {
+            "en": "Localise canines by parallax",
+            "ru": "Локализация клыка методом параллакса",
+            "uz": "Parallaks bilan qoziq joyini aniqlash"
+          }
+        ],
+        [
+          {
+            "en": "Cone beam CT",
+            "ru": "Конусно-лучевая КТ",
+            "uz": "Konusli nurli KT"
+          },
+          {
+            "en": "Selected cases: impactions, resorption",
+            "ru": "Только по показаниям: ретенция, резорбция",
+            "uz": "Faqat tanlangan holatlar: retensiyalangan tish, rezorbsiya"
+          }
+        ]
+      ],
+      "note": {
+        "en": "Every radiograph must be clinically justified, with dose kept as low as reasonably achievable.",
+        "ru": "Каждый снимок должен быть клинически обоснован, лучевая нагрузка – минимально возможной.",
+        "uz": "Har bir rentgenogramma klinik asoslangan bo‘lishi kerak: nur yuki imkon qadar past bo‘lsin."
+      }
+    },
+    {
+      "layout": "table",
+      "title": {
+        "en": "Basic cephalometric values",
+        "ru": "Основы цефалометрии",
+        "uz": "Sefalometriya asoslari"
+      },
+      "head": [
+        {
+          "en": "Measure",
+          "ru": "Показатель",
+          "uz": "O‘lchov"
+        },
+        {
+          "en": "Approximate norm",
+          "ru": "Ориентировочная норма",
+          "uz": "Taxminiy me’yor"
+        },
+        {
+          "en": "Meaning",
+          "ru": "Значение",
+          "uz": "Ma’nosi"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "en": "SNA",
+            "ru": "SNA",
+            "uz": "SNA"
+          },
+          {
+            "en": "81° ± 3°",
+            "ru": "81° ± 3°",
+            "uz": "81° ± 3°"
+          },
+          {
+            "en": "Maxilla relative to cranial base",
+            "ru": "Положение верхней челюсти относительно основания черепа",
+            "uz": "Yuqori jag‘ning kalla asosiga nisbatan holati"
+          }
+        ],
+        [
+          {
+            "en": "SNB",
+            "ru": "SNB",
+            "uz": "SNB"
+          },
+          {
+            "en": "78° ± 3°",
+            "ru": "78° ± 3°",
+            "uz": "78° ± 3°"
+          },
+          {
+            "en": "Mandible relative to cranial base",
+            "ru": "Положение нижней челюсти относительно основания черепа",
+            "uz": "Pastki jag‘ning kalla asosiga nisbatan holati"
+          }
+        ],
+        [
+          {
+            "en": "ANB",
+            "ru": "ANB",
+            "uz": "ANB"
+          },
+          {
+            "en": "3° ± 2°",
+            "ru": "3° ± 2°",
+            "uz": "3° ± 2°"
+          },
+          {
+            "en": "Jaw-to-jaw AP relationship",
+            "ru": "Сагиттальное межчелюстное соотношение",
+            "uz": "Jag‘lararo sagittal munosabat"
+          }
+        ],
+        [
+          {
+            "en": "Maxillary-mandibular planes angle",
+            "ru": "Угол между плоскостями челюстей",
+            "uz": "Jag‘lar tekisligi burchagi"
+          },
+          {
+            "en": "27° ± 4°",
+            "ru": "27° ± 4°",
+            "uz": "27° ± 4°"
+          },
+          {
+            "en": "Vertical skeletal pattern",
+            "ru": "Вертикальное скелетное соотношение",
+            "uz": "Vertikal skelet munosabati"
+          }
+        ]
+      ]
+    },
+    {
+      "layout": "key",
+      "title": {
+        "en": "Interpreting ANB",
+        "ru": "Интерпретация угла ANB",
+        "uz": "ANB burchagini talqin qilish"
+      },
+      "term": {
+        "en": "ANB",
+        "ru": "ANB",
+        "uz": "ANB"
+      },
+      "definition": {
+        "en": "The difference between SNA and SNB. About 2–4° suggests a skeletal Class I, more than 4° a skeletal Class II, and less than 2° or negative a skeletal Class III. The value is also affected by the position of nasion and the cranial base.",
+        "ru": "Разница SNA и SNB. Около 2–4° – скелетный I класс; более 4° – скелетный II класс; менее 2° или отрицательный – скелетный III класс. Значение зависит и от положения точки N и основания черепа.",
+        "uz": "SNA va SNB orasidagi farq. Taxminan 2–4° – skelet I sinf; 4° dan katta – skelet II sinf; 2° dan kichik yoki manfiy – skelet III sinf. Natija nasion va kalla asosining holatiga ham bog‘liq."
+      },
+      "note": {
+        "en": "These norms are for white European populations; others may differ, so use local norms where available.",
+        "ru": "Эти нормы получены для европейской популяции; в других группах они могут отличаться – используйте местные нормы.",
+        "uz": "Bu me’yorlar Yevropa aholisi uchun; boshqa populyatsiyalarda farq qilishi mumkin – mahalliy me’yorlardan foydalaning."
+      }
+    },
+    {
+      "layout": "bullets",
+      "title": {
+        "en": "The problem list",
+        "ru": "Список проблем",
+        "uz": "Muammolar ro‘yxati"
+      },
+      "bullets": [
+        {
+          "en": "Start with the patient's concern",
+          "ru": "Жалоба пациента – на первом месте",
+          "uz": "Bemorning shikoyati birinchi o‘rinda"
+        },
+        {
+          "en": "Skeletal: AP, vertical, transverse",
+          "ru": "Скелет: сагиттально, вертикально, трансверсально",
+          "uz": "Skelet: sagittal, vertikal, ko‘ndalang"
+        },
+        {
+          "en": "Dental: crowding, displacements, missing or extra teeth",
+          "ru": "Зубы: скученность, смещения, отсутствие или избыток",
+          "uz": "Tish: qisilish, siljish, yo‘q yoki ortiqcha tishlar"
+        },
+        {
+          "en": "General health, hygiene and caries risk",
+          "ru": "Общее здоровье, гигиена и риск кариеса",
+          "uz": "Umumiy salomatlik, gigiyena va karies xavfi"
+        }
+      ]
+    },
+    {
+      "layout": "summary",
+      "title": {
+        "en": "Summary",
+        "ru": "Итоги",
+        "uz": "Xulosa"
+      },
+      "bullets": [
+        {
+          "en": "Diagnosis starts with history and full examination",
+          "ru": "Диагностика начинается с анамнеза и полного осмотра",
+          "uz": "Tashxis anamnez va to‘liq klinik ko‘rikdan boshlanadi"
+        },
+        {
+          "en": "Standard photos and models are core records",
+          "ru": "Стандартные фото и модели – основная документация",
+          "uz": "Standart foto va modellar – asosiy hujjatlar"
+        },
+        {
+          "en": "Radiographs only when justified",
+          "ru": "Рентгенограммы – только по обоснованным показаниям",
+          "uz": "Rentgenogramma faqat asoslangan holda olinadi"
+        },
+        {
+          "en": "ANB assesses the AP jaw relationship",
+          "ru": "ANB оценивает сагиттальное соотношение челюстей",
+          "uz": "ANB jag‘lararo sagittal munosabatni baholaydi"
+        }
+      ]
+    }
+  ],
+  "oral": [
+    {
+      "q": {
+        "en": "Describe the order of an orthodontic examination.",
+        "ru": "Опишите порядок обследования ортодонтического пациента.",
+        "uz": "Ortodontik bemorni tekshirish tartibini ayting."
+      },
+      "plan": [
+        {
+          "en": "History: complaint, medical, dental, growth",
+          "ru": "Анамнез: жалоба, общий, стоматологический, рост",
+          "uz": "Anamnez: shikoyat, tibbiy, stomatologik, o‘sish"
+        },
+        {
+          "en": "Extraoral: skeletal and soft tissue",
+          "ru": "Внеротовой осмотр: скелет и мягкие ткани",
+          "uz": "Og‘izdan tashqari: skelet va yumshoq to‘qimalar"
+        },
+        {
+          "en": "Intraoral: teeth and occlusion",
+          "ru": "Внутриротовой осмотр: зубы и окклюзия",
+          "uz": "Og‘iz ichi: tishlar va okklyuziya"
+        },
+        {
+          "en": "Records and a problem list",
+          "ru": "Документация и список проблем",
+          "uz": "Hujjatlar va muammolar ro‘yxati"
+        }
+      ]
+    },
+    {
+      "q": {
+        "en": "List the standard set of orthodontic photographs.",
+        "ru": "Перечислите стандартный набор ортодонтических фотографий.",
+        "uz": "Standart ortodontik fotosuratlar to‘plamini sanang."
+      },
+      "plan": [
+        {
+          "en": "Face: frontal at rest and smiling, profile",
+          "ru": "Лицо: анфас в покое и с улыбкой, профиль",
+          "uz": "Yuz: old tomondan tinch va tabassum, profil"
+        },
+        {
+          "en": "Intraoral: frontal and two buccal",
+          "ru": "Внутриротовые: фронтальный и два боковых",
+          "uz": "Og‘iz ichi: old va ikki bukkal"
+        },
+        {
+          "en": "Upper and lower occlusal",
+          "ru": "Верхний и нижний окклюзионный",
+          "uz": "Yuqori va pastki okklyuzion"
+        },
+        {
+          "en": "Same set-up before and after treatment",
+          "ru": "В одинаковых условиях до и после лечения",
+          "uz": "Bir xil sharoitda, davolashdan oldin va keyin"
+        }
+      ]
+    },
+    {
+      "q": {
+        "en": "Why are panoramic and lateral cephalometric radiographs taken?",
+        "ru": "Для чего нужны ОПТГ и боковая ТРГ?",
+        "uz": "Panoramik rentgenogramma va lateral sefalogramma nima uchun kerak?"
+      },
+      "plan": [
+        {
+          "en": "Panoramic: teeth present, development, pathology",
+          "ru": "ОПТГ: наличие зубов, развитие, патология",
+          "uz": "Panoramik: tishlar bor-yo‘qligi, rivojlanish, patologiya"
+        },
+        {
+          "en": "Ceph: skeletal pattern and incisor inclination",
+          "ru": "ТРГ: скелетные соотношения и наклон резцов",
+          "uz": "Sefalogramma: skelet munosabati va kesuvchilar qiyaligi"
+        },
+        {
+          "en": "Assess growth and treatment change",
+          "ru": "Оценка роста и результатов лечения",
+          "uz": "O‘sish va davolash natijasini baholash"
+        },
+        {
+          "en": "Only when clinically justified",
+          "ru": "Только по клиническим показаниям",
+          "uz": "Faqat klinik asoslangan holda"
+        }
+      ]
+    },
+    {
+      "q": {
+        "en": "Interpret SNA, SNB and ANB.",
+        "ru": "Интерпретируйте углы SNA, SNB и ANB.",
+        "uz": "SNA, SNB va ANB burchaklarini talqin qiling."
+      },
+      "plan": [
+        {
+          "en": "SNA maxilla, SNB mandible position",
+          "ru": "SNA – верхняя челюсть, SNB – нижняя",
+          "uz": "SNA – yuqori jag‘, SNB – pastki jag‘ holati"
+        },
+        {
+          "en": "ANB 2–4° – Class I",
+          "ru": "ANB 2–4° – I класс",
+          "uz": "ANB 2–4° – I sinf"
+        },
+        {
+          "en": "ANB over 4° Class II, under 2° Class III",
+          "ru": "ANB > 4° – II класс, < 2° – III класс",
+          "uz": "ANB > 4° – II sinf, < 2° – III sinf"
+        },
+        {
+          "en": "Norms vary by population",
+          "ru": "Нормы зависят от популяции",
+          "uz": "Me’yorlar populyatsiyaga qarab farq qiladi"
+        }
+      ]
+    }
+  ],
+  "test": [
+    {
+      "q": {
+        "en": "What skeletal pattern does an ANB of 7° suggest?",
+        "ru": "Каково скелетное соотношение при ANB 7°?",
+        "uz": "ANB burchagi 7° bo‘lsa, skelet munosabati qanday?"
+      },
+      "options": [
+        {
+          "en": "Skeletal Class I",
+          "ru": "Скелетный I класс",
+          "uz": "Skelet I sinf"
+        },
+        {
+          "en": "Skeletal Class III",
+          "ru": "Скелетный III класс",
+          "uz": "Skelet III sinf"
+        },
+        {
+          "en": "Skeletal Class II",
+          "ru": "Скелетный II класс",
+          "uz": "Skelet II sinf"
+        },
+        {
+          "en": "Anterior open bite",
+          "ru": "Открытый прикус",
+          "uz": "Old ochiq tishlam"
+        }
+      ],
+      "correct": 2,
+      "explain": {
+        "en": "An ANB above 4° means the mandible is behind the maxilla, a skeletal Class II.",
+        "ru": "При ANB более 4° нижняя челюсть расположена дистальнее верхней – скелетный II класс.",
+        "uz": "ANB 4° dan katta bo‘lsa, pastki jag‘ yuqori jag‘ga nisbatan orqada – skelet II sinf."
+      }
+    },
+    {
+      "q": {
+        "en": "Which radiograph gives an overview of tooth presence and development?",
+        "ru": "Какой снимок используют для общей оценки наличия и развития зубов?",
+        "uz": "Qaysi rentgenogramma tishlarning bor-yo‘qligi va rivojlanishini umumiy baholash uchun ishlatiladi?"
+      },
+      "options": [
+        {
+          "en": "Panoramic radiograph",
+          "ru": "Ортопантомограмма",
+          "uz": "Panoramik rentgenogramma"
+        },
+        {
+          "en": "Lateral cephalogram",
+          "ru": "Боковая ТРГ",
+          "uz": "Lateral sefalogramma"
+        },
+        {
+          "en": "Bitewing",
+          "ru": "Интерпроксимальный снимок",
+          "uz": "Interproksimal (bitewing)"
+        },
+        {
+          "en": "Chest radiograph",
+          "ru": "Рентгенограмма грудной клетки",
+          "uz": "Ko‘krak qafasi rentgeni"
+        }
+      ],
+      "correct": 0,
+      "explain": {
+        "en": "A panoramic film shows all teeth, developing germs and pathology in one image.",
+        "ru": "ОПТГ показывает все зубы, зачатки и патологию на одном снимке.",
+        "uz": "Panoramik rentgenogramma barcha tishlar, kurtaklar va patologiyani bir suratda ko‘rsatadi."
+      }
+    },
+    {
+      "q": {
+        "en": "What does the SNA angle represent?",
+        "ru": "Что отражает угол SNA?",
+        "uz": "SNA burchagi nimani ifodalaydi?"
+      },
+      "options": [
+        {
+          "en": "Mandibular position",
+          "ru": "Положение нижней челюсти",
+          "uz": "Pastki jag‘ning holatini"
+        },
+        {
+          "en": "Upper incisor inclination",
+          "ru": "Наклон верхних резцов",
+          "uz": "Yuqori kesuvchilar qiyaligini"
+        },
+        {
+          "en": "Lower face height",
+          "ru": "Высоту нижней трети лица",
+          "uz": "Pastki yuz balandligini"
+        },
+        {
+          "en": "Maxillary position relative to the cranial base",
+          "ru": "Положение верхней челюсти относительно основания черепа",
+          "uz": "Yuqori jag‘ning kalla asosiga nisbatan holatini"
+        }
+      ],
+      "correct": 3,
+      "explain": {
+        "en": "SNA shows the anteroposterior position of the maxilla (point A) relative to the cranial base (S–N).",
+        "ru": "SNA показывает сагиттальное положение верхней челюсти (точка A) относительно основания черепа (S–N).",
+        "uz": "SNA yuqori jag‘ning (A nuqta) kalla asosiga (S–N) nisbatan oldinga-orqaga holatini ko‘rsatadi."
+      }
+    },
+    {
+      "q": {
+        "en": "When is cone beam CT indicated in orthodontics?",
+        "ru": "Когда в ортодонтии показана конусно-лучевая КТ?",
+        "uz": "Konusli nurli KT ortodontiyada qachon ko‘rsatilgan?"
+      },
+      "options": [
+        {
+          "en": "For every patient before treatment",
+          "ru": "Каждому пациенту перед лечением",
+          "uz": "Har bir bemorga, davolashdan oldin"
+        },
+        {
+          "en": "In selected cases such as impacted canines",
+          "ru": "В отдельных случаях, например при ретенции клыка",
+          "uz": "Tanlangan holatlarda, masalan retensiyalangan qoziqda"
+        },
+        {
+          "en": "Monthly for monitoring",
+          "ru": "Ежемесячно для контроля",
+          "uz": "Har oyda nazorat uchun"
+        },
+        {
+          "en": "Only if no models are available",
+          "ru": "Только при отсутствии моделей",
+          "uz": "Faqat modellar yo‘q bo‘lsa"
+        }
+      ],
+      "correct": 1,
+      "explain": {
+        "en": "Because of higher dose, CBCT is used only for specific questions such as impactions or resorption.",
+        "ru": "Из-за большей лучевой нагрузки КТ применяют только при конкретном клиническом вопросе, например при ретенции или резорбции.",
+        "uz": "Nur yuki yuqoriroq bo‘lgani uchun KT faqat aniq klinik savol bo‘lganda, masalan retensiyalangan tish yoki rezorbsiyada qo‘llanadi."
+      }
+    },
+    {
+      "q": {
+        "en": "The profile is convex with a retrusive chin. Which skeletal pattern does this suggest?",
+        "ru": "Профиль выпуклый, нижняя челюсть отстоит назад. На какое скелетное соотношение это указывает?",
+        "uz": "Bemorning profili qavariq, pastki jag‘ orqada. Og‘izdan tashqari ko‘rikda bu qaysi skelet munosabatiga ishora qiladi?"
+      },
+      "options": [
+        {
+          "en": "Class III",
+          "ru": "III класс",
+          "uz": "III sinf"
+        },
+        {
+          "en": "Class I",
+          "ru": "I класс",
+          "uz": "I sinf"
+        },
+        {
+          "en": "Transverse asymmetry",
+          "ru": "Трансверсальную асимметрию",
+          "uz": "Ko‘ndalang asimmetriya"
+        },
+        {
+          "en": "Class II",
+          "ru": "II класс",
+          "uz": "II sinf"
+        }
+      ],
+      "correct": 3,
+      "explain": {
+        "en": "A convex profile with a retrusive chin is typical of a skeletal Class II pattern.",
+        "ru": "Выпуклый профиль и отстоящий назад подбородок типичны для скелетного II класса.",
+        "uz": "Qavariq profil va orqada joylashgan iyak odatda skelet II sinfga xos."
+      }
+    },
+    {
+      "q": {
+        "en": "What are study models mainly used for?",
+        "ru": "Для чего нужны диагностические модели?",
+        "uz": "Diagnostik modellar nima uchun kerak?"
+      },
+      "options": [
+        {
+          "en": "Analysing crowding, arch form and occlusion",
+          "ru": "Анализ скученности, формы дуги и окклюзии",
+          "uz": "Qisilish, yoy shakli va okklyuziyani tahlil qilish"
+        },
+        {
+          "en": "Assessing pulp vitality",
+          "ru": "Оценка состояния пульпы",
+          "uz": "Pulpa holatini baholash"
+        },
+        {
+          "en": "Detecting root resorption",
+          "ru": "Оценка резорбции корней",
+          "uz": "Ildiz rezorbsiyasini ko‘rish"
+        },
+        {
+          "en": "Measuring the cranial base",
+          "ru": "Измерение основания черепа",
+          "uz": "Kalla asosini o‘lchash"
+        }
+      ],
+      "correct": 0,
+      "explain": {
+        "en": "Models allow viewing teeth and occlusion from all sides, space analysis and planning.",
+        "ru": "Модели позволяют осмотреть зубы и окклюзию со всех сторон, провести анализ места и планирование.",
+        "uz": "Modellar tishlar va okklyuziyani har tomondan ko‘rishga, joy tahlili va rejalashtirishga imkon beradi."
+      }
+    },
+    {
+      "q": {
+        "en": "Which method localises an upper canine as palatal or buccal?",
+        "ru": "Какой метод используют для определения нёбного или щёчного положения верхнего клыка?",
+        "uz": "Yuqori qoziqning tanglay yoki lunj tomonda joylashganini aniqlash uchun qaysi usul ishlatiladi?"
+      },
+      "options": [
+        {
+          "en": "Palpation alone is always enough",
+          "ru": "Достаточно только пальпации",
+          "uz": "Faqat paypaslash bilan aniq bo‘ladi"
+        },
+        {
+          "en": "A bitewing film",
+          "ru": "Интерпроксимальный снимок",
+          "uz": "Interproksimal (bitewing) rentgenogramma"
+        },
+        {
+          "en": "Parallax with two films at different angles",
+          "ru": "Метод параллакса с двумя снимками",
+          "uz": "Ikki xil burchakdagi suratlar bilan parallaks"
+        },
+        {
+          "en": "Photographs only",
+          "ru": "Только фотография",
+          "uz": "Faqat fotosurat"
+        }
+      ],
+      "correct": 2,
+      "explain": {
+        "en": "With parallax, a tooth that moves in the same direction as the tube is palatal.",
+        "ru": "При методе параллакса зуб, смещающийся в ту же сторону, что и трубка, расположен нёбно.",
+        "uz": "Parallaks usulida trubka siljigan tomonga harakatlangan tish tanglay tomonda joylashgan bo‘ladi."
+      }
+    },
+    {
+      "q": {
+        "en": "Why are orthodontic photographs taken the same way before and after treatment?",
+        "ru": "Почему ортодонтические фото делают до и после лечения одинаково?",
+        "uz": "Ortodontik fotosuratlar nima uchun davolashdan oldin va keyin bir xil tartibda olinadi?"
+      },
+      "options": [
+        {
+          "en": "To reduce radiation dose",
+          "ru": "Чтобы снизить лучевую нагрузку",
+          "uz": "Nur yukini kamaytirish uchun"
+        },
+        {
+          "en": "For comparison and as a medico-legal record",
+          "ru": "Для сравнения и как медико-правовой документ",
+          "uz": "Taqqoslash va tibbiy-huquqiy hujjat uchun"
+        },
+        {
+          "en": "To distract the patient",
+          "ru": "Чтобы отвлечь пациента",
+          "uz": "Bemorni chalg‘itish uchun"
+        },
+        {
+          "en": "To replace study models",
+          "ru": "Чтобы заменить модели",
+          "uz": "Modellar o‘rnini bosish uchun"
+        }
+      ],
+      "correct": 1,
+      "explain": {
+        "en": "Standard views allow reliable comparison of change and serve as a legal record.",
+        "ru": "Стандартные снимки позволяют надёжно сравнивать изменения и служат юридическим документом.",
+        "uz": "Standart suratlar o‘zgarishlarni ishonchli taqqoslashga imkon beradi va huquqiy hujjat bo‘lib xizmat qiladi."
+      }
+    },
+    {
+      "q": {
+        "en": "What should the orthodontic treatment plan be based on?",
+        "ru": "На чём основывается план ортодонтического лечения?",
+        "uz": "Ortodontik davolash rejasi nimaga asoslanadi?"
+      },
+      "options": [
+        {
+          "en": "Cephalometric numbers only",
+          "ru": "Только на цефалометрических цифрах",
+          "uz": "Faqat sefalometrik raqamlarga"
+        },
+        {
+          "en": "The patient's age alone",
+          "ru": "Только на возрасте пациента",
+          "uz": "Faqat bemorning yoshiga"
+        },
+        {
+          "en": "Photographs alone",
+          "ru": "Только на фотографиях",
+          "uz": "Faqat fotosuratlarga"
+        },
+        {
+          "en": "A problem list drawn from all findings",
+          "ru": "На списке проблем, составленном по всем данным",
+          "uz": "Barcha topilmalardan tuzilgan muammolar ro‘yxatiga"
+        }
+      ],
+      "correct": 3,
+      "explain": {
+        "en": "The problem list combines history, examination and records, and the plan follows from it.",
+        "ru": "Список проблем объединяет анамнез, осмотр и документацию; план вытекает из него.",
+        "uz": "Muammolar ro‘yxati anamnez, ko‘rik va hujjatlarni birlashtiradi; reja shu ro‘yxatdan kelib chiqadi."
+      }
+    },
+    {
+      "q": {
+        "en": "With SNB 74° and SNA 81°, what is the most likely interpretation?",
+        "ru": "При SNB 74° и SNA 81° какая интерпретация наиболее вероятна?",
+        "uz": "SNB 74°, SNA 81° bo‘lsa, eng ehtimoliy talqin qaysi?"
+      },
+      "options": [
+        {
+          "en": "Retrusive mandible, Class II pattern",
+          "ru": "Нижняя челюсть ретрогнатична, II класс",
+          "uz": "Pastki jag‘ orqada joylashgan, II sinf"
+        },
+        {
+          "en": "Prognathic maxilla, Class III",
+          "ru": "Верхняя челюсть впереди, III класс",
+          "uz": "Yuqori jag‘ oldinda, III sinf"
+        },
+        {
+          "en": "Normal Class I relationship",
+          "ru": "Нормальное соотношение I класса",
+          "uz": "Me’yoriy I sinf munosabati"
+        },
+        {
+          "en": "Anterior open bite",
+          "ru": "Открытый прикус",
+          "uz": "Old ochiq tishlam"
+        }
+      ],
+      "correct": 0,
+      "explain": {
+        "en": "SNA is normal, SNB is low and ANB is 7°: a Class II pattern mainly from mandibular retrusion.",
+        "ru": "SNA в норме, SNB уменьшен, ANB 7°: II класс обусловлен главным образом ретрогнатией нижней челюсти.",
+        "uz": "SNA me’yorda, SNB kichik, ANB 7°: II sinf asosan pastki jag‘ning orqada joylashuvi hisobiga."
+      }
+    }
+  ]
+}

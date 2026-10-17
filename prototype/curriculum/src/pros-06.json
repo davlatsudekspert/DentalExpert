@@ -1,0 +1,1029 @@
+{
+  "id": "pros-06",
+  "subject": "pros",
+  "n": 6,
+  "week": 6,
+  "type": "lecture",
+  "hours": 2,
+  "title": {
+    "en": "Removable partial dentures: components",
+    "ru": "Частичные съёмные протезы: элементы конструкции",
+    "uz": "Olinadigan qisman protezlar: konstruksiya qismlari"
+  },
+  "goals": [
+    {
+      "en": "Name the components of a cast-framework removable partial denture and their functions",
+      "ru": "Назвать элементы бюгельного протеза и их функции",
+      "uz": "Byugel protez qismlarini va ularning vazifalarini aytish"
+    },
+    {
+      "en": "Select major connectors for the maxilla and mandible",
+      "ru": "Выбирать большие соединители для верхней и нижней челюсти",
+      "uz": "Yuqori va pastki jag‘ uchun asosiy birlashtiruvchilarni tanlash"
+    },
+    {
+      "en": "Explain how clasps, rests and indirect retainers work together",
+      "ru": "Объяснить взаимодействие кламмеров, накладок и непрямых фиксаторов",
+      "uz": "Klammerlar, okklyuzion nakladkalar va bilvosita ushlagichlar qanday birga ishlashini tushuntirish"
+    }
+  ],
+  "links": [
+    "tooth-surfaces"
+  ],
+  "sources": [
+    "Carr AB, Brown DT. McCracken's Removable Partial Prosthodontics, 13th ed., 2016"
+  ],
+  "slides": [
+    {
+      "layout": "title",
+      "title": {
+        "en": "Removable partial dentures",
+        "ru": "Частичные съёмные протезы",
+        "uz": "Olinadigan qisman protezlar"
+      },
+      "subtitle": {
+        "en": "Components of a cast-framework denture",
+        "ru": "Элементы бюгельного протеза",
+        "uz": "Byugel protez qismlari"
+      }
+    },
+    {
+      "layout": "tree",
+      "title": {
+        "en": "Components of an RPD",
+        "ru": "Элементы бюгельного протеза",
+        "uz": "Byugel protez qismlari"
+      },
+      "root": {
+        "en": "Cast-framework RPD",
+        "ru": "Бюгельный протез",
+        "uz": "Byugel protez"
+      },
+      "children": [
+        {
+          "label": {
+            "en": "Major connector",
+            "ru": "Большой соединитель (дуга)",
+            "uz": "Asosiy birlashtiruvchi (yoy)"
+          },
+          "items": [
+            {
+              "en": "Joins both sides",
+              "ru": "Соединяет обе стороны",
+              "uz": "Ikki tomonni bog‘laydi"
+            }
+          ]
+        },
+        {
+          "label": {
+            "en": "Minor connectors",
+            "ru": "Малые соединители",
+            "uz": "Kichik birlashtiruvchilar"
+          },
+          "items": [
+            {
+              "en": "Link parts to major connector",
+              "ru": "Связывают элементы с дугой",
+              "uz": "Qismlarni yoyga bog‘laydi"
+            }
+          ]
+        },
+        {
+          "label": {
+            "en": "Rests",
+            "ru": "Окклюзионные накладки",
+            "uz": "Okklyuzion nakladkalar"
+          },
+          "items": [
+            {
+              "en": "Vertical support",
+              "ru": "Вертикальная опора",
+              "uz": "Vertikal tayanch"
+            }
+          ]
+        },
+        {
+          "label": {
+            "en": "Direct retainers",
+            "ru": "Прямые фиксаторы",
+            "uz": "Bevosita ushlagichlar"
+          },
+          "items": [
+            {
+              "en": "Clasps, attachments",
+              "ru": "Кламмеры, аттачмены",
+              "uz": "Klammerlar, attachmentlar"
+            }
+          ]
+        },
+        {
+          "label": {
+            "en": "Bases and teeth",
+            "ru": "Базисы и зубы",
+            "uz": "Bazislar va tishlar"
+          },
+          "items": [
+            {
+              "en": "Replace tissue and teeth",
+              "ru": "Замещают ткани и зубы",
+              "uz": "To‘qima va tishlarni tiklaydi"
+            }
+          ]
+        }
+      ],
+      "note": {
+        "en": "Pass a framework around and have students identify each component by touch.",
+        "ru": "Передайте каркас по рукам и попросите студентов найти каждый элемент.",
+        "uz": "Karkasni qo‘lma-qo‘l uzating va talabalardan har bir qismni topishni so‘rang."
+      }
+    },
+    {
+      "layout": "compare",
+      "title": {
+        "en": "Major connectors",
+        "ru": "Большие соединители",
+        "uz": "Asosiy birlashtiruvchilar"
+      },
+      "columns": [
+        {
+          "head": {
+            "en": "Maxilla",
+            "ru": "Верхняя челюсть",
+            "uz": "Yuqori jag‘"
+          },
+          "items": [
+            {
+              "en": "Palatal strap",
+              "ru": "Нёбная полоска",
+              "uz": "Tanglay tasmasi"
+            },
+            {
+              "en": "Anteroposterior palatal strap",
+              "ru": "Передне-задняя нёбная полоска",
+              "uz": "Oldingi-orqa tanglay tasmasi"
+            },
+            {
+              "en": "Complete palatal plate",
+              "ru": "Полное нёбное покрытие",
+              "uz": "To‘liq tanglay plastinkasi"
+            },
+            {
+              "en": "U-shaped: least rigid, avoid if possible",
+              "ru": "U-образный: наименее жёсткий, избегать",
+              "uz": "U shaklli: eng kam qattiq, iloji bo‘lsa qochish"
+            }
+          ]
+        },
+        {
+          "head": {
+            "en": "Mandible",
+            "ru": "Нижняя челюсть",
+            "uz": "Pastki jag‘"
+          },
+          "items": [
+            {
+              "en": "Lingual bar: needs enough vestibular depth",
+              "ru": "Язычная дуга: нужна достаточная глубина",
+              "uz": "Til yoyi: yetarli chuqurlik kerak"
+            },
+            {
+              "en": "Lingual plate: shallow floor of mouth",
+              "ru": "Язычная пластинка: мелкое дно полости рта",
+              "uz": "Til plastinkasi: og‘iz tubi sayoz bo‘lsa"
+            },
+            {
+              "en": "Sublingual bar",
+              "ru": "Подъязычная дуга",
+              "uz": "Til osti yoyi"
+            },
+            {
+              "en": "Labial bar: rare, lingually tilted teeth",
+              "ru": "Губная дуга: редко, при наклоне зубов",
+              "uz": "Lab yoyi: kam, tishlar tilga qiyshayganda"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "layout": "bullets",
+      "title": {
+        "en": "Requirements of a major connector",
+        "ru": "Требования к большому соединителю",
+        "uz": "Asosiy birlashtiruvchiga talablar"
+      },
+      "bullets": [
+        {
+          "en": "Rigid, so forces spread across the arch",
+          "ru": "Жёсткий, чтобы распределять нагрузку по дуге",
+          "uz": "Kuchlarni yoy bo‘ylab taqsimlash uchun qattiq"
+        },
+        {
+          "en": "Clear of the gingival margins",
+          "ru": "Отстоит от края десны",
+          "uz": "Milk chetidan uzoqda"
+        },
+        {
+          "en": "Free of movable tissue and bony prominences",
+          "ru": "Не касается подвижных тканей и экзостозов",
+          "uz": "Harakatchan to‘qima va suyak bo‘rtiqlariga tegmaydi"
+        },
+        {
+          "en": "Smooth and comfortable for the tongue",
+          "ru": "Гладкий и удобный для языка",
+          "uz": "Til uchun silliq va qulay"
+        }
+      ],
+      "note": {
+        "en": "Stress rigidity: a flexible connector transmits harmful forces to abutments and ridges.",
+        "ru": "Подчеркните жёсткость: гибкий соединитель передаёт вредные силы на опоры и гребни.",
+        "uz": "Qattiqlikni ta’kidlang: egiluvchan birlashtiruvchi zararli kuchlarni tayanch va qirralarga o‘tkazadi."
+      }
+    },
+    {
+      "layout": "figure",
+      "title": {
+        "en": "Occlusal rest seat",
+        "ru": "Ложе окклюзионной накладки",
+        "uz": "Okklyuzion nakladka o‘rni"
+      },
+      "image": "occlusal",
+      "callouts": [
+        {
+          "at": "ridge",
+          "label": {
+            "en": "Lowered marginal ridge",
+            "ru": "Сниженный краевой гребень",
+            "uz": "Pasaytirilgan chekka qirra"
+          }
+        },
+        {
+          "at": "fossa",
+          "label": {
+            "en": "Floor inclined to centre",
+            "ru": "Дно наклонено к центру",
+            "uz": "Tubi markazga qiya"
+          }
+        },
+        {
+          "at": "fissure",
+          "label": {
+            "en": "Rest stays in enamel",
+            "ru": "Накладка в пределах эмали",
+            "uz": "Nakladka emal chegarasida"
+          }
+        }
+      ],
+      "bullets": [
+        {
+          "en": "Spoon-shaped, rounded outline",
+          "ru": "Ложкообразная, округлая форма",
+          "uz": "Qoshiqsimon, yumaloq shakl"
+        },
+        {
+          "en": "Directs forces along the long axis",
+          "ru": "Направляет силы по оси зуба",
+          "uz": "Kuchlarni tish o‘qi bo‘ylab yo‘naltiradi"
+        }
+      ],
+      "note": {
+        "en": "Ask what happens to a denture base when a rest is missing.",
+        "ru": "Спросите, что произойдёт с базисом, если накладки нет.",
+        "uz": "Nakladka bo‘lmasa, protez bazisi bilan nima sodir bo‘lishini so‘rang."
+      }
+    },
+    {
+      "layout": "table",
+      "title": {
+        "en": "Rests and their sites",
+        "ru": "Виды накладок и места их расположения",
+        "uz": "Nakladka turlari va joylashuvi"
+      },
+      "head": [
+        {
+          "en": "Rest",
+          "ru": "Накладка",
+          "uz": "Nakladka"
+        },
+        {
+          "en": "Tooth",
+          "ru": "Зуб",
+          "uz": "Tish"
+        },
+        {
+          "en": "Note",
+          "ru": "Примечание",
+          "uz": "Izoh"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "en": "Occlusal rest",
+            "ru": "Окклюзионная",
+            "uz": "Okklyuzion"
+          },
+          {
+            "en": "Premolars, molars",
+            "ru": "Премоляры, моляры",
+            "uz": "Premolyarlar, katta oziq tishlar"
+          },
+          {
+            "en": "Most common",
+            "ru": "Наиболее частая",
+            "uz": "Eng ko‘p qo‘llanadigan"
+          }
+        ],
+        [
+          {
+            "en": "Cingulum rest",
+            "ru": "На зубной бугорок",
+            "uz": "Singulum nakladkasi"
+          },
+          {
+            "en": "Canines, upper incisors",
+            "ru": "Клыки, верхние резцы",
+            "uz": "Qoziq tishlar, yuqori kesuvchilar"
+          },
+          {
+            "en": "Load near the root axis",
+            "ru": "Нагрузка ближе к оси корня",
+            "uz": "Yuk ildiz o‘qiga yaqin"
+          }
+        ],
+        [
+          {
+            "en": "Incisal rest",
+            "ru": "Режущая",
+            "uz": "Kesuv qirrasi nakladkasi"
+          },
+          {
+            "en": "Lower canines",
+            "ru": "Нижние клыки",
+            "uz": "Pastki qoziq tishlar"
+          },
+          {
+            "en": "Less aesthetic, more leverage",
+            "ru": "Менее эстетична, больше рычаг",
+            "uz": "Kamroq estetik, ko‘proq richag"
+          }
+        ]
+      ]
+    },
+    {
+      "layout": "tree",
+      "title": {
+        "en": "Clasp types",
+        "ru": "Виды кламмеров",
+        "uz": "Klammer turlari"
+      },
+      "root": {
+        "en": "Direct retainer clasp",
+        "ru": "Удерживающий кламмер",
+        "uz": "Ushlab turuvchi klammer"
+      },
+      "children": [
+        {
+          "label": {
+            "en": "Suprabulge",
+            "ru": "Надэкваторный",
+            "uz": "Ekvator ustidan"
+          },
+          "items": [
+            {
+              "en": "Circumferential (Akers)",
+              "ru": "Круговой (Аккера)",
+              "uz": "Aylanma (Akers)"
+            },
+            {
+              "en": "Ring clasp",
+              "ru": "Кольцевой",
+              "uz": "Halqali"
+            },
+            {
+              "en": "Embrasure clasp",
+              "ru": "Двойной (Бонвиля)",
+              "uz": "Qo‘sh klammer (Bonvil)"
+            }
+          ]
+        },
+        {
+          "label": {
+            "en": "Infrabulge",
+            "ru": "Подэкваторный",
+            "uz": "Ekvator ostidan"
+          },
+          "items": [
+            {
+              "en": "I-bar",
+              "ru": "I-образный",
+              "uz": "I shaklli"
+            },
+            {
+              "en": "T-bar",
+              "ru": "T-образный",
+              "uz": "T shaklli"
+            },
+            {
+              "en": "Part of RPI system",
+              "ru": "Часть системы RPI",
+              "uz": "RPI tizimi qismi"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "layout": "cycle",
+      "title": {
+        "en": "Clasp assembly requirements",
+        "ru": "Требования к кламмерной системе",
+        "uz": "Klammer tizimiga talablar"
+      },
+      "center": {
+        "en": "Clasp assembly",
+        "ru": "Кламмерная система",
+        "uz": "Klammer tizimi"
+      },
+      "steps": [
+        {
+          "label": {
+            "en": "Retention",
+            "ru": "Ретенция",
+            "uz": "Retensiya"
+          }
+        },
+        {
+          "label": {
+            "en": "Support",
+            "ru": "Опора",
+            "uz": "Tayanch"
+          }
+        },
+        {
+          "label": {
+            "en": "Stability",
+            "ru": "Стабильность",
+            "uz": "Barqarorlik"
+          }
+        },
+        {
+          "label": {
+            "en": "Reciprocation",
+            "ru": "Реципрокация",
+            "uz": "Resiprokatsiya"
+          }
+        },
+        {
+          "label": {
+            "en": "Encirclement over 180°",
+            "ru": "Охват более 180°",
+            "uz": "180° dan ortiq qamrov"
+          }
+        },
+        {
+          "label": {
+            "en": "Passivity at rest",
+            "ru": "Пассивность в покое",
+            "uz": "Tinch holatda passivlik"
+          }
+        }
+      ],
+      "note": {
+        "en": "Ask how a reciprocal arm prevents tooth movement when the denture is inserted.",
+        "ru": "Спросите, как реципрокное плечо предотвращает смещение зуба при наложении протеза.",
+        "uz": "Protez kiyilganda resiprok yelka tish siljishining oldini qanday olishini so‘rang."
+      }
+    },
+    {
+      "layout": "bullets",
+      "title": {
+        "en": "Indirect retainers and guide planes",
+        "ru": "Непрямые фиксаторы и направляющие плоскости",
+        "uz": "Bilvosita ushlagichlar va yo‘naltiruvchi tekisliklar"
+      },
+      "bullets": [
+        {
+          "en": "Indirect retainers resist rotation of distal extension bases",
+          "ru": "Непрямые фиксаторы противодействуют ротации концевых седел",
+          "uz": "Bilvosita ushlagichlar chekka egarlarning aylanishiga qarshi turadi"
+        },
+        {
+          "en": "Placed as far anterior to the fulcrum line as possible",
+          "ru": "Располагаются как можно дальше кпереди от линии вращения",
+          "uz": "Aylanish chizig‘idan iloji boricha oldinga joylashtiriladi"
+        },
+        {
+          "en": "Guide planes give one path of insertion",
+          "ru": "Направляющие плоскости задают единый путь введения",
+          "uz": "Yo‘naltiruvchi tekisliklar yagona kiritish yo‘lini beradi"
+        },
+        {
+          "en": "Surveying finds undercuts and height of contour",
+          "ru": "Параллелометрия определяет поднутрения и экватор",
+          "uz": "Parallelometriya chuqurliklar va ekvatorni aniqlaydi"
+        }
+      ]
+    },
+    {
+      "layout": "summary",
+      "title": {
+        "en": "Summary",
+        "ru": "Итоги",
+        "uz": "Xulosa"
+      },
+      "bullets": [
+        {
+          "en": "Major connectors must be rigid and clear of the gingiva",
+          "ru": "Большие соединители жёсткие и не касаются десны",
+          "uz": "Asosiy birlashtiruvchilar qattiq va milkka tegmaydi"
+        },
+        {
+          "en": "Rests give vertical support along the tooth axis",
+          "ru": "Накладки дают вертикальную опору по оси зуба",
+          "uz": "Nakladkalar tish o‘qi bo‘ylab vertikal tayanch beradi"
+        },
+        {
+          "en": "Clasps retain only in a measured undercut",
+          "ru": "Кламмер удерживает только в выверенном поднутрении",
+          "uz": "Klammer faqat o‘lchangan chuqurlikda ushlaydi"
+        },
+        {
+          "en": "Indirect retainers control rotation of free-end bases",
+          "ru": "Непрямые фиксаторы контролируют ротацию концевых седел",
+          "uz": "Bilvosita ushlagichlar chekka egarlar aylanishini nazorat qiladi"
+        }
+      ]
+    }
+  ],
+  "oral": [
+    {
+      "q": {
+        "en": "List the components of a cast-framework RPD.",
+        "ru": "Перечислите элементы бюгельного протеза.",
+        "uz": "Byugel protez qismlarini sanab bering."
+      },
+      "plan": [
+        {
+          "en": "Major and minor connectors",
+          "ru": "Большой и малые соединители",
+          "uz": "Asosiy va kichik birlashtiruvchilar"
+        },
+        {
+          "en": "Rests",
+          "ru": "Окклюзионные накладки",
+          "uz": "Okklyuzion nakladkalar"
+        },
+        {
+          "en": "Direct and indirect retainers",
+          "ru": "Прямые и непрямые фиксаторы",
+          "uz": "Bevosita va bilvosita ushlagichlar"
+        },
+        {
+          "en": "Denture bases with artificial teeth",
+          "ru": "Базисы с искусственными зубами",
+          "uz": "Sun’iy tishli bazislar"
+        }
+      ]
+    },
+    {
+      "q": {
+        "en": "When do you choose a lingual plate instead of a lingual bar?",
+        "ru": "Когда выбирают язычную пластинку вместо язычной дуги?",
+        "uz": "Qachon til yoyi o‘rniga til plastinkasi tanlanadi?"
+      },
+      "plan": [
+        {
+          "en": "Shallow floor of mouth, not enough height for a bar",
+          "ru": "Мелкое дно полости рта, мало места для дуги",
+          "uz": "Og‘iz tubi sayoz, yoy uchun balandlik yetmaydi"
+        },
+        {
+          "en": "Periodontally weak anterior teeth needing support",
+          "ru": "Пародонтологически ослабленные передние зубы",
+          "uz": "Parodont jihatidan zaif old tishlar"
+        },
+        {
+          "en": "Planned future replacement of incisors",
+          "ru": "Планируемое замещение резцов в будущем",
+          "uz": "Kelajakda kesuvchi tishlarni tiklash rejasi"
+        },
+        {
+          "en": "Need for indirect retention",
+          "ru": "Необходимость непрямой фиксации",
+          "uz": "Bilvosita ushlash zarurati"
+        }
+      ]
+    },
+    {
+      "q": {
+        "en": "Describe the functions of a rest.",
+        "ru": "Опишите функции окклюзионной накладки.",
+        "uz": "Okklyuzion nakladka vazifalarini tavsiflang."
+      },
+      "plan": [
+        {
+          "en": "Vertical support for the denture",
+          "ru": "Вертикальная опора протеза",
+          "uz": "Protez uchun vertikal tayanch"
+        },
+        {
+          "en": "Transmits forces along the long axis",
+          "ru": "Передаёт силы по оси зуба",
+          "uz": "Kuchlarni tish o‘qi bo‘ylab o‘tkazadi"
+        },
+        {
+          "en": "Keeps clasp arms in position",
+          "ru": "Удерживает плечи кламмера на месте",
+          "uz": "Klammer yelkalarini joyida ushlaydi"
+        },
+        {
+          "en": "Prevents tissue impingement by the base",
+          "ru": "Предотвращает давление базиса на ткани",
+          "uz": "Bazisning to‘qimaga bosimining oldini oladi"
+        }
+      ]
+    },
+    {
+      "q": {
+        "en": "What are the requirements of a clasp assembly?",
+        "ru": "Каковы требования к кламмерной системе?",
+        "uz": "Klammer tizimiga qanday talablar qo‘yiladi?"
+      },
+      "plan": [
+        {
+          "en": "Retention, support and stability",
+          "ru": "Ретенция, опора и стабильность",
+          "uz": "Retensiya, tayanch va barqarorlik"
+        },
+        {
+          "en": "Reciprocation against the retentive arm",
+          "ru": "Реципрокация против удерживающего плеча",
+          "uz": "Ushlovchi yelkaga qarshi resiprokatsiya"
+        },
+        {
+          "en": "Encirclement of more than 180°",
+          "ru": "Охват более 180°",
+          "uz": "180° dan ortiq qamrov"
+        },
+        {
+          "en": "Passivity when fully seated",
+          "ru": "Пассивность при полном наложении",
+          "uz": "To‘liq o‘tirganda passivlik"
+        }
+      ]
+    }
+  ],
+  "test": [
+    {
+      "q": {
+        "en": "Which RPD component mainly provides vertical support?",
+        "ru": "Какой элемент бюгельного протеза обеспечивает в основном вертикальную опору?",
+        "uz": "Byugel protezning qaysi qismi asosan vertikal tayanchni ta’minlaydi?"
+      },
+      "options": [
+        {
+          "en": "Retentive clasp arm",
+          "ru": "Удерживающее плечо кламмера",
+          "uz": "Klammerning ushlovchi yelkasi"
+        },
+        {
+          "en": "Occlusal rest",
+          "ru": "Окклюзионная накладка",
+          "uz": "Okklyuzion nakladka"
+        },
+        {
+          "en": "Labial flange",
+          "ru": "Губной край базиса",
+          "uz": "Bazisning lab cheti"
+        },
+        {
+          "en": "Retentive mesh",
+          "ru": "Ретенционная сетка",
+          "uz": "Retension to‘r"
+        }
+      ],
+      "correct": 1,
+      "explain": {
+        "en": "Rests sit in prepared rest seats and transmit vertical forces along the long axis of the abutment.",
+        "ru": "Накладки лежат в подготовленных ложах и передают вертикальные силы по оси опорного зуба.",
+        "uz": "Nakladkalar tayyorlangan o‘rinlarda turadi va vertikal kuchlarni tayanch tish o‘qi bo‘ylab o‘tkazadi."
+      }
+    },
+    {
+      "q": {
+        "en": "Which maxillary major connector is the least rigid and should be avoided where possible?",
+        "ru": "Какой большой соединитель верхней челюсти наименее жёсткий и его следует избегать?",
+        "uz": "Qaysi yuqori jag‘ asosiy birlashtiruvchisi eng kam qattiq va iloji bo‘lsa undan qochish kerak?"
+      },
+      "options": [
+        {
+          "en": "Anteroposterior palatal strap",
+          "ru": "Передне-задняя нёбная полоска",
+          "uz": "Oldingi-orqa tanglay tasmasi"
+        },
+        {
+          "en": "Complete palatal plate",
+          "ru": "Полное нёбное покрытие",
+          "uz": "To‘liq tanglay plastinkasi"
+        },
+        {
+          "en": "U-shaped connector",
+          "ru": "U-образный соединитель",
+          "uz": "U shaklli birlashtiruvchi"
+        },
+        {
+          "en": "Single palatal strap",
+          "ru": "Одиночная нёбная полоска",
+          "uz": "Yakka tanglay tasmasi"
+        }
+      ],
+      "correct": 2,
+      "explain": {
+        "en": "The U-shaped (horseshoe) connector flexes most and is used only when a torus or other factor leaves no option.",
+        "ru": "U-образный (подковообразный) соединитель больше всего изгибается; его применяют только при отсутствии альтернативы, например при торусе.",
+        "uz": "U shaklli (taqasimon) birlashtiruvchi eng ko‘p egiladi va faqat boshqa iloj bo‘lmaganda, masalan torusda qo‘llanadi."
+      }
+    },
+    {
+      "q": {
+        "en": "A patient has a very shallow floor of mouth and mobile lower incisors. The mandibular major connector of choice is:",
+        "ru": "У пациента очень мелкое дно полости рта и подвижные нижние резцы. Выбор большого соединителя нижней челюсти:",
+        "uz": "Bemorda og‘iz tubi juda sayoz va pastki kesuvchi tishlar qimirlaydi. Pastki jag‘ asosiy birlashtiruvchisi qaysi?"
+      },
+      "options": [
+        {
+          "en": "Lingual plate",
+          "ru": "Язычная пластинка",
+          "uz": "Til plastinkasi"
+        },
+        {
+          "en": "Lingual bar",
+          "ru": "Язычная дуга",
+          "uz": "Til yoyi"
+        },
+        {
+          "en": "Labial bar",
+          "ru": "Губная дуга",
+          "uz": "Lab yoyi"
+        },
+        {
+          "en": "No major connector",
+          "ru": "Без большого соединителя",
+          "uz": "Asosiy birlashtiruvchisiz"
+        }
+      ],
+      "correct": 0,
+      "explain": {
+        "en": "A lingual plate fits where there is not enough height for a bar and can help support weakened anterior teeth.",
+        "ru": "Язычная пластинка применяется при недостатке высоты для дуги и помогает поддержать ослабленные передние зубы.",
+        "uz": "Til plastinkasi yoy uchun balandlik yetmaganda qo‘llanadi va zaiflashgan old tishlarni qo‘llab-quvvatlaydi."
+      }
+    },
+    {
+      "q": {
+        "en": "Where is the retentive tip of a suprabulge clasp placed?",
+        "ru": "Где располагается удерживающий конец надэкваторного кламмера?",
+        "uz": "Ekvator ustidan keluvchi klammerning ushlovchi uchi qayerda joylashadi?"
+      },
+      "options": [
+        {
+          "en": "Above the height of contour",
+          "ru": "Выше экватора",
+          "uz": "Ekvatordan yuqorida"
+        },
+        {
+          "en": "On the occlusal surface",
+          "ru": "На окклюзионной поверхности",
+          "uz": "Okklyuzion yuzada"
+        },
+        {
+          "en": "On the gingival margin",
+          "ru": "На краю десны",
+          "uz": "Milk chetida"
+        },
+        {
+          "en": "In a measured undercut below the height of contour",
+          "ru": "В выверенном поднутрении ниже экватора",
+          "uz": "Ekvatordan pastdagi o‘lchangan chuqurlikda"
+        }
+      ],
+      "correct": 3,
+      "explain": {
+        "en": "Retention comes from the flexible terminal third engaging a measured undercut below the survey line.",
+        "ru": "Ретенция обеспечивается гибкой концевой третью плеча, входящей в выверенное поднутрение ниже межевой линии.",
+        "uz": "Retensiyani yelkaning egiluvchan oxirgi uchdan biri tutashuv chizig‘idan pastdagi o‘lchangan chuqurlikka kirishi ta’minlaydi."
+      }
+    },
+    {
+      "q": {
+        "en": "What is the main function of the reciprocal clasp arm?",
+        "ru": "Основная функция реципрокного плеча кламмера:",
+        "uz": "Klammerning resiprok yelkasi asosiy vazifasi:"
+      },
+      "options": [
+        {
+          "en": "To engage the deepest undercut",
+          "ru": "Входить в самое глубокое поднутрение",
+          "uz": "Eng chuqur chuqurlikka kirish"
+        },
+        {
+          "en": "To counter forces from the retentive arm",
+          "ru": "Противодействовать силам удерживающего плеча",
+          "uz": "Ushlovchi yelka kuchlariga qarshi turish"
+        },
+        {
+          "en": "To replace the rest",
+          "ru": "Заменять накладку",
+          "uz": "Nakladka o‘rnini bosish"
+        },
+        {
+          "en": "To contact the gingiva",
+          "ru": "Контактировать с десной",
+          "uz": "Milkka tegib turish"
+        }
+      ],
+      "correct": 1,
+      "explain": {
+        "en": "The rigid reciprocal arm opposes the retentive arm so the tooth is not pushed as the clasp passes the height of contour.",
+        "ru": "Жёсткое реципрокное плечо противодействует удерживающему, чтобы зуб не смещался при прохождении кламмера через экватор.",
+        "uz": "Qattiq resiprok yelka ushlovchi yelkaga qarshi turadi, shunda klammer ekvatordan o‘tayotganda tish surilmaydi."
+      }
+    },
+    {
+      "q": {
+        "en": "In a Kennedy Class I mandibular RPD, indirect retainers are placed:",
+        "ru": "В бюгельном протезе нижней челюсти I класса Кеннеди непрямые фиксаторы располагают:",
+        "uz": "Kennedi I sinf pastki jag‘ byugel protezida bilvosita ushlagichlar qayerga joylashtiriladi?"
+      },
+      "options": [
+        {
+          "en": "On the most distal abutments only",
+          "ru": "Только на самых дистальных опорах",
+          "uz": "Faqat eng orqa tayanchlarda"
+        },
+        {
+          "en": "On the denture bases",
+          "ru": "На базисах протеза",
+          "uz": "Protez bazislarida"
+        },
+        {
+          "en": "As far anterior to the fulcrum line as possible",
+          "ru": "Как можно дальше кпереди от линии вращения",
+          "uz": "Aylanish chizig‘idan iloji boricha oldinda"
+        },
+        {
+          "en": "On the retromolar pads",
+          "ru": "На ретромолярных бугорках",
+          "uz": "Retromolyar bo‘rtiqlarda"
+        }
+      ],
+      "correct": 2,
+      "explain": {
+        "en": "The further an indirect retainer lies from the fulcrum line, the better it resists lifting of the distal bases.",
+        "ru": "Чем дальше непрямой фиксатор от линии вращения, тем лучше он противодействует отрыву концевых седел.",
+        "uz": "Bilvosita ushlagich aylanish chizig‘idan qanchalik uzoq bo‘lsa, chekka egarlar ko‘tarilishiga shunchalik yaxshi qarshi turadi."
+      }
+    },
+    {
+      "q": {
+        "en": "The RPI system consists of:",
+        "ru": "Система RPI включает:",
+        "uz": "RPI tizimi nimalardan iborat?"
+      },
+      "options": [
+        {
+          "en": "Mesial rest, proximal plate, I-bar",
+          "ru": "Мезиальная накладка, проксимальная пластинка, I-образное плечо",
+          "uz": "Mezial nakladka, proksimal plastinka, I shaklli yelka"
+        },
+        {
+          "en": "Ring clasp, palatal plate, incisal rest",
+          "ru": "Кольцевой кламмер, нёбная пластинка, режущая накладка",
+          "uz": "Halqali klammer, tanglay plastinkasi, kesuv nakladkasi"
+        },
+        {
+          "en": "Retentive mesh, post dam, lingual bar",
+          "ru": "Ретенционная сетка, клапанная зона, язычная дуга",
+          "uz": "Retension to‘r, klapan zonasi, til yoyi"
+        },
+        {
+          "en": "Two occlusal rests and a T-bar",
+          "ru": "Две окклюзионные накладки и T-образное плечо",
+          "uz": "Ikki okklyuzion nakladka va T shaklli yelka"
+        }
+      ],
+      "correct": 0,
+      "explain": {
+        "en": "RPI stands for rest, proximal plate and I-bar; it reduces torque on abutments next to distal extension bases.",
+        "ru": "RPI — накладка, проксимальная пластинка и I-образное плечо; снижает торк на опоры рядом с концевыми седлами.",
+        "uz": "RPI — nakladka, proksimal plastinka va I shaklli yelka; chekka egarlar yonidagi tayanchlarga buralish kuchini kamaytiradi."
+      }
+    },
+    {
+      "q": {
+        "en": "Which rest is preferred on a maxillary canine for aesthetics and favourable loading?",
+        "ru": "Какая накладка предпочтительна на верхнем клыке с учётом эстетики и нагрузки?",
+        "uz": "Estetika va qulay yuklanish uchun yuqori qoziq tishda qaysi nakladka afzal?"
+      },
+      "options": [
+        {
+          "en": "Incisal rest",
+          "ru": "Режущая накладка",
+          "uz": "Kesuv qirrasi nakladkasi"
+        },
+        {
+          "en": "Occlusal rest",
+          "ru": "Окклюзионная накладка",
+          "uz": "Okklyuzion nakladka"
+        },
+        {
+          "en": "No rest is needed",
+          "ru": "Накладка не нужна",
+          "uz": "Nakladka kerak emas"
+        },
+        {
+          "en": "Cingulum rest",
+          "ru": "Накладка на зубной бугорок",
+          "uz": "Singulum nakladkasi"
+        }
+      ],
+      "correct": 3,
+      "explain": {
+        "en": "A cingulum rest lies closer to the root axis and is less visible than an incisal rest.",
+        "ru": "Накладка на зубной бугорок ближе к оси корня и менее заметна, чем режущая.",
+        "uz": "Singulum nakladkasi ildiz o‘qiga yaqinroq va kesuv nakladkasiga qaraganda kamroq ko‘rinadi."
+      }
+    },
+    {
+      "q": {
+        "en": "What is the purpose of guide planes on abutment teeth?",
+        "ru": "Для чего нужны направляющие плоскости на опорных зубах?",
+        "uz": "Tayanch tishlardagi yo‘naltiruvchi tekisliklar nima uchun kerak?"
+      },
+      "options": [
+        {
+          "en": "To increase the undercut",
+          "ru": "Увеличить поднутрение",
+          "uz": "Chuqurlikni oshirish"
+        },
+        {
+          "en": "To provide a single path of insertion",
+          "ru": "Обеспечить единый путь введения",
+          "uz": "Yagona kiritish yo‘lini ta’minlash"
+        },
+        {
+          "en": "To replace the major connector",
+          "ru": "Заменить большой соединитель",
+          "uz": "Asosiy birlashtiruvchi o‘rnini bosish"
+        },
+        {
+          "en": "To lighten the shade",
+          "ru": "Осветлить цвет",
+          "uz": "Rangni ochish"
+        }
+      ],
+      "correct": 1,
+      "explain": {
+        "en": "Parallel guide planes direct the denture along one path and improve stability and retention.",
+        "ru": "Параллельные направляющие плоскости задают протезу один путь и улучшают стабильность и ретенцию.",
+        "uz": "Parallel yo‘naltiruvchi tekisliklar protezni bir yo‘l bo‘ylab yo‘naltiradi va barqarorlik hamda retensiyani yaxshilaydi."
+      }
+    },
+    {
+      "q": {
+        "en": "A newly fitted RPD sinks onto the gingiva of an abutment. The most likely cause is:",
+        "ru": "Новый бюгельный протез оседает на десну опорного зуба. Наиболее вероятная причина:",
+        "uz": "Yangi byugel protez tayanch tish milkiga cho‘kmoqda. Eng ehtimoliy sabab:"
+      },
+      "options": [
+        {
+          "en": "Too many clasps",
+          "ru": "Слишком много кламмеров",
+          "uz": "Klammerlar juda ko‘p"
+        },
+        {
+          "en": "A rigid major connector",
+          "ru": "Жёсткий большой соединитель",
+          "uz": "Qattiq asosiy birlashtiruvchi"
+        },
+        {
+          "en": "Missing or inadequate rest",
+          "ru": "Отсутствующая или недостаточная накладка",
+          "uz": "Nakladkaning yo‘qligi yoki yetarli emasligi"
+        },
+        {
+          "en": "Correct guide planes",
+          "ru": "Правильные направляющие плоскости",
+          "uz": "To‘g‘ri yo‘naltiruvchi tekisliklar"
+        }
+      ],
+      "correct": 2,
+      "explain": {
+        "en": "Without adequate rests the denture lacks vertical support and settles onto soft tissue.",
+        "ru": "Без надёжных накладок протез лишён вертикальной опоры и оседает на мягкие ткани.",
+        "uz": "Yetarli nakladka bo‘lmasa protez vertikal tayanchsiz qoladi va yumshoq to‘qimaga cho‘kadi."
+      }
+    }
+  ]
+}

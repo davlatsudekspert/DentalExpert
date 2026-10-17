@@ -1,0 +1,1037 @@
+{
+  "id": "oralmed-01",
+  "subject": "oralmed",
+  "n": 1,
+  "week": 1,
+  "type": "practical",
+  "hours": 2,
+  "title": {
+    "en": "Examining the oral mucosa and describing lesions",
+    "ru": "Осмотр слизистой оболочки рта и описание элементов поражения",
+    "uz": "Og‘iz shilliq qavatini tekshirish va elementlarni tasvirlash"
+  },
+  "goals": [
+    {
+      "en": "Perform a systematic oral mucosal examination",
+      "ru": "Проводить систематический осмотр слизистой оболочки рта",
+      "uz": "Og‘iz shilliq qavatini tizimli tekshirishni bajarish"
+    },
+    {
+      "en": "Name and distinguish primary and secondary lesions",
+      "ru": "Называть и различать первичные и вторичные элементы",
+      "uz": "Birlamchi va ikkilamchi elementlarni nomlash va farqlash"
+    },
+    {
+      "en": "Describe a lesion by size, colour, borders and consistency",
+      "ru": "Описывать элемент по размеру, цвету, краям и консистенции",
+      "uz": "Elementni o‘lcham, rang, chegara va konsistensiya bo‘yicha tasvirlash"
+    }
+  ],
+  "links": [],
+  "sources": [
+    "Glick M et al. Burket's Oral Medicine, 13th ed., 2021",
+    "Scully C. Oral and Maxillofacial Medicine: The Basis of Diagnosis and Treatment, 3rd ed., 2013"
+  ],
+  "slides": [
+    {
+      "layout": "title",
+      "title": {
+        "en": "Examining the oral mucosa",
+        "ru": "Осмотр слизистой оболочки рта",
+        "uz": "Og‘iz shilliq qavatini tekshirish"
+      },
+      "subtitle": {
+        "en": "A systematic look and a precise description",
+        "ru": "Систематический осмотр и точное описание элементов",
+        "uz": "Tizimli ko‘rik va elementlarni to‘g‘ri tasvirlash"
+      }
+    },
+    {
+      "layout": "flow",
+      "title": {
+        "en": "Examination sequence",
+        "ru": "Последовательность осмотра",
+        "uz": "Tekshirish ketma-ketligi"
+      },
+      "steps": [
+        {
+          "label": {
+            "en": "History",
+            "ru": "Анамнез",
+            "uz": "Anamnez"
+          },
+          "detail": {
+            "en": "Complaint, duration, drugs, smoking, systemic disease",
+            "ru": "Жалобы, длительность, лекарства, курение, общие болезни",
+            "uz": "Shikoyat, davomiylik, dorilar, chekish, umumiy kasalliklar"
+          }
+        },
+        {
+          "label": {
+            "en": "Extraoral",
+            "ru": "Внешний осмотр",
+            "uz": "Tashqi ko‘rik"
+          },
+          "detail": {
+            "en": "Face, skin, lymph nodes, TMJ",
+            "ru": "Лицо, кожа, лимфоузлы, ВНЧС",
+            "uz": "Yuz, teri, limfa tugunlari, chakka-pastki jag‘ bo‘g‘imi"
+          }
+        },
+        {
+          "label": {
+            "en": "Lips and cheeks",
+            "ru": "Губы и щёки",
+            "uz": "Lablar va lunj"
+          },
+          "detail": {
+            "en": "Vermilion, labial and buccal mucosa",
+            "ru": "Красная кайма, слизистая губ и щёк",
+            "uz": "Qizil hoshiya, lab va lunj shilliq qavati"
+          }
+        },
+        {
+          "label": {
+            "en": "Tongue and floor",
+            "ru": "Язык и дно рта",
+            "uz": "Til va og‘iz tubi"
+          },
+          "detail": {
+            "en": "Dorsum, lateral and ventral tongue, floor of mouth",
+            "ru": "Спинка, боковые и нижняя поверхности, дно рта",
+            "uz": "Til ustki, yon va pastki yuzasi, og‘iz tubi"
+          }
+        },
+        {
+          "label": {
+            "en": "Palate and gingiva",
+            "ru": "Нёбо и дёсны",
+            "uz": "Tanglay va milk"
+          },
+          "detail": {
+            "en": "Hard and soft palate, oropharynx, gingiva",
+            "ru": "Твёрдое и мягкое нёбо, зев, дёсны",
+            "uz": "Qattiq va yumshoq tanglay, halqum, milk"
+          }
+        },
+        {
+          "label": {
+            "en": "Record",
+            "ru": "Документирование",
+            "uz": "Qayd etish"
+          },
+          "detail": {
+            "en": "Diagram, measurements and photos if possible",
+            "ru": "Схема, размеры и по возможности фото",
+            "uz": "Chizma, o‘lchov va iloji bo‘lsa foto"
+          }
+        }
+      ],
+      "note": {
+        "en": "A fixed order prevents missed areas; the lateral tongue and floor of mouth are high-risk cancer sites.",
+        "ru": "Один и тот же порядок не даёт пропустить зону; боковая поверхность языка и дно рта — зоны высокого риска рака.",
+        "uz": "Har doim bir xil tartibda tekshirish birorta sohani o‘tkazib yubormaslikni ta’minlaydi; til yon yuzasi va og‘iz tubi — saraton uchun yuqori xavfli joylar."
+      }
+    },
+    {
+      "layout": "table",
+      "title": {
+        "en": "Primary lesions",
+        "ru": "Первичные элементы",
+        "uz": "Birlamchi elementlar"
+      },
+      "head": [
+        {
+          "en": "Lesion",
+          "ru": "Элемент",
+          "uz": "Element"
+        },
+        {
+          "en": "Definition",
+          "ru": "Определение",
+          "uz": "Ta’rifi"
+        },
+        {
+          "en": "Example",
+          "ru": "Пример",
+          "uz": "Misol"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "en": "Macule",
+            "ru": "Пятно (макула)",
+            "uz": "Dog‘ (makula)"
+          },
+          {
+            "en": "Flat area of colour change",
+            "ru": "Плоский участок изменённого цвета",
+            "uz": "Yassi, rangi o‘zgargan soha"
+          },
+          {
+            "en": "Amalgam tattoo",
+            "ru": "Амальгамовая татуировка",
+            "uz": "Amalgam tatuirovkasi"
+          }
+        ],
+        [
+          {
+            "en": "Papule",
+            "ru": "Узелок (папула)",
+            "uz": "Tugunchak (papula)"
+          },
+          {
+            "en": "Raised, under 5 mm",
+            "ru": "Возвышающийся, менее 5 мм",
+            "uz": "Bo‘rtgan, 5 mm dan kichik"
+          },
+          {
+            "en": "Lichen planus papules",
+            "ru": "Папулы красного плоского лишая",
+            "uz": "Qizil yassi temiratki papulalari"
+          }
+        ],
+        [
+          {
+            "en": "Nodule",
+            "ru": "Узел",
+            "uz": "Tugun"
+          },
+          {
+            "en": "Raised, over 5 mm, deeper",
+            "ru": "Возвышающийся, более 5 мм, глубже",
+            "uz": "Bo‘rtgan, 5 mm dan katta, chuqurroq"
+          },
+          {
+            "en": "Fibroma",
+            "ru": "Фиброма",
+            "uz": "Fibroma"
+          }
+        ],
+        [
+          {
+            "en": "Vesicle / bulla",
+            "ru": "Пузырёк / пузырь",
+            "uz": "Pufakcha / pufak"
+          },
+          {
+            "en": "Fluid-filled: under / over 5 mm",
+            "ru": "Полость с жидкостью: до 5 мм / больше",
+            "uz": "Suyuqlikli bo‘shliq: 5 mm gacha / undan katta"
+          },
+          {
+            "en": "Herpes / pemphigoid",
+            "ru": "Герпес / пемфигоид",
+            "uz": "Gerpes / pemfigoid"
+          }
+        ],
+        [
+          {
+            "en": "Plaque",
+            "ru": "Бляшка",
+            "uz": "Pilakcha (blyashka)"
+          },
+          {
+            "en": "Slightly raised, broad flat area",
+            "ru": "Слегка возвышающийся широкий плоский участок",
+            "uz": "Biroz bo‘rtgan, keng yassi soha"
+          },
+          {
+            "en": "Leukoplakia",
+            "ru": "Лейкоплакия",
+            "uz": "Leykoplakiya"
+          }
+        ]
+      ],
+      "note": {
+        "en": "The size cut-off (5 or 10 mm) varies slightly between textbooks; what matters is using terms consistently.",
+        "ru": "Порог размера (5 или 10 мм) в учебниках немного различается; главное — последовательно пользоваться терминами.",
+        "uz": "O‘lcham chegarasi (5 yoki 10 mm) darsliklarda biroz farq qiladi; asosiysi — bir xil atamani izchil ishlatish."
+      }
+    },
+    {
+      "layout": "compare",
+      "title": {
+        "en": "Secondary lesions",
+        "ru": "Вторичные элементы",
+        "uz": "Ikkilamchi elementlar"
+      },
+      "columns": [
+        {
+          "head": {
+            "en": "Erosion",
+            "ru": "Эрозия",
+            "uz": "Eroziya"
+          },
+          "items": [
+            {
+              "en": "Superficial epithelial loss",
+              "ru": "Поверхностный дефект эпителия",
+              "uz": "Epiteliyning yuza nuqsoni"
+            },
+            {
+              "en": "Basal layer intact",
+              "ru": "Базальный слой сохранён",
+              "uz": "Bazal qavat saqlanadi"
+            },
+            {
+              "en": "Heals without a scar",
+              "ru": "Заживает без рубца",
+              "uz": "Chandiqsiz bitadi"
+            }
+          ]
+        },
+        {
+          "head": {
+            "en": "Ulcer",
+            "ru": "Язва",
+            "uz": "Yara (ulser)"
+          },
+          "items": [
+            {
+              "en": "Full-thickness epithelial loss",
+              "ru": "Полная утрата эпителия",
+              "uz": "Epiteliyning to‘liq yo‘qolishi"
+            },
+            {
+              "en": "Base covered by fibrin",
+              "ru": "Дно покрыто фибрином",
+              "uz": "Tubi fibrin bilan qoplangan"
+            },
+            {
+              "en": "May heal with a scar",
+              "ru": "Может оставить рубец",
+              "uz": "Chandiq qoldirishi mumkin"
+            }
+          ]
+        },
+        {
+          "head": {
+            "en": "Others",
+            "ru": "Другие",
+            "uz": "Boshqalar"
+          },
+          "items": [
+            {
+              "en": "Crust: on the vermilion",
+              "ru": "Корка — на красной кайме губ",
+              "uz": "Qobiq — lab qizil hoshiyasida"
+            },
+            {
+              "en": "Fissure: linear split",
+              "ru": "Трещина — линейный дефект",
+              "uz": "Yoriq — chiziqli nuqson"
+            },
+            {
+              "en": "Scar: healed defect",
+              "ru": "Рубец — след заживления",
+              "uz": "Chandiq — bitgan nuqson o‘rni"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "layout": "tree",
+      "title": {
+        "en": "Describing a lesion",
+        "ru": "Описание элемента",
+        "uz": "Elementni tasvirlash"
+      },
+      "root": {
+        "en": "Description",
+        "ru": "Описание",
+        "uz": "Tavsif"
+      },
+      "children": [
+        {
+          "label": {
+            "en": "Site and number",
+            "ru": "Место и число",
+            "uz": "Joyi va soni"
+          },
+          "items": [
+            {
+              "en": "Exact anatomical site",
+              "ru": "Точная анатомическая зона",
+              "uz": "Aniq anatomik soha"
+            },
+            {
+              "en": "Single or multiple",
+              "ru": "Одиночный или множественный",
+              "uz": "Yakka yoki ko‘p"
+            }
+          ]
+        },
+        {
+          "label": {
+            "en": "Size and shape",
+            "ru": "Размер и форма",
+            "uz": "O‘lchami va shakli"
+          },
+          "items": [
+            {
+              "en": "Measure in mm",
+              "ru": "Измерить в мм",
+              "uz": "mm da o‘lchash"
+            },
+            {
+              "en": "Round, irregular",
+              "ru": "Округлая, неправильная",
+              "uz": "Yumaloq, noto‘g‘ri"
+            }
+          ]
+        },
+        {
+          "label": {
+            "en": "Colour and surface",
+            "ru": "Цвет и поверхность",
+            "uz": "Rangi va yuzasi"
+          },
+          "items": [
+            {
+              "en": "White, red, mixed, pigmented",
+              "ru": "Белый, красный, смешанный, пигмент",
+              "uz": "Oq, qizil, aralash, pigment"
+            },
+            {
+              "en": "Smooth, rough",
+              "ru": "Гладкая, шероховатая",
+              "uz": "Silliq, g‘adir-budir"
+            }
+          ]
+        },
+        {
+          "label": {
+            "en": "Borders",
+            "ru": "Края",
+            "uz": "Chegarasi"
+          },
+          "items": [
+            {
+              "en": "Well or ill-defined",
+              "ru": "Чёткие или нечёткие",
+              "uz": "Aniq yoki noaniq"
+            },
+            {
+              "en": "Raised, rolled",
+              "ru": "Приподнятые, валикообразные",
+              "uz": "Ko‘tarilgan, o‘ralgan"
+            }
+          ]
+        },
+        {
+          "label": {
+            "en": "Palpation",
+            "ru": "Пальпация",
+            "uz": "Paypaslash"
+          },
+          "items": [
+            {
+              "en": "Soft or firm",
+              "ru": "Мягкий или плотный",
+              "uz": "Yumshoq yoki qattiq"
+            },
+            {
+              "en": "Induration, tenderness",
+              "ru": "Инфильтрация, боль",
+              "uz": "Infiltratsiya, og‘riq"
+            }
+          ]
+        }
+      ],
+      "note": {
+        "en": "Have students examine each other in pairs and describe any normal variant using this scheme.",
+        "ru": "Пусть студенты в парах осмотрят друг друга и опишут найденный вариант нормы по этой схеме.",
+        "uz": "Talabalar juftlikda bir-birining og‘zini tekshirib, topilgan normal variantni shu sxema bo‘yicha tasvirlashsin."
+      }
+    },
+    {
+      "layout": "compare",
+      "title": {
+        "en": "Normal variants vs warning signs",
+        "ru": "Варианты нормы и настораживающие признаки",
+        "uz": "Normal variantlar va xavotirli belgilar"
+      },
+      "columns": [
+        {
+          "head": {
+            "en": "Normal variants",
+            "ru": "Варианты нормы",
+            "uz": "Normal variantlar"
+          },
+          "items": [
+            {
+              "en": "Fordyce granules",
+              "ru": "Гранулы Фордайса",
+              "uz": "Fordays donachalari (Fordyce)"
+            },
+            {
+              "en": "Linea alba",
+              "ru": "Белая линия щеки (linea alba)",
+              "uz": "Lunjdagi oq chiziq (linea alba)"
+            },
+            {
+              "en": "Leukoedema: fades on stretching",
+              "ru": "Лейкоэдема — исчезает при растяжении",
+              "uz": "Leykoedema — cho‘zganda yo‘qoladi"
+            },
+            {
+              "en": "Palatal and mandibular tori",
+              "ru": "Нёбный и нижнечелюстной торус",
+              "uz": "Tanglay va til torusi"
+            }
+          ]
+        },
+        {
+          "head": {
+            "en": "Warning signs",
+            "ru": "Настораживающие признаки",
+            "uz": "Xavotirli belgilar"
+          },
+          "items": [
+            {
+              "en": "Indurated base",
+              "ru": "Плотное (инфильтрированное) основание",
+              "uz": "Qattiq (infiltratsiyalangan) asos"
+            },
+            {
+              "en": "Raised rolled border",
+              "ru": "Приподнятые валикообразные края",
+              "uz": "Ko‘tarilgan, o‘ralgan chegara"
+            },
+            {
+              "en": "Red or speckled red-white area",
+              "ru": "Красный или красно-белый участок",
+              "uz": "Qizil yoki aralash qizil-oq soha"
+            },
+            {
+              "en": "Not healed in 2 weeks, hard lymph node",
+              "ru": "Не заживает более 2 недель, плотный лимфоузел",
+              "uz": "2 haftadan ortiq bitmaslik, qattiq limfa tuguni"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "layout": "key",
+      "title": {
+        "en": "Diagnostic process",
+        "ru": "Диагностический процесс",
+        "uz": "Diagnostik jarayon"
+      },
+      "term": {
+        "en": "Differential diagnosis",
+        "ru": "Дифференциальный диагноз",
+        "uz": "Differensial tashxis"
+      },
+      "definition": {
+        "en": "After history and examination, list the likely diagnoses. Then confirm by removing a cause, reviewing, lab tests or biopsy. For a suspicious lesion biopsy is the gold standard.",
+        "ru": "После анамнеза и осмотра составляют список вероятных диагнозов. Затем диагноз уточняют устранением причины, повторным осмотром, анализами или биопсией. При подозрительном очаге золотой стандарт — биопсия.",
+        "uz": "Anamnez va ko‘rikdan so‘ng ehtimoliy tashxislar ro‘yxati tuziladi. Keyin sababni bartaraf etish, qayta ko‘rik, laboratoriya tahlillari yoki biopsiya orqali tashxis aniqlanadi. Shubhali o‘choqda biopsiya oltin standart hisoblanadi."
+      }
+    },
+    {
+      "layout": "summary",
+      "title": {
+        "en": "Summary",
+        "ru": "Итоги",
+        "uz": "Xulosa"
+      },
+      "bullets": [
+        {
+          "en": "Always examine in the same order, starting extraorally",
+          "ru": "Осматривайте рот всегда в одном порядке, начиная с внешнего осмотра",
+          "uz": "Og‘izni har doim bir xil tartibda, tashqi ko‘rikdan boshlab tekshiring"
+        },
+        {
+          "en": "Primary lesions: macule, papule, nodule, vesicle, plaque",
+          "ru": "Первичные элементы: пятно, узелок, узел, пузырёк, бляшка",
+          "uz": "Birlamchi elementlar: dog‘, tugunchak, tugun, pufakcha, pilakcha"
+        },
+        {
+          "en": "Erosion is superficial; an ulcer is full-thickness",
+          "ru": "Эрозия поверхностна, язва — дефект на всю толщину эпителия",
+          "uz": "Eroziya yuza, yara esa to‘liq qalinlikdagi nuqson"
+        },
+        {
+          "en": "Record site, size, colour, borders and consistency",
+          "ru": "Записывайте место, размер, цвет, края и консистенцию",
+          "uz": "Joy, o‘lcham, rang, chegara va konsistensiyani yozing"
+        }
+      ]
+    }
+  ],
+  "oral": [
+    {
+      "q": {
+        "en": "Describe the order of an oral mucosal examination.",
+        "ru": "Опишите порядок осмотра слизистой оболочки рта.",
+        "uz": "Og‘iz shilliq qavatini tekshirish tartibini ayting."
+      },
+      "plan": [
+        {
+          "en": "History, extraoral exam and lymph nodes",
+          "ru": "Анамнез и внешний осмотр, лимфоузлы",
+          "uz": "Anamnez va tashqi ko‘rik, limfa tugunlari"
+        },
+        {
+          "en": "Lips, cheeks, tongue, floor of mouth",
+          "ru": "Губы, щёки, язык, дно рта",
+          "uz": "Lablar, lunj, til, og‘iz tubi"
+        },
+        {
+          "en": "Palate, oropharynx, gingiva",
+          "ru": "Нёбо, зев, дёсны",
+          "uz": "Tanglay, halqum, milk"
+        },
+        {
+          "en": "Record findings with diagram and measurements",
+          "ru": "Документировать схемой и размерами",
+          "uz": "Topilmalarni chizma va o‘lchov bilan qayd etish"
+        }
+      ]
+    },
+    {
+      "q": {
+        "en": "Distinguish an erosion from an ulcer.",
+        "ru": "Различите эрозию и язву.",
+        "uz": "Eroziya va yarani farqlang."
+      },
+      "plan": [
+        {
+          "en": "Erosion: superficial epithelial loss",
+          "ru": "Эрозия — поверхностный дефект эпителия",
+          "uz": "Eroziya — epiteliyning yuza nuqsoni"
+        },
+        {
+          "en": "Ulcer: full-thickness, fibrin base",
+          "ru": "Язва — на всю толщину, дно с фибрином",
+          "uz": "Yara — to‘liq qalinlikda, tubi fibrinli"
+        },
+        {
+          "en": "Erosion heals without scarring",
+          "ru": "Эрозия заживает без рубца",
+          "uz": "Eroziya chandiqsiz bitadi"
+        },
+        {
+          "en": "Ulcer may scar",
+          "ru": "Язва может оставить рубец",
+          "uz": "Yara chandiq qoldirishi mumkin"
+        }
+      ]
+    },
+    {
+      "q": {
+        "en": "What goes into describing a lesion?",
+        "ru": "Что входит в описание элемента поражения?",
+        "uz": "Element tavsifiga nimalar kiradi?"
+      },
+      "plan": [
+        {
+          "en": "Site, number, size in mm",
+          "ru": "Место, число, размер (мм)",
+          "uz": "Joy, soni, o‘lchami (mm)"
+        },
+        {
+          "en": "Shape, colour, surface",
+          "ru": "Форма, цвет, поверхность",
+          "uz": "Shakli, rangi, yuzasi"
+        },
+        {
+          "en": "Borders",
+          "ru": "Края",
+          "uz": "Chegarasi"
+        },
+        {
+          "en": "Consistency and tenderness on palpation",
+          "ru": "Консистенция и болезненность при пальпации",
+          "uz": "Paypaslashdagi konsistensiya va og‘riq"
+        }
+      ]
+    },
+    {
+      "q": {
+        "en": "Which features make a lesion worrying?",
+        "ru": "Какие признаки делают очаг настораживающим?",
+        "uz": "Qaysi belgilar o‘choqni xavotirli qiladi?"
+      },
+      "plan": [
+        {
+          "en": "Induration and rolled border",
+          "ru": "Плотное основание и валикообразные края",
+          "uz": "Qattiq asos va o‘ralgan chegara"
+        },
+        {
+          "en": "Red or mixed red-white colour",
+          "ru": "Красный или красно-белый цвет",
+          "uz": "Qizil yoki aralash qizil-oq rang"
+        },
+        {
+          "en": "Not healed after 2 weeks",
+          "ru": "Не заживает более 2 недель",
+          "uz": "2 haftadan ortiq bitmaslik"
+        },
+        {
+          "en": "Hard fixed lymph node",
+          "ru": "Плотный неподвижный лимфоузел",
+          "uz": "Qattiq, qimirlamaydigan limfa tuguni"
+        }
+      ]
+    }
+  ],
+  "test": [
+    {
+      "q": {
+        "en": "A solid raised lesion 3 mm across is called what?",
+        "ru": "Как называется плотный возвышающийся элемент диаметром 3 мм?",
+        "uz": "Diametri 3 mm bo‘lgan, shilliq qavat sathidan ko‘tarilgan qattiq element qanday nomlanadi?"
+      },
+      "options": [
+        {
+          "en": "Macule",
+          "ru": "Пятно",
+          "uz": "Dog‘"
+        },
+        {
+          "en": "Papule",
+          "ru": "Узелок",
+          "uz": "Tugunchak"
+        },
+        {
+          "en": "Vesicle",
+          "ru": "Пузырёк",
+          "uz": "Pufakcha"
+        },
+        {
+          "en": "Erosion",
+          "ru": "Эрозия",
+          "uz": "Eroziya"
+        }
+      ],
+      "correct": 1,
+      "explain": {
+        "en": "A papule is a solid raised lesion under 5 mm.",
+        "ru": "Узелок — возвышающийся плотный элемент менее 5 мм.",
+        "uz": "Tugunchak — 5 mm dan kichik, bo‘rtgan qattiq element."
+      }
+    },
+    {
+      "q": {
+        "en": "An amalgam tattoo is an example of which lesion?",
+        "ru": "Амальгамовая татуировка — пример какого элемента?",
+        "uz": "Amalgam tatuirovkasi qaysi elementga misol?"
+      },
+      "options": [
+        {
+          "en": "Nodule",
+          "ru": "Узел",
+          "uz": "Tugun"
+        },
+        {
+          "en": "Plaque",
+          "ru": "Бляшка",
+          "uz": "Pilakcha"
+        },
+        {
+          "en": "Ulcer",
+          "ru": "Язва",
+          "uz": "Yara"
+        },
+        {
+          "en": "Macule",
+          "ru": "Пятно",
+          "uz": "Dog‘"
+        }
+      ],
+      "correct": 3,
+      "explain": {
+        "en": "It is a flat area of colour change.",
+        "ru": "Это плоский участок изменённого цвета.",
+        "uz": "U yassi, faqat rangi o‘zgargan soha."
+      }
+    },
+    {
+      "q": {
+        "en": "A superficial defect with the basal layer intact is called what?",
+        "ru": "Как называется поверхностный дефект с сохранённым базальным слоем?",
+        "uz": "Epiteliyning bazal qavati saqlangan yuza nuqsoni qanday ataladi?"
+      },
+      "options": [
+        {
+          "en": "Erosion",
+          "ru": "Эрозия",
+          "uz": "Eroziya"
+        },
+        {
+          "en": "Ulcer",
+          "ru": "Язва",
+          "uz": "Yara"
+        },
+        {
+          "en": "Fissure",
+          "ru": "Трещина",
+          "uz": "Yoriq"
+        },
+        {
+          "en": "Scar",
+          "ru": "Рубец",
+          "uz": "Chandiq"
+        }
+      ],
+      "correct": 0,
+      "explain": {
+        "en": "An erosion is superficial and heals without a scar.",
+        "ru": "Эрозия поверхностна и заживает без рубца.",
+        "uz": "Eroziya yuza bo‘lgani uchun chandiqsiz bitadi."
+      }
+    },
+    {
+      "q": {
+        "en": "A milky-white film on the cheek disappears on stretching. What is it?",
+        "ru": "На щеке молочно-белая пелена, исчезающая при растяжении. Что это?",
+        "uz": "Lunjda cho‘zganda yo‘qoladigan sutsimon-oq parda bor. Bu nima?"
+      },
+      "options": [
+        {
+          "en": "Leukoplakia",
+          "ru": "Лейкоплакия",
+          "uz": "Leykoplakiya"
+        },
+        {
+          "en": "Candidiasis",
+          "ru": "Кандидоз",
+          "uz": "Kandidoz"
+        },
+        {
+          "en": "Leukoedema",
+          "ru": "Лейкоэдема",
+          "uz": "Leykoedema"
+        },
+        {
+          "en": "Lichen planus",
+          "ru": "Красный плоский лишай",
+          "uz": "Qizil yassi temiratki"
+        }
+      ],
+      "correct": 2,
+      "explain": {
+        "en": "Leukoedema is a normal variant that fades on stretching.",
+        "ru": "Лейкоэдема — вариант нормы, исчезает при растяжении.",
+        "uz": "Leykoedema — normal variant, cho‘zganda yo‘qolishi bilan farqlanadi."
+      }
+    },
+    {
+      "q": {
+        "en": "Which site carries the highest risk for oral cancer?",
+        "ru": "Какая зона наиболее опасна в отношении рака полости рта?",
+        "uz": "Og‘iz saratoni uchun eng yuqori xavfli soha qaysi?"
+      },
+      "options": [
+        {
+          "en": "Mid hard palate",
+          "ru": "Середина твёрдого нёба",
+          "uz": "Qattiq tanglay o‘rtasi"
+        },
+        {
+          "en": "Lateral tongue and floor of mouth",
+          "ru": "Боковая поверхность языка и дно рта",
+          "uz": "Til yon yuzasi va og‘iz tubi"
+        },
+        {
+          "en": "Inner upper lip",
+          "ru": "Внутренняя поверхность верхней губы",
+          "uz": "Yuqori lab ichki yuzasi"
+        },
+        {
+          "en": "Interdental papillae",
+          "ru": "Десневые сосочки",
+          "uz": "Milk so‘rg‘ichlari"
+        }
+      ],
+      "correct": 1,
+      "explain": {
+        "en": "The ventrolateral tongue and floor of mouth are the commonest cancer sites.",
+        "ru": "Боковая и нижняя поверхности языка и дно рта — частые места рака.",
+        "uz": "Til yon-pastki yuzasi va og‘iz tubi saraton ko‘p uchraydigan joylar."
+      }
+    },
+    {
+      "q": {
+        "en": "Many small yellow granules on the buccal mucosa, no symptoms. Most likely?",
+        "ru": "На слизистой щёк множество мелких жёлтых гранул без симптомов. Вероятнее всего?",
+        "uz": "Lunj shilliq qavatida mayda sariq donachalar ko‘p, simptomsiz. Eng ehtimoliy?"
+      },
+      "options": [
+        {
+          "en": "Fordyce granules",
+          "ru": "Гранулы Фордайса",
+          "uz": "Fordays donachalari"
+        },
+        {
+          "en": "Candidiasis",
+          "ru": "Кандидоз",
+          "uz": "Kandidoz"
+        },
+        {
+          "en": "Herpetic vesicles",
+          "ru": "Герпетические пузырьки",
+          "uz": "Gerpetik pufakchalar"
+        },
+        {
+          "en": "Leukoplakia",
+          "ru": "Лейкоплакия",
+          "uz": "Leykoplakiya"
+        }
+      ],
+      "correct": 0,
+      "explain": {
+        "en": "These are ectopic sebaceous glands, a normal variant needing no treatment.",
+        "ru": "Это эктопические сальные железы — вариант нормы, лечения не требуют.",
+        "uz": "Bu ektopik yog‘ bezlari — normal variant, davolash kerak emas."
+      }
+    },
+    {
+      "q": {
+        "en": "A fluid-filled lesion 8 mm across is called what?",
+        "ru": "Как называется элемент диаметром 8 мм с прозрачной жидкостью?",
+        "uz": "Diametri 8 mm, ichida tiniq suyuqlik bo‘lgan element qanday nomlanadi?"
+      },
+      "options": [
+        {
+          "en": "Vesicle",
+          "ru": "Пузырёк",
+          "uz": "Pufakcha"
+        },
+        {
+          "en": "Nodule",
+          "ru": "Узел",
+          "uz": "Tugun"
+        },
+        {
+          "en": "Pustule",
+          "ru": "Пустула",
+          "uz": "Pustula"
+        },
+        {
+          "en": "Bulla",
+          "ru": "Пузырь (булла)",
+          "uz": "Pufak (bulla)"
+        }
+      ],
+      "correct": 3,
+      "explain": {
+        "en": "A fluid-filled lesion over 5 mm is a bulla.",
+        "ru": "Полость с жидкостью более 5 мм — пузырь (булла).",
+        "uz": "5 mm dan katta suyuqlikli bo‘shliq — pufak (bulla)."
+      }
+    },
+    {
+      "q": {
+        "en": "Which finding on palpation is most worrying?",
+        "ru": "Какая находка при пальпации наиболее настораживает?",
+        "uz": "Paypaslashda qaysi topilma eng xavotirli?"
+      },
+      "options": [
+        {
+          "en": "Soft tender swelling",
+          "ru": "Мягкий болезненный отёк",
+          "uz": "Yumshoq, og‘riqli shish"
+        },
+        {
+          "en": "Red spot that blanches",
+          "ru": "Красное пятно, бледнеющее при надавливании",
+          "uz": "Siqganda oqaruvchi qizil dog‘"
+        },
+        {
+          "en": "Firm indurated base",
+          "ru": "Плотное инфильтрированное основание",
+          "uz": "Qattiq, infiltratsiyalangan asos"
+        },
+        {
+          "en": "Fluid vesicle",
+          "ru": "Пузырёк с жидкостью",
+          "uz": "Suyuqlikli pufakcha"
+        }
+      ],
+      "correct": 2,
+      "explain": {
+        "en": "Induration may indicate tumour growth and needs biopsy.",
+        "ru": "Инфильтрация может указывать на опухолевый рост и требует биопсии.",
+        "uz": "Infiltratsiya o‘sma o‘sishining belgisi bo‘lishi mumkin va biopsiyani talab qiladi."
+      }
+    },
+    {
+      "q": {
+        "en": "Which is the best way to record a lesion?",
+        "ru": "Какая запись элемента наиболее правильна?",
+        "uz": "Elementni hujjatlashtirishda eng to‘g‘ri yozuv qaysi?"
+      },
+      "options": [
+        {
+          "en": "'Small ulcer on tongue'",
+          "ru": "«Небольшая язва на языке»",
+          "uz": "«Tilda kichik yara»"
+        },
+        {
+          "en": "'6×4 mm ulcer, right lateral tongue, well-defined, soft base'",
+          "ru": "«Язва 6×4 мм на правой боковой поверхности языка, края чёткие, основание мягкое»",
+          "uz": "«Til o‘ng yon yuzasida 6×4 mm yara, chegarasi aniq, asosi yumshoq»"
+        },
+        {
+          "en": "'Changes in the mouth'",
+          "ru": "«Во рту изменения»",
+          "uz": "«Og‘izda o‘zgarish bor»"
+        },
+        {
+          "en": "'Ulcer, observe'",
+          "ru": "«Язва, наблюдение»",
+          "uz": "«Yara, kuzatish»"
+        }
+      ],
+      "correct": 1,
+      "explain": {
+        "en": "Exact site, size, borders and consistency allow comparison at review.",
+        "ru": "Точное место, размер, края и консистенция позволяют сравнить при повторном осмотре.",
+        "uz": "Aniq joy, o‘lcham, chegara va konsistensiya keyingi ko‘rikda solishtirish imkonini beradi."
+      }
+    },
+    {
+      "q": {
+        "en": "When is biopsy the gold standard?",
+        "ru": "Когда биопсия является золотым стандартом?",
+        "uz": "Biopsiya qachon oltin standart hisoblanadi?"
+      },
+      "options": [
+        {
+          "en": "Diagnosing a suspicious lesion",
+          "ru": "При диагностике подозрительного очага",
+          "uz": "Shubhali o‘choq tashxisida"
+        },
+        {
+          "en": "For leukoedema",
+          "ru": "При лейкоэдеме",
+          "uz": "Leykoedemada"
+        },
+        {
+          "en": "For Fordyce granules",
+          "ru": "При гранулах Фордайса",
+          "uz": "Fordays donachalarida"
+        },
+        {
+          "en": "For every aphtha",
+          "ru": "При любой афте",
+          "uz": "Har qanday afta uchun"
+        }
+      ],
+      "correct": 0,
+      "explain": {
+        "en": "Histology is the only reliable way to confirm or exclude dysplasia and cancer.",
+        "ru": "Гистология — единственный надёжный способ подтвердить или исключить дисплазию и рак.",
+        "uz": "Gistologiya displaziya va saratonni tasdiqlash yoki inkor qilishning yagona ishonchli yo‘li."
+      }
+    }
+  ]
+}

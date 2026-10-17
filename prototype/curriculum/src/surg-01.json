@@ -1,0 +1,1133 @@
+{
+  "id": "surg-01",
+  "subject": "surg",
+  "n": 1,
+  "week": 1,
+  "type": "lecture",
+  "hours": 2,
+  "title": {
+    "en": "Asepsis in oral surgery and preoperative assessment",
+    "ru": "Асептика и предоперационное обследование в хирургической стоматологии",
+    "uz": "Jarrohlik stomatologiyasida aseptika va bemorni operatsiyaga tayyorlash"
+  },
+  "goals": [
+    {
+      "en": "Know the principles of asepsis, antisepsis and sterilisation",
+      "ru": "Знать принципы асептики, антисептики и стерилизации",
+      "uz": "Aseptika, antiseptika va sterilizatsiya tamoyillarini bilish"
+    },
+    {
+      "en": "Take a medical history and identify risk factors",
+      "ru": "Собирать анамнез и выявлять факторы риска",
+      "uz": "Tibbiy anamnezni to‘plash va xavf omillarini aniqlash"
+    },
+    {
+      "en": "Assess patients using the ASA classification",
+      "ru": "Оценивать пациента по классификации ASA",
+      "uz": "ASA tasnifi bo‘yicha bemorni baholash"
+    }
+  ],
+  "links": [],
+  "sources": [
+    "Hupp JR, Ellis E, Tucker MR. Contemporary Oral and Maxillofacial Surgery, 7th ed., 2018",
+    "Kohn WG et al. Guidelines for Infection Control in Dental Health-Care Settings. MMWR (CDC) 2003",
+    "American Society of Anesthesiologists. ASA Physical Status Classification System, 2020"
+  ],
+  "slides": [
+    {
+      "layout": "title",
+      "title": {
+        "en": "Asepsis in oral surgery and preoperative assessment",
+        "ru": "Асептика в хирургической стоматологии и предоперационное обследование",
+        "uz": "Jarrohlik stomatologiyasida aseptika va bemorni operatsiyaga tayyorlash"
+      },
+      "subtitle": {
+        "en": "Sterilisation, infection control, medical history and ASA class",
+        "ru": "Стерилизация, инфекционный контроль, анамнез и классификация ASA",
+        "uz": "Sterilizatsiya, infeksiya nazorati, anamnez va ASA tasnifi"
+      }
+    },
+    {
+      "layout": "compare",
+      "title": {
+        "en": "Asepsis vs antisepsis",
+        "ru": "Асептика и антисептика",
+        "uz": "Aseptika va antiseptika"
+      },
+      "columns": [
+        {
+          "head": {
+            "en": "Asepsis",
+            "ru": "Асептика",
+            "uz": "Aseptika"
+          },
+          "items": [
+            {
+              "en": "Preventing microbes entering the wound",
+              "ru": "Предупреждение попадания микробов в рану",
+              "uz": "Mikroblarning yaraga tushishining oldini olish"
+            },
+            {
+              "en": "Sterilising instruments",
+              "ru": "Стерилизация инструментов",
+              "uz": "Asboblarni sterilizatsiya qilish"
+            },
+            {
+              "en": "Sterile field and gowns",
+              "ru": "Стерильное поле и одежда",
+              "uz": "Steril maydon va kiyim"
+            }
+          ]
+        },
+        {
+          "head": {
+            "en": "Antisepsis",
+            "ru": "Антисептика",
+            "uz": "Antiseptika"
+          },
+          "items": [
+            {
+              "en": "Killing microbes on tissue and in wounds",
+              "ru": "Уничтожение микробов в ране и тканях",
+              "uz": "Yara va to‘qimadagi mikroblarni yo‘q qilish"
+            },
+            {
+              "en": "Preparing the operative site",
+              "ru": "Обработка операционного поля",
+              "uz": "Operatsiya maydonini ishlash"
+            },
+            {
+              "en": "Hand antisepsis",
+              "ru": "Антисептика рук",
+              "uz": "Qo‘l antiseptikasi"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "layout": "table",
+      "title": {
+        "en": "Spaulding classification",
+        "ru": "Классификация Сполдинга",
+        "uz": "Spolding tasnifi"
+      },
+      "head": [
+        {
+          "en": "Category",
+          "ru": "Категория",
+          "uz": "Toifa"
+        },
+        {
+          "en": "Contact",
+          "ru": "Контакт",
+          "uz": "Aloqa"
+        },
+        {
+          "en": "Processing",
+          "ru": "Обработка",
+          "uz": "Ishlov"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "en": "Critical",
+            "ru": "Критические",
+            "uz": "Kritik"
+          },
+          {
+            "en": "Penetrate soft tissue or bone",
+            "ru": "Проникают в ткани или кость",
+            "uz": "Yumshoq to‘qima yoki suyakka kiradi"
+          },
+          {
+            "en": "Sterilisation",
+            "ru": "Стерилизация",
+            "uz": "Sterilizatsiya"
+          }
+        ],
+        [
+          {
+            "en": "Semi-critical",
+            "ru": "Полукритические",
+            "uz": "Yarim kritik"
+          },
+          {
+            "en": "Touch mucous membranes",
+            "ru": "Контакт со слизистой",
+            "uz": "Shilliq qavatga tegadi"
+          },
+          {
+            "en": "Sterilise or high-level disinfection",
+            "ru": "Стерилизация или дезинфекция высокого уровня",
+            "uz": "Sterilizatsiya yoki yuqori darajali dezinfeksiya"
+          }
+        ],
+        [
+          {
+            "en": "Non-critical",
+            "ru": "Некритические",
+            "uz": "Kritik emas"
+          },
+          {
+            "en": "Touch intact skin",
+            "ru": "Контакт с неповреждённой кожей",
+            "uz": "Butun teriga tegadi"
+          },
+          {
+            "en": "Low or intermediate disinfection",
+            "ru": "Дезинфекция низкого или среднего уровня",
+            "uz": "Past yoki o‘rta darajali dezinfeksiya"
+          }
+        ]
+      ],
+      "note": {
+        "en": "Forceps, elevators and surgical burs are critical items and must be sterilised.",
+        "ru": "Щипцы, элеваторы и хирургические боры — критические инструменты, их обязательно стерилизуют.",
+        "uz": "Tish olish qisqichlari, elevatorlar va jarrohlik borlari kritik asboblar – ular albatta sterilizatsiya qilinadi."
+      }
+    },
+    {
+      "layout": "cycle",
+      "title": {
+        "en": "Instrument reprocessing cycle",
+        "ru": "Цикл обработки инструментов",
+        "uz": "Asboblarni qayta ishlash sikli"
+      },
+      "steps": [
+        {
+          "label": {
+            "en": "Disinfection and pre-cleaning",
+            "ru": "Дезинфекция и предварительная очистка",
+            "uz": "Dezinfeksiya va oldindan tozalash"
+          }
+        },
+        {
+          "label": {
+            "en": "Cleaning before sterilisation",
+            "ru": "Предстерилизационная очистка",
+            "uz": "Sterilizatsiyadan oldingi tozalash"
+          }
+        },
+        {
+          "label": {
+            "en": "Drying and packaging",
+            "ru": "Сушка и упаковка",
+            "uz": "Quritish va qadoqlash"
+          }
+        },
+        {
+          "label": {
+            "en": "Sterilisation and monitoring",
+            "ru": "Стерилизация и контроль",
+            "uz": "Sterilizatsiya va nazorat"
+          }
+        },
+        {
+          "label": {
+            "en": "Sterile storage and use",
+            "ru": "Стерильное хранение и использование",
+            "uz": "Steril saqlash va ishlatish"
+          }
+        }
+      ],
+      "center": {
+        "en": "Instruments",
+        "ru": "Инструменты",
+        "uz": "Asboblar"
+      }
+    },
+    {
+      "layout": "table",
+      "title": {
+        "en": "Sterilisation methods",
+        "ru": "Методы стерилизации",
+        "uz": "Sterilizatsiya usullari"
+      },
+      "head": [
+        {
+          "en": "Method",
+          "ru": "Метод",
+          "uz": "Usul"
+        },
+        {
+          "en": "Typical cycle",
+          "ru": "Типичный режим",
+          "uz": "Odatiy rejim"
+        },
+        {
+          "en": "Note",
+          "ru": "Примечание",
+          "uz": "Izoh"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "en": "Steam (autoclave)",
+            "ru": "Паровой (автоклав)",
+            "uz": "Bug‘ (avtoklav)"
+          },
+          {
+            "en": "121 °C or 134 °C under pressure",
+            "ru": "121 °C или 134 °C под давлением",
+            "uz": "121 °C yoki 134 °C bosim ostida"
+          },
+          {
+            "en": "Method of choice",
+            "ru": "Основной метод",
+            "uz": "Asosiy usul"
+          }
+        ],
+        [
+          {
+            "en": "Dry heat",
+            "ru": "Воздушный (сухожар)",
+            "uz": "Quruq issiqlik"
+          },
+          {
+            "en": "160–180 °C",
+            "ru": "160–180 °C",
+            "uz": "160–180 °C"
+          },
+          {
+            "en": "Long cycle, suits metals",
+            "ru": "Долго, подходит для металла",
+            "uz": "Uzoq, metallga mos"
+          }
+        ],
+        [
+          {
+            "en": "Chemical",
+            "ru": "Химический",
+            "uz": "Kimyoviy"
+          },
+          {
+            "en": "Approved solutions",
+            "ru": "Специальные растворы",
+            "uz": "Maxsus eritmalar"
+          },
+          {
+            "en": "Heat-sensitive items",
+            "ru": "Термолабильные изделия",
+            "uz": "Issiqlikka chidamsiz buyumlar"
+          }
+        ]
+      ],
+      "note": {
+        "en": "Sterilisation is monitored with physical, chemical and biological indicators; take exact times from the device instructions.",
+        "ru": "Качество стерилизации контролируют физическими, химическими и биологическими индикаторами; режим — по инструкции аппарата.",
+        "uz": "Sterilizatsiya sifati jismoniy, kimyoviy va biologik indikatorlar bilan nazorat qilinadi; aniq vaqtni qurilma yo‘riqnomasidan oling."
+      }
+    },
+    {
+      "layout": "bullets",
+      "title": {
+        "en": "Standard precautions",
+        "ru": "Стандартные меры предосторожности",
+        "uz": "Standart ehtiyot choralari"
+      },
+      "bullets": [
+        {
+          "en": "Treat every patient as potentially infectious",
+          "ru": "Считать каждого пациента потенциально инфицированным",
+          "uz": "Har bir bemorni potensial infeksiyali deb hisoblash"
+        },
+        {
+          "en": "Hand hygiene, gloves, mask, eye protection",
+          "ru": "Гигиена рук, перчатки, маска, очки",
+          "uz": "Qo‘l gigiyenasi, qo‘lqop, niqob, ko‘zoynak"
+        },
+        {
+          "en": "Safe handling of sharps",
+          "ru": "Безопасное обращение с острыми инструментами",
+          "uz": "O‘tkir asboblar bilan xavfsiz ishlash"
+        },
+        {
+          "en": "Disinfection of work surfaces",
+          "ru": "Дезинфекция рабочих поверхностей",
+          "uz": "Ish yuzalarini dezinfeksiya qilish"
+        }
+      ]
+    },
+    {
+      "layout": "flow",
+      "title": {
+        "en": "Preoperative assessment",
+        "ru": "Предоперационное обследование",
+        "uz": "Operatsiyadan oldingi baholash"
+      },
+      "steps": [
+        {
+          "label": {
+            "en": "Complaint and history",
+            "ru": "Жалобы и история заболевания",
+            "uz": "Shikoyat va kasallik tarixi"
+          },
+          "detail": {
+            "en": "Pain, swelling, duration",
+            "ru": "Боль, отёк, длительность",
+            "uz": "Og‘riq, shish, davomiyligi"
+          }
+        },
+        {
+          "label": {
+            "en": "Medical history",
+            "ru": "Медицинский анамнез",
+            "uz": "Tibbiy anamnez"
+          },
+          "detail": {
+            "en": "Illnesses, drugs, allergies",
+            "ru": "Болезни, лекарства, аллергия",
+            "uz": "Kasalliklar, dorilar, allergiya"
+          }
+        },
+        {
+          "label": {
+            "en": "Vital signs",
+            "ru": "Жизненные показатели",
+            "uz": "Hayotiy ko‘rsatkichlar"
+          },
+          "detail": {
+            "en": "Blood pressure, pulse, respiration",
+            "ru": "Давление, пульс, дыхание",
+            "uz": "Arterial bosim, puls, nafas"
+          }
+        },
+        {
+          "label": {
+            "en": "Examination and imaging",
+            "ru": "Осмотр и рентген",
+            "uz": "Ko‘rik va rentgen"
+          },
+          "detail": {
+            "en": "Local status and radiograph",
+            "ru": "Местный статус и снимок",
+            "uz": "Mahalliy holat va tasvir"
+          }
+        },
+        {
+          "label": {
+            "en": "Risk assessment",
+            "ru": "Оценка риска",
+            "uz": "Xavfni baholash"
+          },
+          "detail": {
+            "en": "ASA class, modified plan",
+            "ru": "Класс ASA, изменение плана",
+            "uz": "ASA sinfi, reja o‘zgartirish"
+          }
+        }
+      ],
+      "note": {
+        "en": "Update the medical history at every visit, as drugs and illnesses change.",
+        "ru": "Обновляйте анамнез при каждом посещении: лекарства и заболевания пациента меняются.",
+        "uz": "Anamnezni har bir tashrifda yangilang: bemorning dorilari va kasalliklari o‘zgarib turadi."
+      }
+    },
+    {
+      "layout": "table",
+      "title": {
+        "en": "ASA physical status classification",
+        "ru": "Классификация физического статуса ASA",
+        "uz": "ASA jismoniy holat tasnifi"
+      },
+      "head": [
+        {
+          "en": "Class",
+          "ru": "Класс",
+          "uz": "Sinf"
+        },
+        {
+          "en": "Description",
+          "ru": "Описание",
+          "uz": "Tavsif"
+        },
+        {
+          "en": "Dental relevance",
+          "ru": "Значение для стоматолога",
+          "uz": "Stomatologik ahamiyati"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "en": "ASA I",
+            "ru": "ASA I",
+            "uz": "ASA I"
+          },
+          {
+            "en": "Healthy patient",
+            "ru": "Здоровый пациент",
+            "uz": "Sog‘lom bemor"
+          },
+          {
+            "en": "Routine care",
+            "ru": "Обычное лечение",
+            "uz": "Odatdagi davolash"
+          }
+        ],
+        [
+          {
+            "en": "ASA II",
+            "ru": "ASA II",
+            "uz": "ASA II"
+          },
+          {
+            "en": "Mild systemic disease",
+            "ru": "Лёгкое системное заболевание",
+            "uz": "Yengil tizimli kasallik"
+          },
+          {
+            "en": "Usually treated with care",
+            "ru": "Лечение с осторожностью",
+            "uz": "Odatda ehtiyot bilan davolanadi"
+          }
+        ],
+        [
+          {
+            "en": "ASA III",
+            "ru": "ASA III",
+            "uz": "ASA III"
+          },
+          {
+            "en": "Severe systemic disease",
+            "ru": "Тяжёлое системное заболевание",
+            "uz": "Og‘ir tizimli kasallik"
+          },
+          {
+            "en": "Modify plan, seek advice",
+            "ru": "Изменить план, консультация",
+            "uz": "Rejani o‘zgartirish, maslahat"
+          }
+        ],
+        [
+          {
+            "en": "ASA IV",
+            "ru": "ASA IV",
+            "uz": "ASA IV"
+          },
+          {
+            "en": "Constant threat to life",
+            "ru": "Заболевание с постоянной угрозой жизни",
+            "uz": "Hayotga doimiy xavf soluvchi kasallik"
+          },
+          {
+            "en": "Emergency care only, in hospital",
+            "ru": "Только экстренно, в стационаре",
+            "uz": "Faqat shoshilinch, shifoxonada"
+          }
+        ],
+        [
+          {
+            "en": "ASA V–VI",
+            "ru": "ASA V–VI",
+            "uz": "ASA V–VI"
+          },
+          {
+            "en": "Moribund; brain-dead donor",
+            "ru": "Умирающий; смерть мозга",
+            "uz": "O‘lim xavfi juda yuqori; miya o‘limi"
+          },
+          {
+            "en": "Not for outpatient dentistry",
+            "ru": "Не для амбулаторной стоматологии",
+            "uz": "Ambulator stomatologiyada emas"
+          }
+        ]
+      ],
+      "note": {
+        "en": "Give examples: controlled hypertension is ASA II; recent angina attacks are ASA III or IV.",
+        "ru": "Дайте примеры: контролируемая гипертензия — ASA II, недавние приступы стенокардии — ASA III или IV.",
+        "uz": "Talabalarga misollar bering: nazorat ostidagi gipertoniya – ASA II, so‘nggi oylardagi stenokardiya xurujlari – ASA III yoki IV."
+      }
+    },
+    {
+      "layout": "tree",
+      "title": {
+        "en": "Medical history red flags",
+        "ru": "Состояния анамнеза, требующие особого внимания",
+        "uz": "Anamnezda alohida e’tibor talab qiladigan holatlar"
+      },
+      "root": {
+        "en": "Risk factors",
+        "ru": "Факторы риска",
+        "uz": "Xavf omillari"
+      },
+      "children": [
+        {
+          "label": {
+            "en": "Bleeding",
+            "ru": "Кровотечение",
+            "uz": "Qon ketishi"
+          },
+          "items": [
+            {
+              "en": "Anticoagulants",
+              "ru": "Антикоагулянты",
+              "uz": "Antikoagulyantlar"
+            },
+            {
+              "en": "Haemophilia",
+              "ru": "Гемофилия",
+              "uz": "Gemofiliya"
+            }
+          ]
+        },
+        {
+          "label": {
+            "en": "Cardiovascular",
+            "ru": "Сердечно-сосудистые",
+            "uz": "Yurak-qon tomir"
+          },
+          "items": [
+            {
+              "en": "Recent infarction",
+              "ru": "Недавний инфаркт",
+              "uz": "Yaqinda infarkt"
+            },
+            {
+              "en": "Endocarditis risk",
+              "ru": "Риск эндокардита",
+              "uz": "Endokardit xavfi"
+            }
+          ]
+        },
+        {
+          "label": {
+            "en": "Bone healing",
+            "ru": "Заживление кости",
+            "uz": "Suyak bitishi"
+          },
+          "items": [
+            {
+              "en": "Antiresorptive drugs",
+              "ru": "Антирезорбтивные препараты",
+              "uz": "Antirezorbtiv dorilar"
+            },
+            {
+              "en": "Head and neck radiotherapy",
+              "ru": "Облучение головы и шеи",
+              "uz": "Bosh-bo‘yin nurlanishi"
+            }
+          ]
+        },
+        {
+          "label": {
+            "en": "Others",
+            "ru": "Другие",
+            "uz": "Boshqalar"
+          },
+          "items": [
+            {
+              "en": "Diabetes",
+              "ru": "Сахарный диабет",
+              "uz": "Qandli diabet"
+            },
+            {
+              "en": "Pregnancy, allergy",
+              "ru": "Беременность, аллергия",
+              "uz": "Homiladorlik, allergiya"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "layout": "summary",
+      "title": {
+        "en": "Summary",
+        "ru": "Итоги",
+        "uz": "Xulosa"
+      },
+      "bullets": [
+        {
+          "en": "Critical instruments must be sterilised",
+          "ru": "Критические инструменты обязательно стерилизуют",
+          "uz": "Kritik asboblar albatta sterilizatsiya qilinadi"
+        },
+        {
+          "en": "Standard precautions for every patient",
+          "ru": "Стандартные меры — для каждого пациента",
+          "uz": "Har bir bemorga standart ehtiyot choralari"
+        },
+        {
+          "en": "Always take history and vital signs",
+          "ru": "Анамнез и жизненные показатели — всегда",
+          "uz": "Tibbiy anamnez va hayotiy ko‘rsatkichlar har doim"
+        },
+        {
+          "en": "ASA class shapes the treatment plan",
+          "ru": "Класс ASA определяет план лечения",
+          "uz": "ASA sinfi davolash rejasini belgilaydi"
+        }
+      ]
+    }
+  ],
+  "oral": [
+    {
+      "q": {
+        "en": "What is the difference between asepsis and antisepsis?",
+        "ru": "В чём разница между асептикой и антисептикой?",
+        "uz": "Aseptika va antiseptikaning farqi nimada?"
+      },
+      "plan": [
+        {
+          "en": "Asepsis prevents microbes entering",
+          "ru": "Асептика — предупреждение попадания микробов",
+          "uz": "Aseptika – mikroblar tushishining oldini olish"
+        },
+        {
+          "en": "Antisepsis kills microbes on tissue",
+          "ru": "Антисептика — уничтожение микробов в тканях",
+          "uz": "Antiseptika – to‘qimadagi mikroblarni yo‘q qilish"
+        },
+        {
+          "en": "Examples: sterilisation and site preparation",
+          "ru": "Примеры: стерилизация и обработка поля",
+          "uz": "Misollar: sterilizatsiya va operatsiya maydonini ishlash"
+        }
+      ]
+    },
+    {
+      "q": {
+        "en": "Explain the Spaulding classification and its use for dental instruments.",
+        "ru": "Объясните классификацию Сполдинга и её применение к инструментам.",
+        "uz": "Spolding tasnifini va stomatologik asboblarga qo‘llanilishini tushuntiring."
+      },
+      "plan": [
+        {
+          "en": "Critical: penetrate tissue, sterilise",
+          "ru": "Критические: проникают в ткани — стерилизация",
+          "uz": "Kritik: to‘qimaga kiradi – sterilizatsiya"
+        },
+        {
+          "en": "Semi-critical: mucosa, sterilise or high-level disinfect",
+          "ru": "Полукритические: слизистая — стерилизация или ДВУ",
+          "uz": "Yarim kritik: shilliq qavat – sterilizatsiya yoki yuqori dezinfeksiya"
+        },
+        {
+          "en": "Non-critical: skin, low-level disinfection",
+          "ru": "Некритические: кожа — дезинфекция низкого уровня",
+          "uz": "Kritik emas: teri – past darajali dezinfeksiya"
+        },
+        {
+          "en": "Example: forceps and elevators are critical",
+          "ru": "Пример: щипцы и элеваторы — критические",
+          "uz": "Misol: qisqichlar va elevatorlar kritik"
+        }
+      ]
+    },
+    {
+      "q": {
+        "en": "How is a patient assessed before an extraction?",
+        "ru": "Как обследуют пациента перед удалением зуба?",
+        "uz": "Tish olishdan oldin bemorni qanday baholaysiz?"
+      },
+      "plan": [
+        {
+          "en": "Complaint and history: illnesses, drugs, allergies",
+          "ru": "Жалобы и анамнез: болезни, лекарства, аллергия",
+          "uz": "Shikoyat va tibbiy anamnez: kasalliklar, dorilar, allergiya"
+        },
+        {
+          "en": "Blood pressure and pulse",
+          "ru": "Артериальное давление и пульс",
+          "uz": "Arterial bosim va puls"
+        },
+        {
+          "en": "Examination and radiograph",
+          "ru": "Осмотр и рентгенограмма",
+          "uz": "Ko‘rik va rentgenogramma"
+        },
+        {
+          "en": "Assign ASA class and adapt the plan",
+          "ru": "Определение класса ASA и коррекция плана",
+          "uz": "ASA sinfini aniqlash va rejani moslash"
+        }
+      ]
+    },
+    {
+      "q": {
+        "en": "List the ASA classes with examples.",
+        "ru": "Перечислите классы ASA с примерами.",
+        "uz": "ASA tasnifini sanab, misollar keltiring."
+      },
+      "plan": [
+        {
+          "en": "I healthy; II mild systemic disease",
+          "ru": "I: здоров; II: лёгкое системное заболевание",
+          "uz": "I: sog‘lom; II: yengil tizimli kasallik"
+        },
+        {
+          "en": "III severe systemic disease",
+          "ru": "III: тяжёлое системное заболевание",
+          "uz": "III: og‘ir tizimli kasallik"
+        },
+        {
+          "en": "IV constant threat to life",
+          "ru": "IV: постоянная угроза жизни",
+          "uz": "IV: hayotga doimiy xavf"
+        },
+        {
+          "en": "V–VI moribund; brain-dead",
+          "ru": "V–VI: умирающий; смерть мозга",
+          "uz": "V–VI: o‘layotgan bemor; miya o‘limi"
+        }
+      ]
+    }
+  ],
+  "test": [
+    {
+      "q": {
+        "en": "Which Spaulding category do extraction forceps belong to?",
+        "ru": "К какой категории по Сполдингу относятся щипцы для удаления зубов?",
+        "uz": "Tish olish qisqichlari Spolding tasnifi bo‘yicha qaysi toifaga kiradi?"
+      },
+      "options": [
+        {
+          "en": "Non-critical",
+          "ru": "Некритические",
+          "uz": "Kritik emas"
+        },
+        {
+          "en": "Semi-critical",
+          "ru": "Полукритические",
+          "uz": "Yarim kritik"
+        },
+        {
+          "en": "Critical",
+          "ru": "Критические",
+          "uz": "Kritik"
+        },
+        {
+          "en": "Not classified",
+          "ru": "Не классифицируются",
+          "uz": "Toifaga kirmaydi"
+        }
+      ],
+      "correct": 2,
+      "explain": {
+        "en": "Forceps contact tissue, bone and blood, so they are critical items.",
+        "ru": "Щипцы контактируют с тканями, костью и кровью, поэтому относятся к критическим.",
+        "uz": "Qisqichlar to‘qima va suyakka tegib, qon bilan aloqada bo‘ladi, shuning uchun kritik hisoblanadi."
+      }
+    },
+    {
+      "q": {
+        "en": "What is the main method of instrument sterilisation in dentistry?",
+        "ru": "Какой метод стерилизации инструментов основной в стоматологии?",
+        "uz": "Stomatologiyada asboblarni sterilizatsiya qilishning asosiy usuli qaysi?"
+      },
+      "options": [
+        {
+          "en": "Steam under pressure (autoclave)",
+          "ru": "Пар под давлением (автоклав)",
+          "uz": "Bosim ostidagi bug‘ (avtoklav)"
+        },
+        {
+          "en": "Wiping with alcohol",
+          "ru": "Протирание спиртом",
+          "uz": "Spirtli artish"
+        },
+        {
+          "en": "Ultraviolet light",
+          "ru": "Ультрафиолетовое облучение",
+          "uz": "Ultrabinafsha nurlash"
+        },
+        {
+          "en": "Boiling",
+          "ru": "Кипячение",
+          "uz": "Qaynatish"
+        }
+      ],
+      "correct": 0,
+      "explain": {
+        "en": "The autoclave is reliable, fast and suits metal instruments; the other options do not sterilise.",
+        "ru": "Автоклав надёжен, быстр и подходит для металлических инструментов; остальные способы не стерилизуют.",
+        "uz": "Avtoklav ishonchli, tez va metall asboblar uchun mos; qolgan usullar sterilizatsiya bermaydi."
+      }
+    },
+    {
+      "q": {
+        "en": "What most reliably confirms sterilisation efficacy?",
+        "ru": "Что наиболее надёжно подтверждает эффективность стерилизации?",
+        "uz": "Sterilizatsiya samaradorligini eng ishonchli nima tasdiqlaydi?"
+      },
+      "options": [
+        {
+          "en": "Package colour change",
+          "ru": "Изменение цвета упаковки",
+          "uz": "Qadoq rangining o‘zgarishi"
+        },
+        {
+          "en": "Biological indicators",
+          "ru": "Биологические индикаторы",
+          "uz": "Biologik indikatorlar"
+        },
+        {
+          "en": "Instruments feeling warm",
+          "ru": "Тёплые инструменты",
+          "uz": "Asboblarning issiqligi"
+        },
+        {
+          "en": "Cycle duration",
+          "ru": "Длительность цикла",
+          "uz": "Sikl vaqti"
+        }
+      ],
+      "correct": 1,
+      "explain": {
+        "en": "Biological indicators show that resistant spores were killed, directly confirming sterilisation.",
+        "ru": "Биологические индикаторы показывают гибель устойчивых спор и прямо подтверждают стерилизацию.",
+        "uz": "Biologik indikatorlar chidamli spora o‘ldirilganini ko‘rsatib, sterilizatsiyani bevosita tasdiqlaydi."
+      }
+    },
+    {
+      "q": {
+        "en": "To whom do standard precautions apply?",
+        "ru": "К кому применяют стандартные меры предосторожности?",
+        "uz": "Standart ehtiyot choralari kimga nisbatan qo‘llanadi?"
+      },
+      "options": [
+        {
+          "en": "Only to HIV-positive patients",
+          "ru": "Только к ВИЧ-инфицированным",
+          "uz": "Faqat OIV bilan kasallanganlarga"
+        },
+        {
+          "en": "Only to hepatitis patients",
+          "ru": "Только к больным гепатитом",
+          "uz": "Faqat gepatit bilan kasallanganlarga"
+        },
+        {
+          "en": "Only to surgical patients",
+          "ru": "Только к хирургическим пациентам",
+          "uz": "Faqat jarrohlik bemorlariga"
+        },
+        {
+          "en": "To all patients",
+          "ru": "Ко всем пациентам",
+          "uz": "Barcha bemorlarga"
+        }
+      ],
+      "correct": 3,
+      "explain": {
+        "en": "Infection cannot always be identified, so every patient is treated as potentially infectious.",
+        "ru": "Инфекцию не всегда можно выявить, поэтому каждого пациента считают потенциально инфицированным.",
+        "uz": "Infeksiyani har doim aniqlab bo‘lmaydi, shuning uchun har bir bemor potensial infeksiyali hisoblanadi."
+      }
+    },
+    {
+      "q": {
+        "en": "A patient has hypertension controlled with medication and no other disease. The ASA class is:",
+        "ru": "У пациента контролируемая лекарствами гипертензия, других болезней нет. Класс ASA?",
+        "uz": "Bemor dori bilan nazorat qilinadigan arterial gipertoniyaga ega, boshqa kasalligi yo‘q. ASA sinfi?"
+      },
+      "options": [
+        {
+          "en": "ASA II",
+          "ru": "ASA II",
+          "uz": "ASA II"
+        },
+        {
+          "en": "ASA I",
+          "ru": "ASA I",
+          "uz": "ASA I"
+        },
+        {
+          "en": "ASA III",
+          "ru": "ASA III",
+          "uz": "ASA III"
+        },
+        {
+          "en": "ASA IV",
+          "ru": "ASA IV",
+          "uz": "ASA IV"
+        }
+      ],
+      "correct": 0,
+      "explain": {
+        "en": "A controlled mild systemic disease without functional limitation is ASA II.",
+        "ru": "Контролируемое лёгкое системное заболевание без ограничения активности соответствует ASA II.",
+        "uz": "Nazorat ostidagi, faoliyatni cheklamaydigan yengil tizimli kasallik ASA II ga mos keladi."
+      }
+    },
+    {
+      "q": {
+        "en": "A patient had a myocardial infarction 3 weeks ago and attends for a routine extraction. The correct approach is:",
+        "ru": "Пациент перенёс инфаркт 3 недели назад, пришёл на плановое удаление. Правильная тактика?",
+        "uz": "Bemor 3 hafta oldin miokard infarktini o‘tkazgan, rejali tish olish uchun keldi. To‘g‘ri yo‘l?"
+      },
+      "options": [
+        {
+          "en": "Extract as usual",
+          "ru": "Удалить в обычном порядке",
+          "uz": "Odatdagidek olish"
+        },
+        {
+          "en": "Extract without anaesthesia",
+          "ru": "Удалить без анестезии",
+          "uz": "Faqat anesteziyasiz olish"
+        },
+        {
+          "en": "Postpone elective care and consult the cardiologist",
+          "ru": "Отложить плановое вмешательство и проконсультироваться с кардиологом",
+          "uz": "Rejali aralashuvni kechiktirib, kardiolog bilan maslahatlashish"
+        },
+        {
+          "en": "Give antibiotics and extract immediately",
+          "ru": "Дать антибиотик и сразу удалить",
+          "uz": "Antibiotik berib, darhol olish"
+        }
+      ],
+      "correct": 2,
+      "explain": {
+        "en": "A recent infarction is high risk; elective surgery is deferred and urgent care is coordinated with the physician.",
+        "ru": "Недавний инфаркт — высокий риск; плановое вмешательство откладывают, экстренное согласуют с врачом.",
+        "uz": "Yaqinda infarkt o‘tkazgan bemor yuqori xavfli; rejali jarrohlik kechiktiriladi, shoshilinch yordam esa shifokor bilan kelishiladi."
+      }
+    },
+    {
+      "q": {
+        "en": "Which test is checked before extraction in a patient taking warfarin?",
+        "ru": "Какой показатель проверяют у пациента на варфарине перед удалением зуба?",
+        "uz": "Varfarin qabul qiladigan bemorga tish olishdan oldin qaysi ko‘rsatkich tekshiriladi?"
+      },
+      "options": [
+        {
+          "en": "Blood glucose",
+          "ru": "Глюкоза крови",
+          "uz": "Qondagi glyukoza"
+        },
+        {
+          "en": "Haemoglobin",
+          "ru": "Гемоглобин",
+          "uz": "Gemoglobin"
+        },
+        {
+          "en": "White cell count",
+          "ru": "Число лейкоцитов",
+          "uz": "Leykotsitlar soni"
+        },
+        {
+          "en": "INR",
+          "ru": "МНО",
+          "uz": "INR"
+        }
+      ],
+      "correct": 3,
+      "explain": {
+        "en": "INR reflects warfarin effect; it should be checked shortly before surgery and local haemostasis planned.",
+        "ru": "Действие варфарина отражает МНО; его нужно определить незадолго до вмешательства и спланировать местный гемостаз.",
+        "uz": "Varfarin ta’sirini INR ko‘rsatadi; u yaqinda o‘lchanishi va mahalliy gemostaz rejalashtirilishi kerak."
+      }
+    },
+    {
+      "q": {
+        "en": "Which drug group is linked to jaw osteonecrosis after extraction?",
+        "ru": "Какая группа препаратов связана с риском остеонекроза челюсти после удаления?",
+        "uz": "Qaysi dori guruhi tish olishdan keyin jag‘ osteonekrozi xavfi bilan bog‘liq?"
+      },
+      "options": [
+        {
+          "en": "Antiresorptives (e.g. bisphosphonates)",
+          "ru": "Антирезорбтивные (например, бисфосфонаты)",
+          "uz": "Antirezorbtiv dorilar (masalan, bisfosfonatlar)"
+        },
+        {
+          "en": "Antihistamines",
+          "ru": "Антигистаминные",
+          "uz": "Antigistaminlar"
+        },
+        {
+          "en": "Proton pump inhibitors",
+          "ru": "Ингибиторы протонной помпы",
+          "uz": "Proton pompa ingibitorlari"
+        },
+        {
+          "en": "Paracetamol",
+          "ru": "Парацетамол",
+          "uz": "Paratsetamol"
+        }
+      ],
+      "correct": 0,
+      "explain": {
+        "en": "Bisphosphonates and other antiresorptives suppress bone turnover and raise the risk of osteonecrosis.",
+        "ru": "Бисфосфонаты и другие антирезорбтивные средства подавляют ремоделирование кости и повышают риск остеонекроза.",
+        "uz": "Bisfosfonatlar va boshqa antirezorbtiv dorilar suyak almashinuvini susaytirib, osteonekroz xavfini oshiradi."
+      }
+    },
+    {
+      "q": {
+        "en": "Preparing the operative site with an antiseptic is an example of:",
+        "ru": "Обработка операционного поля антисептиком — пример чего?",
+        "uz": "Operatsiya maydonini antiseptik bilan ishlash nimaga misol?"
+      },
+      "options": [
+        {
+          "en": "Sterilisation",
+          "ru": "Стерилизации",
+          "uz": "Sterilizatsiya"
+        },
+        {
+          "en": "Antisepsis",
+          "ru": "Антисептики",
+          "uz": "Antiseptika"
+        },
+        {
+          "en": "Disinsection",
+          "ru": "Дезинсекции",
+          "uz": "Dezinseksiya"
+        },
+        {
+          "en": "Asepsis",
+          "ru": "Асептики",
+          "uz": "Aseptika"
+        }
+      ],
+      "correct": 1,
+      "explain": {
+        "en": "Antisepsis reduces microbes on living tissue; asepsis prevents their entry.",
+        "ru": "Антисептика — уменьшение микробов на живых тканях; асептика — предупреждение их попадания.",
+        "uz": "Antiseptika – tirik to‘qimadagi mikroblarni kamaytirish; aseptika esa ularning tushishining oldini olish."
+      }
+    },
+    {
+      "q": {
+        "en": "Which condition corresponds to ASA III?",
+        "ru": "Какое состояние соответствует ASA III?",
+        "uz": "Qaysi holat ASA III ga mos keladi?"
+      },
+      "options": [
+        {
+          "en": "A healthy 25-year-old student",
+          "ru": "Здоровый студент 25 лет",
+          "uz": "Sog‘lom 25 yoshli talaba"
+        },
+        {
+          "en": "A smoker with no other disease",
+          "ru": "Курильщик без других болезней",
+          "uz": "Chekuvchi, boshqa kasalligi yo‘q"
+        },
+        {
+          "en": "Severe heart failure limiting activity",
+          "ru": "Тяжёлая сердечная недостаточность с ограничением активности",
+          "uz": "Faoliyatni cheklaydigan og‘ir yurak yetishmovchiligi"
+        },
+        {
+          "en": "A brain-dead organ donor",
+          "ru": "Донор со смертью мозга",
+          "uz": "Miya o‘limi qayd etilgan donor"
+        }
+      ],
+      "correct": 2,
+      "explain": {
+        "en": "A severe disease that limits activity but is not a constant threat to life is ASA III.",
+        "ru": "Тяжёлое заболевание, ограничивающее активность, но без постоянной угрозы жизни, — это ASA III.",
+        "uz": "Og‘ir, faoliyatni cheklaydigan, lekin hayotga doimiy xavf solmaydigan kasallik ASA III hisoblanadi."
+      }
+    }
+  ]
+}

@@ -1,0 +1,944 @@
+{
+  "id": "esth-01",
+  "subject": "esth",
+  "n": 1,
+  "week": 1,
+  "type": "lecture",
+  "hours": 2,
+  "title": {
+    "en": "Principles of smile aesthetics",
+    "ru": "Принципы эстетики улыбки",
+    "uz": "Tabassum estetikasi tamoyillari"
+  },
+  "goals": [
+    {
+      "en": "Perform facial, dentolabial, gingival and dental analysis in sequence",
+      "ru": "Последовательно проводить анализ лица, дентолабиальный, десневой и зубной анализ",
+      "uz": "Yuz, dentolabial, milk va tish tahlilini ketma-ket bajarish"
+    },
+    {
+      "en": "Assess the smile line, midline and smile arc",
+      "ru": "Оценивать линию улыбки, срединную линию и дугу улыбки",
+      "uz": "Tabassum chizig‘i, o‘rta chiziq va tabassum yoyini baholash"
+    },
+    {
+      "en": "Use the golden proportion and gingival zenith as guides",
+      "ru": "Использовать золотую пропорцию и зенит десны как ориентиры",
+      "uz": "Oltin nisbat va milk zenitini mo‘ljal sifatida qo‘llash"
+    }
+  ],
+  "links": [
+    "tooth-types-fdi",
+    "periodontium"
+  ],
+  "sources": [
+    "Fradeani M. Esthetic Rehabilitation in Fixed Prosthodontics, Vol. 1: Esthetic Analysis, 2004",
+    "Heymann HO et al. Sturdevant's Art and Science of Operative Dentistry, 7th ed., 2018"
+  ],
+  "slides": [
+    {
+      "layout": "title",
+      "title": {
+        "en": "Principles of smile aesthetics",
+        "ru": "Принципы эстетики улыбки",
+        "uz": "Tabassum estetikasi tamoyillari"
+      },
+      "subtitle": {
+        "en": "Stepwise analysis of face, lips, gingiva and teeth",
+        "ru": "Поэтапный анализ лица, губ, десны и зубов",
+        "uz": "Yuz, lab, milk va tishlarni bosqichma-bosqich tahlil qilish"
+      }
+    },
+    {
+      "layout": "flow",
+      "title": {
+        "en": "Sequence of aesthetic analysis",
+        "ru": "Последовательность эстетического анализа",
+        "uz": "Estetik tahlil ketma-ketligi"
+      },
+      "steps": [
+        {
+          "label": {
+            "en": "Facial analysis",
+            "ru": "Анализ лица",
+            "uz": "Yuz tahlili"
+          },
+          "detail": {
+            "en": "Interpupillary line, facial midline, profile",
+            "ru": "Межзрачковая линия, срединная линия лица, профиль",
+            "uz": "Ko‘z qorachiqlari chizig‘i, yuz o‘rta chizig‘i, profil"
+          }
+        },
+        {
+          "label": {
+            "en": "Dentolabial analysis",
+            "ru": "Дентолабиальный анализ",
+            "uz": "Dentolabial tahlil"
+          },
+          "detail": {
+            "en": "Incisor display at rest and on smiling",
+            "ru": "Видимость резцов в покое и при улыбке",
+            "uz": "Tinch holatda va tabassumda kesuvchi tishlar ko‘rinishi"
+          }
+        },
+        {
+          "label": {
+            "en": "Gingival analysis",
+            "ru": "Анализ десны",
+            "uz": "Milk tahlili"
+          },
+          "detail": {
+            "en": "Gingival line, zeniths, papillae",
+            "ru": "Контур десны, зениты, сосочки",
+            "uz": "Milk chizig‘i, zenitlar, so‘rg‘ichlar"
+          }
+        },
+        {
+          "label": {
+            "en": "Dental analysis",
+            "ru": "Анализ зубов",
+            "uz": "Tish tahlili"
+          },
+          "detail": {
+            "en": "Shape, proportions, colour, surface texture",
+            "ru": "Форма, пропорции, цвет, текстура поверхности",
+            "uz": "Shakl, nisbatlar, rang, yuza teksturasi"
+          }
+        }
+      ],
+      "note": {
+        "en": "Stress that analysis always goes from the face to the teeth: teeth are fitted to the face, not the reverse.",
+        "ru": "Подчеркните, что анализ всегда идёт от лица к зубам: зубы подстраивают под лицо, а не наоборот.",
+        "uz": "Tahlil har doim yuzdan boshlanib, tishlar bilan tugashini ta’kidlang: tish yuzga moslanadi, aksincha emas."
+      }
+    },
+    {
+      "layout": "tree",
+      "title": {
+        "en": "Types of smile line",
+        "ru": "Типы линии улыбки",
+        "uz": "Tabassum chizig‘i turlari"
+      },
+      "root": {
+        "en": "Smile line",
+        "ru": "Линия улыбки",
+        "uz": "Tabassum chizig‘i"
+      },
+      "children": [
+        {
+          "label": {
+            "en": "Low",
+            "ru": "Низкая",
+            "uz": "Past"
+          },
+          "items": [
+            {
+              "en": "Part of crowns visible",
+              "ru": "Видна часть коронок",
+              "uz": "Tishlarning bir qismi ko‘rinadi"
+            },
+            {
+              "en": "Gingiva hidden",
+              "ru": "Десна не видна",
+              "uz": "Milk ko‘rinmaydi"
+            }
+          ]
+        },
+        {
+          "label": {
+            "en": "Average",
+            "ru": "Средняя",
+            "uz": "O‘rtacha"
+          },
+          "items": [
+            {
+              "en": "Crowns almost fully visible",
+              "ru": "Коронки видны почти полностью",
+              "uz": "Tojlar deyarli to‘liq ko‘rinadi"
+            },
+            {
+              "en": "Only papillae visible",
+              "ru": "Видны только сосочки",
+              "uz": "Faqat milk so‘rg‘ichlari ko‘rinadi"
+            }
+          ]
+        },
+        {
+          "label": {
+            "en": "High",
+            "ru": "Высокая",
+            "uz": "Baland"
+          },
+          "items": [
+            {
+              "en": "Full crowns visible",
+              "ru": "Коронки видны полностью",
+              "uz": "Tojlar to‘liq ko‘rinadi"
+            },
+            {
+              "en": "Band of gingiva shown",
+              "ru": "Видна полоска десны",
+              "uz": "Milk tasmasi ko‘rinadi"
+            }
+          ]
+        }
+      ],
+      "note": {
+        "en": "Ask why gingival and margin errors are more visible with a high smile line.",
+        "ru": "Спросите, почему при высокой линии улыбки ошибки в контуре десны и краях реставраций заметнее.",
+        "uz": "Baland tabassum chizig‘ida milk va restavratsiya chegaralari xatolari ko‘proq ko‘zga tashlanishini so‘rang."
+      }
+    },
+    {
+      "layout": "bullets",
+      "title": {
+        "en": "Midline and smile arc",
+        "ru": "Срединная линия и дуга улыбки",
+        "uz": "O‘rta chiziq va tabassum yoyi"
+      },
+      "bullets": [
+        {
+          "en": "The dental midline should coincide with the facial midline where possible",
+          "ru": "Зубная срединная линия по возможности совпадает со срединной линией лица",
+          "uz": "Tish o‘rta chizig‘i yuz o‘rta chizig‘iga imkon qadar mos bo‘lishi kerak"
+        },
+        {
+          "en": "A canted midline is more noticeable than a small parallel shift",
+          "ru": "Наклон срединной линии заметнее, чем её небольшое смещение",
+          "uz": "O‘rta chiziqning qiyaligi kichik siljishidan ko‘ra ko‘proq seziladi"
+        },
+        {
+          "en": "Upper incisal edges form an arc parallel to the lower lip",
+          "ru": "Режущие края верхних резцов образуют дугу, параллельную нижней губе",
+          "uz": "Yuqori kesuvchi tishlar qirralari pastki lab egriligiga parallel yoy hosil qiladi"
+        },
+        {
+          "en": "The incisal plane is parallel to the interpupillary line",
+          "ru": "Окклюзионная плоскость резцов параллельна межзрачковой линии",
+          "uz": "Insisal tekislik ko‘z qorachiqlari chizig‘iga parallel bo‘ladi"
+        },
+        {
+          "en": "Buccal corridors reflect the width of the smile",
+          "ru": "Щёчные коридоры отражают ширину улыбки",
+          "uz": "Lunj yo‘laklari tabassum kengligini ko‘rsatadi"
+        }
+      ]
+    },
+    {
+      "layout": "key",
+      "title": {
+        "en": "Golden proportion",
+        "ru": "Золотая пропорция",
+        "uz": "Oltin nisbat"
+      },
+      "term": {
+        "en": "Golden proportion (1.618 : 1)",
+        "ru": "Золотая пропорция (1,618 : 1)",
+        "uz": "Oltin nisbat (1,618 : 1)"
+      },
+      "definition": {
+        "en": "A suggested ratio between the apparent widths of the central incisor, lateral incisor and canine viewed from the front. Most natural smiles do not follow it exactly, so it is a guide, not a strict rule.",
+        "ru": "Предполагаемое соотношение видимой ширины центрального, латерального резца и клыка при взгляде спереди. В большинстве естественных улыбок точно не соблюдается, поэтому служит ориентиром, а не строгим правилом.",
+        "uz": "Old tomondan qaralganda markaziy, lateral kesuv va qoziq tishlarning ko‘rinadigan kengliklari o‘rtasidagi taxminiy nisbat. Ko‘pchilik tabiiy tabassumlarda aniq bajarilmaydi, shuning uchun qat’iy qoida emas, balki yo‘naltiruvchi vosita hisoblanadi."
+      },
+      "note": {
+        "en": "Students should not treat the golden proportion as mandatory; facial and individual tooth proportions matter more.",
+        "ru": "Студенты не должны воспринимать золотую пропорцию как обязательное правило; важнее пропорции лица и самого зуба.",
+        "uz": "Talabalar oltin nisbatni majburiy qoida deb o‘ylamasligi kerak; yuz va tish o‘lchamlari muhimroq."
+      }
+    },
+    {
+      "layout": "table",
+      "title": {
+        "en": "Anterior tooth proportions",
+        "ru": "Пропорции передних зубов",
+        "uz": "Old tishlar nisbatlari"
+      },
+      "head": [
+        {
+          "en": "Parameter",
+          "ru": "Параметр",
+          "uz": "Ko‘rsatkich"
+        },
+        {
+          "en": "Usual guide",
+          "ru": "Обычный ориентир",
+          "uz": "Odatiy mo‘ljal"
+        },
+        {
+          "en": "Clinical meaning",
+          "ru": "Клиническое значение",
+          "uz": "Klinik ahamiyati"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "en": "Central width/length",
+            "ru": "Ширина/длина центрального резца",
+            "uz": "Markaziy kesuv kengligi/uzunligi"
+          },
+          {
+            "en": "About 75–80%",
+            "ru": "Примерно 75–80%",
+            "uz": "Taxminan 75–80%"
+          },
+          {
+            "en": "Avoids a tooth looking narrow or square",
+            "ru": "Чтобы зуб не выглядел узким или широким",
+            "uz": "Tish tor yoki keng ko‘rinmasligi uchun"
+          }
+        ],
+        [
+          {
+            "en": "Apparent widths",
+            "ru": "Видимая ширина",
+            "uz": "Ko‘rinadigan kengliklar"
+          },
+          {
+            "en": "Golden or RED proportion",
+            "ru": "Золотая пропорция или пропорция RED",
+            "uz": "Oltin nisbat yoki RED nisbati"
+          },
+          {
+            "en": "Only a planning guide",
+            "ru": "Лишь ориентир при планировании",
+            "uz": "Faqat rejalashtirish uchun mo‘ljal"
+          }
+        ],
+        [
+          {
+            "en": "Symmetry of centrals",
+            "ru": "Симметрия центральных резцов",
+            "uz": "Markaziy kesuvchilar simmetriyasi"
+          },
+          {
+            "en": "As equal as possible",
+            "ru": "Максимально одинаковые",
+            "uz": "Iloji boricha bir xil"
+          },
+          {
+            "en": "Even small differences are noticed",
+            "ru": "Даже малая разница заметна",
+            "uz": "Kichik farq ham ko‘zga tashlanadi"
+          }
+        ],
+        [
+          {
+            "en": "Display at rest",
+            "ru": "Видимость в покое",
+            "uz": "Tinch holatda ko‘rinishi"
+          },
+          {
+            "en": "Usually a few millimetres",
+            "ru": "Обычно несколько миллиметров",
+            "uz": "Odatda bir necha millimetr"
+          },
+          {
+            "en": "Decreases with age",
+            "ru": "С возрастом уменьшается",
+            "uz": "Yosh bilan kamayadi"
+          }
+        ]
+      ],
+      "note": {
+        "en": "Point out that incisor display at rest depends on age and sex and decreases with age.",
+        "ru": "Отметьте, что видимость резцов в покое зависит от возраста и пола и с возрастом уменьшается.",
+        "uz": "Tinch holatda kesuvchilar ko‘rinishi yosh va jinsga bog‘liqligini, keksalarda kamayishini ta’kidlang."
+      }
+    },
+    {
+      "layout": "compare",
+      "title": {
+        "en": "Gingival zenith and gingival line",
+        "ru": "Зенит и контур десны",
+        "uz": "Milk zeniti va milk chizig‘i"
+      },
+      "columns": [
+        {
+          "head": {
+            "en": "Gingival zenith",
+            "ru": "Зенит десны",
+            "uz": "Milk zeniti"
+          },
+          "items": [
+            {
+              "en": "Most apical point of the gingival margin",
+              "ru": "Самая апикальная точка десневого края",
+              "uz": "Milk qirg‘og‘ining eng apikal nuqtasi"
+            },
+            {
+              "en": "Distal to the long axis on centrals and canines",
+              "ru": "У центральных резцов и клыков смещён дистально от оси",
+              "uz": "Markaziy kesuv va qoziqda tish o‘qidan distalroq"
+            },
+            {
+              "en": "Usually centred on lateral incisors",
+              "ru": "У латерального резца обычно по центру",
+              "uz": "Lateral kesuvda odatda markazda"
+            }
+          ]
+        },
+        {
+          "head": {
+            "en": "Gingival line",
+            "ru": "Линия десны",
+            "uz": "Milk chizig‘i"
+          },
+          "items": [
+            {
+              "en": "Joins zeniths of centrals and canines",
+              "ru": "Соединяет зениты центральных резцов и клыков",
+              "uz": "Markaziy kesuv va qoziq zenitlarini birlashtiradi"
+            },
+            {
+              "en": "Lateral incisor margin sits slightly coronal",
+              "ru": "Десна латерального резца расположена чуть коронарнее",
+              "uz": "Lateral kesuv milki biroz koronalroq joylashadi"
+            },
+            {
+              "en": "Right and left sides should be symmetrical",
+              "ru": "Правая и левая стороны должны быть симметричны",
+              "uz": "O‘ng va chap tomonlar simmetrik bo‘lishi kerak"
+            }
+          ]
+        }
+      ],
+      "note": {
+        "en": "Discuss that gingival asymmetry may be corrected periodontally or orthodontically before restoration.",
+        "ru": "Обсудите, что асимметрию десны можно исправить пародонтологически или ортодонтически до реставрации.",
+        "uz": "Milk asimmetriyasini restavratsiyadan oldin parodontal yoki ortodontik yo‘l bilan tuzatish mumkinligini muhokama qiling."
+      }
+    },
+    {
+      "layout": "bullets",
+      "title": {
+        "en": "Biological limits of aesthetics",
+        "ru": "Биологические границы эстетики",
+        "uz": "Estetikaning biologik chegaralari"
+      },
+      "bullets": [
+        {
+          "en": "Without healthy gingiva the aesthetic result is unstable",
+          "ru": "Без здоровой десны эстетический результат нестабилен",
+          "uz": "Milk sog‘lom bo‘lmasa, estetik natija barqaror bo‘lmaydi"
+        },
+        {
+          "en": "Restoration margins must respect the supracrestal tissue attachment",
+          "ru": "Край реставрации не должен нарушать биологическую ширину",
+          "uz": "Restavratsiya chegarasi biologik kenglikni buzmasligi kerak"
+        },
+        {
+          "en": "Contact-to-bone distance affects papilla fill",
+          "ru": "Расстояние от контакта до кости влияет на заполнение сосочком",
+          "uz": "Kontakt nuqtasi va suyak orasidagi masofa milk so‘rg‘ichiga ta’sir qiladi"
+        },
+        {
+          "en": "Black triangles noticeably impair aesthetics",
+          "ru": "Чёрные треугольники заметно ухудшают эстетику",
+          "uz": "Qora uchburchaklar estetikani sezilarli buzadi"
+        }
+      ]
+    },
+    {
+      "layout": "summary",
+      "title": {
+        "en": "Summary",
+        "ru": "Итоги",
+        "uz": "Xulosa"
+      },
+      "bullets": [
+        {
+          "en": "Analysis proceeds from the face to the teeth",
+          "ru": "Анализ проводят от лица к зубам",
+          "uz": "Tahlil yuzdan tishlarga qarab olib boriladi"
+        },
+        {
+          "en": "Smile lines are low, average or high",
+          "ru": "Линия улыбки бывает низкой, средней и высокой",
+          "uz": "Tabassum chizig‘i past, o‘rtacha va baland bo‘ladi"
+        },
+        {
+          "en": "The golden proportion is a guide, not a rule",
+          "ru": "Золотая пропорция — ориентир, а не правило",
+          "uz": "Oltin nisbat qoida emas, mo‘ljal"
+        },
+        {
+          "en": "The zenith is distal on centrals and canines",
+          "ru": "Зенит десны у центральных резцов и клыков смещён дистально",
+          "uz": "Milk zeniti markaziy kesuv va qoziqda distalroq joylashadi"
+        },
+        {
+          "en": "A healthy periodontium underpins the aesthetic result",
+          "ru": "Здоровый пародонт — основа эстетического результата",
+          "uz": "Sog‘lom parodont estetik natijaning asosi"
+        }
+      ]
+    }
+  ],
+  "oral": [
+    {
+      "q": {
+        "en": "Explain the sequence of aesthetic smile analysis.",
+        "ru": "Объясните последовательность эстетического анализа улыбки.",
+        "uz": "Tabassumni estetik tahlil qilish ketma-ketligini tushuntiring."
+      },
+      "plan": [
+        {
+          "en": "Facial analysis: midline, interpupillary line, profile",
+          "ru": "Анализ лица: срединная линия, межзрачковая линия, профиль",
+          "uz": "Yuz tahlili: o‘rta chiziq, ko‘z qorachiqlari chizig‘i, profil"
+        },
+        {
+          "en": "Dentolabial analysis: tooth display at rest and smiling",
+          "ru": "Дентолабиальный анализ: видимость зубов в покое и при улыбке",
+          "uz": "Dentolabial tahlil: tinch holatda va tabassumda tish ko‘rinishi"
+        },
+        {
+          "en": "Gingival analysis: zeniths, symmetry, papillae",
+          "ru": "Анализ десны: зениты, симметрия, сосочки",
+          "uz": "Milk tahlili: zenitlar, simmetriya, so‘rg‘ichlar"
+        },
+        {
+          "en": "Dental analysis: shape, proportion, colour, texture",
+          "ru": "Анализ зубов: форма, пропорции, цвет, текстура",
+          "uz": "Tish tahlili: shakl, nisbat, rang va tekstura"
+        }
+      ]
+    },
+    {
+      "q": {
+        "en": "What is the golden proportion and what limits its clinical use?",
+        "ru": "Что такое золотая пропорция и каковы ограничения её клинического применения?",
+        "uz": "Oltin nisbat nima va uning klinik qo‘llanishi qanday cheklangan?"
+      },
+      "plan": [
+        {
+          "en": "Ratio of apparent widths from the front, 1.618 : 1",
+          "ru": "Соотношение видимой ширины спереди 1,618 : 1",
+          "uz": "Old tomondan ko‘rinadigan kengliklar nisbati 1,618 : 1"
+        },
+        {
+          "en": "Not found exactly in most natural smiles",
+          "ru": "В большинстве естественных улыбок точно не встречается",
+          "uz": "Ko‘pchilik tabiiy tabassumlarda aniq kuzatilmaydi"
+        },
+        {
+          "en": "Judged together with facial size and width/length ratio",
+          "ru": "Оценивается вместе с пропорциями лица и отношением ширины к длине",
+          "uz": "Yuz o‘lchamlari va tish kengligi/uzunligi nisbati bilan birga baholanadi"
+        }
+      ]
+    },
+    {
+      "q": {
+        "en": "Explain the aesthetic importance of the gingival zenith and gingival line.",
+        "ru": "Объясните эстетическое значение зенита десны и линии десны.",
+        "uz": "Milk zeniti va milk chizig‘ining estetik ahamiyatini tushuntiring."
+      },
+      "plan": [
+        {
+          "en": "The zenith is the most apical point of the margin",
+          "ru": "Зенит — самая апикальная точка десневого края",
+          "uz": "Zenit milk qirg‘og‘ining eng apikal nuqtasi"
+        },
+        {
+          "en": "Distal on centrals and canines, centred on laterals",
+          "ru": "У центральных резцов и клыков дистальнее, у латеральных по центру",
+          "uz": "Markaziy kesuv va qoziqda distalroq, lateral kesuvda markazda"
+        },
+        {
+          "en": "Lateral incisor margin is usually slightly coronal",
+          "ru": "Десна латерального резца обычно чуть коронарнее",
+          "uz": "Lateral kesuv milki odatda biroz koronalroq"
+        },
+        {
+          "en": "Asymmetry shows most with a high smile line",
+          "ru": "Асимметрия особенно заметна при высокой линии улыбки",
+          "uz": "Asimmetriya baland tabassum chizig‘ida ayniqsa seziladi"
+        }
+      ]
+    },
+    {
+      "q": {
+        "en": "What is assessed when evaluating the dental midline and incisal plane?",
+        "ru": "На что обращают внимание при оценке зубной срединной линии и плоскости резцов?",
+        "uz": "Tish o‘rta chizig‘i va insisal tekislikni baholashda nimalarga e’tibor beriladi?"
+      },
+      "plan": [
+        {
+          "en": "Agreement with the facial midline",
+          "ru": "Совпадение со срединной линией лица",
+          "uz": "Yuz o‘rta chizig‘iga mosligi"
+        },
+        {
+          "en": "A cant is more noticeable than a small shift",
+          "ru": "Наклон срединной линии заметнее малого смещения",
+          "uz": "O‘rta chiziq qiyaligi kichik siljishdan ko‘ra ko‘proq seziladi"
+        },
+        {
+          "en": "Incisal plane parallel to the interpupillary line",
+          "ru": "Плоскость резцов параллельна межзрачковой линии",
+          "uz": "Insisal tekislik ko‘z qorachiqlari chizig‘iga parallel"
+        },
+        {
+          "en": "Smile arc follows the lower lip curvature",
+          "ru": "Дуга улыбки соответствует кривизне нижней губы",
+          "uz": "Tabassum yoyi pastki lab egriligiga mos"
+        }
+      ]
+    }
+  ],
+  "test": [
+    {
+      "q": {
+        "en": "In which order is aesthetic analysis performed?",
+        "ru": "В каком порядке проводят эстетический анализ?",
+        "uz": "Estetik tahlil qaysi tartibda o‘tkaziladi?"
+      },
+      "options": [
+        {
+          "en": "Teeth, gingiva, lips, face",
+          "ru": "Зубы, десна, губы, лицо",
+          "uz": "Tish, milk, lab, yuz"
+        },
+        {
+          "en": "Face, lips, gingiva, teeth",
+          "ru": "Лицо, губы, десна, зубы",
+          "uz": "Yuz, lab, milk, tish"
+        },
+        {
+          "en": "Gingiva, teeth, face, lips",
+          "ru": "Десна, зубы, лицо, губы",
+          "uz": "Milk, tish, yuz, lab"
+        },
+        {
+          "en": "Lips, teeth, face, gingiva",
+          "ru": "Губы, зубы, лицо, десна",
+          "uz": "Lab, tish, yuz, milk"
+        }
+      ],
+      "correct": 1,
+      "explain": {
+        "en": "Teeth are fitted to the face, so analysis moves from the general to the specific, from face to teeth.",
+        "ru": "Зубы подбирают под лицо, поэтому анализ идёт от общего к частному — от лица к зубам.",
+        "uz": "Tishlar yuzga moslanadi, shuning uchun tahlil umumiydan xususiyga, yuzdan tishlarga qarab boradi."
+      }
+    },
+    {
+      "q": {
+        "en": "What does a high smile line mean?",
+        "ru": "Что означает высокая линия улыбки?",
+        "uz": "Baland tabassum chizig‘i nimani anglatadi?"
+      },
+      "options": [
+        {
+          "en": "Only incisal edges are visible",
+          "ru": "Видны только режущие края",
+          "uz": "Faqat kesuv qirralari ko‘rinadi"
+        },
+        {
+          "en": "Half of the crowns are visible",
+          "ru": "Видна половина коронок",
+          "uz": "Tojlarning yarmi ko‘rinadi"
+        },
+        {
+          "en": "Only interdental papillae are visible",
+          "ru": "Видны только межзубные сосочки",
+          "uz": "Faqat milk so‘rg‘ichlari ko‘rinadi"
+        },
+        {
+          "en": "Full crowns and a band of gingiva are visible",
+          "ru": "Видны коронки целиком и полоска десны",
+          "uz": "Tojlar to‘liq va milk tasmasi ko‘rinadi"
+        }
+      ],
+      "correct": 3,
+      "explain": {
+        "en": "With a high smile line the whole crowns and the gingiva above them are displayed.",
+        "ru": "При высокой линии улыбки видны коронки полностью и десна над ними.",
+        "uz": "Baland tabassum chizig‘ida tojlar to‘liq va ularning ustidagi milk ham ko‘rinadi."
+      }
+    },
+    {
+      "q": {
+        "en": "Which statement about the golden proportion is correct?",
+        "ru": "Какое утверждение о золотой пропорции верно?",
+        "uz": "Oltin nisbat haqidagi qaysi fikr to‘g‘ri?"
+      },
+      "options": [
+        {
+          "en": "It is a guide for planning",
+          "ru": "Это ориентир при планировании",
+          "uz": "U rejalashtirishda yo‘naltiruvchi mo‘ljal"
+        },
+        {
+          "en": "It is mandatory for every restoration",
+          "ru": "Обязательна для каждой реставрации",
+          "uz": "Har bir restavratsiyada majburiy"
+        },
+        {
+          "en": "It measures tooth length",
+          "ru": "Предназначена для измерения длины зуба",
+          "uz": "Tish uzunligini o‘lchashga mo‘ljallangan"
+        },
+        {
+          "en": "It applies only to posterior teeth",
+          "ru": "Применяется только к боковым зубам",
+          "uz": "Faqat yon tishlarga qo‘llanadi"
+        }
+      ],
+      "correct": 0,
+      "explain": {
+        "en": "Most natural smiles do not match it exactly, so it serves only as a guide.",
+        "ru": "Большинство естественных улыбок не соответствуют золотой пропорции точно, поэтому она лишь ориентир.",
+        "uz": "Tabiiy tabassumlarning ko‘pchiligi oltin nisbatga aniq mos kelmaydi, shuning uchun u faqat mo‘ljal."
+      }
+    },
+    {
+      "q": {
+        "en": "What is the usual width/length ratio of a maxillary central incisor?",
+        "ru": "Каково обычное соотношение ширины к длине верхнего центрального резца?",
+        "uz": "Yuqori markaziy kesuvchi tishning odatiy kenglik/uzunlik nisbati qancha?"
+      },
+      "options": [
+        {
+          "en": "About 50–55%",
+          "ru": "Примерно 50–55%",
+          "uz": "Taxminan 50–55%"
+        },
+        {
+          "en": "About 60–65%",
+          "ru": "Примерно 60–65%",
+          "uz": "Taxminan 60–65%"
+        },
+        {
+          "en": "About 75–80%",
+          "ru": "Примерно 75–80%",
+          "uz": "Taxminan 75–80%"
+        },
+        {
+          "en": "About 95–100%",
+          "ru": "Примерно 95–100%",
+          "uz": "Taxminan 95–100%"
+        }
+      ],
+      "correct": 2,
+      "explain": {
+        "en": "The width of a central incisor is about 75–80% of its length.",
+        "ru": "Ширина центрального резца составляет примерно 75–80% его длины.",
+        "uz": "Markaziy kesuvning kengligi uzunligining taxminan 75–80 foizini tashkil qiladi."
+      }
+    },
+    {
+      "q": {
+        "en": "Where is the gingival zenith usually located on a maxillary central incisor?",
+        "ru": "Где обычно расположен зенит десны у верхнего центрального резца?",
+        "uz": "Yuqori markaziy kesuvchi tishda milk zeniti odatda qayerda joylashadi?"
+      },
+      "options": [
+        {
+          "en": "Mesial to the long axis",
+          "ru": "Мезиальнее оси зуба",
+          "uz": "Tish o‘qidan mezialroq"
+        },
+        {
+          "en": "Distal to the long axis",
+          "ru": "Дистальнее оси зуба",
+          "uz": "Tish o‘qidan distalroq"
+        },
+        {
+          "en": "Exactly on the long axis",
+          "ru": "Точно по оси зуба",
+          "uz": "Aniq tish o‘qida"
+        },
+        {
+          "en": "At the level of the contact point",
+          "ru": "На уровне контактного пункта",
+          "uz": "Kontakt nuqtasi sathida"
+        }
+      ],
+      "correct": 1,
+      "explain": {
+        "en": "On centrals and canines the zenith lies slightly distal to the long axis.",
+        "ru": "У центральных резцов и клыков зенит смещён немного дистально от оси зуба.",
+        "uz": "Markaziy kesuv va qoziq tishda zenit tish o‘qidan biroz distalga siljigan bo‘ladi."
+      }
+    },
+    {
+      "q": {
+        "en": "A patient's dental midline is canted relative to the facial midline. Which statement is correct?",
+        "ru": "У пациента зубная срединная линия наклонена относительно срединной линии лица. Какое утверждение верно?",
+        "uz": "Bemorda tish o‘rta chizig‘i yuz o‘rta chizig‘iga nisbatan qiya. Qaysi fikr to‘g‘ri?"
+      },
+      "options": [
+        {
+          "en": "A cant is usually unnoticed",
+          "ru": "Наклон обычно незаметен",
+          "uz": "Qiyalik odatda sezilmaydi"
+        },
+        {
+          "en": "It matters only for posterior teeth",
+          "ru": "Важен только при анализе боковых зубов",
+          "uz": "Faqat yon tishlar tahlilida muhim"
+        },
+        {
+          "en": "A cant is more noticeable than a small shift",
+          "ru": "Наклон заметнее, чем небольшое смещение",
+          "uz": "Qiyalik kichik siljishdan ko‘ra ko‘proq seziladi"
+        },
+        {
+          "en": "It is corrected by shade selection only",
+          "ru": "Его исправляют только подбором цвета",
+          "uz": "Uni faqat rang tanlash bilan tuzatish mumkin"
+        }
+      ],
+      "correct": 2,
+      "explain": {
+        "en": "Observers detect a canted midline more easily than a small parallel shift.",
+        "ru": "Наклон срединной линии воспринимается легче, чем её небольшое параллельное смещение.",
+        "uz": "Odamlar o‘rta chiziqning qiyaligini uning kichik parallel siljishidan ko‘ra osonroq sezadi."
+      }
+    },
+    {
+      "q": {
+        "en": "What is meant by the smile arc?",
+        "ru": "Что понимают под дугой улыбки?",
+        "uz": "Tabassum yoyi deganda nima tushuniladi?"
+      },
+      "options": [
+        {
+          "en": "A line joining the gingival zeniths",
+          "ru": "Линия, соединяющая зениты десны",
+          "uz": "Milk zenitlarini birlashtiruvchi chiziq"
+        },
+        {
+          "en": "The width of the buccal corridors",
+          "ru": "Ширина щёчных коридоров",
+          "uz": "Lunj yo‘laklarining kengligi"
+        },
+        {
+          "en": "The lower border of the upper lip",
+          "ru": "Нижняя граница верхней губы",
+          "uz": "Yuqori labning pastki chegarasi"
+        },
+        {
+          "en": "Upper incisal edge curve following the lower lip",
+          "ru": "Соответствие кривизны режущих краёв нижней губе",
+          "uz": "Yuqori kesuv qirralari egriligining pastki labga mosligi"
+        }
+      ],
+      "correct": 3,
+      "explain": {
+        "en": "In an attractive smile the upper incisal edges form an arc parallel to the lower lip.",
+        "ru": "В эстетичной улыбке режущие края верхних зубов образуют дугу, параллельную нижней губе.",
+        "uz": "Estetik tabassumda yuqori tishlar qirralari pastki lab egriligiga parallel yoy hosil qiladi."
+      }
+    },
+    {
+      "q": {
+        "en": "How is the lateral incisor gingival margin usually positioned compared with the central?",
+        "ru": "Как обычно расположен десневой край латерального резца по сравнению с центральным?",
+        "uz": "Lateral kesuvchi tishning milk qirg‘og‘i markaziy kesuvchiga nisbatan odatda qanday joylashadi?"
+      },
+      "options": [
+        {
+          "en": "Slightly more coronal",
+          "ru": "Немного коронарнее",
+          "uz": "Biroz koronalroq"
+        },
+        {
+          "en": "Much more apical",
+          "ru": "Значительно апикальнее",
+          "uz": "Ancha apikalroq"
+        },
+        {
+          "en": "Always at the same level",
+          "ru": "Всегда на одном уровне",
+          "uz": "Har doim bir xil sathda"
+        },
+        {
+          "en": "Apical to the canine",
+          "ru": "Апикальнее клыка",
+          "uz": "Qoziq tishdan apikalroq"
+        }
+      ],
+      "correct": 0,
+      "explain": {
+        "en": "The lateral incisor margin usually sits slightly coronal to the line of centrals and canines.",
+        "ru": "Обычно десна латерального резца располагается чуть коронарнее линии центральных резцов и клыков.",
+        "uz": "Odatda lateral kesuv milki markaziy kesuv va qoziq milk chizig‘idan biroz koronalroq turadi."
+      }
+    },
+    {
+      "q": {
+        "en": "A patient has a black triangle between the upper central incisors. What is a likely main cause?",
+        "ru": "У пациента между верхними центральными резцами чёрный треугольник. Какова его вероятная основная причина?",
+        "uz": "Bemorning yuqori markaziy kesuvchilari o‘rtasida qora uchburchak bor. Uning asosiy sababi nima bo‘lishi mumkin?"
+      },
+      "options": [
+        {
+          "en": "Enamel hypoplasia",
+          "ru": "Гипоплазия эмали",
+          "uz": "Emalning gipoplaziyasi"
+        },
+        {
+          "en": "High value of the teeth",
+          "ru": "Высокая светлота зубов",
+          "uz": "Tishlarning yuqori yorqinligi"
+        },
+        {
+          "en": "Large contact-point-to-bone distance",
+          "ru": "Большое расстояние от контакта до кости",
+          "uz": "Kontakt nuqtasidan suyakkacha masofa katta"
+        },
+        {
+          "en": "A parallel incisal plane",
+          "ru": "Параллельность плоскости резцов",
+          "uz": "Insisal tekislikning parallelligi"
+        }
+      ],
+      "correct": 2,
+      "explain": {
+        "en": "As the contact-to-crest distance increases, the papilla no longer fills the embrasure.",
+        "ru": "При увеличении расстояния от контакта до гребня кости сосочек не заполняет промежуток полностью.",
+        "uz": "Kontakt nuqtasi va alveolyar suyak cho‘qqisi orasidagi masofa oshganda milk so‘rg‘ichi oraliqni to‘liq to‘ldirmaydi."
+      }
+    },
+    {
+      "q": {
+        "en": "A patient with a high smile line has gingival asymmetry. What is the best approach before anterior crowns?",
+        "ru": "У пациента с высокой линией улыбки асимметрия десны. Какой подход правильнее перед изготовлением передних коронок?",
+        "uz": "Baland tabassum chizig‘iga ega bemorda milk asimmetriyasi bor. Old koronkalar qo‘yishdan oldin eng to‘g‘ri yondashuv qaysi?"
+      },
+      "options": [
+        {
+          "en": "Ignore the asymmetry",
+          "ru": "Игнорировать асимметрию",
+          "uz": "Asimmetriyani e’tiborsiz qoldirish"
+        },
+        {
+          "en": "First assess and plan correction of the gingiva",
+          "ru": "Сначала оценить десну и спланировать коррекцию",
+          "uz": "Avval milk holatini baholab tuzatishni rejalash"
+        },
+        {
+          "en": "Change only the crown shade",
+          "ru": "Изменить только цвет коронок",
+          "uz": "Faqat tojlar rangini o‘zgartirish"
+        },
+        {
+          "en": "Hide it by lengthening the crowns",
+          "ru": "Скрыть её, удлинив коронки",
+          "uz": "Tojlarni uzunroq qilib yashirish"
+        }
+      ],
+      "correct": 1,
+      "explain": {
+        "en": "The gingiva shows in a high smile, so asymmetry is corrected periodontally or orthodontically beforehand.",
+        "ru": "При высокой улыбке десна видна, поэтому асимметрию заранее корректируют пародонтологически или ортодонтически.",
+        "uz": "Baland tabassumda milk ko‘rinadi, shuning uchun asimmetriyani parodontal yoki ortodontik yo‘l bilan oldindan tuzatish rejalashtiriladi."
+      }
+    }
+  ]
+}
