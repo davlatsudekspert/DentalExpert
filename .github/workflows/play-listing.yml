@@ -1,0 +1,27 @@
+# Uploads the Play store listing (texts, icon, feature graphic, phone screenshots for en-US and ru-RU).
+# Needs the PLAY_SERVICE_ACCOUNT_JSON secret (service account JSON key with access to the app in Play Console).
+name: Google Play listing upload
+on:
+  workflow_dispatch:
+jobs:
+  listing:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: prototype
+    steps:
+      - name: Check secret
+        env:
+          PLAY_SERVICE_ACCOUNT_JSON: ${{ secrets.PLAY_SERVICE_ACCOUNT_JSON }}
+        run: |
+          if [ -z "$PLAY_SERVICE_ACCOUNT_JSON" ]; then echo "::error::PLAY_SERVICE_ACCOUNT_JSON secret is not set (GitHub → Settings → Secrets and variables → Actions)."; exit 1; fi
+        working-directory: .
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install google-api-python-client==2.151.0 google-auth==2.36.0
+      - name: Upload listing
+        env:
+          PLAY_SERVICE_ACCOUNT_JSON: ${{ secrets.PLAY_SERVICE_ACCOUNT_JSON }}
+        run: python3 tools/play_listing.py
