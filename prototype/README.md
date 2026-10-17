@@ -29,7 +29,7 @@ Build natijasi `dist/` ichida. `demo.html` esa shu buildning bitta faylga yig‘
 ## Prototipni sinash
 
 - Desktopda chapdagi ekranlar ro‘yxati; telefonda pastki o‘ngdagi ekran tanlagich.
-- Oddiy ochilganda premium ro‘yxatdan o‘tish/kirish ekrani chiqadi. `?screen=auth&lang=uz`, `?screen=profile&lang=en` kabi parametrlar ekranlarni bevosita ochadi.
+- Oddiy ochilganda premium ro‘yxatdan o‘tish/kirish ekrani chiqadi. `?screen=auth&lang=uz`, `?screen=profile&lang=en`, `?screen=plans&lang=ru` kabi parametrlar ekranlarni bevosita ochadi.
 - Onboarding yoki Sozlamalardan UZ / RU / EN tilini tanlang.
 - Rol tanlash → premium kirish ekrani → ro‘yxatdan o‘tish yoki demo kirish → rol bosh sahifasi.
 - Bemorning Asosiy sahifasida 4 ta “Namuna reklama” kartasi 2×2 ko‘rinishda va mavjud demo profilga ochiladi. Hozir Andijon, Farg‘ona, Toshkent va Dubayda tanlangan shaharga mos to‘rttadan namuna karta chiqadi; haqiqiy kampaniya, to‘lov yoki Free/Pro obuna ishlamaydi; keyingi oqim va tarif taklifi `MONETIZATION_PLAN.md`da.
@@ -39,9 +39,11 @@ Build natijasi `dist/` ichida. `demo.html` esa shu buildning bitta faylga yig‘
 - Anatomiya sahifasida `Tish Rasm.rar`dagi kesim, tashqi va yuqori ko‘rinishlarni tanlash mumkin. «360° ko‘rinish»ni bosib uch ildizli tishning old, o‘ng, orqa va chap premium tasvirlarini aylantirib ko‘ring; drag, klaviatura strelkalari va yaqinlashtirish ishlaydi. Bu to‘rtta statik renderdan tuzilgan vizual prototip, uzluksiz 3D mesh emas. Qatlam tanlanganda premium kesim tasviri ochiladi.
 - Profil tahriri joriy sessiya ichida aks etadi; yangilaganda barcha demo holatlar tiklanadi.
 - Kirish ekranida ma’qullangan premium tish rasmi markazda turadi; uning ostidagi asosiy tugma ro‘yxatdan o‘tishni ochadi. «Parolni unutdingizmi?» tiklash sahifasini, sozlamalar esa parolni almashtirish, profil tahriri, maxfiylik, forum va bildirishnomalarni ochadi. Surat yuklash faqat lokal preview. Hozirgi reja email-kodli autentifikatsiya; Apple/Google do‘konlarining maxfiylik talablari ijtimoiy kirish tugmasi bilan adashtirilmasin. Haqiqiy autentifikatsiya hali ulanmagan.
+- Ro‘yxatdan o‘tish shaklida mamlakat/shahar tanlovi, so‘ng alohida email-kod **dizayn ekrani** bor. Kod yuborilmaydi va tekshirilmaydi; demo tugmasi tanlangan rolning sahifasiga olib o‘tadi. Shifokor profilida qo‘ng‘iroq, Telegram, Instagram, email, xarita va karta ko‘rinishidagi aloqa paneli bor; tasdiqlangan kontakt bo‘lmagani uchun ularning havolasi hozir faol emas.
+- Kasbiy kabinetda Free/Pro tariflari va shahar reklama boshqaruvining dizayn sahifalari mavjud. 1/3/6/10 kun tanlash vizual ishlaydi, ammo kampaniya nashr etilmaydi va to‘lov qilinmaydi.
 - Forumda ogohlantirish va qoidalar, stomatologiya mavzusidagi demo post/izoh hamda lokal shikoyat amali bor. Mavzudan tashqari yoki taqiqlangan iboralar frontendda qaytariladi. Haqiqiy moderatsiya, shikoyat navbati, xabarnoma va doimiy saqlash uchun server kerak.
 
-27 ko‘rinish: splash, onboarding, rol tanlash, premium kirish, login, sign up, bemor bosh sahifasi, qidiruv, shifokor profili, klinika, qabul, stomatolog ish maydoni, profil tahriri, bemor kartasi, odontogramma, anatomiya, ustoz, talaba, kurslar, rasmli dars, amaliy holat, sozlamalar, parolni tiklash, parolni almashtirish, maxfiylik, forum va bildirishnomalar.
+30 ko‘rinish: splash, onboarding, rol tanlash, premium kirish, login, sign up, email-kod dizayni, bemor bosh sahifasi, qidiruv, shifokor profili, klinika, qabul, stomatolog ish maydoni, profil tahriri, bemor kartasi, odontogramma, anatomiya, ustoz, talaba, kurslar, rasmli dars, amaliy holat, Free/Pro tariflari, reklama kabineti, sozlamalar, parolni tiklash, parolni almashtirish, maxfiylik, forum va bildirishnomalar.
 
 ## Vizual yo‘nalish va chegaralar
 
@@ -57,12 +59,13 @@ Login ma’lumotlarini hech qayerga yubormaydi. Maxfiylik sahifasi yuridik jihat
 
 - TypeScript + production build: `npm run build`.
 - `tools/verify.py`: Playwright + Python, tizim Chromium kerak. Ishlayotgan Vite serveriga qarshi `python tools/verify.py` yoki offline HTML bilan `PROTOTYPE_HTML=demo.html python tools/verify.py`.
-- Barcha 25 ekran uch tilda, asosiy interaksiyalar, 360 / 390 / 430 / 1280 px moslashuv tekshirildi; brauzer exception yo‘q.
+- Barcha 30 ekran uch tilda, asosiy interaksiyalar, 360 / 390 / 430 / 1280 px moslashuv tekshirildi; brauzer exception yo‘q.
 - `screenshots/*.png`: haqiqiy frontendning 390 px kenglikdagi to‘liq sahifa tasvirlari (2× pixel density). Uzun ekranlarni ko‘rish uchun skroll kerak.
+- `screenshots/jpg/*.jpg`: har bir ekranning telefonda ko‘rishga qulay nusxasi; `tools/package.py` PNGlardan qayta yaratadi.
 - `screenshots/preview-board.png`: premium kirish ekrani bilan boshlanadigan 8 ta asosiy ekranning umumiy boardi.
 - `screenshots/validation.json`: bajarilgan tekshiruvlar ro‘yxati.
 - `tools/package.py`: tayyor builddan offline HTML, board va ZIP qayta yaratadi; Pillow kerak. Avval build, keyin verify, keyin package bajaring.
-- `dental-expert-review.zip`: telefonda ko‘rish uchun ixcham to‘plam — offline `demo.html`, 25 ta sahifa rasmi, anatomiya ko‘rinishlari va ochish yo‘riqnomasi.
+- `dental-expert-prototype.zip`: offline `demo.html`, 30 ta sahifa rasmi, anatomiya ko‘rinishlari va kodni o‘z ichiga oladi.
 
 ## Fayllar
 
@@ -72,8 +75,10 @@ Login ma’lumotlarini hech qayerga yubormaydi. Maxfiylik sahifasi yuridik jihat
 `tools/build_reference_molar.py` — arxivdagi JPG ko‘rinishlari asosida uch ildizli tahrirlanadigan Blender sahnasi va GLB draft yaratadi.
 `public/clinicians.png` — dastlabki 3 ta fiktsion portret; `assets/clinician-contact-sheet.png` va `assets/headscarf-clinicians.png` — qolgan demo profillar uchun fotografik kontakt-varaqlar. Har demo shaharda 2 erkak va 2 ayol portreti bor; ayollardan biri ro‘molli. Bular haqiqiy shifokorlarning suratlari emas; `src/Portrait.tsx` — uning vektor fallbacki. `src/LogoMark.tsx` — original vektor logo.
 `src/style.css` — mobil dizayn tizimi va responsive layout.
+`src/DesignCompletion.tsx` — email-kod, tarif va reklama kabineti uchun yakunlovchi demo dizaynlar; `src/ContactPreview.tsx` — shifokor profilidagi olti aloqa belgisi.
+`DESIGN_LOCK.md` — Claude uchun ekranlar, holatlar, ranglar va keyingi kodlash chegaralari bo‘yicha tayyor UX kontrakt.
 `DESIGN_HANDOFF.md` — Claude Code yoki keyingi ishlab chiquvchi uchun topshirish.
 
-Asl loyiha bo‘sh edi; barcha yangi ish faqat `prototype/` ichida. Manba kod foydalanuvchi ruxsati bilan GitHubdagi public repoga yuborilgan; ilova alohida deploy qilinmagan. Fayllarni saqlab qolishning mustaqil usuli — ZIPni o‘z qurilmangizga yuklab olish.
+Asl loyiha bo‘sh edi; barcha yangi ish faqat `prototype/` ichida. Manba kod foydalanuvchi ruxsati bilan GitHubdagi mavjud repoga yuborilgan; ilova alohida deploy qilinmagan. Fayllarni saqlab qolishning mustaqil usuli — ZIPni o‘z qurilmangizga yuklab olish.
 
 Offline HTMLning navigatsiyasi va demo qabuli brauzer xotirasidan yuklash orqali tekshirildi: tashqi HTTP so‘rovlari yo‘q. Cloud Chromium `file://` navigatsiyasini administrator siyosati bilan bloklaydi, shu sababli faylni bevosita ochish ushbu muhitda tekshirilmagan. ZIP yaxlitligi tekshirildi. Bulut uchun install/start ko‘rsatmalari draft sifatida saqlandi; ular avtomatik faollashtirilmagan va muhit publikatsiya qilinmagan.

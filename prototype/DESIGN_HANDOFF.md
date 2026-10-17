@@ -2,7 +2,7 @@
 
 ## Scope
 
-Continue a standalone **mobile UI design prototype**, not a production application. The user requests cost-conscious work and no publication. Do not introduce backend, database, real authentication, payments, paid maps, app-store workflows or Flutter. Keep work in `prototype/` until explicitly authorized otherwise. Use the existing isolated checkout; do not create a worktree unless requested.
+Use this standalone **mobile UI design prototype** as the visual contract for coding the application. The user requests cost-conscious work and no app publication yet. Implement live features in reviewable, tested slices; preserve the prototype as a visual baseline. Use the existing checkout; do not create a worktree unless requested.
 
 ## Current state
 
@@ -23,11 +23,11 @@ The two chat reference images establish ice-blue/ivory surfaces, navy headings, 
 
 ## Navigation and local interactions
 
-27 screen IDs are in `screens` inside `src/main.tsx`. `?screen=...&lang=uz|ru|en` permits deterministic screenshots. `go` maintains a small in-memory history; top back returns to the preceding screen. Bottom navigation selects role home, search, anatomy, learning or settings. Mobile screen selector exposes every screen for review. `src/AccountCommunity.tsx` adds local-only password recovery/change, privacy, forum and notification screens. Auth and moderation still require server providers.
+30 screen IDs are in `screens` inside `src/main.tsx`. `?screen=...&lang=uz|ru|en` permits deterministic screenshots. `go` maintains a small in-memory history; top back returns to the preceding screen. Bottom navigation selects role home, search, anatomy, learning or settings. Mobile screen selector exposes every screen for review. `src/AccountCommunity.tsx` adds local-only password recovery/change, privacy, forum and notification screens. `src/DesignCompletion.tsx` adds email-code, Free/Pro and city ad-management designs. `src/ContactPreview.tsx` shows six contact channels on a sample profile without inventing live destinations. Auth and moderation still require server providers.
 
 The user's Apple/Google request concerns **App Store and Google Play release/privacy requirements**, not social sign-in buttons. `STORE_RELEASE_REQUIREMENTS.md` is the release specification: data mapping, privacy disclosures, account deletion, permission timing, user-generated content moderation and medical claims. The in-app privacy screen is explicitly a demo and does not replace a published legal policy or store declarations.
 
-Roles: patient → home; dentist → dashboard; teacher → teacher; student → student. Login/signup are demo entry forms. No credentials are saved or transmitted. All state resets on reload. In-memory editing of Dr. Kamila's name is reflected in profile and cards. Booking selects day/time and displays a clearly marked demo confirmation. Search filters the sixteen fictional sample clinicians by selected city and name; a local Saved subset and rating filter work. Andijon, Fargona, Tashkent and Dubai each have four city-specific sample sponsored cards; unsupported cities are not filled with invented local ads. The 32-tooth FDI grid retains selected tooth when moving into anatomy.
+Roles: patient → home; dentist → dashboard; teacher → teacher; student → student. Login/signup are demo entry forms. Signup includes country/city choice and opens an email-code visual flow; no code is sent or verified. No credentials are saved or transmitted. All state resets on reload. In-memory editing of Dr. Kamila's name is reflected in profile and cards. Booking selects day/time and displays a clearly marked demo confirmation. Search filters the sixteen fictional sample clinicians by selected city and name; a local Saved subset and rating filter work. Andijon, Fargona, Tashkent and Dubai each have four city-specific sample sponsored cards; unsupported cities are not filled with invented local ads. The 32-tooth FDI grid retains selected tooth when moving into anatomy.
 
 ## Translation
 
@@ -39,25 +39,29 @@ Roles: patient → home; dentist → dashboard; teacher → teacher; student →
 
 The six JPGs from the user's `Tish Rasm.rar` are preserved under `assets/tooth3d/user-views/`. The exterior views depict three roots while the cutaway views depict two. `tools/build_reference_molar.py` uses the exterior proportions to generate `reference-molar.glb`, an editable `reference-molar.blend`, and a render. The GLB remains available as an editable draft; the anatomy poster now opens the four-view premium turntable, while tissue selection shows the premium cutaway image. This GLB is an approximate original mesh, **not** a photogrammetric reconstruction or premium match to the reference JPGs. `screenshots/anatomy-3d.png` captures the actual loaded frontend mesh so it can be reviewed honestly.
 
-No third-party GLB/GLTF was bundled. Do not copy an unlicensed model into this public repository; use a model with explicit compatible terms if replacing the procedural mesh. The current visuals should receive dental review before any claim of clinical accuracy. `public/clinicians.png` is the original AI-generated three-portrait sheet; `assets/clinician-contact-sheet.png` and `assets/headscarf-clinicians.png` supply photographic-looking synthetic portraits for the remaining sample profiles. Each of the four demo cities presents two male and two female sample clinicians, one of the women wearing a headscarf. `Portrait.tsx` retains vector fallbacks. The map is a CSS illustration. The portraits must not be represented as actual clinicians. All assets are locally available offline.
+No third-party GLB/GLTF was bundled. Do not copy an unlicensed model into this repository; use a model with explicit compatible terms if replacing the procedural mesh. The current visuals should receive dental review before any claim of clinical accuracy. `public/clinicians.png` is the original AI-generated three-portrait sheet; `assets/clinician-contact-sheet.png` and `assets/headscarf-clinicians.png` supply photographic-looking synthetic portraits for the remaining sample profiles. Each of the four demo cities presents two male and two female sample clinicians, one of the women wearing a headscarf. `Portrait.tsx` retains vector fallbacks. The map is a CSS illustration. The portraits must not be represented as actual clinicians. All assets are locally available offline.
 
 The user suggested `NateSaindon/3Dentes` and `Igor-Vuk/dentist-dream` as examples. 3Dentes code is MIT, but its scan-derived geometry is explicitly CC BY-NC 4.0 and is from a named person's imaging. Dentist Dream demonstrates glTF loading, separate layer meshes and orbit controls, but the repository has no declared license for its code or `tooth-final.glb`. No meshes or code from either were copied. Their interaction concepts informed this prototype's direction; verify permissions before using either project in a commercial product.
 
 The learning section now has a visual tooth-layers lesson, three visual questions, an Uzbek PPTX, and a local practice case with sample feedback. Textbook citations and clinical review are pending; see `SOURCE_REGISTER.md`.
 
-## Recommended next design work
+## Design completion contract
 
-1. Compare the four priority screens against the user's visual references, then refine the remaining screens to the same standard. The user's previous review found the first tooth and overall prototype below the requested premium quality.
-2. Split `main.tsx` into `screens/`, `components/Tooth.tsx`, `components/DoctorCard.tsx`, and `i18n/` if continuing beyond this review prototype. Preserve behavior and avoid an unsolicited rewrite.
-3. For any real product, replace fictional demo portraits with consented staff photography and refine profile hero / appointment location selection toward references.
-4. For a continuous production 3D viewer, replace the four-view visual prototype with a properly modeled and licensed GLB/GLTF matched to the approved render. Preserve the draft only as a reference.
-5. Keep demo/test placeholders explicit; do not silently turn them into live features.
+`DESIGN_LOCK.md` is the screen and state inventory for Claude. It records the visual tokens, routing, interaction outcomes, responsive targets and production code seams. The first implementation should use these existing screens and assets as its UI source of truth. It must not present demo-only buttons as live services.
+
+## Recommended next implementation work
+
+1. Turn one complete flow into a real service-backed feature, beginning with account creation and verified email; preserve all visual states.
+2. Split `main.tsx` into role screens and i18n modules when it helps service integration. Preserve visual behavior and avoid an unsolicited rewrite.
+3. Replace fictional demo portraits with consented staff photography or clinic logos as real profiles are created.
+4. Build a properly modeled and licensed continuous 3D viewer only if that is a distinct required feature; keep the premium image atlas until a visual and clinical review accepts a replacement.
+5. Keep demo/test placeholders explicit until their backends and verification are truly working.
 
 ## Verification and artifacts
 
-`npm run build` performs TS checking and production compilation. `python tools/verify.py` checks all screens in three languages, role entry, language switching, doctor search/profile, booking, tooth/layer selection, rotate/zoom, profile edits, password demo, forum warnings/reports and responsive overflow. It writes 27 actual rendered PNGs and `validation.json`; the validation JSON records the exact passing checks and browser exceptions. Chromium and Python Playwright are tooling, not shipped runtime dependencies.
+`npm run build` performs TS checking and production compilation. `python tools/verify.py` checks all screens in three languages, role entry, language switching, doctor search/profile, booking, tooth/layer selection, rotate/zoom, profile edits, password demo, forum warnings/reports, email-code design, tariffs, ad duration and responsive overflow. It writes 30 actual rendered PNGs and `validation.json`; the validation JSON records the exact passing checks and browser exceptions. Chromium and Python Playwright are tooling, not shipped runtime dependencies.
 
-`python tools/package.py` embeds the built CSS/JS into `demo.html` (offline desktop viewing), composes the eight-screen board from real screenshots and generates `dental-expert-prototype.zip` without node_modules. It does not fabricate UI screenshots. The source repository is public with user authorization; the app itself was not deployed. ZIP includes code, lockfile, docs, screenshots, build, offline HTML and validation tools.
+`python tools/package.py` embeds the built CSS/JS into `demo.html` (offline desktop viewing), composes the eight-screen board from real screenshots and generates `dental-expert-prototype.zip` without node_modules. It does not fabricate UI screenshots. The source was pushed to the existing repository with user authorization; the app itself was not deployed. ZIP includes code, lockfile, docs, screenshots, build, offline HTML and validation tools.
 
 ## Remaining review
 

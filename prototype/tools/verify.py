@@ -6,7 +6,7 @@ ROOT=Path(__file__).resolve().parents[1]
 OUT=ROOT/'screenshots'; OUT.mkdir(exist_ok=True)
 OFFLINE_HTML=os.environ.get('PROTOTYPE_HTML')
 BASE='https://dental-demo.local' if OFFLINE_HTML else os.environ.get('PROTOTYPE_URL','http://127.0.0.1:5173')
-SCREENS=['splash','onboard','roles','auth','login','signup','home','search','profile','clinics','booking','dashboard','edit','record','chart','anatomy','teacher','student','courses','lessonPage','caseStudy','settings','forgot','changePassword','privacy','forum','notifications']
+SCREENS=['splash','onboard','roles','auth','login','signup','verifyEmail','home','search','profile','clinics','booking','dashboard','edit','record','chart','anatomy','teacher','student','courses','lessonPage','caseStudy','plans','adManager','settings','forgot','changePassword','privacy','forum','notifications']
 checks=[]
 def check(name,condition):
  assert condition,name
@@ -71,8 +71,16 @@ with sync_playwright() as p:
  go('changePassword','en');page.get_by_label('Current password').fill('old-demo-password');page.get_by_label('New password',exact=True).fill('new-demo-password');page.get_by_label('Repeat new password').fill('different-password');page.get_by_role('button',name='Update password').click();check('password mismatch warning','must match' in page.get_by_role('status').inner_text())
  go('forum','en');page.get_by_role('textbox',name='Question or comment').fill('Political campaigning is here');page.get_by_role('button',name='Add demo post').click();check('off-topic content blocked','does not meet' in page.get_by_role('status').inner_text());page.get_by_role('textbox',name='Question or comment').fill('How does tooth enamel develop?');page.get_by_role('button',name='Add demo post').click();check('dental post appears',page.locator('.forum-post').count()==2);page.get_by_label('Reason for report').first.select_option('spam');page.get_by_role('button',name='Report').first.click();check('report hides post locally',page.locator('.forum-post').count()==1 and 'no moderator received' in page.get_by_role('status').inner_text())
  go('settings','en');page.get_by_role('button',name='Privacy').click();check('privacy page opens',page.locator('.extra-page h2').inner_text()=='Privacy');check('deletion status is honest','not built yet' in page.locator('.extra-card').filter(has_text='Account and data deletion').inner_text())
+ go('signup','en');check('signup offers country selection',page.locator('.discovery-location select').first.locator('option').count()>190)
+ page.get_by_label('Full name').fill('Demo Person');page.get_by_label('Email address').fill('demo@example.com');page.get_by_label('Password',exact=True).fill('demo-password');page.get_by_role('button',name='Create demo account').click();check('signup opens email design',page.locator('.email-verification').count()==1)
+ page.get_by_role('button',name='Resend code').click();check('email screen does not claim delivery','no live service' in page.get_by_role('status').inner_text());page.get_by_role('button',name='Continue to demo').click();check('email design continues to role home',page.locator('.home-header').count()==1)
+ go('profile','en');check('profile shows six contact destinations',page.locator('.contact-action').count()==6);check('contact row stays compact',page.locator('.contact-actions').evaluate('(e)=>e.getBoundingClientRect().height<100'));page.get_by_role('button',name='Telegram').click();check('sample contact has no false link','inactive' in page.get_by_role('status').inner_text())
+ go('plans','en');check('free and pro visual plans',page.locator('.plan-card').count()==2)
+ go('adManager','en');page.get_by_role('button',name='6 days').click();check('ad duration selects six days',page.get_by_role('button',name='6 days').get_attribute('aria-pressed')=='true');page.get_by_role('button',name='Create campaign').click();check('ad action does not claim payment','not connected' in page.get_by_role('status').inner_text())
  for width in [360,430,1280]:
   page.set_viewport_size({'width':width,'height':900});go('home','en');check(f'responsive {width}',page.evaluate('document.documentElement.scrollWidth<=innerWidth'))
+  for screen in ['verifyEmail','plans','adManager','profile']:
+   go(screen,'en');check(f'{screen} responsive {width}',page.evaluate('document.documentElement.scrollWidth<=innerWidth'))
  check('no browser exceptions',not errors)
  browser.close()
 (OUT/'validation.json').write_text(json.dumps({'passed':len(checks),'checks':checks,'browser_errors':errors},indent=2))

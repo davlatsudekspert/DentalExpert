@@ -34,6 +34,9 @@ for idx,(screen,label) in enumerate(selected):
  board.paste(image,(left,top),mask)
 draw.text((62,2340),'Premium tooth visuals · 360° image views · Local demo only',font=f(16),fill='#718da4')
 board.save(ROOT/'screenshots/preview-board.png')
+jpg_dir=ROOT/'screenshots/jpg';jpg_dir.mkdir(exist_ok=True)
+for image_path in sorted((ROOT/'screenshots').glob('*.png')):
+ Image.open(image_path).convert('RGB').save(jpg_dir/f'{image_path.stem}.jpg',quality=86,optimize=True)
 archive=ROOT/'dental-expert-prototype.zip'
 with zipfile.ZipFile(archive,'w',zipfile.ZIP_DEFLATED) as z:
  for path in sorted(ROOT.rglob('*')):
