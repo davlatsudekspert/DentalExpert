@@ -1,0 +1,1011 @@
+{
+  "id": "radio-06",
+  "subject": "radio",
+  "n": 6,
+  "week": 6,
+  "type": "practical",
+  "hours": 2,
+  "title": {
+    "en": "Normal radiographic anatomy of teeth and jaws",
+    "ru": "Нормальная рентгеноанатомия зубов и челюстей",
+    "uz": "Tish va jag‘larning normal rentgen anatomiyasi"
+  },
+  "goals": [
+    {
+      "en": "Describe the normal appearance of dental tissues and periodontium",
+      "ru": "Описывать нормальный вид тканей зуба и периодонта",
+      "uz": "Tish to‘qimalari va periodontning normal ko‘rinishini tasvirlash"
+    },
+    {
+      "en": "Identify maxillary and mandibular landmarks",
+      "ru": "Находить анатомические ориентиры верхней и нижней челюсти",
+      "uz": "Yuqori va pastki jag‘ anatomik belgilarini topish"
+    },
+    {
+      "en": "Distinguish normal structures from pathology",
+      "ru": "Отличать норму от патологии",
+      "uz": "Normal tuzilmalarni patologiyadan farqlash"
+    }
+  ],
+  "links": [
+    "tooth-layers",
+    "atlas"
+  ],
+  "sources": [
+    "Mallya SM, Lam EWN. White and Pharoah's Oral Radiology: Principles and Interpretation, 8th ed., 2019",
+    "Whaites E, Drage N. Essentials of Dental Radiography and Radiology, 6th ed., 2021"
+  ],
+  "slides": [
+    {
+      "layout": "title",
+      "title": {
+        "en": "Normal radiographic anatomy of teeth and jaws",
+        "ru": "Нормальная рентгеноанатомия зубов и челюстей",
+        "uz": "Tish va jag‘larning normal rentgen anatomiyasi"
+      },
+      "subtitle": {
+        "en": "You cannot see disease until you know normal",
+        "ru": "Без знания нормы нельзя распознать патологию",
+        "uz": "Normani bilmasdan patologiyani tanib bo‘lmaydi"
+      }
+    },
+    {
+      "layout": "figure",
+      "title": {
+        "en": "Tooth and periodontium",
+        "ru": "Зуб и периодонт",
+        "uz": "Tish va periodont"
+      },
+      "image": "cutaway",
+      "callouts": [
+        {
+          "at": "enamel",
+          "label": {
+            "en": "Enamel: most opaque",
+            "ru": "Эмаль: самая светлая",
+            "uz": "Emal: eng oq"
+          }
+        },
+        {
+          "at": "dentin",
+          "label": {
+            "en": "Dentin",
+            "ru": "Дентин",
+            "uz": "Dentin"
+          }
+        },
+        {
+          "at": "pulp",
+          "label": {
+            "en": "Pulp chamber",
+            "ru": "Полость пульпы",
+            "uz": "Pulpa kamerasi"
+          }
+        },
+        {
+          "at": "canal",
+          "label": {
+            "en": "Root canal",
+            "ru": "Корневой канал",
+            "uz": "Ildiz kanali"
+          }
+        },
+        {
+          "at": "cej",
+          "label": {
+            "en": "Cementoenamel junction",
+            "ru": "Эмалево-цементная граница",
+            "uz": "Emal-sement chegarasi"
+          }
+        },
+        {
+          "at": "apex",
+          "label": {
+            "en": "Apex",
+            "ru": "Апекс",
+            "uz": "Apeks"
+          }
+        }
+      ],
+      "bullets": [
+        {
+          "en": "Cementum is not distinguishable from dentin",
+          "ru": "Цемент на снимке почти не отличим от дентина",
+          "uz": "Sement rentgenda dentindan deyarli farq qilmaydi"
+        }
+      ],
+      "note": {
+        "en": "Point to each layer and ask the student to name its radiographic shade.",
+        "ru": "Показывая каждый слой, просите студента назвать его оттенок на снимке.",
+        "uz": "Rasmda har bir qatlamni ko‘rsatib, talabadan uning rentgendagi tusini aytishini so‘rang."
+      }
+    },
+    {
+      "layout": "compare",
+      "title": {
+        "en": "PDL space and lamina dura",
+        "ru": "Периодонтальная щель и lamina dura",
+        "uz": "Periodontal tirqish va lamina dura"
+      },
+      "columns": [
+        {
+          "head": {
+            "en": "PDL space",
+            "ru": "Периодонтальная щель",
+            "uz": "Periodontal tirqish"
+          },
+          "items": [
+            {
+              "en": "Thin dark line around the root",
+              "ru": "Тонкая тёмная линия вокруг корня",
+              "uz": "Ildiz atrofidagi ingichka qora chiziq"
+            },
+            {
+              "en": "Contains the periodontal ligament",
+              "ru": "Здесь находится периодонтальная связка",
+              "uz": "Periodontal boylam joylashgan"
+            },
+            {
+              "en": "Widening is an early sign of disease",
+              "ru": "Расширение — ранний признак патологии",
+              "uz": "Kengayishi — erta patologik belgi"
+            }
+          ]
+        },
+        {
+          "head": {
+            "en": "Lamina dura",
+            "ru": "Lamina dura",
+            "uz": "Lamina dura"
+          },
+          "items": [
+            {
+              "en": "Thin white line of the socket wall",
+              "ru": "Тонкая светлая линия стенки лунки",
+              "uz": "Alveola devorining ingichka oq chizig‘i"
+            },
+            {
+              "en": "Continues into the alveolar crest",
+              "ru": "Продолжается в альвеолярный гребень",
+              "uz": "Alveolyar qirrada davom etadi"
+            },
+            {
+              "en": "Loss suggests periapical disease",
+              "ru": "Исчезновение — признак периапикальной патологии",
+              "uz": "Yo‘qolishi — apikal patologiya belgisi"
+            }
+          ]
+        }
+      ],
+      "note": {
+        "en": "Remind students that the normal crest lies about 1–2 mm below the CEJ.",
+        "ru": "Напомните: нормальный альвеолярный гребень лежит примерно на 1–2 мм ниже эмалево-цементной границы.",
+        "uz": "Normal alveolyar qirra emal-sement chegarasidan taxminan 1–2 mm pastda joylashishini eslating."
+      }
+    },
+    {
+      "layout": "tree",
+      "title": {
+        "en": "Maxillary landmarks",
+        "ru": "Ориентиры верхней челюсти",
+        "uz": "Yuqori jag‘ belgilari"
+      },
+      "root": {
+        "en": "Maxilla",
+        "ru": "Верхняя челюсть",
+        "uz": "Yuqori jag‘"
+      },
+      "children": [
+        {
+          "label": {
+            "en": "Anterior",
+            "ru": "Фронтальный отдел",
+            "uz": "Old soha"
+          },
+          "items": [
+            {
+              "en": "Incisive foramen",
+              "ru": "Резцовое отверстие",
+              "uz": "Kesuv teshigi"
+            },
+            {
+              "en": "Median palatine suture",
+              "ru": "Срединный нёбный шов",
+              "uz": "O‘rta tanglay choki"
+            },
+            {
+              "en": "Nasal floor",
+              "ru": "Дно полости носа",
+              "uz": "Burun bo‘shlig‘i tubi"
+            }
+          ]
+        },
+        {
+          "label": {
+            "en": "Canine-premolar",
+            "ru": "Клык–премоляры",
+            "uz": "Kanin-premolyar"
+          },
+          "items": [
+            {
+              "en": "Inverted Y (nose and sinus)",
+              "ru": "Y-линия (нос и пазуха)",
+              "uz": "Y-chiziq (burun va bo‘shliq)"
+            }
+          ]
+        },
+        {
+          "label": {
+            "en": "Molar region",
+            "ru": "Область моляров",
+            "uz": "Molyar soha"
+          },
+          "items": [
+            {
+              "en": "Maxillary sinus",
+              "ru": "Верхнечелюстная пазуха",
+              "uz": "Yuqori jag‘ bo‘shlig‘i"
+            },
+            {
+              "en": "Zygomatic process",
+              "ru": "Скуловой отросток",
+              "uz": "Yonoq o‘simtasi"
+            },
+            {
+              "en": "Tuberosity, hamulus",
+              "ru": "Бугор и крючок",
+              "uz": "Do‘mboq va ilmoqcha"
+            },
+            {
+              "en": "Coronoid process",
+              "ru": "Венечный отросток",
+              "uz": "Toj o‘simtasi"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "layout": "tree",
+      "title": {
+        "en": "Mandibular landmarks",
+        "ru": "Ориентиры нижней челюсти",
+        "uz": "Pastki jag‘ belgilari"
+      },
+      "root": {
+        "en": "Mandible",
+        "ru": "Нижняя челюсть",
+        "uz": "Pastki jag‘"
+      },
+      "children": [
+        {
+          "label": {
+            "en": "Anterior",
+            "ru": "Фронтальный отдел",
+            "uz": "Old soha"
+          },
+          "items": [
+            {
+              "en": "Mental ridge",
+              "ru": "Подбородочный выступ",
+              "uz": "Iyak qirrasi"
+            },
+            {
+              "en": "Lingual foramen, genial tubercles",
+              "ru": "Язычное отверстие и подбородочные ости",
+              "uz": "Til teshigi va genial do‘mboqlar"
+            }
+          ]
+        },
+        {
+          "label": {
+            "en": "Premolar region",
+            "ru": "Область премоляров",
+            "uz": "Premolyar soha"
+          },
+          "items": [
+            {
+              "en": "Mental foramen",
+              "ru": "Подбородочное отверстие",
+              "uz": "Iyak teshigi"
+            }
+          ]
+        },
+        {
+          "label": {
+            "en": "Molar region",
+            "ru": "Область моляров",
+            "uz": "Molyar soha"
+          },
+          "items": [
+            {
+              "en": "Mandibular canal",
+              "ru": "Нижнечелюстной канал",
+              "uz": "Pastki jag‘ kanali"
+            },
+            {
+              "en": "Submandibular fossa",
+              "ru": "Ямка поднижнечелюстной железы",
+              "uz": "Jag‘ osti bezi chuqurchasi"
+            },
+            {
+              "en": "Internal and external oblique ridges",
+              "ru": "Внутренняя и наружная косые линии",
+              "uz": "Ichki va tashqi qiya chiziq"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "layout": "table",
+      "title": {
+        "en": "Normal structures that mimic disease",
+        "ru": "Нормальные структуры, похожие на патологию",
+        "uz": "Patologiyaga o‘xshash normal tuzilmalar"
+      },
+      "head": [
+        {
+          "en": "Structure",
+          "ru": "Структура",
+          "uz": "Tuzilma"
+        },
+        {
+          "en": "Can mimic",
+          "ru": "На что похожа",
+          "uz": "Nimaga o‘xshaydi"
+        },
+        {
+          "en": "How to tell",
+          "ru": "Как отличить",
+          "uz": "Qanday farqlanadi"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "en": "Mental foramen",
+            "ru": "Подбородочное отверстие",
+            "uz": "Iyak teshigi"
+          },
+          {
+            "en": "Premolar periapical lesion",
+            "ru": "Очаг у апекса премоляра",
+            "uz": "Premolyar apeksidagi o‘choq"
+          },
+          {
+            "en": "Intact lamina dura and PDL; shifts with angle",
+            "ru": "Lamina dura и щель целы; смещается при смене угла",
+            "uz": "Lamina dura va tirqish butun; burchak o‘zgarsa siljiydi"
+          }
+        ],
+        [
+          {
+            "en": "Incisive foramen",
+            "ru": "Резцовое отверстие",
+            "uz": "Kesuv teshigi"
+          },
+          {
+            "en": "Radicular cyst of incisors",
+            "ru": "Радикулярная киста резцов",
+            "uz": "Kesuv tishlar apikal kistasi"
+          },
+          {
+            "en": "Midline, vital teeth, intact lamina dura",
+            "ru": "По средней линии, зубы витальны, lamina dura цела",
+            "uz": "O‘rtada, tishlar sog‘lom, lamina dura butun"
+          }
+        ],
+        [
+          {
+            "en": "Maxillary sinus",
+            "ru": "Верхнечелюстная пазуха",
+            "uz": "Yuqori jag‘ bo‘shlig‘i"
+          },
+          {
+            "en": "Cyst or lesion",
+            "ru": "Киста или очаг",
+            "uz": "Kista yoki o‘choq"
+          },
+          {
+            "en": "Thin opaque border, bilateral",
+            "ru": "Тонкий светлый контур, симметрично",
+            "uz": "Ingichka oq chegara, ikki tomonda o‘xshash"
+          }
+        ],
+        [
+          {
+            "en": "Dental papilla of a developing root",
+            "ru": "Зубной сосочек у формирующегося корня",
+            "uz": "Rivojlanayotgan ildiz uchidagi so‘rg‘ich"
+          },
+          {
+            "en": "Periapical inflammation",
+            "ru": "Периапикальное воспаление",
+            "uz": "Apikal yallig‘lanish"
+          },
+          {
+            "en": "Open apex, intact lamina dura, young patient",
+            "ru": "Открытый апекс, lamina dura цела, молодой пациент",
+            "uz": "Ochiq apeks, lamina dura butun, yosh bemor"
+          }
+        ]
+      ],
+      "note": {
+        "en": "Telling the mental foramen from a periapical lesion is a classic clinical and exam distinction.",
+        "ru": "Отличие подбородочного отверстия от периапикального очага — одно из важнейших на практике и на экзамене.",
+        "uz": "Iyak teshigini apikal o‘choqdan farqlash — klinik va imtihon uchun eng muhim farqlardan biri."
+      }
+    },
+    {
+      "layout": "flow",
+      "title": {
+        "en": "Systematic reading of a radiograph",
+        "ru": "Систематическое чтение снимка",
+        "uz": "Rentgenogrammani tizimli o‘qish"
+      },
+      "steps": [
+        {
+          "label": {
+            "en": "Quality",
+            "ru": "Качество",
+            "uz": "Sifat"
+          },
+          "detail": {
+            "en": "Exposure, angle and coverage",
+            "ru": "Экспозиция, угол и охват",
+            "uz": "Ekspozitsiya, burchak va qamrov"
+          }
+        },
+        {
+          "label": {
+            "en": "Teeth",
+            "ru": "Зубы",
+            "uz": "Tishlar"
+          },
+          "detail": {
+            "en": "Crown, pulp, root, restorations",
+            "ru": "Коронка, пульпа, корень, пломбы",
+            "uz": "Toj, pulpa, ildiz, plombalar"
+          }
+        },
+        {
+          "label": {
+            "en": "Periodontium",
+            "ru": "Периодонт",
+            "uz": "Periodont"
+          },
+          "detail": {
+            "en": "PDL, lamina dura, alveolar crest",
+            "ru": "Щель, lamina dura, альвеолярный гребень",
+            "uz": "Tirqish, lamina dura, alveolyar qirra"
+          }
+        },
+        {
+          "label": {
+            "en": "Bone and landmarks",
+            "ru": "Кость и ориентиры",
+            "uz": "Suyak va belgilar"
+          },
+          "detail": {
+            "en": "Trabecular pattern, canals, sinus",
+            "ru": "Рисунок трабекул, каналы, пазуха",
+            "uz": "Trabekula naqshi, kanallar, bo‘shliq"
+          }
+        },
+        {
+          "label": {
+            "en": "Report",
+            "ru": "Заключение",
+            "uz": "Xulosa"
+          },
+          "detail": {
+            "en": "Normal or list of findings",
+            "ru": "Норма или перечень находок",
+            "uz": "Norma yoki topilmalar ro‘yxati"
+          }
+        }
+      ]
+    },
+    {
+      "layout": "summary",
+      "title": {
+        "en": "Summary",
+        "ru": "Итоги",
+        "uz": "Xulosa"
+      },
+      "bullets": [
+        {
+          "en": "Enamel is whitest; pulp and PDL space are dark",
+          "ru": "Эмаль самая светлая, пульпа и периодонтальная щель тёмные",
+          "uz": "Emal eng oq, pulpa va periodontal tirqish qora"
+        },
+        {
+          "en": "Intact lamina dura and a narrow PDL mean a healthy periapex",
+          "ru": "Целая lamina dura и узкая щель — признак здорового периапекса",
+          "uz": "Butun lamina dura va tor tirqish — sog‘lom periapikal soha belgisi"
+        },
+        {
+          "en": "Foramina, sinus and open apices can mimic disease",
+          "ru": "Подбородочное и резцовое отверстия, пазуха и открытый апекс могут имитировать патологию",
+          "uz": "Iyak va kesuv teshiklari, bo‘shliq va ochiq apeks patologiyaga o‘xshashi mumkin"
+        },
+        {
+          "en": "Read every image in the same order",
+          "ru": "Читайте каждый снимок по одной схеме",
+          "uz": "Har bir snimokni bir xil tartibda o‘qing"
+        }
+      ]
+    }
+  ],
+  "oral": [
+    {
+      "q": {
+        "en": "What does a healthy periapical region look like?",
+        "ru": "Как выглядит здоровая периапикальная область на снимке?",
+        "uz": "Sog‘lom periapikal soha rentgenda qanday ko‘rinadi?"
+      },
+      "plan": [
+        {
+          "en": "Uniformly narrow PDL space",
+          "ru": "Равномерно узкая периодонтальная щель",
+          "uz": "Bir tekis tor periodontal tirqish"
+        },
+        {
+          "en": "Continuous lamina dura",
+          "ru": "Непрерывная lamina dura",
+          "uz": "Uzluksiz lamina dura"
+        },
+        {
+          "en": "Normal trabecular pattern",
+          "ru": "Нормальный трабекулярный рисунок",
+          "uz": "Normal trabekulyar naqsh"
+        },
+        {
+          "en": "No radiolucency at the apex",
+          "ru": "Нет очага разрежения у апекса",
+          "uz": "Apeks atrofida qora o‘choq yo‘q"
+        }
+      ]
+    },
+    {
+      "q": {
+        "en": "How do you tell the mental foramen from a periapical lesion?",
+        "ru": "Как отличить подбородочное отверстие от периапикального очага?",
+        "uz": "Iyak teshigini apikal o‘choqdan qanday farqlaysiz?"
+      },
+      "plan": [
+        {
+          "en": "Intact lamina dura and PDL",
+          "ru": "Сохранность lamina dura и щели",
+          "uz": "Lamina dura va tirqish butunligi"
+        },
+        {
+          "en": "Shifts with a change of angle",
+          "ru": "Смещение при изменении угла",
+          "uz": "Burchak o‘zgarganda siljishi"
+        },
+        {
+          "en": "Tooth responds to sensibility tests",
+          "ru": "Пульпа витальна (тест чувствительности)",
+          "uz": "Tish pulpasi sog‘lom (sezgirlik testi)"
+        },
+        {
+          "en": "Usually near premolar apices",
+          "ru": "Обычно у апексов премоляров",
+          "uz": "Odatda premolyarlar apeksi sohasida"
+        }
+      ]
+    },
+    {
+      "q": {
+        "en": "List the main radiographic landmarks of the mandible.",
+        "ru": "Перечислите основные рентгеноориентиры нижней челюсти.",
+        "uz": "Pastki jag‘ning asosiy rentgen belgilarini sanang."
+      },
+      "plan": [
+        {
+          "en": "Mandibular canal and mental foramen",
+          "ru": "Нижнечелюстной канал и подбородочное отверстие",
+          "uz": "Pastki jag‘ kanali va iyak teshigi"
+        },
+        {
+          "en": "Lingual foramen and genial tubercles",
+          "ru": "Язычное отверстие и подбородочные ости",
+          "uz": "Til teshigi va genial do‘mboqlar"
+        },
+        {
+          "en": "Internal and external oblique ridges",
+          "ru": "Внутренняя и наружная косые линии",
+          "uz": "Ichki va tashqi qiya chiziqlar"
+        },
+        {
+          "en": "Submandibular fossa",
+          "ru": "Ямка поднижнечелюстной железы",
+          "uz": "Jag‘ osti bezi chuqurchasi"
+        }
+      ]
+    },
+    {
+      "q": {
+        "en": "Describe the radiographic appearance of the maxillary sinus.",
+        "ru": "Опишите рентгенологический вид верхнечелюстной пазухи.",
+        "uz": "Yuqori jag‘ bo‘shlig‘ining rentgen ko‘rinishini tasvirlang."
+      },
+      "plan": [
+        {
+          "en": "Large radiolucency above molars and premolars",
+          "ru": "Крупная тёмная область над молярами и премолярами",
+          "uz": "Molyar-premolyar ustidagi katta qora soha"
+        },
+        {
+          "en": "Thin radiopaque cortical border",
+          "ru": "Тонкий светлый кортикальный контур",
+          "uz": "Ingichka oq kortikal chegara"
+        },
+        {
+          "en": "Septa and closeness to roots",
+          "ru": "Перегородки и близость к корням",
+          "uz": "To‘siqlar va ildizlarga yaqinlik"
+        },
+        {
+          "en": "Unlike a cyst: bilateral, smooth outline",
+          "ru": "Отличие от кисты: симметрия, ровный контур",
+          "uz": "Kistadan farqi: ikki tomonlama, chegara silliq"
+        }
+      ]
+    }
+  ],
+  "test": [
+    {
+      "q": {
+        "en": "How does the lamina dura appear on a radiograph?",
+        "ru": "Как выглядит lamina dura на снимке?",
+        "uz": "Lamina dura rentgenogrammada qanday ko‘rinadi?"
+      },
+      "options": [
+        {
+          "en": "Dark line around the root",
+          "ru": "Тёмная линия вокруг корня",
+          "uz": "Ildiz atrofidagi qora chiziq"
+        },
+        {
+          "en": "Thin white line of the socket wall",
+          "ru": "Тонкая светлая линия стенки лунки",
+          "uz": "Alveola devorining ingichka oq chizig‘i"
+        },
+        {
+          "en": "Round dark spot at the apex",
+          "ru": "Округлый тёмный очаг у апекса",
+          "uz": "Apeksdagi yumaloq qora o‘choq"
+        },
+        {
+          "en": "White layer over the crown",
+          "ru": "Светлый слой на коронке",
+          "uz": "Toj ustidagi oq qatlam"
+        }
+      ],
+      "correct": 1,
+      "explain": {
+        "en": "The lamina dura is the cortical socket wall, a thin radiopaque line.",
+        "ru": "Lamina dura — компактная кость стенки лунки, тонкая рентгеноконтрастная линия.",
+        "uz": "Lamina dura — alveola devorining kompakt suyagi, ingichka rentgenokontrast chiziq."
+      }
+    },
+    {
+      "q": {
+        "en": "What does the PDL space represent?",
+        "ru": "Что отображает периодонтальная щель?",
+        "uz": "Periodontal tirqish nimani aks ettiradi?"
+      },
+      "options": [
+        {
+          "en": "The cementum layer",
+          "ru": "Слой цемента",
+          "uz": "Sement qatlamini"
+        },
+        {
+          "en": "The pulp canal",
+          "ru": "Канал пульпы",
+          "uz": "Pulpa kanalini"
+        },
+        {
+          "en": "The periodontal ligament",
+          "ru": "Периодонтальную связку",
+          "uz": "Periodontal boylamni"
+        },
+        {
+          "en": "Cortical bone",
+          "ru": "Компактную кость",
+          "uz": "Kompakt suyakni"
+        }
+      ],
+      "correct": 2,
+      "explain": {
+        "en": "The soft-tissue ligament is radiolucent and forms a dark line around the root.",
+        "ru": "Мягкотканная связка пропускает лучи и даёт тёмную линию вокруг корня.",
+        "uz": "Yumshoq to‘qimali boylam nur o‘tkazadi va ildiz atrofida qora chiziq beradi."
+      }
+    },
+    {
+      "q": {
+        "en": "A round radiolucency lies at a lower second premolar apex; lamina dura is intact and the tooth responds to testing. Most likely?",
+        "ru": "У апекса нижнего второго премоляра округлое разрежение, lamina dura цела, зуб реагирует на тесты. Вероятнее всего?",
+        "uz": "Pastki ikkinchi premolyar apeksida yumaloq qora soha bor, lamina dura butun, tish sezgirlik testiga javob beradi. Eng ehtimoliy tashxis?"
+      },
+      "options": [
+        {
+          "en": "Radicular cyst",
+          "ru": "Радикулярная киста",
+          "uz": "Radikulyar kista"
+        },
+        {
+          "en": "Apical granuloma",
+          "ru": "Апикальная гранулёма",
+          "uz": "Apikal granulema"
+        },
+        {
+          "en": "Apical abscess",
+          "ru": "Апикальный абсцесс",
+          "uz": "Apikal abssess"
+        },
+        {
+          "en": "Mental foramen",
+          "ru": "Подбородочное отверстие",
+          "uz": "Iyak teshigi"
+        }
+      ],
+      "correct": 3,
+      "explain": {
+        "en": "Intact lamina dura and a vital pulp point to a normal anatomical structure.",
+        "ru": "Целая lamina dura и витальная пульпа указывают на анатомическую структуру.",
+        "uz": "Butun lamina dura va sog‘lom pulpa normal anatomik tuzilmani ko‘rsatadi."
+      }
+    },
+    {
+      "q": {
+        "en": "An oval radiolucency between the roots of the upper central incisors is usually what?",
+        "ru": "Что обычно представляет тёмная овальная область между корнями верхних центральных резцов?",
+        "uz": "Yuqori markaziy kesuv tishlar ildizlari orasidagi qora oval soha odatda nima?"
+      },
+      "options": [
+        {
+          "en": "Incisive foramen",
+          "ru": "Резцовое отверстие",
+          "uz": "Kesuv teshigi"
+        },
+        {
+          "en": "Mental foramen",
+          "ru": "Подбородочное отверстие",
+          "uz": "Iyak teshigi"
+        },
+        {
+          "en": "Maxillary sinus",
+          "ru": "Верхнечелюстная пазуха",
+          "uz": "Yuqori jag‘ bo‘shlig‘i"
+        },
+        {
+          "en": "Lingual foramen",
+          "ru": "Язычное отверстие",
+          "uz": "Til teshigi"
+        }
+      ],
+      "correct": 0,
+      "explain": {
+        "en": "The incisive foramen is a normal midline structure between the roots.",
+        "ru": "Резцовое отверстие — нормальная структура по средней линии между корнями.",
+        "uz": "Kesuv teshigi o‘rta chiziqda, ildizlar orasida joylashgan normal tuzilma."
+      }
+    },
+    {
+      "q": {
+        "en": "What is a small dark dot within a white ring below the lower incisors?",
+        "ru": "Что за маленькая тёмная точка в светлом кольце под нижними резцами?",
+        "uz": "Pastki kesuv tishlar ostida oq halqa bilan o‘ralgan kichik qora nuqta nima?"
+      },
+      "options": [
+        {
+          "en": "Mental foramen",
+          "ru": "Подбородочное отверстие",
+          "uz": "Iyak teshigi"
+        },
+        {
+          "en": "Lingual foramen and genial tubercles",
+          "ru": "Язычное отверстие и подбородочные ости",
+          "uz": "Til teshigi va genial do‘mboqlar"
+        },
+        {
+          "en": "Incisive canal",
+          "ru": "Резцовый канал",
+          "uz": "Kesuv kanali"
+        },
+        {
+          "en": "Apical granuloma",
+          "ru": "Апикальная гранулёма",
+          "uz": "Apikal granulema"
+        }
+      ],
+      "correct": 1,
+      "explain": {
+        "en": "The genial tubercles form the ring and the lingual foramen the dark centre.",
+        "ru": "Подбородочные ости дают светлое кольцо, язычное отверстие — тёмную точку в центре.",
+        "uz": "Genial do‘mboqlar oq halqa, ularning markazidagi til teshigi qora nuqta beradi."
+      }
+    },
+    {
+      "q": {
+        "en": "How does the mandibular canal appear?",
+        "ru": "Как выглядит нижнечелюстной канал на снимке?",
+        "uz": "Pastki jag‘ kanali rentgenda qanday ko‘rinadi?"
+      },
+      "options": [
+        {
+          "en": "Dark band between two white lines",
+          "ru": "Тёмная полоса между двумя светлыми линиями",
+          "uz": "Ikki oq chiziq orasidagi qora tasma"
+        },
+        {
+          "en": "Uniform white band",
+          "ru": "Однородная светлая полоса",
+          "uz": "Bir tekis oq tasma"
+        },
+        {
+          "en": "Round dark area",
+          "ru": "Округлый тёмный очаг",
+          "uz": "Yumaloq qora o‘choq"
+        },
+        {
+          "en": "Visible only on CBCT",
+          "ru": "Виден только на КЛКТ",
+          "uz": "Faqat KLKT da ko‘rinadi"
+        }
+      ],
+      "correct": 0,
+      "explain": {
+        "en": "The canal walls are cortical lines; the neurovascular bundle inside looks dark.",
+        "ru": "Стенки канала — кортикальные линии, сосудисто-нервный пучок внутри тёмный.",
+        "uz": "Kanal devorlari kortikal chiziq beradi, ichidagi neyrovaskulyar tutam qora ko‘rinadi."
+      }
+    },
+    {
+      "q": {
+        "en": "A 12-year-old has a wide radiolucency at an open lower second premolar apex with intact lamina dura. What is it?",
+        "ru": "У ребёнка 12 лет у апекса нижнего второго премоляра широкое разрежение, апекс открыт, lamina dura цела. Что это?",
+        "uz": "12 yoshli bolada pastki ikkinchi premolyar apeksida keng qora soha bor, apeks ochiq, lamina dura butun. Bu nima?"
+      },
+      "options": [
+        {
+          "en": "Radicular cyst",
+          "ru": "Радикулярная киста",
+          "uz": "Radikulyar kista"
+        },
+        {
+          "en": "Odontogenic keratocyst",
+          "ru": "Одонтогенная кератокиста",
+          "uz": "Odontogen keratokista"
+        },
+        {
+          "en": "Dental papilla of a developing root",
+          "ru": "Зубной сосочек формирующегося корня",
+          "uz": "Rivojlanayotgan ildizning tish so‘rg‘ichi"
+        },
+        {
+          "en": "Apical abscess",
+          "ru": "Апикальный абсцесс",
+          "uz": "Apikal abssess"
+        }
+      ],
+      "correct": 2,
+      "explain": {
+        "en": "An open apex with intact lamina dura is normal root development.",
+        "ru": "Открытый апекс и целая lamina dura указывают на нормальное формирование корня.",
+        "uz": "Ochiq apeks va butun lamina dura ildiz rivojlanishining normal bosqichini ko‘rsatadi."
+      }
+    },
+    {
+      "q": {
+        "en": "Where does the normal alveolar crest lie relative to the CEJ?",
+        "ru": "На каком уровне от эмалево-цементной границы в норме лежит альвеолярный гребень?",
+        "uz": "Normal alveolyar qirra emal-sement chegarasidan qancha pastda joylashadi?"
+      },
+      "options": [
+        {
+          "en": "Exactly at the CEJ",
+          "ru": "Точно на её уровне",
+          "uz": "Aynan shu chegarada"
+        },
+        {
+          "en": "About 5–6 mm below",
+          "ru": "Примерно на 5–6 мм ниже",
+          "uz": "Taxminan 5–6 mm pastda"
+        },
+        {
+          "en": "At mid-root",
+          "ru": "На середине корня",
+          "uz": "Ildiz o‘rtasida"
+        },
+        {
+          "en": "About 1–2 mm below",
+          "ru": "Примерно на 1–2 мм ниже",
+          "uz": "Taxminan 1–2 mm pastda"
+        }
+      ],
+      "correct": 3,
+      "explain": {
+        "en": "1–2 mm is normal; more may indicate bone loss.",
+        "ru": "1–2 мм — норма; большее расстояние может означать убыль кости.",
+        "uz": "1–2 mm normal; undan ortiq masofa suyak yo‘qolishini ko‘rsatishi mumkin."
+      }
+    },
+    {
+      "q": {
+        "en": "On an upper molar periapical, a triangular radiopacity appears behind the molar. Usually what?",
+        "ru": "На периапикальном снимке верхнего моляра позади него треугольная светлая тень. Обычно это?",
+        "uz": "Yuqori molyar periapikal snimogida molyar orqasida uchburchak rentgenokontrast soya ko‘rindi. Bu odatda nima?"
+      },
+      "options": [
+        {
+          "en": "Zygomatic arch",
+          "ru": "Скуловая дуга",
+          "uz": "Yonoq yoyi"
+        },
+        {
+          "en": "Coronoid process of the mandible",
+          "ru": "Венечный отросток нижней челюсти",
+          "uz": "Pastki jag‘ toj o‘simtasi"
+        },
+        {
+          "en": "Calculus",
+          "ru": "Зубной камень",
+          "uz": "Tish toshi"
+        },
+        {
+          "en": "Odontoma",
+          "ru": "Одонтома",
+          "uz": "Odontoma"
+        }
+      ],
+      "correct": 1,
+      "explain": {
+        "en": "On opening, the coronoid process moves forward into the upper molar image.",
+        "ru": "При открывании рта венечный отросток смещается вперёд и попадает на снимок.",
+        "uz": "Og‘iz ochilganda toj o‘simtasi oldinga siljib, yuqori molyar snimogiga tushadi."
+      }
+    },
+    {
+      "q": {
+        "en": "Which feature helps distinguish the maxillary sinus floor from a cyst?",
+        "ru": "Какой признак помогает отличить дно верхнечелюстной пазухи от кисты?",
+        "uz": "Yuqori jag‘ bo‘shlig‘i tubini kistadan farqlashda qaysi belgi yordam beradi?"
+      },
+      "options": [
+        {
+          "en": "Absent lamina dura",
+          "ru": "Отсутствие lamina dura у корня",
+          "uz": "Ildiz atrofida lamina dura yo‘q"
+        },
+        {
+          "en": "Non-vital tooth",
+          "ru": "Отсутствие чувствительности зуба",
+          "uz": "Tish sezgirligi yo‘q"
+        },
+        {
+          "en": "Bilateral, thin smooth border",
+          "ru": "Симметрия и тонкий ровный контур",
+          "uz": "Ikki tomonda o‘xshash, ingichka silliq chegara"
+        },
+        {
+          "en": "Root resorption",
+          "ru": "Резорбция корня",
+          "uz": "Ildiz rezorbsiyasi"
+        }
+      ],
+      "correct": 2,
+      "explain": {
+        "en": "The sinus is a symmetrical normal structure; a cyst usually relates to one tooth and bulges.",
+        "ru": "Пазуха — симметричная норма; киста обычно связана с одним зубом и имеет выпуклый контур.",
+        "uz": "Bo‘shliq simmetrik normal tuzilma; kista esa odatda bitta tish bilan bog‘liq va qavariq bo‘ladi."
+      }
+    }
+  ]
+}
