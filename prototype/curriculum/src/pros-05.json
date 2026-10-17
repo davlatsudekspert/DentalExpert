@@ -802,22 +802,22 @@
         {
           "en": "Ovate pontic",
           "ru": "Овоидная",
-          "uz": "Ovoid"
+          "uz": "Ovoid oraliq qism"
         },
         {
           "en": "Ridge-lap pontic",
           "ru": "Седловидная",
-          "uz": "Egarsimon"
+          "uz": "Egarsimon oraliq qism"
         },
         {
           "en": "Modified ridge-lap pontic",
           "ru": "Модифицированная седловидная",
-          "uz": "O‘zgartirilgan egarsimon"
+          "uz": "O‘zgartirilgan egarsimon oraliq qism"
         },
         {
           "en": "Sanitary pontic",
           "ru": "Промывная",
-          "uz": "Yuviladigan"
+          "uz": "Yuviladigan oraliq qism"
         }
       ],
       "correct": 3,
@@ -977,22 +977,22 @@
         {
           "en": "Sanitary pontic",
           "ru": "Промывная",
-          "uz": "Yuviladigan"
+          "uz": "Yuviladigan oraliq qism"
         },
         {
           "en": "Conical pontic",
           "ru": "Коническая",
-          "uz": "Konussimon"
+          "uz": "Konussimon oraliq qism"
         },
         {
           "en": "Ovate pontic",
           "ru": "Овоидная",
-          "uz": "Ovoid"
+          "uz": "Ovoid oraliq qism"
         },
         {
           "en": "Ridge-lap pontic",
           "ru": "Седловидная",
-          "uz": "Egarsimon"
+          "uz": "Egarsimon oraliq qism"
         }
       ],
       "correct": 2,

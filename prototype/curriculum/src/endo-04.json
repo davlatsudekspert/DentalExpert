@@ -436,7 +436,7 @@
             {
               "en": "Floor is centred in the tooth",
               "ru": "Дно в центре зуба",
-              "uz": "Tub tish markazida"
+              "uz": "Kamera tubi tish markazida joylashadi"
             }
           ]
         },
@@ -550,7 +550,7 @@
             {
               "en": "Check for roof remnants with an explorer",
               "ru": "Проверять крышу зондом",
-              "uz": "Tomni zond bilan tekshirish"
+              "uz": "Tom qoldiqlarini zond bilan tekshirish"
             },
             {
               "en": "Align the bur with the tooth axis",
@@ -841,7 +841,7 @@
         {
           "en": "In the centre of the floor",
           "ru": "В центре дна полости",
-          "uz": "Kamera markazida"
+          "uz": "Kamera tubining markazida"
         },
         {
           "en": "Palatal to MB, on the line between MB and palatal",

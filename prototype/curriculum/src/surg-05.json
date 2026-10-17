@@ -148,7 +148,12 @@
             }
           ]
         }
-      ]
+      ],
+      "note": {
+        "en": "Always discuss with the patient whether the tooth could be saved before extracting it.",
+        "ru": "Перед удалением обязательно обсудите с пациентом возможность сохранить зуб.",
+        "uz": "Tish olishdan oldin uni davolab saqlash imkoniyatini bemor bilan albatta muhokama qiling."
+      }
     },
     {
       "layout": "compare",

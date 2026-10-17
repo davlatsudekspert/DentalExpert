@@ -34,3 +34,17 @@ export const typeWord:Record<Lang,Record<TopicMeta['type'],string>>={
 export const metaLine=(m:TopicMeta,lang:Lang)=>lang==='uz'?`${m.n}-mavzu · ${m.week}-hafta · ${typeWord.uz[m.type]} · ${m.hours} soat`
  :lang==='ru'?`Тема ${m.n} · ${m.week}-я неделя · ${typeWord.ru[m.type]} · ${m.hours} ч`:`Topic ${m.n} · Week ${m.week} · ${typeWord.en[m.type]} · ${m.hours} h`;
 export const courseWord=(c:number,lang:Lang)=>lang==='uz'?`${c}-kurs`:lang==='ru'?`${c} курс`:`Year ${c}`;
+
+/** Self-study progress on this device: furthest slide seen per topic, and the last topic opened. */
+type Seen=Record<string,{s:number;n:number}>;
+const SEEN='de_seen',LAST='de_last_topic';
+const read=<T,>(k:string,d:T):T=>{try{const v=localStorage.getItem(k);return v?JSON.parse(v) as T:d}catch{return d}};
+const write=(k:string,v:unknown)=>{try{localStorage.setItem(k,JSON.stringify(v))}catch{/* storage unavailable */}};
+export const loadSeen=()=>read<Seen>(SEEN,{});
+export const loadLast=()=>read<{id:string;slide:number}|null>(LAST,null);
+export function markSlide(id:string,slide:number,total:number){
+ const seen=loadSeen();const cur=seen[id];
+ if(!cur||slide+1>cur.s){seen[id]={s:Math.min(slide+1,total),n:total};write(SEEN,seen)}
+ write(LAST,{id,slide});
+}
+export const topicDone=(id:string)=>{const x=loadSeen()[id];return !!x&&x.s>=x.n};

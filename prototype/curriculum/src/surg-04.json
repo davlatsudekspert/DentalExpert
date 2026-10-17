@@ -483,7 +483,12 @@
           "ru": "Чаще прилокаин или бензокаин; лечение — метиленовый синий",
           "uz": "Sababi ko‘pincha prilokain yoki benzokain, davosi metilen ko‘ki"
         }
-      ]
+      ],
+      "note": {
+        "en": "Ask students how an adrenaline reaction differs from true allergy: no rash, swelling or bronchospasm.",
+        "ru": "Спросите, как отличить реакцию на адреналин от истинной аллергии: нет сыпи, отёка и бронхоспазма.",
+        "uz": "Talabalardan adrenalin reaksiyasini haqiqiy allergiyadan qanday farqlashni so‘rang: toshma, shish va bronxospazm bo‘lmaydi."
+      }
     },
     {
       "layout": "cycle",

@@ -20,9 +20,10 @@ const words={
 };
 
 /** Full-screen lecture player for curriculum topics. Diagrams are drawn natively so every language stays sharp. */
-export default function Slides({title,eyebrow,slides,lang,teacher=false,onClose,onFinished}:{title:string;eyebrow?:string;slides:Slide[];lang:Lang;teacher?:boolean;onClose:()=>void;onFinished?:()=>void}){
+export default function Slides({title,eyebrow,slides,lang,teacher=false,accent,start=0,onProgress,onClose,onFinished}:{title:string;eyebrow?:string;slides:Slide[];lang:Lang;teacher?:boolean;accent?:string;start?:number;onProgress?:(i:number)=>void;onClose:()=>void;onFinished?:()=>void}){
  const t=words[lang];
- const [i,setI]=useState(0);
+ const [i,setI]=useState(()=>Math.max(0,Math.min(slides.length-1,start)));
+ useEffect(()=>{onProgress?.(i)},[i]);// eslint-disable-line react-hooks/exhaustive-deps
  const [notes,setNotes]=useState(teacher);
  const touch=useRef<number|null>(null);
  const last=slides.length-1;
@@ -32,7 +33,7 @@ export default function Slides({title,eyebrow,slides,lang,teacher=false,onClose,
   window.addEventListener('keydown',k);return ()=>window.removeEventListener('keydown',k);
  });
  const s=slides[i];
- return <div className="sl-player" role="dialog" aria-modal="true" aria-label={title}>
+ return <div className="sl-player" role="dialog" aria-modal="true" aria-label={title} style={accent?{['--lg-brand' as string]:accent,['--sl-brand' as string]:accent}:undefined}>
   <div className="sl-bar"><span><small>{eyebrow}</small><strong>{title}</strong></span><b>{i+1} / {slides.length}</b><button onClick={onClose} aria-label={t.close}><X size={20}/></button></div>
   <div className="sl-progress"><i style={{width:`${((i+1)/slides.length)*100}%`}}/></div>
   <div className="sl-stage" onTouchStart={e=>{touch.current=e.touches[0].clientX}} onTouchEnd={e=>{if(touch.current===null)return;const dx=e.changedTouches[0].clientX-touch.current;touch.current=null;if(Math.abs(dx)>50)go(dx<0?1:-1)}}>

@@ -1,0 +1,1156 @@
+{
+  "id": "prev-06",
+  "subject": "prev",
+  "n": 6,
+  "week": 6,
+  "type": "practical",
+  "hours": 2,
+  "title": {
+    "en": "Dental indices: OHI-S, DMFT and CPI/BPE",
+    "ru": "Стоматологические индексы: OHI-S, КПУ и CPI/BPE",
+    "uz": "Stomatologik indekslar: OHI-S, KPU va CPI/BPE"
+  },
+  "goals": [
+    {
+      "en": "Record and calculate the simplified oral hygiene index (OHI-S)",
+      "ru": "Определять и рассчитывать упрощённый индекс гигиены (OHI-S)",
+      "uz": "Soddalashtirilgan gigiyena indeksini (OHI-S) aniqlash va hisoblash"
+    },
+    {
+      "en": "Calculate DMFT and dmft and interpret caries levels",
+      "ru": "Рассчитывать КПУ и кпу и оценивать уровень кариеса",
+      "uz": "KPU va kpu ni hisoblash va karies darajasini baholash"
+    },
+    {
+      "en": "Use the WHO probe for CPI and BPE screening",
+      "ru": "Пользоваться зондом ВОЗ для CPI и BPE",
+      "uz": "CPI va BPE uchun JSST zondidan foydalanish"
+    }
+  ],
+  "links": [
+    "odontogram",
+    "periodontium"
+  ],
+  "sources": [
+    "WHO. Oral Health Surveys: Basic Methods, 5th ed., 2013",
+    "Greene JC, Vermillion JR. The Simplified Oral Hygiene Index. J Am Dent Assoc 1964",
+    "British Society of Periodontology. Basic Periodontal Examination (BPE), 2019"
+  ],
+  "slides": [
+    {
+      "layout": "title",
+      "title": {
+        "en": "Dental indices",
+        "ru": "Стоматологические индексы",
+        "uz": "Stomatologik indekslar"
+      },
+      "subtitle": {
+        "en": "Turning what we see into numbers we can compare",
+        "ru": "Превращаем увиденное в сравнимые числа",
+        "uz": "Ko‘rganlarimizni solishtirsa bo‘ladigan raqamlarga aylantirish"
+      }
+    },
+    {
+      "layout": "key",
+      "title": {
+        "en": "What is an index?",
+        "ru": "Что такое индекс?",
+        "uz": "Indeks nima?"
+      },
+      "term": {
+        "en": "Index",
+        "ru": "Индекс",
+        "uz": "Indeks"
+      },
+      "definition": {
+        "en": "A standard scale that gives a number to a clinical condition, such as plaque, caries or periodontal status. It is used to monitor individual patients and to compare groups in surveys.",
+        "ru": "Стандартная шкала, выражающая клиническое состояние числом, например налёт, кариес или состояние пародонта. Применяется для наблюдения за пациентом и сравнения групп в эпидемиологических исследованиях.",
+        "uz": "Klinik holatni, masalan karash, karies yoki parodont holatini raqam bilan ifodalovchi standart shkala. U bemorni kuzatish va tadqiqotlarda guruhlarni solishtirish uchun ishlatiladi."
+      },
+      "note": {
+        "en": "Stress that the same index, scored the same way, is what makes results from different years or regions comparable.",
+        "ru": "Подчеркните: сравнимость результатов разных лет и регионов обеспечивает один и тот же индекс с единым способом оценки.",
+        "uz": "Turli yillar yoki hududlar natijalarini solishtirishni bir xil usulda baholangan yagona indeks ta’minlashini ta’kidlang."
+      }
+    },
+    {
+      "layout": "table",
+      "title": {
+        "en": "OHI-S: six index surfaces",
+        "ru": "OHI-S: шесть индексных поверхностей",
+        "uz": "OHI-S: oltita indeks yuzasi"
+      },
+      "head": [
+        {
+          "en": "Tooth",
+          "ru": "Зуб",
+          "uz": "Tish"
+        },
+        {
+          "en": "Surface",
+          "ru": "Поверхность",
+          "uz": "Yuza"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "en": "16",
+            "ru": "16",
+            "uz": "16"
+          },
+          {
+            "en": "Buccal",
+            "ru": "Щёчная",
+            "uz": "Lunj"
+          }
+        ],
+        [
+          {
+            "en": "11",
+            "ru": "11",
+            "uz": "11"
+          },
+          {
+            "en": "Labial",
+            "ru": "Губная",
+            "uz": "Lab"
+          }
+        ],
+        [
+          {
+            "en": "26",
+            "ru": "26",
+            "uz": "26"
+          },
+          {
+            "en": "Buccal",
+            "ru": "Щёчная",
+            "uz": "Lunj"
+          }
+        ],
+        [
+          {
+            "en": "31",
+            "ru": "31",
+            "uz": "31"
+          },
+          {
+            "en": "Labial",
+            "ru": "Губная",
+            "uz": "Lab"
+          }
+        ],
+        [
+          {
+            "en": "36",
+            "ru": "36",
+            "uz": "36"
+          },
+          {
+            "en": "Lingual",
+            "ru": "Язычная",
+            "uz": "Til"
+          }
+        ],
+        [
+          {
+            "en": "46",
+            "ru": "46",
+            "uz": "46"
+          },
+          {
+            "en": "Lingual",
+            "ru": "Язычная",
+            "uz": "Til"
+          }
+        ]
+      ]
+    },
+    {
+      "layout": "table",
+      "title": {
+        "en": "OHI-S scores per surface",
+        "ru": "Баллы OHI-S для поверхности",
+        "uz": "OHI-S bo‘yicha yuza ballari"
+      },
+      "head": [
+        {
+          "en": "Score",
+          "ru": "Балл",
+          "uz": "Ball"
+        },
+        {
+          "en": "Debris (DI-S)",
+          "ru": "Налёт (DI-S)",
+          "uz": "Karash (DI-S)"
+        },
+        {
+          "en": "Calculus (CI-S)",
+          "ru": "Камень (CI-S)",
+          "uz": "Tosh (CI-S)"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "en": "0",
+            "ru": "0",
+            "uz": "0"
+          },
+          {
+            "en": "None",
+            "ru": "Нет",
+            "uz": "Yo‘q"
+          },
+          {
+            "en": "None",
+            "ru": "Нет",
+            "uz": "Yo‘q"
+          }
+        ],
+        [
+          {
+            "en": "1",
+            "ru": "1",
+            "uz": "1"
+          },
+          {
+            "en": "Up to 1/3 of surface or stain",
+            "ru": "До 1/3 поверхности или пигмент",
+            "uz": "Yuzaning 1/3 qismigacha yoki pigment"
+          },
+          {
+            "en": "Supragingival up to 1/3",
+            "ru": "Наддесневой до 1/3",
+            "uz": "Milk usti, 1/3 gacha"
+          }
+        ],
+        [
+          {
+            "en": "2",
+            "ru": "2",
+            "uz": "2"
+          },
+          {
+            "en": "1/3 to 2/3 of surface",
+            "ru": "От 1/3 до 2/3 поверхности",
+            "uz": "Yuzaning 1/3 dan 2/3 gacha"
+          },
+          {
+            "en": "1/3 to 2/3, or flecks below margin",
+            "ru": "1/3–2/3 или отдельные участки под десной",
+            "uz": "1/3–2/3 yoki milk ostida alohida bo‘laklar"
+          }
+        ],
+        [
+          {
+            "en": "3",
+            "ru": "3",
+            "uz": "3"
+          },
+          {
+            "en": "More than 2/3",
+            "ru": "Более 2/3",
+            "uz": "2/3 dan ko‘p"
+          },
+          {
+            "en": "More than 2/3, or band below margin",
+            "ru": "Более 2/3 или поддесневое кольцо",
+            "uz": "2/3 dan ko‘p yoki milk osti halqasi"
+          }
+        ]
+      ]
+    },
+    {
+      "layout": "flow",
+      "title": {
+        "en": "Calculating OHI-S",
+        "ru": "Расчёт OHI-S",
+        "uz": "OHI-S ni hisoblash"
+      },
+      "steps": [
+        {
+          "label": {
+            "en": "Score debris",
+            "ru": "Оценить налёт",
+            "uz": "Karashni baholash"
+          },
+          "detail": {
+            "en": "0–3 on each of the six surfaces",
+            "ru": "0–3 на каждой из шести поверхностей",
+            "uz": "Oltita yuzaning har birida 0–3"
+          }
+        },
+        {
+          "label": {
+            "en": "DI-S",
+            "ru": "DI-S",
+            "uz": "DI-S"
+          },
+          "detail": {
+            "en": "Sum of scores ÷ number of surfaces",
+            "ru": "Сумма баллов ÷ число поверхностей",
+            "uz": "Ballar yig‘indisi ÷ yuzalar soni"
+          }
+        },
+        {
+          "label": {
+            "en": "CI-S",
+            "ru": "CI-S",
+            "uz": "CI-S"
+          },
+          "detail": {
+            "en": "Same for calculus",
+            "ru": "Так же для камня",
+            "uz": "Tosh uchun ham xuddi shunday"
+          }
+        },
+        {
+          "label": {
+            "en": "OHI-S",
+            "ru": "OHI-S",
+            "uz": "OHI-S"
+          },
+          "detail": {
+            "en": "DI-S + CI-S, range 0–6",
+            "ru": "DI-S + CI-S, от 0 до 6",
+            "uz": "DI-S + CI-S, 0 dan 6 gacha"
+          }
+        },
+        {
+          "label": {
+            "en": "Interpret",
+            "ru": "Оценка",
+            "uz": "Baholash"
+          },
+          "detail": {
+            "en": "0–1.2 good; 1.3–3.0 fair; 3.1–6.0 poor",
+            "ru": "0–1,2 хорошая; 1,3–3,0 удовлетворительная; 3,1–6,0 плохая",
+            "uz": "0–1,2 yaxshi; 1,3–3,0 qoniqarli; 3,1–6,0 yomon"
+          }
+        }
+      ],
+      "note": {
+        "en": "Do one full example on the board with real numbers before students score each other.",
+        "ru": "Разберите один полный пример с числами на доске, прежде чем студенты будут обследовать друг друга.",
+        "uz": "Talabalar bir-birini tekshirishidan oldin doskada raqamlar bilan bitta to‘liq misolni yeching."
+      }
+    },
+    {
+      "layout": "tree",
+      "title": {
+        "en": "DMFT index (KPU)",
+        "ru": "Индекс КПУ (DMFT)",
+        "uz": "KPU indeksi (DMFT)"
+      },
+      "root": {
+        "en": "DMFT",
+        "ru": "КПУ",
+        "uz": "KPU"
+      },
+      "children": [
+        {
+          "label": {
+            "en": "D: decayed",
+            "ru": "К: кариес",
+            "uz": "K: karies"
+          },
+          "items": [
+            {
+              "en": "Untreated caries into dentin",
+              "ru": "Нелеченый кариес дентина",
+              "uz": "Davolanmagan dentin kariesi"
+            }
+          ]
+        },
+        {
+          "label": {
+            "en": "M: missing",
+            "ru": "У: удалён",
+            "uz": "U: olingan"
+          },
+          "items": [
+            {
+              "en": "Extracted because of caries",
+              "ru": "Удалён из-за кариеса",
+              "uz": "Karies sababli olingan"
+            }
+          ]
+        },
+        {
+          "label": {
+            "en": "F: filled",
+            "ru": "П: пломба",
+            "uz": "P: plomba"
+          },
+          "items": [
+            {
+              "en": "Restored because of caries",
+              "ru": "Запломбирован из-за кариеса",
+              "uz": "Karies sababli plombalangan"
+            }
+          ]
+        },
+        {
+          "label": {
+            "en": "Variants",
+            "ru": "Варианты",
+            "uz": "Turlari"
+          },
+          "items": [
+            {
+              "en": "dmft for primary teeth (0–20)",
+              "ru": "кпу для временных зубов (0–20)",
+              "uz": "Sut tishlari uchun kpu (0–20)"
+            },
+            {
+              "en": "DMFS counts surfaces",
+              "ru": "КПУп считает поверхности",
+              "uz": "DMFS (KPU-yuza) yuzalarni sanaydi"
+            }
+          ]
+        }
+      ],
+      "note": {
+        "en": "Remind students that each tooth is counted once, under its most severe category.",
+        "ru": "Напомните: каждый зуб учитывают один раз, по наиболее тяжёлой категории.",
+        "uz": "Har bir tish faqat bir marta, eng og‘ir toifa bo‘yicha hisoblanishini eslating."
+      }
+    },
+    {
+      "layout": "table",
+      "title": {
+        "en": "WHO caries levels at age 12 (DMFT)",
+        "ru": "Уровни кариеса ВОЗ в 12 лет (КПУ)",
+        "uz": "JSST bo‘yicha 12 yoshda karies darajalari (KPU)"
+      },
+      "head": [
+        {
+          "en": "Level",
+          "ru": "Уровень",
+          "uz": "Daraja"
+        },
+        {
+          "en": "DMFT",
+          "ru": "КПУ",
+          "uz": "KPU"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "en": "Very low",
+            "ru": "Очень низкий",
+            "uz": "Juda past"
+          },
+          {
+            "en": "0.0–1.1",
+            "ru": "0,0–1,1",
+            "uz": "0,0–1,1"
+          }
+        ],
+        [
+          {
+            "en": "Low",
+            "ru": "Низкий",
+            "uz": "Past"
+          },
+          {
+            "en": "1.2–2.6",
+            "ru": "1,2–2,6",
+            "uz": "1,2–2,6"
+          }
+        ],
+        [
+          {
+            "en": "Moderate",
+            "ru": "Умеренный",
+            "uz": "O‘rtacha"
+          },
+          {
+            "en": "2.7–4.4",
+            "ru": "2,7–4,4",
+            "uz": "2,7–4,4"
+          }
+        ],
+        [
+          {
+            "en": "High",
+            "ru": "Высокий",
+            "uz": "Yuqori"
+          },
+          {
+            "en": "4.5–6.5",
+            "ru": "4,5–6,5",
+            "uz": "4,5–6,5"
+          }
+        ],
+        [
+          {
+            "en": "Very high",
+            "ru": "Очень высокий",
+            "uz": "Juda yuqori"
+          },
+          {
+            "en": "6.6 and more",
+            "ru": "6,6 и более",
+            "uz": "6,6 va undan ko‘p"
+          }
+        ]
+      ]
+    },
+    {
+      "layout": "table",
+      "title": {
+        "en": "BPE codes",
+        "ru": "Коды BPE",
+        "uz": "BPE kodlari"
+      },
+      "head": [
+        {
+          "en": "Code",
+          "ru": "Код",
+          "uz": "Kod"
+        },
+        {
+          "en": "Finding with the WHO probe",
+          "ru": "Находка при зондировании зондом ВОЗ",
+          "uz": "JSST zondi bilan topilma"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "en": "0",
+            "ru": "0",
+            "uz": "0"
+          },
+          {
+            "en": "Healthy, no bleeding, black band fully visible",
+            "ru": "Здоровье, нет кровоточивости, чёрная полоса видна полностью",
+            "uz": "Sog‘lom, qonash yo‘q, qora chiziq to‘liq ko‘rinadi"
+          }
+        ],
+        [
+          {
+            "en": "1",
+            "ru": "1",
+            "uz": "1"
+          },
+          {
+            "en": "Bleeding on probing only",
+            "ru": "Только кровоточивость при зондировании",
+            "uz": "Faqat zondlashda qonash"
+          }
+        ],
+        [
+          {
+            "en": "2",
+            "ru": "2",
+            "uz": "2"
+          },
+          {
+            "en": "Calculus or overhang; band fully visible",
+            "ru": "Камень или нависающий край; полоса видна полностью",
+            "uz": "Tosh yoki osilib turgan chet; chiziq to‘liq ko‘rinadi"
+          }
+        ],
+        [
+          {
+            "en": "3",
+            "ru": "3",
+            "uz": "3"
+          },
+          {
+            "en": "Black band partly visible: pocket 3.5–5.5 mm",
+            "ru": "Полоса видна частично: карман 3,5–5,5 мм",
+            "uz": "Chiziq qisman ko‘rinadi: cho‘ntak 3,5–5,5 mm"
+          }
+        ],
+        [
+          {
+            "en": "4",
+            "ru": "4",
+            "uz": "4"
+          },
+          {
+            "en": "Black band disappears: pocket over 5.5 mm",
+            "ru": "Полоса скрывается: карман более 5,5 мм",
+            "uz": "Chiziq yo‘qoladi: cho‘ntak 5,5 mm dan chuqur"
+          }
+        ],
+        [
+          {
+            "en": "*",
+            "ru": "*",
+            "uz": "*"
+          },
+          {
+            "en": "Furcation involvement, added to the code",
+            "ru": "Поражение фуркации, добавляется к коду",
+            "uz": "Furkatsiya zararlanishi, kodga qo‘shiladi"
+          }
+        ]
+      ]
+    },
+    {
+      "layout": "compare",
+      "title": {
+        "en": "CPI and BPE",
+        "ru": "CPI и BPE",
+        "uz": "CPI va BPE"
+      },
+      "columns": [
+        {
+          "head": {
+            "en": "CPI (WHO 2013)",
+            "ru": "CPI (ВОЗ, 2013)",
+            "uz": "CPI (JSST, 2013)"
+          },
+          "items": [
+            {
+              "en": "Population surveys",
+              "ru": "Эпидемиологические обследования",
+              "uz": "Aholi orasidagi tadqiqotlar"
+            },
+            {
+              "en": "Separate gingival bleeding and pocket scores",
+              "ru": "Отдельные оценки кровоточивости и карманов",
+              "uz": "Qonash va cho‘ntak alohida baholanadi"
+            },
+            {
+              "en": "WHO probe with 0.5 mm ball",
+              "ru": "Зонд ВОЗ с шариком 0,5 мм",
+              "uz": "0,5 mm sharchali JSST zondi"
+            }
+          ]
+        },
+        {
+          "head": {
+            "en": "BPE",
+            "ru": "BPE",
+            "uz": "BPE"
+          },
+          "items": [
+            {
+              "en": "Screening in daily practice",
+              "ru": "Скрининг в повседневной практике",
+              "uz": "Kundalik amaliyotda skrining"
+            },
+            {
+              "en": "Highest code in each sextant",
+              "ru": "Наивысший код в каждом секстанте",
+              "uz": "Har bir sekstantda eng yuqori kod"
+            },
+            {
+              "en": "Guides need for full periodontal charting",
+              "ru": "Определяет необходимость полного пародонтального обследования",
+              "uz": "To‘liq parodont tekshiruvi zaruratini belgilaydi"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "layout": "summary",
+      "title": {
+        "en": "Summary",
+        "ru": "Итоги",
+        "uz": "Xulosa"
+      },
+      "bullets": [
+        {
+          "en": "OHI-S = DI-S + CI-S on six index surfaces, range 0–6",
+          "ru": "OHI-S = DI-S + CI-S на шести поверхностях, от 0 до 6",
+          "uz": "OHI-S = DI-S + CI-S oltita yuzada, 0 dan 6 gacha"
+        },
+        {
+          "en": "DMFT counts decayed, missing and filled teeth due to caries",
+          "ru": "КПУ учитывает кариозные, удалённые и пломбированные из-за кариеса зубы",
+          "uz": "KPU karies sababli kariesli, olingan va plombalangan tishlarni sanaydi"
+        },
+        {
+          "en": "BPE codes 0–4 and * by sextant with the WHO probe",
+          "ru": "Коды BPE 0–4 и * по секстантам с зондом ВОЗ",
+          "uz": "JSST zondi bilan sekstantlar bo‘yicha BPE kodlari 0–4 va *"
+        },
+        {
+          "en": "Score the same way every time to compare results",
+          "ru": "Оценивайте одинаково, чтобы сравнивать результаты",
+          "uz": "Natijalarni solishtirish uchun doimo bir xil baholang"
+        }
+      ]
+    }
+  ],
+  "oral": [
+    {
+      "q": {
+        "en": "How is the OHI-S recorded and calculated?",
+        "ru": "Как определяют и рассчитывают OHI-S?",
+        "uz": "OHI-S qanday aniqlanadi va hisoblanadi?"
+      },
+      "plan": [
+        {
+          "en": "Six surfaces: 16, 11, 26, 31 facial; 36, 46 lingual",
+          "ru": "Шесть поверхностей: 16, 11, 26, 31 вестибулярные; 36, 46 язычные",
+          "uz": "Oltita yuza: 16, 11, 26, 31 vestibulyar; 36, 46 til yuzalari"
+        },
+        {
+          "en": "Debris and calculus each scored 0–3",
+          "ru": "Налёт и камень оценивают по 0–3",
+          "uz": "Karash va tosh har biri 0–3 ball bilan baholanadi"
+        },
+        {
+          "en": "DI-S and CI-S are averages; OHI-S is their sum",
+          "ru": "DI-S и CI-S — средние; OHI-S — их сумма",
+          "uz": "DI-S va CI-S o‘rtacha qiymatlar; OHI-S ularning yig‘indisi"
+        },
+        {
+          "en": "0–1.2 good, 1.3–3.0 fair, 3.1–6.0 poor",
+          "ru": "0–1,2 хорошая, 1,3–3,0 удовлетворительная, 3,1–6,0 плохая",
+          "uz": "0–1,2 yaxshi, 1,3–3,0 qoniqarli, 3,1–6,0 yomon"
+        }
+      ]
+    },
+    {
+      "q": {
+        "en": "Explain the DMFT index and its rules.",
+        "ru": "Объясните индекс КПУ и правила его подсчёта.",
+        "uz": "KPU indeksini va uni hisoblash qoidalarini tushuntiring."
+      },
+      "plan": [
+        {
+          "en": "D decayed, M missing due to caries, F filled",
+          "ru": "К — кариес, У — удалён из-за кариеса, П — пломба",
+          "uz": "K — karies, U — karies sababli olingan, P — plomba"
+        },
+        {
+          "en": "Each tooth counted once",
+          "ru": "Каждый зуб учитывают один раз",
+          "uz": "Har bir tish bir marta hisoblanadi"
+        },
+        {
+          "en": "Teeth lost for other reasons are not counted as M",
+          "ru": "Зубы, удалённые по другим причинам, не входят в У",
+          "uz": "Boshqa sabablarga ko‘ra olingan tishlar U ga kirmaydi"
+        },
+        {
+          "en": "dmft for primary teeth; DMFS for surfaces",
+          "ru": "кпу для временных зубов; КПУп для поверхностей",
+          "uz": "Sut tishlari uchun kpu; yuzalar uchun DMFS (KPU-yuza)"
+        }
+      ]
+    },
+    {
+      "q": {
+        "en": "Describe the BPE codes.",
+        "ru": "Опишите коды BPE.",
+        "uz": "BPE kodlarini tushuntiring."
+      },
+      "plan": [
+        {
+          "en": "0 healthy; 1 bleeding only",
+          "ru": "0 — здоровье; 1 — только кровоточивость",
+          "uz": "0 — sog‘lom; 1 — faqat qonash"
+        },
+        {
+          "en": "2 calculus or plaque-retentive margin",
+          "ru": "2 — камень или нависающий край",
+          "uz": "2 — tosh yoki karash ushlovchi chet"
+        },
+        {
+          "en": "3 pocket 3.5–5.5 mm; 4 pocket over 5.5 mm",
+          "ru": "3 — карман 3,5–5,5 мм; 4 — более 5,5 мм",
+          "uz": "3 — cho‘ntak 3,5–5,5 mm; 4 — 5,5 mm dan chuqur"
+        },
+        {
+          "en": "* furcation; highest code per sextant",
+          "ru": "* — фуркация; наивысший код в секстанте",
+          "uz": "* — furkatsiya; sekstantda eng yuqori kod"
+        }
+      ]
+    },
+    {
+      "q": {
+        "en": "Why are standard indices important in prevention?",
+        "ru": "Почему стандартные индексы важны в профилактике?",
+        "uz": "Nima uchun standart indekslar profilaktikada muhim?"
+      },
+      "plan": [
+        {
+          "en": "Measure the patient's condition objectively",
+          "ru": "Объективно оценивают состояние пациента",
+          "uz": "Bemor holatini xolis baholaydi"
+        },
+        {
+          "en": "Show progress after hygiene instruction",
+          "ru": "Показывают результат обучения гигиене",
+          "uz": "Gigiyenaga o‘rgatish natijasini ko‘rsatadi"
+        },
+        {
+          "en": "Allow comparison between groups and years",
+          "ru": "Позволяют сравнивать группы и годы",
+          "uz": "Guruhlar va yillarni solishtirish imkonini beradi"
+        },
+        {
+          "en": "Help plan and evaluate public programmes",
+          "ru": "Помогают планировать и оценивать программы",
+          "uz": "Dasturlarni rejalashtirish va baholashga yordam beradi"
+        }
+      ]
+    }
+  ],
+  "test": [
+    {
+      "q": {
+        "en": "The range of the OHI-S score is:",
+        "ru": "Диапазон значений OHI-S:",
+        "uz": "OHI-S qiymatlari oralig‘i:"
+      },
+      "options": [
+        {
+          "en": "0–3",
+          "ru": "0–3",
+          "uz": "0–3"
+        },
+        {
+          "en": "0–10",
+          "ru": "0–10",
+          "uz": "0–10"
+        },
+        {
+          "en": "0–6",
+          "ru": "0–6",
+          "uz": "0–6"
+        },
+        {
+          "en": "1–5",
+          "ru": "1–5",
+          "uz": "1–5"
+        }
+      ],
+      "correct": 2,
+      "explain": {
+        "en": "DI-S and CI-S each range from 0 to 3, so their sum ranges from 0 to 6.",
+        "ru": "DI-S и CI-S изменяются от 0 до 3, поэтому их сумма — от 0 до 6.",
+        "uz": "DI-S va CI-S har biri 0 dan 3 gacha, shuning uchun ularning yig‘indisi 0 dan 6 gacha."
+      }
+    },
+    {
+      "q": {
+        "en": "In the OHI-S, which surfaces of the lower first molars are examined?",
+        "ru": "Какие поверхности нижних первых моляров оценивают в OHI-S?",
+        "uz": "OHI-S da pastki birinchi katta oziq tishlarning qaysi yuzalari tekshiriladi?"
+      },
+      "options": [
+        {
+          "en": "Buccal",
+          "ru": "Щёчные",
+          "uz": "Lunj yuzalari"
+        },
+        {
+          "en": "Lingual",
+          "ru": "Язычные",
+          "uz": "Til yuzalari"
+        },
+        {
+          "en": "Occlusal",
+          "ru": "Жевательные",
+          "uz": "Chaynov yuzalari"
+        },
+        {
+          "en": "Mesial",
+          "ru": "Медиальные",
+          "uz": "Medial yuzalar"
+        }
+      ],
+      "correct": 1,
+      "explain": {
+        "en": "Teeth 36 and 46 are scored on their lingual surfaces; upper molars on their buccal surfaces.",
+        "ru": "Зубы 36 и 46 оценивают с язычной стороны, верхние моляры — с щёчной.",
+        "uz": "36 va 46-tishlar til yuzasidan, yuqori katta oziq tishlar esa lunj yuzasidan baholanadi."
+      }
+    },
+    {
+      "q": {
+        "en": "In the DMFT index, the M component counts teeth that are:",
+        "ru": "В индексе КПУ компонент «У» учитывает зубы:",
+        "uz": "KPU indeksida U komponenti qanday tishlarni hisoblaydi:"
+      },
+      "options": [
+        {
+          "en": "Missing for any reason",
+          "ru": "отсутствующие по любой причине",
+          "uz": "Har qanday sabab bilan yo‘q"
+        },
+        {
+          "en": "Not yet erupted",
+          "ru": "ещё не прорезавшиеся",
+          "uz": "Hali chiqmagan"
+        },
+        {
+          "en": "Extracted for orthodontics",
+          "ru": "удалённые по ортодонтическим показаниям",
+          "uz": "Ortodontik sabab bilan olingan"
+        },
+        {
+          "en": "Extracted because of caries",
+          "ru": "удалённые из-за кариеса",
+          "uz": "Karies sababli olingan"
+        }
+      ],
+      "correct": 3,
+      "explain": {
+        "en": "Only teeth lost because of caries count as M; other losses are excluded.",
+        "ru": "В «У» входят только зубы, удалённые из-за кариеса; другие причины исключаются.",
+        "uz": "U ga faqat karies sababli olingan tishlar kiradi; boshqa sabablar hisobga olinmaydi."
+      }
+    },
+    {
+      "q": {
+        "en": "A 14-year-old has 3 decayed teeth, 2 filled teeth, 1 tooth extracted for caries and 1 premolar extracted for orthodontics. What is the DMFT?",
+        "ru": "У 14-летнего: 3 кариозных зуба, 2 пломбированных, 1 удалён из-за кариеса, 1 премоляр удалён по ортодонтическим показаниям. Каков КПУ?",
+        "uz": "14 yoshli bemorda 3 ta kariesli, 2 ta plombali, 1 ta karies sababli olingan tish va ortodontik sabab bilan olingan 1 ta kichik oziq tish bor. KPU qancha?"
+      },
+      "options": [
+        {
+          "en": "6",
+          "ru": "6",
+          "uz": "6"
+        },
+        {
+          "en": "7",
+          "ru": "7",
+          "uz": "7"
+        },
+        {
+          "en": "5",
+          "ru": "5",
+          "uz": "5"
+        },
+        {
+          "en": "4",
+          "ru": "4",
+          "uz": "4"
+        }
+      ],
+      "correct": 0,
+      "explain": {
+        "en": "D3 + M1 + F2 = 6; the orthodontic extraction is not counted.",
+        "ru": "К3 + У1 + П2 = 6; удаление по ортодонтическим показаниям не учитывают.",
+        "uz": "K3 + U1 + P2 = 6; ortodontik sabab bilan olingan tish hisoblanmaydi."
+      }
+    },
+    {
+      "q": {
+        "en": "A patient has DI-S 1.0 and CI-S 0.5. How is the oral hygiene rated?",
+        "ru": "У пациента DI-S 1,0 и CI-S 0,5. Как оценивается гигиена?",
+        "uz": "Bemorda DI-S 1,0 va CI-S 0,5. Gigiyena qanday baholanadi?"
+      },
+      "options": [
+        {
+          "en": "Good",
+          "ru": "Хорошая",
+          "uz": "Yaxshi"
+        },
+        {
+          "en": "Poor",
+          "ru": "Плохая",
+          "uz": "Yomon"
+        },
+        {
+          "en": "Fair",
+          "ru": "Удовлетворительная",
+          "uz": "Qoniqarli"
+        },
+        {
+          "en": "Very poor",
+          "ru": "Очень плохая",
+          "uz": "Juda yomon"
+        }
+      ],
+      "correct": 2,
+      "explain": {
+        "en": "OHI-S = 1.0 + 0.5 = 1.5, which falls in the fair range of 1.3–3.0.",
+        "ru": "OHI-S = 1,0 + 0,5 = 1,5, что соответствует удовлетворительному диапазону 1,3–3,0.",
+        "uz": "OHI-S = 1,0 + 0,5 = 1,5, bu 1,3–3,0 qoniqarli oraliqqa to‘g‘ri keladi."
+      }
+    },
+    {
+      "q": {
+        "en": "BPE code 3 means that:",
+        "ru": "Код BPE 3 означает, что:",
+        "uz": "BPE bo‘yicha 3-kod nimani bildiradi:"
+      },
+      "options": [
+        {
+          "en": "Only bleeding is present",
+          "ru": "есть только кровоточивость",
+          "uz": "Faqat qonash bor"
+        },
+        {
+          "en": "The black band is partly visible in the pocket",
+          "ru": "чёрная полоса частично видна в кармане",
+          "uz": "Qora chiziq cho‘ntakda qisman ko‘rinadi"
+        },
+        {
+          "en": "The black band disappears completely",
+          "ru": "чёрная полоса полностью скрывается",
+          "uz": "Qora chiziq butunlay yo‘qoladi"
+        },
+        {
+          "en": "The sextant is healthy",
+          "ru": "секстант здоров",
+          "uz": "Sekstant sog‘lom"
+        }
+      ],
+      "correct": 1,
+      "explain": {
+        "en": "Code 3 indicates a pocket of about 3.5–5.5 mm, with the coloured band partly hidden.",
+        "ru": "Код 3 указывает на карман около 3,5–5,5 мм, полоса частично скрыта.",
+        "uz": "3-kod taxminan 3,5–5,5 mm cho‘ntakni bildiradi, rangli chiziq qisman yashiringan."
+      }
+    },
+    {
+      "q": {
+        "en": "During BPE, the black band of the probe disappears completely into the pocket. The code is:",
+        "ru": "При BPE чёрная полоса зонда полностью уходит в карман. Код:",
+        "uz": "BPE paytida zondning qora chizig‘i cho‘ntakka butunlay kirib ketdi. Kod:"
+      },
+      "options": [
+        {
+          "en": "2",
+          "ru": "2",
+          "uz": "2"
+        },
+        {
+          "en": "3",
+          "ru": "3",
+          "uz": "3"
+        },
+        {
+          "en": "1",
+          "ru": "1",
+          "uz": "1"
+        },
+        {
+          "en": "4",
+          "ru": "4",
+          "uz": "4"
+        }
+      ],
+      "correct": 3,
+      "explain": {
+        "en": "Code 4 means probing depth over 5.5 mm and calls for full periodontal charting.",
+        "ru": "Код 4 означает глубину более 5,5 мм и требует полного пародонтального обследования.",
+        "uz": "4-kod 5,5 mm dan chuqur cho‘ntakni bildiradi va to‘liq parodont tekshiruvini talab qiladi."
+      }
+    },
+    {
+      "q": {
+        "en": "The ball at the tip of the WHO periodontal probe has a diameter of:",
+        "ru": "Диаметр шарика на кончике пародонтального зонда ВОЗ:",
+        "uz": "JSST parodontal zondi uchidagi sharchaning diametri:"
+      },
+      "options": [
+        {
+          "en": "0.5 mm",
+          "ru": "0,5 мм",
+          "uz": "0,5 mm"
+        },
+        {
+          "en": "1.5 mm",
+          "ru": "1,5 мм",
+          "uz": "1,5 mm"
+        },
+        {
+          "en": "2.0 mm",
+          "ru": "2,0 мм",
+          "uz": "2,0 mm"
+        },
+        {
+          "en": "0.1 mm",
+          "ru": "0,1 мм",
+          "uz": "0,1 mm"
+        }
+      ],
+      "correct": 0,
+      "explain": {
+        "en": "The 0.5 mm ball helps detect calculus and reduces the risk of over-probing.",
+        "ru": "Шарик 0,5 мм помогает выявлять камень и снижает риск чрезмерного зондирования.",
+        "uz": "0,5 mm sharcha toshni aniqlashga yordam beradi va ortiqcha chuqur zondlash xavfini kamaytiradi."
+      }
+    },
+    {
+      "q": {
+        "en": "What is the maximum possible dmft value in a full primary dentition?",
+        "ru": "Каково максимально возможное значение кпу в полном временном прикусе?",
+        "uz": "To‘liq sut tishlovida kpu ning eng katta qiymati qancha bo‘lishi mumkin?"
+      },
+      "options": [
+        {
+          "en": "32",
+          "ru": "32",
+          "uz": "32"
+        },
+        {
+          "en": "28",
+          "ru": "28",
+          "uz": "28"
+        },
+        {
+          "en": "20",
+          "ru": "20",
+          "uz": "20"
+        },
+        {
+          "en": "24",
+          "ru": "24",
+          "uz": "24"
+        }
+      ],
+      "correct": 2,
+      "explain": {
+        "en": "There are 20 primary teeth, and each can contribute at most 1 to the dmft.",
+        "ru": "Временных зубов 20, и каждый может дать в кпу не более 1.",
+        "uz": "Sut tishlari 20 ta va har biri kpu ga ko‘pi bilan 1 qo‘shadi."
+      }
+    },
+    {
+      "q": {
+        "en": "According to WHO survey methods, a sound molar with a fissure sealant is counted in DMFT as:",
+        "ru": "Согласно методике ВОЗ, интактный моляр с герметиком учитывается в КПУ как:",
+        "uz": "JSST usuliga ko‘ra fissurasi germetiklangan sog‘lom katta oziq tish KPU da qanday hisoblanadi:"
+      },
+      "options": [
+        {
+          "en": "Filled",
+          "ru": "пломбированный",
+          "uz": "Plombalangan"
+        },
+        {
+          "en": "Decayed",
+          "ru": "кариозный",
+          "uz": "Kariesli"
+        },
+        {
+          "en": "Missing",
+          "ru": "удалённый",
+          "uz": "Olingan"
+        },
+        {
+          "en": "Not counted as DMF",
+          "ru": "не учитывается в КПУ",
+          "uz": "KPU ga kiritilmaydi"
+        }
+      ],
+      "correct": 3,
+      "explain": {
+        "en": "A sealant is preventive, not a restoration, so the sealed sound tooth adds nothing to DMFT.",
+        "ru": "Герметик — профилактика, а не пломба, поэтому интактный зуб с герметиком не увеличивает КПУ.",
+        "uz": "Germetik plomba emas, profilaktika vositasi, shuning uchun germetikli sog‘lom tish KPU ni oshirmaydi."
+      }
+    }
+  ]
+}

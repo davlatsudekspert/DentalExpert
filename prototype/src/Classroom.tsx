@@ -4,7 +4,8 @@ import qrcode from 'qrcode-generator';
 import {callApi,type AuthUser} from './api';
 import QuizRun from './QuizRun';
 import Slides from './Slides';
-import {OralList,SubjectList,TopicList,useTopic} from './Curriculum';
+import {OralList,SubjectHero,SubjectList,TopicList,useTopic} from './Curriculum';
+import {subjectColor} from './subjectArt';
 import {SUBJECTS,metaLine,topicMeta,tx,type Subject,type Topic,type TopicMeta} from './curriculum';
 import type {Lang} from './discoveryData';
 
@@ -202,7 +203,7 @@ function TeacherPlan({lang,topics,items,onPick}:{lang:Lang;topics:TopicRow[]|nul
  const [subject,setSubject]=useState<Subject|null>(()=>{const first=topics?.[0];const m=first&&topicMeta(first.topicId);return m?subjectOf(m):null});
  const tag=(m:TopicMeta)=>{const row=topics?.find(r=>r.topicId===m.id);const [txt,cls]=topicStatus(t,row,items?.find(a=>a.id===row?.testId));return <span className={'lg-tag '+cls}>{txt}</span>};
  if(!subject)return <><p className="muted">{t.pick}</p><SubjectList lang={lang} onPick={setSubject}/></>;
- return <><button className="lg-link" onClick={()=>setSubject(null)}><ChevronLeft size={14}/>{tx(subject.title,lang)}</button><TopicList lang={lang} subject={subject} onPick={m=>onPick(m.id)} tag={tag}/></>;
+ return <><button className="lg-link" onClick={()=>setSubject(null)}><ChevronLeft size={14}/>{tx(subject.title,lang)}</button><SubjectHero lang={lang} subject={subject}/><TopicList lang={lang} subject={subject} onPick={m=>onPick(m.id)} tag={tag}/></>;
 }
 
 function StudentPlan({lang,topics,items,onPick}:{lang:Lang;topics:TopicRow[]|null;items:Assignment[]|null;onPick:(id:string)=>void}){
@@ -274,7 +275,7 @@ function TeacherTopic({lang,groupId,topicId,row,test,members,onChanged}:{lang:La
     {test?<TestRunning lang={lang} groupId={groupId} topic={topic} test={test} members={members} label={label} onFinish={async()=>{if(window.confirm(t.confirmFinish))await act('finish')}}/>
     :<TestSetup lang={lang} groupId={groupId} topic={topic} disabled={!isOpen||busy} onStart={(questions,minutes)=>act('test',{questions,minutes,title:tx(topic.title,lang)})}/>}
    </Stage>
-   {show&&<Slides title={tx(topic.title,lang)} eyebrow={tx(subject.title,lang)} slides={topic.slides} lang={lang} teacher onClose={()=>setShow(false)}/>}
+   {show&&<Slides title={tx(topic.title,lang)} eyebrow={tx(subject.title,lang)} slides={topic.slides} lang={lang} accent={subjectColor(subject.id).c} teacher onClose={()=>setShow(false)}/>}
   </>}
  </>;
 }
@@ -370,7 +371,7 @@ function StudentTopic({lang,topicId,test,onChanged}:{lang:Lang;topicId:string;te
    </div>
    <h3 className="lg-h">{t.prepare}</h3>
    <OralList lang={lang} topic={topic}/>
-   {show&&<Slides title={tx(topic.title,lang)} eyebrow={tx(subject.title,lang)} slides={topic.slides} lang={lang} onClose={()=>setShow(false)}/>}
+   {show&&<Slides title={tx(topic.title,lang)} eyebrow={tx(subject.title,lang)} slides={topic.slides} lang={lang} accent={subjectColor(subject.id).c} onClose={()=>setShow(false)}/>}
    {run!==null&&test&&<QuizRun title={tx(topic.title,lang)} lang={lang} reveal={false} deadline={run}
     questions={qs.map(q=>({q:tx(q.q,lang),options:q.options.map(o=>tx(o,lang)),correct:-1,explanation:''}))}
     result={score?<><b>{score[0]} / {score[1]}</b><p>{t.result}</p></>:err?<p className="cr-error">{err}</p>:<p>…</p>}

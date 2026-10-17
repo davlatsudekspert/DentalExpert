@@ -1,0 +1,1018 @@
+{
+  "id": "ortho-07",
+  "subject": "ortho",
+  "n": 7,
+  "week": 7,
+  "type": "lecture",
+  "hours": 2,
+  "title": {
+    "en": "Functional appliances and growth modification",
+    "ru": "Функциональные аппараты и управление ростом",
+    "uz": "Funksional apparatlar va o‘sishni boshqarish"
+  },
+  "goals": [
+    {
+      "en": "Explain how functional appliances work",
+      "ru": "Объяснять механизм действия функциональных аппаратов",
+      "uz": "Funksional apparatning ta’sir mexanizmini tushuntira olish"
+    },
+    {
+      "en": "Know the main types of functional appliance",
+      "ru": "Знать основные виды функциональных аппаратов",
+      "uz": "Asosiy funksional apparat turlarini bilish"
+    },
+    {
+      "en": "Time treatment according to growth",
+      "ru": "Выбирать время лечения с учётом периода роста",
+      "uz": "Davolash vaqtini o‘sish davriga qarab tanlay olish"
+    },
+    {
+      "en": "Judge the scope and limits of growth modification in Class II and III",
+      "ru": "Оценивать возможности и пределы управления ростом при II и III классе",
+      "uz": "II va III sinfda o‘sishni boshqarish imkoniyatlari va chegaralarini baholash"
+    }
+  ],
+  "links": [],
+  "sources": [
+    "Proffit WR et al. Contemporary Orthodontics, 6th ed., 2018",
+    "Batista KB et al. Orthodontic treatment for prominent upper front teeth (Class II malocclusion) in children and adolescents. Cochrane Database Syst Rev 2018",
+    "Mitchell L. An Introduction to Orthodontics, 5th ed., 2019"
+  ],
+  "slides": [
+    {
+      "layout": "title",
+      "title": {
+        "en": "Functional appliances",
+        "ru": "Функциональные аппараты",
+        "uz": "Funksional apparatlar"
+      },
+      "subtitle": {
+        "en": "Changing jaw relationships in growing patients",
+        "ru": "Изменение соотношения челюстей у растущего пациента",
+        "uz": "O‘sayotgan bemorda jag‘lar munosabatini o‘zgartirish"
+      }
+    },
+    {
+      "layout": "key",
+      "title": {
+        "en": "Definition",
+        "ru": "Определение",
+        "uz": "Ta’rif"
+      },
+      "term": {
+        "en": "Functional appliance",
+        "ru": "Функциональный аппарат",
+        "uz": "Funksional apparat"
+      },
+      "definition": {
+        "en": "A removable or fixed appliance that holds the mandible in a forward posture. Forces from muscles and soft tissues are transmitted to the teeth, producing mainly dentoalveolar and some skeletal change.",
+        "ru": "Съёмный или несъёмный аппарат, удерживающий нижнюю челюсть в выдвинутом положении. Силы мышц и мягких тканей передаются на зубы и вызывают в основном зубоальвеолярные и частично скелетные изменения.",
+        "uz": "Pastki jag‘ni oldinga surilgan holatda ushlab turuvchi olinadigan yoki qo‘zg‘almas apparat. Mushak va yumshoq to‘qima kuchlari tishlarga uzatilib, asosan tish-alveolyar, qisman skelet o‘zgarishlarini beradi."
+      },
+      "note": {
+        "en": "Stress that the force comes not from springs but from muscles and soft tissues while the mandible is held forward.",
+        "ru": "Подчеркните, что функциональный аппарат использует силу не пружин, а мышц и мягких тканей при выдвинутой нижней челюсти.",
+        "uz": "Funksional apparat kuchni prujinadan emas, balki pastki jag‘ni oldinga ushlab turuvchi mushaklar va yumshoq to‘qimalardan olishini ta’kidlang."
+      }
+    },
+    {
+      "layout": "timeline",
+      "title": {
+        "en": "Growth and timing",
+        "ru": "Рост и сроки лечения",
+        "uz": "O‘sish va davolash vaqti"
+      },
+      "events": [
+        {
+          "when": {
+            "en": "Childhood",
+            "ru": "Детство",
+            "uz": "Bolalik"
+          },
+          "label": {
+            "en": "Slow, steady growth",
+            "ru": "Медленный равномерный рост",
+            "uz": "Sekin va bir tekis o‘sish"
+          }
+        },
+        {
+          "when": {
+            "en": "Before puberty",
+            "ru": "Перед пубертатом",
+            "uz": "Balog‘at oldidan"
+          },
+          "label": {
+            "en": "Good time for facemask in Class III",
+            "ru": "Удобно для лицевой маски при III классе",
+            "uz": "III sinfda yuz niqobi uchun qulay"
+          }
+        },
+        {
+          "when": {
+            "en": "Pubertal spurt",
+            "ru": "Пубертатный период",
+            "uz": "Balog‘at davri"
+          },
+          "label": {
+            "en": "Best time for Class II functionals",
+            "ru": "Оптимально для функциональных аппаратов при II классе",
+            "uz": "II sinfda funksional apparat uchun eng qulay"
+          }
+        },
+        {
+          "when": {
+            "en": "After growth",
+            "ru": "После окончания роста",
+            "uz": "O‘sish tugagach"
+          },
+          "label": {
+            "en": "Camouflage or orthognathic surgery",
+            "ru": "Камуфляж или ортогнатическая хирургия",
+            "uz": "Kamuflyaj yoki ortognatik jarrohlik"
+          }
+        }
+      ],
+      "note": {
+        "en": "Remind students that puberty starts earlier in girls than boys and that height gain is a useful guide.",
+        "ru": "Напомните, что у девочек пубертат начинается раньше, чем у мальчиков, а прибавка роста – хороший ориентир.",
+        "uz": "Balog‘at davri qizlarda o‘g‘il bolalarga qaraganda erta boshlanishini va bo‘yning o‘sishi yaxshi ko‘rsatkich ekanini eslating."
+      }
+    },
+    {
+      "layout": "tree",
+      "title": {
+        "en": "Types of appliance",
+        "ru": "Виды аппаратов",
+        "uz": "Apparat turlari"
+      },
+      "root": {
+        "en": "Growth modification",
+        "ru": "Управление ростом",
+        "uz": "O‘sishni boshqarish"
+      },
+      "children": [
+        {
+          "label": {
+            "en": "Class II: removable",
+            "ru": "II класс: съёмные",
+            "uz": "II sinf: olinadigan"
+          },
+          "items": [
+            {
+              "en": "Twin Block",
+              "ru": "Твин-блок",
+              "uz": "Twin Block"
+            },
+            {
+              "en": "Andresen activator",
+              "ru": "Активатор Андрезена",
+              "uz": "Andresen aktivatori"
+            },
+            {
+              "en": "Bionator",
+              "ru": "Бионатор",
+              "uz": "Bionator"
+            },
+            {
+              "en": "Fränkel function regulator",
+              "ru": "Регулятор функций Френкеля",
+              "uz": "Frenkel regulyatori"
+            }
+          ]
+        },
+        {
+          "label": {
+            "en": "Class II: fixed",
+            "ru": "II класс: несъёмные",
+            "uz": "II sinf: qo‘zg‘almas"
+          },
+          "items": [
+            {
+              "en": "Herbst appliance",
+              "ru": "Аппарат Хербста",
+              "uz": "Herbst apparati"
+            },
+            {
+              "en": "Fixed functional springs",
+              "ru": "Несъёмные функциональные пружины",
+              "uz": "Qo‘zg‘almas funksional prujinalar"
+            }
+          ]
+        },
+        {
+          "label": {
+            "en": "Maxillary restraint",
+            "ru": "Сдерживание роста верхней челюсти",
+            "uz": "Yuqori jag‘ o‘sishini cheklash"
+          },
+          "items": [
+            {
+              "en": "Headgear",
+              "ru": "Лицевая дуга с головной шапочкой",
+              "uz": "Bosh qalpoq (headgear)"
+            }
+          ]
+        },
+        {
+          "label": {
+            "en": "Class III",
+            "ru": "III класс",
+            "uz": "III sinf"
+          },
+          "items": [
+            {
+              "en": "Facemask with expansion",
+              "ru": "Лицевая маска и расширение",
+              "uz": "Yuz niqobi va kengaytirish"
+            },
+            {
+              "en": "Function regulator III",
+              "ru": "Регулятор Френкеля III",
+              "uz": "Frenkel regulyatori III"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "layout": "table",
+      "title": {
+        "en": "Effects of Class II functional treatment",
+        "ru": "Эффекты функционального аппарата при II классе",
+        "uz": "II sinf funksional apparatining ta’siri"
+      },
+      "head": [
+        {
+          "en": "Level",
+          "ru": "Уровень",
+          "uz": "Daraja"
+        },
+        {
+          "en": "Change",
+          "ru": "Изменение",
+          "uz": "O‘zgarish"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "en": "Upper incisors",
+            "ru": "Верхние резцы",
+            "uz": "Yuqori kesuvchilar"
+          },
+          {
+            "en": "Retroclined",
+            "ru": "Ретрузия",
+            "uz": "Orqaga og‘adi"
+          }
+        ],
+        [
+          {
+            "en": "Lower incisors",
+            "ru": "Нижние резцы",
+            "uz": "Pastki kesuvchilar"
+          },
+          {
+            "en": "Proclined",
+            "ru": "Протрузия",
+            "uz": "Oldinga og‘adi"
+          }
+        ],
+        [
+          {
+            "en": "Molars",
+            "ru": "Моляры",
+            "uz": "Molyarlar"
+          },
+          {
+            "en": "Uppers back, lowers forward and up",
+            "ru": "Верхние – назад, нижние – вперёд и вверх",
+            "uz": "Yuqori – orqaga, pastki – oldinga va yuqoriga"
+          }
+        ],
+        [
+          {
+            "en": "Skeleton",
+            "ru": "Скелет",
+            "uz": "Skelet"
+          },
+          {
+            "en": "Small mandibular gain, some maxillary restraint",
+            "ru": "Небольшое усиление роста нижней и сдерживание верхней челюсти",
+            "uz": "Pastki jag‘ o‘sishi biroz ortishi, yuqori jag‘ cheklanishi"
+          }
+        ],
+        [
+          {
+            "en": "Soft tissue",
+            "ru": "Мягкие ткани",
+            "uz": "Yumshoq to‘qima"
+          },
+          {
+            "en": "Better profile and lip seal",
+            "ru": "Улучшаются профиль и смыкание губ",
+            "uz": "Profil va lablar yopilishi yaxshilanadi"
+          }
+        ]
+      ]
+    },
+    {
+      "layout": "compare",
+      "title": {
+        "en": "Removable versus fixed functionals",
+        "ru": "Съёмные и несъёмные функциональные аппараты",
+        "uz": "Olinadigan va qo‘zg‘almas funksionallar"
+      },
+      "columns": [
+        {
+          "head": {
+            "en": "Removable (e.g. Twin Block)",
+            "ru": "Съёмные (например, твин-блок)",
+            "uz": "Olinadigan (masalan, Twin Block)"
+          },
+          "items": [
+            {
+              "en": "Cheaper, easy to clean",
+              "ru": "Дешевле, легко чистить",
+              "uz": "Arzonroq, tozalash oson"
+            },
+            {
+              "en": "Result depends on wear",
+              "ru": "Результат зависит от ношения",
+              "uz": "Natija taqishga bog‘liq"
+            },
+            {
+              "en": "Can break or be lost",
+              "ru": "Могут ломаться или теряться",
+              "uz": "Sinishi yoki yo‘qolishi mumkin"
+            }
+          ]
+        },
+        {
+          "head": {
+            "en": "Fixed (e.g. Herbst)",
+            "ru": "Несъёмные (например, Хербст)",
+            "uz": "Qo‘zg‘almas (masalan, Herbst)"
+          },
+          "items": [
+            {
+              "en": "No reliance on compliance",
+              "ru": "Не зависят от желания пациента",
+              "uz": "Bemorning xohishiga bog‘liq emas"
+            },
+            {
+              "en": "Work full time",
+              "ru": "Работают круглосуточно",
+              "uz": "Kun bo‘yi ishlaydi"
+            },
+            {
+              "en": "Costlier, harder to repair",
+              "ru": "Дороже, сложнее ремонт",
+              "uz": "Qimmatroq, singanda tuzatish qiyin"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "layout": "flow",
+      "title": {
+        "en": "Twin Block treatment stages",
+        "ru": "Этапы лечения твин-блоком",
+        "uz": "Twin Block bilan davolash bosqichlari"
+      },
+      "steps": [
+        {
+          "label": {
+            "en": "Records",
+            "ru": "Документация",
+            "uz": "Hujjatlar"
+          },
+          "detail": {
+            "en": "Models, cephalogram, photos",
+            "ru": "Модели, ТРГ, фото",
+            "uz": "Modellar, sefalogramma, foto"
+          }
+        },
+        {
+          "label": {
+            "en": "Bite registration",
+            "ru": "Регистрация прикуса",
+            "uz": "Tishlov qaydi"
+          },
+          "detail": {
+            "en": "With the mandible postured forward",
+            "ru": "При выдвинутой нижней челюсти",
+            "uz": "Pastki jag‘ oldinga surilgan holatda"
+          }
+        },
+        {
+          "label": {
+            "en": "Active phase",
+            "ru": "Активный этап",
+            "uz": "Faol bosqich"
+          },
+          "detail": {
+            "en": "Worn full time, including meals",
+            "ru": "Ношение круглосуточно, в том числе при еде",
+            "uz": "Kun bo‘yi, ovqatlanganda ham taqish"
+          }
+        },
+        {
+          "label": {
+            "en": "Support phase",
+            "ru": "Поддерживающий этап",
+            "uz": "Qo‘llab-quvvatlash bosqichi"
+          },
+          "detail": {
+            "en": "Hold the corrected position",
+            "ru": "Закрепление нового положения",
+            "uz": "Yangi holatni mustahkamlash"
+          }
+        },
+        {
+          "label": {
+            "en": "Fixed appliances",
+            "ru": "Несъёмная техника",
+            "uz": "Qo‘zg‘almas apparat"
+          },
+          "detail": {
+            "en": "Detail the occlusion",
+            "ru": "Детализация окклюзии",
+            "uz": "Detallarni tuzatish"
+          }
+        }
+      ]
+    },
+    {
+      "layout": "bullets",
+      "title": {
+        "en": "Growth modification in Class III",
+        "ru": "Управление ростом при III классе",
+        "uz": "III sinfda o‘sishni boshqarish"
+      },
+      "bullets": [
+        {
+          "en": "A facemask protracts the maxilla",
+          "ru": "Лицевая маска выдвигает верхнюю челюсть вперёд",
+          "uz": "Yuz niqobi yuqori jag‘ni oldinga tortadi"
+        },
+        {
+          "en": "Works best early, before about 10 years",
+          "ru": "Эффективнее рано, примерно до 10 лет",
+          "uz": "Erta, taxminan 10 yoshgacha samaraliroq"
+        },
+        {
+          "en": "Often combined with maxillary expansion",
+          "ru": "Часто в сочетании с расширением верхней челюсти",
+          "uz": "Ko‘pincha yuqori jag‘ni kengaytirish bilan"
+        },
+        {
+          "en": "Mandibular growth is hard to restrain",
+          "ru": "Рост нижней челюсти сдержать трудно",
+          "uz": "Pastki jag‘ o‘sishini to‘xtatish qiyin"
+        }
+      ],
+      "note": {
+        "en": "Parents should be told early that late mandibular growth may undo the result.",
+        "ru": "Родителям заранее объясняют, что поздний рост нижней челюсти может ухудшить результат.",
+        "uz": "Pastki jag‘ning kech o‘sishi natijani buzishi mumkinligini ota-onalarga oldindan tushuntirish kerak."
+      }
+    },
+    {
+      "layout": "bullets",
+      "title": {
+        "en": "What the evidence says",
+        "ru": "Что говорят доказательные данные",
+        "uz": "Dalillar nima deydi"
+      },
+      "bullets": [
+        {
+          "en": "Most of the effect is dentoalveolar",
+          "ru": "Большая часть эффекта – зубоальвеолярная",
+          "uz": "Ta’sirning katta qismi tish-alveolyar"
+        },
+        {
+          "en": "Skeletal change is usually small and variable",
+          "ru": "Скелетный эффект обычно небольшой и вариабельный",
+          "uz": "Skelet ta’siri odatda kichik va o‘zgaruvchan"
+        },
+        {
+          "en": "Early treatment may reduce incisor trauma",
+          "ru": "Раннее лечение может снизить риск травмы резцов",
+          "uz": "Erta davolash kesuvchilar travmasini kamaytirishi mumkin"
+        },
+        {
+          "en": "Outcome depends on cooperation",
+          "ru": "Результат зависит от сотрудничества пациента",
+          "uz": "Natija bemorning hamkorligiga bog‘liq"
+        }
+      ],
+      "note": {
+        "en": "Ask students how they would explain the benefits and limits of early treatment to parents.",
+        "ru": "Спросите студентов, как объяснить родителям пользу и пределы раннего лечения.",
+        "uz": "Talabalardan ota-onaga erta davolashning foydasi va chegaralarini qanday tushuntirishni so‘rang."
+      }
+    },
+    {
+      "layout": "summary",
+      "title": {
+        "en": "Summary",
+        "ru": "Итоги",
+        "uz": "Xulosa"
+      },
+      "bullets": [
+        {
+          "en": "Functional appliances posture the mandible forward",
+          "ru": "Функциональный аппарат удерживает нижнюю челюсть впереди",
+          "uz": "Funksional apparat pastki jag‘ni oldinga ushlab turadi"
+        },
+        {
+          "en": "Puberty is the best time for Class II",
+          "ru": "Оптимальное время при II классе – пубертат",
+          "uz": "II sinf uchun eng qulay vaqt – balog‘at davri"
+        },
+        {
+          "en": "Facemask is used early in Class III",
+          "ru": "При III классе лицевую маску применяют рано",
+          "uz": "III sinfda yuz niqobi erta qo‘llanadi"
+        },
+        {
+          "en": "Effects are mainly dentoalveolar, skeletal change limited",
+          "ru": "Эффект в основном зубоальвеолярный, скелетный – ограничен",
+          "uz": "Ta’sir asosan tish-alveolyar, skelet ta’siri cheklangan"
+        }
+      ]
+    }
+  ],
+  "oral": [
+    {
+      "q": {
+        "en": "How does a functional appliance work?",
+        "ru": "Как работает функциональный аппарат?",
+        "uz": "Funksional apparat qanday ishlaydi?"
+      },
+      "plan": [
+        {
+          "en": "Holds the mandible forward",
+          "ru": "Удерживает нижнюю челюсть в выдвинутом положении",
+          "uz": "Pastki jag‘ni oldinga surilgan holatda ushlaydi"
+        },
+        {
+          "en": "Transmits muscle and soft tissue forces",
+          "ru": "Передаёт силы мышц и мягких тканей",
+          "uz": "Mushak va yumshoq to‘qima kuchlarini uzatadi"
+        },
+        {
+          "en": "Mainly dentoalveolar change",
+          "ru": "В основном зубоальвеолярные изменения",
+          "uz": "Asosan tish-alveolyar o‘zgarishlar"
+        },
+        {
+          "en": "Some skeletal effect",
+          "ru": "Небольшой скелетный эффект",
+          "uz": "Kichik skelet ta’siri"
+        }
+      ]
+    },
+    {
+      "q": {
+        "en": "When is the best time for Class II functional treatment, and why?",
+        "ru": "Какое время оптимально для функционального лечения II класса и почему?",
+        "uz": "II sinf funksional davolash uchun qaysi vaqt eng qulay va nima uchun?"
+      },
+      "plan": [
+        {
+          "en": "The pubertal growth spurt",
+          "ru": "Пик пубертатного роста",
+          "uz": "Balog‘at davridagi o‘sish cho‘qqisi"
+        },
+        {
+          "en": "Earlier in girls than boys",
+          "ru": "У девочек раньше, у мальчиков позже",
+          "uz": "Qizlarda erta, o‘g‘il bolalarda kechroq"
+        },
+        {
+          "en": "Judge by height gain and radiographs",
+          "ru": "Оценка по прибавке роста и рентгену",
+          "uz": "O‘sish holatini bo‘y o‘sishi va rentgen bilan baholash"
+        },
+        {
+          "en": "May start earlier if trauma risk is high",
+          "ru": "При большой щели можно начать раньше из-за риска травмы",
+          "uz": "Katta overjetda travma xavfi tufayli erta boshlash mumkin"
+        }
+      ]
+    },
+    {
+      "q": {
+        "en": "Describe the dental and skeletal effects of Class II functionals.",
+        "ru": "Опишите зубные и скелетные эффекты функционального аппарата при II классе.",
+        "uz": "II sinf funksional apparatining tish va skeletga ta’sirini ayting."
+      },
+      "plan": [
+        {
+          "en": "Uppers retrocline, lowers procline",
+          "ru": "Верхние резцы ретрузируются, нижние протрузируются",
+          "uz": "Yuqori kesuvchilar orqaga, pastkilar oldinga og‘adi"
+        },
+        {
+          "en": "Molar relationship corrects",
+          "ru": "Исправляется соотношение моляров",
+          "uz": "Molyar munosabati tuzaladi"
+        },
+        {
+          "en": "Small increase in mandibular growth",
+          "ru": "Небольшое усиление роста нижней челюсти",
+          "uz": "Pastki jag‘ o‘sishi biroz ortishi"
+        },
+        {
+          "en": "Some maxillary restraint",
+          "ru": "Небольшое сдерживание верхней челюсти",
+          "uz": "Yuqori jag‘ o‘sishi biroz cheklanishi"
+        }
+      ]
+    },
+    {
+      "q": {
+        "en": "What are the methods and limits of growth modification in Class III?",
+        "ru": "Каковы методы и пределы управления ростом при III классе?",
+        "uz": "III sinfda o‘sishni boshqarish usullari va chegaralari qanday?"
+      },
+      "plan": [
+        {
+          "en": "Facemask, often with expansion",
+          "ru": "Лицевая маска, часто с расширением",
+          "uz": "Yuz niqobi, ko‘pincha kengaytirish bilan"
+        },
+        {
+          "en": "More effective when young",
+          "ru": "Эффективнее в раннем возрасте",
+          "uz": "Erta yoshda samaraliroq"
+        },
+        {
+          "en": "Late mandibular growth may relapse it",
+          "ru": "Поздний рост нижней челюсти может ухудшить результат",
+          "uz": "Pastki jag‘ning kech o‘sishi natijani buzishi mumkin"
+        },
+        {
+          "en": "Severe cases need surgery after growth",
+          "ru": "В тяжёлых случаях – хирургия после роста",
+          "uz": "Og‘ir holatda o‘sishdan keyin jarrohlik"
+        }
+      ]
+    }
+  ],
+  "test": [
+    {
+      "q": {
+        "en": "Where does a functional appliance mainly get its force?",
+        "ru": "Откуда функциональный аппарат в основном получает силу?",
+        "uz": "Funksional apparat kuchni asosan qayerdan oladi?"
+      },
+      "options": [
+        {
+          "en": "From metal springs",
+          "ru": "От металлических пружин",
+          "uz": "Metall prujinalardan"
+        },
+        {
+          "en": "From muscles and soft tissues",
+          "ru": "От мышц и мягких тканей",
+          "uz": "Mushaklar va yumshoq to‘qimalardan"
+        },
+        {
+          "en": "From turning a screw",
+          "ru": "От вращения винта",
+          "uz": "Vintni burashdan"
+        },
+        {
+          "en": "From elastic chain",
+          "ru": "От эластичной цепочки",
+          "uz": "Elastik zanjirdan"
+        }
+      ],
+      "correct": 1,
+      "explain": {
+        "en": "With the mandible postured forward, stretched muscles and soft tissues transmit force to the teeth.",
+        "ru": "При выдвижении нижней челюсти сила растянутых мышц и мягких тканей передаётся на зубы.",
+        "uz": "Pastki jag‘ oldinga surilganda cho‘zilgan mushaklar va yumshoq to‘qimalar kuchi tishlarga uzatiladi."
+      }
+    },
+    {
+      "q": {
+        "en": "A 12-year-old girl has Class II division 1 with a 10 mm overjet. Which appliance suits?",
+        "ru": "Девочке 12 лет со II классом 1-го подкласса и щелью 10 мм какой аппарат подходит?",
+        "uz": "II sinf 1-bo‘limli, overjeti 10 mm bo‘lgan 12 yoshli qiz uchun qaysi apparat mos?"
+      },
+      "options": [
+        {
+          "en": "Facemask",
+          "ru": "Лицевая маска",
+          "uz": "Yuz niqobi"
+        },
+        {
+          "en": "Chin cup",
+          "ru": "Подбородочная праща",
+          "uz": "Iyak qalpog‘i"
+        },
+        {
+          "en": "Twin Block",
+          "ru": "Твин-блок",
+          "uz": "Twin Block"
+        },
+        {
+          "en": "A retainer only",
+          "ru": "Только ретейнер",
+          "uz": "Faqat retenyer"
+        }
+      ],
+      "correct": 2,
+      "explain": {
+        "en": "In a growing Class II division 1 patient, a functional such as a Twin Block reduces the overjet.",
+        "ru": "В период роста при II классе 1-го подкласса функциональный аппарат, например твин-блок, уменьшает щель.",
+        "uz": "O‘sish davridagi II sinf 1-bo‘limda Twin Block kabi funksional apparat overjetni kamaytiradi."
+      }
+    },
+    {
+      "q": {
+        "en": "What is the main effect of Class II functional treatment?",
+        "ru": "Каков в основном эффект функционального лечения II класса?",
+        "uz": "II sinf funksional davolashning ta’siri asosan qanday?"
+      },
+      "options": [
+        {
+          "en": "Dentoalveolar",
+          "ru": "Зубоальвеолярный",
+          "uz": "Tish-alveolyar"
+        },
+        {
+          "en": "Purely skeletal",
+          "ru": "Только скелетный",
+          "uz": "Faqat skelet"
+        },
+        {
+          "en": "Soft tissue only",
+          "ru": "Только мягкотканый",
+          "uz": "Faqat yumshoq to‘qima"
+        },
+        {
+          "en": "No effect",
+          "ru": "Эффекта нет",
+          "uz": "Hech qanday ta’sir yo‘q"
+        }
+      ],
+      "correct": 0,
+      "explain": {
+        "en": "Most studies show overjet correction mainly by incisor and molar movement, with small skeletal change.",
+        "ru": "В большинстве исследований щель исправляется главным образом за счёт смещения резцов и моляров; скелетный эффект невелик.",
+        "uz": "Ko‘pchilik tadqiqotlarda overjet asosan kesuvchilar va molyarlar siljishi hisobiga tuzaladi; skelet ta’siri kichik."
+      }
+    },
+    {
+      "q": {
+        "en": "How do upper incisors usually change during Twin Block treatment?",
+        "ru": "Как обычно меняются верхние резцы при лечении твин-блоком?",
+        "uz": "Twin Block bilan davolashda yuqori kesuvchilar odatda qanday o‘zgaradi?"
+      },
+      "options": [
+        {
+          "en": "They procline",
+          "ru": "Протрузируются",
+          "uz": "Oldinga og‘adi"
+        },
+        {
+          "en": "They intrude",
+          "ru": "Интрузируются",
+          "uz": "Intruziyaga uchraydi"
+        },
+        {
+          "en": "No change",
+          "ru": "Не изменяются",
+          "uz": "O‘zgarmaydi"
+        },
+        {
+          "en": "They retrocline",
+          "ru": "Ретрузируются",
+          "uz": "Orqaga og‘adi"
+        }
+      ],
+      "correct": 3,
+      "explain": {
+        "en": "The appliance retroclines the upper incisors and proclines the lowers.",
+        "ru": "Аппарат ретрузирует верхние и протрузирует нижние резцы.",
+        "uz": "Apparat yuqori kesuvchilarni orqaga, pastki kesuvchilarni oldinga og‘diradi."
+      }
+    },
+    {
+      "q": {
+        "en": "Which appliance protracts the maxilla in Class III?",
+        "ru": "Какой аппарат применяют для выдвижения верхней челюсти при III классе?",
+        "uz": "III sinfda yuqori jag‘ni oldinga tortish uchun qaysi apparat ishlatiladi?"
+      },
+      "options": [
+        {
+          "en": "Twin Block",
+          "ru": "Твин-блок",
+          "uz": "Twin Block"
+        },
+        {
+          "en": "Facemask",
+          "ru": "Лицевая маска",
+          "uz": "Yuz niqobi"
+        },
+        {
+          "en": "Herbst appliance",
+          "ru": "Аппарат Хербста",
+          "uz": "Herbst apparati"
+        },
+        {
+          "en": "Andresen activator",
+          "ru": "Активатор Андрезена",
+          "uz": "Andresen aktivatori"
+        }
+      ],
+      "correct": 1,
+      "explain": {
+        "en": "A facemask rests on forehead and chin and pulls the maxilla forward.",
+        "ru": "Лицевая маска опирается на лоб и подбородок и выдвигает верхнюю челюсть вперёд.",
+        "uz": "Yuz niqobi (teskari bosh qalpoq) peshona va iyakka tayanib, yuqori jag‘ni oldinga tortadi."
+      }
+    },
+    {
+      "q": {
+        "en": "When is facemask treatment most effective?",
+        "ru": "Когда лечение лицевой маской наиболее эффективно?",
+        "uz": "Yuz niqobi bilan davolash qachon samaraliroq?"
+      },
+      "options": [
+        {
+          "en": "When young, before about 10 years",
+          "ru": "В раннем возрасте, примерно до 10 лет",
+          "uz": "Erta yoshda, taxminan 10 yoshgacha"
+        },
+        {
+          "en": "After growth has finished",
+          "ru": "После окончания роста",
+          "uz": "O‘sish tugagandan keyin"
+        },
+        {
+          "en": "Only in adults",
+          "ru": "Только у взрослых",
+          "uz": "Faqat kattalarda"
+        },
+        {
+          "en": "Only after third molars erupt",
+          "ru": "Только после прорезывания третьих моляров",
+          "uz": "Faqat aql tishlari chiqqanda"
+        }
+      ],
+      "correct": 0,
+      "explain": {
+        "en": "Maxillary sutures are more responsive when young, so protraction works better.",
+        "ru": "В раннем возрасте швы верхней челюсти более податливы, поэтому протракция эффективнее.",
+        "uz": "Yuqori jag‘ choklari erta yoshda ochiqroq bo‘lgani uchun protraksiya yaxshiroq natija beradi."
+      }
+    },
+    {
+      "q": {
+        "en": "What is the main advantage of a fixed functional over a removable one?",
+        "ru": "Каково главное преимущество несъёмного функционального аппарата перед съёмным?",
+        "uz": "Qo‘zg‘almas funksional apparatning olinadiganga nisbatan asosiy afzalligi nima?"
+      },
+      "options": [
+        {
+          "en": "It is cheaper",
+          "ru": "Дешевле",
+          "uz": "Arzonroq"
+        },
+        {
+          "en": "It is easier to clean",
+          "ru": "Легче чистить",
+          "uz": "Tozalash osonroq"
+        },
+        {
+          "en": "It does not rely on compliance",
+          "ru": "Не зависит от желания пациента",
+          "uz": "Bemorning xohishiga bog‘liq emas"
+        },
+        {
+          "en": "It works only in adults",
+          "ru": "Работает только у взрослых",
+          "uz": "Faqat kattalarda ishlaydi"
+        }
+      ],
+      "correct": 2,
+      "explain": {
+        "en": "The patient cannot remove it, so it works full time.",
+        "ru": "Пациент не может снять несъёмный аппарат, поэтому он работает круглосуточно.",
+        "uz": "Qo‘zg‘almas apparatni bemor yecha olmaydi, shuning uchun u kun bo‘yi ishlaydi."
+      }
+    },
+    {
+      "q": {
+        "en": "Which benefit of early treatment for a large overjet is supported by evidence?",
+        "ru": "Какая польза раннего лечения ребёнка с большой щелью подтверждена?",
+        "uz": "Katta overjetli bolani erta davolashning isbotlangan foydasi qaysi?"
+      },
+      "options": [
+        {
+          "en": "No more caries",
+          "ru": "Исчезновение кариеса",
+          "uz": "Kariesning yo‘qolishi"
+        },
+        {
+          "en": "No need for later treatment",
+          "ru": "Отсутствие необходимости дальнейшего лечения",
+          "uz": "Keyingi davolashga ehtiyoj yo‘qligi"
+        },
+        {
+          "en": "Doubling of mandibular growth",
+          "ru": "Двукратный рост нижней челюсти",
+          "uz": "Pastki jag‘ning ikki baravar o‘sishi"
+        },
+        {
+          "en": "Lower risk of incisor trauma",
+          "ru": "Снижение риска травмы резцов",
+          "uz": "Kesuvchilar travmasi xavfining kamayishi"
+        }
+      ],
+      "correct": 3,
+      "explain": {
+        "en": "A Cochrane review found early treatment reduces incisor trauma, without clear long-term skeletal advantage.",
+        "ru": "По данным Кокрейновского обзора раннее лечение снижает травмы резцов, но значимого долгосрочного скелетного преимущества не доказано.",
+        "uz": "Kokreyn sharhiga ko‘ra erta davolash kesuvchilar shikastini kamaytiradi, ammo skelet bo‘yicha katta uzoq muddatli afzallik berishi aniq emas."
+      }
+    },
+    {
+      "q": {
+        "en": "In what position is the bite registered for a Twin Block?",
+        "ru": "В каком положении регистрируют прикус для твин-блока?",
+        "uz": "Twin Block uchun tishlov qaydi qanday holatda olinadi?"
+      },
+      "options": [
+        {
+          "en": "With the mandible postured forward",
+          "ru": "При выдвинутой нижней челюсти",
+          "uz": "Pastki jag‘ oldinga surilgan holatda"
+        },
+        {
+          "en": "With the mandible fully retruded",
+          "ru": "При максимально отведённой назад челюсти",
+          "uz": "Pastki jag‘ orqaga tortilgan holatda"
+        },
+        {
+          "en": "With the mouth wide open",
+          "ru": "При широко открытом рте",
+          "uz": "Og‘iz to‘liq ochiq holatda"
+        },
+        {
+          "en": "No bite registration is needed",
+          "ru": "Регистрация прикуса не нужна",
+          "uz": "Tishlov qaydi kerak emas"
+        }
+      ],
+      "correct": 0,
+      "explain": {
+        "en": "The bite is taken with the mandible forward so the appliance holds it there.",
+        "ru": "Регистрацию проводят в выдвинутом положении, чтобы аппарат удерживал нижнюю челюсть в нём.",
+        "uz": "Apparat pastki jag‘ni yangi oldingi holatda ushlab turishi uchun qayd shu holatda olinadi."
+      }
+    },
+    {
+      "q": {
+        "en": "For an adult with severe skeletal Class III, which approach is usually considered?",
+        "ru": "Какой путь обычно рассматривают у взрослого с тяжёлым скелетным III классом?",
+        "uz": "Skelet III sinfi og‘ir bo‘lgan katta yoshli bemorda qaysi yo‘l odatda ko‘rib chiqiladi?"
+      },
+      "options": [
+        {
+          "en": "Twin Block",
+          "ru": "Твин-блок",
+          "uz": "Twin Block"
+        },
+        {
+          "en": "Facemask",
+          "ru": "Лицевая маска",
+          "uz": "Yuz niqobi"
+        },
+        {
+          "en": "Orthodontics with orthognathic surgery",
+          "ru": "Ортодонтия и ортогнатическая хирургия",
+          "uz": "Ortodontiya va ortognatik jarrohlik"
+        },
+        {
+          "en": "Observation only",
+          "ru": "Только наблюдение",
+          "uz": "Faqat kuzatish"
+        }
+      ],
+      "correct": 2,
+      "explain": {
+        "en": "Once growth is complete, severe skeletal problems are treated with combined orthodontics and surgery.",
+        "ru": "После окончания роста управлять ростом невозможно, тяжёлые скелетные проблемы лечат в сочетании с хирургией.",
+        "uz": "O‘sish tugagach o‘sishni boshqarish imkonsiz, og‘ir skelet muammolari jarrohlik bilan birga davolanadi."
+      }
+    }
+  ]
+}

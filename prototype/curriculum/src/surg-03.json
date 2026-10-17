@@ -340,7 +340,7 @@
           {
             "en": "Posterior superior alveolar",
             "ru": "Туберальная",
-            "uz": "Tuberal"
+            "uz": "Tuberal (orqa yuqori alveolyar)"
           },
           {
             "en": "Posterior superior alveolar",
@@ -404,7 +404,12 @@
             "uz": "Qoziqlar orasidagi old tanglay"
           }
         ]
-      ]
+      ],
+      "note": {
+        "en": "Aspiration is vital in the PSA block: the needle passes near the pterygoid venous plexus and haematoma risk is high.",
+        "ru": "При туберальной анестезии аспирация особенно важна: игла проходит рядом с крыловидным венозным сплетением, риск гематомы высок.",
+        "uz": "Tuberal blokadada aspiratsiya ayniqsa muhim: igna qanotsimon venoz chigal yaqinidan o‘tadi va gematoma xavfi yuqori."
+      }
     },
     {
       "layout": "compare",

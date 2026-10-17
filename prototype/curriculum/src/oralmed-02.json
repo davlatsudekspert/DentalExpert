@@ -1,0 +1,973 @@
+{
+  "id": "oralmed-02",
+  "subject": "oralmed",
+  "n": 2,
+  "week": 2,
+  "type": "lecture",
+  "hours": 2,
+  "title": {
+    "en": "Recurrent aphthous stomatitis and traumatic ulcers",
+    "ru": "Рецидивирующий афтозный стоматит и травматические язвы",
+    "uz": "Retsidivlanuvchi aftoz stomatit va travmatik yaralar"
+  },
+  "goals": [
+    {
+      "en": "Distinguish the types of recurrent aphthous stomatitis",
+      "ru": "Различать формы рецидивирующего афтозного стоматита",
+      "uz": "Retsidivlanuvchi aftoz stomatit turlarini farqlash"
+    },
+    {
+      "en": "Know the systemic conditions linked with aphthae",
+      "ru": "Знать общие состояния, связанные с афтами",
+      "uz": "Afta bilan bog‘liq umumiy holatlarni bilish"
+    },
+    {
+      "en": "Recognise a traumatic ulcer and remove the cause",
+      "ru": "Распознавать травматическую язву и устранять причину",
+      "uz": "Travmatik yarani tanish va sababini bartaraf etish"
+    },
+    {
+      "en": "Apply the 2-week rule for non-healing ulcers",
+      "ru": "Применять «правило 2 недель» при незаживающей язве",
+      "uz": "Bitmaydigan yarada «2 hafta qoidasini» qo‘llash"
+    }
+  ],
+  "links": [],
+  "sources": [
+    "Scully C. Oral and Maxillofacial Medicine: The Basis of Diagnosis and Treatment, 3rd ed., 2013",
+    "Glick M et al. Burket's Oral Medicine, 13th ed., 2021",
+    "Neville BW et al. Oral and Maxillofacial Pathology, 4th ed., 2016"
+  ],
+  "slides": [
+    {
+      "layout": "title",
+      "title": {
+        "en": "Aphthous stomatitis and traumatic ulcers",
+        "ru": "Афтозный стоматит и травматические язвы",
+        "uz": "Aftoz stomatit va travmatik yaralar"
+      },
+      "subtitle": {
+        "en": "When an ulcer is harmless and when it is not",
+        "ru": "Когда язва безобидна, а когда настораживает",
+        "uz": "Yara qachon bezarar va qachon xavotirli"
+      }
+    },
+    {
+      "layout": "table",
+      "title": {
+        "en": "Types of recurrent aphthous stomatitis",
+        "ru": "Формы рецидивирующего афтозного стоматита",
+        "uz": "Retsidivlanuvchi aftoz stomatit turlari"
+      },
+      "head": [
+        {
+          "en": "Type",
+          "ru": "Форма",
+          "uz": "Turi"
+        },
+        {
+          "en": "Appearance",
+          "ru": "Вид",
+          "uz": "Ko‘rinishi"
+        },
+        {
+          "en": "Healing",
+          "ru": "Заживление",
+          "uz": "Bitishi"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "en": "Minor",
+            "ru": "Малая",
+            "uz": "Kichik (minor)"
+          },
+          {
+            "en": "Under 1 cm, 1–5 ulcers, non-keratinised mucosa",
+            "ru": "Менее 1 см, 1–5 шт., на неороговевающей слизистой",
+            "uz": "1 sm dan kichik, 1–5 ta, keratinlashmagan shilliqda"
+          },
+          {
+            "en": "7–14 days, no scar",
+            "ru": "7–14 дней, без рубца",
+            "uz": "7–14 kun, chandiqsiz"
+          }
+        ],
+        [
+          {
+            "en": "Major",
+            "ru": "Большая",
+            "uz": "Katta (major)"
+          },
+          {
+            "en": "Over 1 cm, deep, also soft palate and fauces",
+            "ru": "Более 1 см, глубокие, также на мягком нёбе и в зеве",
+            "uz": "1 sm dan katta, chuqur, yumshoq tanglay va halqumda ham"
+          },
+          {
+            "en": "Weeks to months, scarring",
+            "ru": "Недели–месяцы, с рубцом",
+            "uz": "Haftalar-oylar, chandiq bilan"
+          }
+        ],
+        [
+          {
+            "en": "Herpetiform",
+            "ru": "Герпетиформная",
+            "uz": "Gerpetiform"
+          },
+          {
+            "en": "Many 1–3 mm ulcers that coalesce",
+            "ru": "Множественные язвочки 1–3 мм, сливаются",
+            "uz": "Ko‘p sonli 1–3 mm yaralar, qo‘shilib ketadi"
+          },
+          {
+            "en": "About 10–14 days",
+            "ru": "Около 10–14 дней",
+            "uz": "Taxminan 10–14 kun"
+          }
+        ]
+      ],
+      "note": {
+        "en": "Herpetiform aphthae are not caused by herpes virus; the name describes only their appearance.",
+        "ru": "Герпетиформные афты не связаны с вирусом герпеса — название дано только по виду.",
+        "uz": "Gerpetiform aftalar gerpes virusi bilan bog‘liq emas — nomi faqat ko‘rinishidan olingan."
+      }
+    },
+    {
+      "layout": "key",
+      "title": {
+        "en": "The aphtha",
+        "ru": "Афта",
+        "uz": "Afta"
+      },
+      "term": {
+        "en": "Aphthous ulcer",
+        "ru": "Афтозная язва",
+        "uz": "Aftoz yara"
+      },
+      "definition": {
+        "en": "A round or oval painful ulcer with a yellow-grey fibrin base and a red halo. It usually occurs on non-keratinised mucosa (lips, cheeks, floor of mouth) and keeps recurring.",
+        "ru": "Округлая или овальная болезненная язва с желтовато-серым фибринозным дном и красным ободком. Обычно на неороговевающей слизистой (губы, щёки, дно рта) и склонна к рецидивам.",
+        "uz": "Yumaloq yoki oval, og‘riqli yara: tubi sarg‘ish-kulrang fibrin bilan qoplangan, atrofida qizil hoshiya bor. Odatda keratinlashmagan shilliqda (lab, lunj, til osti) uchraydi va qaytalanib turadi."
+      },
+      "note": {
+        "en": "Note that aphthae rarely affect keratinised palate and gingiva, which helps separate them from recurrent herpes.",
+        "ru": "Напомните: афты обычно не возникают на ороговевающей слизистой нёба и дёсен — это помогает отличить их от герпеса.",
+        "uz": "Afta odatda tanglay va milkning keratinlashgan shilliq qavatida bo‘lmasligini eslating — bu gerpesdan farqlashga yordam beradi."
+      }
+    },
+    {
+      "layout": "tree",
+      "title": {
+        "en": "Predisposing factors and associations",
+        "ru": "Предрасполагающие факторы и связанные состояния",
+        "uz": "Moyillik omillari va bog‘liq holatlar"
+      },
+      "root": {
+        "en": "Aphthous stomatitis",
+        "ru": "Афтозный стоматит",
+        "uz": "Aftoz stomatit"
+      },
+      "children": [
+        {
+          "label": {
+            "en": "Local",
+            "ru": "Местные",
+            "uz": "Mahalliy"
+          },
+          "items": [
+            {
+              "en": "Trauma",
+              "ru": "Травма",
+              "uz": "Shikast"
+            },
+            {
+              "en": "Stopping smoking",
+              "ru": "Отказ от курения",
+              "uz": "Chekishni tashlash"
+            }
+          ]
+        },
+        {
+          "label": {
+            "en": "Haematinic deficiency",
+            "ru": "Дефицит гемопоэтических факторов",
+            "uz": "Gematinik tanqislik"
+          },
+          "items": [
+            {
+              "en": "Iron",
+              "ru": "Железо",
+              "uz": "Temir"
+            },
+            {
+              "en": "Folate",
+              "ru": "Фолат",
+              "uz": "Folat"
+            },
+            {
+              "en": "Vitamin B12",
+              "ru": "Витамин B12",
+              "uz": "B12 vitamini"
+            }
+          ]
+        },
+        {
+          "label": {
+            "en": "Gut disease",
+            "ru": "Болезни кишечника",
+            "uz": "Ichak kasalliklari"
+          },
+          "items": [
+            {
+              "en": "Coeliac disease",
+              "ru": "Целиакия",
+              "uz": "Seliakiya"
+            },
+            {
+              "en": "Crohn's disease",
+              "ru": "Болезнь Крона",
+              "uz": "Kron kasalligi"
+            }
+          ]
+        },
+        {
+          "label": {
+            "en": "Systemic",
+            "ru": "Системные",
+            "uz": "Tizimli"
+          },
+          "items": [
+            {
+              "en": "Behçet's disease",
+              "ru": "Болезнь Бехчета",
+              "uz": "Behchet kasalligi"
+            },
+            {
+              "en": "HIV / immune deficiency",
+              "ru": "ВИЧ / иммунодефицит",
+              "uz": "OIV / immunitet pasayishi"
+            }
+          ]
+        },
+        {
+          "label": {
+            "en": "Other",
+            "ru": "Другие",
+            "uz": "Boshqalar"
+          },
+          "items": [
+            {
+              "en": "Stress",
+              "ru": "Стресс",
+              "uz": "Stress"
+            },
+            {
+              "en": "Family history",
+              "ru": "Семейная предрасположенность",
+              "uz": "Oilaviy moyillik"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "layout": "flow",
+      "title": {
+        "en": "Managing aphthous stomatitis",
+        "ru": "Тактика при афтозном стоматите",
+        "uz": "Aftoz stomatitda yondashuv"
+      },
+      "steps": [
+        {
+          "label": {
+            "en": "Diagnosis",
+            "ru": "Диагноз",
+            "uz": "Tashxis"
+          },
+          "detail": {
+            "en": "Based on history and appearance",
+            "ru": "На основании анамнеза и клинической картины",
+            "uz": "Anamnez va klinik ko‘rinish asosida"
+          }
+        },
+        {
+          "label": {
+            "en": "Investigations",
+            "ru": "Анализы",
+            "uz": "Tahlillar"
+          },
+          "detail": {
+            "en": "Blood tests: iron, folate, B12; coeliac screen if needed",
+            "ru": "Анализ крови: железо, фолат, B12; при необходимости целиакия",
+            "uz": "Qon tahlili: temir, folat, B12; kerak bo‘lsa seliakiya"
+          }
+        },
+        {
+          "label": {
+            "en": "Topical care",
+            "ru": "Местное лечение",
+            "uz": "Mahalliy davo"
+          },
+          "detail": {
+            "en": "Antiseptic rinse, analgesic, topical corticosteroid",
+            "ru": "Антисептик, обезболивающее, местный кортикостероид",
+            "uz": "Antiseptik chayish, og‘riqsizlantiruvchi, mahalliy kortikosteroid"
+          }
+        },
+        {
+          "label": {
+            "en": "Correct cause",
+            "ru": "Коррекция причины",
+            "uz": "Sababni tuzatish"
+          },
+          "detail": {
+            "en": "Replace deficiency, remove trauma",
+            "ru": "Восполнить дефицит, устранить травму",
+            "uz": "Tanqislikni to‘ldirish, shikastni yo‘qotish"
+          }
+        },
+        {
+          "label": {
+            "en": "Refer",
+            "ru": "Направление",
+            "uz": "Yo‘llanma"
+          },
+          "detail": {
+            "en": "Major aphthae, systemic signs or poor response",
+            "ru": "При больших афтах, системных признаках или неэффективности",
+            "uz": "Katta aftalar, tizimli belgilar yoki samarasizlikda"
+          }
+        }
+      ]
+    },
+    {
+      "layout": "compare",
+      "title": {
+        "en": "Aphtha vs traumatic ulcer",
+        "ru": "Афта и травматическая язва",
+        "uz": "Afta va travmatik yara"
+      },
+      "columns": [
+        {
+          "head": {
+            "en": "Recurrent aphtha",
+            "ru": "Рецидивирующая афта",
+            "uz": "Retsidivlanuvchi afta"
+          },
+          "items": [
+            {
+              "en": "Recurs, often since youth",
+              "ru": "Рецидивирует, часто с юности",
+              "uz": "Qaytalanadi, ko‘pincha yoshlikdan"
+            },
+            {
+              "en": "Round with red halo",
+              "ru": "Округлая, с красным ободком",
+              "uz": "Yumaloq, qizil hoshiyali"
+            },
+            {
+              "en": "No obvious external cause",
+              "ru": "Явной внешней причины нет",
+              "uz": "Aniq tashqi sabab yo‘q"
+            }
+          ]
+        },
+        {
+          "head": {
+            "en": "Traumatic ulcer",
+            "ru": "Травматическая язва",
+            "uz": "Travmatik yara"
+          },
+          "items": [
+            {
+              "en": "Single, matches the cause",
+              "ru": "Одиночная, в месте действия причины",
+              "uz": "Yakka, sabab bilan bir joyda"
+            },
+            {
+              "en": "Irregular, may have white keratotic rim",
+              "ru": "Неправильной формы, по краю может быть кератоз",
+              "uz": "Shakli noto‘g‘ri, chetida oq keratoz bo‘lishi mumkin"
+            },
+            {
+              "en": "Sharp tooth, denture, biting, burn",
+              "ru": "Острый край зуба, протез, прикусывание, ожог",
+              "uz": "O‘tkir tish, protez, tishlash, kuyish"
+            }
+          ]
+        }
+      ],
+      "note": {
+        "en": "A traumatic ulcer usually heals within 1–2 weeks once the cause is removed; if not, rethink the diagnosis.",
+        "ru": "Травматическая язва после устранения причины обычно заживает за 1–2 недели; если нет — диагноз пересматривают.",
+        "uz": "Sababi bartaraf etilgan travmatik yara odatda 1–2 hafta ichida bitadi; bitmasa, tashxis qayta ko‘rib chiqiladi."
+      }
+    },
+    {
+      "layout": "flow",
+      "title": {
+        "en": "The 2-week rule",
+        "ru": "«Правило 2 недель»",
+        "uz": "«2 hafta qoidasi»"
+      },
+      "steps": [
+        {
+          "label": {
+            "en": "Ulcer found",
+            "ru": "Обнаружена язва",
+            "uz": "Yara topildi"
+          },
+          "detail": {
+            "en": "Describe, measure, photograph",
+            "ru": "Опишите, измерьте, сфотографируйте",
+            "uz": "Tasvirlang, o‘lchang, rasmga oling"
+          }
+        },
+        {
+          "label": {
+            "en": "Remove the cause",
+            "ru": "Устраните причину",
+            "uz": "Sababni yo‘qoting"
+          },
+          "detail": {
+            "en": "Smooth sharp edge, adjust denture",
+            "ru": "Сгладить острый край, исправить протез",
+            "uz": "O‘tkir chetni silliqlash, protezni tuzatish"
+          }
+        },
+        {
+          "label": {
+            "en": "Review at 2 weeks",
+            "ru": "Повторный осмотр через 2 недели",
+            "uz": "2 haftadan keyin ko‘rik"
+          },
+          "detail": {
+            "en": "Has it healed or shrunk",
+            "ru": "Зажила ли или уменьшилась язва",
+            "uz": "Yara bitdimi yoki kichraydimi"
+          }
+        },
+        {
+          "label": {
+            "en": "If not healed",
+            "ru": "Если не зажила",
+            "uz": "Bitmagan bo‘lsa"
+          },
+          "detail": {
+            "en": "Urgent referral and biopsy to exclude cancer",
+            "ru": "Срочное направление и биопсия: исключить рак",
+            "uz": "Shoshilinch yo‘llanma va biopsiya: saratonni istisno qilish"
+          }
+        }
+      ],
+      "note": {
+        "en": "With induration, rolled edges or a painless ulcer, refer at once without waiting 2 weeks.",
+        "ru": "При плотном основании, валикообразных краях или безболезненной язве направлять сразу, не дожидаясь 2 недель.",
+        "uz": "Qattiq asos, o‘ralgan chegara yoki og‘riqsiz yara bo‘lsa, 2 haftani kutmasdan darhol yo‘llash kerak."
+      }
+    },
+    {
+      "layout": "summary",
+      "title": {
+        "en": "Summary",
+        "ru": "Итоги",
+        "uz": "Xulosa"
+      },
+      "bullets": [
+        {
+          "en": "Aphthae are minor, major or herpetiform",
+          "ru": "Афты бывают малые, большие и герпетиформные",
+          "uz": "Aftalar: kichik, katta va gerpetiform turlari bor"
+        },
+        {
+          "en": "Check blood for haematinic deficiency",
+          "ru": "Проверьте анализ крови на дефицит гемопоэтических факторов",
+          "uz": "Qon tahlili bilan gematinik tanqislikni tekshiring"
+        },
+        {
+          "en": "Find and remove the cause of a traumatic ulcer",
+          "ru": "Причину травматической язвы находят и устраняют",
+          "uz": "Travmatik yara sababi topiladi va bartaraf etiladi"
+        },
+        {
+          "en": "Not healed 2 weeks after removing the cause: urgent biopsy",
+          "ru": "Язва, не зажившая через 2 недели после устранения причины, — срочная биопсия",
+          "uz": "Sabab yo‘qotilgandan keyin 2 haftada bitmagan yara — shoshilinch biopsiya"
+        }
+      ]
+    }
+  ],
+  "oral": [
+    {
+      "q": {
+        "en": "Describe the types of recurrent aphthous stomatitis.",
+        "ru": "Опишите формы рецидивирующего афтозного стоматита.",
+        "uz": "Retsidivlanuvchi aftoz stomatit turlarini tasvirlang."
+      },
+      "plan": [
+        {
+          "en": "Minor: under 1 cm, 7–14 days, no scar",
+          "ru": "Малая: менее 1 см, 7–14 дней, без рубца",
+          "uz": "Kichik: 1 sm dan kichik, 7–14 kunda chandiqsiz"
+        },
+        {
+          "en": "Major: over 1 cm, prolonged, scarring",
+          "ru": "Большая: более 1 см, долго, с рубцом",
+          "uz": "Katta: 1 sm dan katta, uzoq, chandiq bilan"
+        },
+        {
+          "en": "Herpetiform: many tiny, coalescing",
+          "ru": "Герпетиформная: множественные мелкие, сливаются",
+          "uz": "Gerpetiform: ko‘p mayda, qo‘shiluvchi"
+        },
+        {
+          "en": "Mostly on non-keratinised mucosa",
+          "ru": "В основном на неороговевающей слизистой",
+          "uz": "Asosan keratinlashmagan shilliqda"
+        }
+      ]
+    },
+    {
+      "q": {
+        "en": "Which systemic conditions are associated with aphthae?",
+        "ru": "Какие общие состояния связаны с афтами?",
+        "uz": "Aftalar bilan bog‘liq qanday umumiy holatlarni bilasiz?"
+      },
+      "plan": [
+        {
+          "en": "Iron, folate or B12 deficiency",
+          "ru": "Дефицит железа, фолата, B12",
+          "uz": "Temir, folat, B12 tanqisligi"
+        },
+        {
+          "en": "Coeliac and Crohn's disease",
+          "ru": "Целиакия и болезнь Крона",
+          "uz": "Seliakiya va Kron kasalligi"
+        },
+        {
+          "en": "Behçet's disease",
+          "ru": "Болезнь Бехчета",
+          "uz": "Behchet kasalligi"
+        },
+        {
+          "en": "HIV and immune deficiency",
+          "ru": "ВИЧ и иммунодефицит",
+          "uz": "OIV va immunitet tanqisligi"
+        }
+      ]
+    },
+    {
+      "q": {
+        "en": "How do you manage a traumatic ulcer?",
+        "ru": "Какова тактика при травматической язве?",
+        "uz": "Travmatik yarada qanday yo‘l tutasiz?"
+      },
+      "plan": [
+        {
+          "en": "Find the cause: sharp tooth, denture, biting",
+          "ru": "Найти причину: острый край, протез, прикусывание",
+          "uz": "Sababni topish: o‘tkir tish, protez, tishlash"
+        },
+        {
+          "en": "Remove it and treat symptoms",
+          "ru": "Устранить причину и симптоматическое лечение",
+          "uz": "Sababni bartaraf etish va simptomatik davo"
+        },
+        {
+          "en": "Review at 2 weeks",
+          "ru": "Повторный осмотр через 2 недели",
+          "uz": "2 haftadan keyin qayta ko‘rik"
+        },
+        {
+          "en": "If unhealed, urgent referral and biopsy",
+          "ru": "Если не зажила — срочное направление и биопсия",
+          "uz": "Bitmasa — shoshilinch yo‘llanma va biopsiya"
+        }
+      ]
+    },
+    {
+      "q": {
+        "en": "Which ulcer features suggest malignancy?",
+        "ru": "Какие признаки язвы подозрительны на злокачественность?",
+        "uz": "Qaysi belgilar yarada yomon sifatli jarayonga shubha tug‘diradi?"
+      },
+      "plan": [
+        {
+          "en": "Indurated base",
+          "ru": "Плотное инфильтрированное основание",
+          "uz": "Qattiq, infiltratsiyalangan asos"
+        },
+        {
+          "en": "Raised rolled edges",
+          "ru": "Приподнятые валикообразные края",
+          "uz": "Ko‘tarilgan, o‘ralgan chegara"
+        },
+        {
+          "en": "Painless with no cause",
+          "ru": "Безболезненность и отсутствие причины",
+          "uz": "Og‘riqsizlik va sabab yo‘qligi"
+        },
+        {
+          "en": "Enlarged neck lymph nodes",
+          "ru": "Увеличение шейных лимфоузлов",
+          "uz": "Bo‘yin limfa tugunlarining kattalashuvi"
+        }
+      ]
+    }
+  ],
+  "test": [
+    {
+      "q": {
+        "en": "How long does a minor aphtha usually take to heal?",
+        "ru": "За какой срок обычно заживает малая афта?",
+        "uz": "Kichik afta odatda qancha vaqtda bitadi?"
+      },
+      "options": [
+        {
+          "en": "1–2 days",
+          "ru": "1–2 дня",
+          "uz": "1–2 kun"
+        },
+        {
+          "en": "3–6 months",
+          "ru": "3–6 месяцев",
+          "uz": "3–6 oy"
+        },
+        {
+          "en": "7–14 days",
+          "ru": "7–14 дней",
+          "uz": "7–14 kun"
+        },
+        {
+          "en": "It never heals alone",
+          "ru": "Никогда не заживает сама",
+          "uz": "Hech qachon o‘z-o‘zidan bitmaydi"
+        }
+      ],
+      "correct": 2,
+      "explain": {
+        "en": "Minor aphthae heal in 1–2 weeks without scarring.",
+        "ru": "Малые афты заживают за 1–2 недели без рубца.",
+        "uz": "Kichik aftalar 1–2 haftada chandiqsiz bitadi."
+      }
+    },
+    {
+      "q": {
+        "en": "Which type of aphthae heals with scarring?",
+        "ru": "Какие афты оставляют рубцы?",
+        "uz": "Qaysi turdagi aftalar chandiq qoldiradi?"
+      },
+      "options": [
+        {
+          "en": "Minor",
+          "ru": "Малые",
+          "uz": "Kichik"
+        },
+        {
+          "en": "Major",
+          "ru": "Большие",
+          "uz": "Katta"
+        },
+        {
+          "en": "Herpetiform",
+          "ru": "Герпетиформные",
+          "uz": "Gerpetiform"
+        },
+        {
+          "en": "None",
+          "ru": "Никакие",
+          "uz": "Hech biri"
+        }
+      ],
+      "correct": 1,
+      "explain": {
+        "en": "Major aphthae are deep and long-lasting and heal with scarring.",
+        "ru": "Большие афты глубокие, длительные и заживают с рубцом.",
+        "uz": "Katta aftalar chuqur va uzoq davom etib, chandiq bilan bitadi."
+      }
+    },
+    {
+      "q": {
+        "en": "Where do aphthae usually NOT occur?",
+        "ru": "Где афты обычно НЕ возникают?",
+        "uz": "Afta odatda qayerda uchramaydi?"
+      },
+      "options": [
+        {
+          "en": "Inner lip",
+          "ru": "На внутренней поверхности губы",
+          "uz": "Lab ichki yuzasida"
+        },
+        {
+          "en": "Buccal mucosa",
+          "ru": "На слизистой щеки",
+          "uz": "Lunj shilliq qavatida"
+        },
+        {
+          "en": "Lateral tongue",
+          "ru": "На боковой поверхности языка",
+          "uz": "Til yon yuzasida"
+        },
+        {
+          "en": "Hard palate and attached gingiva",
+          "ru": "На твёрдом нёбе и прикреплённой десне",
+          "uz": "Qattiq tanglay va biriktirilgan milkda"
+        }
+      ],
+      "correct": 3,
+      "explain": {
+        "en": "Aphthae favour non-keratinised mucosa; on keratinised sites think of herpes.",
+        "ru": "Афты возникают в основном на неороговевающей слизистой; на ороговевающей следует думать о герпесе.",
+        "uz": "Aftalar asosan keratinlashmagan shilliqda bo‘ladi; keratinlashgan sohada gerpesni o‘ylash kerak."
+      }
+    },
+    {
+      "q": {
+        "en": "Which investigation comes first in a patient with frequent aphthae?",
+        "ru": "Какое обследование первым нужно пациенту с частыми афтами?",
+        "uz": "Aftalar tez-tez qaytalanadigan bemorda birinchi navbatda qaysi tekshiruv kerak?"
+      },
+      "options": [
+        {
+          "en": "Blood tests: iron, folate, B12",
+          "ru": "Анализ крови: железо, фолат, B12",
+          "uz": "Qon tahlili: temir, folat, B12"
+        },
+        {
+          "en": "Jaw CBCT",
+          "ru": "КЛКТ челюстей",
+          "uz": "Jag‘ KLKT si"
+        },
+        {
+          "en": "Biopsy of each aphtha",
+          "ru": "Биопсия каждой афты",
+          "uz": "Har bir aftadan biopsiya"
+        },
+        {
+          "en": "Salivary gland ultrasound",
+          "ru": "УЗИ слюнных желёз",
+          "uz": "So‘lak bezi UTT si"
+        }
+      ],
+      "correct": 0,
+      "explain": {
+        "en": "Haematinic deficiency is a correctable cause of aphthae.",
+        "ru": "Дефицит гемопоэтических факторов — корригируемая причина афт.",
+        "uz": "Gematinik tanqislik aftalarning tuzatiladigan sababi bo‘lishi mumkin."
+      }
+    },
+    {
+      "q": {
+        "en": "Recurrent oral and genital ulcers with eye inflammation suggest which disease?",
+        "ru": "Рецидивирующие язвы рта и гениталий с воспалением глаз характерны для какого заболевания?",
+        "uz": "Og‘iz va jinsiy a’zolarda qaytalanuvchi yaralar va ko‘z yallig‘lanishi qaysi kasallikka xos?"
+      },
+      "options": [
+        {
+          "en": "Coeliac disease",
+          "ru": "Целиакия",
+          "uz": "Seliakiya"
+        },
+        {
+          "en": "Lichen planus",
+          "ru": "Красный плоский лишай",
+          "uz": "Qizil yassi temiratki"
+        },
+        {
+          "en": "Behçet's disease",
+          "ru": "Болезнь Бехчета",
+          "uz": "Behchet kasalligi"
+        },
+        {
+          "en": "Candidiasis",
+          "ru": "Кандидоз",
+          "uz": "Kandidoz"
+        }
+      ],
+      "correct": 2,
+      "explain": {
+        "en": "Behçet's disease causes oral and genital ulcers and uveitis.",
+        "ru": "Болезнь Бехчета проявляется язвами рта, гениталий и увеитом.",
+        "uz": "Behchet kasalligi og‘iz va jinsiy a’zo yaralari hamda uveit bilan kechadi."
+      }
+    },
+    {
+      "q": {
+        "en": "A single ulcer on the cheek lies opposite a sharp broken tooth. What is the first step?",
+        "ru": "На щеке напротив острого сколотого зуба одиночная язва. Первый шаг?",
+        "uz": "Pastki lunjda o‘tkir siniq tish ro‘parasida yakka yara bor. Birinchi qadam nima?"
+      },
+      "options": [
+        {
+          "en": "Immediate biopsy",
+          "ru": "Сразу биопсия",
+          "uz": "Darhol biopsiya"
+        },
+        {
+          "en": "Smooth the tooth and review in 2 weeks",
+          "ru": "Сгладить край зуба и осмотреть через 2 недели",
+          "uz": "Tish chetini silliqlash va 2 haftada ko‘rik"
+        },
+        {
+          "en": "Systemic antibiotics",
+          "ru": "Системный антибиотик",
+          "uz": "Tizimli antibiotik"
+        },
+        {
+          "en": "Discharge without review",
+          "ru": "Отпустить без наблюдения",
+          "uz": "Kuzatishsiz qo‘yib yuborish"
+        }
+      ],
+      "correct": 1,
+      "explain": {
+        "en": "Once the cause is removed the ulcer should heal; review is essential.",
+        "ru": "После устранения причины травматическая язва должна зажить; повторный осмотр обязателен.",
+        "uz": "Sabab yo‘qotilgandan keyin travmatik yara bitishi kerak; qayta ko‘rik shart."
+      }
+    },
+    {
+      "q": {
+        "en": "Three weeks after adjusting a denture, the ulcer has not healed and feels firm. What is correct?",
+        "ru": "Через 3 недели после коррекции протеза язва не зажила, основание плотное. Правильное действие?",
+        "uz": "Protez chetini tuzatgandan 3 hafta o‘tib ham yara bitmagan, asosi qattiq. To‘g‘ri harakat qaysi?"
+      },
+      "options": [
+        {
+          "en": "Wait another 2 weeks",
+          "ru": "Подождать ещё 2 недели",
+          "uz": "Yana 2 hafta kutish"
+        },
+        {
+          "en": "Topical corticosteroid",
+          "ru": "Местный кортикостероид",
+          "uz": "Mahalliy kortikosteroid"
+        },
+        {
+          "en": "Make a new denture",
+          "ru": "Заменить протез",
+          "uz": "Protezni almashtirish"
+        },
+        {
+          "en": "Urgent referral and biopsy",
+          "ru": "Срочное направление и биопсия",
+          "uz": "Shoshilinch yo‘llanma va biopsiya"
+        }
+      ],
+      "correct": 3,
+      "explain": {
+        "en": "A non-healing indurated ulcer requires cancer to be excluded.",
+        "ru": "Незаживающая язва с плотным основанием требует исключения рака.",
+        "uz": "Sababsiz bitmaydigan, qattiq asosli yara saraton ehtimolini istisno qilishni talab qiladi."
+      }
+    },
+    {
+      "q": {
+        "en": "Which statement about herpetiform aphthae is correct?",
+        "ru": "Какое утверждение о герпетиформных афтах верно?",
+        "uz": "Gerpetiform aftalar haqida qaysi fikr to‘g‘ri?"
+      },
+      "options": [
+        {
+          "en": "They are not caused by herpes virus",
+          "ru": "Не вызваны вирусом герпеса",
+          "uz": "Gerpes virusi qo‘zg‘atmaydi"
+        },
+        {
+          "en": "They occur only on gingiva",
+          "ru": "Возникают только на дёснах",
+          "uz": "Faqat milkda bo‘ladi"
+        },
+        {
+          "en": "They form one large ulcer",
+          "ru": "Это одна большая язва",
+          "uz": "Bitta katta yara"
+        },
+        {
+          "en": "They start with fever",
+          "ru": "Начинаются с лихорадки",
+          "uz": "Isitma bilan boshlanadi"
+        }
+      ],
+      "correct": 0,
+      "explain": {
+        "en": "The name only describes the many small ulcers.",
+        "ru": "Название лишь отражает вид множественных мелких язв.",
+        "uz": "Nomi faqat mayda ko‘p yaralar ko‘rinishiga ishora qiladi."
+      }
+    },
+    {
+      "q": {
+        "en": "What is the mainstay of symptomatic care for minor aphthae?",
+        "ru": "Что составляет основу симптоматического лечения малых афт?",
+        "uz": "Kichik aftalarda simptomatik davoning asosini nima tashkil qiladi?"
+      },
+      "options": [
+        {
+          "en": "Systemic antibiotics",
+          "ru": "Системные антибиотики",
+          "uz": "Tizimli antibiotiklar"
+        },
+        {
+          "en": "Surgical excision",
+          "ru": "Хирургическое иссечение",
+          "uz": "Jarrohlik yo‘li bilan kesish"
+        },
+        {
+          "en": "Antiseptic rinse and topical corticosteroid",
+          "ru": "Антисептик и местный кортикостероид",
+          "uz": "Antiseptik chayish va mahalliy kortikosteroid"
+        },
+        {
+          "en": "Systemic antiviral",
+          "ru": "Системный противовирусный препарат",
+          "uz": "Tizimli antivirus dori"
+        }
+      ],
+      "correct": 2,
+      "explain": {
+        "en": "Topical care reduces pain and speeds healing.",
+        "ru": "Местное лечение уменьшает боль и ускоряет заживление.",
+        "uz": "Mahalliy davo og‘riqni kamaytiradi va bitishni tezlashtiradi."
+      }
+    },
+    {
+      "q": {
+        "en": "Which feature points to a traumatic ulcer rather than an aphtha?",
+        "ru": "Какой признак указывает, что это травматическая язва, а не афта?",
+        "uz": "Qaysi belgi travmatik yarani afta emas, deb o‘ylashga asos beradi?"
+      },
+      "options": [
+        {
+          "en": "Round shape and red halo",
+          "ru": "Округлая форма и красный ободок",
+          "uz": "Yumaloq shakl va qizil hoshiya"
+        },
+        {
+          "en": "Single and matches a local cause",
+          "ru": "Одиночная, совпадает с местом причины",
+          "uz": "Yara sababi bilan bir joyda, yakka"
+        },
+        {
+          "en": "Recurrences since youth",
+          "ru": "Рецидивы с юности",
+          "uz": "Yoshlikdan qaytalanish"
+        },
+        {
+          "en": "Many tiny ulcers",
+          "ru": "Множество мелких язв",
+          "uz": "Ko‘p mayda yaralar"
+        }
+      ],
+      "correct": 1,
+      "explain": {
+        "en": "A traumatic ulcer sits where the trauma is and heals once it is removed.",
+        "ru": "Травматическая язва возникает в месте травмы и заживает после устранения причины.",
+        "uz": "Travmatik yara shikast joyida bo‘ladi va sabab yo‘qolgach bitadi."
+      }
+    }
+  ]
+}

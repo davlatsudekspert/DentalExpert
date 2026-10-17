@@ -191,7 +191,12 @@
             "uz": "Tishni lunkadan chiqarish"
           }
         }
-      ]
+      ],
+      "note": {
+        "en": "Increase luxation force gradually; sudden force fractures roots or the alveolus.",
+        "ru": "Усилие при люксации наращивают постепенно; резкое усилие ведёт к перелому корня или альвеолы.",
+        "uz": "Lyuksatsiya kuchi asta-sekin oshiriladi; keskin kuch ildiz yoki alveola sinishiga olib keladi."
+      }
     },
     {
       "layout": "table",

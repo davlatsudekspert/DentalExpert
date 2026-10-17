@@ -1,0 +1,1092 @@
+{
+  "id": "ortho-05",
+  "subject": "ortho",
+  "n": 5,
+  "week": 5,
+  "type": "practical",
+  "hours": 2,
+  "title": {
+    "en": "Removable orthodontic appliances: components and indications",
+    "ru": "Съёмные ортодонтические аппараты: элементы и показания",
+    "uz": "Olinadigan ortodontik apparatlar: tarkibiy qismlari va ko‘rsatmalari"
+  },
+  "goals": [
+    {
+      "en": "Name the four main parts of a removable appliance",
+      "ru": "Называть четыре основных элемента съёмного аппарата",
+      "uz": "Olinadigan apparatning to‘rt asosiy qismini nomlay olish"
+    },
+    {
+      "en": "Know what springs and clasps do",
+      "ru": "Знать назначение пружин и кламмеров",
+      "uz": "Prujinalar va qisqichlarning vazifasini bilish"
+    },
+    {
+      "en": "Explain the indications and limits of removable appliances",
+      "ru": "Объяснять показания и ограничения съёмных аппаратов",
+      "uz": "Olinadigan apparatning ko‘rsatmalari va cheklovlarini tushuntira olish"
+    },
+    {
+      "en": "Fit an appliance and instruct the patient",
+      "ru": "Припасовывать аппарат и инструктировать пациента",
+      "uz": "Apparatni kiydirish va bemorga yo‘riqnoma bera olish"
+    }
+  ],
+  "links": [],
+  "sources": [
+    "Mitchell L. An Introduction to Orthodontics, 5th ed., 2019",
+    "Proffit WR et al. Contemporary Orthodontics, 6th ed., 2018"
+  ],
+  "slides": [
+    {
+      "layout": "title",
+      "title": {
+        "en": "Removable appliances",
+        "ru": "Съёмные аппараты",
+        "uz": "Olinadigan apparatlar"
+      },
+      "subtitle": {
+        "en": "Design, indications and use",
+        "ru": "Конструкция, показания и применение",
+        "uz": "Tuzilishi, ko‘rsatmalari va qo‘llash"
+      }
+    },
+    {
+      "layout": "key",
+      "title": {
+        "en": "Designing an appliance",
+        "ru": "Конструкция аппарата",
+        "uz": "Apparat dizayni"
+      },
+      "term": {
+        "en": "Four components",
+        "ru": "Четыре элемента",
+        "uz": "To‘rt qism"
+      },
+      "definition": {
+        "en": "Every removable appliance has four parts: the active component that moves teeth, retention that holds it in, anchorage that resists the reaction force, and the baseplate that joins everything together.",
+        "ru": "Каждый съёмный аппарат состоит из четырёх частей: активный элемент (перемещает зуб), ретенция (удерживает аппарат), опора – анкораж (противостоит силе) и базисная пластинка (соединяет всё вместе).",
+        "uz": "Har bir olinadigan apparat to‘rt qismdan iborat: faol qism (tishni siljitadi), retensiya (apparatni ushlab turadi), tayanch – ankoraj (kuchga qarshi turadi) va bazis plastinka (hammasini birlashtiradi)."
+      },
+      "note": {
+        "en": "Always writing the design in this order reduces errors; have students write one example on the board.",
+        "ru": "Запись конструкции всегда в этом порядке снижает число ошибок – пусть студенты распишут пример на доске.",
+        "uz": "Dizaynni har doim shu tartibda yozish xatolarni kamaytiradi – talabalar bir misolni doskada yozsin."
+      }
+    },
+    {
+      "layout": "tree",
+      "title": {
+        "en": "Components",
+        "ru": "Элементы аппарата",
+        "uz": "Tarkibiy qismlar"
+      },
+      "root": {
+        "en": "Removable appliance",
+        "ru": "Съёмный аппарат",
+        "uz": "Olinadigan apparat"
+      },
+      "children": [
+        {
+          "label": {
+            "en": "Active",
+            "ru": "Активный элемент",
+            "uz": "Faol qism"
+          },
+          "items": [
+            {
+              "en": "Springs",
+              "ru": "Пружины",
+              "uz": "Prujinalar"
+            },
+            {
+              "en": "Screws",
+              "ru": "Винты",
+              "uz": "Vintlar"
+            },
+            {
+              "en": "Elastics",
+              "ru": "Эластики",
+              "uz": "Elastiklar"
+            }
+          ]
+        },
+        {
+          "label": {
+            "en": "Retention",
+            "ru": "Ретенция",
+            "uz": "Retensiya"
+          },
+          "items": [
+            {
+              "en": "Adams clasp",
+              "ru": "Кламмер Адамса",
+              "uz": "Adams qisqichi"
+            },
+            {
+              "en": "Ball-ended clasp",
+              "ru": "Шаровидный кламмер",
+              "uz": "Sharsimon qisqich"
+            },
+            {
+              "en": "Labial bow",
+              "ru": "Вестибулярная дуга",
+              "uz": "Vestibulyar yoy"
+            }
+          ]
+        },
+        {
+          "label": {
+            "en": "Anchorage",
+            "ru": "Анкораж",
+            "uz": "Ankoraj"
+          },
+          "items": [
+            {
+              "en": "Baseplate contact with teeth and palate",
+              "ru": "Контакт базиса с зубами и нёбом",
+              "uz": "Bazisning tishlar va tanglayga tegishi"
+            },
+            {
+              "en": "Number of teeth not being moved",
+              "ru": "Число неперемещаемых зубов",
+              "uz": "Siljimaydigan tishlar soni"
+            }
+          ]
+        },
+        {
+          "label": {
+            "en": "Baseplate",
+            "ru": "Базис",
+            "uz": "Bazis"
+          },
+          "items": [
+            {
+              "en": "Acrylic plate",
+              "ru": "Акриловая пластинка",
+              "uz": "Akril plastinka"
+            },
+            {
+              "en": "Bite plane",
+              "ru": "Накусочная площадка",
+              "uz": "Tishlash platformasi"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "layout": "table",
+      "title": {
+        "en": "Main wire components",
+        "ru": "Основные проволочные элементы",
+        "uz": "Asosiy simli elementlar"
+      },
+      "head": [
+        {
+          "en": "Component",
+          "ru": "Элемент",
+          "uz": "Element"
+        },
+        {
+          "en": "Use",
+          "ru": "Назначение",
+          "uz": "Vazifasi"
+        },
+        {
+          "en": "Wire",
+          "ru": "Проволока",
+          "uz": "Sim"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "en": "Palatal finger spring",
+            "ru": "Нёбная пальцевая пружина",
+            "uz": "Tanglay barmoqsimon prujinasi"
+          },
+          {
+            "en": "Mesiodistal tooth movement",
+            "ru": "Мезиодистальное перемещение зуба",
+            "uz": "Tishni mezio-distal siljitish"
+          },
+          {
+            "en": "0.5 mm",
+            "ru": "0,5 мм",
+            "uz": "0,5 mm"
+          }
+        ],
+        [
+          {
+            "en": "Z-spring",
+            "ru": "Z-образная пружина",
+            "uz": "Z-prujina"
+          },
+          {
+            "en": "Procline an incisor",
+            "ru": "Наклон резца вперёд",
+            "uz": "Kesuvchini oldinga og‘dirish"
+          },
+          {
+            "en": "0.5 mm",
+            "ru": "0,5 мм",
+            "uz": "0,5 mm"
+          }
+        ],
+        [
+          {
+            "en": "Buccal canine retractor",
+            "ru": "Щёчный ретрактор клыка",
+            "uz": "Bukkal qoziq retraktori"
+          },
+          {
+            "en": "Retract a buccally placed canine",
+            "ru": "Ретракция вестибулярно стоящего клыка",
+            "uz": "Lunj tomondagi qoziqni orqaga surish"
+          },
+          {
+            "en": "0.7 mm",
+            "ru": "0,7 мм",
+            "uz": "0,7 mm"
+          }
+        ],
+        [
+          {
+            "en": "Adams clasp",
+            "ru": "Кламмер Адамса",
+            "uz": "Adams qisqichi"
+          },
+          {
+            "en": "Retention on molars and premolars",
+            "ru": "Ретенция на молярах и премолярах",
+            "uz": "Molyar va premolyarda retensiya"
+          },
+          {
+            "en": "0.7 mm",
+            "ru": "0,7 мм",
+            "uz": "0,7 mm"
+          }
+        ],
+        [
+          {
+            "en": "Labial bow",
+            "ru": "Вестибулярная дуга",
+            "uz": "Vestibulyar yoy"
+          },
+          {
+            "en": "Retention or incisor retraction",
+            "ru": "Ретенция или ретракция резцов",
+            "uz": "Retensiya yoki kesuvchilarni orqaga surish"
+          },
+          {
+            "en": "0.7 mm",
+            "ru": "0,7 мм",
+            "uz": "0,7 mm"
+          }
+        ],
+        [
+          {
+            "en": "Midline screw",
+            "ru": "Срединный винт",
+            "uz": "O‘rta chiziq vinti"
+          },
+          {
+            "en": "Expand the upper arch",
+            "ru": "Расширение верхней дуги",
+            "uz": "Yuqori yoyni kengaytirish"
+          },
+          {
+            "en": "Screw",
+            "ru": "Винт",
+            "uz": "Vint"
+          }
+        ]
+      ]
+    },
+    {
+      "layout": "compare",
+      "title": {
+        "en": "Indications and limits",
+        "ru": "Показания и ограничения",
+        "uz": "Ko‘rsatmalar va cheklovlar"
+      },
+      "columns": [
+        {
+          "head": {
+            "en": "Indications",
+            "ru": "Показания",
+            "uz": "Ko‘rsatmalar"
+          },
+          "items": [
+            {
+              "en": "Single-tooth anterior crossbite",
+              "ru": "Перекрёстный прикус одного резца",
+              "uz": "Bitta kesuvchining old kesishgan tishlovi"
+            },
+            {
+              "en": "Expansion for crossbite with displacement",
+              "ru": "Расширение при боковом перекрёстном прикусе со смещением",
+              "uz": "Siljishli yon kesishgan tishlovda kengaytirish"
+            },
+            {
+              "en": "Simple tipping movements",
+              "ru": "Простые наклонные перемещения",
+              "uz": "Oddiy og‘dirish harakatlari"
+            },
+            {
+              "en": "Retention and space maintenance",
+              "ru": "Ретенция и сохранение места",
+              "uz": "Retensiya va joy saqlash"
+            }
+          ]
+        },
+        {
+          "head": {
+            "en": "Limitations",
+            "ru": "Ограничения",
+            "uz": "Cheklovlar"
+          },
+          "items": [
+            {
+              "en": "Tipping movements only",
+              "ru": "Только наклонное перемещение",
+              "uz": "Faqat og‘dirish harakati"
+            },
+            {
+              "en": "Poor for rotations and bodily movement",
+              "ru": "Плохо устраняют повороты, нет корпусного перемещения",
+              "uz": "Burilish va tanani siljitish qiyin"
+            },
+            {
+              "en": "Hard to move many teeth at once",
+              "ru": "Трудно перемещать много зубов сразу",
+              "uz": "Bir vaqtda ko‘p tishni siljitish qiyin"
+            },
+            {
+              "en": "Depend on patient wear",
+              "ru": "Зависят от ношения пациентом",
+              "uz": "Bemorning taqishiga bog‘liq"
+            }
+          ]
+        }
+      ],
+      "note": {
+        "en": "Stress that a removable appliance can only tip teeth; it cannot control roots or correct rotations well.",
+        "ru": "Подчеркните, что съёмный аппарат может только наклонять зуб – он не управляет корнем и не устраняет поворот.",
+        "uz": "Olinadigan apparat faqat tishni og‘dira olishini ta’kidlang – ildizni yoki burilishni boshqarolmaydi."
+      }
+    },
+    {
+      "layout": "compare",
+      "title": {
+        "en": "Bite planes",
+        "ru": "Накусочные площадки",
+        "uz": "Tishlash platformalari"
+      },
+      "columns": [
+        {
+          "head": {
+            "en": "Anterior bite plane",
+            "ru": "Передняя накусочная площадка",
+            "uz": "Old tishlash platformasi"
+          },
+          "items": [
+            {
+              "en": "Lower incisors occlude on it",
+              "ru": "Нижние резцы упираются в площадку",
+              "uz": "Pastki kesuvchilar platformaga tegadi"
+            },
+            {
+              "en": "Posterior teeth separate and erupt",
+              "ru": "Боковые зубы разобщаются и выдвигаются",
+              "uz": "Yon tishlar ajraladi va chiqadi"
+            },
+            {
+              "en": "Reduces a deep overbite",
+              "ru": "Уменьшает глубокий прикус",
+              "uz": "Chuqur tishlovni kamaytiradi"
+            }
+          ]
+        },
+        {
+          "head": {
+            "en": "Posterior bite plane",
+            "ru": "Задняя накусочная площадка",
+            "uz": "Orqa tishlash platformasi"
+          },
+          "items": [
+            {
+              "en": "Covers the posterior teeth",
+              "ru": "Покрывает боковые зубы",
+              "uz": "Yon tishlarni qoplaydi"
+            },
+            {
+              "en": "Frees the incisor occlusion",
+              "ru": "Разобщает передние зубы",
+              "uz": "Old tishlarni ajratadi"
+            },
+            {
+              "en": "Used to correct anterior crossbite",
+              "ru": "Для исправления переднего перекрёстного прикуса",
+              "uz": "Old kesishgan tishlovni tuzatishda"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "layout": "flow",
+      "title": {
+        "en": "Fitting the appliance",
+        "ru": "Припасовка аппарата",
+        "uz": "Apparatni kiydirish"
+      },
+      "steps": [
+        {
+          "label": {
+            "en": "Check",
+            "ru": "Проверка",
+            "uz": "Tekshirish"
+          },
+          "detail": {
+            "en": "Design, patient name, no sharp edges",
+            "ru": "Конструкция, имя пациента, нет острых краёв",
+            "uz": "Dizayn, bemor ismi, o‘tkir qirralar yo‘qligi"
+          }
+        },
+        {
+          "label": {
+            "en": "Insert",
+            "ru": "Наложение",
+            "uz": "Kiydirish"
+          },
+          "detail": {
+            "en": "Baseplate fits the palate closely",
+            "ru": "Базис плотно прилегает к нёбу",
+            "uz": "Bazis tanglayga zich tegadi"
+          }
+        },
+        {
+          "label": {
+            "en": "Retention",
+            "ru": "Ретенция",
+            "uz": "Retensiya"
+          },
+          "detail": {
+            "en": "Adjust the clasps",
+            "ru": "Регулировка кламмеров",
+            "uz": "Qisqichlarni sozlash"
+          }
+        },
+        {
+          "label": {
+            "en": "Activate",
+            "ru": "Активация",
+            "uz": "Faollashtirish"
+          },
+          "detail": {
+            "en": "Activate springs with light force",
+            "ru": "Активировать пружину лёгкой силой",
+            "uz": "Yengil kuch bilan prujinani sozlash"
+          }
+        },
+        {
+          "label": {
+            "en": "Instruct",
+            "ru": "Инструктаж",
+            "uz": "Yo‘riqnoma"
+          },
+          "detail": {
+            "en": "Verbal and written instructions",
+            "ru": "Устные и письменные указания",
+            "uz": "Og‘zaki va yozma ko‘rsatma"
+          }
+        }
+      ]
+    },
+    {
+      "layout": "cycle",
+      "title": {
+        "en": "Activation and review cycle",
+        "ru": "Цикл активации и контроля",
+        "uz": "Faollashtirish va nazorat sikli"
+      },
+      "center": {
+        "en": "Every 4–6 weeks",
+        "ru": "Каждые 4–6 недель",
+        "uz": "Har 4–6 haftada"
+      },
+      "steps": [
+        {
+          "label": {
+            "en": "Activate spring",
+            "ru": "Активация пружины",
+            "uz": "Prujinani faollashtirish"
+          }
+        },
+        {
+          "label": {
+            "en": "Tooth moves",
+            "ru": "Зуб перемещается",
+            "uz": "Tish siljiydi"
+          }
+        },
+        {
+          "label": {
+            "en": "Spring becomes passive",
+            "ru": "Пружина становится пассивной",
+            "uz": "Prujina passiv bo‘ladi"
+          }
+        },
+        {
+          "label": {
+            "en": "Review and reactivate",
+            "ru": "Контроль и повторная активация",
+            "uz": "Nazorat va qayta faollashtirish"
+          }
+        }
+      ],
+      "note": {
+        "en": "Teeth move about 1 mm a month; over-activation causes pain and loss of anchorage.",
+        "ru": "Зуб перемещается примерно на 1 мм в месяц; слишком сильная активация вызывает боль и потерю анкоража.",
+        "uz": "Tish oyiga taxminan 1 mm siljiydi; juda kuchli faollashtirish og‘riq va ankoraj yo‘qolishiga olib keladi."
+      }
+    },
+    {
+      "layout": "bullets",
+      "title": {
+        "en": "Patient instructions",
+        "ru": "Инструкции пациенту",
+        "uz": "Bemorga yo‘riqnoma"
+      },
+      "bullets": [
+        {
+          "en": "Usually worn full time, including meals",
+          "ru": "Обычно носят постоянно, в том числе во время еды",
+          "uz": "Ko‘pincha kun bo‘yi, ovqatlanganda ham taqiladi"
+        },
+        {
+          "en": "Clean appliance and teeth after meals",
+          "ru": "Чистить аппарат и зубы после еды",
+          "uz": "Har ovqatdan keyin apparat va tishlarni tozalash"
+        },
+        {
+          "en": "Speech and saliva change for a few days",
+          "ru": "В первые дни меняются речь и слюноотделение",
+          "uz": "Dastlabki kunlarda nutq va so‘lak o‘zgaradi"
+        },
+        {
+          "en": "Avoid sticky and sugary foods",
+          "ru": "Избегать липкой и сладкой пищи",
+          "uz": "Yopishqoq va shirin ovqatdan saqlaning"
+        }
+      ],
+      "note": {
+        "en": "The patient brings the appliance to every visit and reports breakages at once.",
+        "ru": "Пациент должен приносить аппарат на каждый визит и сразу обращаться при поломке.",
+        "uz": "Bemor apparatni har tashrifda olib kelishi va singanda darhol murojaat qilishi kerak."
+      }
+    },
+    {
+      "layout": "summary",
+      "title": {
+        "en": "Summary",
+        "ru": "Итоги",
+        "uz": "Xulosa"
+      },
+      "bullets": [
+        {
+          "en": "Design: active, retention, anchorage, baseplate",
+          "ru": "Конструкция: активный элемент, ретенция, анкораж, базис",
+          "uz": "Dizayn: faol qism, retensiya, ankoraj, bazis"
+        },
+        {
+          "en": "Springs 0.5 mm, clasps and bows 0.7 mm wire",
+          "ru": "Пружины из проволоки 0,5 мм, кламмеры и дуга – 0,7 мм",
+          "uz": "Prujinalar 0,5 mm, qisqich va yoy 0,7 mm simdan"
+        },
+        {
+          "en": "Removable appliances only tip teeth",
+          "ru": "Съёмный аппарат только наклоняет зубы",
+          "uz": "Olinadigan apparat faqat tishni og‘diradi"
+        },
+        {
+          "en": "Success depends on wear",
+          "ru": "Результат зависит от ношения",
+          "uz": "Natija bemorning taqishiga bog‘liq"
+        }
+      ]
+    }
+  ],
+  "oral": [
+    {
+      "q": {
+        "en": "List the components of a removable appliance.",
+        "ru": "Перечислите элементы съёмного аппарата.",
+        "uz": "Olinadigan apparatning tarkibiy qismlarini sanang."
+      },
+      "plan": [
+        {
+          "en": "Active: springs, screws, elastics",
+          "ru": "Активные: пружины, винты, эластики",
+          "uz": "Faol qism: prujinalar, vintlar, elastiklar"
+        },
+        {
+          "en": "Retention: Adams clasps, labial bow",
+          "ru": "Ретенция: кламмер Адамса, вестибулярная дуга",
+          "uz": "Retensiya: Adams qisqichi, vestibulyar yoy"
+        },
+        {
+          "en": "Anchorage: other teeth and baseplate",
+          "ru": "Анкораж: остальные зубы и базис",
+          "uz": "Ankoraj: qolgan tishlar va bazis"
+        },
+        {
+          "en": "Baseplate: acrylic, with bite planes if needed",
+          "ru": "Базис: акрил, при необходимости накусочная площадка",
+          "uz": "Bazis: akril, kerak bo‘lsa tishlash platformasi"
+        }
+      ]
+    },
+    {
+      "q": {
+        "en": "Give the indications and limitations of removable appliances.",
+        "ru": "Назовите показания и ограничения съёмных аппаратов.",
+        "uz": "Olinadigan apparatlarning ko‘rsatmalari va cheklovlarini ayting."
+      },
+      "plan": [
+        {
+          "en": "Simple tipping, single-tooth crossbite",
+          "ru": "Простой наклон, перекрёстный прикус одного зуба",
+          "uz": "Oddiy og‘dirish, bitta tishning kesishgan tishlovi"
+        },
+        {
+          "en": "Expansion, retention, space maintenance",
+          "ru": "Расширение, ретенция, сохранение места",
+          "uz": "Kengaytirish, retensiya va joy saqlash"
+        },
+        {
+          "en": "No rotations or bodily movement",
+          "ru": "Не устраняют повороты, нет корпусного перемещения",
+          "uz": "Burilish va tanani siljitish imkonsiz"
+        },
+        {
+          "en": "Rely on patient cooperation",
+          "ru": "Зависят от сотрудничества пациента",
+          "uz": "Bemorning hamkorligiga bog‘liq"
+        }
+      ]
+    },
+    {
+      "q": {
+        "en": "How do anterior and posterior bite planes differ?",
+        "ru": "Чем отличаются передняя и задняя накусочные площадки?",
+        "uz": "Old va orqa tishlash platformalarining farqi nimada?"
+      },
+      "plan": [
+        {
+          "en": "Anterior reduces a deep overbite",
+          "ru": "Передняя – уменьшает глубокий прикус",
+          "uz": "Old platforma – chuqur tishlovni kamaytiradi"
+        },
+        {
+          "en": "Lets posterior teeth erupt",
+          "ru": "Позволяет выдвинуться боковым зубам",
+          "uz": "Yon tishlar chiqishiga imkon beradi"
+        },
+        {
+          "en": "Posterior frees the incisors",
+          "ru": "Задняя – разобщает передние зубы",
+          "uz": "Orqa platforma – old tishlarni ajratadi"
+        },
+        {
+          "en": "Used to correct anterior crossbite",
+          "ru": "Используется при переднем перекрёстном прикусе",
+          "uz": "Old kesishgan tishlovni tuzatishda ishlatiladi"
+        }
+      ]
+    },
+    {
+      "q": {
+        "en": "What matters when fitting an appliance and instructing the patient?",
+        "ru": "На что обращают внимание при припасовке и инструктаже?",
+        "uz": "Apparatni kiydirishda va bemorga yo‘riqnoma berishda nimalarga e’tibor beriladi?"
+      },
+      "plan": [
+        {
+          "en": "Check the design and sharp edges",
+          "ru": "Проверить конструкцию и острые края",
+          "uz": "Dizayn va o‘tkir qirralarni tekshirish"
+        },
+        {
+          "en": "Adjust retention, activate lightly",
+          "ru": "Настроить ретенцию, слегка активировать пружину",
+          "uz": "Retensiyani sozlash, prujinani yengil faollashtirish"
+        },
+        {
+          "en": "Wear time, hygiene, diet",
+          "ru": "Время ношения, гигиена, питание",
+          "uz": "Taqish vaqti, gigiyena, ovqatlanish"
+        },
+        {
+          "en": "Review every 4–6 weeks",
+          "ru": "Контроль каждые 4–6 недель",
+          "uz": "Har 4–6 haftada nazorat"
+        }
+      ]
+    }
+  ],
+  "test": [
+    {
+      "q": {
+        "en": "What type of tooth movement can a removable appliance achieve?",
+        "ru": "Какое перемещение зубов может выполнить съёмный аппарат?",
+        "uz": "Olinadigan apparat qanday tish harakatini bajara oladi?"
+      },
+      "options": [
+        {
+          "en": "Bodily movement",
+          "ru": "Корпусное перемещение",
+          "uz": "Tanani to‘liq siljitish"
+        },
+        {
+          "en": "Root torque",
+          "ru": "Перемещение корня",
+          "uz": "Ildizni boshqarish"
+        },
+        {
+          "en": "Tipping",
+          "ru": "Наклонное перемещение",
+          "uz": "Og‘dirish"
+        },
+        {
+          "en": "Correcting severe rotations",
+          "ru": "Исправление сложных поворотов",
+          "uz": "Murakkab burilishlarni tuzatish"
+        }
+      ],
+      "correct": 2,
+      "explain": {
+        "en": "A removable appliance applies a single point force to the crown, so it can only tip teeth.",
+        "ru": "Съёмный аппарат прикладывает силу к коронке в одной точке, поэтому возможен только наклон.",
+        "uz": "Olinadigan apparat tojga bir nuqtada kuch beradi, shuning uchun faqat og‘dirish harakati hosil bo‘ladi."
+      }
+    },
+    {
+      "q": {
+        "en": "Which component is most used for retention on molars?",
+        "ru": "Какой элемент чаще всего используют для ретенции на молярах?",
+        "uz": "Molyarlarda retensiya uchun eng ko‘p ishlatiladigan element qaysi?"
+      },
+      "options": [
+        {
+          "en": "Adams clasp",
+          "ru": "Кламмер Адамса",
+          "uz": "Adams qisqichi"
+        },
+        {
+          "en": "Z-spring",
+          "ru": "Z-образная пружина",
+          "uz": "Z-prujina"
+        },
+        {
+          "en": "Midline screw",
+          "ru": "Срединный винт",
+          "uz": "O‘rta chiziq vinti"
+        },
+        {
+          "en": "Palatal finger spring",
+          "ru": "Нёбная пальцевая пружина",
+          "uz": "Tanglay barmoqsimon prujinasi"
+        }
+      ],
+      "correct": 0,
+      "explain": {
+        "en": "The Adams clasp engages mesial and distal undercuts of the molar for secure retention.",
+        "ru": "Кламмер Адамса заходит в мезиальное и дистальное поднутрение моляра и обеспечивает надёжную ретенцию.",
+        "uz": "Adams qisqichi molyarning mezial va distal tagiga kirib, ishonchli retensiya beradi."
+      }
+    },
+    {
+      "q": {
+        "en": "Which spring proclines a single upper incisor?",
+        "ru": "Какая пружина используется для наклона одного верхнего резца вперёд?",
+        "uz": "Bitta yuqori kesuvchini oldinga og‘dirish uchun qaysi prujina ishlatiladi?"
+      },
+      "options": [
+        {
+          "en": "Buccal canine retractor",
+          "ru": "Щёчный ретрактор клыка",
+          "uz": "Bukkal qoziq retraktori"
+        },
+        {
+          "en": "Labial bow",
+          "ru": "Вестибулярная дуга",
+          "uz": "Vestibulyar yoy"
+        },
+        {
+          "en": "Adams clasp",
+          "ru": "Кламмер Адамса",
+          "uz": "Adams qisqichi"
+        },
+        {
+          "en": "Z-spring",
+          "ru": "Z-образная пружина",
+          "uz": "Z-prujina"
+        }
+      ],
+      "correct": 3,
+      "explain": {
+        "en": "A Z-spring rests on the palatal surface of the incisor and tips it labially.",
+        "ru": "Z-образная пружина опирается на нёбную поверхность резца и наклоняет его вперёд.",
+        "uz": "Z-prujina (ikki tomonlama konsol) kesuvchining tanglay yuzasiga tayanib, uni oldinga og‘diradi."
+      }
+    },
+    {
+      "q": {
+        "en": "A 9-year-old has one upper central incisor in crossbite with adequate overbite. What does the appliance need?",
+        "ru": "У ребёнка 9 лет один верхний центральный резец в перекрёстном прикусе, перекрытие достаточное. Что нужно в аппарате?",
+        "uz": "9 yoshli bolada bitta yuqori markaziy kesuvchi kesishgan tishlovda, overbite yetarli. Apparatda qanday qism kerak?"
+      },
+      "options": [
+        {
+          "en": "Anterior bite plane and labial bow",
+          "ru": "Передняя площадка и вестибулярная дуга",
+          "uz": "Old tishlash platformasi va vestibulyar yoy"
+        },
+        {
+          "en": "Z-spring and posterior bite plane",
+          "ru": "Z-пружина и задняя накусочная площадка",
+          "uz": "Z-prujina va orqa tishlash platformasi"
+        },
+        {
+          "en": "Midline screw only",
+          "ru": "Только срединный винт",
+          "uz": "Faqat o‘rta chiziq vinti"
+        },
+        {
+          "en": "Adams clasps only",
+          "ru": "Только кламмеры Адамса",
+          "uz": "Faqat Adams qisqichlari"
+        }
+      ],
+      "correct": 1,
+      "explain": {
+        "en": "The posterior bite plane frees the bite, the Z-spring tips the incisor forward, and overbite holds the correction.",
+        "ru": "Задняя площадка разобщает передние зубы, Z-пружина наклоняет резец вперёд, а достаточное перекрытие удерживает результат.",
+        "uz": "Orqa platforma old tishlarni ajratadi, Z-prujina esa kesuvchini oldinga og‘diradi; yetarli overbite natijani ushlab turadi."
+      }
+    },
+    {
+      "q": {
+        "en": "What does an anterior bite plane reduce?",
+        "ru": "Какую проблему уменьшает передняя накусочная площадка?",
+        "uz": "Old tishlash platformasi qaysi muammoni kamaytiradi?"
+      },
+      "options": [
+        {
+          "en": "Reverse overjet",
+          "ru": "Обратную щель",
+          "uz": "Teskari overjet"
+        },
+        {
+          "en": "Posterior crossbite",
+          "ru": "Боковой перекрёстный прикус",
+          "uz": "Yon kesishgan tishlov"
+        },
+        {
+          "en": "A deep overbite",
+          "ru": "Глубокий прикус",
+          "uz": "Chuqur tishlov"
+        },
+        {
+          "en": "Spacing between teeth",
+          "ru": "Тремы между зубами",
+          "uz": "Tishlar orasidagi oraliq"
+        }
+      ],
+      "correct": 2,
+      "explain": {
+        "en": "The anterior bite plane separates the posterior teeth, which erupt, reducing the overbite.",
+        "ru": "Передняя площадка разобщает боковые зубы, они выдвигаются, и перекрытие уменьшается.",
+        "uz": "Old platforma yon tishlarni ajratib, ularning chiqishiga imkon beradi va overbite kamayadi."
+      }
+    },
+    {
+      "q": {
+        "en": "What wire gauge is usually used for a palatal finger spring?",
+        "ru": "Из проволоки какого диаметра обычно делают нёбную пальцевую пружину?",
+        "uz": "Tanglay barmoqsimon prujinasi odatda qanday qalinlikdagi simdan yasaladi?"
+      },
+      "options": [
+        {
+          "en": "0.5 mm",
+          "ru": "0,5 мм",
+          "uz": "0,5 mm"
+        },
+        {
+          "en": "1.2 mm",
+          "ru": "1,2 мм",
+          "uz": "1,2 mm"
+        },
+        {
+          "en": "0.9 mm",
+          "ru": "0,9 мм",
+          "uz": "0,9 mm"
+        },
+        {
+          "en": "0.2 mm",
+          "ru": "0,2 мм",
+          "uz": "0,2 mm"
+        }
+      ],
+      "correct": 0,
+      "explain": {
+        "en": "0.5 mm wire delivers a light, continuous force suitable for tipping.",
+        "ru": "Проволока 0,5 мм даёт лёгкую постоянную силу, подходящую для наклонного перемещения.",
+        "uz": "0,5 mm sim yengil va doimiy kuch beradi, bu og‘dirish harakati uchun mos."
+      }
+    },
+    {
+      "q": {
+        "en": "A patient complains of altered speech after starting with an appliance. Best response?",
+        "ru": "Пациент жалуется на нарушение речи после начала ношения аппарата. Правильный ответ?",
+        "uz": "Bemor apparat taqishni boshlagach nutqi buzilganidan shikoyat qilmoqda. To‘g‘ri javob qaysi?"
+      },
+      "options": [
+        {
+          "en": "Wear it only at night",
+          "ru": "Носить аппарат только ночью",
+          "uz": "Apparatni faqat kechasi taqish"
+        },
+        {
+          "en": "Abandon the appliance",
+          "ru": "Полностью отказаться от аппарата",
+          "uz": "Apparatni butunlay olib tashlash"
+        },
+        {
+          "en": "Double the baseplate thickness",
+          "ru": "Утолстить базис вдвое",
+          "uz": "Bazisni ikki baravar qalinlashtirish"
+        },
+        {
+          "en": "This usually settles in a few days",
+          "ru": "Обычно это проходит за несколько дней",
+          "uz": "Bu odatda bir necha kunda o‘tib ketadi"
+        }
+      ],
+      "correct": 3,
+      "explain": {
+        "en": "Speech change is expected and settles within days if the appliance is worn full time.",
+        "ru": "Изменение речи ожидаемо и проходит за несколько дней при постоянном ношении аппарата.",
+        "uz": "Nutq o‘zgarishi kutiladigan holat bo‘lib, apparat doimiy taqilsa, bir necha kunda moslashiladi."
+      }
+    },
+    {
+      "q": {
+        "en": "What happens if a spring is over-activated?",
+        "ru": "Что произойдёт при чрезмерной активации пружины?",
+        "uz": "Prujina juda kuchli faollashtirilsa nima bo‘ladi?"
+      },
+      "options": [
+        {
+          "en": "The tooth moves faster without pain",
+          "ru": "Зуб переместится быстрее и безболезненно",
+          "uz": "Tish tezroq va og‘riqsiz siljiydi"
+        },
+        {
+          "en": "Pain and loss of anchorage",
+          "ru": "Боль и потеря анкоража",
+          "uz": "Og‘riq va ankoraj yo‘qolishi"
+        },
+        {
+          "en": "Retention improves",
+          "ru": "Улучшится ретенция",
+          "uz": "Retensiya yaxshilanadi"
+        },
+        {
+          "en": "There is no effect",
+          "ru": "Ничего не изменится",
+          "uz": "Hech qanday ta’sir bo‘lmaydi"
+        }
+      ],
+      "correct": 1,
+      "explain": {
+        "en": "Excess force causes pain, unseats the appliance and moves the anchor teeth too.",
+        "ru": "Избыточная сила вызывает боль, смещает аппарат и перемещает опорные зубы.",
+        "uz": "Ortiqcha kuch og‘riq beradi, apparatni ko‘taradi va tayanch tishlar ham siljib ketadi."
+      }
+    },
+    {
+      "q": {
+        "en": "Which active component is added for a narrow maxilla with a displacement?",
+        "ru": "Какой активный элемент включают в съёмный аппарат при сужении верхней челюсти со смещением?",
+        "uz": "Siljishli ikki tomonlama tor yuqori jag‘da olinadigan apparatga qaysi faol element qo‘yiladi?"
+      },
+      "options": [
+        {
+          "en": "A midline expansion screw",
+          "ru": "Срединный винт",
+          "uz": "O‘rta chiziq vinti"
+        },
+        {
+          "en": "A buccal canine retractor",
+          "ru": "Щёчный ретрактор клыка",
+          "uz": "Bukkal qoziq retraktori"
+        },
+        {
+          "en": "A Z-spring",
+          "ru": "Z-образная пружина",
+          "uz": "Z-prujina"
+        },
+        {
+          "en": "An anterior bite plane",
+          "ru": "Передняя накусочная площадка",
+          "uz": "Old tishlash platformasi"
+        }
+      ],
+      "correct": 0,
+      "explain": {
+        "en": "A midline screw splits the baseplate and gradually expands the upper arch.",
+        "ru": "Срединный винт разделяет базис и постепенно расширяет верхнюю дугу.",
+        "uz": "O‘rta chiziq vinti bazisni ikkiga bo‘lib, yuqori yoyni asta-sekin kengaytiradi."
+      }
+    },
+    {
+      "q": {
+        "en": "What does anchorage mean in a removable appliance?",
+        "ru": "Что означает анкораж в съёмном аппарате?",
+        "uz": "Olinadigan apparatda ankoraj nimani anglatadi?"
+      },
+      "options": [
+        {
+          "en": "Holding the appliance in the mouth",
+          "ru": "Удержание аппарата во рту",
+          "uz": "Apparatni og‘izda ushlab turish"
+        },
+        {
+          "en": "The spring that moves the tooth",
+          "ru": "Пружина, перемещающая зуб",
+          "uz": "Tishni siljituvchi prujina"
+        },
+        {
+          "en": "Resistance to the reaction force",
+          "ru": "Сопротивление реактивной силе",
+          "uz": "Faol kuchning teskari ta’siriga qarshilik"
+        },
+        {
+          "en": "The colour of the acrylic",
+          "ru": "Цвет акрилового базиса",
+          "uz": "Akril bazisning rangi"
+        }
+      ],
+      "correct": 2,
+      "explain": {
+        "en": "Every active force has an equal reaction; anchorage resists it through the other teeth and the baseplate.",
+        "ru": "Каждой активной силе соответствует равная противодействующая; анкораж противостоит ей за счёт опорных зубов и базиса.",
+        "uz": "Har bir faol kuchga teng teskari kuch bor; ankoraj tayanch tishlar va bazis orqali unga qarshi turadi."
+      }
+    }
+  ]
+}

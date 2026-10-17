@@ -2,7 +2,8 @@ import {useEffect,useState,type ReactNode} from 'react';
 import {BookOpen,ChevronDown,ChevronLeft,ChevronRight,Presentation,Target} from 'lucide-react';
 import Slides from './Slides';
 import './learn.css';
-import {SUBJECTS,courseWord,loadTopic,metaLine,topicsOf,tx,type Subject,type Topic,type TopicMeta} from './curriculum';
+import {SubjectIcon,subjectColor} from './subjectArt';
+import {SUBJECTS,courseWord,loadLast,loadSeen,loadTopic,markSlide,metaLine,topicsOf,tx,type Subject,type Topic,type TopicMeta} from './curriculum';
 import type {Lang} from './discoveryData';
 
 export const cw={
@@ -26,10 +27,12 @@ export function SubjectList({lang,onPick}:{lang:Lang;onPick:(s:Subject)=>void}){
  const [course,setCourse]=useState(0);
  const courses=[...new Set(SUBJECTS.map(s=>s.course))].sort();
  const list=SUBJECTS.filter(s=>!course||s.course===course);
+ const seen=loadSeen();
+ const done=(id:string)=>topicsOf(id).filter(m=>seen[m.id]&&seen[m.id].s>=seen[m.id].n).length;
  return <>
   <div className="chips">{[0,...courses].map(c=><button key={c} className={course===c?'active':''} onClick={()=>setCourse(c)}>{c?courseWord(c,lang):t.all}</button>)}</div>
   <div className="lg-list">{list.map(s=>{const n=topicsOf(s.id).length;return <button key={s.id} className="lg-row" onClick={()=>onPick(s)}>
-   <span className="lg-ico">{s.course}</span><span><strong>{tx(s.title,lang)}</strong><small>{courseWord(s.course,lang)} · {s.semester}-{lang==='en'?'sem.':lang==='ru'?'сем.':'semestr'} · {n} {t.topics}</small></span><ChevronRight size={16}/></button>})}</div>
+   <span className="lg-ico" style={{background:subjectColor(s.id).bg}}><SubjectIcon id={s.id}/></span><span><strong>{tx(s.title,lang)}</strong><small>{courseWord(s.course,lang)} · {s.semester}-{lang==='en'?'sem.':lang==='ru'?'сем.':'semestr'} · {n} {t.topics}</small>{n>0&&<i className="lg-mini"><b style={{width:`${done(s.id)/n*100}%`,background:subjectColor(s.id).c}}/></i>}</span><ChevronRight size={16}/></button>})}</div>
  </>;
 }
 
@@ -37,9 +40,10 @@ export function SubjectList({lang,onPick}:{lang:Lang;onPick:(s:Subject)=>void}){
 export function TopicList({lang,subject,onPick,tag}:{lang:Lang;subject:Subject;onPick:(m:TopicMeta)=>void;tag?:(m:TopicMeta)=>ReactNode}){
  const t=cw[lang];
  const list=topicsOf(subject.id);
+ const seen=loadSeen();
  if(!list.length)return <p className="muted">{t.empty}</p>;
  return <div className="lg-list">{list.map(m=><button key={m.id} className="lg-row" onClick={()=>onPick(m)}>
-  <span className={'lg-ico '+m.type}>{m.n}</span><span><strong>{tx(m.title,lang)}</strong><small>{metaLine(m,lang)}</small></span>{tag?.(m)}<ChevronRight size={16}/></button>)}</div>;
+  <span className={'lg-ico num '+m.type} style={{background:subjectColor(m.subject).bg,color:subjectColor(m.subject).c}}>{m.n}</span><span><strong>{tx(m.title,lang)}</strong><small>{metaLine(m,lang)}</small></span>{tag?tag(m):seen[m.id]?<span className="lg-tag brand">{seen[m.id].s>=seen[m.id].n?'✓':`${seen[m.id].s}/${seen[m.id].n}`}</span>:null}<ChevronRight size={16}/></button>)}</div>;
 }
 
 export function useTopic(id:string|null){
@@ -73,8 +77,17 @@ export function TopicOverview({lang,topic,subject}:{lang:Lang;topic:Topic;subjec
   <OralList lang={lang} topic={topic}/>
   <p className="muted lg-small">{t.testInGroup}</p>
   <div className="lg-card"><h3><BookOpen size={16}/>{t.sources}</h3><ul className="lg-sources">{topic.sources.map((s,k)=><li key={k}>{s}</li>)}</ul></div>
-  {show&&<Slides title={tx(topic.title,lang)} eyebrow={tx(subject.title,lang)} slides={topic.slides} lang={lang} onClose={()=>setShow(false)}/>}
+  {show&&<Slides title={tx(topic.title,lang)} eyebrow={tx(subject.title,lang)} slides={topic.slides} lang={lang} accent={subjectColor(subject.id).c}
+   start={loadLast()?.id===topic.id?loadLast()!.slide:0} onProgress={i=>markSlide(topic.id,i,topic.slides.length)} onClose={()=>setShow(false)}/>}
  </>;
+}
+
+export function SubjectHero({lang,subject}:{lang:Lang;subject:Subject}){
+ const t=cw[lang];const a=subjectColor(subject.id);const n=topicsOf(subject.id).length;
+ return <div className="lg-hero" style={{background:`linear-gradient(135deg,${a.bg},#ffffff)`,borderColor:a.bg}}>
+  <span className="lg-hero-ico" style={{color:a.c}}><SubjectIcon id={subject.id} size={34}/></span>
+  <div><span className="lg-eyebrow" style={{color:a.c}}>{courseWord(subject.course,lang)} · {subject.semester}-{lang==='en'?'sem.':lang==='ru'?'сем.':'semestr'}</span><h2>{tx(subject.title,lang)}</h2><small>{n} {t.topics}</small></div>
+ </div>;
 }
 
 /** Curriculum browser for everyone (Learn → Curriculum). */
@@ -86,7 +99,7 @@ export default function Curriculum({lang}:{lang:Lang}){
  return <section className="lg-section">
   {subject&&<button className="cr-back" onClick={()=>meta?setMeta(null):setSubject(null)}><ChevronLeft size={16}/>{meta?tx(subject.title,lang):t.title}</button>}
   {!subject?<><p className="muted">{t.sub}</p><SubjectList lang={lang} onPick={setSubject}/><small className="muted lg-small">{t.note}</small></>
-  :!meta?<><span className="lg-eyebrow">{courseWord(subject.course,lang)}</span><h2>{tx(subject.title,lang)}</h2><TopicList lang={lang} subject={subject} onPick={setMeta}/></>
+  :!meta?<><SubjectHero lang={lang} subject={subject}/><TopicList lang={lang} subject={subject} onPick={setMeta}/></>
   :topic?<TopicOverview lang={lang} topic={topic} subject={subject}/>:<p className="muted">…</p>}
  </section>;
 }

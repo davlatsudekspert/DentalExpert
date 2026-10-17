@@ -419,7 +419,12 @@
             "uz": "ASA sinfi, reja o‘zgartirish"
           }
         }
-      ]
+      ],
+      "note": {
+        "en": "Update the medical history at every visit, as drugs and illnesses change.",
+        "ru": "Обновляйте анамнез при каждом посещении: лекарства и заболевания пациента меняются.",
+        "uz": "Anamnezni har bir tashrifda yangilang: bemorning dorilari va kasalliklari o‘zgarib turadi."
+      }
     },
     {
       "layout": "table",

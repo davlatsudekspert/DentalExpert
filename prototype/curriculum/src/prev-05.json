@@ -1,0 +1,998 @@
+{
+  "id": "prev-05",
+  "subject": "prev",
+  "n": 5,
+  "week": 5,
+  "type": "lecture",
+  "hours": 2,
+  "title": {
+    "en": "Diet, sugars and caries risk assessment",
+    "ru": "Питание, сахара и оценка риска кариеса",
+    "uz": "Ovqatlanish, shakarlar va karies xavfini baholash"
+  },
+  "goals": [
+    {
+      "en": "Explain why sugar frequency matters more than amount",
+      "ru": "Объяснить, почему частота приёма сахара важнее его количества",
+      "uz": "Nima uchun shakar miqdoridan ko‘ra iste’mol chastotasi muhimligini tushuntirish"
+    },
+    {
+      "en": "Apply the WHO free sugars recommendation",
+      "ru": "Применять рекомендацию ВОЗ по свободным сахарам",
+      "uz": "JSSTning erkin shakarlar bo‘yicha tavsiyasini qo‘llash"
+    },
+    {
+      "en": "Analyse a diet diary and give realistic advice",
+      "ru": "Анализировать дневник питания и давать реалистичные советы",
+      "uz": "Ovqatlanish kundaligini tahlil qilish va amaliy maslahat berish"
+    },
+    {
+      "en": "Assess a patient's caries risk and plan prevention",
+      "ru": "Оценивать риск кариеса пациента и планировать профилактику",
+      "uz": "Bemorning karies xavfini baholash va profilaktikani rejalashtirish"
+    }
+  ],
+  "links": [
+    "caries-basics"
+  ],
+  "sources": [
+    "WHO. Guideline: Sugars intake for adults and children, 2015",
+    "Fejerskov O, Nyvad B, Kidd E. Dental Caries: The Disease and its Clinical Management, 3rd ed., 2015",
+    "Public Health England. Delivering Better Oral Health: an evidence-based toolkit for prevention, 4th ed., 2021"
+  ],
+  "slides": [
+    {
+      "layout": "title",
+      "title": {
+        "en": "Diet, sugars and caries risk",
+        "ru": "Питание, сахара и риск кариеса",
+        "uz": "Ovqatlanish, shakarlar va karies xavfi"
+      },
+      "subtitle": {
+        "en": "From the patient's plate to a personal prevention plan",
+        "ru": "От тарелки пациента к личному плану профилактики",
+        "uz": "Bemor dasturxonidan shaxsiy profilaktika rejasigacha"
+      }
+    },
+    {
+      "layout": "key",
+      "title": {
+        "en": "Free sugars",
+        "ru": "Свободные сахара",
+        "uz": "Erkin shakarlar"
+      },
+      "term": {
+        "en": "WHO definition",
+        "ru": "Определение ВОЗ",
+        "uz": "JSST ta’rifi"
+      },
+      "definition": {
+        "en": "Sugars added to food and drinks by the maker, cook or consumer, plus sugars naturally in honey, syrups and fruit juices. WHO advises keeping them below 10% of daily energy, and ideally below 5%.",
+        "ru": "Сахара, добавляемые в пищу и напитки производителем, поваром или самим человеком, а также сахара мёда, сиропов и фруктовых соков. ВОЗ рекомендует менее 10% суточной энергии, а в идеале менее 5%.",
+        "uz": "Ishlab chiqaruvchi, oshpaz yoki iste’molchi tomonidan ovqat va ichimliklarga qo‘shilgan shakarlar hamda asal, sirop va meva sharbatlaridagi tabiiy shakarlar. JSST ularni kunlik energiyaning 10% dan, ideal holda 5% dan kam saqlashni tavsiya etadi."
+      },
+      "note": {
+        "en": "Stress that fruit juice counts as free sugar, while sugars inside whole fruit and plain milk do not.",
+        "ru": "Подчеркните: сахар фруктового сока — свободный, а сахар цельных фруктов и обычного молока — нет.",
+        "uz": "Meva sharbatidagi shakar erkin shakar hisoblanishini, butun meva va oddiy sutdagi shakar esa hisoblanmasligini ta’kidlang."
+      }
+    },
+    {
+      "layout": "compare",
+      "title": {
+        "en": "Frequency or amount?",
+        "ru": "Частота или количество?",
+        "uz": "Chastotami yoki miqdormi?"
+      },
+      "columns": [
+        {
+          "head": {
+            "en": "Higher risk",
+            "ru": "Выше риск",
+            "uz": "Xavf yuqori"
+          },
+          "items": [
+            {
+              "en": "Frequent snacks and sweet drinks between meals",
+              "ru": "Частые перекусы и сладкие напитки между едой",
+              "uz": "Ovqatlar orasida tez-tez gazak va shirin ichimliklar"
+            },
+            {
+              "en": "Sipping sweet drinks slowly",
+              "ru": "Медленное потягивание сладких напитков",
+              "uz": "Shirin ichimliklarni sekin-asta ho‘plash"
+            },
+            {
+              "en": "Sweet drinks at bedtime",
+              "ru": "Сладкие напитки перед сном",
+              "uz": "Uxlashdan oldin shirin ichimliklar"
+            }
+          ]
+        },
+        {
+          "head": {
+            "en": "Lower risk",
+            "ru": "Ниже риск",
+            "uz": "Xavf pastroq"
+          },
+          "items": [
+            {
+              "en": "Sugars limited to mealtimes",
+              "ru": "Сахара только во время еды",
+              "uz": "Shakar faqat ovqat paytida"
+            },
+            {
+              "en": "Water or milk between meals",
+              "ru": "Вода или молоко между едой",
+              "uz": "Ovqatlar orasida suv yoki sut"
+            },
+            {
+              "en": "Long sugar-free gap before sleep",
+              "ru": "Длительный промежуток без сахара перед сном",
+              "uz": "Uyqudan oldin uzoq shakarsiz oraliq"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "layout": "table",
+      "title": {
+        "en": "Foods and caries",
+        "ru": "Продукты и кариес",
+        "uz": "Oziq-ovqatlar va karies"
+      },
+      "head": [
+        {
+          "en": "Group",
+          "ru": "Группа",
+          "uz": "Guruh"
+        },
+        {
+          "en": "Examples",
+          "ru": "Примеры",
+          "uz": "Misollar"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "en": "Highly cariogenic",
+            "ru": "Высококариесогенные",
+            "uz": "Kuchli kariesogen"
+          },
+          {
+            "en": "Sweets, sugary drinks, juices, sticky snacks",
+            "ru": "Сладости, сладкие напитки, соки, липкие закуски",
+            "uz": "Shirinliklar, shirin ichimliklar, sharbatlar, yopishqoq gazaklar"
+          }
+        ],
+        [
+          {
+            "en": "Lower risk",
+            "ru": "Меньший риск",
+            "uz": "Kamroq xavfli"
+          },
+          {
+            "en": "Whole fresh fruit, vegetables, plain starchy foods",
+            "ru": "Цельные свежие фрукты, овощи, простые крахмалистые блюда",
+            "uz": "Butun yangi mevalar, sabzavotlar, oddiy kraxmalli taomlar"
+          }
+        ],
+        [
+          {
+            "en": "Protective",
+            "ru": "Защитные",
+            "uz": "Himoya qiluvchi"
+          },
+          {
+            "en": "Cheese, plain milk, water",
+            "ru": "Сыр, обычное молоко, вода",
+            "uz": "Pishloq, oddiy sut, suv"
+          }
+        ],
+        [
+          {
+            "en": "Non-cariogenic sweeteners",
+            "ru": "Некариесогенные подсластители",
+            "uz": "Kariesogen bo‘lmagan shirinlovchilar"
+          },
+          {
+            "en": "Xylitol, sugar-free gum",
+            "ru": "Ксилит, жевательная резинка без сахара",
+            "uz": "Ksilit, shakarsiz saqich"
+          }
+        ]
+      ]
+    },
+    {
+      "layout": "flow",
+      "title": {
+        "en": "Using a diet diary",
+        "ru": "Работа с дневником питания",
+        "uz": "Ovqatlanish kundaligi bilan ishlash"
+      },
+      "steps": [
+        {
+          "label": {
+            "en": "Record",
+            "ru": "Запись",
+            "uz": "Yozish"
+          },
+          "detail": {
+            "en": "3–4 days including a weekend day",
+            "ru": "3–4 дня, включая выходной",
+            "uz": "Dam olish kunini qo‘shib 3–4 kun"
+          }
+        },
+        {
+          "label": {
+            "en": "Mark sugars",
+            "ru": "Отметить сахара",
+            "uz": "Shakarlarni belgilash"
+          },
+          "detail": {
+            "en": "Highlight every food or drink with free sugars",
+            "ru": "Выделить всё, что содержит свободные сахара",
+            "uz": "Erkin shakarli har bir ovqat va ichimlikni belgilash"
+          }
+        },
+        {
+          "label": {
+            "en": "Count",
+            "ru": "Подсчёт",
+            "uz": "Sanash"
+          },
+          "detail": {
+            "en": "Number and timing of sugar intakes",
+            "ru": "Число и время приёмов сахара",
+            "uz": "Shakar iste’moli soni va vaqti"
+          }
+        },
+        {
+          "label": {
+            "en": "Agree goals",
+            "ru": "Согласовать цели",
+            "uz": "Maqsadlarni kelishish"
+          },
+          "detail": {
+            "en": "One or two realistic changes",
+            "ru": "Одно-два реальных изменения",
+            "uz": "Bir-ikkita amalga oshadigan o‘zgarish"
+          }
+        },
+        {
+          "label": {
+            "en": "Review",
+            "ru": "Контроль",
+            "uz": "Nazorat"
+          },
+          "detail": {
+            "en": "Check progress at the next visit",
+            "ru": "Проверить результат на следующем визите",
+            "uz": "Keyingi tashrifda natijani tekshirish"
+          }
+        }
+      ],
+      "note": {
+        "en": "Ask students to keep their own diary for three days and analyse it in pairs.",
+        "ru": "Попросите студентов вести собственный дневник три дня и разобрать его в парах.",
+        "uz": "Talabalardan uch kun o‘z kundaligini yuritib, juftlikda tahlil qilishni so‘rang."
+      }
+    },
+    {
+      "layout": "tree",
+      "title": {
+        "en": "Caries risk factors",
+        "ru": "Факторы риска кариеса",
+        "uz": "Karies xavf omillari"
+      },
+      "root": {
+        "en": "Caries risk",
+        "ru": "Риск кариеса",
+        "uz": "Karies xavfi"
+      },
+      "children": [
+        {
+          "label": {
+            "en": "Disease indicators",
+            "ru": "Индикаторы болезни",
+            "uz": "Kasallik ko‘rsatkichlari"
+          },
+          "items": [
+            {
+              "en": "Past caries experience",
+              "ru": "Кариес в прошлом",
+              "uz": "O‘tmishdagi karies"
+            },
+            {
+              "en": "Active lesions",
+              "ru": "Активные поражения",
+              "uz": "Faol shikastlar"
+            }
+          ]
+        },
+        {
+          "label": {
+            "en": "Biological",
+            "ru": "Биологические",
+            "uz": "Biologik"
+          },
+          "items": [
+            {
+              "en": "Plaque",
+              "ru": "Налёт",
+              "uz": "Karash"
+            },
+            {
+              "en": "Frequent sugars",
+              "ru": "Частые сахара",
+              "uz": "Tez-tez shakar"
+            },
+            {
+              "en": "Low saliva flow",
+              "ru": "Низкое слюноотделение",
+              "uz": "So‘lak kam ajralishi"
+            }
+          ]
+        },
+        {
+          "label": {
+            "en": "Social and medical",
+            "ru": "Социальные и медицинские",
+            "uz": "Ijtimoiy va tibbiy"
+          },
+          "items": [
+            {
+              "en": "Low income or health literacy",
+              "ru": "Низкий доход или санитарная грамотность",
+              "uz": "Kam daromad yoki past tibbiy savodxonlik"
+            },
+            {
+              "en": "Dry-mouth medicines, disability",
+              "ru": "Лекарства, вызывающие сухость, инвалидность",
+              "uz": "Og‘iz qurituvchi dorilar, nogironlik"
+            }
+          ]
+        },
+        {
+          "label": {
+            "en": "Protective",
+            "ru": "Защитные",
+            "uz": "Himoya omillari"
+          },
+          "items": [
+            {
+              "en": "Fluoride",
+              "ru": "Фторид",
+              "uz": "Ftor"
+            },
+            {
+              "en": "Sealants",
+              "ru": "Герметики",
+              "uz": "Germetiklar"
+            },
+            {
+              "en": "Regular care",
+              "ru": "Регулярное наблюдение",
+              "uz": "Muntazam nazorat"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "layout": "table",
+      "title": {
+        "en": "Risk level and prevention",
+        "ru": "Уровень риска и профилактика",
+        "uz": "Xavf darajasi va profilaktika"
+      },
+      "head": [
+        {
+          "en": "Risk",
+          "ru": "Риск",
+          "uz": "Xavf"
+        },
+        {
+          "en": "Typical measures",
+          "ru": "Типичные меры",
+          "uz": "Odatiy choralar"
+        },
+        {
+          "en": "Recall",
+          "ru": "Осмотры",
+          "uz": "Ko‘rik"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "en": "Low",
+            "ru": "Низкий",
+            "uz": "Past"
+          },
+          {
+            "en": "Fluoride toothpaste, general advice",
+            "ru": "Фторидная паста, общие советы",
+            "uz": "Ftorli pasta, umumiy maslahatlar"
+          },
+          {
+            "en": "Longer intervals",
+            "ru": "С длинными интервалами",
+            "uz": "Uzoqroq oraliqlarda"
+          }
+        ],
+        [
+          {
+            "en": "Moderate",
+            "ru": "Средний",
+            "uz": "O‘rtacha"
+          },
+          {
+            "en": "Add diet advice, varnish, sealants as needed",
+            "ru": "Плюс советы по питанию, фторлак, герметики по показаниям",
+            "uz": "Qo‘shimcha ovqatlanish maslahati, ftorlak, kerak bo‘lsa germetik"
+          },
+          {
+            "en": "Medium intervals",
+            "ru": "Со средними интервалами",
+            "uz": "O‘rtacha oraliqlarda"
+          }
+        ],
+        [
+          {
+            "en": "High",
+            "ru": "Высокий",
+            "uz": "Yuqori"
+          },
+          {
+            "en": "Varnish 2–4 times a year, higher-fluoride paste by age, close diet control",
+            "ru": "Фторлак 2–4 раза в год, паста с большим фторидом по возрасту, контроль питания",
+            "uz": "Yiliga 2–4 marta ftorlak, yoshga mos yuqori ftorli pasta, ovqatlanish nazorati"
+          },
+          {
+            "en": "Short intervals",
+            "ru": "С короткими интервалами",
+            "uz": "Qisqa oraliqlarda"
+          }
+        ]
+      ],
+      "note": {
+        "en": "Recall intervals and measures commonly follow national guidance; the table shows the typical pattern.",
+        "ru": "Интервалы осмотров и меры обычно следуют национальным рекомендациям; таблица показывает типичную схему.",
+        "uz": "Ko‘rik oraliqlari va choralar odatda milliy tavsiyalarga mos; jadvalda odatiy sxema ko‘rsatilgan."
+      }
+    },
+    {
+      "layout": "bullets",
+      "title": {
+        "en": "Saliva protects the teeth",
+        "ru": "Слюна защищает зубы",
+        "uz": "So‘lak tishlarni himoya qiladi"
+      },
+      "bullets": [
+        {
+          "en": "Clears sugars and food from the mouth",
+          "ru": "Удаляет сахара и пищу из полости рта",
+          "uz": "Og‘izdan shakar va ovqat qoldiqlarini tozalaydi"
+        },
+        {
+          "en": "Buffers plaque acids, mainly with bicarbonate",
+          "ru": "Нейтрализует кислоты налёта, главным образом бикарбонатом",
+          "uz": "Karash kislotalarini asosan bikarbonat bilan neytrallaydi"
+        },
+        {
+          "en": "Supplies calcium and phosphate for remineralisation",
+          "ru": "Поставляет кальций и фосфат для реминерализации",
+          "uz": "Reminerallashish uchun kalsiy va fosfat yetkazadi"
+        },
+        {
+          "en": "Low flow from medicines or disease raises caries risk",
+          "ru": "Сниженное слюноотделение из-за лекарств или болезней повышает риск",
+          "uz": "Dori yoki kasallik tufayli so‘lak kamayishi karies xavfini oshiradi"
+        }
+      ]
+    },
+    {
+      "layout": "summary",
+      "title": {
+        "en": "Summary",
+        "ru": "Итоги",
+        "uz": "Xulosa"
+      },
+      "bullets": [
+        {
+          "en": "Keep free sugars below 10% of energy, ideally below 5%",
+          "ru": "Свободные сахара — менее 10% энергии, в идеале менее 5%",
+          "uz": "Erkin shakarlar energiyaning 10% dan, ideal holda 5% dan kam bo‘lsin"
+        },
+        {
+          "en": "How often sugar is eaten matters more than how much",
+          "ru": "Частота приёма сахара важнее его количества",
+          "uz": "Shakarni qanchalik tez-tez iste’mol qilish miqdoridan muhimroq"
+        },
+        {
+          "en": "Past caries is the strongest predictor of new caries",
+          "ru": "Кариес в прошлом — сильнейший предиктор нового кариеса",
+          "uz": "O‘tmishdagi karies yangi kariesning eng kuchli bashoratchisi"
+        },
+        {
+          "en": "Match prevention and recall to the risk level",
+          "ru": "Профилактику и интервал осмотров подбирают по риску",
+          "uz": "Profilaktika va ko‘rik oralig‘i xavf darajasiga moslanadi"
+        }
+      ]
+    }
+  ],
+  "oral": [
+    {
+      "q": {
+        "en": "Why is the frequency of sugar intake more important than the amount?",
+        "ru": "Почему частота приёма сахара важнее его количества?",
+        "uz": "Nima uchun shakar iste’moli chastotasi miqdoridan muhimroq?"
+      },
+      "plan": [
+        {
+          "en": "Each intake causes an acid attack lasting about 30–60 minutes",
+          "ru": "Каждый приём вызывает кислотную атаку на 30–60 минут",
+          "uz": "Har bir iste’mol taxminan 30–60 daqiqalik kislota hujumini keltirib chiqaradi"
+        },
+        {
+          "en": "Frequent intakes leave no time for remineralisation",
+          "ru": "Частые приёмы не оставляют времени для реминерализации",
+          "uz": "Tez-tez iste’mol reminerallashishga vaqt qoldirmaydi"
+        },
+        {
+          "en": "Low pH favours acid-tolerant bacteria",
+          "ru": "Низкий pH благоприятствует кислотоустойчивым бактериям",
+          "uz": "Past pH kislotaga chidamli bakteriyalarga qulay"
+        },
+        {
+          "en": "Advice: keep sugars to mealtimes",
+          "ru": "Совет: сахара только во время еды",
+          "uz": "Maslahat: shakarni faqat ovqat paytida iste’mol qilish"
+        }
+      ]
+    },
+    {
+      "q": {
+        "en": "What are free sugars and what does WHO recommend?",
+        "ru": "Что такое свободные сахара и что рекомендует ВОЗ?",
+        "uz": "Erkin shakarlar nima va JSST nimani tavsiya etadi?"
+      },
+      "plan": [
+        {
+          "en": "Sugars added by maker, cook or consumer",
+          "ru": "Сахара, добавленные производителем, поваром или человеком",
+          "uz": "Ishlab chiqaruvchi, oshpaz yoki iste’molchi qo‘shgan shakarlar"
+        },
+        {
+          "en": "Plus sugars in honey, syrups and fruit juice",
+          "ru": "А также сахара мёда, сиропов и соков",
+          "uz": "Shuningdek asal, sirop va sharbatlardagi shakarlar"
+        },
+        {
+          "en": "Not sugars in whole fruit or plain milk",
+          "ru": "Не включают сахара цельных фруктов и обычного молока",
+          "uz": "Butun meva va oddiy sutdagi shakarlar kirmaydi"
+        },
+        {
+          "en": "Below 10% of energy, ideally below 5%",
+          "ru": "Менее 10% энергии, в идеале менее 5%",
+          "uz": "Energiyaning 10% dan, ideal holda 5% dan kam"
+        }
+      ]
+    },
+    {
+      "q": {
+        "en": "How do you use a diet diary with a patient?",
+        "ru": "Как использовать дневник питания с пациентом?",
+        "uz": "Bemor bilan ovqatlanish kundaligidan qanday foydalaniladi?"
+      },
+      "plan": [
+        {
+          "en": "Record 3–4 days including a weekend day",
+          "ru": "Записать 3–4 дня, включая выходной",
+          "uz": "Dam olish kunini qo‘shib 3–4 kun yozish"
+        },
+        {
+          "en": "Mark sugars, count frequency and timing",
+          "ru": "Отметить сахара, посчитать частоту и время",
+          "uz": "Shakarlarni belgilash, soni va vaqtini sanash"
+        },
+        {
+          "en": "Agree one or two realistic changes",
+          "ru": "Согласовать одно-два реальных изменения",
+          "uz": "Bir-ikkita amalga oshadigan o‘zgarishni kelishish"
+        },
+        {
+          "en": "Review progress at the next visit",
+          "ru": "Проверить результат на следующем визите",
+          "uz": "Keyingi tashrifda natijani tekshirish"
+        }
+      ]
+    },
+    {
+      "q": {
+        "en": "How is caries risk assessed in practice?",
+        "ru": "Как оценивают риск кариеса на практике?",
+        "uz": "Amaliyotda karies xavfi qanday baholanadi?"
+      },
+      "plan": [
+        {
+          "en": "Disease indicators: past caries and active lesions",
+          "ru": "Индикаторы болезни: кариес в прошлом и активные поражения",
+          "uz": "Kasallik ko‘rsatkichlari: o‘tmishdagi karies va faol shikastlar"
+        },
+        {
+          "en": "Risk factors: plaque, sugars, saliva, social factors",
+          "ru": "Факторы риска: налёт, сахара, слюна, социальные факторы",
+          "uz": "Xavf omillari: karash, shakar, so‘lak, ijtimoiy omillar"
+        },
+        {
+          "en": "Protective factors: fluoride, sealants, regular care",
+          "ru": "Защитные факторы: фторид, герметики, регулярное наблюдение",
+          "uz": "Himoya omillari: ftor, germetiklar, muntazam nazorat"
+        },
+        {
+          "en": "Assign a risk level and match prevention and recall",
+          "ru": "Определить уровень риска и подобрать профилактику и интервал",
+          "uz": "Xavf darajasini aniqlab, profilaktika va oraliqni moslash"
+        }
+      ]
+    }
+  ],
+  "test": [
+    {
+      "q": {
+        "en": "WHO strongly recommends that free sugars make up less than:",
+        "ru": "ВОЗ настоятельно рекомендует, чтобы свободные сахара составляли менее:",
+        "uz": "JSST erkin shakarlar qanchadan kam bo‘lishini qat’iy tavsiya etadi:"
+      },
+      "options": [
+        {
+          "en": "25% of daily energy",
+          "ru": "25% суточной энергии",
+          "uz": "Kunlik energiyaning 25% i"
+        },
+        {
+          "en": "10% of daily energy",
+          "ru": "10% суточной энергии",
+          "uz": "Kunlik energiyaning 10% i"
+        },
+        {
+          "en": "1% of daily energy",
+          "ru": "1% суточной энергии",
+          "uz": "Kunlik energiyaning 1% i"
+        },
+        {
+          "en": "50% of daily energy",
+          "ru": "50% суточной энергии",
+          "uz": "Kunlik energiyaning 50% i"
+        }
+      ],
+      "correct": 1,
+      "explain": {
+        "en": "WHO's strong recommendation is below 10% of total energy, with a conditional target of below 5%.",
+        "ru": "Строгая рекомендация ВОЗ — менее 10% энергии, условная цель — менее 5%.",
+        "uz": "JSSTning qat’iy tavsiyasi umumiy energiyaning 10% dan kam, shartli maqsad esa 5% dan kam."
+      }
+    },
+    {
+      "q": {
+        "en": "Which of the following counts as a free sugar?",
+        "ru": "Что из перечисленного относится к свободным сахарам?",
+        "uz": "Quyidagilardan qaysi biri erkin shakar hisoblanadi?"
+      },
+      "options": [
+        {
+          "en": "Lactose in plain milk",
+          "ru": "Лактоза обычного молока",
+          "uz": "Oddiy sutdagi laktoza"
+        },
+        {
+          "en": "Sugar inside a whole apple",
+          "ru": "Сахар внутри цельного яблока",
+          "uz": "Butun olma ichidagi shakar"
+        },
+        {
+          "en": "Starch in boiled rice",
+          "ru": "Крахмал варёного риса",
+          "uz": "Qaynatilgan guruchdagi kraxmal"
+        },
+        {
+          "en": "Sugar in fruit juice",
+          "ru": "Сахар во фруктовом соке",
+          "uz": "Meva sharbatidagi shakar"
+        }
+      ],
+      "correct": 3,
+      "explain": {
+        "en": "Sugars in juices are released from the fruit cells and are classed as free sugars.",
+        "ru": "Сахара соков высвобождены из клеток плода и относятся к свободным сахарам.",
+        "uz": "Sharbatdagi shakarlar meva hujayralaridan ajralib chiqqan va erkin shakar hisoblanadi."
+      }
+    },
+    {
+      "q": {
+        "en": "Which dietary factor has the greatest influence on caries risk?",
+        "ru": "Какой фактор питания больше всего влияет на риск кариеса?",
+        "uz": "Karies xavfiga qaysi ovqatlanish omili eng ko‘p ta’sir qiladi?"
+      },
+      "options": [
+        {
+          "en": "Total protein intake",
+          "ru": "Общее потребление белка",
+          "uz": "Umumiy oqsil iste’moli"
+        },
+        {
+          "en": "Temperature of food",
+          "ru": "Температура пищи",
+          "uz": "Ovqat harorati"
+        },
+        {
+          "en": "Frequency of sugar intake",
+          "ru": "Частота приёма сахара",
+          "uz": "Shakar iste’moli chastotasi"
+        },
+        {
+          "en": "Amount of salt",
+          "ru": "Количество соли",
+          "uz": "Tuz miqdori"
+        }
+      ],
+      "correct": 2,
+      "explain": {
+        "en": "Each sugar intake starts a new acid attack, so frequent intake keeps enamel demineralising.",
+        "ru": "Каждый приём сахара начинает новую кислотную атаку, поэтому частые приёмы поддерживают деминерализацию.",
+        "uz": "Har bir shakar iste’moli yangi kislota hujumini boshlaydi, shuning uchun tez-tez iste’mol demineralizatsiyani davom ettiradi."
+      }
+    },
+    {
+      "q": {
+        "en": "The strongest single predictor of future caries is:",
+        "ru": "Самый сильный отдельный предиктор будущего кариеса:",
+        "uz": "Kelajakdagi kariesning eng kuchli yagona bashoratchisi:"
+      },
+      "options": [
+        {
+          "en": "Past caries experience",
+          "ru": "кариес в прошлом",
+          "uz": "O‘tmishdagi karies"
+        },
+        {
+          "en": "Tooth colour",
+          "ru": "цвет зубов",
+          "uz": "Tish rangi"
+        },
+        {
+          "en": "Height of the patient",
+          "ru": "рост пациента",
+          "uz": "Bemorning bo‘yi"
+        },
+        {
+          "en": "Blood group",
+          "ru": "группа крови",
+          "uz": "Qon guruhi"
+        }
+      ],
+      "correct": 0,
+      "explain": {
+        "en": "Previous caries reflects the combined effect of all risk factors over time.",
+        "ru": "Прошлый кариес отражает суммарное действие всех факторов риска во времени.",
+        "uz": "O‘tmishdagi karies barcha xavf omillarining vaqt davomidagi umumiy ta’sirini aks ettiradi."
+      }
+    },
+    {
+      "q": {
+        "en": "How long should a diet diary usually be kept?",
+        "ru": "Сколько обычно ведут дневник питания?",
+        "uz": "Ovqatlanish kundaligi odatda qancha muddat yuritiladi?"
+      },
+      "options": [
+        {
+          "en": "One morning only",
+          "ru": "Только одно утро",
+          "uz": "Faqat bitta ertalab"
+        },
+        {
+          "en": "3–4 days including a weekend day",
+          "ru": "3–4 дня, включая выходной",
+          "uz": "Dam olish kunini qo‘shib 3–4 kun"
+        },
+        {
+          "en": "One full month",
+          "ru": "Целый месяц",
+          "uz": "Butun bir oy"
+        },
+        {
+          "en": "Only on school days",
+          "ru": "Только в учебные дни",
+          "uz": "Faqat o‘qish kunlari"
+        }
+      ],
+      "correct": 1,
+      "explain": {
+        "en": "Several days including a weekend show typical habits, because diet often differs at weekends.",
+        "ru": "Несколько дней с выходным показывают типичные привычки, так как питание в выходные часто иное.",
+        "uz": "Dam olish kunini o‘z ichiga olgan bir necha kun odatiy odatlarni ko‘rsatadi, chunki dam olish kunlari ovqatlanish ko‘pincha boshqacha."
+      }
+    },
+    {
+      "q": {
+        "en": "A 2-year-old falls asleep each night with a bottle of sweetened tea. What is the best advice?",
+        "ru": "Ребёнок 2 лет каждый вечер засыпает с бутылочкой сладкого чая. Какой совет лучший?",
+        "uz": "2 yoshli bola har kecha shirin choyli shisha bilan uxlab qoladi. Eng to‘g‘ri maslahat qaysi?"
+      },
+      "options": [
+        {
+          "en": "Only water in the bottle at night",
+          "ru": "Ночью в бутылочке только вода",
+          "uz": "Kechasi shishada faqat suv"
+        },
+        {
+          "en": "Switch to fruit juice",
+          "ru": "Перейти на фруктовый сок",
+          "uz": "Meva sharbatiga o‘tish"
+        },
+        {
+          "en": "Add honey instead of sugar",
+          "ru": "Добавлять мёд вместо сахара",
+          "uz": "Shakar o‘rniga asal qo‘shish"
+        },
+        {
+          "en": "Brush once a week",
+          "ru": "Чистить зубы раз в неделю",
+          "uz": "Haftada bir marta tish tozalash"
+        }
+      ],
+      "correct": 0,
+      "explain": {
+        "en": "Saliva flow falls during sleep, so sweet drinks at night cause rapid caries; only water should be given.",
+        "ru": "Во сне слюноотделение снижается, поэтому сладкие напитки ночью вызывают быстрый кариес; давать только воду.",
+        "uz": "Uyquda so‘lak kamayadi, shuning uchun kechasi shirin ichimliklar tez karies chaqiradi; faqat suv berish kerak."
+      }
+    },
+    {
+      "q": {
+        "en": "Xylitol is best described as:",
+        "ru": "Ксилит лучше всего описать как:",
+        "uz": "Ksilitga eng to‘g‘ri ta’rif:"
+      },
+      "options": [
+        {
+          "en": "A highly cariogenic sugar",
+          "ru": "высококариесогенный сахар",
+          "uz": "Kuchli kariesogen shakar"
+        },
+        {
+          "en": "A type of fluoride",
+          "ru": "разновидность фторида",
+          "uz": "Ftorning bir turi"
+        },
+        {
+          "en": "A non-cariogenic sugar alcohol",
+          "ru": "некариесогенный сахарный спирт",
+          "uz": "Kariesogen bo‘lmagan shakar spirti"
+        },
+        {
+          "en": "An abrasive in toothpaste",
+          "ru": "абразив зубной пасты",
+          "uz": "Tish pastasidagi abraziv"
+        }
+      ],
+      "correct": 2,
+      "explain": {
+        "en": "Plaque bacteria cannot ferment xylitol to acid, so it does not cause caries.",
+        "ru": "Бактерии налёта не сбраживают ксилит до кислоты, поэтому он не вызывает кариес.",
+        "uz": "Karash bakteriyalari ksilitni kislotagacha bijg‘ita olmaydi, shuning uchun u karies chaqirmaydi."
+      }
+    },
+    {
+      "q": {
+        "en": "A patient starts a medicine that causes dry mouth. Why does caries risk rise?",
+        "ru": "Пациент начал принимать лекарство, вызывающее сухость во рту. Почему растёт риск кариеса?",
+        "uz": "Bemor og‘iz qurishiga sabab bo‘ladigan dori qabul qila boshladi. Nima uchun karies xavfi oshadi?"
+      },
+      "options": [
+        {
+          "en": "Saliva contains sugar",
+          "ru": "Слюна содержит сахар",
+          "uz": "So‘lakda shakar bor"
+        },
+        {
+          "en": "Enamel becomes thicker",
+          "ru": "Эмаль становится толще",
+          "uz": "Emal qalinlashadi"
+        },
+        {
+          "en": "Less clearance, buffering and remineralisation",
+          "ru": "Меньше очищения, буферности и реминерализации",
+          "uz": "Tozalash, neytrallash va reminerallashish kamayadi"
+        },
+        {
+          "en": "Fluoride is absorbed faster",
+          "ru": "Фторид быстрее всасывается",
+          "uz": "Ftor tezroq so‘riladi"
+        }
+      ],
+      "correct": 2,
+      "explain": {
+        "en": "Saliva clears sugars, neutralises acids and supplies minerals; less saliva weakens all three defences.",
+        "ru": "Слюна удаляет сахара, нейтрализует кислоты и поставляет минералы; её снижение ослабляет все три защиты.",
+        "uz": "So‘lak shakarni tozalaydi, kislotani neytrallaydi va mineral yetkazadi; uning kamayishi uchala himoyani zaiflashtiradi."
+      }
+    },
+    {
+      "q": {
+        "en": "A student eats sweets between lectures five times a day. Which advice is most effective?",
+        "ru": "Студент ест сладости между лекциями пять раз в день. Какой совет наиболее эффективен?",
+        "uz": "Talaba ma’ruzalar orasida kuniga besh marta shirinlik yeydi. Eng samarali maslahat qaysi?"
+      },
+      "options": [
+        {
+          "en": "Eat the same sweets, but rinse with juice",
+          "ru": "Есть те же сладости, но запивать соком",
+          "uz": "Xuddi shu shirinliklarni yeb, sharbat ichish"
+        },
+        {
+          "en": "Brush straight after each sweet",
+          "ru": "Чистить зубы сразу после каждой сладости",
+          "uz": "Har bir shirinlikdan keyin darhol tish tozalash"
+        },
+        {
+          "en": "Switch to honey snacks",
+          "ru": "Перейти на перекусы с мёдом",
+          "uz": "Asalli gazaklarga o‘tish"
+        },
+        {
+          "en": "Keep sweets to mealtimes and snack on safer foods",
+          "ru": "Есть сладкое только с едой, перекусывать безопасными продуктами",
+          "uz": "Shirinlikni faqat ovqat bilan, gazakka xavfsizroq ovqatlar"
+        }
+      ],
+      "correct": 3,
+      "explain": {
+        "en": "Cutting the number of sugar intakes reduces the number of acid attacks.",
+        "ru": "Сокращение числа приёмов сахара уменьшает число кислотных атак.",
+        "uz": "Shakar iste’moli sonini kamaytirish kislota hujumlari sonini kamaytiradi."
+      }
+    },
+    {
+      "q": {
+        "en": "Which food eaten at the end of a meal is considered protective against caries?",
+        "ru": "Какой продукт в конце еды считается защитным против кариеса?",
+        "uz": "Ovqat oxirida yeyiladigan qaysi mahsulot kariesdan himoya qiluvchi hisoblanadi?"
+      },
+      "options": [
+        {
+          "en": "Cheese",
+          "ru": "Сыр",
+          "uz": "Pishloq"
+        },
+        {
+          "en": "Toffee",
+          "ru": "Ириска",
+          "uz": "Iris konfet"
+        },
+        {
+          "en": "Sweet biscuit",
+          "ru": "Сладкое печенье",
+          "uz": "Shirin pechenye"
+        },
+        {
+          "en": "Fruit syrup",
+          "ru": "Фруктовый сироп",
+          "uz": "Meva siropi"
+        }
+      ],
+      "correct": 0,
+      "explain": {
+        "en": "Cheese raises plaque pH, stimulates saliva and supplies calcium and phosphate.",
+        "ru": "Сыр повышает pH налёта, стимулирует слюноотделение и поставляет кальций и фосфат.",
+        "uz": "Pishloq karash pH ini oshiradi, so‘lak ajralishini rag‘batlantiradi va kalsiy hamda fosfat beradi."
+      }
+    }
+  ]
+}

@@ -27,7 +27,7 @@ const T={
   },
   cap:{molarSec:'Molyar, vertikal kesim (okklyuzion fissura)',incSec:'Kesuvchi tish, lab–til yo‘nalishidagi kesim',ant:'Yuqori old tishlar, lab (vestibulyar) yuzasi',post:'Yuqori chaynov tishlari, lunj yuzasi',occ:'Pastki molyar, chaynov (okklyuzion) yuzasi'},
   lg:{e:'Emal',d:'Dentin',p:'Pulpa',c:'Karies'},
-  title:'Tishning sxematik tasviri'
+  title:'Tishning sxematik tasviri',sides:['Lab','Til'] as [string,string]
  },
  ru:{
   qDepth:'До какой глубины распространился кариес?',
@@ -50,7 +50,7 @@ const T={
   },
   cap:{molarSec:'Моляр, вертикальный срез (окклюзионная фиссура)',incSec:'Резец, вестибуло-оральный срез',ant:'Верхние фронтальные зубы, вестибулярная поверхность',post:'Верхние жевательные зубы, щёчная поверхность',occ:'Нижний моляр, жевательная (окклюзионная) поверхность'},
   lg:{e:'Эмаль',d:'Дентин',p:'Пульпа',c:'Кариес'},
-  title:'Схематичное изображение зуба'
+  title:'Схематичное изображение зуба',sides:['Губа','Язык'] as [string,string]
  },
  en:{
   qDepth:'How deep has this carious lesion progressed?',
@@ -73,7 +73,7 @@ const T={
   },
   cap:{molarSec:'Molar, vertical section (occlusal fissure)',incSec:'Incisor, labio-lingual section',ant:'Upper anterior teeth, labial surface',post:'Upper posterior teeth, buccal surface',occ:'Lower molar, occlusal surface'},
   lg:{e:'Enamel',d:'Dentin',p:'Pulp',c:'Caries'},
-  title:'Schematic tooth drawing'
+  title:'Schematic tooth drawing',sides:['Labial','Lingual'] as [string,string]
  }
 };
 
@@ -130,7 +130,7 @@ function MolarSection({depth,title}:{depth:Depth;title:string}){
  </svg>;
 }
 
-function IncisorSection({depth,title}:{depth:Depth;title:string}){
+function IncisorSection({depth,title,sides}:{depth:Depth;title:string;sides:[string,string]}){
  const id=useId().replace(/:/g,'');
  const tt=(y:number)=>Math.min(1,Math.max(0,(y-22)/128));
  const oL=(y:number)=>146-48*Math.sin(tt(y)*Math.PI/2);
@@ -161,7 +161,8 @@ function IncisorSection({depth,title}:{depth:Depth;title:string}){
    <path d={lesion(prof,map)} fill={COL.core}/>
   </g>
   {depth==='pulp'&&<circle cx={sx+uP+3} cy={yL} r={4} fill="#b5262b" stroke="#fff" strokeWidth={1}/>}
-  <text x={70} y={40} className="pr-svg-note">{'←'}</text>
+  <text x={40} y={120} textAnchor="middle" className="pr-svg-note">{sides[0]}</text>
+  <text x={262} y={120} textAnchor="middle" className="pr-svg-note">{sides[1]}</text>
  </svg>;
 }
 
@@ -263,8 +264,6 @@ function OcclusalMolar({title}:{title:string}){
   <path d={fiss} fill="none" stroke="#8a5a2c" strokeWidth={1.4} strokeLinecap="round" opacity={0.55}/>
   <ellipse cx={lesionAt[0]} cy={lesionAt[1]} rx={13} ry={10} fill="#d7b07c" opacity={0.8}/>
   <ellipse cx={lesionAt[0]} cy={lesionAt[1]} rx={7} ry={5.5} fill={COL.core}/>
-  <text x={cx} y={cy-h/2-8} textAnchor="middle" className="pr-svg-note">B</text>
-  <text x={cx} y={cy+h/2+18} textAnchor="middle" className="pr-svg-note">L</text>
  </svg>;
 }
 
@@ -282,7 +281,7 @@ export default function Caries({lang,locked,onAnswer}:SimProps){
  const [picked,setPicked]=useState<string|null>(null);
  const answer=(id:string)=>{if(locked)return;setPicked(id);onAnswer(id===c.correct,c.type==='depth'?t.de[c.depth]:t.ce[c.cc.cls])};
  let fig:ReactNode,cap:string;
- if(c.type==='depth'){fig=c.tooth==='molar'?<MolarSection depth={c.depth} title={t.title}/>:<IncisorSection depth={c.depth} title={t.title}/>;cap=c.tooth==='molar'?t.cap.molarSec:t.cap.incSec}
+ if(c.type==='depth'){fig=c.tooth==='molar'?<MolarSection depth={c.depth} title={t.title}/>:<IncisorSection depth={c.depth} title={t.title} sides={t.sides}/>;cap=c.tooth==='molar'?t.cap.molarSec:t.cap.incSec}
  else{fig=c.cc.view==='occ'?<OcclusalMolar title={t.title}/>:<SurfaceView c={c.cc} title={t.title}/>;cap=t.cap[c.cc.view]}
  return <div className="pr-case">
   <p className="pr-q">{c.type==='depth'?t.qDepth:t.qClass}</p>
