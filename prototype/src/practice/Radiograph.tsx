@@ -144,7 +144,7 @@ function buildScene():Scene{
   m3.cx=m2.cx+m2.w/2+m3.w*0.5+2;m3.Y=m2.Y+30+m3.ch/2;
   teeth.push(m3);s.impact={i:n,rot};
  }
- if(finding==='boneloss')s.crestOff=rnd(0.36,0.46)*teeth[0].rl;
+ if(finding==='boneloss')s.crestOff=rnd(0.48,0.56)*teeth[0].rl;
  if(finding==='calc'){const i=rint(0,n-1);s.calc=[{i,side:pick([-1,1])}];if(Math.random()<0.5){const j=other([i]);s.calc.push({i:j,side:pick([-1,1])})};s.crestOff=rnd(9,12)}
  // unrelated noise: a sound occlusal filling elsewhere
  const busy=[s.prox?.i,s.second?.i,s.pa?.i,s.rct?.i,s.implant?.i,s.impact?.i].filter((v):v is number=>v!==undefined);
@@ -204,7 +204,7 @@ function Xray({s,title}:{s:Scene;title:string}){
     const p:Pt[]=[[sd*w*0.14,yy-ch*0.58],[sd*w*0.24,yy-ch*0.3],[sd*(w*0.5-3),yy-ch*0.2],[sd*(w*0.5-4),yy-ch*0.1],[sd*w*0.2,yy-ch*0.14],[sd*w*0.06,yy-ch*0.44]];
     return <path d={smoothClosed(p.map(([x,y])=>[cx+x,y]))} fill="#1c2226" opacity={0.93} filter={`url(#${id}soft2)`}/>})()}
    {s.prox?.i===i&&(()=>{const {cx,w,ch,Y:yy}=t,sd=s.prox.side,sx=cx+sd*(w/2-1.6),cy=yy-ch*0.6;
-    const p:Pt[]=[[sx+sd*1.5,cy-7],[sx-sd*7,cy-2],[sx-sd*13.5,cy+1.5],[sx-sd*6.5,cy+4.5],[sx+sd*1.5,cy+8]];
+    const p:Pt[]=[[sx+sd*0.6,cy-8.5],[sx-sd*8,cy-4],[sx-sd*17,cy+1],[sx-sd*8.5,cy+5.5],[sx+sd*0.6,cy+9.5]];
     return <path d={smoothClosed(p)} fill="#1a2024" opacity={0.95} filter={`url(#${id}soft2)`}/>})()}
    {s.calc?.filter(c=>c.i===i).map((c,k)=>{const sx=t.cx+c.side*(t.cw/2-0.4),y0=t.Y+1.5;
     return <path key={k} d={`M${r1(sx)} ${r1(y0)}L${r1(sx+c.side*5)} ${r1(y0+3.5)}L${r1(sx+c.side*2.2)} ${r1(y0+5)}L${r1(sx+c.side*4.4)} ${r1(y0+7.5)}L${r1(sx)} ${r1(y0+10)}Z`} fill="#eef3f5"/>})}

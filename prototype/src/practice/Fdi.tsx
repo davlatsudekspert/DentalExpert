@@ -111,7 +111,7 @@ export default function Fdi({lang,mode,locked,onAnswer}:SimProps){
     {shown.map(n=>{const tt=layout.teeth.find(x=>x.num===n)!;
      // label just inside the arch (towards the palate / tongue)
      const cx=layout.w/2,cy=tt.upper?layout.upperCenter-40:layout.lowerCenter+40;
-     const dx=cx-tt.x,dy=cy-tt.y,dl=Math.hypot(dx,dy)||1,off=Math.max(tt.d,tt.w)*0.5+15;
+     const dx=cx-tt.x,dy=cy-tt.y,dl=Math.hypot(dx,dy)||1,off=Math.max(tt.d,tt.w)*0.5+(n===c.target?16:46);
      const lx=tt.x+dx/dl*off,ly=tt.y+dy/dl*off;
      const ok=n===c.target;
      return <g key={'l'+n} className="pr-pop">

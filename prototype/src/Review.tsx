@@ -24,7 +24,7 @@ const dict={
   today:'Bugungi reja',todayOf:(a:number,b:number)=>`${a} / ${b} karta`,subjects:'Fanlar',all:'Hammasini tanlash',none:'Tozalash',
   cards:(n:number)=>`${n} ta karta`,dueBadge:(n:number)=>`${n} ta navbatda`,newBadge:(n:number)=>`${n} yangi`,decks:'Mini-darslar testlari',
   start:(n:number)=>`Boshlash · ${n} ta karta`,pick:'Kamida bitta fanni tanlang',loading:'Kartalar tayyorlanmoqda…',
-  schedule:'Jadval: 1 → 3 → 7 → 14 → 30 kun. Kuniga ko‘pi bilan 20 ta yangi karta.',
+  limit:'Kuniga ko‘pi bilan 20 ta yangi karta',schedule:'Jadval: 1 → 3 → 7 → 14 → 30 kun. Kuniga ko‘pi bilan 20 ta yangi karta.',
   show:'Javobni ko‘rsatish',tap:'Kartani aylantirish uchun bosing',plan:'Javob rejasi',correct:'To‘g‘ri javob',why:'Izoh',oral:'Og‘zaki savol',quiz:'Test savoli',
   again:'Bilmadim',hard:'Qiyin',easy:'Oson',soon:'shu seansda',after:(n:number)=>`${n} kundan so‘ng`,grade:'O‘zingizni baholang',
   left:(n:number)=>`${n} ta qoldi`,back:'Orqaga',stop:'Seansni tugatish',
@@ -35,7 +35,7 @@ const dict={
   today:'План на сегодня',todayOf:(a:number,b:number)=>`${a} / ${b} карточек`,subjects:'Предметы',all:'Выбрать все',none:'Сбросить',
   cards:(n:number)=>`${n} карт.`,dueBadge:(n:number)=>`${n} к повторению`,newBadge:(n:number)=>`${n} новых`,decks:'Тесты мини-уроков',
   start:(n:number)=>`Начать · ${n} карт.`,pick:'Выберите хотя бы один предмет',loading:'Готовим карточки…',
-  schedule:'Интервалы: 1 → 3 → 7 → 14 → 30 дней. Не больше 20 новых карточек в день.',
+  limit:'Не больше 20 новых карточек в день',schedule:'Интервалы: 1 → 3 → 7 → 14 → 30 дней. Не больше 20 новых карточек в день.',
   show:'Показать ответ',tap:'Нажмите, чтобы перевернуть',plan:'План ответа',correct:'Правильный ответ',why:'Пояснение',oral:'Устный вопрос',quiz:'Тестовый вопрос',
   again:'Не знаю',hard:'Трудно',easy:'Легко',soon:'в этой сессии',after:(n:number)=>`через ${n} дн.`,grade:'Оцените себя',
   left:(n:number)=>`осталось ${n}`,back:'Назад',stop:'Завершить сессию',
@@ -46,7 +46,7 @@ const dict={
   today:'Today’s plan',todayOf:(a:number,b:number)=>`${a} / ${b} cards`,subjects:'Subjects',all:'Select all',none:'Clear',
   cards:(n:number)=>`${n} cards`,dueBadge:(n:number)=>`${n} due`,newBadge:(n:number)=>`${n} new`,decks:'Mini-lesson quizzes',
   start:(n:number)=>`Start · ${n} cards`,pick:'Pick at least one subject',loading:'Preparing cards…',
-  schedule:'Schedule: 1 → 3 → 7 → 14 → 30 days. At most 20 new cards a day.',
+  limit:'Up to 20 new cards a day',schedule:'Schedule: 1 → 3 → 7 → 14 → 30 days. At most 20 new cards a day.',
   show:'Show answer',tap:'Tap the card to flip it',plan:'Answer plan',correct:'Correct answer',why:'Explanation',oral:'Oral question',quiz:'Quiz question',
   again:'Again',hard:'Hard',easy:'Easy',soon:'this session',after:(n:number)=>`in ${n} d`,grade:'Grade yourself',
   left:(n:number)=>`${n} left`,back:'Back',stop:'End session',
@@ -224,18 +224,19 @@ export default function Review({lang}:{lang:'uz'|'ru'|'en'}){
   <header className="rv-head"><h2>{t.title}</h2><p>{t.sub}</p></header>
   {!ready?<div className="rv-loading" role="status"><span className="rv-spin"/>{t.loading}</div>:<>
    <section className="rv-hero">
-    <Ring value={planned+doneToday?doneToday/(planned+doneToday):1}>
+    <Ring value={planned+doneToday?doneToday/(planned+doneToday):1} size={96} stroke={9}>
      <b>{doneToday}</b><small>/ {planned+doneToday}</small>
     </Ring>
     <div className="rv-hero-text">
      <span className="rv-eyebrow">{t.today}</span>
      <strong>{t.todayOf(doneToday,planned+doneToday)}</strong>
+     <small className="rv-hero-sub">{t.limit}</small>
+    </div>
      <div className="rv-stats">
       <div><RotateCcw size={16}/><b>{dueCount}</b><span>{t.due}</span></div>
       <div><Layers size={16}/><b>{freshToday}</b><span>{t.fresh}</span></div>
       <div className="rv-flame"><Flame size={16}/><b>{t.days(streak)}</b><span>{t.streak}</span></div>
      </div>
-    </div>
    </section>
 
    {planned>0&&active.length>0?<button className="rv-primary rv-start" onClick={start}>{t.start(planned)}<ChevronRight size={18}/></button>

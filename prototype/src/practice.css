@@ -7,6 +7,7 @@
  min-width:0;overflow-wrap:anywhere;
 }
 .pr *{box-sizing:border-box}
+:where(.pr) button{border:0;background:none;padding:0;margin:0}
 .pr button{font:inherit;color:inherit;cursor:pointer;-webkit-tap-highlight-color:transparent}
 .pr button:disabled{cursor:default}
 .pr button:focus-visible,.pr input:focus-visible{outline:3px solid #23aaa3;outline-offset:2px}

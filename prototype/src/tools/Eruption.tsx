@@ -178,13 +178,14 @@ function ArchSvg({dent,sel,onSel,lang}:{dent:Dent;sel:Sel;onSel:(s:Sel)=>void;la
  </svg>;
 }
 
-function Timeline({dent,row,lang,max}:{dent:Dent;row:Row;lang:Lang;max:number}){
+function Timeline({row,max}:{row:Row;max:number}){
  const pct=(v:number)=>`${Math.min(100,v/max*100)}%`;
- const bar=(r:Range,cls:string)=><span className={'tl-tbar '+cls} style={{left:pct(r[0]),width:r[0]===r[1]?undefined:`calc(${pct(r[1]-r[0])})`}}/>;
- void lang;void dent;
- return <div className="tl-track">
+ const bar=(r:Range,cls:string)=>r[0]===r[1]
+  ?<span className={'tl-tbar tl-tbar-dot '+cls} style={{left:pct(r[0])}}/>
+  :<span className={'tl-tbar '+cls} style={{left:pct(r[0]),width:pct(r[1]-r[0])}}/>;
+ return <div className="tl-track" aria-hidden="true">
   {bar(row.erupt,'tl-tbar-erupt')}
-  {bar(row.root,row.root[0]===row.root[1]?'tl-tbar-root tl-tbar-dot':'tl-tbar-root')}
+  {bar(row.root,'tl-tbar-root')}
   {row.shed&&bar(row.shed,'tl-tbar-shed')}
  </div>;
 }
@@ -248,7 +249,7 @@ export default function Eruption({lang}:ToolProps){
      return <button key={n} type="button" className={'tl-chart-row'+(on?' tl-chart-on':'')} aria-pressed={on} onClick={()=>setSel({dent,q:cur.q,n})}
        aria-label={`${cur.q+off}${n} ${NAMES[dent][i][lang]}: ${t.erupt} ${eruptText(dent,r.erupt,lang)}, ${t.root} ${years(r.root,lang)}`}>
       <span className="tl-chart-num">{cur.q+off}{n}</span>
-      <Timeline dent={dent} row={r} lang={lang} max={max}/>
+      <Timeline row={r} max={max}/>
      </button>;
     })}
     <p className="tl-axis-unit">{t.axis}</p>
