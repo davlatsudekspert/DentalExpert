@@ -16,6 +16,7 @@ Tibbiy va bemorni tanitadigan ma’lumotlar uchun rolga asoslangan kirish, saqla
 4. **Forum va foydalanuvchi kontenti:** yozishdan oldin qoidalar ko‘rinsin. Post/izohni shikoyat qilish, boshqa foydalanuvchini bloklash, moderator ko‘rigi, o‘chirish va takroriy buzilishdagi cheklovlar serverda haqiqatan ishlasin. Bemorni tanitadigan surat va matnni joylashga qarshi nazorat bo‘lsin. Faqat frontenddagi so‘z filtri yetarli emas.
 5. **Tibbiy mazmun:** 3D atlas, test va Case Studio ta’lim vositasi sifatida aniq belgilansin; tashxis yoki davolashni avtomatik va kafolatli deb va’da qilmang. Klinik da’volar manbali va mutaxassis tekshirgan bo‘lsin. Agar mahsulot klinik qaror yoki tibbiy qurilma funksiyasiga o‘tsa, tegishli regulyator talablari alohida tekshirilsin.
 6. **Yosh va xabarnoma:** maqsadli auditoriya va yosh reytingi haqiqiy mazmunga mos bo‘lsin. Push bildirishnomalari ruxsat va foydalanuvchi tanloviga bo‘ysunsin; reklama va xizmat xabarlari farqlansin.
+7. **Homiylik joylari:** pul to‘langan shifokor kartasi aniq “Reklama” deb belgilanadi; uni klinik tavsiya yoki yuqori reyting sifatida ko‘rsatib bo‘lmaydi. Hudud bo‘yicha moslash uchun qo‘lda tanlangan shahar yetadi; yashirin GPS kuzatuvi ishlatilmaydi. Reklama ko‘rish/bosish analitikasi yoki reklama SDK’si qo‘shilsa ma’lumotlar xaritasi, App Privacy/Data safety javoblari va kerak bo‘lsa tracking roziligi yangilansin.
 
 ## Apple App Store topshiruvi
 

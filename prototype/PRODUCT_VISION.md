@@ -37,6 +37,12 @@ Profil rasmi foydalanuvchi tomonidan yuklanadi: mutaxassis o‘z fotosuratini, k
 
 Boshlang‘ich demoda beshta **namunaviy, to‘liq tasvirlangan** stomatolog profili bo‘lsin. Turli mamlakat, shahar, ixtisos va ish tillari orqali qidiruvni ko‘rsatadi. Profilning izohli matnlari UZ/RU/EN interfeysiga moslashadi; odam ismi va joy nomi o‘zgarmaydi. “100% to‘liq” degani bemorga qaror qilish uchun kerakli ma’lumotlar borligini anglatadi; ixtiyoriy ijtimoiy tarmoq maydonini sun’iy ma’lumot bilan to‘ldirish shart emas. Barcha demo profillar aniq belgilansin, haqiqiy reyting, litsenziya yoki aloqa ekanini da’vo qilmasin.
 
+## Asosiy sahifadagi homiylik joylari
+
+Bemorning Asosiy sahifasida tanlangan mamlakat/shahar bo‘yicha **3 ta homiylik kartasi** bo‘lsin. Telefon ekranida ular gorizontal suriladigan premium blokda ko‘rinsin; mos va tasdiqlangan reklama beruvchi yetarli bo‘lsa 4-karta ham qo‘shilishi mumkin. Har bir kartada ko‘zga ko‘rinadigan “Reklama” / “Реклама” / “Sponsored” belgisi, shifokor fotosurati, ixtisosi, klinika/shahar va profilga o‘tish amali bo‘lsin. Reklamadan keyin oddiy qidiruv va tavsiya natijalari ko‘rinsin; to‘lov reyting, klinik malaka yoki “tasdiqlangan” belgisini sotib olmaydi.
+
+Joylashtirish foydalanuvchi **qo‘lda tanlagan** lokatsiyaga ishlasin; aniq GPS faqat “Yaqinlar” amali uchun ruxsat bilan ishlatiladi. Mamlakat/shahar mos kelmasa reklama ko‘rsatilmasin, yaqin hudud yoki umumiy reklama faqat foydalanuvchiga tushunarli qoida bilan tanlansin. Reklama beruvchi real shifokor/profil, faol klinika va tekshirilgan kasbiy huquqqa ega bo‘lsin. Teng sharoitdagi homiylar navbatma-navbat chiqsin; bir odamga qayta-qayta bitta reklama ko‘rsatishni cheklash mumkin. Narx, muddat, hudud, ko‘rish/bosish hisobi va bekor qilish qayd etilsin, lekin to‘lov hamda hisobot **serverda** tekshirilsin. Dastlabki prototipda faqat “Namuna reklama” kartasi bo‘lishi mumkin; haqiqiy to‘lov yoki homiylik bor deb ko‘rsatma.
+
 ## Hamjamiyat va tarjima
 
 - Forum/hamjamiyatda mavzu, post, izoh, javob, qidiruv, mutaxassislik bo‘yicha bo‘limlar, shikoyat qilish va moderatsiya bo‘lsin. Bemor savollari, stomatologlar professional munozarasi va yopiq o‘quv guruhlari huquq bilan ajratilsin.
