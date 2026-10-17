@@ -18,6 +18,7 @@ jobs:
       ISSUER_ID: ${{ secrets.ASC_ISSUER_ID }}
     steps:
       - name: Check required secrets
+        working-directory: .
         run: |
           for v in TEAM_ID KEY_ID ISSUER_ID; do
             if [ -z "${!v}" ]; then echo "::error::Missing secret for $v (APPLE_TEAM_ID, ASC_KEY_ID, ASC_ISSUER_ID, ASC_KEY_P8)"; exit 1; fi
