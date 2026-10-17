@@ -80,19 +80,19 @@
   {
    "q": "Karies qaysi jarayonga asoslanadi?",
    "options": [
-    "Tishning kislotalar ta’sirida mineralsizlanishi",
+    "Faqat tishning rangi o‘zgarishi",
     "Tishning yangi hujayra bilan to‘lishi",
-    "Faqat tishning rangi o‘zgarishi"
+    "Tishning kislotalar ta’sirida mineralsizlanishi"
    ],
-   "correct": 0,
+   "correct": 2,
    "explanation": "Karies — mineralsizlanish jarayoni."
   },
   {
    "q": "Qaysi omil kariesga ta’sir qiladi?",
    "options": [
     "Biofilm va uglevodlar",
-    "Faqat tish shakli",
-    "Faqat yosh"
+    "Faqat yosh",
+    "Faqat tish shakli"
    ],
    "correct": 0,
    "explanation": "Biofilm va tez fermentlanadigan uglevodlar asosiy omillardan."
@@ -100,31 +100,31 @@
   {
    "q": "Nega fissuralarni tozalash qiyin?",
    "options": [
-    "Ular tor va chuqur bo‘lishi mumkin",
+    "Ular pulpada joylashgan",
     "Ular juda katta",
-    "Ular pulpada joylashgan"
+    "Ular tor va chuqur bo‘lishi mumkin"
    ],
-   "correct": 0,
+   "correct": 2,
    "explanation": "Tor egatchalarga cho‘tka tukchalari yetib bormasligi mumkin."
   },
   {
    "q": "Karies davolash qarorini kim qabul qiladi?",
    "options": [
-    "Stomatolog",
     "Do‘st maslahati",
-    "Internetdagi video"
+    "Internetdagi video",
+    "Stomatolog"
    ],
-   "correct": 0,
+   "correct": 2,
    "explanation": "Tashxis va davolash stomatolog ko‘rigidan keyin belgilanadi."
   },
   {
    "q": "Profilaktikaga nima kiradi?",
    "options": [
-    "Ftorli pasta bilan muntazam tozalash",
+    "Faqat shirinlik",
     "Tish tozalamaslik",
-    "Faqat shirinlik"
+    "Ftorli pasta bilan muntazam tozalash"
    ],
-   "correct": 0,
+   "correct": 2,
    "explanation": "Muntazam gigiyena karies xavfini kamaytiradi."
   }
  ],

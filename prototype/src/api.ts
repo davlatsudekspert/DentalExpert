@@ -49,7 +49,7 @@ export async function fetchDoctors(cityId:string,signal?:AbortSignal):Promise<Ap
  }catch{return null}
 }
 
-export type AuthUser={id:string;email:string;name:string|null;role:'patient'|'dentist'|'teacher'|'student';countryCode:string|null;cityId:string|null;phone?:string|null;workplace?:string|null;bio?:string|null};
+export type AuthUser={id:string;email:string;name:string|null;role:'patient'|'dentist'|'teacher'|'student';countryCode:string|null;cityId:string|null;phone?:string|null;workplace?:string|null;bio?:string|null;isAdmin?:boolean};
 export type AuthState={enabled:boolean;user:AuthUser|null};
 
 async function post<T>(path:string,body:unknown,method:'POST'|'PUT'|'DELETE'='POST'):Promise<{ok:boolean;status:number;data:T&{error?:string;retryAfterSec?:number;attemptsLeft?:number}}>{
@@ -70,6 +70,9 @@ export async function fetchAuth():Promise<AuthState>{
 }
 export const requestCode=(b:{email:string;name?:string;role?:string;countryCode?:string;cityId?:string;lang:string})=>post<{ok?:boolean}>('/api/auth/request-code',b);
 export const verifyCode=async(email:string,code:string)=>{const r=await post<{user?:AuthUser;token?:string}>('/api/auth/verify',{email,code});if(r.ok&&r.data.token)setToken(r.data.token);return r};
+export type OAuthProfile={name?:string;role?:string;countryCode?:string;cityId?:string};
+/** Exchanges a Google/Apple ID token for a session; same response as verifyCode (token on native, cookie on web). The nonce is the raw value whose SHA-256 hex was given to the provider. */
+export const oauthSignIn=async(provider:'google'|'apple',idToken:string,nonce:string|undefined,profile:OAuthProfile={})=>{const r=await post<{user?:AuthUser;token?:string}>('/api/auth/oauth',{provider,idToken,nonce,...profile});if(r.ok&&r.data.token)setToken(r.data.token);return r};
 export const logout=async()=>{const r=await post<{ok?:boolean}>('/api/auth/logout',{});setToken(null);return r};
 export const deleteAccount=async()=>{const r=await post<{ok?:boolean}>('/api/auth/account',null,'DELETE');if(r.ok)setToken(null);return r};
 

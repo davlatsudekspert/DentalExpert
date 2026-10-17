@@ -24,7 +24,7 @@ function streakOf(days:Record<string,Day>,today:string){
 }
 
 const plateUrl=(p:string)=>`/atlas3d/${p}.webp`;
-const PlateMedia=({plates}:{plates:string[]})=><div className="daily-plate" aria-hidden="true">{plates.map(p=><img key={p} src={plateUrl(p)} alt="" draggable={false}/>)}</div>;
+const PlateMedia=({plates}:{plates:string[]})=><div className="daily-plate" role="img" aria-label={({uz:'Tish qatlami rasmi',ru:'Изображение слоя зуба',en:'Image of a tooth layer'} as Record<string,string>)[document.documentElement.lang]||'Image'}>{plates.map(p=><img key={p} src={plateUrl(p)} alt="" draggable={false}/>)}</div>;
 
 export default function Daily({lang}:{lang:Lang}){
  const t=words[lang];

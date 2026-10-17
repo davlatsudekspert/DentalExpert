@@ -1,0 +1,10 @@
+appId: uz.dentalexpert.app
+name: Close the on-screen keyboard if it is open
+# WKWebView shows a "Done" bar above the software keyboard (simulator system language: English).
+# When the simulator uses the hardware keyboard there is no software keyboard and this does nothing.
+---
+- runFlow:
+    when:
+      visible: "Done"
+    commands:
+      - tapOn: "Done"

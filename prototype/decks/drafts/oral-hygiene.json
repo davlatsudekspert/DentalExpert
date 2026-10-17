@@ -67,8 +67,8 @@
    "q": "Tish yuzasida har kuni nima hosil bo‘ladi?",
    "options": [
     "Bakterial karash",
-    "Yangi emal",
-    "Dentin"
+    "Dentin",
+    "Yangi emal"
    ],
    "correct": 0,
    "explanation": "Bakterial karash muntazam tozalanishi kerak."
@@ -77,8 +77,8 @@
    "q": "Odatda necha marta tish tozalash tavsiya etiladi?",
    "options": [
     "Kuniga ikki marta",
-    "Haftada bir marta",
-    "Faqat kasal bo‘lganda"
+    "Faqat kasal bo‘lganda",
+    "Haftada bir marta"
    ],
    "correct": 0,
    "explanation": "Ftorli pasta bilan kuniga ikki marta."
@@ -86,11 +86,11 @@
   {
    "q": "Tishlar orasi qanday tozalanadi?",
    "options": [
-    "Tish ipi yoki tishlararo cho‘tka bilan",
     "Faqat chayish bilan",
+    "Tish ipi yoki tishlararo cho‘tka bilan",
     "Tozalash shart emas"
    ],
-   "correct": 0,
+   "correct": 1,
    "explanation": "Cho‘tka tishlar orasiga yetib bormaydi."
   },
   {
@@ -106,11 +106,11 @@
   {
    "q": "Profilaktik ko‘rikni kim belgilaydi?",
    "options": [
-    "Stomatolog tavsiyasi bo‘yicha",
     "Reklama",
+    "Stomatolog tavsiyasi bo‘yicha",
     "Tasodif"
    ],
-   "correct": 0,
+   "correct": 1,
    "explanation": "Muddat stomatolog tavsiyasiga qarab belgilanadi."
   }
  ],

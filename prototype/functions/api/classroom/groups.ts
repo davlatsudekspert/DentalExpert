@@ -28,12 +28,11 @@ export const onRequestPost:PagesFunction<Env>=async({request,env})=>{
  const b=await body(request);if('res' in b)return b.res;
  const name=clean(b.data.name,60);
  if(name.length<2)return json({error:'name_required'},400,noStore);
- const count=await env.DB.prepare(`SELECT COUNT(*) AS n FROM class_groups WHERE teacher_id=?`).bind(user.id).first<{n:number}>();
- if((count?.n||0)>=MAX_GROUPS)return json({error:'too_many_groups'},429,noStore);
- for(let i=0;i<5;i++){
+  for(let i=0;i<5;i++){
   const id=newId(),code=newCode();
   try{
-   await env.DB.prepare(`INSERT INTO class_groups (id,teacher_id,name,code) VALUES (?,?,?,?)`).bind(id,user.id,name,code).run();
+   const r=await env.DB.prepare(`INSERT INTO class_groups (id,teacher_id,name,code) SELECT ?,?,?,? WHERE (SELECT COUNT(*) FROM class_groups WHERE teacher_id=?)<?`).bind(id,user.id,name,code,user.id,MAX_GROUPS).run();
+   if(!r.meta.changes)return json({error:'too_many_groups'},429,noStore);
    return json({group:{id,name,code,members:0}},201,noStore);
   }catch{/* code collision, retry */}
  }

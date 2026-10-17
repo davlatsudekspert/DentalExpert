@@ -10,7 +10,7 @@ type Member={no:number;nickname:string|null;answer:string|null;score:number|null
 type Deck={id:string;title:string;quiz:{q:string;options:string[];correct:number;explanation:string}[]};
 
 const words={
- uz:{student:'Talaba',nick:'Taxallus (ixtiyoriy)',nickHint:'Ustoz sizni shu nom yoki raqam bilan ko‘radi',close:'Yopish',reopen:'Qayta ochish',closedLbl:'Yopilgan',errClosed:'Topshiriq yopilgan.',errDone:'Siz bu testni allaqachon topshirgansiz.',errRate:'Juda ko‘p urinish. Keyinroq qayta urinib ko‘ring.',errNick:'Taxallus 2–24 belgi: harf, raqam, bo‘sh joy.',title:'Guruhlar va topshiriqlar',signIn:'Guruhlar uchun email orqali kiring.',signInBtn:'Kirish',offline:'Guruhlar hozir mavjud emas (internet yoki server).',
+ uz:{student:'Talaba',nick:'Taxallus (ixtiyoriy)',nickHint:'Ustoz sizni shu nom yoki raqam bilan ko‘radi',close:'Yopish',reopen:'Qayta ochish',closedLbl:'Yopilgan',errClosed:'Topshiriq yopilgan.',errDone:'Siz bu testni allaqachon topshirgansiz.',errStarted:'Bu test allaqachon boshlangan va qayta boshlab bo‘lmaydi.',errDue:'Topshirish muddati o‘tgan.',errRate:'Juda ko‘p urinish. Keyinroq qayta urinib ko‘ring.',errNick:'Taxallus 2–24 belgi: harf, raqam, bo‘sh joy.',title:'Guruhlar va topshiriqlar',signIn:'Guruhlar uchun email orqali kiring.',signInBtn:'Kirish',offline:'Guruhlar hozir mavjud emas (internet yoki server).',
   newGroup:'Yangi guruh',groupName:'Guruh nomi (masalan: Terapiya 3-kurs)',create:'Yaratish',code:'Qo‘shilish kodi',members:'talaba',copy:'Nusxa',copied:'Nusxalandi',noGroups:'Hali guruh yo‘q.',
   back:'Guruhlar',assignments:'Topshiriqlar',noAssign:'Hali topshiriq yo‘q.',add:'Topshiriq berish',kind:'Turi',task:'Matnli javob',quiz:'Test (taqdimot testi)',titleF:'Sarlavha',bodyF:'Izoh (ixtiyoriy)',due:'Muddat',deck:'Taqdimot',
   submitted:'topshirdi',delete:'O‘chirish',confirmDel:'Topshiriq o‘chirilsin?',roster:'Talabalar',notYet:'Topshirmagan',
@@ -18,7 +18,7 @@ const words={
   answer:'Javobingiz',send:'Yuborish',resend:'Qayta yuborish',sent:'Yuborildi',start:'Testni boshlash',result:'Natija',dueLbl:'Muddat',
   errName:'Nom kamida 2 belgi.',errCode:'Kod noto‘g‘ri yoki guruh topilmadi.',errGeneric:'Bajarilmadi. Qayta urinib ko‘ring.',errTeacher:'Guruhni faqat ustoz yaratadi.',
   note:'Test natijasi serverda ustozning kaliti bo‘yicha hisoblanadi; rasmiy baho emas. Ustoz sizni taxallus yoki raqam bilan ko‘radi, email yoki ismingizni emas.'},
- ru:{student:'Студент',nick:'Псевдоним (необязательно)',nickHint:'Преподаватель увидит вас под этим именем или номером',close:'Закрыть приём',reopen:'Открыть снова',closedLbl:'Закрыто',errClosed:'Задание закрыто.',errDone:'Вы уже сдали этот тест.',errRate:'Слишком много попыток. Попробуйте позже.',errNick:'Псевдоним 2–24 символа: буквы, цифры, пробел.',title:'Группы и задания',signIn:'Войдите по email, чтобы пользоваться группами.',signInBtn:'Войти',offline:'Группы сейчас недоступны (интернет или сервер).',
+ ru:{student:'Студент',nick:'Псевдоним (необязательно)',nickHint:'Преподаватель увидит вас под этим именем или номером',close:'Закрыть приём',reopen:'Открыть снова',closedLbl:'Закрыто',errClosed:'Задание закрыто.',errDone:'Вы уже сдали этот тест.',errStarted:'Этот тест уже начат, начать заново нельзя.',errDue:'Срок сдачи истёк.',errRate:'Слишком много попыток. Попробуйте позже.',errNick:'Псевдоним 2–24 символа: буквы, цифры, пробел.',title:'Группы и задания',signIn:'Войдите по email, чтобы пользоваться группами.',signInBtn:'Войти',offline:'Группы сейчас недоступны (интернет или сервер).',
   newGroup:'Новая группа',groupName:'Название группы (например: Терапия, 3 курс)',create:'Создать',code:'Код для вступления',members:'студ.',copy:'Копировать',copied:'Скопировано',noGroups:'Групп пока нет.',
   back:'Группы',assignments:'Задания',noAssign:'Заданий пока нет.',add:'Дать задание',kind:'Тип',task:'Текстовый ответ',quiz:'Тест (по презентации)',titleF:'Заголовок',bodyF:'Описание (необязательно)',due:'Срок',deck:'Презентация',
   submitted:'сдали',delete:'Удалить',confirmDel:'Удалить задание?',roster:'Студенты',notYet:'Не сдано',
@@ -26,7 +26,7 @@ const words={
   answer:'Ваш ответ',send:'Отправить',resend:'Отправить снова',sent:'Отправлено',start:'Начать тест',result:'Результат',dueLbl:'Срок',
   errName:'Название — минимум 2 символа.',errCode:'Неверный код или группа не найдена.',errGeneric:'Не получилось. Попробуйте ещё раз.',errTeacher:'Группы создаёт только преподаватель.',
   note:'Результат теста считается на сервере по ключу преподавателя; это не официальная оценка. Преподаватель видит вас по псевдониму или номеру, а не по email или имени.'},
- en:{student:'Student',nick:'Nickname (optional)',nickHint:'Your teacher sees you by this name or number',close:'Close submissions',reopen:'Reopen',closedLbl:'Closed',errClosed:'This assignment is closed.',errDone:'You have already submitted this quiz.',errRate:'Too many attempts. Try again later.',errNick:'Nickname: 2–24 letters, digits or spaces.',title:'Groups and assignments',signIn:'Sign in with your email to use groups.',signInBtn:'Sign in',offline:'Groups are unavailable right now (network or server).',
+ en:{student:'Student',nick:'Nickname (optional)',nickHint:'Your teacher sees you by this name or number',close:'Close submissions',reopen:'Reopen',closedLbl:'Closed',errClosed:'This assignment is closed.',errDone:'You have already submitted this quiz.',errStarted:'This quiz was already started and cannot be restarted.',errDue:'The due date has passed.',errRate:'Too many attempts. Try again later.',errNick:'Nickname: 2–24 letters, digits or spaces.',title:'Groups and assignments',signIn:'Sign in with your email to use groups.',signInBtn:'Sign in',offline:'Groups are unavailable right now (network or server).',
   newGroup:'New group',groupName:'Group name (e.g. Therapy, year 3)',create:'Create',code:'Join code',members:'students',copy:'Copy',copied:'Copied',noGroups:'No groups yet.',
   back:'Groups',assignments:'Assignments',noAssign:'No assignments yet.',add:'Give an assignment',kind:'Type',task:'Written answer',quiz:'Quiz (from a presentation)',titleF:'Title',bodyF:'Notes (optional)',due:'Due date',deck:'Presentation',
   submitted:'submitted',delete:'Delete',confirmDel:'Delete this assignment?',roster:'Students',notYet:'Not submitted',
@@ -133,7 +133,7 @@ function AssignmentView({lang,a,teacher,roster,decks,onChanged,onDeleted}:{lang:
  const deck=decks.find(d=>d.id===a.deckId);
  const [err,setErr]=useState('');
  const send=async()=>{setErr('');const r=await callApi('/classroom/submit','POST',{assignmentId:a.id,answer});if(r.ok){setDone(true);onChanged()}else setErr(r.data.error==='closed'?t.errClosed:t.errGeneric)};
- const finish=async(_s:number,_n:number,answers:number[])=>{setErr('');const r=await callApi<{score:number;total:number}>('/classroom/submit','POST',{assignmentId:a.id,answers});if(r.ok){setScore([r.data.score,r.data.total]);setDone(true);onChanged()}else setErr(r.data.error==='already_submitted'?t.errDone:r.data.error==='closed'?t.errClosed:t.errGeneric)};
+ const finish=async(_s:number,_n:number,answers:number[])=>{setErr('');const r=await callApi<{score:number;total:number}>('/classroom/submit','POST',{assignmentId:a.id,answers});if(r.ok){setScore([r.data.score,r.data.total]);setDone(true);onChanged()}else setErr(r.data.error==='already_submitted_or_not_started'?t.errDone:r.data.error==='closed'?t.errClosed:t.errGeneric)};
  const toggle=async()=>{await callApi('/classroom/assignments','PUT',{assignmentId:a.id,status:a.status==='open'?'closed':'open'});onDeleted()};
  const del=async()=>{if(window.confirm(t.confirmDel)){await callApi('/classroom/assignments?assignmentId='+a.id,'DELETE');onDeleted()}};
  return <>
@@ -153,9 +153,9 @@ function AssignmentView({lang,a,teacher,roster,decks,onChanged,onDeleted}:{lang:
   </>:<>
    {score&&<p className="cr-score">{t.result}: {score[0]} / {score[1]}</p>}
    {a.status==='closed'&&!score&&<p className="muted">{t.errClosed}</p>}
-   {!score&&<button className="button" disabled={!deck||a.status==='closed'} onClick={()=>setRun(true)}>{t.start}</button>}
+   {!score&&<button className="button" disabled={!deck||a.status==='closed'} onClick={async()=>{setErr('');const r=await callApi('/classroom/start','POST',{assignmentId:a.id});if(r.ok)setRun(true);else setErr(r.data.error==='already_started'?t.errStarted:r.data.error==='closed'?t.errClosed:r.data.error==='past_due'?t.errDue:t.errGeneric)}}>{t.start}</button>}
    {err&&<p className="cr-error" role="alert">{err}</p>}
-   {run&&deck&&<QuizRun title={a.title} lang={lang} questions={deck.quiz} onDone={finish} onClose={()=>setRun(false)}/>}
+   {run&&deck&&<QuizRun title={a.title} lang={lang} reveal={false} questions={deck.quiz} onDone={finish} onClose={()=>setRun(false)}/>}
   </>}
  </>;
 }

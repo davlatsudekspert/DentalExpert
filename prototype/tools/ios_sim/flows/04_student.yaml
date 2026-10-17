@@ -1,0 +1,115 @@
+appId: uz.dentalexpert.app
+name: "(b3) Student: sign up, daily quiz, join the teacher's group with the code, answer the assignment, sign out"
+tags:
+  - signin
+# Local API only; run after 03_teacher.yaml. Needs -e STUDENT_EMAIL=... -e GROUP_NAME=... -e QUIZ_OPTION_RE=...
+# QUIZ_OPTION_RE (from tools/ios_sim/quiz_regex.mjs) matches every possible answer of the daily quiz, so the flow
+# can pick "the first answer" whatever questions today brings.
+---
+- runFlow:
+    file: common/signup.yaml
+    env:
+      ROLE_LABEL: Talaba
+      FULL_NAME: Talaba Maestro
+      EMAIL: ${STUDENT_EMAIL}
+      SHOT_PREFIX: student
+- extendedWaitUntil:
+    visible: ".*Talaba Maestro.*"
+    timeout: 20000
+- waitForAnimationToEnd:
+    timeout: 3000
+- takeScreenshot: student-04-home
+
+# Daily quiz: 5 questions
+- scrollUntilVisible:
+    element:
+      text: ".*Kunlik test.*"
+    direction: DOWN
+    timeout: 15000
+    centerElement: true
+- tapOn: ".*Kunlik test.*"
+- extendedWaitUntil:
+    visible: "1 / 5"
+    timeout: 10000
+- takeScreenshot: student-05-daily-question
+- repeat:
+    times: 5
+    commands:
+      - tapOn:
+          text: ${QUIZ_OPTION_RE}
+          index: 0
+      - extendedWaitUntil:
+          visible: "(Keyingi|Yakunlash)"
+          timeout: 5000
+      - runFlow:
+          when:
+            visible: "Keyingi"
+          commands:
+            - tapOn: "Keyingi"
+      - runFlow:
+          when:
+            visible: "Yakunlash"
+          commands:
+            - takeScreenshot: student-06-daily-last-answer
+            - tapOn: "Yakunlash"
+- extendedWaitUntil:
+    visible: "Natija"
+    timeout: 5000
+- assertVisible: "[0-5] / 5"
+- takeScreenshot: student-07-daily-result
+- tapOn:
+    text: "Yopish"
+    index: 0
+- extendedWaitUntil:
+    visible: ".*Bajarildi.*"
+    timeout: 5000
+
+# Join the teacher's group with the 6-character code
+- runScript:
+    file: ../scripts/get_group_code.js
+    env:
+      GROUP_NAME: ${GROUP_NAME}
+- scrollUntilVisible:
+    element:
+      text: "Ustoz bergan 6 belgili kod"
+    direction: DOWN
+    timeout: 20000
+    centerElement: true
+- tapOn: "Ustoz bergan 6 belgili kod"
+- inputText: ${output.groupCode}
+- tapOn: "Ustoz sizni shu nom.*"
+- inputText: Zebra
+- runFlow: common/dismiss_keyboard.yaml
+- takeScreenshot: student-08-join-code
+- tapOn: "Qo.shilish"          # exact: the button, not the "Guruhga qo‘shilish" label
+- extendedWaitUntil:
+    visible: "${GROUP_NAME}.*"
+    timeout: 15000
+- takeScreenshot: student-09-joined
+
+# Answer the written assignment
+- tapOn: "${GROUP_NAME}.*"
+- extendedWaitUntil:
+    visible: ".*Emalni tasvirlang.*"
+    timeout: 10000
+- tapOn: ".*Emalni tasvirlang.*"
+- tapOn: "Javobingiz"
+- inputText: "Eng qattiq to'qima, tojni qoplaydi"
+- runFlow: common/dismiss_keyboard.yaml
+- scrollUntilVisible:
+    element:
+      text: "Yuborish"
+    direction: DOWN
+    timeout: 10000
+    centerElement: true
+- tapOn: "Yuborish"
+- extendedWaitUntil:
+    visible: "Yuborildi"
+    timeout: 10000
+- takeScreenshot: student-10-answer-sent
+
+- runFlow:
+    file: common/sign_out.yaml
+    env:
+      SHOT_PREFIX: student
+      EMAIL: ${STUDENT_EMAIL}

@@ -1,0 +1,119 @@
+appId: uz.dentalexpert.app
+name: "(b1) Dentist: sign up, dashboard with own name, patient, odontogram, 3D atlas, settings, sign out"
+tags:
+  - signin
+# Local API only (see tools/ios_sim/start_local_api.sh). Needs -e DENTIST_EMAIL=...
+---
+- runFlow:
+    file: common/signup.yaml
+    env:
+      ROLE_LABEL: Stomatolog
+      FULL_NAME: Ali Abduraxmon
+      EMAIL: ${DENTIST_EMAIL}
+      SHOT_PREFIX: dentist
+
+# Dashboard greets the typed name (not a demo name)
+- extendedWaitUntil:
+    visible: ".*Ali Abduraxmon.*"
+    timeout: 20000
+- assertVisible: "Ish maydoni"
+- assertVisible: "AA"
+- assertNotVisible: ".*Aziza.*"
+- waitForAnimationToEnd:
+    timeout: 3000
+- takeScreenshot: dentist-04-dashboard
+
+# Add a patient
+- scrollUntilVisible:
+    element:
+      text: "Bemor qo.shish.*"
+    direction: DOWN
+    timeout: 20000
+    centerElement: true
+- tapOn: "Bemor qo.shish.*"
+- extendedWaitUntil:
+    visible: "Bemorlarim"
+    timeout: 10000
+- tapOn: "Bemor qo.shish.*"
+- tapOn: "Ism va familiya"
+- inputText: Test Bemor
+- tapOn: "Telefon"
+- inputText: "+998 91 000 00 00"
+- runFlow: common/dismiss_keyboard.yaml
+- takeScreenshot: dentist-05-new-patient
+- scrollUntilVisible:
+    element:
+      text: "Saqlash"
+    direction: DOWN
+    timeout: 10000
+    centerElement: true
+- tapOn: "Saqlash"
+- extendedWaitUntil:
+    visible: "Odontogramma .FDI."
+    timeout: 10000
+- assertVisible: "Test Bemor"
+
+# Odontogram: tooth 11 -> caries, tooth 16 -> filling (buttons are labelled "<tooth> <status>")
+- tapOn: "11 Sog.lom"
+- tapOn:
+    text: "Karies"
+    index: 0                   # the status picker comes before the legend
+- extendedWaitUntil:
+    visible: "11 Karies"
+    timeout: 5000
+- tapOn: "16 Sog.lom"
+- tapOn:
+    text: "Plomba"
+    index: 0
+- extendedWaitUntil:
+    visible: "16 Plomba"
+    timeout: 5000
+- takeScreenshot: dentist-06-odontogram
+
+# Visit note
+- scrollUntilVisible:
+    element:
+      text: "Nima qilindi."
+    direction: DOWN
+    timeout: 15000
+    centerElement: true
+- tapOn: "Nima qilindi."
+- inputText: Karies davolandi
+- runFlow: common/dismiss_keyboard.yaml
+- tapOn: "Qabul qaydini qo.shish"
+- extendedWaitUntil:
+    visible: ".*Karies davolandi.*"
+    timeout: 5000
+- takeScreenshot: dentist-07-visit-note
+
+# 3D atlas: open, explode the layers, close
+- tapOn: "3D atlas"            # bottom navigation (aria-label)
+- extendedWaitUntil:
+    visible: "Tish anatomiyasi"
+    timeout: 10000
+- takeScreenshot: dentist-08-anatomy
+- tapOn: ".*Qatlamlarni ajratib.*"
+- extendedWaitUntil:
+    visible: "3D tish atlasi"
+    timeout: 20000
+- waitForAnimationToEnd:
+    timeout: 5000
+- takeScreenshot: dentist-09-atlas3d
+- tapOn: "Ajratish"
+- extendedWaitUntil:
+    visible: "Yig.ish"           # the same button now offers "assemble"
+    timeout: 5000
+- waitForAnimationToEnd:
+    timeout: 5000
+- takeScreenshot: dentist-10-atlas3d-exploded
+- tapOn: "Yopish"
+- extendedWaitUntil:
+    notVisible: "3D tish atlasi"
+    timeout: 5000
+
+# Settings and sign out
+- runFlow:
+    file: common/sign_out.yaml
+    env:
+      SHOT_PREFIX: dentist
+      EMAIL: ${DENTIST_EMAIL}

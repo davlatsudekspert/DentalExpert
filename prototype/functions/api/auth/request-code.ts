@@ -1,6 +1,8 @@
 import {authEnabled,devEcho,guardPost,hmac,normalizeEmail,randomCode,ROLES,sendCodeEmail,sha256} from '../../_lib/auth';
 import {cityIdOk,json,type Env} from '../../_lib/db';
 
+import {underLimit} from '../../_lib/ratelimit';
+const MAX_EMAILS_DAY=1500;
 const CODE_TTL_MIN=10, RESEND_COOLDOWN_S=60, MAX_PER_EMAIL_HOUR=5, MAX_PER_IP_HOUR=20;
 
 export const onRequestPost:PagesFunction<Env>=async({request,env})=>{
@@ -16,8 +18,10 @@ export const onRequestPost:PagesFunction<Env>=async({request,env})=>{
   env.DB.prepare(`DELETE FROM sessions WHERE expires_at<datetime('now')`)
  ]);
 
- const ip=request.headers.get('cf-connecting-ip')||'local';
+ const rawIp=request.headers.get('cf-connecting-ip')||'local';
+ const ip=rawIp.includes(':')?rawIp.split(':').slice(0,4).join(':'):rawIp; // IPv6 is bucketed by /64 so rotating addresses inside one prefix does not bypass the limit
  const ipHash=await sha256(ip+env.AUTH_SECRET);
+ if(!await underLimit(env,'mail-global',MAX_EMAILS_DAY,86400))return json({error:'too_many_requests'},429,'no-store');
  const {results:[stats]}=await env.DB.prepare(
   `SELECT
     (SELECT COUNT(*) FROM auth_codes WHERE email=? AND created_at>datetime('now','-1 hour')) AS per_email,

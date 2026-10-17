@@ -1,21 +1,22 @@
-import {useState} from 'react';
+import {useEffect,useState} from 'react';
 import {ChevronLeft,Plus,Trash2,UserRound} from 'lucide-react';
 import type {Lang} from './discoveryData';
 
 export type Status='healthy'|'caries'|'filling'|'crown'|'rootcanal'|'implant'|'missing';
 export type Patient={id:string;name:string;phone:string;note:string;teeth:Record<string,Status>;visits:{date:string;text:string}[];createdAt:string};
-const KEY='de_patients';
+const keyFor=(uid?:string|null)=>'de_patients:'+(uid||'guest');
 const STATUSES:Status[]=['healthy','caries','filling','crown','rootcanal','implant','missing'];
 const COLOR:Record<Status,string>={healthy:'#dfeeee',caries:'#d9534f',filling:'#4f8fdc',crown:'#e0a928',rootcanal:'#8a5fd0',implant:'#2aa875',missing:'#9aa8ad'};
 const UPPER=[18,17,16,15,14,13,12,11,21,22,23,24,25,26,27,28];
 const LOWER=[48,47,46,45,44,43,42,41,31,32,33,34,35,36,37,38];
 
-export const loadPatients=():Patient[]=>{try{const v=JSON.parse(localStorage.getItem(KEY)||'[]');return Array.isArray(v)?v:[]}catch{return []}};
-const save=(p:Patient[])=>{try{localStorage.setItem(KEY,JSON.stringify(p))}catch{/* storage unavailable */}};
+export const loadPatients=(uid?:string|null):Patient[]=>{try{const v=JSON.parse(localStorage.getItem(keyFor(uid))||'[]');return Array.isArray(v)?v:[]}catch{return []}};
+export const clearLocalData=(uid?:string|null)=>{try{localStorage.removeItem(keyFor(uid));localStorage.removeItem('de_daily')}catch{/* storage unavailable */}};
+const save=(uid:string|null|undefined,p:Patient[])=>{try{localStorage.setItem(keyFor(uid),JSON.stringify(p))}catch{/* storage unavailable */}};
 
 const words={
  uz:{title:'Bemorlarim',empty:'Hali bemor qo‘shilmagan. Birinchi bemorni qo‘shing: ism, telefon va tishlar xaritasi shu yerda saqlanadi.',add:'Bemor qo‘shish',name:'Ism va familiya',phone:'Telefon',note:'Qayd (allergiya, shikoyat…)',save:'Saqlash',back:'Bemorlar',chart:'Odontogramma (FDI)',tap:'Tishni bosing va holatini tanlang',visits:'Qabullar tarixi',addVisit:'Qabul qaydini qo‘shish',visitHint:'Nima qilindi?',del:'Bemorni o‘chirish',confirm:'Bemor va uning yozuvlari o‘chirilsinmi?',privacy:'Ma’lumotlar faqat shu qurilmada saqlanadi, serverga yuborilmaydi. Telefonni yo‘qotsangiz, ular ham yo‘qoladi.',upper:'Yuqori jag‘',lower:'Pastki jag‘',
-  st:{healthy:'Sog‘lom',caries:'Karies',filling:'Plomba',crown:'Koronka',rootcanal:'Kanal davosi',implant:'Implant',missing:'Yo‘q'},count:'Holatlar'},
+  st:{healthy:'Sog‘lom',caries:'Karies',filling:'Plomba',crown:'Toj (koronka)',rootcanal:'Kanal davosi',implant:'Implant',missing:'Yo‘q'},count:'Holatlar'},
  ru:{title:'Мои пациенты',empty:'Пациентов пока нет. Добавьте первого: имя, телефон и карта зубов хранятся здесь.',add:'Добавить пациента',name:'Имя и фамилия',phone:'Телефон',note:'Заметка (аллергия, жалобы…)',save:'Сохранить',back:'Пациенты',chart:'Одонтограмма (FDI)',tap:'Нажмите на зуб и выберите состояние',visits:'История приёмов',addVisit:'Добавить запись о приёме',visitHint:'Что сделано?',del:'Удалить пациента',confirm:'Удалить пациента и его записи?',privacy:'Данные хранятся только на этом устройстве и не отправляются на сервер. Если потерять телефон, они пропадут.',upper:'Верхняя челюсть',lower:'Нижняя челюсть',
   st:{healthy:'Здоров',caries:'Кариес',filling:'Пломба',crown:'Коронка',rootcanal:'Лечение каналов',implant:'Имплант',missing:'Отсутствует'},count:'Состояния'},
  en:{title:'My patients',empty:'No patients yet. Add the first one: name, phone and tooth chart are kept here.',add:'Add patient',name:'Full name',phone:'Phone',note:'Notes (allergies, complaints…)',save:'Save',back:'Patients',chart:'Odontogram (FDI)',tap:'Tap a tooth and choose its status',visits:'Visit history',addVisit:'Add visit note',visitHint:'What was done?',del:'Delete patient',confirm:'Delete this patient and their records?',privacy:'Data stays on this device only and is never sent to a server. If you lose the phone, it is lost too.',upper:'Upper jaw',lower:'Lower jaw',
@@ -23,7 +24,7 @@ const words={
 };
 
 const TOOTH='M15 7C7 1 2 7 4 17L8 36Q11 41 13 25Q15 20 17 25Q20 41 23 34L27 15Q29 1 15 7Z';
-const today=()=>new Date().toISOString().slice(0,10);
+const today=()=>{const d=new Date();return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`};
 
 function Chart({lang,teeth,onSet}:{lang:Lang;teeth:Record<string,Status>;onSet:(n:number,s:Status)=>void}){
  const t=words[lang];
@@ -38,14 +39,15 @@ function Chart({lang,teeth,onSet}:{lang:Lang;teeth:Record<string,Status>;onSet:(
  </div>;
 }
 
-export default function Patients({lang,onChange}:{lang:Lang;onChange?:(p:Patient[])=>void}){
+export default function Patients({lang,uid,onChange}:{lang:Lang;uid?:string|null;onChange?:(p:Patient[])=>void}){
  const t=words[lang];
- const [list,setList]=useState<Patient[]>(loadPatients);
+ const [list,setList]=useState<Patient[]>(()=>loadPatients(uid));
+ useEffect(()=>setList(loadPatients(uid)),[uid]);
  const [open,setOpen]=useState<string|null>(null);
  const [adding,setAdding]=useState(false);
  const [f,setF]=useState({name:'',phone:'',note:''});
  const [visit,setVisit]=useState('');
- const commit=(next:Patient[])=>{setList(next);save(next);onChange?.(next)};
+ const commit=(next:Patient[])=>{setList(next);save(uid,next);onChange?.(next)};
  const cur=list.find(p=>p.id===open)||null;
  const patch=(fn:(p:Patient)=>Patient)=>commit(list.map(p=>p.id===open?fn(p):p));
  if(cur)return <section className="patients">
@@ -55,7 +57,7 @@ export default function Patients({lang,onChange}:{lang:Lang;onChange?:(p:Patient
   <h3>{t.chart}</h3>
   <Chart lang={lang} teeth={cur.teeth} onSet={(n,s)=>patch(p=>({...p,teeth:{...p.teeth,[n]:s}}))}/>
   <h3>{t.visits}</h3>
-  <div className="cr-form"><input value={visit} maxLength={300} placeholder={t.visitHint} onChange={e=>setVisit(e.target.value)}/><button className="button" disabled={!visit.trim()} onClick={()=>{patch(p=>({...p,visits:[{date:today(),text:visit.trim()},...p.visits]}));setVisit('')}}>{t.addVisit}</button></div>
+  <div className="cr-form"><input value={visit} maxLength={300} aria-label={t.visitHint} placeholder={t.visitHint} onChange={e=>setVisit(e.target.value)}/><button className="button" disabled={!visit.trim()} onClick={()=>{patch(p=>({...p,visits:[{date:today(),text:visit.trim()},...p.visits]}));setVisit('')}}>{t.addVisit}</button></div>
   <div className="cr-list">{cur.visits.map((v,i)=><div key={i} className="cr-row static"><span><strong>{v.date}</strong><small>{v.text}</small></span></div>)}</div>
   <button className="button secondary" onClick={()=>{if(window.confirm(t.confirm)){commit(list.filter(p=>p.id!==cur.id));setOpen(null)}}}><Trash2 size={16}/>{t.del}</button>
   <small className="muted">{t.privacy}</small>
@@ -66,9 +68,9 @@ export default function Patients({lang,onChange}:{lang:Lang;onChange?:(p:Patient
   <div className="cr-list">{list.map(p=>{const n=Object.values(p.teeth).filter(s=>s!=='healthy').length;return <button key={p.id} className="cr-row" onClick={()=>setOpen(p.id)}><UserRound size={18}/><span><strong>{p.name}</strong><small>{p.phone||'—'} · {t.count}: {n}</small></span></button>})}</div>
   {adding?<div className="cr-form">
    <label>{t.name}<input value={f.name} maxLength={80} onChange={e=>setF({...f,name:e.target.value})}/></label>
-   <label>{t.phone}<input type="tel" value={f.phone} maxLength={30} placeholder="+998 90 000 00 00" onChange={e=>setF({...f,phone:e.target.value})}/></label>
+   <label>{t.phone}<input type="tel" inputMode="tel" pattern="[+0-9 ()\-]*" value={f.phone} maxLength={30} placeholder="+998 90 000 00 00" onChange={e=>setF({...f,phone:e.target.value})}/></label>
    <label>{t.note}<textarea rows={2} maxLength={300} value={f.note} onChange={e=>setF({...f,note:e.target.value})}/></label>
-   <button className="button" disabled={f.name.trim().length<2} onClick={()=>{const p:Patient={id:crypto.randomUUID(),name:f.name.trim(),phone:f.phone.trim(),note:f.note.trim(),teeth:{},visits:[],createdAt:today()};commit([p,...list]);setF({name:'',phone:'',note:''});setAdding(false);setOpen(p.id)}}>{t.save}</button>
+   <button className="button" disabled={f.name.trim().length<2||!/^[+0-9 ()-]*$/.test(f.phone)} onClick={()=>{const p:Patient={id:crypto.randomUUID(),name:f.name.trim(),phone:f.phone.trim(),note:f.note.trim(),teeth:{},visits:[],createdAt:today()};commit([p,...list]);setF({name:'',phone:'',note:''});setAdding(false);setOpen(p.id)}}>{t.save}</button>
   </div>:<button className="button" onClick={()=>setAdding(true)}><Plus size={17}/>{t.add}</button>}
   <small className="muted">{t.privacy}</small>
  </section>;

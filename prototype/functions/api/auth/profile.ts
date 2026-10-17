@@ -9,7 +9,7 @@ export const onRequestPut:PagesFunction<Env>=async({request,env})=>{
  const user=await sessionUser(env,request).catch(()=>null);
  if(!user)return json({error:'unauthorized'},401,'no-store');
  let b:Record<string,unknown>;
- try{b=await request.json() as Record<string,unknown>}catch{return json({error:'bad_json'},400,'no-store')}
+ try{const raw=await request.json();if(!raw||typeof raw!=='object'||Array.isArray(raw))return json({error:'bad_json'},400,'no-store');b=raw as Record<string,unknown>}catch{return json({error:'bad_json'},400,'no-store')}
  const name=field(b.name,80);
  if(!name||name.length<2)return json({error:'name_required'},400,'no-store');
  const phone=field(b.phone,30);

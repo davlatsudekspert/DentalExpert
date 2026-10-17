@@ -11,6 +11,7 @@ export const onRequestPost:PagesFunction<Env>=async({request,env})=>{
  const b=await body(request);if('res' in b)return b.res;
  const code=clean(b.data.code,12).toUpperCase().replace(/[^A-Z0-9]/g,'');
  if(code.length!==6)return json({error:'bad_code'},400,noStore);
+ if(user.role==='teacher'||user.role==='dentist')return json({error:'teacher_cannot_join'},400,noStore);
  const nick=nickname(b.data.nickname);
  if(nick===false)return json({error:'bad_nickname'},400,noStore);
  const g=await env.DB.prepare(`SELECT id,name,teacher_id FROM class_groups WHERE code=?`).bind(code).first<{id:string;name:string;teacher_id:string}>();
@@ -29,6 +30,10 @@ export const onRequestPost:PagesFunction<Env>=async({request,env})=>{
 export const onRequestDelete:PagesFunction<Env>=async({request,env})=>{
  const a=await needUser(env,request);if('res' in a)return a.res;
  const id=new URL(request.url).searchParams.get('groupId')||'';
- await env.DB.prepare(`DELETE FROM class_members WHERE group_id=? AND user_id=?`).bind(id,a.user.id).run();
+ // Leaving also removes the member's answers in that group (the privacy policy promises this).
+ await env.DB.batch([
+  env.DB.prepare(`DELETE FROM class_submissions WHERE user_id=? AND assignment_id IN (SELECT id FROM class_assignments WHERE group_id=?)`).bind(a.user.id,id),
+  env.DB.prepare(`DELETE FROM class_members WHERE group_id=? AND user_id=?`).bind(id,a.user.id)
+ ]);
  return json({ok:true},200,noStore);
 };

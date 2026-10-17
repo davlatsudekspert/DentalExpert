@@ -18,6 +18,20 @@
 	<string>$(PRODUCT_NAME)</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<!-- Google Sign-In callback: the reversed iOS client id (com.googleusercontent.apps.xxxx).
+			     Filled at build time from VITE_GOOGLE_IOS_CLIENT_ID by the iOS workflow (GOOGLE_IOS_URL_SCHEME build setting);
+			     the default in project.pbxproj is a harmless placeholder used while Google is not configured. -->
+			<key>CFBundleURLName</key>
+			<string>google-sign-in</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>$(GOOGLE_IOS_URL_SCHEME)</string>
+			</array>
+		</dict>
+	</array>
 	<key>CFBundleShortVersionString</key>
 	<string>$(MARKETING_VERSION)</string>
 	<key>CFBundleVersion</key>

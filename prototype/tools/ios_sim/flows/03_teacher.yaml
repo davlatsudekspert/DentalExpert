@@ -1,0 +1,64 @@
+appId: uz.dentalexpert.app
+name: "(b2) Teacher: sign up, create a group, give an assignment, sign out"
+tags:
+  - signin
+# Local API only. Needs -e TEACHER_EMAIL=... -e GROUP_NAME=... (04_student.yaml joins this group afterwards).
+---
+- runFlow:
+    file: common/signup.yaml
+    env:
+      ROLE_LABEL: Ustoz
+      FULL_NAME: Ustoz Maestro
+      EMAIL: ${TEACHER_EMAIL}
+      SHOT_PREFIX: teacher
+- extendedWaitUntil:
+    visible: ".*Ustoz Maestro.*"
+    timeout: 20000
+- waitForAnimationToEnd:
+    timeout: 3000
+- takeScreenshot: teacher-04-home
+
+# New group
+- scrollUntilVisible:
+    element:
+      text: "Guruh nomi.*"     # placeholder of the "Yangi guruh" field
+    direction: DOWN
+    timeout: 20000
+    centerElement: true
+- tapOn: "Guruh nomi.*"
+- inputText: ${GROUP_NAME}
+- runFlow: common/dismiss_keyboard.yaml
+- tapOn: "Yaratish"
+- extendedWaitUntil:
+    visible: ".*kodi: [A-Z0-9]{6}.*"   # "0 talaba · Qo‘shilish kodi: ABC123"
+    timeout: 15000
+- takeScreenshot: teacher-05-group-created
+
+# Assignment (written answer; the default type, so no native picker is needed)
+- tapOn: "${GROUP_NAME}.*"
+- extendedWaitUntil:
+    visible: "Topshiriq berish.*"
+    timeout: 10000
+- tapOn: "Topshiriq berish.*"
+- tapOn: "Sarlavha"
+- inputText: Emalni tasvirlang
+- runFlow: common/dismiss_keyboard.yaml
+- scrollUntilVisible:
+    element:
+      text: "Yaratish"
+    direction: DOWN
+    timeout: 10000
+    centerElement: true
+- takeScreenshot: teacher-06-new-assignment
+- tapOn: "Yaratish"
+- extendedWaitUntil:
+    visible: ".*Emalni tasvirlang.*"
+    timeout: 10000
+- assertNotVisible: "Sarlavha"   # the form closed, so the assignment was saved
+- takeScreenshot: teacher-07-assignment-listed
+
+- runFlow:
+    file: common/sign_out.yaml
+    env:
+      SHOT_PREFIX: teacher
+      EMAIL: ${TEACHER_EMAIL}

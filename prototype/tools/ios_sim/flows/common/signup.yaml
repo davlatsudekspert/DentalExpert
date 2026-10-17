@@ -1,0 +1,49 @@
+appId: uz.dentalexpert.app
+name: Fresh install -> Uzbek -> role -> sign up with the email code (local API only)
+# Called by the role flows with env: ROLE_LABEL (Stomatolog | Ustoz | Talaba), FULL_NAME, EMAIL, SHOT_PREFIX.
+# The code is never emailed: the local API (AUTH_DEV_ECHO=1) returns it, e2e_proxy.mjs keeps it and
+# scripts/get_code.js reads it. Never point this flow at the production API.
+---
+- launchApp:
+    clearState: true
+    stopApp: true
+- extendedWaitUntil:
+    visible: "Choose your language"
+    timeout: 30000
+- tapOn: "O.zbekcha.*"
+- extendedWaitUntil:
+    visible: "Davom etish.*"
+    timeout: 10000
+- tapOn: ".*${ROLE_LABEL}.*"
+- tapOn: "Davom etish.*"
+# "Kod yuborish" only appears once the app has asked the API and email-code sign-in is enabled,
+# so this also proves the simulator reaches the local API.
+- extendedWaitUntil:
+    visible: "Kod yuborish.*"
+    timeout: 30000
+- takeScreenshot: ${SHOT_PREFIX}-01-signup
+- tapOn: "Ism va familiya"
+- inputText: ${FULL_NAME}
+- tapOn: "aziza@example.com"   # placeholder of the email field
+- inputText: ${EMAIL}
+- runFlow: dismiss_keyboard.yaml
+- scrollUntilVisible:
+    element:
+      text: "Kod yuborish.*"
+    direction: DOWN
+    timeout: 15000
+    centerElement: true
+- takeScreenshot: ${SHOT_PREFIX}-02-signup-filled
+- tapOn: "Kod yuborish.*"
+- extendedWaitUntil:
+    visible: "Elektron pochtangizni tasdiqlang"
+    timeout: 20000
+- runScript:
+    file: ../../scripts/get_code.js
+    env:
+      EMAIL: ${EMAIL}
+- tapOn: "Tasdiqlash kodi"     # label of the 6-digit code field
+- inputText: ${output.code}
+- runFlow: dismiss_keyboard.yaml
+- takeScreenshot: ${SHOT_PREFIX}-03-code-entered
+- tapOn: "Tasdiqlash"          # exact: the button, not "Tasdiqlash kodi"

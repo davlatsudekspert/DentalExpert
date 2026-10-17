@@ -1,0 +1,38 @@
+import {isAdminEmail,needAdmin} from '../../_lib/admin';
+import {body,clean} from '../../_lib/classroom';
+import {json,type Env} from '../../_lib/db';
+
+const ROLES=['patient','dentist','teacher','student'];
+
+export const onRequestGet:PagesFunction<Env>=async({request,env})=>{
+ const a=await needAdmin(env,request);if('res' in a)return a.res;
+ const url=new URL(request.url);
+ const q=clean(url.searchParams.get('q'),80).toLowerCase();
+ const offset=Math.max(0,Number(url.searchParams.get('offset'))||0);
+ const like='%'+q.replace(/[%_\\]/g,m=>'\\'+m)+'%';
+ const {results}=await env.DB.prepare(
+  `SELECT id,email,name,role,country_code,city_id,created_at,suspended_at FROM users
+   WHERE (?1='' OR lower(email) LIKE ?2 ESCAPE '\\' OR lower(COALESCE(name,'')) LIKE ?2 ESCAPE '\\')
+   ORDER BY created_at DESC LIMIT 50 OFFSET ?3`
+ ).bind(q,like,offset).all<Record<string,unknown>>();
+ return json({users:results.map(r=>({id:r.id,email:r.email,name:r.name,role:r.role,countryCode:r.country_code,cityId:r.city_id,createdAt:r.created_at,suspended:!!r.suspended_at,admin:isAdminEmail(env,String(r.email))}))},200,'no-store');
+};
+
+// PUT {id, role?, suspended?}: change a role or suspend/restore an account. Admins cannot be suspended.
+export const onRequestPut:PagesFunction<Env>=async({request,env})=>{
+ const a=await needAdmin(env,request);if('res' in a)return a.res;
+ const b=await body(request);if('res' in b)return b.res;
+ const id=clean(b.data.id,60);
+ const target=await env.DB.prepare(`SELECT email FROM users WHERE id=?`).bind(id).first<{email:string}>();
+ if(!target)return json({error:'not_found'},404,'no-store');
+ if(typeof b.data.role==='string'){
+  if(!ROLES.includes(b.data.role))return json({error:'bad_role'},400,'no-store');
+  await env.DB.prepare(`UPDATE users SET role=? WHERE id=?`).bind(b.data.role,id).run();
+ }
+ if(typeof b.data.suspended==='boolean'){
+  if(isAdminEmail(env,target.email))return json({error:'cannot_suspend_admin'},400,'no-store');
+  await env.DB.prepare(`UPDATE users SET suspended_at=${b.data.suspended?`datetime('now')`:'NULL'} WHERE id=?`).bind(id).run();
+  if(b.data.suspended)await env.DB.prepare(`DELETE FROM sessions WHERE user_id=?`).bind(id).run();
+ }
+ return json({ok:true},200,'no-store');
+};

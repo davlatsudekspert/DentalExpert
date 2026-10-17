@@ -40,3 +40,16 @@ Pages → `dental-expert` → Settings → Variables and Secrets (production), *
 Shulardan biri yo‘q bo‘lsa, `/api/auth/me` `enabled:false` qaytaradi va ilova belgilangan demo kirishni saqlaydi. **`AUTH_DEV_ECHO` ni jonli muhitga hech qachon qo‘ymang** (kod javobda qaytadi; u faqat localhost’da ishlaydi, lekin baribir qo‘ymang).
 
 Lokal sinov: `prototype/.dev.vars` ga `AUTH_SECRET=...` va `AUTH_DEV_ECHO=1` yozing (git’ga kirmaydi), so‘ng `python3 tools/auth_test.py` va `python3 tools/e2e_live.py` (avval `npx wrangler d1 execute dental-expert --local --file tools/e2e_seed.sql`).
+
+## Google va Apple orqali kirish (`POST /api/auth/oauth`)
+
+Server Google/Apple `id_token` imzosini (RS256) ularning ochiq kalitlari (JWKS) bilan tekshiradi; `iss`, `aud`, `exp`, `iat`, `nonce` va tasdiqlangan email shart. Avval jonli bazaga migratsiya: `npx wrangler d1 migrations apply dental-expert --remote` (yoki D1 Console’da `migrations-combined/d1-console/step7.sql`).
+
+Pages → `dental-expert` → Settings → Variables and Secrets (production), **Secret** sifatida (vergul bilan bir nechta qiymat):
+
+- `GOOGLE_CLIENT_IDS` — Google Cloud Console → APIs & Services → Credentials’dagi OAuth client ID’lar: Web client ID (Android `serverClientId` sifatida ham ishlatiladi) va iOS client ID. Masalan: `123-web.apps.googleusercontent.com,123-ios.apps.googleusercontent.com`.
+- `APPLE_CLIENT_IDS` — iOS ilova Bundle ID (masalan `uz.dentalexpert.app`) va, veb/Android uchun Apple bilan kirish bo‘lsa, Services ID.
+
+Qaysi biri bo‘sh bo‘lsa, o‘sha provayder `503 oauth_disabled` qaytaradi; `/api/auth/me` javobidagi `oauth:{google,apple}` qaysi biri yoqilganini ko‘rsatadi. Bir xil tasdiqlangan email bilan kirgan Google/Apple hisob mavjud foydalanuvchiga bog‘lanadi; hisob o‘chirilganda bog‘lanishlar ham o‘chadi.
+
+Lokal sinov Google/Apple’ga murojaat qilmaydi: `npm run build`, so‘ng `python3 tools/oauth_test.py` (sinov kalitini o‘zi yaratadi va o‘z serverlarini bo‘sh portlarda `OAUTH_TEST_JWKS` bilan ishga tushiradi; bu o‘zgaruvchi faqat `AUTH_DEV_ECHO=1` va localhost’da hisobga olinadi). **`OAUTH_TEST_JWKS` ni jonli muhitga qo‘ymang.**

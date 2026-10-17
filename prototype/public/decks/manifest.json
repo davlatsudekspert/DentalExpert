@@ -9,19 +9,19 @@
    {
     "q": "Karies qaysi jarayonga asoslanadi?",
     "options": [
-     "Tishning kislotalar ta’sirida mineralsizlanishi",
+     "Faqat tishning rangi o‘zgarishi",
      "Tishning yangi hujayra bilan to‘lishi",
-     "Faqat tishning rangi o‘zgarishi"
+     "Tishning kislotalar ta’sirida mineralsizlanishi"
     ],
-    "correct": 0,
+    "correct": 2,
     "explanation": "Karies — mineralsizlanish jarayoni."
    },
    {
     "q": "Qaysi omil kariesga ta’sir qiladi?",
     "options": [
      "Biofilm va uglevodlar",
-     "Faqat tish shakli",
-     "Faqat yosh"
+     "Faqat yosh",
+     "Faqat tish shakli"
     ],
     "correct": 0,
     "explanation": "Biofilm va tez fermentlanadigan uglevodlar asosiy omillardan."
@@ -29,31 +29,31 @@
    {
     "q": "Nega fissuralarni tozalash qiyin?",
     "options": [
-     "Ular tor va chuqur bo‘lishi mumkin",
+     "Ular pulpada joylashgan",
      "Ular juda katta",
-     "Ular pulpada joylashgan"
+     "Ular tor va chuqur bo‘lishi mumkin"
     ],
-    "correct": 0,
+    "correct": 2,
     "explanation": "Tor egatchalarga cho‘tka tukchalari yetib bormasligi mumkin."
    },
    {
     "q": "Karies davolash qarorini kim qabul qiladi?",
     "options": [
-     "Stomatolog",
      "Do‘st maslahati",
-     "Internetdagi video"
+     "Internetdagi video",
+     "Stomatolog"
     ],
-    "correct": 0,
+    "correct": 2,
     "explanation": "Tashxis va davolash stomatolog ko‘rigidan keyin belgilanadi."
    },
    {
     "q": "Profilaktikaga nima kiradi?",
     "options": [
-     "Ftorli pasta bilan muntazam tozalash",
+     "Faqat shirinlik",
      "Tish tozalamaslik",
-     "Faqat shirinlik"
+     "Ftorli pasta bilan muntazam tozalash"
     ],
-    "correct": 0,
+    "correct": 2,
     "explanation": "Muntazam gigiyena karies xavfini kamaytiradi."
    }
   ]
@@ -69,8 +69,8 @@
     "q": "Tish yuzasida har kuni nima hosil bo‘ladi?",
     "options": [
      "Bakterial karash",
-     "Yangi emal",
-     "Dentin"
+     "Dentin",
+     "Yangi emal"
     ],
     "correct": 0,
     "explanation": "Bakterial karash muntazam tozalanishi kerak."
@@ -79,8 +79,8 @@
     "q": "Odatda necha marta tish tozalash tavsiya etiladi?",
     "options": [
      "Kuniga ikki marta",
-     "Haftada bir marta",
-     "Faqat kasal bo‘lganda"
+     "Faqat kasal bo‘lganda",
+     "Haftada bir marta"
     ],
     "correct": 0,
     "explanation": "Ftorli pasta bilan kuniga ikki marta."
@@ -88,11 +88,11 @@
    {
     "q": "Tishlar orasi qanday tozalanadi?",
     "options": [
-     "Tish ipi yoki tishlararo cho‘tka bilan",
      "Faqat chayish bilan",
+     "Tish ipi yoki tishlararo cho‘tka bilan",
      "Tozalash shart emas"
     ],
-    "correct": 0,
+    "correct": 1,
     "explanation": "Cho‘tka tishlar orasiga yetib bormaydi."
    },
    {
@@ -108,11 +108,11 @@
    {
     "q": "Profilaktik ko‘rikni kim belgilaydi?",
     "options": [
-     "Stomatolog tavsiyasi bo‘yicha",
      "Reklama",
+     "Stomatolog tavsiyasi bo‘yicha",
      "Tasodif"
     ],
-    "correct": 0,
+    "correct": 1,
     "explanation": "Muddat stomatolog tavsiyasiga qarab belgilanadi."
    }
   ]
@@ -127,19 +127,19 @@
    {
     "q": "Parodont tarkibiga nima kirmaydi?",
     "options": [
+     "Periodontal boylam",
      "Emal",
-     "Milk",
-     "Periodontal boylam"
+     "Milk"
     ],
-    "correct": 0,
+    "correct": 1,
     "explanation": "Emal tojning qatlami; parodont tishni ushlab turuvchi to‘qimalar."
    },
    {
     "q": "Boylam tolalari ildizning qaysi qatlamiga birikadi?",
     "options": [
      "Sement",
-     "Emal",
-     "Pulpa"
+     "Pulpa",
+     "Emal"
     ],
     "correct": 0,
     "explanation": "Tolalar sementga birikadi."
@@ -147,19 +147,19 @@
    {
     "q": "Gingivit nima?",
     "options": [
-     "Milk yallig‘lanishi",
      "Emal yo‘qolishi",
-     "Suyak o‘sishi"
+     "Suyak o‘sishi",
+     "Milk yallig‘lanishi"
     ],
-    "correct": 0,
+    "correct": 2,
     "explanation": "Gingivit — milkning yallig‘lanishi."
    },
    {
     "q": "Parodontit gingivitdan nimasi bilan farq qiladi?",
     "options": [
      "Tayanch to‘qimalar, jumladan suyak jarohatlanadi",
-     "Faqat tish rangi o‘zgaradi",
-     "Umuman farq yo‘q"
+     "Umuman farq yo‘q",
+     "Faqat tish rangi o‘zgaradi"
     ],
     "correct": 0,
     "explanation": "Parodontitda tayanch to‘qimalar zararlanadi."
@@ -168,8 +168,8 @@
     "q": "Milk qonashi bo‘lsa nima qilish kerak?",
     "options": [
      "Stomatologga murojaat qilish",
-     "Hech narsa qilmaslik",
-     "O‘zboshimchalik bilan davolash"
+     "O‘zboshimchalik bilan davolash",
+     "Hech narsa qilmaslik"
     ],
     "correct": 0,
     "explanation": "Aniq sabab va davo stomatolog tomonidan belgilanadi."

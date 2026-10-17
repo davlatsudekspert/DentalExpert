@@ -29,23 +29,13 @@ export async function groupRole(env:Env,groupId:string,userId:string):Promise<'o
  return r.t===userId?'owner':r.m?'member':null;
 }
 
-/** Fixed-window counter in D1; returns false once `limit` is exceeded inside the window. */
-export async function underLimit(env:Env,bucket:string,limit:number,windowSec:number){
- const now=Date.now(),win=windowSec*1000;
- const r=await env.DB.prepare(
-  `INSERT INTO rate_limits (bucket,window_start,count) VALUES (?1,?2,1)
-   ON CONFLICT (bucket) DO UPDATE SET
-    count=CASE WHEN rate_limits.window_start<=?3 THEN 1 ELSE rate_limits.count+1 END,
-    window_start=CASE WHEN rate_limits.window_start<=?3 THEN ?2 ELSE rate_limits.window_start END
-   RETURNING count`
- ).bind(bucket,now,now-win).first<{count:number}>();
- return (r?.count||0)<=limit;
-}
+export {underLimit} from './ratelimit';
 /** Optional nickname: 2–24 letters/digits/space/._'- ; anything else (emails, links) is rejected. */
 export const nickname=(v:unknown):string|null|false=>{
  if(v==null||v==='')return null;
  if(typeof v!=='string')return false;
  const t=v.trim().replace(/\s+/g,' ');
  if(!t)return null;
+ if(/^(student|talaba|студент)\s*\d+$/iu.test(t))return false; // would look like the numbered fallback label
  return /^[\p{L}\p{N}][\p{L}\p{N} ._'-]{0,22}[\p{L}\p{N}.]$/u.test(t)?t:false;
 };

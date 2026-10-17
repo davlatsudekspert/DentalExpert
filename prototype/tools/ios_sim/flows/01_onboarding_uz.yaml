@@ -1,0 +1,41 @@
+appId: uz.dentalexpert.app
+name: "(a) Fresh install: language -> Uzbek -> roles -> sign-up screen"
+tags:
+  - smoke
+# Safe against any API, including production: it only opens screens and never submits the sign-up form.
+---
+- launchApp:
+    clearState: true
+    stopApp: true
+- extendedWaitUntil:
+    visible: "Choose your language"
+    timeout: 30000
+- assertVisible: "English.*"
+- assertVisible: "Русский.*"
+- assertVisible: "O.zbekcha.*"
+- takeScreenshot: onboarding-01-language
+- tapOn: "O.zbekcha.*"
+- extendedWaitUntil:
+    visible: "Davom etish.*"
+    timeout: 10000
+- assertVisible: "Dental Expert bilan o.z yo.lingizni tanlang."
+- assertVisible: ".*Bemor.*"
+- assertVisible: ".*Stomatolog.*"
+- assertVisible: ".*Ustoz.*"
+- assertVisible: ".*Talaba.*"
+- takeScreenshot: onboarding-02-roles
+- tapOn: ".*Stomatolog.*"
+- takeScreenshot: onboarding-03-role-dentist
+- tapOn: "Davom etish.*"
+- extendedWaitUntil:
+    visible: "Hisob yaratish"
+    timeout: 15000
+- assertVisible: "Ism va familiya"
+- assertVisible: "Email manzilingiz"
+# Live API: "Kod yuborish" (email code). API unreachable or auth off: the labelled demo button.
+- extendedWaitUntil:
+    visible: "(Kod yuborish|Ro.yxatdan o.tish \\(demo\\)).*"
+    timeout: 30000
+- waitForAnimationToEnd:
+    timeout: 3000
+- takeScreenshot: onboarding-04-signup

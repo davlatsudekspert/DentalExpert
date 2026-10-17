@@ -30,8 +30,8 @@ export const onRequestGet:PagesFunction<Env>=async({request,env})=>{
  if(role==='owner'&&assignmentId){
   const {results:subs}=await env.DB.prepare(
    `SELECT m.member_no,m.nickname,s.answer,s.score,s.total,s.submitted_at FROM class_members m
-    LEFT JOIN class_submissions s ON s.user_id=m.user_id AND s.assignment_id=? WHERE m.group_id=? ORDER BY m.member_no`
-  ).bind(assignmentId,groupId).all<Row>();
+    LEFT JOIN class_submissions s ON s.user_id=m.user_id AND s.assignment_id=(SELECT id FROM class_assignments WHERE id=? AND group_id=?) WHERE m.group_id=? ORDER BY m.member_no`
+  ).bind(assignmentId,groupId,groupId).all<Row>();
   members=subs.map(r=>({no:r.member_no,nickname:r.nickname,answer:r.answer,score:r.score,total:r.total,submittedAt:r.submitted_at}));
  }
  return json({role,assignments,members},200,noStore);
@@ -52,11 +52,12 @@ export const onRequestPost:PagesFunction<Env>=async({request,env})=>{
  if(kind==='quiz'&&(!/^[a-z0-9-]{3,60}$/.test(deckId)||!key))return json({error:'deck_required'},400,noStore);
  const due=clean(b.data.dueDate,10);
  if(due&&!/^\d{4}-\d{2}-\d{2}$/.test(due))return json({error:'bad_date'},400,noStore);
- const n=await env.DB.prepare(`SELECT COUNT(*) AS n FROM class_assignments WHERE group_id=?`).bind(groupId).first<{n:number}>();
- if((n?.n||0)>=MAX_ASSIGNMENTS)return json({error:'too_many'},429,noStore);
  const id=newId();
- await env.DB.prepare(`INSERT INTO class_assignments (id,group_id,kind,title,body,deck_id,answer_key,due_date) VALUES (?,?,?,?,?,?,?,?)`)
-  .bind(id,groupId,kind,title,text,deckId||null,key?JSON.stringify(key):null,due||null).run();
+ // Check and insert in one statement so parallel requests cannot exceed the limit.
+ const ins=await env.DB.prepare(`INSERT INTO class_assignments (id,group_id,kind,title,body,deck_id,answer_key,due_date)
+  SELECT ?,?,?,?,?,?,?,? WHERE (SELECT COUNT(*) FROM class_assignments WHERE group_id=?)<?`)
+  .bind(id,groupId,kind,title,text,deckId||null,key?JSON.stringify(key):null,due||null,groupId,MAX_ASSIGNMENTS).run();
+ if(!ins.meta.changes)return json({error:'too_many'},429,noStore);
  return json({assignment:{id,kind,title}},201,noStore);
 };
 

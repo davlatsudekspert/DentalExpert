@@ -1,0 +1,35 @@
+"""Admin UI: the owner sees the panel, a normal user does not; a user files a complaint that the admin then resolves."""
+from playwright.sync_api import sync_playwright
+import os,json,time
+BASE='http://127.0.0.1:8788';OUT=os.environ.get('SIM_OUT','/tmp/sim')
+def check(n,c):print(('PASS ' if c else 'FAIL ')+n);assert c,n
+def mk(b,email,role,name):
+    ctx=b.new_context(viewport={'width':430,'height':932},device_scale_factor=2,is_mobile=True,has_touch=True)
+    post=lambda path,body:ctx.request.post(BASE+path,data=json.dumps(body),headers={'content-type':'application/json'})
+    r=post('/api/auth/request-code',{'email':email,'name':name,'role':role,'lang':'uz'}).json()
+    post('/api/auth/verify',{'email':email,'code':r['devCode']})
+    return ctx,ctx.new_page()
+with sync_playwright() as p:
+    b=p.chromium.launch(executable_path=os.environ['CHROMIUM_PATH'],args=['--no-sandbox'])
+    uc,up=mk(b,f'u+{time.time_ns()}@example.com','patient','Oddiy Foydalanuvchi')
+    up.goto(BASE+'/?screen=settings&lang=uz');up.wait_for_selector('.account-session');up.wait_for_timeout(500)
+    check('normal user has no admin button',up.get_by_role('button',name='Admin panel').count()==0)
+    check('no password rows in settings',up.locator('.screen').get_by_text('Parol',exact=False).count()==0)
+    up.get_by_role('button',name='Shikoyat yoki murojaat yuborish').click()
+    up.get_by_label('Xabaringiz').fill('E2E: shifokor manzili noto‘g‘ri ko‘rsatilgan');up.get_by_role('button',name='Yuborish',exact=True).click();up.wait_for_timeout(700)
+    check('complaint accepted',up.get_by_text('Murojaatingiz qabul qilindi').count()==1)
+    up.screenshot(path=OUT+'/a1-report-sent.png')
+    ac,ap=mk(b,'davlatsudekspert@gmail.com','patient','Egasi')
+    ap.goto(BASE+'/?screen=settings&lang=uz');ap.wait_for_selector('.account-session');ap.wait_for_timeout(500)
+    ap.get_by_role('button',name='Admin panel').click();ap.wait_for_timeout(900)
+    check('admin sees stats',ap.get_by_text('Jami foydalanuvchi').count()==1 and ap.get_by_text('App Store Connect').count()>=1)
+    ap.screenshot(path=OUT+'/a2-admin-stats.png',full_page=True)
+    ap.get_by_role('button',name='Shikoyatlar',exact=False).click();ap.wait_for_timeout(700)
+    check('admin sees the complaint',ap.get_by_text('E2E: shifokor manzili').count()>=1)
+    ap.screenshot(path=OUT+'/a3-admin-reports.png')
+    ap.get_by_role('button',name='Hal qilindi deb belgilash').first.click();ap.wait_for_timeout(700)
+    ap.get_by_role('button',name='Foydalanuvchilar').click();ap.get_by_placeholder('Email yoki ism').fill('Oddiy');ap.wait_for_timeout(900)
+    check('admin finds the user',ap.get_by_text('Oddiy Foydalanuvchi').count()>=1)
+    ap.screenshot(path=OUT+'/a4-admin-users.png')
+    b.close()
+print('ADMIN E2E OK')

@@ -1,0 +1,23 @@
+appId: uz.dentalexpert.app
+name: Settings -> sign out
+# env: SHOT_PREFIX, EMAIL (shown in settings while signed in; emails are generated without regex characters).
+---
+- tapOn: "Profil"              # bottom navigation (aria-label)
+- extendedWaitUntil:
+    visible: "Sozlamalar"
+    timeout: 10000
+- takeScreenshot: ${SHOT_PREFIX}-90-settings
+- scrollUntilVisible:
+    element:
+      text: "Chiqish"
+    direction: DOWN
+    timeout: 20000
+    centerElement: true
+- assertVisible: "${EMAIL}"
+- takeScreenshot: ${SHOT_PREFIX}-91-settings-account
+- tapOn: "Chiqish"
+- extendedWaitUntil:
+    visible: "Hisobingiz bormi.*"
+    timeout: 15000
+- assertVisible: "Hisob yaratish.*"
+- takeScreenshot: ${SHOT_PREFIX}-92-signed-out

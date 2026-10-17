@@ -9,21 +9,21 @@ type LayerKey='enamel'|'dentin'|'pulp'|'vessels'|'root';
 const T={
  uz:{title:'3D tish atlasi',hint:'Aylantirish uchun suring · qatlamni bosing',explode:'Ajratish',assemble:'Yig‘ish',reset:'Boshlang‘ich',close:'Yopish',
   layers:{enamel:['Emal','Tojni qoplaydigan eng qattiq to‘qima. Tirik hujayralari yo‘q, shuning uchun o‘zi tiklanmaydi.'],
-   dentin:['Dentin','Tishning asosiy qismi, emal va ildiz ostida. Mayda dentin kanalchalari bor.'],
+   dentin:['Dentin','Tishning asosiy qismi, emal va sement ostida. Mayda dentin kanalchalari bor.'],
    pulp:['Pulpa','Tish markazidagi yumshoq to‘qima: tishni oziqlantiradi va sezgi beradi.'],
    vessels:['Qon tomirlar va nervlar','Qizil — arteriyalar (qon keltiradi), ko‘k — venalar (qon olib ketadi), sariq — nerv (sezgi).'],
    root:['Ildiz','Ildiz yuzasi sement bilan qoplangan; boylamlar shunga birikib, tishni jag suyagiga ushlaydi.']},
   note:'Ta’limiy tasvir: tomir va nervlar sxematik. Klinik ko‘rsatma emas.',nowebgl:'Bu qurilmada 3D ishlamadi. Rasmli atlas ko‘rsatilmoqda.'},
  ru:{title:'3D-атлас зуба',hint:'Вращайте жестом · нажмите на слой',explode:'Разделить',assemble:'Собрать',reset:'Сброс',close:'Закрыть',
   layers:{enamel:['Эмаль','Самая твёрдая ткань, покрывающая коронку. Не содержит живых клеток и не восстанавливается.'],
-   dentin:['Дентин','Основная часть зуба под эмалью и корнем. Пронизан мельчайшими канальцами.'],
+   dentin:['Дентин','Основная часть зуба под эмалью и цементом корня. Пронизан мельчайшими канальцами.'],
    pulp:['Пульпа','Мягкая ткань в центре зуба: питает зуб и даёт чувствительность.'],
    vessels:['Сосуды и нервы','Красные — артерии (приносят кровь), синие — вены (отводят кровь), жёлтые — нерв (чувствительность).'],
    root:['Корень','Поверхность корня покрыта цементом; к нему крепятся связки, удерживающие зуб в челюсти.']},
   note:'Учебная иллюстрация: сосуды и нервы схематичны. Не клиническое руководство.',nowebgl:'3D недоступно на этом устройстве. Показан фото-атлас.'},
  en:{title:'3D tooth atlas',hint:'Drag to rotate · tap a layer',explode:'Explode',assemble:'Assemble',reset:'Reset',close:'Close',
   layers:{enamel:['Enamel','The hardest tissue, covering the crown. It has no living cells, so it cannot repair itself.'],
-   dentin:['Dentin','The main body of the tooth under the enamel and root, threaded with tiny tubules.'],
+   dentin:['Dentin','The main body of the tooth under the enamel and the root cementum, threaded with tiny tubules.'],
    pulp:['Pulp','Soft tissue in the centre of the tooth: it nourishes the tooth and provides sensation.'],
    vessels:['Vessels & nerves','Red: arteries (bring blood). Blue: veins (carry it away). Yellow: nerve (sensation).'],
    root:['Root','The root surface is covered by cementum; ligaments attach to it and hold the tooth in the jaw.']},
@@ -44,7 +44,7 @@ const GLOW_COLOR:Partial<Record<LayerKey,number>>={enamel:0x9fdcff,dentin:0xffd2
 
 const asset=(n:string)=>`/atlas3d/${n}.webp`;
 
-function webglOk(){try{const c=document.createElement('canvas');return !!(c.getContext('webgl2')||c.getContext('webgl'))}catch{return false}}
+function webglOk(){try{const c=document.createElement('canvas');const gl=(c.getContext('webgl2')||c.getContext('webgl')) as WebGLRenderingContext|null;gl?.getExtension('WEBGL_lose_context')?.loseContext();return !!gl}catch{return false}}
 
 export default function Atlas3D({lang,onClose}:{lang:Lang;onClose:()=>void}){
  const t=T[lang];
@@ -204,8 +204,8 @@ export default function Atlas3D({lang,onClose}:{lang:Lang;onClose:()=>void}){
 
   return()=>{disposed=true;cancelAnimationFrame(raf);window.clearTimeout(introTimer);ro.disconnect();
    el.removeEventListener('pointerdown',down);el.removeEventListener('pointermove',move);el.removeEventListener('pointerup',up);el.removeEventListener('pointercancel',up);el.removeEventListener('wheel',wheel);
-   scene.traverse(o=>{const m=o as THREE.Mesh;if(m.isMesh){m.geometry.dispose();const mt=m.material as THREE.Material&{map?:THREE.Texture};mt.map?.dispose();mt.dispose()}});
-   renderer.dispose();renderer.domElement.remove()};
+   scene.traverse(o=>{const m=o as THREE.Mesh;if(m.isMesh){m.geometry.dispose();const mt=m.material as THREE.Material&{map?:THREE.Texture;uniforms?:Record<string,{value:unknown}>};mt.map?.dispose();if(mt.uniforms)Object.values(mt.uniforms).forEach(u=>{const v=u.value as THREE.Texture|undefined;if(v&&(v as THREE.Texture).isTexture)v.dispose()});mt.dispose()}});
+   renderer.dispose();renderer.forceContextLoss();renderer.domElement.remove()};
  },[]);
 
  useEffect(()=>{const k=(e:KeyboardEvent)=>{if(e.key==='Escape')onClose()};window.addEventListener('keydown',k);const o=document.body.style.overflow;document.body.style.overflow='hidden';return()=>{window.removeEventListener('keydown',k);document.body.style.overflow=o}},[onClose]);

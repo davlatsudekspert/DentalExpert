@@ -1,0 +1,227 @@
+name: iOS Simulator test
+
+# Builds the app for the iOS Simulator (no signing, no Apple secrets), drives it with Maestro and uploads
+# screenshots, a video, the Maestro reports and the simulator log. How to run it: prototype/IOS_SIMULATOR_TEST.md.
+#
+# Two modes:
+#  * sign_in_flow = false (default): the build talks to `api_base` (default: production) and only flow (a) runs:
+#    language -> Uzbek -> roles -> sign-up screen. Nothing is submitted, so no account is created and no email sent.
+#  * sign_in_flow = true: the build talks to a throwaway API started on the runner itself
+#    (`wrangler pages dev` + local D1 + AUTH_DEV_ECHO=1, behind tools/ios_sim/e2e_proxy.mjs on 127.0.0.1:8789).
+#    The one-time code is echoed by the local API instead of emailed, so flows (a) and (b) run end to end:
+#    dentist, teacher, student. `api_base` is ignored in this mode: real sign-in is never driven against a live API.
+
+on:
+  workflow_dispatch:
+    inputs:
+      sign_in_flow:
+        description: "Also run the full sign-in flows (dentist, teacher, student) against a local API on the runner"
+        type: boolean
+        default: false
+      api_base:
+        description: "API for the build when sign_in_flow is off (e.g. a staging Pages URL)"
+        type: string
+        default: https://dental-expert.pages.dev
+      test_email:
+        description: "Base address for the test accounts (local API only, no email is sent); dentist/teacher/student variants are derived"
+        type: string
+        default: maestro@example.test
+      device:
+        description: "Preferred iPhone model on the newest installed iOS runtime (falls back to another iPhone there)"
+        type: string
+        default: iPhone 16
+      maestro_version:
+        description: "Maestro CLI version"
+        type: string
+        default: 2.10.0
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ios-simulator-test-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  simulator:
+    runs-on: macos-latest
+    timeout-minutes: 90
+    defaults:
+      run:
+        working-directory: prototype
+    env:
+      OUT_DIR: ${{ github.workspace }}/ios-sim-results
+      MAESTRO_CLI_NO_ANALYTICS: "1"
+      MAESTRO_CLI_ANALYSIS_NOTIFICATION_DISABLED: "true"
+      WRANGLER_SEND_METRICS: "false"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: maxim-lobanov/setup-xcode@v1
+        with:
+          xcode-version: latest-stable
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: prototype/package-lock.json
+      - uses: actions/setup-java@v4   # Maestro needs Java 17+
+        with:
+          distribution: temurin
+          java-version: 17
+
+      - name: Choose the API for this build
+        id: api
+        env:
+          SIGN_IN_FLOW: ${{ inputs.sign_in_flow }}
+          API_BASE: ${{ inputs.api_base }}
+        run: |
+          mkdir -p "$OUT_DIR/logs"
+          if [ "$SIGN_IN_FLOW" = "true" ]; then
+            echo "mode=local" >> "$GITHUB_OUTPUT"
+            echo "base=http://127.0.0.1:8789" >> "$GITHUB_OUTPUT"
+            if [ "$API_BASE" != "https://dental-expert.pages.dev" ]; then
+              echo "::notice::sign_in_flow is on, so api_base ($API_BASE) is ignored; the build uses the local API on the runner."
+            fi
+            echo "Sign-in flows: ON (local API on the runner, codes are echoed, no email is sent)"
+          else
+            BASE="${API_BASE%/}"
+            if ! printf '%s' "$BASE" | grep -Eq '^https://[A-Za-z0-9.-]+(:[0-9]+)?$'; then
+              echo "::error::api_base must look like https://host (got: $API_BASE)"; exit 1
+            fi
+            echo "mode=remote" >> "$GITHUB_OUTPUT"
+            echo "base=$BASE" >> "$GITHUB_OUTPUT"
+            echo "Sign-in flows: OFF (only the onboarding flow runs; it never submits the form). API: $BASE"
+          fi
+
+      - name: Boot the simulator
+        env:
+          SIM_DEVICE: ${{ inputs.device }}
+        run: |
+          xcrun simctl list runtimes available
+          tools/ios_sim/boot_simulator.sh
+
+      - run: npm ci
+      - name: Build web assets
+        run: npm run build
+        env:
+          VITE_API_BASE: ${{ steps.api.outputs.base }}
+          # No Google/Apple client ids: the simulator test uses the email code only (OAuth buttons stay hidden).
+      - run: npx cap sync ios
+
+      - name: Build for the iOS Simulator (unsigned)
+        env:
+          API_MODE: ${{ steps.api.outputs.mode }}
+        run: |
+          PLIST=ios/App/App/Info.plist
+          if [ "$API_MODE" = "local" ]; then
+            # Runner-only, never committed: let this test build reach http://127.0.0.1 (the local API).
+            # The file is restored right after the build.
+            cp "$PLIST" "$RUNNER_TEMP/Info.plist.orig"
+            PB=/usr/libexec/PlistBuddy
+            $PB -c "Add :NSAppTransportSecurity dict" "$PLIST" 2>/dev/null || true
+            for KEY in NSAllowsLocalNetworking NSAllowsArbitraryLoadsInWebContent; do
+              $PB -c "Set :NSAppTransportSecurity:$KEY true" "$PLIST" 2>/dev/null \
+                || $PB -c "Add :NSAppTransportSecurity:$KEY bool true" "$PLIST"
+            done
+          fi
+          ARCH="$(uname -m)"   # arm64 on Apple silicon runners, x86_64 on Intel
+          DERIVED="$RUNNER_TEMP/DerivedData"
+          LOG="$OUT_DIR/logs/xcodebuild.log"
+          echo "Building for the $ARCH simulator SDK; full log: logs/xcodebuild.log in the artifact"
+          set +e
+          xcodebuild -project ios/App/App.xcodeproj -scheme App -configuration Debug \
+            -sdk iphonesimulator -destination 'generic/platform=iOS Simulator' \
+            -derivedDataPath "$DERIVED" \
+            ARCHS="$ARCH" ONLY_ACTIVE_ARCH=NO \
+            CODE_SIGNING_ALLOWED=NO CODE_SIGNING_REQUIRED=NO CODE_SIGN_IDENTITY="" \
+            GOOGLE_IOS_URL_SCHEME=uz.dentalexpert.app.google-unset \
+            build > "$LOG" 2>&1
+          RC=$?
+          set -e
+          [ -f "$RUNNER_TEMP/Info.plist.orig" ] && cp "$RUNNER_TEMP/Info.plist.orig" "$PLIST"
+          if [ $RC -ne 0 ]; then
+            grep -E "error:|BUILD FAILED" "$LOG" | head -n 40 || true
+            tail -n 60 "$LOG"
+            echo "::error::xcodebuild failed (exit $RC)"; exit $RC
+          fi
+          APP="$DERIVED/Build/Products/Debug-iphonesimulator/App.app"
+          [ -d "$APP" ] || APP="$(find "$DERIVED/Build/Products" -maxdepth 2 -name '*.app' -path '*iphonesimulator*' | head -n 1)"
+          [ -d "$APP" ] || { echo "::error::Built .app not found under $DERIVED/Build/Products"; exit 1; }
+          echo "APP_PATH=$APP" >> "$GITHUB_ENV"
+          /usr/libexec/PlistBuddy -c "Print :CFBundleIdentifier" "$APP/Info.plist"
+          lipo -info "$APP/App" || true
+
+      - name: Install Maestro ${{ inputs.maestro_version }}
+        env:
+          MAESTRO_VERSION: ${{ inputs.maestro_version }}
+        run: |
+          curl -fsSL "https://get.maestro.mobile.dev" | bash
+          echo "$HOME/.maestro/bin" >> "$GITHUB_PATH"
+          "$HOME/.maestro/bin/maestro" --version
+
+      - name: Start the local API (wrangler + local D1 + code-echo proxy)
+        if: steps.api.outputs.mode == 'local'
+        env:
+          LOG_DIR: ${{ github.workspace }}/ios-sim-results/logs/local-api
+          PERSIST_DIR: ${{ runner.temp }}/local-d1
+        run: tools/ios_sim/start_local_api.sh
+
+      - name: Test identities
+        if: steps.api.outputs.mode == 'local'
+        env:
+          TEST_EMAIL: ${{ inputs.test_email }}
+          RUN_ID: ${{ github.run_number }}-${{ github.run_attempt }}
+        run: |
+          BASE="${TEST_EMAIL:-maestro@example.test}"
+          case "$BASE" in *@*.*) ;; *) echo "::error::test_email must look like name@domain.tld"; exit 1;; esac
+          # No regex characters in the generated addresses: the flows also assert them on the settings screen.
+          LOCAL="$(printf '%s' "${BASE%@*}" | sed 's/+.*//' | tr '[:upper:]' '[:lower:]' | tr -cd 'a-z0-9-')"
+          DOMAIN="$(printf '%s' "${BASE#*@}" | tr '[:upper:]' '[:lower:]' | tr -cd 'a-z0-9.-')"
+          [ -n "$LOCAL" ] || LOCAL=maestro
+          RUN="$(printf '%s' "$RUN_ID" | tr -cd '0-9-')"
+          {
+            echo "DENTIST_EMAIL=${LOCAL}-dentist-${RUN}@${DOMAIN}"
+            echo "TEACHER_EMAIL=${LOCAL}-teacher-${RUN}@${DOMAIN}"
+            echo "STUDENT_EMAIL=${LOCAL}-student-${RUN}@${DOMAIN}"
+            echo "GROUP_NAME=Maestro Guruh ${RUN}"
+            echo "E2E_PROXY=http://127.0.0.1:8789"
+            echo "QUIZ_OPTION_RE=$(node tools/ios_sim/quiz_regex.mjs uz)"
+          } >> "$GITHUB_ENV"
+          echo "Accounts: ${LOCAL}-{dentist,teacher,student}-${RUN}@${DOMAIN} (local D1 only)"
+
+      - name: Run Maestro flows (video recorded)
+        env:
+          API_MODE: ${{ steps.api.outputs.mode }}
+        run: |
+          FLOWS="tools/ios_sim/flows/01_onboarding_uz.yaml"
+          if [ "$API_MODE" = "local" ]; then
+            FLOWS="$FLOWS tools/ios_sim/flows/02_dentist.yaml tools/ios_sim/flows/03_teacher.yaml tools/ios_sim/flows/04_student.yaml"
+          fi
+          # shellcheck disable=SC2086
+          tools/ios_sim/run_flows.sh $FLOWS
+
+      - name: Stop the local API
+        if: always() && steps.api.outputs.mode == 'local'
+        env:
+          LOG_DIR: ${{ github.workspace }}/ios-sim-results/logs/local-api
+        run: tools/ios_sim/stop_local_api.sh
+
+      - name: Upload screenshots and video
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ios-simulator-screenshots-${{ github.run_number }}
+          path: |
+            ios-sim-results/screenshots
+            ios-sim-results/video
+            ios-sim-results/summary.md
+          if-no-files-found: warn
+          retention-days: 14
+      - name: Upload full results (Maestro reports, logs)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ios-simulator-results-${{ github.run_number }}
+          path: ios-sim-results
+          if-no-files-found: warn
+          retention-days: 14

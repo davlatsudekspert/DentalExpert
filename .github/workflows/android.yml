@@ -32,10 +32,28 @@ jobs:
         run: npm run build
         env:
           VITE_API_BASE: https://dental-expert.pages.dev
+          # Sign in with Google (see prototype/OAUTH_SETUP.md): a repository variable, or a secret of the same name.
+          # Empty is fine: the Google button is then hidden and email-code sign-in still works.
+          VITE_GOOGLE_WEB_CLIENT_ID: ${{ vars.VITE_GOOGLE_WEB_CLIENT_ID || secrets.VITE_GOOGLE_WEB_CLIENT_ID }}
       - run: npx cap sync android
+      - name: Optional stable debug signing key (Google Sign-In checks the APK's SHA-1)
+        env:
+          DEBUG_KEYSTORE_B64: ${{ secrets.ANDROID_DEBUG_KEYSTORE_B64 }}
+        run: |
+          # Without this secret Gradle makes a new random debug key on every run, so Google sign-in
+          # in CI test APKs only works when the secret is set and its SHA-1 is registered (OAUTH_SETUP.md).
+          if [ -n "$DEBUG_KEYSTORE_B64" ]; then
+            mkdir -p "$HOME/.android"
+            printf '%s' "$DEBUG_KEYSTORE_B64" | tr -d ' \r\n' | base64 -d > "$HOME/.android/debug.keystore"
+            echo "Using the ANDROID_DEBUG_KEYSTORE_B64 debug key."
+          fi
       - name: Assemble debug APK (debug-signed, installable for testing)
         working-directory: prototype/android
         run: ./gradlew assembleDebug --no-daemon
+      - name: Show the debug signing SHA-1 (public fingerprint, for the Google Cloud Android client)
+        run: |
+          SHA1=$(keytool -list -v -keystore "$HOME/.android/debug.keystore" -storepass android -alias androiddebugkey 2>/dev/null | sed -n 's/.*SHA1: //p')
+          echo "### Android debug signing SHA-1: \`${SHA1:-unknown}\`" >> "$GITHUB_STEP_SUMMARY"
       - uses: actions/upload-artifact@v4
         with:
           name: dental-expert-debug-apk

@@ -65,7 +65,7 @@ export async function sessionUser(env:Env,request:Request):Promise<SessionUser|n
  if(!token)return null;
  const row=await env.DB.prepare(
   `SELECT u.id,u.email,u.name,u.role,u.country_code,u.city_id,u.phone,u.workplace,u.bio FROM sessions s JOIN users u ON u.id=s.user_id
-   WHERE s.token_hash=? AND s.expires_at>datetime('now')`
+   WHERE s.token_hash=? AND s.expires_at>datetime('now') AND u.suspended_at IS NULL`
  ).bind(await sha256(token)).first<Record<string,string|null>>();
  return row?{id:row.id!,email:row.email!,name:row.name,role:row.role as Role,countryCode:row.country_code,cityId:row.city_id,phone:row.phone,workplace:row.workplace,bio:row.bio}:null;
 }
@@ -77,13 +77,29 @@ export async function createSession(env:Env,request:Request,userId:string){
  return {token,cookie:cookieHeader(request,token,SESSION_DAYS*86400)};
 }
 
+/** Profile shape returned by every sign-in endpoint. */
+export const USER_COLUMNS='id,email,name,role,country_code,city_id,phone,workplace,bio';
+export const profileOf=(u:Record<string,string|null>)=>({id:u.id,email:u.email,name:u.name,role:u.role,countryCode:u.country_code,cityId:u.city_id,phone:u.phone,workplace:u.workplace,bio:u.bio});
+
+/** Opens a session: native clients get the token in the body (stored on the device); browsers get an HttpOnly cookie. */
+export async function signedIn(env:Env,request:Request,user:Record<string,string|null>){
+ const blocked=await env.DB.prepare(`SELECT suspended_at FROM users WHERE id=?`).bind(user.id).first<{suspended_at:string|null}>();
+ if(blocked?.suspended_at)return json({error:'suspended'},403,'no-store');
+ const session=await createSession(env,request,user.id!);
+ const profile=profileOf(user);
+ if(isNativeClient(request))return json({user:profile,token:session.token},200,'no-store');
+ const res=json({user:profile},200,'no-store');
+ res.headers.append('set-cookie',session.cookie);
+ return res;
+}
+
 const mail={
  uz:{subject:'Dental Expert tasdiqlash kodi',body:(c:string)=>`Dental Expert tasdiqlash kodingiz: ${c}\nKod 10 daqiqa amal qiladi. Siz so‘ramagan bo‘lsangiz, bu xatni e’tiborsiz qoldiring.`},
  ru:{subject:'Код подтверждения Dental Expert',body:(c:string)=>`Ваш код подтверждения Dental Expert: ${c}\nКод действует 10 минут. Если вы его не запрашивали, проигнорируйте письмо.`},
  en:{subject:'Your Dental Expert verification code',body:(c:string)=>`Your Dental Expert verification code is ${c}\nIt expires in 10 minutes. If you did not request it, ignore this email.`}
 };
 export async function sendCodeEmail(env:Env,to:string,code:string,lang:string){
- const m=mail[lang as keyof typeof mail]||mail.en;
+ const m=Object.hasOwn(mail,lang)?mail[lang as keyof typeof mail]:mail.en;
  const res=await fetch('https://api.resend.com/emails',{
   method:'POST',
   headers:{authorization:`Bearer ${env.RESEND_API_KEY}`,'content-type':'application/json'},
