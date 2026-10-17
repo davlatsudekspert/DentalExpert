@@ -1,5 +1,5 @@
 {
-  "passed": 333,
+  "passed": 334,
   "checks": [
     "uz/splash: content",
     "uz/splash: no horizontal overflow",
@@ -305,9 +305,10 @@
     "edit reflected in account",
     "five navigation destinations",
     "featured atlas opens",
-    "three sample sponsored cards",
+    "four sample sponsored cards",
+    "four ads fit above mobile navigation",
     "sample sponsored profile opens",
-    "Fergana has three city ads",
+    "Fergana has four city ads",
     "Fergana has different sponsored doctors",
     "Fergana sponsor opens local profile",
     "doctor saved",

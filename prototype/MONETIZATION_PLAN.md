@@ -1,11 +1,11 @@
 # Dental Expert — tarif va homiylik joylari (taklif)
 
-Bu hujjat mahsulot qarori va keyingi kodlash uchun asos. **Hozircha haqiqiy to‘lov, obuna yoki reklama kampaniyasi yo‘q.** Hozirgi Asosiy sahifada mavjud uch demo shifokorga olib boradigan 3 ta aniq “Namuna reklama” kartasi bor; ular pul to‘langan joy deb taqdim etilmaydi. Bu ilk vizual namuna hali shahar bo‘yicha almashmaydi. Keyingi bosqichda Andijon va Farg‘ona uchun alohida namunalar va kampaniya modeli quriladi. Narxlar bozor sinovidan va to‘lov siyosati tekshiruvidan keyin e’lon qilinadi.
+Bu hujjat mahsulot qarori va keyingi kodlash uchun asos. **Hozircha haqiqiy to‘lov, obuna yoki reklama kampaniyasi yo‘q.** Hozirgi Asosiy sahifada Andijon va Farg‘onada to‘rttadan demo shifokorga olib boradigan 4 ta aniq “Namuna reklama” kartasi bor; ular pul to‘langan joy deb taqdim etilmaydi. Bu ilk vizual namuna tanlangan shaharga moslashadi; haqiqiy kampaniya modeli keyingi server bosqichi. Narxlar bozor sinovidan va to‘lov siyosati tekshiruvidan keyin e’lon qilinadi.
 
 ## Shahar bo‘yicha reklama
 
 - Har bir mamlakat+shahar juftligi uchun **ko‘pi bilan 5 ta faol homiy kampaniyasi** qabul qilinadi. Andijon va Farg‘ona alohida navbat; boshqa shahar reklamasi aralashmaydi.
-- Asosiy sahifada shu shaharning **ko‘pi bilan 3 ta kartasi** ko‘rinadi. 4–5-homiylar bir xil huquq bilan navbatga kiradi. Keyingi kirish/ko‘rishda navbat almashadi; bitta homiyga yashirin doimiy birinchi o‘rin berilmaydi. Agar faol homiy 3 tadan kam bo‘lsa faqat mavjudlari chiqadi.
+- Asosiy sahifada shu shaharning **ko‘pi bilan 4 ta kartasi** ko‘rinadi. 5-homiy bir xil huquq bilan navbatga kiradi. Keyingi kirish/ko‘rishda navbat almashadi; bitta homiyga yashirin doimiy birinchi o‘rin berilmaydi. Agar faol homiy 4 tadan kam bo‘lsa faqat mavjudlari chiqadi.
 - Sotib olinadigan muddatlar: **1, 3, 6 yoki 10 kun**. Boshlanish va tugash vaqti UTC’da saqlanadi, foydalanuvchiga shahar vaqtida ko‘rsatiladi. Muddat tugasa kampaniya avtomatik to‘xtaydi. Bir homiyning bir shaharda bir vaqtdagi takroriy kampaniyasi alohida joyni egallamaydi.
 - Narx formulasi uchun boshlang‘ich taklif: shaharning 1 kunlik bazaviy narxi **P** bo‘lsa, 1 kun = `1P`, 3 kun = `2.7P`, 6 kun = `5.1P`, 10 kun = `8P`. Bu 3/6/10 kun uchun taxminan 10/15/20% muddat chegirmasi beradi. **P summasi va valyutasi hali belgilanmagan**; shahar talabi va real natijalar o‘lchanmaguncha ekranga narx yozilmaydi. Narx, soliq, qaytarish, to‘xtatish va to‘lov kanali oldindan ko‘rsatiladi.
 - Real homiylikka faqat tasdiqlangan shifokor, faol klinika va tekshirilgan manzil ega bo‘ladi. Har kartada “Reklama” belgisi bor; homiylik reyting, klinik tavsiya yoki litsenziya tasdig‘ini sotib olmaydi. Pro tarif reklama joyini avtomatik bermaydi, reklama xaridi Pro obunasidan alohida.
@@ -29,7 +29,7 @@ Bu hujjat mahsulot qarori va keyingi kodlash uchun asos. **Hozircha haqiqiy to�
 
 ## Birinchi demo va keyingi bosqich
 
-1. Keyingi UI bosqichida mavjud uch kartali blokni shahar tanlash bilan Andijon va Farg‘onaning har biri uchun **3 tadan namunaviy reklama kartasi**ga bog‘la; har biri haqiqiy demo profilga olib borsin. Faqat 3 karta ko‘rinadi, to‘lov tugmasi yo‘q. Free/Pro taqqoslash sahifasi bo‘lsa “Reja — hozircha to‘lov ishlamaydi” deb belgilansin.
+1. Keyingi UI bosqichida mavjud to‘rt kartali blokni shahar tanlash bilan Andijon va Farg‘onaning har biri uchun **4 tadan namunaviy reklama kartasi**ga bog‘lash bajarildi; har biri haqiqiy demo profilga olib borsin. Faqat 4 karta ko‘rinadi, to‘lov tugmasi yo‘q. Free/Pro taqqoslash sahifasi bo‘lsa “Reja — hozircha to‘lov ishlamaydi” deb belgilansin.
 2. Real ishga tushirishdan avval litsenziya tekshiruvi, backend kampaniya navbati, shahar bo‘yicha 5 joy limiti, qabul hisoblagichi, 3 oylik sinov sanalari, billing, hisob-faktura/soliq, bekor qilish va qaytarish jarayonlari qurilsin. Narxlar bozor va shahar kesimida tekshirilsin.
 3. Native ilova ichida Pro yoki reklama joyini sotishdan oldin Apple/Google’ning **raqamli xizmat uchun to‘lov** qoidalari va kerakli billing usuli chiqarish sanasidagi rasmiy matn bilan tekshirilsin. Bemorning real klinik xizmat to‘lovi reklama/obunadan alohida mahsulot oqimi.
 

@@ -13,12 +13,12 @@ export default function SponsoredDemo({lang,doctors,onOpen}:{lang:Lang,doctors:D
  return <section className="sponsored-demo" aria-label={t.title}>
   <div className="sponsored-heading"><div><span className="eyebrow">DENTAL EXPERT</span><h2>{t.title}</h2></div><span>{t.note}</span></div>
   <div className="sponsored-track">
-   {doctors.slice(0,3).map(doctor=><button className="sponsored-card" key={doctor.id} onClick={()=>onOpen(doctor.id)}>
+   {doctors.slice(0,4).map(doctor=><button className="sponsored-card" key={doctor.id} onClick={()=>onOpen(doctor.id)}>
     <div className="sponsored-photo"><DemoAvatar doctor={doctor}/></div>
-    <span className="sponsored-badge">{t.badge}</span>
+    <div className="sponsored-content"><span className="sponsored-badge">{t.badge}</span>
     <strong>{doctor.name}</strong>
-    <small>{cityName(doctor.cityId,lang)} · {doctor.specialty[lang]}</small>
-    <span className="sponsored-open">{t.profile}<ArrowUpRight size={15}/></span>
+    <small>{cityName(doctor.cityId,lang)} · {doctor.specialty[lang]}</small></div>
+    <span className="sponsored-open" aria-label={t.profile}><ArrowUpRight size={14}/></span>
    </button>)}
   </div>
  </section>
