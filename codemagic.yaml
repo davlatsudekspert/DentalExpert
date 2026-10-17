@@ -1,0 +1,43 @@
+# Codemagic CI: builds the Capacitor iOS app on a cloud Mac and uploads it to TestFlight. No local Mac needed.
+# One-time setup: see prototype/IOS_TESTFLIGHT.md. The integration name below must match Codemagic > Team settings > Integrations.
+workflows:
+  ios-testflight:
+    name: iOS TestFlight
+    instance_type: mac_mini_m2
+    max_build_duration: 60
+    integrations:
+      app_store_connect: dental-expert-asc
+    environment:
+      ios_signing:
+        distribution_type: app_store
+        bundle_identifier: uz.dentalexpert.app
+      node: 22
+      xcode: latest
+      vars:
+        VITE_API_BASE: https://dental-expert.pages.dev
+    scripts:
+      - name: Build web assets
+        script: |
+          cd prototype
+          npm ci
+          npm run build
+      - name: Sync Capacitor iOS project
+        script: |
+          cd prototype
+          npx cap sync ios
+      - name: Apply signing profiles
+        script: xcode-project use-profiles
+      - name: Set build number
+        script: |
+          cd prototype/ios/App
+          sed -i '' "s/CURRENT_PROJECT_VERSION = 1;/CURRENT_PROJECT_VERSION = $BUILD_NUMBER;/g" App.xcodeproj/project.pbxproj
+      - name: Build signed .ipa
+        script: |
+          cd prototype/ios/App
+          xcode-project build-ipa --project App.xcodeproj --scheme App
+    artifacts:
+      - prototype/ios/App/build/ios/ipa/*.ipa
+    publishing:
+      app_store_connect:
+        auth: integration
+        submit_to_testflight: true
