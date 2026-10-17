@@ -1,6 +1,7 @@
 import {MapPin} from 'lucide-react';
 import Portrait from './Portrait';
 import clinicianSheet from '../assets/clinician-contact-sheet.png?inline';
+import headscarfSheet from '../assets/headscarf-clinicians.png?inline';
 import {countryCodes} from './countryCodes';
 import {demoCities,type DemoDoctor,type Lang} from './discoveryData';
 
@@ -12,13 +13,16 @@ const words={
 
 // Fictional demo profiles use cells from one local photo sheet.
 const photoIndex:Record<string,number>={
- umida:1,dilnoza:4,sardor:0,nodira:6,shahnoza:9,emma:11,
- 'tashkent-1':12,'tashkent-2':7,'tashkent-3':3,'tashkent-4':10,
- 'dubai-2':14,'dubai-3':15,'dubai-4':1
+ umid:13,dilnoza:4,sardor:0,shavkat:15,emma:11,
+ 'tashkent-1':12,'tashkent-2':7,'tashkent-4':10,
+ 'dubai-2':8,'dubai-3':15
 };
+const headscarfIndex:Record<string,number>={malika:0,nodira:1,'tashkent-3':2,'dubai-4':3};
 
 export function DemoAvatar({doctor,large=false}:{doctor:DemoDoctor;large?:boolean}){
  if(doctor.portrait!==undefined)return <Portrait person={doctor.portrait} large={large}/>;
+ const scarf=headscarfIndex[doctor.id];
+ if(scarf!==undefined)return <span className={'demo-avatar photo headscarf '+(large?'large':'')} role="img" aria-label={doctor.name} style={{backgroundImage:`url(${headscarfSheet})`,backgroundSize:'200% 200%',backgroundPosition:`${(scarf%2)*100}% ${Math.floor(scarf/2)*100}%`,backgroundRepeat:'no-repeat'}}/>;
  const index=photoIndex[doctor.id];
  if(index!==undefined)return <span className={'demo-avatar photo '+(large?'large':'')} role="img" aria-label={doctor.name} style={{backgroundImage:`url(${clinicianSheet})`,backgroundSize:'400% 400%',backgroundPosition:`${(index%4)*100/3}% ${Math.floor(index/4)*100/3}%`,backgroundRepeat:'no-repeat'}}/>;
  return <span className={'demo-avatar '+(large?'large':'')} aria-label={doctor.name}>{doctor.initials}</span>;
