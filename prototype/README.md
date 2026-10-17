@@ -32,7 +32,7 @@ Build natijasi `dist/` ichida. `demo.html` esa shu buildning bitta faylga yig‘
 - Oddiy ochilganda premium ro‘yxatdan o‘tish/kirish ekrani chiqadi. `?screen=auth&lang=uz`, `?screen=profile&lang=en` kabi parametrlar ekranlarni bevosita ochadi.
 - Onboarding yoki Sozlamalardan UZ / RU / EN tilini tanlang.
 - Rol tanlash → premium kirish ekrani → ro‘yxatdan o‘tish yoki demo kirish → rol bosh sahifasi.
-- Bemorning Asosiy sahifasida 4 ta “Namuna reklama” kartasi 2×2 ko‘rinishda va mavjud demo profilga ochiladi. Hozir Andijon va Farg‘onada tanlangan shaharga mos to‘rttadan namuna karta chiqadi; haqiqiy kampaniya, to‘lov yoki Free/Pro obuna ishlamaydi; keyingi oqim va tarif taklifi `MONETIZATION_PLAN.md`da.
+- Bemorning Asosiy sahifasida 4 ta “Namuna reklama” kartasi 2×2 ko‘rinishda va mavjud demo profilga ochiladi. Hozir Andijon, Farg‘ona, Toshkent va Dubayda tanlangan shaharga mos to‘rttadan namuna karta chiqadi; haqiqiy kampaniya, to‘lov yoki Free/Pro obuna ishlamaydi; keyingi oqim va tarif taklifi `MONETIZATION_PLAN.md`da.
 - Ustoz/talaba kursida namunaviy haftalik reja → rasmli tish qatlamlari darsi → 3 savollik vizual test → o‘zbekcha PPTX → yozma amaliy holat va namunaviy izoh ishlaydi. Bu haqiqiy bemor yoki ustozga yuborish emas; tashqi darslik nashri/beti hali tasdiqlanmagan. Tafsilotlar [`SOURCE_REGISTER.md`](SOURCE_REGISTER.md)da.
 - Shifokor kartasi → profil → qabul → kun / vaqt → demo tasdiq.
 - Odontogrammada 32 ta FDI raqami bor; tishni tanlab anatomiya ekraniga o‘ting.

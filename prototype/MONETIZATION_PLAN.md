@@ -1,6 +1,6 @@
 # Dental Expert — tarif va homiylik joylari (taklif)
 
-Bu hujjat mahsulot qarori va keyingi kodlash uchun asos. **Hozircha haqiqiy to‘lov, obuna yoki reklama kampaniyasi yo‘q.** Hozirgi Asosiy sahifada Andijon va Farg‘onada to‘rttadan demo shifokorga olib boradigan 4 ta aniq “Namuna reklama” kartasi bor; ular pul to‘langan joy deb taqdim etilmaydi. Bu ilk vizual namuna tanlangan shaharga moslashadi; haqiqiy kampaniya modeli keyingi server bosqichi. Narxlar bozor sinovidan va to‘lov siyosati tekshiruvidan keyin e’lon qilinadi.
+Bu hujjat mahsulot qarori va keyingi kodlash uchun asos. **Hozircha haqiqiy to‘lov, obuna yoki reklama kampaniyasi yo‘q.** Hozirgi Asosiy sahifada Andijon, Farg‘ona, Toshkent va Dubayda to‘rttadan demo shifokorga olib boradigan 4 ta aniq “Namuna reklama” kartasi bor; ular pul to‘langan joy deb taqdim etilmaydi. Bu ilk vizual namuna tanlangan shaharga moslashadi; haqiqiy kampaniya modeli keyingi server bosqichi. Narxlar bozor sinovidan va to‘lov siyosati tekshiruvidan keyin e’lon qilinadi.
 
 ## Shahar bo‘yicha reklama
 
@@ -29,7 +29,7 @@ Bu hujjat mahsulot qarori va keyingi kodlash uchun asos. **Hozircha haqiqiy to�
 
 ## Birinchi demo va keyingi bosqich
 
-1. Keyingi UI bosqichida mavjud to‘rt kartali blokni shahar tanlash bilan Andijon va Farg‘onaning har biri uchun **4 tadan namunaviy reklama kartasi**ga bog‘lash bajarildi; har biri haqiqiy demo profilga olib borsin. Faqat 4 karta ko‘rinadi, to‘lov tugmasi yo‘q. Free/Pro taqqoslash sahifasi bo‘lsa “Reja — hozircha to‘lov ishlamaydi” deb belgilansin.
+1. Keyingi UI bosqichida mavjud to‘rt kartali blokni shahar tanlash bilan to‘rtta demo shaharning har biri uchun **4 tadan namunaviy reklama kartasi**ga bog‘lash bajarildi; har biri haqiqiy demo profilga olib borsin. Faqat 4 karta ko‘rinadi, to‘lov tugmasi yo‘q. Free/Pro taqqoslash sahifasi bo‘lsa “Reja — hozircha to‘lov ishlamaydi” deb belgilansin.
 2. Real ishga tushirishdan avval litsenziya tekshiruvi, backend kampaniya navbati, shahar bo‘yicha 5 joy limiti, qabul hisoblagichi, 3 oylik sinov sanalari, billing, hisob-faktura/soliq, bekor qilish va qaytarish jarayonlari qurilsin. Narxlar bozor va shahar kesimida tekshirilsin.
 3. Native ilova ichida Pro yoki reklama joyini sotishdan oldin Apple/Google’ning **raqamli xizmat uchun to‘lov** qoidalari va kerakli billing usuli chiqarish sanasidagi rasmiy matn bilan tekshirilsin. Bemorning real klinik xizmat to‘lovi reklama/obunadan alohida mahsulot oqimi.
 

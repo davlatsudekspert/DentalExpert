@@ -1,5 +1,5 @@
 {
-  "passed": 334,
+  "passed": 336,
   "checks": [
     "uz/splash: content",
     "uz/splash: no horizontal overflow",
@@ -313,7 +313,9 @@
     "Fergana sponsor opens local profile",
     "doctor saved",
     "saved search filters locally",
-    "other country has no fake ads",
+    "Tashkent has four local sample ads",
+    "Dubai has four local sample ads",
+    "unsupported region has no invented local ads",
     "lesson includes downloadable PPTX",
     "lesson answer gives feedback",
     "lesson opens practice case",

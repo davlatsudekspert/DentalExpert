@@ -31,4 +31,23 @@ export const demoDoctors:DemoDoctor[]=[
  {id:'emma',name:'Dr. Emma Wilson',initials:'EW',cityId:'AE-DU',countryCode:'AE',clinic:'Dubai Dental Gallery',specialty:T('Ortodont','Ортодонт','Orthodontist'),bio:T('Xalqaro qidiruv qanday ishlashini ko‘rsatadigan Dubaydagi namunaviy profil.','Пример профиля в Дубае для демонстрации международного поиска.','Sample Dubai profile demonstrating international discovery.'),address:T('Dubay, markaziy hudud','Дубай, центральный район','Central Dubai'),languages:['EN','AR'],years:11,score:'4.9',services:[T('Ortodontik maslahat','Ортодонтическая консультация','Orthodontic consultation'),T('Nazorat ko‘rigi','Контрольный осмотр','Follow-up visit')]}
 ];
 
-export const sponsoredForCity=(cityId:string)=>['UZ-AN','UZ-FA'].includes(cityId)?demoDoctors.filter(x=>x.cityId===cityId).slice(0,4):[];
+const regionalProfile=(id:string,name:string,initials:string,cityId:CityId,countryCode:'UZ'|'AE',specialty:Translated):DemoDoctor=>({
+ id,name,initials,cityId,countryCode,specialty,
+ clinic:cityId==='UZ-TK'?'Tashkent Dental Studio · demo':'Dubai Smile Studio · demo',
+ bio:T('Bu shifokor va xizmatlar faqat dizayn prototipi uchun yaratilgan namunadir.','Этот врач и услуги — пример для дизайн-прототипа.','This clinician and the services are fictional design-prototype examples.'),
+ address:T(`${cityName(cityId,'uz')} · namuna manzil`,`${cityName(cityId,'ru')} · пример адреса`,`${cityName(cityId,'en')} · sample address`),
+ languages:countryCode==='UZ'?['UZ','RU','EN']:['EN','AR'],years:8,score:'4.8',
+ services:[T('Konsultatsiya','Консультация','Consultation'),T('Profilaktik ko‘rik','Профилактический осмотр','Preventive examination')]
+});
+
+demoDoctors.push(
+ regionalProfile('tashkent-1','Dr. Lola Abdullayeva','LA','UZ-TK','UZ',T('Terapevt stomatolog','Стоматолог-терапевт','General dentist')),
+ regionalProfile('tashkent-2','Dr. Bekzod Yunusov','BY','UZ-TK','UZ',T('Ortodont','Ортодонт','Orthodontist')),
+ regionalProfile('tashkent-3','Dr. Madina Rasulova','MR','UZ-TK','UZ',T('Bolalar stomatologi','Детский стоматолог','Pediatric dentist')),
+ regionalProfile('tashkent-4','Dr. Jasur Mirzayev','JM','UZ-TK','UZ',T('Implantolog','Имплантолог','Implant dentist')),
+ regionalProfile('dubai-2','Dr. Sara Malik','SM','AE-DU','AE',T('Terapevt stomatolog','Стоматолог-терапевт','General dentist')),
+ regionalProfile('dubai-3','Dr. Omar Hassan','OH','AE-DU','AE',T('Implantolog','Имплантолог','Implant dentist')),
+ regionalProfile('dubai-4','Dr. Lina Farah','LF','AE-DU','AE',T('Bolalar stomatologi','Детский стоматолог','Pediatric dentist'))
+);
+
+export const sponsoredForCity=(cityId:string)=>demoDoctors.filter(x=>x.cityId===cityId).slice(0,4);
