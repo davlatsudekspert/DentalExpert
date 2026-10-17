@@ -14,19 +14,19 @@ export type Drug={id:DrugId;pct:number;mgkg:number;max:number;epi:L|null;epiMgMl
 export const DRUGS:Drug[]=[
  {id:'lido',pct:2,mgkg:7.0,max:500,
   name:{uz:'Lidokain 2%',ru:'Лидокаин 2%',en:'Lidocaine 2%'},
-  epi:{uz:'epinefrin 1:100 000 bilan',ru:'с эпинефрином 1:100 000',en:'with epinephrine 1:100,000'},epiMgMl:0.01,epiRatio:'1:100 000'},
+  epi:{uz:'epinefrin 1:100 000 bilan',ru:'с эпинефрином 1:100 000',en:'with epinephrine 1:100,000'},epiMgMl:0.01,epiRatio:'1:100 000'},
  {id:'arti',pct:4,mgkg:7.0,max:500,
   name:{uz:'Artikain 4%',ru:'Артикаин 4%',en:'Articaine 4%'},
-  epi:{uz:'epinefrin 1:100 000 yoki 1:200 000 bilan',ru:'с эпинефрином 1:100 000 или 1:200 000',en:'with epinephrine 1:100,000 or 1:200,000'},epiMgMl:0.01,epiRatio:'1:100 000'},
+  epi:{uz:'epinefrin 1:100 000 yoki 1:200 000 bilan',ru:'с эпинефрином 1:100 000 или 1:200 000',en:'with epinephrine 1:100,000 or 1:200,000'},epiMgMl:0.01,epiRatio:'1:100 000'},
  {id:'mepi',pct:3,mgkg:6.6,max:400,
   name:{uz:'Mepivakain 3%',ru:'Мепивакаин 3%',en:'Mepivacaine 3%'},
   epi:null,epiMgMl:null,epiRatio:null},
  {id:'prilo',pct:4,mgkg:8.0,max:600,
   name:{uz:'Prilokain 4%',ru:'Прилокаин 4%',en:'Prilocaine 4%'},
-  epi:{uz:'oddiy yoki epinefrin 1:200 000 bilan',ru:'без вазоконстриктора или с эпинефрином 1:200 000',en:'plain or with epinephrine 1:200,000'},epiMgMl:0.005,epiRatio:'1:200 000'},
+  epi:{uz:'oddiy yoki epinefrin 1:200 000 bilan',ru:'без вазоконстриктора или с эпинефрином 1:200 000',en:'plain or with epinephrine 1:200,000'},epiMgMl:0.005,epiRatio:'1:200 000'},
  {id:'bupi',pct:0.5,mgkg:1.3,max:90,
   name:{uz:'Bupivakain 0,5%',ru:'Бупивакаин 0,5%',en:'Bupivacaine 0.5%'},
-  epi:{uz:'epinefrin 1:200 000 bilan',ru:'с эпинефрином 1:200 000',en:'with epinephrine 1:200,000'},epiMgMl:0.005,epiRatio:'1:200 000'},
+  epi:{uz:'epinefrin 1:200 000 bilan',ru:'с эпинефрином 1:200 000',en:'with epinephrine 1:200,000'},epiMgMl:0.005,epiRatio:'1:200 000'},
 ];
 
 export const VOLUMES=[1.8,1.7,2.2] as const;
@@ -71,7 +71,7 @@ const T={
   rounding:'Karpulalar soni 0,1 gacha pastga yaxlitlangan.',
   visual:'Karpulalar soni ko‘rinishda',
   cardTitle:'Yurak-qon tomir kasalligi bo‘lgan bemor',
-  card:'Epinefrin bir tashrifda 0,04 mg dan oshmasligi tavsiya etiladi: bu 1:100 000 konsentratsiyali taxminan 2 ta karpula (1,8 ml karpulada 0,018 mg). Sog‘lom kattalar uchun odatiy chegara bir tashrifda 0,2 mg (1:100 000 dan ≈11 karpula).',
+  card:'Epinefrin bir tashrifda 0,04 mg dan oshmasligi tavsiya etiladi: bu 1:100 000 konsentratsiyali taxminan 2 ta karpula (1,8 ml karpulada 0,018 mg). Sog‘lom kattalar uchun odatiy chegara bir tashrifda 0,2 mg (1:100 000 dan ≈11 karpula).',
   childTitle:'Bolalar',
   child:'Bolalarda dozani albatta vaznga (mg/kg) qarab hisoblang, yoshga qarab taxmin qilmang. Bolani tarozida o‘lchang va hisoblangan dozadan oshmang.',
   childHint:'Kichik vazn: bolalar uchun eslatmaga e’tibor bering.',
@@ -95,7 +95,7 @@ const T={
   rounding:'Число карпул округлено вниз до 0,1.',
   visual:'Количество карпул наглядно',
   cardTitle:'Пациент с сердечно-сосудистым заболеванием',
-  card:'Рекомендуется не превышать 0,04 мг эпинефрина за посещение: это около 2 карпул с концентрацией 1:100 000 (0,018 мг в карпуле 1,8 мл). Для здорового взрослого обычный предел — 0,2 мг за посещение (≈11 карпул 1:100 000).',
+  card:'Рекомендуется не превышать 0,04 мг эпинефрина за посещение: это около 2 карпул с концентрацией 1:100 000 (0,018 мг в карпуле 1,8 мл). Для здорового взрослого обычный предел — 0,2 мг за посещение (≈11 карпул 1:100 000).',
   childTitle:'Дети',
   child:'У детей дозу обязательно рассчитывают по массе тела (мг/кг), а не по возрасту. Взвесьте ребёнка и не превышайте рассчитанную дозу.',
   childHint:'Небольшая масса тела: обратите внимание на примечание для детей.',
@@ -211,7 +211,7 @@ export default function Anaesthetic({lang}:ToolProps){
     </ul>
     {epi&&<div className={'tl-epi'+(r.carts>epi.healthyCarts?' tl-epi-warn':'')}>
      <HeartPulse size={16} aria-hidden="true"/>
-     <p>{t.epi(lang==='en'?drug.epiRatio!.replace(' ',','):drug.epiRatio!,fmt(epi.perCart,lang,3),fmt(epi.healthyCarts,lang),fmt(epi.cardiacCarts,lang))}{r.carts>epi.healthyCarts&&<strong> {t.epiFirst}</strong>}</p>
+     <p>{t.epi(lang==='en'?drug.epiRatio!.replace('\u00a0',','):drug.epiRatio!,fmt(epi.perCart,lang,3),fmt(epi.healthyCarts,lang),fmt(epi.cardiacCarts,lang))}{r.carts>epi.healthyCarts&&<strong> {t.epiFirst}</strong>}</p>
     </div>}
     {w<40&&<p className="tl-hint"><Baby size={16} aria-hidden="true"/>{t.childHint}</p>}
    </>}

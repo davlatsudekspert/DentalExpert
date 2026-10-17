@@ -128,7 +128,7 @@ export default function Sterilisation({lang}:ToolProps){
     {CATS.map((c,i)=>{const x=[40,160,280][i];return <g key={c.id}>
      <circle cx={x} cy="31" r="12" fill="#fff" stroke={c.tone==='red'?'#b3261e':c.tone==='amber'?'#8a5a0b':'#168d8b'} strokeWidth="3"/>
      <text x={x} y="35.5" textAnchor="middle" className="tl-sp-fig-n">{i+1}</text>
-     <text x={x} y="60" textAnchor="middle" className="tl-sp-fig-t">{c.name[lang]}</text>
+     <text x={[8,160,312][i]} y="60" textAnchor={i===0?'start':i===2?'end':'middle'} className="tl-sp-fig-t">{c.name[lang]}</text>
     </g>})}
     <text x="8" y="14" className="tl-sp-fig-s">{lang==='uz'?'Yuqori xavf':lang==='ru'?'Высокий риск':'Higher risk'}</text>
     <text x="312" y="14" textAnchor="end" className="tl-sp-fig-s">{lang==='uz'?'Past xavf':lang==='ru'?'Низкий риск':'Lower risk'}</text>

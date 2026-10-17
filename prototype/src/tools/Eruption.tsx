@@ -170,7 +170,7 @@ function ArchSvg({dent,sel,onSel,lang}:{dent:Dent;sel:Sel;onSel:(s:Sel)=>void;la
    const name=NAMES[dent][n-1][lang];
    return <g key={fdi} className={'tl-tooth'+(on?' tl-tooth-on':'')} role="button" tabIndex={0} aria-pressed={on} aria-label={`${fdi}, ${name}`}
      onClick={()=>onSel({dent,q,n})} onKeyDown={e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();onSel({dent,q,n})}}}>
-    <circle cx={(x+lx)/2} cy={(y+ly)/2} r={Math.max(17,p.w/2+6)} fill="transparent"/>
+    <circle cx={(x+lx)/2} cy={(y+ly)/2} r={Math.max(23,p.w/2+6)} fill="transparent"/>
     <rect x={x-p.w/2+0.8} y={y-d/2} width={p.w-1.6} height={d} rx={Math.min(7,p.w/3)} transform={`rotate(${ang} ${x} ${y})`} className="tl-tooth-body"/>
     <text x={lx} y={ly+4} textAnchor="middle" className="tl-tooth-num">{fdi}</text>
    </g>;

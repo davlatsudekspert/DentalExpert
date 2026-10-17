@@ -41,7 +41,7 @@ BRAND_PHRASES = ['DENTAL EXPERT PLUS', 'Dental Expert Plus', 'DENTAL EXPERT', 'D
 RU_LATIN_OK = {
     'dental', 'expert', 'fdi', '3d', 'uzs', 'aed', 'usd', 'email', 'e-mail', 'google', 'apple', 'testflight', 'app', 'store',
     'telegram', 'instagram', 'pptx', 'pdf', 'gps', 'sdk', 'gdpr', 'https', 'httponly', 'cookie', 'ip', 'cloudflare', 'resend',
-    'id', 'ok', 'tsdi', 'sammu', 'adti', 'afu', 'ios', 'android', 'plus', 'ru',  # 'RU' = the current-language badge
+    'id', 'ok', 'ph', 'ohi-s', 'linea', 'alba', 'in', 'vitro', 'leeway', 'space', 'tsdi', 'sammu', 'adti', 'afu', 'ios', 'android', 'plus', 'ru',  # 'RU' = the current-language badge
 }
 # Common Uzbek words that must not appear in English text (compared lower-case, apostrophes normalised).
 UZ_WORDS = {
@@ -135,6 +135,10 @@ def check_text(lang, text):
                     out.append(('Latin word in Russian', w))
         for m in re.finditer(r'(\d+)\+?\s+([а-яё]+)', t):
             n, word = int(m.group(1)), m.group(2)
+            before = t[:m.start()]
+            # Fractions (1,5 года), ranges (2–3 лет) and genitive after до/от/ребёнка/возрасте take other forms.
+            if re.search(r'(\d[,.]|[–-]|\b(до|от|ребёнка|возрасте|старше|младше)\s)$', before):
+                continue
             if word in RU_FORM:
                 forms, _ = RU_FORM[word]
                 want = forms[ru_plural(n)]

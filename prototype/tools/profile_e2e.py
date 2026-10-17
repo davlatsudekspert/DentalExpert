@@ -25,7 +25,7 @@ with sync_playwright() as p:
     check('bad phone rejected',ctx.request.put(BASE+'/api/auth/profile',data=json.dumps({'name':'Ali','phone':'abc'}),headers={'content-type':'application/json'}).status==400)
     check('anonymous cannot edit profile',b.new_context().request.put(BASE+'/api/auth/profile',data=json.dumps({'name':'X Y'}),headers={'content-type':'application/json'}).status==401)
     pg.goto(BASE+'/?lang=uz');pg.wait_for_selector('.home-header');pg.wait_for_timeout(600)
-    check('completeness now 100%',pg.get_by_text('100%').count()>=1)
+    check('profile banner gone at 100%',pg.locator('.dash-banner').count()==0)
     pg.goto(BASE+'/?screen=record&lang=uz');pg.wait_for_selector('.patients');pg.wait_for_timeout(300)
     pg.get_by_role('button',name='Bemor qo‘shish').click();pg.get_by_label('Ism va familiya').fill('Test Bemor');pg.get_by_label('Telefon',exact=True).fill('+998 91 000 00 00')
     pg.get_by_role('button',name='Saqlash').click();pg.wait_for_timeout(400)

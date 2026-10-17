@@ -69,15 +69,16 @@ function AngleFig({off}:{off:number}){
 function NumberingFig({lang}:{lang:Lang}){
  const R=lang==='uz'?'O‘ng':lang==='ru'?'Прав.':'Right',Lf=lang==='uz'?'Chap':lang==='ru'?'Лев.':'Left';
  return <svg className="tl-fig" viewBox="0 0 300 132" role="img" aria-label="FDI 1–4, Universal 1–32">
-  <line x1="150" x2="150" y1="10" y2="122" stroke={INK} strokeWidth="2"/>
+  <line x1="150" x2="150" y1="10" y2="112" stroke={INK} strokeWidth="2"/>
   <line x1="20" x2="280" y1="66" y2="66" stroke={INK} strokeWidth="2"/>
   {[{x:85,y:40,q:'1',u:'1–8',p:'A–E · 5'},{x:215,y:40,q:'2',u:'9–16',p:'F–J · 6'},{x:85,y:96,q:'4',u:'25–32',p:'P–T · 8'},{x:215,y:96,q:'3',u:'17–24',p:'K–O · 7'}].map(c=><g key={c.q}>
    <circle cx={c.x-38} cy={c.y-4} r="15" fill={SOFT}/>
    <text x={c.x-38} y={c.y+2} textAnchor="middle" className="tl-fig-q">{c.q}</text>
-   <text x={c.x-14} y={c.y-6} className="tl-fig-u">Universal {c.u}</text>
+   <text x={c.x-14} y={c.y-6} className="tl-fig-u">{c.u}</text>
    <text x={c.x-14} y={c.y+10} className="tl-fig-s">{c.p}</text>
   </g>)}
   <text x="20" y="128" className="tl-fig-s">{R}</text>
+  <text x="150" y="128" textAnchor="middle" className="tl-fig-s">{lang==='uz'?'FDI · Universal · sut tishlari':lang==='ru'?'FDI · Universal · временные':'FDI · Universal · primary'}</text>
   <text x="280" y="128" textAnchor="end" className="tl-fig-s">{Lf}</text>
  </svg>;
 }
