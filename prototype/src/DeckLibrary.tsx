@@ -11,9 +11,18 @@ const words={
  en:{title:'Presentations',hint:'View and share on screen only. Downloads are disabled.',slides:'slides',present:'Full screen',close:'Close',prev:'Previous',next:'Next',quiz:'Take the quiz',back:'Back to slides',result:'Score',again:'Try again',note:'Text is in Uzbek only. Learning sample: not reviewed by a specialist and not clinical guidance.',loading:'Loading…',none:'Presentations are not available right now.'}
 };
 
+export type Progress=Record<string,{viewed?:boolean;best?:number;total?:number}>;
+const pkey=(uid?:string|null)=>'de_progress:'+(uid||'guest');
+export const loadProgress=(uid?:string|null):Progress=>{try{const v=JSON.parse(localStorage.getItem(pkey(uid))||'{}');return v&&typeof v==='object'?v:{}}catch{return {}}};
+export const saveProgress=(uid:string|null|undefined,deckId:string,patch:{viewed?:boolean;score?:number;total?:number}):Progress=>{
+ const all=loadProgress(uid);const cur=all[deckId]||{};
+ all[deckId]={...cur,viewed:cur.viewed||patch.viewed||patch.score!==undefined,...(patch.score!==undefined?{best:Math.max(cur.best??0,patch.score),total:patch.total}:{})};
+ try{localStorage.setItem(pkey(uid),JSON.stringify(all))}catch{/* storage unavailable */}
+ return all;
+};
 const slideUrl=(deck:string,n:number)=>`/decks/${deck}/${String(n).padStart(2,'0')}.webp`;
 
-function Viewer({deck,lang,onClose}:{deck:Deck;lang:Lang;onClose:()=>void}){
+function Viewer({deck,lang,onClose,onProgress}:{deck:Deck;lang:Lang;onClose:()=>void;onProgress:(p:{viewed?:boolean;score?:number;total?:number})=>void}){
  const t=words[lang];
  const [n,setN]=useState(1);
  const [mode,setMode]=useState<'slides'|'quiz'>('slides');
@@ -31,6 +40,8 @@ function Viewer({deck,lang,onClose}:{deck:Deck;lang:Lang;onClose:()=>void}){
  // Copy/save affordances are removed; screenshots of a displayed screen cannot be prevented.
  const block=(e:{preventDefault:()=>void})=>e.preventDefault();
  const score=answers.filter((a,i)=>a===deck.quiz[i].correct).length;
+ useEffect(()=>{onProgress({viewed:true})},[]);// eslint-disable-line react-hooks/exhaustive-deps
+ useEffect(()=>{if(answers.every(a=>a!==null))onProgress({score,total:deck.quiz.length})},[answers]);// eslint-disable-line react-hooks/exhaustive-deps
  return <div className="deck-viewer" ref={root} role="dialog" aria-label={deck.title} onContextMenu={block} onCopy={block} onCut={block} onDragStart={block}>
   <div className="deck-bar">
    <strong>{deck.title}</strong>
@@ -64,11 +75,13 @@ function Viewer({deck,lang,onClose}:{deck:Deck;lang:Lang;onClose:()=>void}){
  </div>;
 }
 
-export default function DeckLibrary({lang}:{lang:Lang}){
+export default function DeckLibrary({lang,uid}:{lang:Lang;uid?:string|null}){
  const t=words[lang];
  const [decks,setDecks]=useState<Deck[]|null>(null);
  const [failed,setFailed]=useState(false);
  const [open,setOpen]=useState<Deck|null>(null);
+ const [progress,setProgress]=useState<Progress>(()=>loadProgress(uid));
+ useEffect(()=>setProgress(loadProgress(uid)),[uid]);
  useEffect(()=>{
   const c=new AbortController();
   fetch('/decks/manifest.json',{signal:c.signal}).then(r=>r.ok&&(r.headers.get('content-type')||'').includes('json')?r.json():Promise.reject()).then(d=>{if(!c.signal.aborted)setDecks(d)}).catch(()=>{if(!c.signal.aborted)setFailed(true)});
@@ -80,10 +93,10 @@ export default function DeckLibrary({lang}:{lang:Lang}){
   {!decks?<p className="muted">{t.loading}</p>:decks.length===0?<p className="muted">{t.none}</p>:<div className="deck-grid">
    {decks.map(d=><button key={d.id} className="deck-card" onClick={()=>setOpen(d)}>
     <img src={slideUrl(d.id,1)} alt="" draggable={false} loading="lazy"/>
-    <span><strong>{d.title}</strong><small>{d.slides} {t.slides} · {d.audience}</small></span>
+    <span><strong>{d.title}</strong><small>{d.slides} {t.slides} · {d.audience}</small>{progress[d.id]?.viewed&&<small className="deck-done">{progress[d.id].best!==undefined?`✓ ${progress[d.id].best}/${progress[d.id].total}`:'✓'}</small>}</span>
    </button>)}
   </div>}
   <p className="muted deck-note">{t.note}</p>
-  {open&&<Viewer deck={open} lang={lang} onClose={()=>setOpen(null)}/>}
+  {open&&<Viewer deck={open} lang={lang} onClose={()=>setOpen(null)} onProgress={p=>setProgress(saveProgress(uid,open.id,p))}/>}
  </section>;
 }

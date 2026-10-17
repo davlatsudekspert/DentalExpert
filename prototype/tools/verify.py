@@ -29,8 +29,10 @@ with sync_playwright() as p:
    check(f'{lang}/{screen}: language',page.locator('html').get_attribute('lang')==lang)
    if screen=='anatomy':
     check(f'{lang}/{screen}: premium cutaway',page.locator('.anatomy-render img').evaluate('(e)=>e.complete && e.naturalWidth>0'))
-   if screen in ['teacher','student','courses']:
-    check(f'{lang}/{screen}: premium course image',page.locator('.course-render').evaluate('(e)=>e.complete && e.naturalWidth>0'))
+   if screen in ['teacher','student']:
+    check(f'{lang}/{screen}: quick tiles for lessons, quizzes, groups',page.locator('.role-tiles button').count()==6)
+   if screen=='courses':
+    check(f'{lang}/{screen}: learn hub with lessons',page.locator('.learn .chips button').count()==3)
    if screen in ['lessonPage','caseStudy']:
     check(f'{lang}/{screen}: visual lesson image',page.locator('.academy-visual img').evaluate('(e)=>e.complete && e.naturalWidth>0'))
    if screen in ['splash','onboard','home']:
