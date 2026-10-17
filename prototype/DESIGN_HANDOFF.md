@@ -25,6 +25,8 @@ The two chat reference images establish ice-blue/ivory surfaces, navy headings, 
 
 25 screen IDs are in `screens` inside `src/main.tsx`. `?screen=...&lang=uz|ru|en` permits deterministic screenshots. `go` maintains a small in-memory history; top back returns to the preceding screen. Bottom navigation selects role home, search, anatomy, learning or settings. Mobile screen selector exposes every screen for review. `src/AccountCommunity.tsx` adds local-only password recovery/change, privacy, forum and notification screens. Auth and moderation still require server providers.
 
+The user's Apple/Google request concerns **App Store and Google Play release/privacy requirements**, not social sign-in buttons. `STORE_RELEASE_REQUIREMENTS.md` is the release specification: data mapping, privacy disclosures, account deletion, permission timing, user-generated content moderation and medical claims. The in-app privacy screen is explicitly a demo and does not replace a published legal policy or store declarations.
+
 Roles: patient → home; dentist → dashboard; teacher → teacher; student → student. Login/signup are demo entry forms. No credentials are saved or transmitted. All state resets on reload. In-memory editing of Dr. Kamila's name is reflected in profile and cards. Booking selects day/time and displays a clearly marked demo confirmation. Search filters by doctor name; rating and service chips are demo subsets. The 32-tooth FDI grid retains selected tooth when moving into anatomy.
 
 ## Translation

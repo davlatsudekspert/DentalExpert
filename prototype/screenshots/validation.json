@@ -1,5 +1,5 @@
 {
-  "passed": 295,
+  "passed": 296,
   "checks": [
     "uz/splash: content",
     "uz/splash: no horizontal overflow",
@@ -292,6 +292,7 @@
     "dental post appears",
     "report hides post locally",
     "privacy page opens",
+    "deletion status is honest",
     "responsive 360",
     "responsive 430",
     "responsive 1280",

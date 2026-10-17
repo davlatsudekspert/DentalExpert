@@ -2,7 +2,7 @@
 
 Mustaqil React + TypeScript + Vite dizayn prototipi. Backend, API, haqiqiy autentifikatsiya, to‘lov va bemor bazasi yo‘q. GitHub Pages manzili hozir 404 qaytaryapti; interaktiv demo hali onlayn ishlamaydi.
 
-Global mahsulot talablari [`PRODUCT_VISION.md`](PRODUCT_VISION.md)da, Claude uchun birinchi kodlash bosqichi [`CLAUDE_NEXT_STEP.md`](CLAUDE_NEXT_STEP.md)da. Hozirgi ekranlar bu talablardagi haqiqiy xizmatlar tayyorligini anglatmaydi.
+Global mahsulot talablari [`PRODUCT_VISION.md`](PRODUCT_VISION.md)da, App Store/Google Play’ga chiqarish talablari [`STORE_RELEASE_REQUIREMENTS.md`](STORE_RELEASE_REQUIREMENTS.md)da, Claude uchun birinchi kodlash bosqichi [`CLAUDE_NEXT_STEP.md`](CLAUDE_NEXT_STEP.md)da. Hozirgi ekranlar bu talablardagi haqiqiy xizmatlar tayyorligini anglatmaydi.
 
 ## Uyda ko‘rish va davom ettirish
 
@@ -36,7 +36,7 @@ Build natijasi `dist/` ichida. `demo.html` esa shu buildning bitta faylga yig‘
 - Odontogrammada 32 ta FDI raqami bor; tishni tanlab anatomiya ekraniga o‘ting.
 - Anatomiya sahifasida `Tish Rasm.rar`dagi kesim, tashqi va yuqori ko‘rinishlarni tanlash mumkin. «360° ko‘rinish»ni bosib uch ildizli tishning old, o‘ng, orqa va chap premium tasvirlarini aylantirib ko‘ring; drag, klaviatura strelkalari va yaqinlashtirish ishlaydi. Bu to‘rtta statik renderdan tuzilgan vizual prototip, uzluksiz 3D mesh emas. Qatlam tanlanganda premium kesim tasviri ochiladi.
 - Profil tahriri joriy sessiya ichida aks etadi; yangilaganda barcha demo holatlar tiklanadi.
-- Kirish ekranida ma’qullangan premium tish rasmi markazda turadi; uning ostidagi asosiy tugma ro‘yxatdan o‘tishni ochadi. «Parolni unutdingizmi?» tiklash sahifasini, sozlamalar esa parolni almashtirish, profil tahriri, maxfiylik, forum va bildirishnomalarni ochadi. Surat yuklash faqat lokal preview. Apple/Google kirish tugmalari yo‘q; haqiqiy email-kodli autentifikatsiya hali ulanmagan.
+- Kirish ekranida ma’qullangan premium tish rasmi markazda turadi; uning ostidagi asosiy tugma ro‘yxatdan o‘tishni ochadi. «Parolni unutdingizmi?» tiklash sahifasini, sozlamalar esa parolni almashtirish, profil tahriri, maxfiylik, forum va bildirishnomalarni ochadi. Surat yuklash faqat lokal preview. Hozirgi reja email-kodli autentifikatsiya; Apple/Google do‘konlarining maxfiylik talablari ijtimoiy kirish tugmasi bilan adashtirilmasin. Haqiqiy autentifikatsiya hali ulanmagan.
 - Forumda ogohlantirish va qoidalar, stomatologiya mavzusidagi demo post/izoh hamda lokal shikoyat amali bor. Mavzudan tashqari yoki taqiqlangan iboralar frontendda qaytariladi. Haqiqiy moderatsiya, shikoyat navbati, xabarnoma va doimiy saqlash uchun server kerak.
 
 25 ko‘rinish: splash, onboarding, rol tanlash, premium kirish, login, sign up, bemor bosh sahifasi, qidiruv, shifokor profili, klinika, qabul, stomatolog ish maydoni, profil tahriri, bemor kartasi, odontogramma, anatomiya, ustoz, talaba, kurslar, sozlamalar, parolni tiklash, parolni almashtirish, maxfiylik, forum va bildirishnomalar.

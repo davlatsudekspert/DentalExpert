@@ -81,7 +81,7 @@ Birinchi kichik mahsulot bo‘lagi: Dental Expert’da bitta ruxsatli namunaviy 
    Shu bosqichda ustoz, talaba va stomatolog uchun qo‘llanma, rasmli dars, PPTX taqdimot va yordamchi test kutubxonasining birinchi ishlaydigan oqimini ham qur; avval bitta mavzu va ruxsatli namunaviy materialdan boshlagin.
 3. **Hamjamiyat:** forum, izohlar, moderatsiya va matn tarjimasi.
 4. **Xizmatlar:** qabul jadvali va tasdiq, xabarlar, audio tarjima va keyingi integratsiyalar.
-5. **Mobil tarqatish:** ishlaydigan web oqimlari va backend tasdiqlangach PWA yoki native iOS/Android yo‘li tanlansin. Ilovani “butun dunyoda ishlaydi” deb atashdan oldin real email, geografik qidiruv, kasbiy tasdiq, xavfsizlik va xalqaro ish yuklamasi tekshirilsin.
+5. **Mobil tarqatish:** ishlaydigan web oqimlari va backend tasdiqlangach PWA yoki native iOS/Android yo‘li tanlansin. Apple/Google orqali kirish tugmalari do‘kon talabi degani emas; bu yerda App Store/Google Play maxfiylik, Data safety/App Privacy, hisobni o‘chirish, ruxsat, tibbiy mazmun va forum moderatsiyasi talablari nazarda tutiladi. Aniq chiqarish mezonlari [`STORE_RELEASE_REQUIREMENTS.md`](STORE_RELEASE_REQUIREMENTS.md)da. Ilovani “butun dunyoda ishlaydi” deb atashdan oldin real email, geografik qidiruv, kasbiy tasdiq, xavfsizlik va xalqaro ish yuklamasi tekshirilsin.
 
 ## Birinchi Claude sessiyasining natijasi
 
