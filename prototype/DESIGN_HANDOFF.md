@@ -23,7 +23,7 @@ The two chat reference images establish ice-blue/ivory surfaces, navy headings, 
 
 ## Navigation and local interactions
 
-19 screen IDs are in `screens` inside `src/main.tsx`. `?screen=...&lang=uz|ru|en` permits deterministic screenshots. `go` maintains a small in-memory history; top back returns to the preceding screen. Bottom navigation selects role home, search, anatomy or settings. Mobile screen selector exposes every screen for review.
+24 screen IDs are in `screens` inside `src/main.tsx`. `?screen=...&lang=uz|ru|en` permits deterministic screenshots. `go` maintains a small in-memory history; top back returns to the preceding screen. Bottom navigation selects role home, search, anatomy, learning or settings. Mobile screen selector exposes every screen for review. `src/AccountCommunity.tsx` adds local-only password recovery/change, privacy, forum and notification screens. Auth and moderation still require server providers.
 
 Roles: patient → home; dentist → dashboard; teacher → teacher; student → student. Login/signup are demo entry forms. No credentials are saved or transmitted. All state resets on reload. In-memory editing of Dr. Kamila's name is reflected in profile and cards. Booking selects day/time and displays a clearly marked demo confirmation. Search filters by doctor name; rating and service chips are demo subsets. The 32-tooth FDI grid retains selected tooth when moving into anatomy.
 
@@ -51,7 +51,7 @@ The user suggested `NateSaindon/3Dentes` and `Igor-Vuk/dentist-dream` as example
 
 ## Verification and artifacts
 
-`npm run build` performs TS checking and production compilation. `python tools/verify.py` checks all screens in three languages, role entry, language switching, doctor search/profile, booking, tooth/layer selection, rotate/zoom, profile edits and responsive overflow. It writes 19 actual rendered PNGs and `validation.json`; the validation JSON records the exact passing checks and browser exceptions. Chromium and Python Playwright are tooling, not shipped runtime dependencies.
+`npm run build` performs TS checking and production compilation. `python tools/verify.py` checks all screens in three languages, role entry, language switching, doctor search/profile, booking, tooth/layer selection, rotate/zoom, profile edits, password demo, forum warnings/reports and responsive overflow. It writes 24 actual rendered PNGs and `validation.json`; the validation JSON records the exact passing checks and browser exceptions. Chromium and Python Playwright are tooling, not shipped runtime dependencies.
 
 `python tools/package.py` embeds the built CSS/JS into `demo.html` (offline desktop viewing), composes the eight-screen board from real screenshots and generates `dental-expert-prototype.zip` without node_modules. It does not fabricate UI screenshots. The source repository is public with user authorization; the app itself was not deployed. ZIP includes code, lockfile, docs, screenshots, build, offline HTML and validation tools.
 

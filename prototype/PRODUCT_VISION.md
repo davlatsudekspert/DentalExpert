@@ -40,6 +40,7 @@ Boshlang‘ich demoda beshta **namunaviy, to‘liq tasvirlangan** stomatolog pro
 ## Hamjamiyat va tarjima
 
 - Forum/hamjamiyatda mavzu, post, izoh, javob, qidiruv, mutaxassislik bo‘yicha bo‘limlar, shikoyat qilish va moderatsiya bo‘lsin. Bemor savollari, stomatologlar professional munozarasi va yopiq o‘quv guruhlari huquq bilan ajratilsin.
+- Post yoki izoh yozishdan oldin aniq qoidalar va ogohlantirish ko‘rsatiladi: faqat stomatologiya va kasbiy ta’lim mavzulari; diniy/siyosiy targ‘ibot, pornografik mazmun, haqorat, reklama va bemorni tanitadigan ma’lumotlar joylanmaydi. Mavzu bo‘limi tanlanadi; shikoyat sababi, moderator ko‘rib chiqishi, ogohlantirish, yashirish/o‘chirish va takroriy qoidabuzarlik uchun cheklov serverda yuritiladi. Frontenddagi oddiy so‘z filtri yakuniy moderatsiya emas, noto‘g‘ri rad etish va aylanib o‘tish ehtimoli bor.
 - Har postning asl tili saqlansin. UZ/RU/EN matn tarjimasi foydalanuvchi xohlaganda ko‘rsatilsin; original matn doim ochiq bo‘lsin.
 - **Audio tarjima mumkin**: ovoz → matn → tarjima → ovoz. Bu keyingi bosqich; faqat foydalanuvchi bosganda ishlasin, yozib olish/saqlash haqida aniq rozilik va narx nazorati bo‘lsin. Tibbiy ma’nosi o‘zgarmasligi uchun muhim klinik ma’lumotda asl matn yoki audio ham ko‘rinsin.
 

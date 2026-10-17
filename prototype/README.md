@@ -36,8 +36,10 @@ Build natijasi `dist/` ichida. `demo.html` esa shu buildning bitta faylga yig‘
 - Odontogrammada 32 ta FDI raqami bor; tishni tanlab anatomiya ekraniga o‘ting.
 - Anatomiya sahifasida `Tish Rasm.rar`dagi kesim, tashqi va yuqori ko‘rinishlarni tanlash mumkin. «360° ko‘rinish»ni bosib uch ildizli tishning old, o‘ng, orqa va chap premium tasvirlarini aylantirib ko‘ring; drag, klaviatura strelkalari va yaqinlashtirish ishlaydi. Bu to‘rtta statik renderdan tuzilgan vizual prototip, uzluksiz 3D mesh emas. Qatlam tanlanganda premium kesim tasviri ochiladi.
 - Profil tahriri joriy sessiya ichida aks etadi; yangilaganda barcha demo holatlar tiklanadi.
+- Kirish va ro‘yxatdan o‘tishda premium tish rasmi bor. «Parolni unutdingizmi?» tiklash sahifasini, sozlamalar esa parolni almashtirish, profil tahriri, maxfiylik, forum va bildirishnomalarni ochadi. Surat yuklash faqat lokal preview. Apple/Google tugmalari integratsiya talabini tushuntiradi; haqiqiy login qilmaydi.
+- Forumda ogohlantirish va qoidalar, stomatologiya mavzusidagi demo post/izoh hamda lokal shikoyat amali bor. Mavzudan tashqari yoki taqiqlangan iboralar frontendda qaytariladi. Haqiqiy moderatsiya, shikoyat navbati, xabarnoma va doimiy saqlash uchun server kerak.
 
-19 ko‘rinish: splash, onboarding, rol tanlash, login, sign up, bemor bosh sahifasi, qidiruv, shifokor profili, klinika, qabul, stomatolog ish maydoni, profil tahriri, bemor kartasi, odontogramma, anatomiya, ustoz, talaba, kurslar, sozlamalar.
+24 ko‘rinish: splash, onboarding, rol tanlash, login, sign up, bemor bosh sahifasi, qidiruv, shifokor profili, klinika, qabul, stomatolog ish maydoni, profil tahriri, bemor kartasi, odontogramma, anatomiya, ustoz, talaba, kurslar, sozlamalar, parolni tiklash, parolni almashtirish, maxfiylik, forum va bildirishnomalar.
 
 ## Vizual yo‘nalish va chegaralar
 
@@ -47,17 +49,18 @@ Splash va bosh sahifada `premium-reference-hero-ivory.webp`, anatomiyada esa kes
 
 `Tish Rasm.rar`dan 6 JPG ochildi va `assets/tooth3d/user-views/`da saqlandi. Tashqi ko‘rinishlarda uchta ildiz, kesimlarda ikkita ildiz ko‘rinadi; rasmlar bitta mos 3D obyektning kalibrlangan ko‘rinishlari emas. `tools/build_reference_molar.py` tashqi ko‘rinishlarga tayangan holda `reference-molar.glb` va tahrirlanadigan `reference-molar.blend` yaratadi. Bu repoda saqlangan haqiqiy aylantiriladigan 3D **draft**, ammo ilovadagi premium turntable uchun ishlatilmaydi; tashqi sirtida yuborilgan tish renderi tekstura sifatida ishlatiladi, lekin geometriyasi hali surat darajasidagi premium yoki klinik jihatdan to‘g‘ri rekonstruksiya emas. Jonli holatning haqiqiy frontend screenshoti `screenshots/anatomy-3d.png`da.
 
-Login ma’lumotlarini hech qayerga yubormaydi. Testlar, maxfiylik va bildirishnoma kabi ayrim elementlar faqat demo holat yoki izohni ko‘rsatadi. Kurslar o‘quv kontenti emas; navigatsiya namunasi. Narxlar, vaqtlar, ism va barcha ko‘rsatkichlar sun’iy demo ma’lumotlar.
+Login ma’lumotlarini hech qayerga yubormaydi. Maxfiylik sahifasi yuridik jihatdan tayyor siyosat emas, bildirishnomalar namunaviy. Kurslar o‘quv kontenti emas; navigatsiya namunasi. Narxlar, vaqtlar, ism va barcha ko‘rsatkichlar sun’iy demo ma’lumotlar.
 
 ## Tekshiruv va screenshotlar
 
 - TypeScript + production build: `npm run build`.
 - `tools/verify.py`: Playwright + Python, tizim Chromium kerak. Ishlayotgan Vite serveriga qarshi `python tools/verify.py` yoki offline HTML bilan `PROTOTYPE_HTML=demo.html python tools/verify.py`.
-- Barcha 19 ekran uch tilda, asosiy interaksiyalar, 360 / 390 / 430 / 1280 px moslashuv tekshirildi. asosiy brauzer tekshiruvlari o‘tdi, brauzer exception yo‘q.
+- Barcha 24 ekran uch tilda, asosiy interaksiyalar, 360 / 390 / 430 / 1280 px moslashuv tekshirildi; brauzer exception yo‘q.
 - `screenshots/*.png`: haqiqiy frontendning 390 px kenglikdagi to‘liq sahifa tasvirlari (2× pixel density). Uzun ekranlarni ko‘rish uchun skroll kerak.
 - `screenshots/preview-board.png`: 8 ta asosiy ekran to‘liq ko‘rsatilgan umumiy board.
 - `screenshots/validation.json`: bajarilgan tekshiruvlar ro‘yxati.
 - `tools/package.py`: tayyor builddan offline HTML, board va ZIP qayta yaratadi; Pillow kerak. Avval build, keyin verify, keyin package bajaring.
+- `dental-expert-review.zip`: telefonda ko‘rish uchun ixcham to‘plam — offline `demo.html`, 24 ta sahifa rasmi, anatomiya ko‘rinishlari va ochish yo‘riqnomasi.
 
 ## Fayllar
 
