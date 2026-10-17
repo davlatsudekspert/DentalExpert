@@ -1,6 +1,6 @@
 # Dental Expert Academy — ustoz va talaba oqimi (taklif)
 
-Maqsad faqat kundalik test emas: o‘quv dasturi → rasmli dars → qisqa bilim tekshiruvi → klinik holat ustida sababli qaror → ustoz izohi → qayta ishlash → ko‘nikma portfeli. Hozirgi ekranlar lokal dizayn namunalari; haqiqiy kurs, guruh, baho, fayl saqlash yoki sertifikat serveri hali yo‘q.
+Maqsad faqat kundalik test emas: o‘quv dasturi → rasmli dars → qisqa bilim tekshiruvi → klinik holat ustida sababli qaror → ustoz izohi → qayta ishlash → ko‘nikma portfeli. Birinchi lokal dars oqimi: foydalanuvchi tasviridan rasmli dars, 3 savollik test, o‘zbekcha PPTX, yozma amaliy ish va namunaviy ustoz izohi. Manba holati `SOURCE_REGISTER.md`da. Hozirgi ekranlar lokal dizayn namunalari; haqiqiy kurs, guruh, baho, fayl saqlash yoki sertifikat serveri hali yo‘q.
 
 ## O‘quv dasturini qanday tanlaymiz
 

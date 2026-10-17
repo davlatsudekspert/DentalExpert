@@ -23,11 +23,11 @@ The two chat reference images establish ice-blue/ivory surfaces, navy headings, 
 
 ## Navigation and local interactions
 
-25 screen IDs are in `screens` inside `src/main.tsx`. `?screen=...&lang=uz|ru|en` permits deterministic screenshots. `go` maintains a small in-memory history; top back returns to the preceding screen. Bottom navigation selects role home, search, anatomy, learning or settings. Mobile screen selector exposes every screen for review. `src/AccountCommunity.tsx` adds local-only password recovery/change, privacy, forum and notification screens. Auth and moderation still require server providers.
+27 screen IDs are in `screens` inside `src/main.tsx`. `?screen=...&lang=uz|ru|en` permits deterministic screenshots. `go` maintains a small in-memory history; top back returns to the preceding screen. Bottom navigation selects role home, search, anatomy, learning or settings. Mobile screen selector exposes every screen for review. `src/AccountCommunity.tsx` adds local-only password recovery/change, privacy, forum and notification screens. Auth and moderation still require server providers.
 
 The user's Apple/Google request concerns **App Store and Google Play release/privacy requirements**, not social sign-in buttons. `STORE_RELEASE_REQUIREMENTS.md` is the release specification: data mapping, privacy disclosures, account deletion, permission timing, user-generated content moderation and medical claims. The in-app privacy screen is explicitly a demo and does not replace a published legal policy or store declarations.
 
-Roles: patient → home; dentist → dashboard; teacher → teacher; student → student. Login/signup are demo entry forms. No credentials are saved or transmitted. All state resets on reload. In-memory editing of Dr. Kamila's name is reflected in profile and cards. Booking selects day/time and displays a clearly marked demo confirmation. Search filters by doctor name; rating and service chips are demo subsets. The 32-tooth FDI grid retains selected tooth when moving into anatomy.
+Roles: patient → home; dentist → dashboard; teacher → teacher; student → student. Login/signup are demo entry forms. No credentials are saved or transmitted. All state resets on reload. In-memory editing of Dr. Kamila's name is reflected in profile and cards. Booking selects day/time and displays a clearly marked demo confirmation. Search filters the seven fictional sample clinicians by selected city and name; a local Saved subset and rating filter work. Andijon and Fargona have three sample sponsored cards each; other cities are not filled with fake ads. The 32-tooth FDI grid retains selected tooth when moving into anatomy.
 
 ## Translation
 
@@ -43,6 +43,8 @@ No third-party GLB/GLTF was bundled. Do not copy an unlicensed model into this p
 
 The user suggested `NateSaindon/3Dentes` and `Igor-Vuk/dentist-dream` as examples. 3Dentes code is MIT, but its scan-derived geometry is explicitly CC BY-NC 4.0 and is from a named person's imaging. Dentist Dream demonstrates glTF loading, separate layer meshes and orbit controls, but the repository has no declared license for its code or `tooth-final.glb`. No meshes or code from either were copied. Their interaction concepts informed this prototype's direction; verify permissions before using either project in a commercial product.
 
+The learning section now has a visual tooth-layers lesson, three visual questions, an Uzbek PPTX, and a local practice case with sample feedback. Textbook citations and clinical review are pending; see `SOURCE_REGISTER.md`.
+
 ## Recommended next design work
 
 1. Compare the four priority screens against the user's visual references, then refine the remaining screens to the same standard. The user's previous review found the first tooth and overall prototype below the requested premium quality.
@@ -53,7 +55,7 @@ The user suggested `NateSaindon/3Dentes` and `Igor-Vuk/dentist-dream` as example
 
 ## Verification and artifacts
 
-`npm run build` performs TS checking and production compilation. `python tools/verify.py` checks all screens in three languages, role entry, language switching, doctor search/profile, booking, tooth/layer selection, rotate/zoom, profile edits, password demo, forum warnings/reports and responsive overflow. It writes 25 actual rendered PNGs and `validation.json`; the validation JSON records the exact passing checks and browser exceptions. Chromium and Python Playwright are tooling, not shipped runtime dependencies.
+`npm run build` performs TS checking and production compilation. `python tools/verify.py` checks all screens in three languages, role entry, language switching, doctor search/profile, booking, tooth/layer selection, rotate/zoom, profile edits, password demo, forum warnings/reports and responsive overflow. It writes 27 actual rendered PNGs and `validation.json`; the validation JSON records the exact passing checks and browser exceptions. Chromium and Python Playwright are tooling, not shipped runtime dependencies.
 
 `python tools/package.py` embeds the built CSS/JS into `demo.html` (offline desktop viewing), composes the eight-screen board from real screenshots and generates `dental-expert-prototype.zip` without node_modules. It does not fabricate UI screenshots. The source repository is public with user authorization; the app itself was not deployed. ZIP includes code, lockfile, docs, screenshots, build, offline HTML and validation tools.
 

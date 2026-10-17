@@ -1,6 +1,6 @@
 # Dental Expert prototipini Claude Code bilan davom ettirish
 
-**Keyingi kodlash vazifasi:** [`CLAUDE_NEXT_STEP.md`](CLAUDE_NEXT_STEP.md), global mahsulot talablari [`PRODUCT_VISION.md`](PRODUCT_VISION.md), tarif/reklama taklifi [`MONETIZATION_PLAN.md`](MONETIZATION_PLAN.md), ustoz/talaba rejasi [`EDUCATION_PLAN.md`](EDUCATION_PLAN.md) va iOS/Android do‘kon talablari [`STORE_RELEASE_REQUIREMENTS.md`](STORE_RELEASE_REQUIREMENTS.md)da. Ertangi sessiyada Claude avval shu fayllarni o‘qib, global qidiruvning birinchi ishlaydigan oqimini yakunlasin.
+**Keyingi kodlash vazifasi:** [`CLAUDE_NEXT_STEP.md`](CLAUDE_NEXT_STEP.md), global mahsulot talablari [`PRODUCT_VISION.md`](PRODUCT_VISION.md), tarif/reklama taklifi [`MONETIZATION_PLAN.md`](MONETIZATION_PLAN.md), ustoz/talaba rejasi [`EDUCATION_PLAN.md`](EDUCATION_PLAN.md) va iOS/Android do‘kon talablari [`STORE_RELEASE_REQUIREMENTS.md`](STORE_RELEASE_REQUIREMENTS.md)da. Claude avval shu fayllarni va `SOURCE_REGISTER.md`ni o‘qib, mavjud shahar qidiruvi hamda vizual dars oqimidan davom etsin.
 
 Bu papka mustaqil React + TypeScript + Vite **dizayn prototipi**. Asosiy loyiha kodi bu yerda o‘zgartirilmagan. Backend, API, haqiqiy login, to‘lov va bemor ma’lumotlari yo‘q. GitHub Pages workflow qo‘shilgan, lekin sayt hozir 404; boshqa joyga foydalanuvchi ruxsatisiz deploy qilmang.
 
@@ -13,7 +13,7 @@ Bu papka mustaqil React + TypeScript + Vite **dizayn prototipi**. Asosiy loyiha 
 - `demo.html` — offline ko‘rish uchun bitta HTML fayl.
 - `src/main.tsx`, `src/style.css`, `src/PremiumTurntable.tsx` — ekranlar, dizayn va 360° vizual; `src/Tooth3D.tsx` — eski GLB drafti.
 - `assets/tooth3d/` — original Blender sahnalari, uch ildizli GLB draft, foydalanuvchi yuborgan JPG ko‘rinishlar va splash/anatomiya illyustratsiyalari.
-- `screenshots/jpg/preview-board.jpg` — 8 asosiy ekranning umumiy ko‘rinishi; `screenshots/jpg/` — barcha 25 ekran.
+- `screenshots/jpg/preview-board.jpg` — 8 asosiy ekranning umumiy ko‘rinishi; `screenshots/jpg/` — barcha 27 ekran.
 - `DESIGN_HANDOFF.md` — ekranlar, holatlar, komponentlar va cheklovlar haqida batafsil izoh.
 
 ```sh

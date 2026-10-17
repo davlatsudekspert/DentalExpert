@@ -32,7 +32,8 @@ Build natijasi `dist/` ichida. `demo.html` esa shu buildning bitta faylga yig‘
 - Oddiy ochilganda premium ro‘yxatdan o‘tish/kirish ekrani chiqadi. `?screen=auth&lang=uz`, `?screen=profile&lang=en` kabi parametrlar ekranlarni bevosita ochadi.
 - Onboarding yoki Sozlamalardan UZ / RU / EN tilini tanlang.
 - Rol tanlash → premium kirish ekrani → ro‘yxatdan o‘tish yoki demo kirish → rol bosh sahifasi.
-- Bemorning Asosiy sahifasida 3 ta “Namuna reklama” kartasi gorizontal ko‘rinadi va mavjud demo profilga ochiladi. Hozircha shahar bo‘yicha kampaniya, to‘lov, Free/Pro obuna yoki haqiqiy reklama hisobi ishlamaydi; keyingi oqim va tarif taklifi `MONETIZATION_PLAN.md`da.
+- Bemorning Asosiy sahifasida 3 ta “Namuna reklama” kartasi gorizontal ko‘rinadi va mavjud demo profilga ochiladi. Hozir Andijon va Farg‘onada tanlangan shaharga mos uchtadan namuna karta chiqadi; haqiqiy kampaniya, to‘lov yoki Free/Pro obuna ishlamaydi; keyingi oqim va tarif taklifi `MONETIZATION_PLAN.md`da.
+- Ustoz/talaba kursida namunaviy haftalik reja → rasmli tish qatlamlari darsi → 3 savollik vizual test → o‘zbekcha PPTX → yozma amaliy holat va namunaviy izoh ishlaydi. Bu haqiqiy bemor yoki ustozga yuborish emas; tashqi darslik nashri/beti hali tasdiqlanmagan. Tafsilotlar [`SOURCE_REGISTER.md`](SOURCE_REGISTER.md)da.
 - Shifokor kartasi → profil → qabul → kun / vaqt → demo tasdiq.
 - Odontogrammada 32 ta FDI raqami bor; tishni tanlab anatomiya ekraniga o‘ting.
 - Anatomiya sahifasida `Tish Rasm.rar`dagi kesim, tashqi va yuqori ko‘rinishlarni tanlash mumkin. «360° ko‘rinish»ni bosib uch ildizli tishning old, o‘ng, orqa va chap premium tasvirlarini aylantirib ko‘ring; drag, klaviatura strelkalari va yaqinlashtirish ishlaydi. Bu to‘rtta statik renderdan tuzilgan vizual prototip, uzluksiz 3D mesh emas. Qatlam tanlanganda premium kesim tasviri ochiladi.
@@ -40,7 +41,7 @@ Build natijasi `dist/` ichida. `demo.html` esa shu buildning bitta faylga yig‘
 - Kirish ekranida ma’qullangan premium tish rasmi markazda turadi; uning ostidagi asosiy tugma ro‘yxatdan o‘tishni ochadi. «Parolni unutdingizmi?» tiklash sahifasini, sozlamalar esa parolni almashtirish, profil tahriri, maxfiylik, forum va bildirishnomalarni ochadi. Surat yuklash faqat lokal preview. Hozirgi reja email-kodli autentifikatsiya; Apple/Google do‘konlarining maxfiylik talablari ijtimoiy kirish tugmasi bilan adashtirilmasin. Haqiqiy autentifikatsiya hali ulanmagan.
 - Forumda ogohlantirish va qoidalar, stomatologiya mavzusidagi demo post/izoh hamda lokal shikoyat amali bor. Mavzudan tashqari yoki taqiqlangan iboralar frontendda qaytariladi. Haqiqiy moderatsiya, shikoyat navbati, xabarnoma va doimiy saqlash uchun server kerak.
 
-25 ko‘rinish: splash, onboarding, rol tanlash, premium kirish, login, sign up, bemor bosh sahifasi, qidiruv, shifokor profili, klinika, qabul, stomatolog ish maydoni, profil tahriri, bemor kartasi, odontogramma, anatomiya, ustoz, talaba, kurslar, sozlamalar, parolni tiklash, parolni almashtirish, maxfiylik, forum va bildirishnomalar.
+27 ko‘rinish: splash, onboarding, rol tanlash, premium kirish, login, sign up, bemor bosh sahifasi, qidiruv, shifokor profili, klinika, qabul, stomatolog ish maydoni, profil tahriri, bemor kartasi, odontogramma, anatomiya, ustoz, talaba, kurslar, rasmli dars, amaliy holat, sozlamalar, parolni tiklash, parolni almashtirish, maxfiylik, forum va bildirishnomalar.
 
 ## Vizual yo‘nalish va chegaralar
 
