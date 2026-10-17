@@ -82,3 +82,13 @@ export async function fetchInstitutions(signal?:AbortSignal):Promise<Institution
   return (await res.json() as {institutions:Institution[]}).institutions;
  }catch{return null}
 }
+
+/** Authenticated JSON call for the classroom API; returns status 0 when the network or API is unavailable. */
+export async function callApi<T=Record<string,unknown>>(path:string,method:'GET'|'POST'|'PUT'|'DELETE'='GET',payload?:unknown):Promise<{ok:boolean;status:number;data:T&{error?:string}}>{
+ try{
+  const res=await fetch(url('/api'+path),{method,credentials:'same-origin',headers:{accept:'application/json',...(payload!==undefined?{'content-type':'application/json'}:{}),...authHeaders()},body:payload!==undefined?JSON.stringify(payload):undefined});
+  if(!(res.headers.get('content-type')||'').includes('json'))return {ok:false,status:0,data:{error:'network'} as never};
+  const data=await res.json().catch(()=>({})) as never;
+  return {ok:res.ok,status:res.status,data};
+ }catch{return {ok:false,status:0,data:{error:'network'} as never}}
+}
