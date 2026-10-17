@@ -15,24 +15,25 @@ export const onRequestGet:PagesFunction<Env>=async({request,env})=>{
  const role=await groupRole(env,groupId,user.id);
  if(!role)return json({error:'forbidden'},403,noStore);
  const {results}=await env.DB.prepare(
-  `SELECT a.id,a.kind,a.title,a.body,a.deck_id,a.status,a.due_date,a.created_at,a.answer_key,
+  `SELECT a.id,a.kind,a.title,a.body,a.deck_id,a.status,a.due_date,a.created_at,a.answer_key,a.topic_id,a.questions,a.minutes,
      (SELECT COUNT(*) FROM class_submissions s WHERE s.assignment_id=a.id) AS submitted,
-     s.answer AS my_answer,s.score AS my_score,s.total AS my_total
+     s.answer AS my_answer,s.score AS my_score,s.total AS my_total,s.started_at AS my_started
    FROM class_assignments a LEFT JOIN class_submissions s ON s.assignment_id=a.id AND s.user_id=?
    WHERE a.group_id=? ORDER BY a.created_at DESC`
  ).bind(user.id,groupId).all<Row>();
  const assignments=results.map(r=>({id:r.id,kind:r.kind,title:r.title,body:r.body,deckId:r.deck_id,status:r.status,dueDate:r.due_date,createdAt:r.created_at,
   questionCount:r.answer_key?(JSON.parse(r.answer_key as string) as number[]).length:undefined,
+  topicId:r.topic_id??undefined,questions:r.questions?JSON.parse(r.questions as string):undefined,minutes:r.minutes??undefined,
   submitted:role==='owner'?r.submitted:undefined,
-  mine:role==='member'&&(r.my_answer!==null||r.my_score!==null)?{answer:r.my_answer,score:r.my_score,total:r.my_total}:null}));
+  mine:role==='member'&&(r.my_answer!==null||r.my_score!==null)?{answer:r.my_answer,score:r.my_score,total:r.my_total,startedAt:r.my_started}:null}));
  let members:unknown;
  const assignmentId=url.searchParams.get('assignmentId');
  if(role==='owner'&&assignmentId){
   const {results:subs}=await env.DB.prepare(
-   `SELECT m.member_no,m.nickname,s.answer,s.score,s.total,s.submitted_at FROM class_members m
+   `SELECT m.member_no,m.nickname,s.answer,s.answers,s.score,s.total,s.submitted_at FROM class_members m
     LEFT JOIN class_submissions s ON s.user_id=m.user_id AND s.assignment_id=(SELECT id FROM class_assignments WHERE id=? AND group_id=?) WHERE m.group_id=? ORDER BY m.member_no`
   ).bind(assignmentId,groupId,groupId).all<Row>();
-  members=subs.map(r=>({no:r.member_no,nickname:r.nickname,answer:r.answer,score:r.score,total:r.total,submittedAt:r.submitted_at}));
+  members=subs.map(r=>({no:r.member_no,nickname:r.nickname,answer:r.answer,answers:r.answers?JSON.parse(r.answers as string):null,score:r.score,total:r.total,submittedAt:r.submitted_at}));
  }
  return json({role,assignments,members},200,noStore);
 };
@@ -67,7 +68,7 @@ export const onRequestPut:PagesFunction<Env>=async({request,env})=>{
  const b=await body(request);if('res' in b)return b.res;
  const status=b.data.status==='closed'?'closed':b.data.status==='open'?'open':null;
  if(!status)return json({error:'bad_status'},400,noStore);
- const r=await env.DB.prepare(`UPDATE class_assignments SET status=? WHERE id=? AND group_id IN (SELECT id FROM class_groups WHERE teacher_id=?)`).bind(status,clean(b.data.assignmentId,60),a.user.id).run();
+ const r=await env.DB.prepare(`UPDATE class_assignments SET status=?,closed_at=CASE WHEN ?='closed' THEN datetime('now') END WHERE id=? AND group_id IN (SELECT id FROM class_groups WHERE teacher_id=?)`).bind(status,status,clean(b.data.assignmentId,60),a.user.id).run();
  return r.meta.changes?json({ok:true},200,noStore):json({error:'forbidden'},403,noStore);
 };
 
