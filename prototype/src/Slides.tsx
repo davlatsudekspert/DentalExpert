@@ -51,7 +51,7 @@ function SlideBody({s,lang,eyebrow}:{s:Slide;lang:Lang;eyebrow?:string}){
  const T=(v?:L)=>tx(v,lang);
  const head=<h2 className="sl-title">{T(s.title)}</h2>;
  switch(s.layout){
-  case 'title':return <div className="sl-cover"><span className="sl-eyebrow">{eyebrow}</span><h1>{T(s.title)}</h1>{s.subtitle&&<p>{T(s.subtitle)}</p>}<i className="sl-cover-mark" aria-hidden/></div>;
+  case 'title':return <div className="sl-cover"><span className="sl-eyebrow">{eyebrow}</span><h1>{T(s.title)}</h1>{s.subtitle&&<p>{T(s.subtitle)}</p>}<i className="sl-cover-mark" style={{['--sl-cover' as string]:`url(${cutaway})`}} aria-hidden/></div>;
   case 'bullets':case 'summary':return <>{head}<ul className="sl-bullets">{s.bullets?.map((b,k)=><li key={k}>{T(b)}</li>)}</ul></>;
   case 'key':return <>{head}<div className="sl-key"><b>{T(s.term)}</b><p>{T(s.definition)}</p></div></>;
   case 'flow':return <>{head}<ol className="sl-flow">{s.steps?.map((x,k)=><li key={k}><span className="sl-num">{k+1}</span><div><b>{T(x.label)}</b>{x.detail&&<small>{T(x.detail)}</small>}</div></li>)}</ol></>;

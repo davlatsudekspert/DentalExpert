@@ -1,6 +1,7 @@
 import {useEffect,useState,type ReactNode} from 'react';
 import {BookOpen,ChevronDown,ChevronLeft,ChevronRight,Presentation,Target} from 'lucide-react';
 import Slides from './Slides';
+import './learn.css';
 import {SUBJECTS,courseWord,loadTopic,metaLine,topicsOf,tx,type Subject,type Topic,type TopicMeta} from './curriculum';
 import type {Lang} from './discoveryData';
 

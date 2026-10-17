@@ -1,0 +1,1044 @@
+{
+  "id": "prop-06",
+  "subject": "prop",
+  "n": 6,
+  "week": 6,
+  "type": "lecture",
+  "hours": 2,
+  "title": {
+    "en": "Histology of dental hard tissues and pulp",
+    "ru": "Гистология твёрдых тканей зуба и пульпы",
+    "uz": "Tish qattiq to‘qimalari va pulpa gistologiyasi"
+  },
+  "goals": [
+    {
+      "en": "Describe the composition and structure of enamel, dentin and cementum",
+      "ru": "Описать состав и строение эмали, дентина и цемента",
+      "uz": "Emal, dentin va sementning tarkibi va tuzilishini tavsiflash"
+    },
+    {
+      "en": "Name the types of dentin and explain when each forms",
+      "ru": "Назвать виды дентина и объяснить, когда каждый образуется",
+      "uz": "Dentin turlarini aytish va har biri qachon hosil bo‘lishini tushuntirish"
+    },
+    {
+      "en": "Describe the zones and cells of the dental pulp",
+      "ru": "Описать зоны и клетки пульпы зуба",
+      "uz": "Tish pulpasining qatlamlari va hujayralarini tavsiflash"
+    },
+    {
+      "en": "Link histology to clinical signs such as sensitivity and ageing",
+      "ru": "Связать гистологию с клиническими признаками, например чувствительностью и старением",
+      "uz": "Gistologiyani sezuvchanlik va qarish kabi klinik belgilar bilan bog‘lash"
+    }
+  ],
+  "links": [
+    "tooth-layers"
+  ],
+  "sources": [
+    "Nanci A. Ten Cate's Oral Histology: Development, Structure, and Function, 9th ed., 2018",
+    "Berman LH, Hargreaves KM. Cohen's Pathways of the Pulp, 12th ed., 2020"
+  ],
+  "slides": [
+    {
+      "layout": "title",
+      "title": {
+        "en": "Histology of the tooth",
+        "ru": "Гистология зуба",
+        "uz": "Tish gistologiyasi"
+      },
+      "subtitle": {
+        "en": "Enamel, dentin, cementum and pulp: structure explains clinical behaviour",
+        "ru": "Эмаль, дентин, цемент и пульпа: строение объясняет клинику",
+        "uz": "Emal, dentin, sement va pulpa: tuzilish klinik holatni tushuntiradi"
+      }
+    },
+    {
+      "layout": "figure",
+      "title": {
+        "en": "Tissues of a tooth in section",
+        "ru": "Ткани зуба на разрезе",
+        "uz": "Kesimda tish to‘qimalari"
+      },
+      "image": "cutaway",
+      "callouts": [
+        {
+          "at": "enamel",
+          "label": {
+            "en": "Enamel",
+            "ru": "Эмаль",
+            "uz": "Emal"
+          }
+        },
+        {
+          "at": "dentin",
+          "label": {
+            "en": "Dentin",
+            "ru": "Дентин",
+            "uz": "Dentin"
+          }
+        },
+        {
+          "at": "pulp",
+          "label": {
+            "en": "Pulp chamber",
+            "ru": "Полость зуба с пульпой",
+            "uz": "Pulpa kamerasi"
+          }
+        },
+        {
+          "at": "canal",
+          "label": {
+            "en": "Root canal",
+            "ru": "Корневой канал",
+            "uz": "Ildiz kanali"
+          }
+        },
+        {
+          "at": "cej",
+          "label": {
+            "en": "Cemento-enamel junction",
+            "ru": "Эмалево-цементная граница",
+            "uz": "Emal-sement chegarasi"
+          }
+        },
+        {
+          "at": "apex",
+          "label": {
+            "en": "Apical foramen",
+            "ru": "Апикальное отверстие",
+            "uz": "Apikal teshik"
+          }
+        }
+      ],
+      "note": {
+        "en": "Ask which tissues can repair themselves and which cannot.",
+        "ru": "Спросите, какие ткани способны к восстановлению, а какие нет.",
+        "uz": "Qaysi to‘qimalar o‘zini tiklay oladi, qaysilari tiklay olmasligini so‘rang."
+      }
+    },
+    {
+      "layout": "table",
+      "title": {
+        "en": "Composition of dental tissues",
+        "ru": "Состав тканей зуба",
+        "uz": "Tish to‘qimalarining tarkibi"
+      },
+      "head": [
+        {
+          "en": "Tissue",
+          "ru": "Ткань",
+          "uz": "To‘qima"
+        },
+        {
+          "en": "Mineral by weight",
+          "ru": "Минералы по массе",
+          "uz": "Mineral (og‘irlik bo‘yicha)"
+        },
+        {
+          "en": "Organic matrix",
+          "ru": "Органический матрикс",
+          "uz": "Organik matriks"
+        },
+        {
+          "en": "Formed by",
+          "ru": "Образуется",
+          "uz": "Hosil qiluvchi"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "en": "Enamel",
+            "ru": "Эмаль",
+            "uz": "Emal"
+          },
+          {
+            "en": "About 96%",
+            "ru": "Около 96%",
+            "uz": "Taxminan 96%"
+          },
+          {
+            "en": "Very little, non-collagen proteins",
+            "ru": "Очень мало, неколлагеновые белки",
+            "uz": "Juda kam, kollagen bo‘lmagan oqsillar"
+          },
+          {
+            "en": "Ameloblasts",
+            "ru": "Амелобластами",
+            "uz": "Ameloblastlar"
+          }
+        ],
+        [
+          {
+            "en": "Dentin",
+            "ru": "Дентин",
+            "uz": "Dentin"
+          },
+          {
+            "en": "About 70%",
+            "ru": "Около 70%",
+            "uz": "Taxminan 70%"
+          },
+          {
+            "en": "About 20%, mainly type I collagen",
+            "ru": "Около 20%, в основном коллаген I типа",
+            "uz": "Taxminan 20%, asosan I tur kollagen"
+          },
+          {
+            "en": "Odontoblasts",
+            "ru": "Одонтобластами",
+            "uz": "Odontoblastlar"
+          }
+        ],
+        [
+          {
+            "en": "Cementum",
+            "ru": "Цемент",
+            "uz": "Sement"
+          },
+          {
+            "en": "About 45–50%",
+            "ru": "Около 45–50%",
+            "uz": "Taxminan 45–50%"
+          },
+          {
+            "en": "Mainly type I collagen",
+            "ru": "В основном коллаген I типа",
+            "uz": "Asosan I tur kollagen"
+          },
+          {
+            "en": "Cementoblasts",
+            "ru": "Цементобластами",
+            "uz": "Sementoblastlar"
+          }
+        ],
+        [
+          {
+            "en": "Pulp",
+            "ru": "Пульпа",
+            "uz": "Pulpa"
+          },
+          {
+            "en": "Not mineralised",
+            "ru": "Не минерализована",
+            "uz": "Minerallashmagan"
+          },
+          {
+            "en": "Loose connective tissue",
+            "ru": "Рыхлая соединительная ткань",
+            "uz": "G‘ovak biriktiruvchi to‘qima"
+          },
+          {
+            "en": "Dental papilla",
+            "ru": "Из зубного сосочка",
+            "uz": "Tish so‘rg‘ichidan"
+          }
+        ]
+      ]
+    },
+    {
+      "layout": "tree",
+      "title": {
+        "en": "Developmental origin",
+        "ru": "Происхождение тканей",
+        "uz": "To‘qimalarning kelib chiqishi"
+      },
+      "root": {
+        "en": "Tooth germ",
+        "ru": "Зубной зачаток",
+        "uz": "Tish murtagi"
+      },
+      "children": [
+        {
+          "label": {
+            "en": "Enamel organ (ectoderm)",
+            "ru": "Эмалевый орган (эктодерма)",
+            "uz": "Emal organi (ektoderma)"
+          },
+          "items": [
+            {
+              "en": "Enamel",
+              "ru": "Эмаль",
+              "uz": "Emal"
+            }
+          ]
+        },
+        {
+          "label": {
+            "en": "Dental papilla (ectomesenchyme)",
+            "ru": "Зубной сосочек (эктомезенхима)",
+            "uz": "Tish so‘rg‘ichi (ektomezenxima)"
+          },
+          "items": [
+            {
+              "en": "Dentin",
+              "ru": "Дентин",
+              "uz": "Dentin"
+            },
+            {
+              "en": "Pulp",
+              "ru": "Пульпа",
+              "uz": "Pulpa"
+            }
+          ]
+        },
+        {
+          "label": {
+            "en": "Dental follicle (ectomesenchyme)",
+            "ru": "Зубной мешочек (эктомезенхима)",
+            "uz": "Tish xaltachasi (ektomezenxima)"
+          },
+          "items": [
+            {
+              "en": "Cementum",
+              "ru": "Цемент",
+              "uz": "Sement"
+            },
+            {
+              "en": "Periodontal ligament",
+              "ru": "Периодонт",
+              "uz": "Periodont"
+            },
+            {
+              "en": "Alveolar bone",
+              "ru": "Альвеолярная кость",
+              "uz": "Alveolyar suyak"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "layout": "bullets",
+      "title": {
+        "en": "Enamel structure",
+        "ru": "Строение эмали",
+        "uz": "Emal tuzilishi"
+      },
+      "bullets": [
+        {
+          "en": "Hardest tissue in the body; built of hydroxyapatite crystals",
+          "ru": "Самая твёрдая ткань организма; состоит из кристаллов гидроксиапатита",
+          "uz": "Organizmdagi eng qattiq to‘qima; gidroksiapatit kristallaridan tuzilgan"
+        },
+        {
+          "en": "Enamel rods run from the dentino-enamel junction to the surface",
+          "ru": "Эмалевые призмы идут от эмалево-дентинной границы к поверхности",
+          "uz": "Emal prizmalari emal-dentin chegarasidan yuzaga qarab yo‘naladi"
+        },
+        {
+          "en": "Growth lines: striae of Retzius, perikymata, neonatal line",
+          "ru": "Линии роста: линии Ретциуса, перикиматы, неонатальная линия",
+          "uz": "O‘sish chiziqlari: Retsius chiziqlari, perikimatlar, neonatal chiziq"
+        },
+        {
+          "en": "Acellular: cannot regenerate, but can remineralise",
+          "ru": "Бесклеточная: не регенерирует, но может реминерализоваться",
+          "uz": "Hujayrasiz: tiklanmaydi, ammo reminerallashishi mumkin"
+        }
+      ],
+      "note": {
+        "en": "Stress that enamel has no cells after eruption, so lost enamel is never regrown.",
+        "ru": "Подчеркните: после прорезывания в эмали нет клеток, поэтому утраченная эмаль не восстанавливается.",
+        "uz": "Tish chiqqandan keyin emalda hujayra yo‘qligini, shuning uchun yo‘qolgan emal qayta o‘smasligini ta’kidlang."
+      }
+    },
+    {
+      "layout": "tree",
+      "title": {
+        "en": "Types of dentin",
+        "ru": "Виды дентина",
+        "uz": "Dentin turlari"
+      },
+      "root": {
+        "en": "Dentin",
+        "ru": "Дентин",
+        "uz": "Dentin"
+      },
+      "children": [
+        {
+          "label": {
+            "en": "Primary",
+            "ru": "Первичный",
+            "uz": "Birlamchi"
+          },
+          "items": [
+            {
+              "en": "Formed until the root is complete",
+              "ru": "Образуется до завершения корня",
+              "uz": "Ildiz shakllanguncha hosil bo‘ladi"
+            },
+            {
+              "en": "Includes mantle dentin",
+              "ru": "Включает плащевой дентин",
+              "uz": "Plashsimon dentinni o‘z ichiga oladi"
+            }
+          ]
+        },
+        {
+          "label": {
+            "en": "Secondary",
+            "ru": "Вторичный",
+            "uz": "Ikkilamchi"
+          },
+          "items": [
+            {
+              "en": "Slow, physiological, lifelong",
+              "ru": "Медленный, физиологический, всю жизнь",
+              "uz": "Sekin, fiziologik, butun umr"
+            }
+          ]
+        },
+        {
+          "label": {
+            "en": "Tertiary",
+            "ru": "Третичный",
+            "uz": "Uchlamchi"
+          },
+          "items": [
+            {
+              "en": "Reactionary: by surviving odontoblasts",
+              "ru": "Реакционный: выжившими одонтобластами",
+              "uz": "Reaktiv: tirik qolgan odontoblastlar hosil qiladi"
+            },
+            {
+              "en": "Reparative: by new odontoblast-like cells",
+              "ru": "Репаративный: новыми одонтобластоподобными клетками",
+              "uz": "Reparativ: yangi odontoblastsimon hujayralar hosil qiladi"
+            }
+          ]
+        }
+      ],
+      "note": {
+        "en": "Link tertiary dentin to caries and attrition: the pulp defends itself.",
+        "ru": "Свяжите третичный дентин с кариесом и стиранием: пульпа защищается.",
+        "uz": "Uchlamchi dentinni karies va yemirilish bilan bog‘lang: pulpa o‘zini himoya qiladi."
+      }
+    },
+    {
+      "layout": "key",
+      "title": {
+        "en": "Why dentin is sensitive",
+        "ru": "Почему дентин чувствителен",
+        "uz": "Dentin nega sezuvchan"
+      },
+      "term": {
+        "en": "Hydrodynamic theory",
+        "ru": "Гидродинамическая теория",
+        "uz": "Gidrodinamik nazariya"
+      },
+      "definition": {
+        "en": "Dentin contains tubules filled with fluid and odontoblast processes. When dentin is exposed, cold, air or sweet stimuli move this fluid, which activates nerve endings near the pulp and causes short, sharp pain.",
+        "ru": "Дентин содержит канальцы с жидкостью и отростками одонтобластов. При обнажении дентина холод, воздух или сладкое смещают жидкость, что раздражает нервные окончания у пульпы и вызывает короткую острую боль.",
+        "uz": "Dentinda suyuqlik va odontoblast o‘simtalari bilan to‘lgan naychalar bor. Dentin ochilganda sovuq, havo yoki shirin ta’sirlar bu suyuqlikni siljitadi, pulpa yonidagi nerv uchlarini qo‘zg‘atadi va qisqa, o‘tkir og‘riq paydo bo‘ladi."
+      }
+    },
+    {
+      "layout": "flow",
+      "title": {
+        "en": "Zones of the pulp, outside to centre",
+        "ru": "Зоны пульпы снаружи к центру",
+        "uz": "Pulpa qatlamlari: tashqaridan markazga"
+      },
+      "steps": [
+        {
+          "label": {
+            "en": "Odontoblast layer",
+            "ru": "Слой одонтобластов",
+            "uz": "Odontoblastlar qatlami"
+          },
+          "detail": {
+            "en": "Lines the dentin and forms new dentin",
+            "ru": "Выстилает дентин и образует новый дентин",
+            "uz": "Dentinni qoplaydi va yangi dentin hosil qiladi"
+          }
+        },
+        {
+          "label": {
+            "en": "Cell-free zone",
+            "ru": "Бесклеточная зона",
+            "uz": "Hujayrasiz qatlam"
+          },
+          "detail": {
+            "en": "Rich in nerve and capillary networks",
+            "ru": "Богата нервными и капиллярными сплетениями",
+            "uz": "Nerv va kapillyar to‘rlariga boy"
+          }
+        },
+        {
+          "label": {
+            "en": "Cell-rich zone",
+            "ru": "Зона, богатая клетками",
+            "uz": "Hujayralarga boy qatlam"
+          },
+          "detail": {
+            "en": "Fibroblasts and stem cells",
+            "ru": "Фибробласты и стволовые клетки",
+            "uz": "Fibroblastlar va o‘zak hujayralar"
+          }
+        },
+        {
+          "label": {
+            "en": "Pulp core",
+            "ru": "Центральная зона",
+            "uz": "Pulpa markazi"
+          },
+          "detail": {
+            "en": "Larger vessels and nerves",
+            "ru": "Крупные сосуды и нервы",
+            "uz": "Yirik qon tomirlar va nervlar"
+          }
+        }
+      ]
+    },
+    {
+      "layout": "compare",
+      "title": {
+        "en": "Acellular and cellular cementum",
+        "ru": "Бесклеточный и клеточный цемент",
+        "uz": "Hujayrasiz va hujayrali sement"
+      },
+      "columns": [
+        {
+          "head": {
+            "en": "Acellular cementum",
+            "ru": "Бесклеточный цемент",
+            "uz": "Hujayrasiz sement"
+          },
+          "items": [
+            {
+              "en": "Covers the cervical and middle root",
+              "ru": "Покрывает пришеечную и среднюю части корня",
+              "uz": "Ildizning bo‘yin va o‘rta qismini qoplaydi"
+            },
+            {
+              "en": "Main anchorage for Sharpey's fibres",
+              "ru": "Основное место прикрепления шарпеевых волокон",
+              "uz": "Sharpey tolalari asosan shu yerga birikadi"
+            }
+          ]
+        },
+        {
+          "head": {
+            "en": "Cellular cementum",
+            "ru": "Клеточный цемент",
+            "uz": "Hujayrali sement"
+          },
+          "items": [
+            {
+              "en": "Apical third and furcation areas",
+              "ru": "Апикальная треть и фуркации",
+              "uz": "Ildizning apikal qismi va furkatsiyalar"
+            },
+            {
+              "en": "Cementocytes in lacunae; adapts to tooth movement",
+              "ru": "Цементоциты в лакунах; адаптируется к смещению зуба",
+              "uz": "Lakunalarda sementotsitlar; tish siljishiga moslashadi"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "layout": "summary",
+      "title": {
+        "en": "Summary",
+        "ru": "Итоги",
+        "uz": "Xulosa"
+      },
+      "bullets": [
+        {
+          "en": "Enamel is the most mineralised tissue and has no cells",
+          "ru": "Эмаль — самая минерализованная ткань и не содержит клеток",
+          "uz": "Emal eng ko‘p minerallashgan to‘qima va unda hujayra yo‘q"
+        },
+        {
+          "en": "Dentin and pulp form one living complex",
+          "ru": "Дентин и пульпа образуют единый живой комплекс",
+          "uz": "Dentin va pulpa yagona tirik majmua hosil qiladi"
+        },
+        {
+          "en": "Secondary dentin narrows the pulp with age; tertiary dentin defends it",
+          "ru": "Вторичный дентин с возрастом сужает полость, третичный защищает пульпу",
+          "uz": "Ikkilamchi dentin yosh bilan pulpani toraytiradi, uchlamchi uni himoya qiladi"
+        },
+        {
+          "en": "Cementum anchors the periodontal ligament to the root",
+          "ru": "Цемент прикрепляет периодонт к корню",
+          "uz": "Sement periodontni ildizga biriktiradi"
+        }
+      ]
+    }
+  ],
+  "oral": [
+    {
+      "q": {
+        "en": "Compare the composition and properties of enamel and dentin.",
+        "ru": "Сравните состав и свойства эмали и дентина.",
+        "uz": "Emal va dentinning tarkibi va xossalarini solishtiring."
+      },
+      "plan": [
+        {
+          "en": "Enamel about 96% mineral, dentin about 70%",
+          "ru": "Эмаль около 96% минералов, дентин около 70%",
+          "uz": "Emalda taxminan 96%, dentinda taxminan 70% mineral"
+        },
+        {
+          "en": "Dentin has collagen and tubules; enamel has rods",
+          "ru": "В дентине коллаген и канальцы; в эмали призмы",
+          "uz": "Dentinda kollagen va naychalar; emalda prizmalar bor"
+        },
+        {
+          "en": "Enamel is acellular; dentin contains odontoblast processes",
+          "ru": "Эмаль бесклеточна; в дентине отростки одонтобластов",
+          "uz": "Emal hujayrasiz; dentinda odontoblast o‘simtalari bor"
+        },
+        {
+          "en": "Dentin can form throughout life; enamel cannot",
+          "ru": "Дентин образуется всю жизнь; эмаль — нет",
+          "uz": "Dentin butun umr hosil bo‘ladi; emal esa yo‘q"
+        }
+      ]
+    },
+    {
+      "q": {
+        "en": "Describe primary, secondary and tertiary dentin.",
+        "ru": "Опишите первичный, вторичный и третичный дентин.",
+        "uz": "Birlamchi, ikkilamchi va uchlamchi dentinni tavsiflang."
+      },
+      "plan": [
+        {
+          "en": "Primary: formed until root completion",
+          "ru": "Первичный: до завершения формирования корня",
+          "uz": "Birlamchi: ildiz shakllanib bo‘lguncha"
+        },
+        {
+          "en": "Secondary: slow lifelong deposition, narrows the pulp",
+          "ru": "Вторичный: медленно всю жизнь, сужает полость",
+          "uz": "Ikkilamchi: butun umr sekin hosil bo‘lib, pulpani toraytiradi"
+        },
+        {
+          "en": "Tertiary: response to caries, wear or cavity preparation",
+          "ru": "Третичный: ответ на кариес, стирание, препарирование",
+          "uz": "Uchlamchi: karies, yemirilish yoki preparatsiyaga javob"
+        },
+        {
+          "en": "Reactionary versus reparative tertiary dentin",
+          "ru": "Реакционный и репаративный третичный дентин",
+          "uz": "Reaktiv va reparativ uchlamchi dentin"
+        }
+      ]
+    },
+    {
+      "q": {
+        "en": "Name the zones and cells of the dental pulp.",
+        "ru": "Назовите зоны и клетки пульпы зуба.",
+        "uz": "Tish pulpasining qatlamlari va hujayralarini ayting."
+      },
+      "plan": [
+        {
+          "en": "Odontoblast layer at the periphery",
+          "ru": "Слой одонтобластов на периферии",
+          "uz": "Chetda odontoblastlar qatlami"
+        },
+        {
+          "en": "Cell-free zone, then cell-rich zone",
+          "ru": "Бесклеточная зона, затем зона, богатая клетками",
+          "uz": "Hujayrasiz qatlam, so‘ng hujayralarga boy qatlam"
+        },
+        {
+          "en": "Pulp core with larger vessels and nerves",
+          "ru": "Центральная зона с крупными сосудами и нервами",
+          "uz": "Yirik tomir va nervli pulpa markazi"
+        },
+        {
+          "en": "Cells: odontoblasts, fibroblasts, stem and immune cells",
+          "ru": "Клетки: одонтобласты, фибробласты, стволовые и иммунные",
+          "uz": "Hujayralar: odontoblastlar, fibroblastlar, o‘zak va immun hujayralar"
+        }
+      ]
+    },
+    {
+      "q": {
+        "en": "Explain dentin hypersensitivity using the hydrodynamic theory.",
+        "ru": "Объясните гиперчувствительность дентина с позиции гидродинамической теории.",
+        "uz": "Dentin giperesteziyasini gidrodinamik nazariya asosida tushuntiring."
+      },
+      "plan": [
+        {
+          "en": "Exposed dentin has open tubules",
+          "ru": "Обнажённый дентин имеет открытые канальцы",
+          "uz": "Ochilgan dentinda naychalar ochiq"
+        },
+        {
+          "en": "Stimuli move the fluid inside the tubules",
+          "ru": "Раздражители смещают жидкость в канальцах",
+          "uz": "Ta’sirlovchilar naychalardagi suyuqlikni siljitadi"
+        },
+        {
+          "en": "Fluid movement excites nerves near the pulp",
+          "ru": "Движение жидкости возбуждает нервы у пульпы",
+          "uz": "Suyuqlik harakati pulpa yonidagi nervlarni qo‘zg‘atadi"
+        },
+        {
+          "en": "Treatment aims to block tubules or calm nerves",
+          "ru": "Лечение закрывает канальцы или снижает возбудимость нервов",
+          "uz": "Davolash naychalarni berkitish yoki nervlarni tinchlantirishga qaratilgan"
+        }
+      ]
+    }
+  ],
+  "test": [
+    {
+      "q": {
+        "en": "Which is the most highly mineralised tissue of the human body?",
+        "ru": "Какая ткань организма человека минерализована сильнее всего?",
+        "uz": "Inson organizmidagi eng ko‘p minerallashgan to‘qima qaysi?"
+      },
+      "options": [
+        {
+          "en": "Dentin",
+          "ru": "Дентин",
+          "uz": "Dentin"
+        },
+        {
+          "en": "Cementum",
+          "ru": "Цемент",
+          "uz": "Sement"
+        },
+        {
+          "en": "Enamel",
+          "ru": "Эмаль",
+          "uz": "Emal"
+        },
+        {
+          "en": "Alveolar bone",
+          "ru": "Альвеолярная кость",
+          "uz": "Alveolyar suyak"
+        }
+      ],
+      "correct": 2,
+      "explain": {
+        "en": "Enamel is about 96% mineral by weight, far more than dentin, cementum or bone.",
+        "ru": "Эмаль содержит около 96% минералов по массе — намного больше дентина, цемента и кости.",
+        "uz": "Emal og‘irligining taxminan 96% mineraldan iborat, bu dentin, sement va suyakdan ancha ko‘p."
+      }
+    },
+    {
+      "q": {
+        "en": "Dentin is formed by:",
+        "ru": "Дентин образуют:",
+        "uz": "Dentinni qaysi hujayralar hosil qiladi:"
+      },
+      "options": [
+        {
+          "en": "Odontoblasts",
+          "ru": "одонтобласты",
+          "uz": "Odontoblastlar"
+        },
+        {
+          "en": "Ameloblasts",
+          "ru": "амелобласты",
+          "uz": "Ameloblastlar"
+        },
+        {
+          "en": "Cementoblasts",
+          "ru": "цементобласты",
+          "uz": "Sementoblastlar"
+        },
+        {
+          "en": "Osteoclasts",
+          "ru": "остеокласты",
+          "uz": "Osteoklastlar"
+        }
+      ],
+      "correct": 0,
+      "explain": {
+        "en": "Odontoblasts line the pulp and secrete dentin throughout the life of the tooth.",
+        "ru": "Одонтобласты выстилают пульпу и выделяют дентин в течение всей жизни зуба.",
+        "uz": "Odontoblastlar pulpani qoplab, tish umri davomida dentin ishlab chiqaradi."
+      }
+    },
+    {
+      "q": {
+        "en": "Enamel develops from which germ layer?",
+        "ru": "Из какого зародышевого листка развивается эмаль?",
+        "uz": "Emal qaysi embrional varaqdan rivojlanadi?"
+      },
+      "options": [
+        {
+          "en": "Mesoderm",
+          "ru": "Мезодерма",
+          "uz": "Mezoderma"
+        },
+        {
+          "en": "Endoderm",
+          "ru": "Энтодерма",
+          "uz": "Endoderma"
+        },
+        {
+          "en": "Ectomesenchyme",
+          "ru": "Эктомезенхима",
+          "uz": "Ektomezenxima"
+        },
+        {
+          "en": "Ectoderm",
+          "ru": "Эктодерма",
+          "uz": "Ektoderma"
+        }
+      ],
+      "correct": 3,
+      "explain": {
+        "en": "Enamel comes from the enamel organ, which is of ectodermal origin; dentin, pulp and cementum are ectomesenchymal.",
+        "ru": "Эмаль образуется эмалевым органом эктодермального происхождения; дентин, пульпа и цемент — из эктомезенхимы.",
+        "uz": "Emal ektodermal kelib chiqishli emal organidan hosil bo‘ladi; dentin, pulpa va sement ektomezenximadan."
+      }
+    },
+    {
+      "q": {
+        "en": "Dentin formed by new odontoblast-like cells after the original odontoblasts have died is called:",
+        "ru": "Дентин, образованный новыми одонтобластоподобными клетками после гибели исходных одонтобластов, называется:",
+        "uz": "Asl odontoblastlar nobud bo‘lgach, yangi odontoblastsimon hujayralar hosil qilgan dentin qanday ataladi:"
+      },
+      "options": [
+        {
+          "en": "Mantle dentin",
+          "ru": "плащевым",
+          "uz": "Plashsimon dentin"
+        },
+        {
+          "en": "Reparative dentin",
+          "ru": "репаративным",
+          "uz": "Reparativ dentin"
+        },
+        {
+          "en": "Secondary dentin",
+          "ru": "вторичным",
+          "uz": "Ikkilamchi dentin"
+        },
+        {
+          "en": "Peritubular dentin",
+          "ru": "перитубулярным",
+          "uz": "Peritubulyar dentin"
+        }
+      ],
+      "correct": 1,
+      "explain": {
+        "en": "Reparative tertiary dentin is made by newly differentiated cells after a strong injury kills the odontoblasts.",
+        "ru": "Репаративный третичный дентин образуют вновь дифференцированные клетки после сильного повреждения, убившего одонтобласты.",
+        "uz": "Kuchli shikast odontoblastlarni nobud qilgandan keyin reparativ uchlamchi dentinni yangi tabaqalangan hujayralar hosil qiladi."
+      }
+    },
+    {
+      "q": {
+        "en": "A patient feels short, sharp pain from cold air on an exposed root surface. The best explanation is:",
+        "ru": "Пациент ощущает короткую острую боль от холодного воздуха на обнажённом корне. Лучшее объяснение:",
+        "uz": "Bemor ochilgan ildiz yuzasiga sovuq havo tekkanda qisqa, o‘tkir og‘riq sezadi. Eng to‘g‘ri izoh:"
+      },
+      "options": [
+        {
+          "en": "Fluid movement in open dentinal tubules",
+          "ru": "Смещение жидкости в открытых дентинных канальцах",
+          "uz": "Ochiq dentin naychalarida suyuqlik harakati"
+        },
+        {
+          "en": "Inflammation of the periodontal ligament",
+          "ru": "Воспаление периодонта",
+          "uz": "Periodont yallig‘lanishi"
+        },
+        {
+          "en": "Nerves running inside enamel rods",
+          "ru": "Нервы внутри эмалевых призм",
+          "uz": "Emal prizmalari ichidagi nervlar"
+        },
+        {
+          "en": "Necrosis of the dental pulp",
+          "ru": "Некроз пульпы зуба",
+          "uz": "Tish pulpasining nekrozi"
+        }
+      ],
+      "correct": 0,
+      "explain": {
+        "en": "By the hydrodynamic theory, stimuli move tubular fluid and excite pulpal nerves, giving brief sharp pain.",
+        "ru": "По гидродинамической теории раздражитель смещает жидкость в канальцах и возбуждает нервы пульпы, вызывая короткую острую боль.",
+        "uz": "Gidrodinamik nazariyaga ko‘ra ta’sirlovchi naycha suyuqligini siljitib, pulpa nervlarini qo‘zg‘atadi va qisqa o‘tkir og‘riq beradi."
+      }
+    },
+    {
+      "q": {
+        "en": "Cellular cementum is found mainly in the:",
+        "ru": "Клеточный цемент находится преимущественно в:",
+        "uz": "Hujayrali sement asosan qayerda joylashadi:"
+      },
+      "options": [
+        {
+          "en": "Crown, over the enamel",
+          "ru": "коронке, поверх эмали",
+          "uz": "Tojda, emal ustida"
+        },
+        {
+          "en": "Cervical third of the root",
+          "ru": "пришеечной трети корня",
+          "uz": "Ildizning bo‘yin qismida"
+        },
+        {
+          "en": "Apical third and furcation",
+          "ru": "апикальной трети и фуркации",
+          "uz": "Apikal qismda va furkatsiyada"
+        },
+        {
+          "en": "Pulp chamber",
+          "ru": "полости зуба",
+          "uz": "Pulpa kamerasida"
+        }
+      ],
+      "correct": 2,
+      "explain": {
+        "en": "Cellular cementum is deposited apically and in furcations, where it adapts to tooth movement and wear.",
+        "ru": "Клеточный цемент откладывается апикально и в фуркациях, где адаптируется к смещению и стиранию зуба.",
+        "uz": "Hujayrali sement ildiz uchi va furkatsiyalarda to‘planib, tish siljishi va yemirilishiga moslashadi."
+      }
+    },
+    {
+      "q": {
+        "en": "The cell-free zone of the pulp lies:",
+        "ru": "Бесклеточная зона пульпы расположена:",
+        "uz": "Pulpaning hujayrasiz qatlami qayerda joylashgan:"
+      },
+      "options": [
+        {
+          "en": "In the centre of the root canal",
+          "ru": "в центре корневого канала",
+          "uz": "Ildiz kanali markazida"
+        },
+        {
+          "en": "Outside the dentin",
+          "ru": "снаружи от дентина",
+          "uz": "Dentindan tashqarida"
+        },
+        {
+          "en": "At the apical foramen only",
+          "ru": "только у апикального отверстия",
+          "uz": "Faqat apikal teshik yonida"
+        },
+        {
+          "en": "Just beneath the odontoblast layer",
+          "ru": "сразу под слоем одонтобластов",
+          "uz": "Odontoblastlar qatlamining ostida"
+        }
+      ],
+      "correct": 3,
+      "explain": {
+        "en": "From outside in, the pulp has the odontoblast layer, cell-free zone, cell-rich zone and core.",
+        "ru": "Снаружи внутрь в пульпе выделяют слой одонтобластов, бесклеточную зону, зону, богатую клетками, и центр.",
+        "uz": "Tashqaridan ichkariga: odontoblastlar qatlami, hujayrasiz qatlam, hujayralarga boy qatlam va markaz."
+      }
+    },
+    {
+      "q": {
+        "en": "A radiograph of an 80-year-old shows a very narrow pulp chamber in sound teeth. The main reason is:",
+        "ru": "На снимке 80-летнего пациента в интактных зубах очень узкая полость. Основная причина:",
+        "uz": "80 yoshli bemorning rentgen suratida sog‘lom tishlarda pulpa kamerasi juda tor. Asosiy sabab:"
+      },
+      "options": [
+        {
+          "en": "Enamel growth into the pulp",
+          "ru": "Врастание эмали в пульпу",
+          "uz": "Emalning pulpaga o‘sishi"
+        },
+        {
+          "en": "Lifelong secondary dentin deposition",
+          "ru": "Отложение вторичного дентина в течение жизни",
+          "uz": "Butun umr ikkilamchi dentin to‘planishi"
+        },
+        {
+          "en": "Cementum covering the pulp",
+          "ru": "Цемент покрывает пульпу",
+          "uz": "Sement pulpani qoplashi"
+        },
+        {
+          "en": "Loss of the dentinal tubules",
+          "ru": "Исчезновение дентинных канальцев",
+          "uz": "Dentin naychalarining yo‘qolishi"
+        }
+      ],
+      "correct": 1,
+      "explain": {
+        "en": "Secondary dentin is laid down slowly throughout life, so the pulp space shrinks with age.",
+        "ru": "Вторичный дентин медленно откладывается всю жизнь, поэтому полость с возрастом уменьшается.",
+        "uz": "Ikkilamchi dentin butun umr sekin to‘planadi, shuning uchun pulpa bo‘shlig‘i yosh bilan kichrayadi."
+      }
+    },
+    {
+      "q": {
+        "en": "Sharpey's fibres are:",
+        "ru": "Шарпеевы волокна — это:",
+        "uz": "Sharpey tolalari — bu:"
+      },
+      "options": [
+        {
+          "en": "Nerve fibres inside dentinal tubules",
+          "ru": "нервные волокна в дентинных канальцах",
+          "uz": "Dentin naychalaridagi nerv tolalari"
+        },
+        {
+          "en": "Growth lines in enamel",
+          "ru": "линии роста в эмали",
+          "uz": "Emaldagi o‘sish chiziqlari"
+        },
+        {
+          "en": "Periodontal collagen fibres embedded in cementum and bone",
+          "ru": "коллагеновые волокна периодонта, вплетённые в цемент и кость",
+          "uz": "Sement va suyakka botgan periodont kollagen tolalari"
+        },
+        {
+          "en": "Odontoblast processes in predentin",
+          "ru": "отростки одонтобластов в предентине",
+          "uz": "Predentindagi odontoblast o‘simtalari"
+        }
+      ],
+      "correct": 2,
+      "explain": {
+        "en": "The ends of periodontal ligament fibres are embedded in cementum and alveolar bone as Sharpey's fibres.",
+        "ru": "Концы волокон периодонта вплетаются в цемент и альвеолярную кость в виде шарпеевых волокон.",
+        "uz": "Periodont tolalarining uchlari sement va alveolyar suyakka Sharpey tolalari ko‘rinishida botib kiradi."
+      }
+    },
+    {
+      "q": {
+        "en": "Which statement about enamel is correct?",
+        "ru": "Какое утверждение об эмали верно?",
+        "uz": "Emal haqidagi qaysi fikr to‘g‘ri?"
+      },
+      "options": [
+        {
+          "en": "It regenerates from ameloblasts after eruption",
+          "ru": "Она регенерирует за счёт амелобластов после прорезывания",
+          "uz": "Tish chiqqandan keyin ameloblastlar hisobiga tiklanadi"
+        },
+        {
+          "en": "It is mostly type I collagen",
+          "ru": "Она в основном состоит из коллагена I типа",
+          "uz": "Asosan I tur kollagendan iborat"
+        },
+        {
+          "en": "It contains blood vessels",
+          "ru": "Она содержит кровеносные сосуды",
+          "uz": "Unda qon tomirlari bor"
+        },
+        {
+          "en": "It cannot regrow but can remineralise",
+          "ru": "Она не нарастает вновь, но может реминерализоваться",
+          "uz": "U qayta o‘smaydi, ammo reminerallashishi mumkin"
+        }
+      ],
+      "correct": 3,
+      "explain": {
+        "en": "Ameloblasts are lost at eruption, so enamel cannot regrow; minerals from saliva can still repair early lesions.",
+        "ru": "Амелобласты утрачиваются при прорезывании, поэтому эмаль не нарастает; минералы слюны могут восстановить ранние поражения.",
+        "uz": "Tish chiqqanda ameloblastlar yo‘qoladi, shuning uchun emal o‘smaydi; so‘lak minerallari erta shikastlarni tiklashi mumkin."
+      }
+    }
+  ]
+}

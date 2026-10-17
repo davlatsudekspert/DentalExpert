@@ -1,4 +1,4 @@
-import {useMemo,useState,type ReactNode} from 'react';
+import {useEffect,useMemo,useRef,useState,type ReactNode} from 'react';
 import {Check,X} from 'lucide-react';
 import type {Lang} from './discoveryData';
 
@@ -10,7 +10,8 @@ const words={
 };
 
 /** One-question-at-a-time quiz sheet. Calls onDone(score,total) once, when the learner finishes the last question. */
-export default function QuizRun({title,questions,lang,reveal=true,onDone,onClose}:{title:string;questions:RunQ[];lang:Lang;reveal?:boolean;onDone?:(score:number,total:number,answers:number[])=>void;onClose:()=>void}){
+/** `deadline` (epoch ms) adds a countdown and finishes the run automatically, unanswered questions as -1; `result` replaces the local score screen (server-scored tests). */
+export default function QuizRun({title,questions,lang,reveal=true,deadline,result,onDone,onClose}:{title:string;questions:RunQ[];lang:Lang;reveal?:boolean;deadline?:number;result?:ReactNode;onDone?:(score:number,total:number,answers:number[])=>void;onClose:()=>void}){
  const t=words[lang];
  const [i,setI]=useState(0);
  const [picked,setPicked]=useState<number|null>(null);
@@ -19,16 +20,22 @@ export default function QuizRun({title,questions,lang,reveal=true,onDone,onClose
  const [given,setGiven]=useState<number[]>([]);
  // Options are shown in a random order per attempt; answers are reported by their original index.
  const perms=useMemo(()=>questions.map(q=>{const a=q.options.map((_,k)=>k);for(let j=a.length-1;j>0;j--){const r=Math.floor(Math.random()*(j+1));[a[j],a[r]]=[a[r],a[j]]}return a}),[questions]);
+ const [now,setNow]=useState(()=>Date.now());
+ const doneRef=useRef(false);
+ const finish=(answers:number[])=>{if(doneRef.current)return;doneRef.current=true;setFinished(true);onDone?.(score,questions.length,answers)};
+ useEffect(()=>{if(!deadline||finished)return;const id=setInterval(()=>setNow(Date.now()),1000);return ()=>clearInterval(id)},[deadline,finished]);
+ useEffect(()=>{if(deadline&&!finished&&now>=deadline)finish([...given,...Array(questions.length-given.length).fill(-1)])});
+ const left=deadline?Math.max(0,Math.ceil((deadline-now)/1000)):0;
  const q=questions[i];
  const perm=perms[i];
  const answer=(pos:number)=>{if(picked!==null)return;const o=perm[pos];setPicked(o);setGiven(g=>[...g,o]);if(o===q.correct)setScore(s=>s+1)};
  const next=()=>{
   if(i+1<questions.length){setI(i+1);setPicked(null);return}
-  setFinished(true);onDone?.(score,questions.length,given);
+  finish(given);
  };
  return <div className="quiz-run" role="dialog" aria-modal="true" aria-label={title}>
-  <div className="quiz-run-bar"><strong>{title}</strong><span>{finished?t.score:`${i+1} / ${questions.length}`}</span><button onClick={onClose} aria-label={t.close}><X size={20}/></button></div>
-  {finished?<div className="quiz-run-body quiz-run-result"><b>{score} / {questions.length}</b><p>{t.score}</p><button className="button" onClick={onClose}>{t.close}</button></div>
+  <div className="quiz-run-bar"><strong>{title}</strong><span>{finished?t.score:`${i+1} / ${questions.length}`}{deadline&&!finished?<em className={'quiz-run-timer'+(left<60?' low':'')}> · {Math.floor(left/60)}:{String(left%60).padStart(2,'0')}</em>:null}</span><button onClick={onClose} aria-label={t.close}><X size={20}/></button></div>
+  {finished?<div className="quiz-run-body quiz-run-result">{result??<><b>{score} / {questions.length}</b><p>{t.score}</p></>}<button className="button" onClick={onClose}>{t.close}</button></div>
   :<div className="quiz-run-body">
    <div className="quiz-run-progress"><i style={{width:`${((i+(picked!==null?1:0))/questions.length)*100}%`}}/></div>
    {q.media}

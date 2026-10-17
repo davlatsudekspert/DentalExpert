@@ -1,0 +1,1057 @@
+{
+  "id": "perio-01",
+  "subject": "perio",
+  "n": 1,
+  "week": 1,
+  "type": "lecture",
+  "hours": 2,
+  "title": {
+    "en": "Anatomy and physiology of the periodontium",
+    "ru": "Анатомия и физиология пародонта",
+    "uz": "Parodont anatomiyasi va fiziologiyasi"
+  },
+  "goals": [
+    {
+      "en": "Name the four tissues of the periodontium and their functions",
+      "ru": "Назвать четыре ткани пародонта и их функции",
+      "uz": "Parodontning to‘rt to‘qimasini va ularning vazifalarini aytish"
+    },
+    {
+      "en": "Describe the clinical features of healthy gingiva",
+      "ru": "Описать клинические признаки здоровой десны",
+      "uz": "Sog‘lom milkning klinik belgilarini tavsiflash"
+    },
+    {
+      "en": "Explain the dentogingival junction and supracrestal tissue attachment",
+      "ru": "Объяснить зубодесневое соединение и надальвеолярное прикрепление тканей",
+      "uz": "Tish-milk birikmasi va alveola usti to‘qima birikishini tushuntirish"
+    }
+  ],
+  "links": [
+    "periodontium",
+    "tooth-layers"
+  ],
+  "sources": [
+    "Newman MG et al. Newman and Carranza's Clinical Periodontology, 13th ed., 2019",
+    "Lang NP, Lindhe J. Clinical Periodontology and Implant Dentistry, 6th ed., 2015"
+  ],
+  "slides": [
+    {
+      "layout": "title",
+      "title": {
+        "en": "The periodontium",
+        "ru": "Пародонт",
+        "uz": "Parodont"
+      },
+      "subtitle": {
+        "en": "Structure and function of the tooth-supporting tissues",
+        "ru": "Строение и функции тканей, удерживающих зуб",
+        "uz": "Tishni ushlab turuvchi to‘qimalarning tuzilishi va vazifasi"
+      }
+    },
+    {
+      "layout": "tree",
+      "title": {
+        "en": "Tissues of the periodontium",
+        "ru": "Ткани пародонта",
+        "uz": "Parodont to‘qimalari"
+      },
+      "root": {
+        "en": "Periodontium",
+        "ru": "Пародонт",
+        "uz": "Parodont"
+      },
+      "children": [
+        {
+          "label": {
+            "en": "Gingiva",
+            "ru": "Десна",
+            "uz": "Milk"
+          },
+          "items": [
+            {
+              "en": "Protective seal",
+              "ru": "Защитный барьер",
+              "uz": "Himoya to‘sig‘i"
+            }
+          ]
+        },
+        {
+          "label": {
+            "en": "Periodontal ligament",
+            "ru": "Периодонтальная связка",
+            "uz": "Periodontal boylam"
+          },
+          "items": [
+            {
+              "en": "Attachment, sensation",
+              "ru": "Прикрепление, чувствительность",
+              "uz": "Birikish, sezuvchanlik"
+            }
+          ]
+        },
+        {
+          "label": {
+            "en": "Root cementum",
+            "ru": "Цемент корня",
+            "uz": "Ildiz sementi"
+          },
+          "items": [
+            {
+              "en": "Anchors PDL fibres",
+              "ru": "Фиксирует волокна связки",
+              "uz": "Boylam tolalarini mahkamlaydi"
+            }
+          ]
+        },
+        {
+          "label": {
+            "en": "Alveolar bone",
+            "ru": "Альвеолярная кость",
+            "uz": "Alveolyar suyak"
+          },
+          "items": [
+            {
+              "en": "Supports the root",
+              "ru": "Опора корня",
+              "uz": "Ildiz tayanchi"
+            }
+          ]
+        }
+      ],
+      "note": {
+        "en": "Ask which two tissues are shared with the tooth and which two with the jaw.",
+        "ru": "Спросите, какие две ткани относятся к зубу, а какие — к челюсти.",
+        "uz": "Qaysi ikki to‘qima tishga, qaysi ikkitasi jag‘ga tegishli ekanini so‘rang."
+      }
+    },
+    {
+      "layout": "figure",
+      "title": {
+        "en": "Landmarks on the tooth",
+        "ru": "Ориентиры на зубе",
+        "uz": "Tishdagi mo‘ljallar"
+      },
+      "image": "cutaway",
+      "callouts": [
+        {
+          "at": "cej",
+          "label": {
+            "en": "Cemento-enamel junction",
+            "ru": "Эмалево-цементная граница",
+            "uz": "Emal-sement chegarasi"
+          }
+        },
+        {
+          "at": "root",
+          "label": {
+            "en": "Cementum covers the root",
+            "ru": "Цемент покрывает корень",
+            "uz": "Sement ildizni qoplaydi"
+          }
+        },
+        {
+          "at": "apex",
+          "label": {
+            "en": "Apical PDL fibres",
+            "ru": "Апикальные волокна",
+            "uz": "Apikal tolalar"
+          }
+        }
+      ],
+      "bullets": [
+        {
+          "en": "Healthy gingival margin lies near the CEJ",
+          "ru": "Здоровый десневой край — у эмалево-цементной границы",
+          "uz": "Sog‘lom milk cheti emal-sement chegarasi yaqinida"
+        },
+        {
+          "en": "CEJ is the reference point for attachment level",
+          "ru": "ЭЦГ — ориентир для уровня прикрепления",
+          "uz": "Emal-sement chegarasi birikish darajasi uchun mo‘ljal"
+        }
+      ]
+    },
+    {
+      "layout": "table",
+      "title": {
+        "en": "Healthy gingiva",
+        "ru": "Здоровая десна",
+        "uz": "Sog‘lom milk"
+      },
+      "head": [
+        {
+          "en": "Feature",
+          "ru": "Признак",
+          "uz": "Belgi"
+        },
+        {
+          "en": "Healthy finding",
+          "ru": "Норма",
+          "uz": "Me’yor"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "en": "Colour",
+            "ru": "Цвет",
+            "uz": "Rangi"
+          },
+          {
+            "en": "Coral pink, may be pigmented",
+            "ru": "Бледно-розовый, возможна пигментация",
+            "uz": "Och pushti, pigmentli bo‘lishi mumkin"
+          }
+        ],
+        [
+          {
+            "en": "Contour",
+            "ru": "Контур",
+            "uz": "Kontur"
+          },
+          {
+            "en": "Knife-edge margin, papillae fill embrasures",
+            "ru": "Тонкий край, сосочки заполняют промежутки",
+            "uz": "Yupqa chet, so‘rg‘ichlar tishlararo bo‘shliqni to‘ldiradi"
+          }
+        ],
+        [
+          {
+            "en": "Consistency",
+            "ru": "Консистенция",
+            "uz": "Zichlik"
+          },
+          {
+            "en": "Firm and resilient",
+            "ru": "Плотная, упругая",
+            "uz": "Zich va elastik"
+          }
+        ],
+        [
+          {
+            "en": "Sulcus depth",
+            "ru": "Глубина борозды",
+            "uz": "Egatcha chuqurligi"
+          },
+          {
+            "en": "Probing up to 3 mm",
+            "ru": "При зондировании до 3 мм",
+            "uz": "Zondlashda 3 mm gacha"
+          }
+        ],
+        [
+          {
+            "en": "Bleeding",
+            "ru": "Кровоточивость",
+            "uz": "Qonash"
+          },
+          {
+            "en": "No bleeding on gentle probing",
+            "ru": "Нет кровоточивости при зондировании",
+            "uz": "Yengil zondlashda qonamaydi"
+          }
+        ]
+      ],
+      "note": {
+        "en": "Show clinical photos and ask students to describe colour, contour and consistency.",
+        "ru": "Покажите фото и попросите описать цвет, контур и консистенцию.",
+        "uz": "Klinik rasmlarni ko‘rsating va talabalardan rang, kontur va zichlikni tavsiflashni so‘rang."
+      }
+    },
+    {
+      "layout": "compare",
+      "title": {
+        "en": "Free and attached gingiva",
+        "ru": "Свободная и прикреплённая десна",
+        "uz": "Erkin va birikkan milk"
+      },
+      "columns": [
+        {
+          "head": {
+            "en": "Free gingiva",
+            "ru": "Свободная десна",
+            "uz": "Erkin milk"
+          },
+          "items": [
+            {
+              "en": "Margin and papillae",
+              "ru": "Край и сосочки",
+              "uz": "Chet va so‘rg‘ichlar"
+            },
+            {
+              "en": "Not bound to tooth or bone",
+              "ru": "Не прикреплена к зубу и кости",
+              "uz": "Tish va suyakka birikmagan"
+            },
+            {
+              "en": "Forms the sulcus wall",
+              "ru": "Образует стенку борозды",
+              "uz": "Egatcha devorini hosil qiladi"
+            }
+          ]
+        },
+        {
+          "head": {
+            "en": "Attached gingiva",
+            "ru": "Прикреплённая десна",
+            "uz": "Birikkan milk"
+          },
+          "items": [
+            {
+              "en": "Firmly bound to periosteum",
+              "ru": "Плотно сращена с надкостницей",
+              "uz": "Suyak ustki pardasiga zich birikkan"
+            },
+            {
+              "en": "Ends at the mucogingival junction",
+              "ru": "Заканчивается у слизисто-десневой границы",
+              "uz": "Shilliq-milk chegarasida tugaydi"
+            },
+            {
+              "en": "Keratinised, may be stippled",
+              "ru": "Ороговевает, может быть зернистой",
+              "uz": "Muguzlangan, donador bo‘lishi mumkin"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "layout": "key",
+      "title": {
+        "en": "Supracrestal tissue attachment",
+        "ru": "Надальвеолярное прикрепление тканей",
+        "uz": "Alveola usti to‘qima birikishi"
+      },
+      "term": {
+        "en": "Supracrestal tissue attachment",
+        "ru": "Надальвеолярное прикрепление",
+        "uz": "Alveola usti birikishi"
+      },
+      "definition": {
+        "en": "The junctional epithelium and supracrestal connective tissue attachment between the base of the sulcus and the alveolar crest, formerly called biologic width; restorations that invade it cause inflammation and bone loss.",
+        "ru": "Соединительный эпителий и надальвеолярное соединительнотканное прикрепление между дном борозды и гребнем кости, прежде «биологическая ширина»; реставрации, нарушающие его, вызывают воспаление и убыль кости.",
+        "uz": "Egatcha tubi va alveola qirrasi orasidagi birikma epiteliy hamda alveola usti biriktiruvchi to‘qima birikishi, ilgari «biologik kenglik» deb atalgan; unga kirib borgan restavratsiyalar yallig‘lanish va suyak yo‘qolishiga olib keladi."
+      },
+      "note": {
+        "en": "Explain that the 2017 workshop replaced the term 'biologic width' with this name.",
+        "ru": "Поясните, что в 2017 году термин «биологическая ширина» заменили этим названием.",
+        "uz": "2017 yilgi kelishuvda «biologik kenglik» atamasi shu nom bilan almashtirilganini tushuntiring."
+      }
+    },
+    {
+      "layout": "table",
+      "title": {
+        "en": "Principal PDL fibre groups",
+        "ru": "Основные группы волокон периодонта",
+        "uz": "Periodont tolalarining asosiy guruhlari"
+      },
+      "head": [
+        {
+          "en": "Group",
+          "ru": "Группа",
+          "uz": "Guruh"
+        },
+        {
+          "en": "Direction",
+          "ru": "Направление",
+          "uz": "Yo‘nalishi"
+        },
+        {
+          "en": "Main role",
+          "ru": "Основная роль",
+          "uz": "Asosiy vazifasi"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "en": "Alveolar crest",
+            "ru": "Альвеолярного гребня",
+            "uz": "Alveola qirrasi"
+          },
+          {
+            "en": "Cervical root to crest",
+            "ru": "От шейки корня к гребню",
+            "uz": "Ildiz bo‘ynidan qirraga"
+          },
+          {
+            "en": "Resists extrusion",
+            "ru": "Препятствует выдвижению",
+            "uz": "Chiqib ketishga qarshi"
+          }
+        ],
+        [
+          {
+            "en": "Horizontal",
+            "ru": "Горизонтальные",
+            "uz": "Gorizontal"
+          },
+          {
+            "en": "At right angles to root",
+            "ru": "Перпендикулярно корню",
+            "uz": "Ildizga perpendikulyar"
+          },
+          {
+            "en": "Resists lateral forces",
+            "ru": "Противодействуют боковым силам",
+            "uz": "Yon kuchlarga qarshi"
+          }
+        ],
+        [
+          {
+            "en": "Oblique",
+            "ru": "Косые",
+            "uz": "Qiya"
+          },
+          {
+            "en": "Bone down to cementum",
+            "ru": "От кости вниз к цементу",
+            "uz": "Suyakdan pastga sementga"
+          },
+          {
+            "en": "Largest group, bears chewing load",
+            "ru": "Самая большая группа, жевательная нагрузка",
+            "uz": "Eng katta guruh, chaynash yukini ko‘taradi"
+          }
+        ],
+        [
+          {
+            "en": "Apical",
+            "ru": "Апикальные",
+            "uz": "Apikal"
+          },
+          {
+            "en": "Radiate from apex",
+            "ru": "Расходятся от верхушки",
+            "uz": "Uchidan tarqaladi"
+          },
+          {
+            "en": "Resists tipping",
+            "ru": "Препятствуют опрокидыванию",
+            "uz": "Og‘ishga qarshi"
+          }
+        ],
+        [
+          {
+            "en": "Interradicular",
+            "ru": "Межкорневые",
+            "uz": "Ildizlararo"
+          },
+          {
+            "en": "Furcation crest",
+            "ru": "От фуркации к гребню",
+            "uz": "Furkatsiyadan qirraga"
+          },
+          {
+            "en": "Multirooted teeth",
+            "ru": "Многокорневые зубы",
+            "uz": "Ko‘p ildizli tishlar"
+          }
+        ]
+      ]
+    },
+    {
+      "layout": "compare",
+      "title": {
+        "en": "Cementum and alveolar bone",
+        "ru": "Цемент и альвеолярная кость",
+        "uz": "Sement va alveolyar suyak"
+      },
+      "columns": [
+        {
+          "head": {
+            "en": "Cementum",
+            "ru": "Цемент",
+            "uz": "Sement"
+          },
+          "items": [
+            {
+              "en": "Avascular, no nerves",
+              "ru": "Без сосудов и нервов",
+              "uz": "Qon tomir va nervlarsiz"
+            },
+            {
+              "en": "Acellular in cervical part",
+              "ru": "Бесклеточный в пришеечной части",
+              "uz": "Bo‘yin qismida hujayrasiz"
+            },
+            {
+              "en": "Cellular near apex and furcation",
+              "ru": "Клеточный у верхушки и фуркации",
+              "uz": "Uchi va furkatsiya yaqinida hujayrali"
+            }
+          ]
+        },
+        {
+          "head": {
+            "en": "Alveolar bone",
+            "ru": "Альвеолярная кость",
+            "uz": "Alveolyar suyak"
+          },
+          "items": [
+            {
+              "en": "Alveolar bone proper lines the socket",
+              "ru": "Собственно альвеолярная кость выстилает лунку",
+              "uz": "Asl alveolyar suyak lunkani qoplaydi"
+            },
+            {
+              "en": "Seen as lamina dura on radiographs",
+              "ru": "На снимке — кортикальная пластинка",
+              "uz": "Rentgenda kortikal plastinka ko‘rinadi"
+            },
+            {
+              "en": "Constantly remodels with function",
+              "ru": "Постоянно перестраивается",
+              "uz": "Funksiya bilan doimiy qayta tuziladi"
+            }
+          ]
+        }
+      ],
+      "note": {
+        "en": "Stress that cementum, unlike bone, is avascular and does not normally remodel.",
+        "ru": "Подчеркните, что цемент, в отличие от кости, бессосудистый и в норме не перестраивается.",
+        "uz": "Sement suyakdan farqli o‘laroq qon tomirsiz va odatda qayta tuzilmasligini ta’kidlang."
+      }
+    },
+    {
+      "layout": "cycle",
+      "title": {
+        "en": "Defence at the gingival sulcus",
+        "ru": "Защита в десневой борозде",
+        "uz": "Milk egatchasidagi himoya"
+      },
+      "center": {
+        "en": "Sulcus defence",
+        "ru": "Защита борозды",
+        "uz": "Egatcha himoyasi"
+      },
+      "steps": [
+        {
+          "label": {
+            "en": "Rapid epithelial turnover",
+            "ru": "Быстрое обновление эпителия",
+            "uz": "Epiteliyning tez yangilanishi"
+          }
+        },
+        {
+          "label": {
+            "en": "Crevicular fluid flow",
+            "ru": "Ток десневой жидкости",
+            "uz": "Milk suyuqligi oqimi"
+          }
+        },
+        {
+          "label": {
+            "en": "Neutrophil migration",
+            "ru": "Миграция нейтрофилов",
+            "uz": "Neytrofillar migratsiyasi"
+          }
+        },
+        {
+          "label": {
+            "en": "Antibodies and complement",
+            "ru": "Антитела и комплемент",
+            "uz": "Antitanalar va komplement"
+          }
+        }
+      ]
+    },
+    {
+      "layout": "summary",
+      "title": {
+        "en": "Summary",
+        "ru": "Итоги",
+        "uz": "Xulosa"
+      },
+      "bullets": [
+        {
+          "en": "Gingiva, PDL, cementum and alveolar bone form the periodontium",
+          "ru": "Десна, периодонт, цемент и кость образуют пародонт",
+          "uz": "Milk, periodont, sement va alveolyar suyak parodontni tashkil etadi"
+        },
+        {
+          "en": "Healthy gingiva is pink, firm and does not bleed",
+          "ru": "Здоровая десна розовая, плотная, не кровоточит",
+          "uz": "Sog‘lom milk pushti, zich va qonamaydi"
+        },
+        {
+          "en": "Oblique fibres carry most of the chewing load",
+          "ru": "Косые волокна несут основную жевательную нагрузку",
+          "uz": "Qiya tolalar chaynash yukining asosiy qismini ko‘taradi"
+        },
+        {
+          "en": "Restorations must respect supracrestal attachment",
+          "ru": "Реставрации не должны нарушать надальвеолярное прикрепление",
+          "uz": "Restavratsiyalar alveola usti birikishini buzmasligi kerak"
+        }
+      ]
+    }
+  ],
+  "oral": [
+    {
+      "q": {
+        "en": "Name the tissues of the periodontium and their functions.",
+        "ru": "Назовите ткани пародонта и их функции.",
+        "uz": "Parodont to‘qimalari va ularning vazifalarini ayting."
+      },
+      "plan": [
+        {
+          "en": "Gingiva: protective seal around the tooth",
+          "ru": "Десна: защитный барьер вокруг зуба",
+          "uz": "Milk: tish atrofidagi himoya to‘sig‘i"
+        },
+        {
+          "en": "PDL: attachment, shock absorption, sensation",
+          "ru": "Периодонт: прикрепление, амортизация, чувствительность",
+          "uz": "Periodont: birikish, zarbani yumshatish, sezuvchanlik"
+        },
+        {
+          "en": "Cementum: anchors fibres to the root",
+          "ru": "Цемент: фиксирует волокна на корне",
+          "uz": "Sement: tolalarni ildizga mahkamlaydi"
+        },
+        {
+          "en": "Alveolar bone: supports the root",
+          "ru": "Альвеолярная кость: опора корня",
+          "uz": "Alveolyar suyak: ildiz tayanchi"
+        }
+      ]
+    },
+    {
+      "q": {
+        "en": "Describe the clinical features of healthy gingiva.",
+        "ru": "Опишите клинические признаки здоровой десны.",
+        "uz": "Sog‘lom milkning klinik belgilarini tavsiflang."
+      },
+      "plan": [
+        {
+          "en": "Coral pink, physiological pigmentation possible",
+          "ru": "Бледно-розовая, возможна физиологическая пигментация",
+          "uz": "Och pushti, fiziologik pigmentatsiya bo‘lishi mumkin"
+        },
+        {
+          "en": "Knife-edge margin and pointed papillae",
+          "ru": "Тонкий край и заострённые сосочки",
+          "uz": "Yupqa chet va o‘tkir so‘rg‘ichlar"
+        },
+        {
+          "en": "Firm consistency",
+          "ru": "Плотная консистенция",
+          "uz": "Zich konsistensiya"
+        },
+        {
+          "en": "Probing depth up to 3 mm without bleeding",
+          "ru": "Глубина зондирования до 3 мм без кровоточивости",
+          "uz": "Qonamasdan 3 mm gacha zondlash chuqurligi"
+        }
+      ]
+    },
+    {
+      "q": {
+        "en": "What is the supracrestal tissue attachment and why is it clinically important?",
+        "ru": "Что такое надальвеолярное прикрепление и почему оно важно клинически?",
+        "uz": "Alveola usti to‘qima birikishi nima va u klinik jihatdan nima uchun muhim?"
+      },
+      "plan": [
+        {
+          "en": "Junctional epithelium plus connective tissue attachment",
+          "ru": "Соединительный эпителий и соединительнотканное прикрепление",
+          "uz": "Birikma epiteliy va biriktiruvchi to‘qima birikishi"
+        },
+        {
+          "en": "Formerly called biologic width",
+          "ru": "Прежде называлось биологической шириной",
+          "uz": "Ilgari biologik kenglik deb atalgan"
+        },
+        {
+          "en": "Deep restoration margins violate it",
+          "ru": "Глубокие края реставраций нарушают его",
+          "uz": "Chuqur restavratsiya chetlari uni buzadi"
+        },
+        {
+          "en": "Leads to inflammation or bone loss",
+          "ru": "Приводит к воспалению или убыли кости",
+          "uz": "Yallig‘lanish yoki suyak yo‘qolishiga olib keladi"
+        }
+      ]
+    },
+    {
+      "q": {
+        "en": "Compare cementum and alveolar bone.",
+        "ru": "Сравните цемент и альвеолярную кость.",
+        "uz": "Sement va alveolyar suyakni solishtiring."
+      },
+      "plan": [
+        {
+          "en": "Cementum is avascular and does not remodel normally",
+          "ru": "Цемент бессосудистый и в норме не перестраивается",
+          "uz": "Sement qon tomirsiz va odatda qayta tuzilmaydi"
+        },
+        {
+          "en": "Bone is vascular and remodels constantly",
+          "ru": "Кость кровоснабжается и постоянно перестраивается",
+          "uz": "Suyak qon bilan ta’minlangan va doimo qayta tuziladi"
+        },
+        {
+          "en": "Both anchor PDL fibres",
+          "ru": "Оба фиксируют волокна периодонта",
+          "uz": "Ikkalasi ham periodont tolalarini mahkamlaydi"
+        }
+      ]
+    }
+  ],
+  "test": [
+    {
+      "q": {
+        "en": "Which fibre group of the PDL is the largest and resists vertical chewing forces?",
+        "ru": "Какая группа волокон периодонта самая большая и противостоит вертикальным жевательным силам?",
+        "uz": "Periodontning qaysi tolalar guruhi eng katta va vertikal chaynash kuchlariga qarshi turadi?"
+      },
+      "options": [
+        {
+          "en": "Horizontal",
+          "ru": "Горизонтальные",
+          "uz": "Gorizontal"
+        },
+        {
+          "en": "Apical",
+          "ru": "Апикальные",
+          "uz": "Apikal"
+        },
+        {
+          "en": "Alveolar crest",
+          "ru": "Альвеолярного гребня",
+          "uz": "Alveola qirrasi"
+        },
+        {
+          "en": "Oblique",
+          "ru": "Косые",
+          "uz": "Qiya"
+        }
+      ],
+      "correct": 3,
+      "explain": {
+        "en": "Oblique fibres run from bone apically to cementum and turn vertical loads into tension on the bone.",
+        "ru": "Косые волокна идут от кости апикально к цементу и превращают вертикальную нагрузку в натяжение кости.",
+        "uz": "Qiya tolalar suyakdan apikal yo‘nalishda sementga boradi va vertikal yukni suyakdagi tortilishga aylantiradi."
+      }
+    },
+    {
+      "q": {
+        "en": "The attached gingiva ends apically at the:",
+        "ru": "Прикреплённая десна апикально заканчивается у:",
+        "uz": "Birikkan milk apikal tomonda qayerda tugaydi?"
+      },
+      "options": [
+        {
+          "en": "Mucogingival junction",
+          "ru": "Слизисто-десневой границы",
+          "uz": "Shilliq-milk chegarasida"
+        },
+        {
+          "en": "Cemento-enamel junction",
+          "ru": "Эмалево-цементной границы",
+          "uz": "Emal-sement chegarasida"
+        },
+        {
+          "en": "Free gingival groove",
+          "ru": "Десневой бороздки",
+          "uz": "Erkin milk egatchasida"
+        },
+        {
+          "en": "Root apex",
+          "ru": "Верхушки корня",
+          "uz": "Ildiz uchida"
+        }
+      ],
+      "correct": 0,
+      "explain": {
+        "en": "The attached gingiva extends from the free gingival groove to the mucogingival junction, where alveolar mucosa begins.",
+        "ru": "Прикреплённая десна тянется от десневой бороздки до слизисто-десневой границы, где начинается альвеолярная слизистая.",
+        "uz": "Birikkan milk erkin milk egatchasidan alveolyar shilliq qavat boshlanadigan shilliq-milk chegarasigacha cho‘ziladi."
+      }
+    },
+    {
+      "q": {
+        "en": "On a radiograph, the alveolar bone proper appears as the:",
+        "ru": "На рентгенограмме собственно альвеолярная кость видна как:",
+        "uz": "Rentgenogrammada asl alveolyar suyak qanday ko‘rinadi?"
+      },
+      "options": [
+        {
+          "en": "Periapical radiolucency",
+          "ru": "Периапикальное просветление",
+          "uz": "Periapikal yorug‘lanish"
+        },
+        {
+          "en": "Pulp chamber",
+          "ru": "Полость зуба",
+          "uz": "Pulpa kamerasi"
+        },
+        {
+          "en": "Lamina dura",
+          "ru": "Кортикальная пластинка лунки",
+          "uz": "Lunkaning kortikal plastinkasi"
+        },
+        {
+          "en": "Enamel cap",
+          "ru": "Эмалевый колпачок",
+          "uz": "Emal qalpoqchasi"
+        }
+      ],
+      "correct": 2,
+      "explain": {
+        "en": "The dense bone lining the socket shows as a thin radiopaque line, the lamina dura.",
+        "ru": "Плотная кость, выстилающая лунку, видна как тонкая рентгеноконтрастная линия.",
+        "uz": "Lunkani qoplagan zich suyak yupqa rentgenkontrast chiziq — lamina dura sifatida ko‘rinadi."
+      }
+    },
+    {
+      "q": {
+        "en": "Which statement about cementum is correct?",
+        "ru": "Какое утверждение о цементе верно?",
+        "uz": "Sement haqidagi qaysi fikr to‘g‘ri?"
+      },
+      "options": [
+        {
+          "en": "It is richly vascular",
+          "ru": "Он обильно кровоснабжается",
+          "uz": "U qon bilan mo‘l ta’minlangan"
+        },
+        {
+          "en": "It is avascular and has no nerves",
+          "ru": "Он не имеет сосудов и нервов",
+          "uz": "Unda qon tomir va nervlar yo‘q"
+        },
+        {
+          "en": "It remodels faster than bone",
+          "ru": "Он перестраивается быстрее кости",
+          "uz": "U suyakdan tezroq qayta tuziladi"
+        },
+        {
+          "en": "It covers the enamel",
+          "ru": "Он покрывает эмаль",
+          "uz": "U emalni qoplaydi"
+        }
+      ],
+      "correct": 1,
+      "explain": {
+        "en": "Cementum is avascular and not innervated, which is one reason it resists resorption better than bone.",
+        "ru": "Цемент бессосудистый и не иннервируется, поэтому устойчивее кости к резорбции.",
+        "uz": "Sement qon tomirsiz va innervatsiyasiz, shuning uchun rezorbsiyaga suyakdan chidamliroq."
+      }
+    },
+    {
+      "q": {
+        "en": "Healthy gingival sulcus depth measured with a probe is usually:",
+        "ru": "Глубина здоровой десневой борозды при зондировании обычно:",
+        "uz": "Sog‘lom milk egatchasining zond bilan o‘lchangan chuqurligi odatda qancha?"
+      },
+      "options": [
+        {
+          "en": "Up to 3 mm",
+          "ru": "До 3 мм",
+          "uz": "3 mm gacha"
+        },
+        {
+          "en": "4–5 mm",
+          "ru": "4–5 мм",
+          "uz": "4–5 mm"
+        },
+        {
+          "en": "6–7 mm",
+          "ru": "6–7 мм",
+          "uz": "6–7 mm"
+        },
+        {
+          "en": "More than 7 mm",
+          "ru": "Более 7 мм",
+          "uz": "7 mm dan ortiq"
+        }
+      ],
+      "correct": 0,
+      "explain": {
+        "en": "In health the probe usually penetrates no more than about 3 mm and there is no bleeding.",
+        "ru": "В норме зонд обычно погружается не более чем на 3 мм без кровоточивости.",
+        "uz": "Me’yorda zond odatda 3 mm dan ko‘p kirmaydi va qonash bo‘lmaydi."
+      }
+    },
+    {
+      "q": {
+        "en": "The junctional epithelium attaches to the tooth by:",
+        "ru": "Соединительный эпителий прикрепляется к зубу посредством:",
+        "uz": "Birikma epiteliy tishga nima orqali birikadi?"
+      },
+      "options": [
+        {
+          "en": "Collagen fibre bundles",
+          "ru": "Пучков коллагеновых волокон",
+          "uz": "Kollagen tolalar tutamlari"
+        },
+        {
+          "en": "Cementoblasts",
+          "ru": "Цементобластов",
+          "uz": "Sementoblastlar"
+        },
+        {
+          "en": "Keratinised surface cells",
+          "ru": "Ороговевающих поверхностных клеток",
+          "uz": "Muguzlanuvchi yuza hujayralar"
+        },
+        {
+          "en": "Internal basal lamina and hemidesmosomes",
+          "ru": "Внутренней базальной мембраны и полудесмосом",
+          "uz": "Ichki bazal membrana va yarim desmosomalar"
+        }
+      ],
+      "correct": 3,
+      "explain": {
+        "en": "The epithelial attachment is formed by an internal basal lamina with hemidesmosomes on the tooth surface.",
+        "ru": "Эпителиальное прикрепление образовано внутренней базальной мембраной с полудесмосомами на поверхности зуба.",
+        "uz": "Epitelial birikish tish yuzasidagi yarim desmosomali ichki bazal membrana orqali hosil bo‘ladi."
+      }
+    },
+    {
+      "q": {
+        "en": "A crown margin is placed deep into the sulcus close to the bone crest. Two months later the gingiva is red and bleeds. The most likely cause is:",
+        "ru": "Край коронки расположен глубоко в борозде у гребня кости. Через два месяца десна красная и кровоточит. Вероятная причина:",
+        "uz": "Toj cheti egatchaga chuqur, suyak qirrasi yaqiniga joylashtirilgan. Ikki oydan keyin milk qizargan va qonaydi. Ehtimoliy sabab:"
+      },
+      "options": [
+        {
+          "en": "Allergy to the shade",
+          "ru": "Аллергия на цвет",
+          "uz": "Rangga allergiya"
+        },
+        {
+          "en": "Normal healing",
+          "ru": "Нормальное заживление",
+          "uz": "Me’yoriy bitish"
+        },
+        {
+          "en": "Violation of supracrestal tissue attachment",
+          "ru": "Нарушение надальвеолярного прикрепления",
+          "uz": "Alveola usti birikishining buzilishi"
+        },
+        {
+          "en": "Pulpitis of the abutment",
+          "ru": "Пульпит опорного зуба",
+          "uz": "Tayanch tish pulpiti"
+        }
+      ],
+      "correct": 2,
+      "explain": {
+        "en": "Margins that invade the supracrestal attachment cause chronic inflammation and may lead to bone loss.",
+        "ru": "Края, вторгающиеся в надальвеолярное прикрепление, вызывают хроническое воспаление и могут вести к убыли кости.",
+        "uz": "Alveola usti birikishiga kirgan chetlar surunkali yallig‘lanishga va suyak yo‘qolishiga olib kelishi mumkin."
+      }
+    },
+    {
+      "q": {
+        "en": "Gingival crevicular fluid contributes to defence mainly by:",
+        "ru": "Десневая жидкость участвует в защите в основном за счёт:",
+        "uz": "Milk suyuqligi himoyada asosan nima orqali ishtirok etadi?"
+      },
+      "options": [
+        {
+          "en": "Flushing the sulcus and carrying immune cells and antibodies",
+          "ru": "Промывания борозды и переноса иммунных клеток и антител",
+          "uz": "Egatchani yuvish va immun hujayralar hamda antitanalarni tashish"
+        },
+        {
+          "en": "Mineralising the plaque",
+          "ru": "Минерализации налёта",
+          "uz": "Karashni minerallashtirish"
+        },
+        {
+          "en": "Forming new cementum",
+          "ru": "Образования нового цемента",
+          "uz": "Yangi sement hosil qilish"
+        },
+        {
+          "en": "Reducing salivary flow",
+          "ru": "Снижения слюноотделения",
+          "uz": "So‘lak ajralishini kamaytirish"
+        }
+      ],
+      "correct": 0,
+      "explain": {
+        "en": "The fluid washes the sulcus and delivers neutrophils, antibodies and complement; its flow rises with inflammation.",
+        "ru": "Жидкость промывает борозду и доставляет нейтрофилы, антитела и комплемент; её ток растёт при воспалении.",
+        "uz": "Suyuqlik egatchani yuvadi va neytrofil, antitana hamda komplementni yetkazadi; yallig‘lanishda uning oqimi ortadi."
+      }
+    },
+    {
+      "q": {
+        "en": "Cellular cementum is found mainly:",
+        "ru": "Клеточный цемент находится в основном:",
+        "uz": "Hujayrali sement asosan qayerda joylashadi?"
+      },
+      "options": [
+        {
+          "en": "Over the cervical third",
+          "ru": "В пришеечной трети",
+          "uz": "Bo‘yin uchdan birida"
+        },
+        {
+          "en": "On the enamel surface",
+          "ru": "На поверхности эмали",
+          "uz": "Emal yuzasida"
+        },
+        {
+          "en": "In the pulp chamber",
+          "ru": "В полости зуба",
+          "uz": "Pulpa kamerasida"
+        },
+        {
+          "en": "In the apical third and furcations",
+          "ru": "В апикальной трети и фуркациях",
+          "uz": "Apikal uchdan birda va furkatsiyalarda"
+        }
+      ],
+      "correct": 3,
+      "explain": {
+        "en": "Acellular cementum covers the cervical root, while cellular cementum is found apically and in furcations.",
+        "ru": "Бесклеточный цемент покрывает пришеечную часть корня, клеточный — апикальную часть и фуркации.",
+        "uz": "Hujayrasiz sement ildiz bo‘yin qismini, hujayrali sement esa apikal qism va furkatsiyalarni qoplaydi."
+      }
+    },
+    {
+      "q": {
+        "en": "Which tissue is NOT part of the periodontium?",
+        "ru": "Какая ткань НЕ входит в состав пародонта?",
+        "uz": "Qaysi to‘qima parodont tarkibiga KIRMAYDI?"
+      },
+      "options": [
+        {
+          "en": "Root cementum",
+          "ru": "Цемент корня",
+          "uz": "Ildiz sementi"
+        },
+        {
+          "en": "Dental pulp",
+          "ru": "Пульпа зуба",
+          "uz": "Tish pulpasi"
+        },
+        {
+          "en": "Alveolar bone",
+          "ru": "Альвеолярная кость",
+          "uz": "Alveolyar suyak"
+        },
+        {
+          "en": "Gingiva",
+          "ru": "Десна",
+          "uz": "Milk"
+        }
+      ],
+      "correct": 1,
+      "explain": {
+        "en": "The periodontium comprises gingiva, PDL, cementum and alveolar bone; the pulp belongs to the endodontium.",
+        "ru": "Пародонт включает десну, периодонт, цемент и кость; пульпа относится к эндодонту.",
+        "uz": "Parodont milk, periodont, sement va alveolyar suyakdan iborat; pulpa endodontga tegishli."
+      }
+    }
+  ]
+}

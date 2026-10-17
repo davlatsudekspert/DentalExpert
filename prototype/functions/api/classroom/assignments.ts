@@ -1,5 +1,6 @@
 import {json,type Env} from '../../_lib/db';
 import {body,clean,groupRole,needUser,newId,noStore} from '../../_lib/classroom';
+import {CURRICULUM_KEYS} from '../../_lib/curriculumKeys';
 
 type Row=Record<string,unknown>;
 const MAX_ASSIGNMENTS=100;
@@ -17,7 +18,7 @@ export const onRequestGet:PagesFunction<Env>=async({request,env})=>{
  const {results}=await env.DB.prepare(
   `SELECT a.id,a.kind,a.title,a.body,a.deck_id,a.status,a.due_date,a.created_at,a.answer_key,a.topic_id,a.questions,a.minutes,
      (SELECT COUNT(*) FROM class_submissions s WHERE s.assignment_id=a.id) AS submitted,
-     s.answer AS my_answer,s.score AS my_score,s.total AS my_total,s.started_at AS my_started
+     s.answer AS my_answer,s.score AS my_score,s.total AS my_total,s.started_at AS my_started,s.answers AS my_answers
    FROM class_assignments a LEFT JOIN class_submissions s ON s.assignment_id=a.id AND s.user_id=?
    WHERE a.group_id=? ORDER BY a.created_at DESC`
  ).bind(user.id,groupId).all<Row>();
@@ -25,7 +26,11 @@ export const onRequestGet:PagesFunction<Env>=async({request,env})=>{
   questionCount:r.answer_key?(JSON.parse(r.answer_key as string) as number[]).length:undefined,
   topicId:r.topic_id??undefined,questions:r.questions?JSON.parse(r.questions as string):undefined,minutes:r.minutes??undefined,
   submitted:role==='owner'?r.submitted:undefined,
-  mine:role==='member'&&(r.my_answer!==null||r.my_score!==null)?{answer:r.my_answer,score:r.my_score,total:r.my_total,startedAt:r.my_started}:null}));
+  mine:role==='member'&&(r.my_answer!==null||r.my_score!==null)?{answer:r.my_answer,score:r.my_score,total:r.my_total,startedAt:r.my_started,
+   // Once the teacher has finished a topic test, each student can review it: own answers, the right options and explanations
+   // (not earlier, so the key cannot be passed to classmates who are still answering).
+   review:r.my_answer==='done'&&r.status==='closed'&&r.topic_id&&r.questions&&Object.hasOwn(CURRICULUM_KEYS,r.topic_id as string)?{answers:r.my_answers?JSON.parse(r.my_answers as string):null,
+    correct:JSON.parse(r.answer_key as string),explain:(JSON.parse(r.questions as string) as number[]).map(i=>CURRICULUM_KEYS[r.topic_id as string].e[i]??null)}:undefined}:null}));
  let members:unknown;
  const assignmentId=url.searchParams.get('assignmentId');
  if(role==='owner'&&assignmentId){

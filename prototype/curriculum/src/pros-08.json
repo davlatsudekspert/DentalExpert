@@ -1,0 +1,1050 @@
+{
+  "id": "pros-08",
+  "subject": "pros",
+  "n": 8,
+  "week": 8,
+  "type": "lecture",
+  "hours": 2,
+  "title": {
+    "en": "Temporomandibular joint and disorders in prosthodontics",
+    "ru": "ВНЧС и его нарушения в ортопедической стоматологии",
+    "uz": "Chakka-pastki jag‘ bo‘g‘imi va uning buzilishlari ortopedik stomatologiyada"
+  },
+  "goals": [
+    {
+      "en": "Describe the anatomy and movements of the temporomandibular joint",
+      "ru": "Описать анатомию и движения ВНЧС",
+      "uz": "Chakka-pastki jag‘ bo‘g‘imi anatomiyasi va harakatlarini tavsiflash"
+    },
+    {
+      "en": "Recognise the main temporomandibular disorders using DC/TMD groups",
+      "ru": "Распознавать основные нарушения ВНЧС по группам DC/TMD",
+      "uz": "DC/TMD guruhlari asosida bo‘g‘imning asosiy buzilishlarini aniqlash"
+    },
+    {
+      "en": "Plan conservative care and timing of prosthodontic treatment",
+      "ru": "Планировать консервативное лечение и сроки протезирования",
+      "uz": "Konservativ davolash va protezlash muddatlarini rejalashtirish"
+    }
+  ],
+  "links": [],
+  "sources": [
+    "Okeson JP. Management of Temporomandibular Disorders and Occlusion, 8th ed., 2019",
+    "Schiffman E et al. Diagnostic Criteria for Temporomandibular Disorders (DC/TMD). J Oral Facial Pain Headache 2014"
+  ],
+  "slides": [
+    {
+      "layout": "title",
+      "title": {
+        "en": "Temporomandibular joint",
+        "ru": "Височно-нижнечелюстной сустав",
+        "uz": "Chakka-pastki jag‘ bo‘g‘imi"
+      },
+      "subtitle": {
+        "en": "Anatomy, disorders and prosthodontic relevance",
+        "ru": "Анатомия, нарушения и значение для протезирования",
+        "uz": "Anatomiya, buzilishlar va protezlash uchun ahamiyati"
+      }
+    },
+    {
+      "layout": "tree",
+      "title": {
+        "en": "Joint anatomy",
+        "ru": "Анатомия сустава",
+        "uz": "Bo‘g‘im anatomiyasi"
+      },
+      "root": {
+        "en": "TMJ",
+        "ru": "ВНЧС",
+        "uz": "CHPJB"
+      },
+      "children": [
+        {
+          "label": {
+            "en": "Bony parts",
+            "ru": "Костные элементы",
+            "uz": "Suyak qismlari"
+          },
+          "items": [
+            {
+              "en": "Mandibular condyle",
+              "ru": "Мыщелок",
+              "uz": "Bo‘g‘im boshchasi"
+            },
+            {
+              "en": "Glenoid fossa",
+              "ru": "Суставная ямка",
+              "uz": "Bo‘g‘im chuqurchasi"
+            },
+            {
+              "en": "Articular eminence",
+              "ru": "Суставной бугорок",
+              "uz": "Bo‘g‘im do‘mbog‘i"
+            }
+          ]
+        },
+        {
+          "label": {
+            "en": "Articular disc",
+            "ru": "Суставной диск",
+            "uz": "Bo‘g‘im diski"
+          },
+          "items": [
+            {
+              "en": "Anterior band",
+              "ru": "Передняя полоса",
+              "uz": "Oldingi tasma"
+            },
+            {
+              "en": "Thin intermediate zone",
+              "ru": "Тонкая промежуточная зона",
+              "uz": "Yupqa oraliq zona"
+            },
+            {
+              "en": "Posterior band",
+              "ru": "Задняя полоса",
+              "uz": "Orqa tasma"
+            }
+          ]
+        },
+        {
+          "label": {
+            "en": "Soft tissues",
+            "ru": "Мягкие ткани",
+            "uz": "Yumshoq to‘qimalar"
+          },
+          "items": [
+            {
+              "en": "Retrodiscal tissue",
+              "ru": "Ретродисковая ткань",
+              "uz": "Diskorti to‘qimasi"
+            },
+            {
+              "en": "Capsule and ligaments",
+              "ru": "Капсула и связки",
+              "uz": "Kapsula va boylamlar"
+            }
+          ]
+        }
+      ],
+      "note": {
+        "en": "Use a skull model to show the condyle sliding onto the eminence on wide opening.",
+        "ru": "На черепе покажите, как мыщелок скользит на бугорок при широком открывании.",
+        "uz": "Bosh suyagi modelida keng ochilganda bo‘g‘im boshchasi do‘mboqqa sirpanishini ko‘rsating."
+      }
+    },
+    {
+      "layout": "compare",
+      "title": {
+        "en": "Two compartments, two movements",
+        "ru": "Два отдела, два движения",
+        "uz": "Ikki bo‘lim, ikki harakat"
+      },
+      "columns": [
+        {
+          "head": {
+            "en": "Lower compartment",
+            "ru": "Нижний отдел",
+            "uz": "Pastki bo‘lim"
+          },
+          "items": [
+            {
+              "en": "Condyle against disc",
+              "ru": "Мыщелок относительно диска",
+              "uz": "Boshcha diskka nisbatan"
+            },
+            {
+              "en": "Rotation (hinge)",
+              "ru": "Вращение (шарнир)",
+              "uz": "Aylanish (sharnir)"
+            },
+            {
+              "en": "Early opening",
+              "ru": "Начальное открывание",
+              "uz": "Boshlang‘ich ochilish"
+            }
+          ]
+        },
+        {
+          "head": {
+            "en": "Upper compartment",
+            "ru": "Верхний отдел",
+            "uz": "Yuqori bo‘lim"
+          },
+          "items": [
+            {
+              "en": "Disc against fossa and eminence",
+              "ru": "Диск относительно ямки и бугорка",
+              "uz": "Disk chuqurcha va do‘mboqqa nisbatan"
+            },
+            {
+              "en": "Translation (gliding)",
+              "ru": "Скольжение (трансляция)",
+              "uz": "Sirpanish (translyatsiya)"
+            },
+            {
+              "en": "Wide opening and protrusion",
+              "ru": "Широкое открывание и протрузия",
+              "uz": "Keng ochilish va oldinga surilish"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "layout": "table",
+      "title": {
+        "en": "Muscles of mastication",
+        "ru": "Жевательные мышцы",
+        "uz": "Chaynov mushaklari"
+      },
+      "head": [
+        {
+          "en": "Muscle",
+          "ru": "Мышца",
+          "uz": "Mushak"
+        },
+        {
+          "en": "Main action",
+          "ru": "Основное действие",
+          "uz": "Asosiy harakati"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "en": "Masseter",
+            "ru": "Собственно жевательная",
+            "uz": "Chaynov mushagi"
+          },
+          {
+            "en": "Elevates mandible",
+            "ru": "Поднимает нижнюю челюсть",
+            "uz": "Pastki jag‘ni ko‘taradi"
+          }
+        ],
+        [
+          {
+            "en": "Temporalis",
+            "ru": "Височная",
+            "uz": "Chakka mushagi"
+          },
+          {
+            "en": "Elevates and retrudes",
+            "ru": "Поднимает и смещает назад",
+            "uz": "Ko‘taradi va orqaga tortadi"
+          }
+        ],
+        [
+          {
+            "en": "Medial pterygoid",
+            "ru": "Медиальная крыловидная",
+            "uz": "Medial qanotsimon"
+          },
+          {
+            "en": "Elevates, lateral shift",
+            "ru": "Поднимает, боковое смещение",
+            "uz": "Ko‘taradi, yonga suradi"
+          }
+        ],
+        [
+          {
+            "en": "Lateral pterygoid (inferior)",
+            "ru": "Латеральная крыловидная (нижняя)",
+            "uz": "Lateral qanotsimon (pastki)"
+          },
+          {
+            "en": "Protrudes, opens, lateral shift",
+            "ru": "Протрузия, открывание, боковое смещение",
+            "uz": "Oldinga suradi, ochadi, yonga suradi"
+          }
+        ],
+        [
+          {
+            "en": "Digastric",
+            "ru": "Двубрюшная",
+            "uz": "Ikki qorinchali"
+          },
+          {
+            "en": "Depresses mandible",
+            "ru": "Опускает нижнюю челюсть",
+            "uz": "Pastki jag‘ni tushiradi"
+          }
+        ]
+      ]
+    },
+    {
+      "layout": "tree",
+      "title": {
+        "en": "DC/TMD main groups",
+        "ru": "Основные группы DC/TMD",
+        "uz": "DC/TMD asosiy guruhlari"
+      },
+      "root": {
+        "en": "Temporomandibular disorders",
+        "ru": "Нарушения ВНЧС",
+        "uz": "CHPJB buzilishlari"
+      },
+      "children": [
+        {
+          "label": {
+            "en": "Pain disorders",
+            "ru": "Болевые расстройства",
+            "uz": "Og‘riqli buzilishlar"
+          },
+          "items": [
+            {
+              "en": "Myalgia, myofascial pain",
+              "ru": "Миалгия, миофасциальная боль",
+              "uz": "Mialgiya, miofassial og‘riq"
+            },
+            {
+              "en": "Arthralgia",
+              "ru": "Артралгия",
+              "uz": "Artralgiya"
+            },
+            {
+              "en": "Headache attributed to TMD",
+              "ru": "Головная боль, связанная с ВНЧС",
+              "uz": "CHPJB bilan bog‘liq bosh og‘rig‘i"
+            }
+          ]
+        },
+        {
+          "label": {
+            "en": "Joint disorders",
+            "ru": "Суставные расстройства",
+            "uz": "Bo‘g‘im buzilishlari"
+          },
+          "items": [
+            {
+              "en": "Disc displacement with reduction",
+              "ru": "Смещение диска с репозицией",
+              "uz": "Repozitsiyali disk siljishi"
+            },
+            {
+              "en": "Disc displacement without reduction",
+              "ru": "Смещение диска без репозиции",
+              "uz": "Repozitsiyasiz disk siljishi"
+            },
+            {
+              "en": "Degenerative joint disease",
+              "ru": "Дегенеративное заболевание",
+              "uz": "Degenerativ kasallik"
+            },
+            {
+              "en": "Subluxation",
+              "ru": "Подвывих",
+              "uz": "Chala chiqish"
+            }
+          ]
+        }
+      ],
+      "note": {
+        "en": "Stress that myalgia is the most common TMD presentation in dental practice.",
+        "ru": "Подчеркните, что миалгия — наиболее частое проявление нарушений ВНЧС в практике.",
+        "uz": "Stomatologik amaliyotda mialgiya bo‘g‘im buzilishlarining eng ko‘p uchraydigan ko‘rinishi ekanini ta’kidlang."
+      }
+    },
+    {
+      "layout": "table",
+      "title": {
+        "en": "Joint signs and their meaning",
+        "ru": "Суставные признаки и их значение",
+        "uz": "Bo‘g‘im belgilari va ularning ma’nosi"
+      },
+      "head": [
+        {
+          "en": "Sign",
+          "ru": "Признак",
+          "uz": "Belgi"
+        },
+        {
+          "en": "Usual meaning",
+          "ru": "Обычное значение",
+          "uz": "Odatiy ma’nosi"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "en": "Reciprocal click",
+            "ru": "Реципрокный щелчок",
+            "uz": "Resiprok shiqillash"
+          },
+          {
+            "en": "Disc displacement with reduction",
+            "ru": "Смещение диска с репозицией",
+            "uz": "Repozitsiyali disk siljishi"
+          }
+        ],
+        [
+          {
+            "en": "Sudden limited opening, deflection",
+            "ru": "Внезапное ограничение открывания, девиация в сторону",
+            "uz": "To‘satdan ochilish cheklanishi, bir tomonga og‘ish"
+          },
+          {
+            "en": "Disc displacement without reduction",
+            "ru": "Смещение диска без репозиции",
+            "uz": "Repozitsiyasiz disk siljishi"
+          }
+        ],
+        [
+          {
+            "en": "Crepitus",
+            "ru": "Крепитация",
+            "uz": "Krepitatsiya"
+          },
+          {
+            "en": "Degenerative joint disease",
+            "ru": "Дегенеративное заболевание сустава",
+            "uz": "Bo‘g‘imning degenerativ kasalligi"
+          }
+        ],
+        [
+          {
+            "en": "Muscle tenderness on palpation",
+            "ru": "Болезненность мышц при пальпации",
+            "uz": "Paypaslaganda mushaklar og‘rig‘i"
+          },
+          {
+            "en": "Myalgia",
+            "ru": "Миалгия",
+            "uz": "Mialgiya"
+          }
+        ]
+      ]
+    },
+    {
+      "layout": "flow",
+      "title": {
+        "en": "TMJ examination",
+        "ru": "Обследование ВНЧС",
+        "uz": "CHPJBni tekshirish"
+      },
+      "steps": [
+        {
+          "label": {
+            "en": "History",
+            "ru": "Анамнез",
+            "uz": "Anamnez"
+          },
+          "detail": {
+            "en": "Pain, noises, locking, habits",
+            "ru": "Боль, звуки, блокировки, привычки",
+            "uz": "Og‘riq, tovushlar, qulflanish, odatlar"
+          }
+        },
+        {
+          "label": {
+            "en": "Measure opening",
+            "ru": "Измерить открывание",
+            "uz": "Ochilishni o‘lchash"
+          },
+          "detail": {
+            "en": "Commonly over 40 mm is normal",
+            "ru": "Обычно более 40 мм — норма",
+            "uz": "Odatda 40 mm dan ortig‘i me’yor"
+          }
+        },
+        {
+          "label": {
+            "en": "Observe the path",
+            "ru": "Оценить траекторию",
+            "uz": "Harakat yo‘lini kuzatish"
+          },
+          "detail": {
+            "en": "Deviation or deflection",
+            "ru": "Девиация или дефлексия",
+            "uz": "Deviatsiya yoki defleksiya"
+          }
+        },
+        {
+          "label": {
+            "en": "Palpate joints and muscles",
+            "ru": "Пальпация суставов и мышц",
+            "uz": "Bo‘g‘im va mushaklarni paypaslash"
+          },
+          "detail": {
+            "en": "Familiar pain",
+            "ru": "Знакомая пациенту боль",
+            "uz": "Bemorga tanish og‘riq"
+          }
+        },
+        {
+          "label": {
+            "en": "Auscultate and screen psychosocial",
+            "ru": "Аускультация и скрининг психосоциальных факторов",
+            "uz": "Eshitish va psixosotsial omillarni aniqlash"
+          },
+          "detail": {
+            "en": "DC/TMD Axis II",
+            "ru": "Ось II DC/TMD",
+            "uz": "DC/TMD II o‘qi"
+          }
+        }
+      ]
+    },
+    {
+      "layout": "bullets",
+      "title": {
+        "en": "Conservative management",
+        "ru": "Консервативное лечение",
+        "uz": "Konservativ davolash"
+      },
+      "bullets": [
+        {
+          "en": "Education, reassurance and self-care",
+          "ru": "Информирование, успокоение и самопомощь",
+          "uz": "Tushuntirish, tinchlantirish va o‘z-o‘ziga yordam"
+        },
+        {
+          "en": "Soft diet, heat or cold, jaw exercises",
+          "ru": "Мягкая пища, тепло или холод, упражнения",
+          "uz": "Yumshoq ovqat, issiq yoki sovuq, jag‘ mashqlari"
+        },
+        {
+          "en": "Short courses of analgesics such as NSAIDs",
+          "ru": "Короткие курсы анальгетиков, например НПВС",
+          "uz": "Qisqa muddatli og‘riq qoldiruvchilar, masalan NYQV"
+        },
+        {
+          "en": "Hard full-coverage stabilisation splint",
+          "ru": "Жёсткая стабилизирующая шина на всю дугу",
+          "uz": "Butun yoyni qoplovchi qattiq stabillashtiruvchi shina"
+        },
+        {
+          "en": "Avoid irreversible treatment as first choice",
+          "ru": "Избегать необратимых вмешательств вначале",
+          "uz": "Boshida qaytmas aralashuvlardan qochish"
+        }
+      ],
+      "note": {
+        "en": "Ask students why irreversible occlusal adjustment is not a first-line TMD treatment.",
+        "ru": "Спросите, почему необратимая коррекция окклюзии не является лечением первой линии.",
+        "uz": "Nima uchun qaytmas okklyuzion tuzatish birinchi navbatdagi davolash emasligini so‘rang."
+      }
+    },
+    {
+      "layout": "bullets",
+      "title": {
+        "en": "Relevance to prosthodontics",
+        "ru": "Значение для протезирования",
+        "uz": "Protezlash uchun ahamiyati"
+      },
+      "bullets": [
+        {
+          "en": "Control TMD symptoms before definitive treatment",
+          "ru": "Купировать симптомы до окончательного лечения",
+          "uz": "Yakuniy davolashdan oldin belgilarni bartaraf etish"
+        },
+        {
+          "en": "Record jaw relations only when muscles are relaxed",
+          "ru": "Регистрировать соотношение при расслабленных мышцах",
+          "uz": "Jag‘lar nisbatini faqat mushaklar bo‘shashganda qayd etish"
+        },
+        {
+          "en": "Restore lost posterior support and correct VDO carefully",
+          "ru": "Восстанавливать опору и высоту осторожно",
+          "uz": "Yo‘qolgan orqa tayanch va balandlikni ehtiyotkorlik bilan tiklash"
+        },
+        {
+          "en": "Test a new VDO with a splint or provisionals",
+          "ru": "Проверять новую высоту шиной или временными",
+          "uz": "Yangi balandlikni shina yoki vaqtinchaliklar bilan sinash"
+        }
+      ],
+      "note": {
+        "en": "Point out red flags such as swelling, numbness or trismus without cause that need referral.",
+        "ru": "Укажите тревожные признаки: отёк, онемение, тризм без причины — требуют направления.",
+        "uz": "Shish, uvishish, sababsiz trizm kabi xavfli belgilar yo‘llanma talab qilishini ko‘rsating."
+      }
+    },
+    {
+      "layout": "summary",
+      "title": {
+        "en": "Summary",
+        "ru": "Итоги",
+        "uz": "Xulosa"
+      },
+      "bullets": [
+        {
+          "en": "The TMJ rotates below the disc and translates above it",
+          "ru": "В суставе вращение под диском и скольжение над ним",
+          "uz": "Bo‘g‘imda diskdan pastda aylanish, yuqorida sirpanish bo‘ladi"
+        },
+        {
+          "en": "DC/TMD divides disorders into pain and joint groups",
+          "ru": "DC/TMD делит нарушения на болевые и суставные",
+          "uz": "DC/TMD buzilishlarni og‘riqli va bo‘g‘im guruhlariga ajratadi"
+        },
+        {
+          "en": "Most TMD is managed conservatively and reversibly",
+          "ru": "Большинство случаев лечат консервативно и обратимо",
+          "uz": "Ko‘pchilik holatlar konservativ va qaytar usulda davolanadi"
+        },
+        {
+          "en": "Stabilise symptoms before definitive prosthodontics",
+          "ru": "Стабилизировать симптомы до окончательного протезирования",
+          "uz": "Yakuniy protezlashdan oldin belgilarni barqarorlashtirish"
+        }
+      ]
+    }
+  ],
+  "oral": [
+    {
+      "q": {
+        "en": "Describe the movements of the TMJ and where they occur.",
+        "ru": "Опишите движения в ВНЧС и где они происходят.",
+        "uz": "CHPJB harakatlarini va ular qayerda sodir bo‘lishini tavsiflang."
+      },
+      "plan": [
+        {
+          "en": "Rotation in the lower compartment",
+          "ru": "Вращение в нижнем отделе",
+          "uz": "Pastki bo‘limda aylanish"
+        },
+        {
+          "en": "Translation in the upper compartment",
+          "ru": "Скольжение в верхнем отделе",
+          "uz": "Yuqori bo‘limda sirpanish"
+        },
+        {
+          "en": "Wide opening combines both",
+          "ru": "Широкое открывание сочетает оба",
+          "uz": "Keng ochilish ikkalasini birlashtiradi"
+        }
+      ]
+    },
+    {
+      "q": {
+        "en": "Compare disc displacement with and without reduction.",
+        "ru": "Сравните смещение диска с репозицией и без неё.",
+        "uz": "Repozitsiyali va repozitsiyasiz disk siljishini solishtiring."
+      },
+      "plan": [
+        {
+          "en": "With reduction: disc returns on opening, click",
+          "ru": "С репозицией: диск возвращается при открывании, щелчок",
+          "uz": "Repozitsiyali: ochilganda disk qaytadi, shiqillash"
+        },
+        {
+          "en": "Without reduction: disc stays anterior",
+          "ru": "Без репозиции: диск остаётся кпереди",
+          "uz": "Repozitsiyasiz: disk oldinda qoladi"
+        },
+        {
+          "en": "Closed lock may limit opening and deflect to the affected side",
+          "ru": "Блокировка может ограничить открывание с отклонением в больную сторону",
+          "uz": "Qulflanish ochilishni cheklab, jag‘ni zararlangan tomonga og‘dirishi mumkin"
+        }
+      ]
+    },
+    {
+      "q": {
+        "en": "Outline conservative management of TMD.",
+        "ru": "Опишите консервативное лечение нарушений ВНЧС.",
+        "uz": "CHPJB buzilishlarining konservativ davolashini bayon qiling."
+      },
+      "plan": [
+        {
+          "en": "Education and self-care",
+          "ru": "Информирование и самопомощь",
+          "uz": "Tushuntirish va o‘z-o‘ziga yordam"
+        },
+        {
+          "en": "Physiotherapy and jaw exercises",
+          "ru": "Физиотерапия и упражнения",
+          "uz": "Fizioterapiya va jag‘ mashqlari"
+        },
+        {
+          "en": "Short-term analgesics",
+          "ru": "Кратковременные анальгетики",
+          "uz": "Qisqa muddatli og‘riq qoldiruvchilar"
+        },
+        {
+          "en": "Stabilisation splint; avoid irreversible steps",
+          "ru": "Стабилизирующая шина; без необратимых мер",
+          "uz": "Stabillashtiruvchi shina; qaytmas choralarsiz"
+        }
+      ]
+    },
+    {
+      "q": {
+        "en": "How does TMD influence the timing of prosthodontic treatment?",
+        "ru": "Как нарушения ВНЧС влияют на сроки протезирования?",
+        "uz": "CHPJB buzilishlari protezlash muddatlariga qanday ta’sir qiladi?"
+      },
+      "plan": [
+        {
+          "en": "Symptoms are controlled first",
+          "ru": "Сначала купируют симптомы",
+          "uz": "Avval belgilar bartaraf etiladi"
+        },
+        {
+          "en": "Reliable jaw records need relaxed muscles",
+          "ru": "Надёжная регистрация требует расслабленных мышц",
+          "uz": "Ishonchli qayd uchun mushaklar bo‘shashgan bo‘lishi kerak"
+        },
+        {
+          "en": "Changes in VDO are tested reversibly first",
+          "ru": "Изменения высоты сначала проверяют обратимо",
+          "uz": "Balandlik o‘zgarishlari avval qaytar usulda sinaladi"
+        }
+      ]
+    }
+  ],
+  "test": [
+    {
+      "q": {
+        "en": "Which part of the articular disc is thinnest?",
+        "ru": "Какая часть суставного диска самая тонкая?",
+        "uz": "Bo‘g‘im diskining qaysi qismi eng yupqa?"
+      },
+      "options": [
+        {
+          "en": "Posterior band",
+          "ru": "Задняя полоса",
+          "uz": "Orqa tasma"
+        },
+        {
+          "en": "Anterior band",
+          "ru": "Передняя полоса",
+          "uz": "Oldingi tasma"
+        },
+        {
+          "en": "Intermediate zone",
+          "ru": "Промежуточная зона",
+          "uz": "Oraliq zona"
+        },
+        {
+          "en": "Retrodiscal tissue",
+          "ru": "Ретродисковая ткань",
+          "uz": "Diskorti to‘qimasi"
+        }
+      ],
+      "correct": 2,
+      "explain": {
+        "en": "The biconcave disc is thinnest in the intermediate zone, which lies between condyle and eminence in function.",
+        "ru": "Двояковогнутый диск тоньше всего в промежуточной зоне, расположенной между мыщелком и бугорком при функции.",
+        "uz": "Ikki tomonlama botiq disk oraliq zonada eng yupqa bo‘lib, harakat paytida u boshcha va do‘mboq orasida joylashadi."
+      }
+    },
+    {
+      "q": {
+        "en": "Pure rotation of the condyle occurs mainly in the:",
+        "ru": "Чистое вращение мыщелка происходит в основном в:",
+        "uz": "Bo‘g‘im boshchasining sof aylanishi asosan qayerda sodir bo‘ladi?"
+      },
+      "options": [
+        {
+          "en": "Lower joint compartment",
+          "ru": "Нижнем отделе сустава",
+          "uz": "Bo‘g‘imning pastki bo‘limida"
+        },
+        {
+          "en": "Upper joint compartment",
+          "ru": "Верхнем отделе сустава",
+          "uz": "Bo‘g‘imning yuqori bo‘limida"
+        },
+        {
+          "en": "Retrodiscal tissue",
+          "ru": "Ретродисковой ткани",
+          "uz": "Diskorti to‘qimasida"
+        },
+        {
+          "en": "Pterygoid fovea",
+          "ru": "Крыловидной ямке",
+          "uz": "Qanotsimon chuqurchada"
+        }
+      ],
+      "correct": 0,
+      "explain": {
+        "en": "Rotation occurs between the condyle and the disc in the lower compartment; translation occurs above the disc.",
+        "ru": "Вращение происходит между мыщелком и диском в нижнем отделе; скольжение — над диском.",
+        "uz": "Aylanish pastki bo‘limda boshcha bilan disk orasida, sirpanish esa diskdan yuqorida sodir bo‘ladi."
+      }
+    },
+    {
+      "q": {
+        "en": "Which muscle mainly protrudes the mandible?",
+        "ru": "Какая мышца в основном выдвигает нижнюю челюсть вперёд?",
+        "uz": "Pastki jag‘ni oldinga asosan qaysi mushak suradi?"
+      },
+      "options": [
+        {
+          "en": "Masseter",
+          "ru": "Собственно жевательная",
+          "uz": "Chaynov mushagi"
+        },
+        {
+          "en": "Temporalis posterior fibres",
+          "ru": "Задние волокна височной",
+          "uz": "Chakka mushagining orqa tolalari"
+        },
+        {
+          "en": "Digastric",
+          "ru": "Двубрюшная",
+          "uz": "Ikki qorinchali"
+        },
+        {
+          "en": "Inferior lateral pterygoid",
+          "ru": "Нижняя головка латеральной крыловидной",
+          "uz": "Lateral qanotsimonning pastki boshi"
+        }
+      ],
+      "correct": 3,
+      "explain": {
+        "en": "The inferior head of the lateral pterygoid pulls the condyle forward along the eminence.",
+        "ru": "Нижняя головка латеральной крыловидной мышцы тянет мыщелок вперёд по бугорку.",
+        "uz": "Lateral qanotsimon mushakning pastki boshi bo‘g‘im boshchasini do‘mboq bo‘ylab oldinga tortadi."
+      }
+    },
+    {
+      "q": {
+        "en": "A patient has a click on opening and a softer click on closing, with normal opening. Most likely diagnosis:",
+        "ru": "У пациента щелчок при открывании и более тихий при закрывании, открывание нормальное. Вероятный диагноз:",
+        "uz": "Bemorda ochilishda shiqillash va yopilishda sustroq shiqillash bor, ochilish me’yorida. Ehtimoliy tashxis:"
+      },
+      "options": [
+        {
+          "en": "Disc displacement without reduction",
+          "ru": "Смещение диска без репозиции",
+          "uz": "Repozitsiyasiz disk siljishi"
+        },
+        {
+          "en": "Disc displacement with reduction",
+          "ru": "Смещение диска с репозицией",
+          "uz": "Repozitsiyali disk siljishi"
+        },
+        {
+          "en": "Degenerative joint disease",
+          "ru": "Дегенеративное заболевание сустава",
+          "uz": "Bo‘g‘imning degenerativ kasalligi"
+        },
+        {
+          "en": "Condylar fracture",
+          "ru": "Перелом мыщелка",
+          "uz": "Bo‘g‘im boshchasi sinishi"
+        }
+      ],
+      "correct": 1,
+      "explain": {
+        "en": "A reciprocal click shows the disc moving back onto the condyle on opening and slipping forward on closing.",
+        "ru": "Реципрокный щелчок отражает возврат диска на мыщелок при открывании и соскальзывание при закрывании.",
+        "uz": "Resiprok shiqillash ochilishda diskning boshchaga qaytishini va yopilishda oldinga sirpanishini ko‘rsatadi."
+      }
+    },
+    {
+      "q": {
+        "en": "A patient suddenly cannot open beyond 28 mm and the mandible deflects to the left. The previous click has stopped. Likely diagnosis:",
+        "ru": "Пациент внезапно не может открыть рот более 28 мм, челюсть отклоняется влево, прежний щелчок исчез. Вероятный диагноз:",
+        "uz": "Bemor to‘satdan og‘zini 28 mm dan ortiq ocholmaydi, jag‘ chapga og‘adi, avvalgi shiqillash yo‘qolgan. Ehtimoliy tashxis:"
+      },
+      "options": [
+        {
+          "en": "Left disc displacement without reduction",
+          "ru": "Смещение диска слева без репозиции",
+          "uz": "Chapda repozitsiyasiz disk siljishi"
+        },
+        {
+          "en": "Right subluxation",
+          "ru": "Подвывих справа",
+          "uz": "O‘ngda chala chiqish"
+        },
+        {
+          "en": "Masseter myalgia only",
+          "ru": "Только миалгия жевательной мышцы",
+          "uz": "Faqat chaynov mushagi mialgiyasi"
+        },
+        {
+          "en": "Normal function",
+          "ru": "Норма",
+          "uz": "Me’yoriy funksiya"
+        }
+      ],
+      "correct": 0,
+      "explain": {
+        "en": "The disc blocks translation of the left condyle, so opening is limited and deflects to the affected side.",
+        "ru": "Диск блокирует скольжение левого мыщелка, поэтому открывание ограничено с отклонением в больную сторону.",
+        "uz": "Disk chap boshchaning sirpanishini to‘sadi, shuning uchun ochilish cheklanib, jag‘ zararlangan tomonga og‘adi."
+      }
+    },
+    {
+      "q": {
+        "en": "Crepitus in the TMJ most commonly suggests:",
+        "ru": "Крепитация в ВНЧС чаще всего указывает на:",
+        "uz": "CHPJBdagi krepitatsiya ko‘pincha nimadan dalolat beradi?"
+      },
+      "options": [
+        {
+          "en": "Myofascial pain",
+          "ru": "Миофасциальную боль",
+          "uz": "Miofassial og‘riq"
+        },
+        {
+          "en": "Disc displacement with reduction",
+          "ru": "Смещение диска с репозицией",
+          "uz": "Repozitsiyali disk siljishi"
+        },
+        {
+          "en": "Degenerative joint disease",
+          "ru": "Дегенеративное заболевание сустава",
+          "uz": "Bo‘g‘imning degenerativ kasalligi"
+        },
+        {
+          "en": "Normal joint",
+          "ru": "Нормальный сустав",
+          "uz": "Sog‘lom bo‘g‘im"
+        }
+      ],
+      "correct": 2,
+      "explain": {
+        "en": "Grating sounds reflect irregular articular surfaces, as seen in degenerative joint disease.",
+        "ru": "Хруст отражает неровность суставных поверхностей, характерную для дегенеративного процесса.",
+        "uz": "G‘ijirlash bo‘g‘im yuzalarining notekisligini ko‘rsatadi, bu degenerativ kasallikka xos."
+      }
+    },
+    {
+      "q": {
+        "en": "First-line management of most painful TMD is:",
+        "ru": "Лечение первой линии большинства болевых нарушений ВНЧС:",
+        "uz": "Ko‘pchilik og‘riqli CHPJB buzilishlarida birinchi navbatdagi davolash:"
+      },
+      "options": [
+        {
+          "en": "Full-mouth occlusal adjustment",
+          "ru": "Избирательное пришлифовывание всех зубов",
+          "uz": "Barcha tishlarni okklyuzion charxlash"
+        },
+        {
+          "en": "Joint surgery",
+          "ru": "Операция на суставе",
+          "uz": "Bo‘g‘imda jarrohlik"
+        },
+        {
+          "en": "Extraction of third molars",
+          "ru": "Удаление третьих моляров",
+          "uz": "Aql tishlarini olib tashlash"
+        },
+        {
+          "en": "Education, self-care and splint therapy",
+          "ru": "Информирование, самопомощь и шина",
+          "uz": "Tushuntirish, o‘z-o‘ziga yordam va shina"
+        }
+      ],
+      "correct": 3,
+      "explain": {
+        "en": "Reversible conservative measures help most patients; irreversible and surgical treatments are reserved for selected cases.",
+        "ru": "Обратимые консервативные меры помогают большинству пациентов; необратимые и хирургические методы — для отдельных случаев.",
+        "uz": "Qaytar konservativ choralar ko‘pchilik bemorlarga yordam beradi; qaytmas va jarrohlik usullari tanlangan holatlar uchun."
+      }
+    },
+    {
+      "q": {
+        "en": "A stabilisation splint used for TMD is usually:",
+        "ru": "Стабилизирующая шина при нарушениях ВНЧС обычно:",
+        "uz": "CHPJB buzilishlarida qo‘llanadigan stabillashtiruvchi shina odatda qanday bo‘ladi?"
+      },
+      "options": [
+        {
+          "en": "Soft and covering only incisors",
+          "ru": "Мягкая, только на резцах",
+          "uz": "Yumshoq, faqat kesuv tishlarni qoplaydi"
+        },
+        {
+          "en": "Hard and covering the full arch",
+          "ru": "Жёсткая, на всю дугу",
+          "uz": "Qattiq, butun yoyni qoplaydi"
+        },
+        {
+          "en": "Cemented permanently",
+          "ru": "Фиксируется постоянно на цемент",
+          "uz": "Doimiy sementga o‘rnatiladi"
+        },
+        {
+          "en": "Worn only while eating",
+          "ru": "Носится только во время еды",
+          "uz": "Faqat ovqatlanishda taqiladi"
+        }
+      ],
+      "correct": 1,
+      "explain": {
+        "en": "A hard full-coverage splint gives even contacts and avoids the overeruption risk of partial coverage.",
+        "ru": "Жёсткая шина на всю дугу обеспечивает равномерные контакты и исключает выдвижение незакрытых зубов.",
+        "uz": "Butun yoyni qoplovchi qattiq shina bir tekis kontakt beradi va qoplanmagan tishlarning o‘sib chiqish xavfini oldini oladi."
+      }
+    },
+    {
+      "q": {
+        "en": "A patient with acute masticatory muscle pain needs new complete dentures. The best approach is to:",
+        "ru": "Пациенту с острой болью в жевательных мышцах нужны новые полные протезы. Лучший подход:",
+        "uz": "Chaynov mushaklarida o‘tkir og‘riq bor bemorga yangi to‘liq protezlar kerak. Eng yaxshi yondashuv:"
+      },
+      "options": [
+        {
+          "en": "Record jaw relations immediately",
+          "ru": "Сразу зарегистрировать соотношение челюстей",
+          "uz": "Jag‘lar nisbatini darhol qayd etish"
+        },
+        {
+          "en": "Increase the VDO by 6 mm",
+          "ru": "Увеличить высоту на 6 мм",
+          "uz": "Balandlikni 6 mm ga oshirish"
+        },
+        {
+          "en": "Relieve symptoms first, then record",
+          "ru": "Сначала снять симптомы, затем регистрировать",
+          "uz": "Avval belgilarni yo‘qotish, keyin qayd etish"
+        },
+        {
+          "en": "Refer for joint surgery",
+          "ru": "Направить на операцию",
+          "uz": "Jarrohlikka yo‘llash"
+        }
+      ],
+      "correct": 2,
+      "explain": {
+        "en": "Painful muscles prevent reliable centric relation records, so symptoms are managed before definitive records.",
+        "ru": "Болезненные мышцы не позволяют надёжно зарегистрировать ЦС, поэтому симптомы лечат до окончательной регистрации.",
+        "uz": "Og‘riqli mushaklar MNni ishonchli qayd etishga imkon bermaydi, shuning uchun belgilar yakuniy qayddan oldin bartaraf etiladi."
+      }
+    },
+    {
+      "q": {
+        "en": "A normal maximum mouth opening in an adult is commonly:",
+        "ru": "Нормальное максимальное открывание рта у взрослого обычно:",
+        "uz": "Kattalarda og‘izning me’yoriy maksimal ochilishi odatda qancha?"
+      },
+      "options": [
+        {
+          "en": "Over 40 mm",
+          "ru": "Более 40 мм",
+          "uz": "40 mm dan ortiq"
+        },
+        {
+          "en": "15–20 mm",
+          "ru": "15–20 мм",
+          "uz": "15–20 mm"
+        },
+        {
+          "en": "About 25 mm",
+          "ru": "Около 25 мм",
+          "uz": "Taxminan 25 mm"
+        },
+        {
+          "en": "Over 80 mm",
+          "ru": "Более 80 мм",
+          "uz": "80 mm dan ortiq"
+        }
+      ],
+      "correct": 0,
+      "explain": {
+        "en": "Interincisal opening above about 40 mm is usually considered normal, though it varies with body size.",
+        "ru": "Межрезцовое открывание более 40 мм обычно считают нормой, хотя оно зависит от телосложения.",
+        "uz": "Kesuv tishlararo 40 mm dan ortiq ochilish odatda me’yor hisoblanadi, lekin u gavda tuzilishiga bog‘liq."
+      }
+    }
+  ]
+}

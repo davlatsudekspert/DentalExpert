@@ -1,6 +1,5 @@
 import {json,type Env} from '../../_lib/db';
 import {body,clean,groupRole,needUser,noStore} from '../../_lib/classroom';
-import {CURRICULUM_KEYS} from '../../_lib/curriculumKeys';
 
 const GRACE_MIN=2;
 
@@ -38,8 +37,5 @@ export const onRequestPost:PagesFunction<Env>=async({request,env})=>{
  // The attempt starts with /classroom/start (which records a 0 score); finishing it fills in the real score exactly once.
  const r=await env.DB.prepare(`UPDATE class_submissions SET score=?,answer='done',answers=?,submitted_at=datetime('now') WHERE assignment_id=? AND user_id=? AND answer='started'`).bind(score,JSON.stringify(given),id,user.id).run();
  if(!r.meta.changes)return json({error:'already_submitted_or_not_started'},409,noStore);
- // After a topic test the student may review it: the right options and their explanations.
- const review=as.topic_id&&as.questions&&Object.hasOwn(CURRICULUM_KEYS,as.topic_id)
-  ?{correct:key,explain:(JSON.parse(as.questions) as number[]).map(i=>CURRICULUM_KEYS[as.topic_id!].e[i]??null)}:undefined;
- return json({ok:true,score,total:key.length,review},200,noStore);
+ return json({ok:true,score,total:key.length},200,noStore);
 };

@@ -1,0 +1,1105 @@
+{
+  "id": "radio-01",
+  "subject": "radio",
+  "n": 1,
+  "week": 1,
+  "type": "lecture",
+  "hours": 2,
+  "title": {
+    "en": "Physics of X-rays and image formation",
+    "ru": "Физика рентгеновского излучения и формирование изображения",
+    "uz": "Rentgen nurlari fizikasi va tasvir hosil bo‘lishi"
+  },
+  "goals": [
+    {
+      "en": "Explain how X-rays are produced in the X-ray tube",
+      "ru": "Объяснить, как образуется излучение в рентгеновской трубке",
+      "uz": "Rentgen trubkasida nurlar qanday hosil bo‘lishini tushuntirish"
+    },
+    {
+      "en": "Know how kV, mA and exposure time affect the image",
+      "ru": "Знать влияние кВ, мА и времени экспозиции на снимок",
+      "uz": "kV, mA va ekspozitsiya vaqtining tasvirga ta’sirini bilish"
+    },
+    {
+      "en": "Distinguish radiopaque from radiolucent structures",
+      "ru": "Различать рентгеноконтрастные и рентгенопрозрачные структуры",
+      "uz": "Rentgenokontrast va rentgenoshaffof tuzilmalarni farqlash"
+    },
+    {
+      "en": "Explain density, contrast and sharpness",
+      "ru": "Объяснить понятия плотности, контрастности и резкости",
+      "uz": "Zichlik, kontrast va aniqlik tushunchalarini izohlash"
+    }
+  ],
+  "links": [
+    "tooth-layers"
+  ],
+  "sources": [
+    "Mallya SM, Lam EWN. White and Pharoah's Oral Radiology: Principles and Interpretation, 8th ed., 2019",
+    "Whaites E, Drage N. Essentials of Dental Radiography and Radiology, 6th ed., 2021"
+  ],
+  "slides": [
+    {
+      "layout": "title",
+      "title": {
+        "en": "Physics of X-rays and image formation",
+        "ru": "Физика рентгеновского излучения и формирование изображения",
+        "uz": "Rentgen nurlari fizikasi va tasvir hosil bo‘lishi"
+      },
+      "subtitle": {
+        "en": "From tube to receptor: beam, tissue and image",
+        "ru": "От трубки до приёмника: излучение, ткани и изображение",
+        "uz": "Trubkadan qabul qilgichgacha: nur, to‘qima va tasvir"
+      }
+    },
+    {
+      "layout": "flow",
+      "title": {
+        "en": "X-ray production in the tube",
+        "ru": "Образование излучения в рентгеновской трубке",
+        "uz": "Rentgen trubkasida nur hosil bo‘lishi"
+      },
+      "steps": [
+        {
+          "label": {
+            "en": "Cathode heats up",
+            "ru": "Нагрев катода",
+            "uz": "Katod qiziydi"
+          },
+          "detail": {
+            "en": "Tungsten filament releases electrons (thermionic emission)",
+            "ru": "Вольфрамовая нить испускает электроны (термоэлектронная эмиссия)",
+            "uz": "Volfram spiraldan elektronlar ajraladi (termoelektron emissiya)"
+          }
+        },
+        {
+          "label": {
+            "en": "Electrons accelerate",
+            "ru": "Ускорение электронов",
+            "uz": "Elektronlar tezlashadi"
+          },
+          "detail": {
+            "en": "The kV between cathode and anode speeds them up",
+            "ru": "Напряжение между катодом и анодом (кВ) разгоняет их",
+            "uz": "Katod va anod orasidagi kuchlanish (kV) ularni tezlatadi"
+          }
+        },
+        {
+          "label": {
+            "en": "Hit the anode",
+            "ru": "Удар об анод",
+            "uz": "Anodga urilish"
+          },
+          "detail": {
+            "en": "Bremsstrahlung and characteristic X-rays form at the tungsten target",
+            "ru": "На вольфрамовой мишени возникает тормозное и характеристическое излучение",
+            "uz": "Volfram nishonda tormozlanish va xarakteristik nurlanish hosil bo‘ladi"
+          }
+        },
+        {
+          "label": {
+            "en": "Mostly heat",
+            "ru": "В основном тепло",
+            "uz": "Asosan issiqlik"
+          },
+          "detail": {
+            "en": "Only a very small part of the energy becomes X-rays",
+            "ru": "Лишь очень малая часть энергии превращается в рентгеновское излучение",
+            "uz": "Energiyaning juda kichik qismigina rentgen nuriga aylanadi"
+          }
+        },
+        {
+          "label": {
+            "en": "Filter and collimator",
+            "ru": "Фильтр и коллиматор",
+            "uz": "Filtr va kollimator"
+          },
+          "detail": {
+            "en": "Aluminium filter removes soft rays, collimator narrows the beam",
+            "ru": "Алюминиевый фильтр задерживает мягкие лучи, коллиматор сужает пучок",
+            "uz": "Alyuminiy filtr yumshoq nurlarni ushlaydi, kollimator dastani toraytiradi"
+          }
+        }
+      ],
+      "note": {
+        "en": "Stress that soft, low-energy photons add skin dose without adding to the image; that is why we filter.",
+        "ru": "Подчеркните: мягкие лучи не дают изображения, а только добавляют дозу на кожу — в этом смысл фильтрации.",
+        "uz": "Yumshoq (past energiyali) nurlar tasvir bermaydi, faqat teriga doza qo‘shadi — filtrning ma’nosini shu orqali tushuntiring."
+      }
+    },
+    {
+      "layout": "table",
+      "title": {
+        "en": "Exposure factors",
+        "ru": "Параметры экспозиции",
+        "uz": "Ekspozitsiya parametrlari"
+      },
+      "head": [
+        {
+          "en": "Factor",
+          "ru": "Параметр",
+          "uz": "Parametr"
+        },
+        {
+          "en": "Controls",
+          "ru": "Что регулирует",
+          "uz": "Nimani boshqaradi"
+        },
+        {
+          "en": "Effect on image",
+          "ru": "Влияние на снимок",
+          "uz": "Tasvirga ta’siri"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "en": "Voltage (kV)",
+            "ru": "Напряжение (кВ)",
+            "uz": "Kuchlanish (kV)"
+          },
+          {
+            "en": "Beam energy and penetration",
+            "ru": "Энергию и проникающую способность",
+            "uz": "Nur energiyasi va o‘tuvchanligi"
+          },
+          {
+            "en": "Higher kV gives lower contrast, more grey shades",
+            "ru": "При росте кВ контраст снижается, больше оттенков серого",
+            "uz": "kV oshsa, kontrast pasayadi, kulrang tuslar ko‘payadi"
+          }
+        ],
+        [
+          {
+            "en": "Current (mA)",
+            "ru": "Сила тока (мА)",
+            "uz": "Tok kuchi (mA)"
+          },
+          {
+            "en": "Number of photons",
+            "ru": "Количество фотонов",
+            "uz": "Fotonlar soni"
+          },
+          {
+            "en": "Higher mA gives a darker (denser) image",
+            "ru": "При росте мА снимок темнее (плотнее)",
+            "uz": "mA oshsa, tasvir qoraroq (zichroq) bo‘ladi"
+          }
+        ],
+        [
+          {
+            "en": "Time (s)",
+            "ru": "Время (с)",
+            "uz": "Vaqt (s)"
+          },
+          {
+            "en": "Number of photons",
+            "ru": "Количество фотонов",
+            "uz": "Fotonlar soni"
+          },
+          {
+            "en": "Longer time increases density and dose",
+            "ru": "При увеличении времени растут плотность и доза",
+            "uz": "Vaqt oshsa, zichlik va doza oshadi"
+          }
+        ],
+        [
+          {
+            "en": "Distance",
+            "ru": "Расстояние",
+            "uz": "Masofa"
+          },
+          {
+            "en": "Beam intensity",
+            "ru": "Интенсивность пучка",
+            "uz": "Nur intensivligi"
+          },
+          {
+            "en": "Inverse square law: doubling distance cuts intensity to a quarter",
+            "ru": "Закон обратных квадратов: при удвоении расстояния интенсивность падает в 4 раза",
+            "uz": "Teskari kvadratlar qonuni: masofa 2 marta oshsa, intensivlik 4 marta kamayadi"
+          }
+        ]
+      ],
+      "note": {
+        "en": "Give a quick inverse-square calculation: what happens when distance goes from 20 to 40 cm?",
+        "ru": "Дайте простую задачу на закон обратных квадратов: что будет при увеличении расстояния с 20 до 40 см?",
+        "uz": "Teskari kvadratlar qonuniga oddiy hisob bering: masofa 20 dan 40 sm ga oshsa, nima bo‘ladi?"
+      }
+    },
+    {
+      "layout": "compare",
+      "title": {
+        "en": "Interaction of X-rays with tissue",
+        "ru": "Взаимодействие излучения с тканями",
+        "uz": "Nurning to‘qima bilan o‘zaro ta’siri"
+      },
+      "columns": [
+        {
+          "head": {
+            "en": "Photoelectric absorption",
+            "ru": "Фотоэлектрическое поглощение",
+            "uz": "Fotoelektrik yutilish"
+          },
+          "items": [
+            {
+              "en": "Photon is fully absorbed",
+              "ru": "Фотон поглощается полностью",
+              "uz": "Foton to‘liq yutiladi"
+            },
+            {
+              "en": "More common in dense tissue (enamel, bone)",
+              "ru": "Чаще в плотных тканях (эмаль, кость)",
+              "uz": "Zich to‘qimalarda ko‘proq (emal, suyak)"
+            },
+            {
+              "en": "Creates image contrast",
+              "ru": "Создаёт контраст изображения",
+              "uz": "Tasvir kontrastini yaratadi"
+            }
+          ]
+        },
+        {
+          "head": {
+            "en": "Compton scatter",
+            "ru": "Комптоновское рассеяние",
+            "uz": "Kompton sochilishi"
+          },
+          "items": [
+            {
+              "en": "Photon changes direction",
+              "ru": "Фотон меняет направление",
+              "uz": "Foton yo‘nalishini o‘zgartiradi"
+            },
+            {
+              "en": "Fogs the image",
+              "ru": "Даёт вуаль и снижает качество",
+              "uz": "Tasvirni xiralashtiradi (fon)"
+            },
+            {
+              "en": "Main source of operator dose",
+              "ru": "Главный источник дозы для персонала",
+              "uz": "Xodim uchun asosiy doza manbai"
+            }
+          ]
+        },
+        {
+          "head": {
+            "en": "Transmission",
+            "ru": "Прохождение без взаимодействия",
+            "uz": "O‘zgarishsiz o‘tish"
+          },
+          "items": [
+            {
+              "en": "Photon reaches the receptor",
+              "ru": "Фотон достигает приёмника",
+              "uz": "Foton qabul qilgichga yetadi"
+            },
+            {
+              "en": "High through soft tissue and air",
+              "ru": "Много в мягких тканях и воздухе",
+              "uz": "Yumshoq to‘qima va havoda ko‘p"
+            },
+            {
+              "en": "Forms the dark areas of the image",
+              "ru": "Формирует тёмные участки снимка",
+              "uz": "Tasvirning qora sohalarini beradi"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "layout": "compare",
+      "title": {
+        "en": "Radiopaque vs radiolucent",
+        "ru": "Рентгеноконтрастное и рентгенопрозрачное",
+        "uz": "Rentgenokontrast va rentgenoshaffof"
+      },
+      "columns": [
+        {
+          "head": {
+            "en": "Radiopaque (white)",
+            "ru": "Рентгеноконтрастное (светлое)",
+            "uz": "Rentgenokontrast (oq)"
+          },
+          "items": [
+            {
+              "en": "Absorbs most of the beam",
+              "ru": "Сильно поглощает излучение",
+              "uz": "Nurni ko‘p yutadi"
+            },
+            {
+              "en": "Metal fillings, enamel, cortical bone",
+              "ru": "Металлическая пломба, эмаль, кортикальная кость",
+              "uz": "Metall plomba, emal, kompakt suyak"
+            },
+            {
+              "en": "White or light grey on the image",
+              "ru": "На снимке белое или светло-серое",
+              "uz": "Tasvirda oq yoki och kulrang"
+            }
+          ]
+        },
+        {
+          "head": {
+            "en": "Radiolucent (dark)",
+            "ru": "Рентгенопрозрачное (тёмное)",
+            "uz": "Rentgenoshaffof (qora)"
+          },
+          "items": [
+            {
+              "en": "Absorbs little of the beam",
+              "ru": "Слабо поглощает излучение",
+              "uz": "Nurni kam yutadi"
+            },
+            {
+              "en": "Pulp, PDL space, air, caries",
+              "ru": "Пульпа, периодонтальная щель, воздух, кариес",
+              "uz": "Pulpa, periodontal tirqish, havo, karies"
+            },
+            {
+              "en": "Black or dark grey on the image",
+              "ru": "На снимке тёмное или тёмно-серое",
+              "uz": "Tasvirda qora yoki to‘q kulrang"
+            }
+          ]
+        }
+      ],
+      "note": {
+        "en": "Ask students to rank the tooth layers from most to least radiopaque: enamel, dentin, pulp.",
+        "ru": "Попросите студентов расположить ткани зуба от самой светлой к самой тёмной: эмаль, дентин, пульпа.",
+        "uz": "Talabalardan tish qatlamlarini eng oqdan eng qoragacha tartiblashni so‘rang: emal, dentin, pulpa."
+      }
+    },
+    {
+      "layout": "figure",
+      "title": {
+        "en": "Tooth layers on a radiograph",
+        "ru": "Ткани зуба на рентгенограмме",
+        "uz": "Tish qatlamlari rentgenogrammada"
+      },
+      "image": "cutaway",
+      "callouts": [
+        {
+          "at": "enamel",
+          "label": {
+            "en": "Enamel: most radiopaque",
+            "ru": "Эмаль: самая светлая",
+            "uz": "Emal: eng oq"
+          }
+        },
+        {
+          "at": "dentin",
+          "label": {
+            "en": "Dentin: grey",
+            "ru": "Дентин: серый",
+            "uz": "Dentin: kulrang"
+          }
+        },
+        {
+          "at": "pulp",
+          "label": {
+            "en": "Pulp: radiolucent",
+            "ru": "Пульпа: тёмная",
+            "uz": "Pulpa: qora"
+          }
+        },
+        {
+          "at": "canal",
+          "label": {
+            "en": "Root canal: dark line",
+            "ru": "Корневой канал: тёмная полоска",
+            "uz": "Ildiz kanali: qora chiziq"
+          }
+        }
+      ],
+      "bullets": [
+        {
+          "en": "More mineral means a whiter shadow",
+          "ru": "Чем больше минералов, тем светлее тень",
+          "uz": "Mineral qancha ko‘p bo‘lsa, soya shuncha oq"
+        }
+      ]
+    },
+    {
+      "layout": "tree",
+      "title": {
+        "en": "Image quality factors",
+        "ru": "Показатели качества изображения",
+        "uz": "Tasvir sifati ko‘rsatkichlari"
+      },
+      "root": {
+        "en": "Image quality",
+        "ru": "Качество снимка",
+        "uz": "Tasvir sifati"
+      },
+      "children": [
+        {
+          "label": {
+            "en": "Density",
+            "ru": "Плотность",
+            "uz": "Zichlik"
+          },
+          "items": [
+            {
+              "en": "Overall darkness",
+              "ru": "Общее потемнение",
+              "uz": "Umumiy qoralik"
+            },
+            {
+              "en": "Set by mA and time",
+              "ru": "Зависит от мА и времени",
+              "uz": "mA va vaqtga bog‘liq"
+            }
+          ]
+        },
+        {
+          "label": {
+            "en": "Contrast",
+            "ru": "Контрастность",
+            "uz": "Kontrast"
+          },
+          "items": [
+            {
+              "en": "Black-white difference",
+              "ru": "Разница светлого и тёмного",
+              "uz": "Oq-qora farqi"
+            },
+            {
+              "en": "Set mainly by kV",
+              "ru": "Зависит от кВ",
+              "uz": "kV ga bog‘liq"
+            }
+          ]
+        },
+        {
+          "label": {
+            "en": "Sharpness",
+            "ru": "Резкость",
+            "uz": "Aniqlik"
+          },
+          "items": [
+            {
+              "en": "Small focal spot",
+              "ru": "Малое фокусное пятно",
+              "uz": "Kichik fokus dog‘i"
+            },
+            {
+              "en": "No movement",
+              "ru": "Отсутствие движения",
+              "uz": "Qimirlamaslik"
+            }
+          ]
+        },
+        {
+          "label": {
+            "en": "Distortion",
+            "ru": "Искажение",
+            "uz": "Buzilish"
+          },
+          "items": [
+            {
+              "en": "Elongation or shortening",
+              "ru": "Удлинение или укорочение",
+              "uz": "Uzayish yoki qisqarish"
+            },
+            {
+              "en": "Angulation error",
+              "ru": "Ошибка угла",
+              "uz": "Burchak xatosi"
+            }
+          ]
+        }
+      ],
+      "note": {
+        "en": "Students often mix up density and contrast: density is overall darkness, contrast is the difference between areas.",
+        "ru": "Студенты часто путают плотность и контрастность: плотность — общее потемнение, контраст — разница между участками.",
+        "uz": "Kontrast va zichlikni chalkashtirish ko‘p uchraydi: zichlik — umumiy qoralik, kontrast — sohalar orasidagi farq."
+      }
+    },
+    {
+      "layout": "compare",
+      "title": {
+        "en": "Image receptors",
+        "ru": "Приёмники изображения",
+        "uz": "Tasvir qabul qilgichlar"
+      },
+      "columns": [
+        {
+          "head": {
+            "en": "X-ray film",
+            "ru": "Рентгеновская плёнка",
+            "uz": "Rentgen plyonkasi"
+          },
+          "items": [
+            {
+              "en": "Needs chemical processing",
+              "ru": "Нужна химическая обработка",
+              "uz": "Kimyoviy ishlov kerak"
+            },
+            {
+              "en": "High resolution",
+              "ru": "Высокая разрешающая способность",
+              "uz": "Yuqori aniqlik"
+            },
+            {
+              "en": "Used less today",
+              "ru": "Сегодня применяется реже",
+              "uz": "Bugun kam qo‘llanadi"
+            }
+          ]
+        },
+        {
+          "head": {
+            "en": "Phosphor plate (PSP)",
+            "ru": "Фосфорная пластина (PSP)",
+            "uz": "Fosfor plastinka (PSP)"
+          },
+          "items": [
+            {
+              "en": "Read in a scanner",
+              "ru": "Считывается сканером",
+              "uz": "Skanerda o‘qiladi"
+            },
+            {
+              "en": "Thin, wireless",
+              "ru": "Тонкая, без провода",
+              "uz": "Yupqa, simsiz"
+            },
+            {
+              "en": "Must be protected from scratches",
+              "ru": "Боится царапин",
+              "uz": "Tirnalishdan ehtiyot qilish kerak"
+            }
+          ]
+        },
+        {
+          "head": {
+            "en": "Sensor (CCD/CMOS)",
+            "ru": "Датчик (CCD/CMOS)",
+            "uz": "Sensor (CCD/CMOS)"
+          },
+          "items": [
+            {
+              "en": "Instant image on screen",
+              "ru": "Изображение сразу на экране",
+              "uz": "Tasvir darhol ekranda"
+            },
+            {
+              "en": "Usually lower dose",
+              "ru": "Доза обычно ниже",
+              "uz": "Doza odatda kamroq"
+            },
+            {
+              "en": "Bulky and rigid",
+              "ru": "Толстый и жёсткий",
+              "uz": "Qalin va qattiq"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "layout": "summary",
+      "title": {
+        "en": "Summary",
+        "ru": "Итоги",
+        "uz": "Xulosa"
+      },
+      "bullets": [
+        {
+          "en": "X-rays form at the anode; most energy becomes heat",
+          "ru": "Излучение образуется на аноде, большая часть энергии уходит в тепло",
+          "uz": "Rentgen nuri anodda hosil bo‘ladi, energiyaning ko‘p qismi issiqlikka aylanadi"
+        },
+        {
+          "en": "kV sets energy and contrast; mA and time set quantity and density",
+          "ru": "кВ — энергия и контраст, мА и время — количество и плотность",
+          "uz": "kV — energiya va kontrast, mA va vaqt — miqdor va zichlik"
+        },
+        {
+          "en": "Photoelectric absorption gives contrast; Compton scatter fogs",
+          "ru": "Фотоэффект создаёт контраст, комптоновское рассеяние даёт вуаль",
+          "uz": "Fotoelektrik yutilish kontrast beradi, Kompton sochilishi tasvirni xiralashtiradi"
+        },
+        {
+          "en": "Dense tissue is radiopaque (white); less dense is radiolucent (dark)",
+          "ru": "Плотная ткань — рентгеноконтрастна (светлая), рыхлая — прозрачна (тёмная)",
+          "uz": "Zich to‘qima — rentgenokontrast (oq), siyrak to‘qima — rentgenoshaffof (qora)"
+        }
+      ]
+    }
+  ],
+  "oral": [
+    {
+      "q": {
+        "en": "How are X-rays produced in the tube?",
+        "ru": "Как образуется излучение в рентгеновской трубке?",
+        "uz": "Rentgen trubkasida nur qanday hosil bo‘ladi?"
+      },
+      "plan": [
+        {
+          "en": "Thermionic emission at the cathode",
+          "ru": "Термоэлектронная эмиссия на катоде",
+          "uz": "Katodda termoelektron emissiya"
+        },
+        {
+          "en": "Electron acceleration by the kV",
+          "ru": "Ускорение электронов под действием кВ",
+          "uz": "kV ta’sirida elektronlarning tezlashishi"
+        },
+        {
+          "en": "Bremsstrahlung and characteristic radiation at the anode",
+          "ru": "Тормозное и характеристическое излучение на аноде",
+          "uz": "Anodda tormozlanish va xarakteristik nurlanish"
+        },
+        {
+          "en": "Most energy is lost as heat",
+          "ru": "Большая часть энергии переходит в тепло",
+          "uz": "Energiyaning asosiy qismi issiqlikka aylanishi"
+        }
+      ]
+    },
+    {
+      "q": {
+        "en": "Compare the effects of kV and mA on the image.",
+        "ru": "Сравните влияние кВ и мА на снимок.",
+        "uz": "kV va mA ning tasvirga ta’sirini solishtiring."
+      },
+      "plan": [
+        {
+          "en": "kV sets energy and penetration",
+          "ru": "кВ определяет энергию и проникающую способность",
+          "uz": "kV nur energiyasi va o‘tuvchanligini belgilaydi"
+        },
+        {
+          "en": "High kV means low contrast, many greys",
+          "ru": "Высокое кВ — низкий контраст, много серого",
+          "uz": "Yuqori kV — past kontrast, ko‘p kulrang tus"
+        },
+        {
+          "en": "mA and time set photon number and density",
+          "ru": "мА и время задают количество фотонов и плотность",
+          "uz": "mA va vaqt fotonlar soni va zichlikni belgilaydi"
+        },
+        {
+          "en": "Both affect patient dose",
+          "ru": "Оба параметра влияют на дозу пациента",
+          "uz": "Har ikkisi ham bemor dozasiga ta’sir qiladi"
+        }
+      ]
+    },
+    {
+      "q": {
+        "en": "Why does enamel look white and the pulp dark?",
+        "ru": "Почему эмаль выглядит светлой, а пульпа тёмной?",
+        "uz": "Nima uchun emal oq, pulpa esa qora ko‘rinadi?"
+      },
+      "plan": [
+        {
+          "en": "Enamel is the most mineralised tissue",
+          "ru": "Эмаль — самая минерализованная ткань",
+          "uz": "Emal eng ko‘p minerallashgan to‘qima"
+        },
+        {
+          "en": "Dense tissue has more photoelectric absorption",
+          "ru": "В плотной ткани больше фотоэлектрического поглощения",
+          "uz": "Zich to‘qimada fotoelektrik yutilish ko‘p"
+        },
+        {
+          "en": "Pulp is soft tissue; the beam passes through",
+          "ru": "Пульпа — мягкая ткань, излучение почти проходит",
+          "uz": "Pulpa yumshoq to‘qima, nur deyarli o‘tadi"
+        },
+        {
+          "en": "Where more photons reach the receptor, the image is dark",
+          "ru": "Где на приёмник попало больше лучей, там темнее",
+          "uz": "Qabul qilgichga ko‘p nur yetgan joy qora bo‘ladi"
+        }
+      ]
+    },
+    {
+      "q": {
+        "en": "Which factors affect image sharpness?",
+        "ru": "Какие факторы влияют на резкость снимка?",
+        "uz": "Tasvir aniqligiga qaysi omillar ta’sir qiladi?"
+      },
+      "plan": [
+        {
+          "en": "Focal spot size",
+          "ru": "Размер фокусного пятна",
+          "uz": "Fokus dog‘ining o‘lchami"
+        },
+        {
+          "en": "Long source-to-object distance",
+          "ru": "Большое расстояние источник–объект",
+          "uz": "Manba-obyekt masofasi uzun bo‘lishi"
+        },
+        {
+          "en": "Short object-to-receptor distance",
+          "ru": "Малое расстояние объект–приёмник",
+          "uz": "Obyekt-qabul qilgich masofasi qisqa bo‘lishi"
+        },
+        {
+          "en": "No movement of patient, tube or receptor",
+          "ru": "Неподвижность пациента, трубки и приёмника",
+          "uz": "Bemor, trubka va qabul qilgichning qimirlamasligi"
+        }
+      ]
+    }
+  ],
+  "test": [
+    {
+      "q": {
+        "en": "Which part of the X-ray tube is the source of electrons?",
+        "ru": "Какая часть рентгеновской трубки является источником электронов?",
+        "uz": "Rentgen trubkasida elektronlar manbai qaysi qism?"
+      },
+      "options": [
+        {
+          "en": "Aluminium filter",
+          "ru": "Алюминиевый фильтр",
+          "uz": "Alyuminiy filtr"
+        },
+        {
+          "en": "Tungsten cathode filament",
+          "ru": "Вольфрамовая нить катода",
+          "uz": "Volfram katod spirali"
+        },
+        {
+          "en": "Copper anode stem",
+          "ru": "Медное основание анода",
+          "uz": "Mis anod asosi"
+        },
+        {
+          "en": "Lead collimator",
+          "ru": "Свинцовый коллиматор",
+          "uz": "Qo‘rg‘oshin kollimator"
+        }
+      ],
+      "correct": 1,
+      "explain": {
+        "en": "The heated tungsten filament releases electrons by thermionic emission.",
+        "ru": "Нагретая вольфрамовая нить испускает электроны путём термоэлектронной эмиссии.",
+        "uz": "Qizdirilgan volfram spiral termoelektron emissiya orqali elektronlar chiqaradi."
+      }
+    },
+    {
+      "q": {
+        "en": "What does most of the electron energy become at the anode?",
+        "ru": "Во что превращается основная часть энергии электронов при ударе об анод?",
+        "uz": "Anodga urilgan elektronlar energiyasining asosiy qismi nimaga aylanadi?"
+      },
+      "options": [
+        {
+          "en": "Characteristic X-rays",
+          "ru": "В характеристическое излучение",
+          "uz": "Xarakteristik nurga"
+        },
+        {
+          "en": "Bremsstrahlung X-rays",
+          "ru": "В тормозное излучение",
+          "uz": "Tormozlanish nuriga"
+        },
+        {
+          "en": "Visible light",
+          "ru": "В видимый свет",
+          "uz": "Ko‘rinadigan yorug‘likka"
+        },
+        {
+          "en": "Heat",
+          "ru": "В тепло",
+          "uz": "Issiqlikka"
+        }
+      ],
+      "correct": 3,
+      "explain": {
+        "en": "Only a small fraction becomes X-rays; the rest is heat, which is why the anode needs cooling.",
+        "ru": "Лишь малая доля энергии даёт излучение, остальное — тепло; поэтому анод охлаждают.",
+        "uz": "Energiyaning juda kichik qismi rentgen nuriga, qolgani issiqlikka aylanadi; shuning uchun anod sovutiladi."
+      }
+    },
+    {
+      "q": {
+        "en": "What happens to the image when kV is increased?",
+        "ru": "Как меняется снимок при увеличении кВ?",
+        "uz": "kV oshirilganda tasvir qanday o‘zgaradi?"
+      },
+      "options": [
+        {
+          "en": "Contrast falls and grey shades increase",
+          "ru": "Контраст снижается, оттенков серого больше",
+          "uz": "Kontrast pasayadi, kulrang tuslar ko‘payadi"
+        },
+        {
+          "en": "Contrast rises and shades decrease",
+          "ru": "Контраст растёт, оттенков меньше",
+          "uz": "Kontrast oshadi, tuslar kamayadi"
+        },
+        {
+          "en": "Only sharpness improves",
+          "ru": "Повышается только резкость",
+          "uz": "Faqat aniqlik oshadi"
+        },
+        {
+          "en": "The image does not change",
+          "ru": "Снимок не меняется",
+          "uz": "Tasvir o‘zgarmaydi"
+        }
+      ],
+      "correct": 0,
+      "explain": {
+        "en": "Higher-energy photons pass through tissues more evenly, giving lower contrast and a longer grey scale.",
+        "ru": "Более жёсткое излучение проходит ткани равномернее, поэтому контраст ниже, шкала серого длиннее.",
+        "uz": "Yuqori energiyali nur to‘qimalardan bir xilroq o‘tadi, shuning uchun kontrast past, kulrang shkala uzun bo‘ladi."
+      }
+    },
+    {
+      "q": {
+        "en": "If the source-to-skin distance is doubled, how does beam intensity change?",
+        "ru": "Как изменится интенсивность пучка при удвоении расстояния трубка–кожа?",
+        "uz": "Trubka-teri masofasi 2 marta oshirilsa, nur intensivligi qanday o‘zgaradi?"
+      },
+      "options": [
+        {
+          "en": "It halves",
+          "ru": "Уменьшится в 2 раза",
+          "uz": "2 marta kamayadi"
+        },
+        {
+          "en": "It doubles",
+          "ru": "Увеличится в 2 раза",
+          "uz": "2 marta oshadi"
+        },
+        {
+          "en": "It falls to a quarter",
+          "ru": "Уменьшится в 4 раза",
+          "uz": "4 marta kamayadi"
+        },
+        {
+          "en": "It stays the same",
+          "ru": "Не изменится",
+          "uz": "O‘zgarmaydi"
+        }
+      ],
+      "correct": 2,
+      "explain": {
+        "en": "By the inverse square law, intensity is inversely proportional to the square of distance.",
+        "ru": "По закону обратных квадратов интенсивность обратно пропорциональна квадрату расстояния.",
+        "uz": "Teskari kvadratlar qonuniga ko‘ra intensivlik masofa kvadratiga teskari proporsional."
+      }
+    },
+    {
+      "q": {
+        "en": "Which interaction is the main source of operator dose?",
+        "ru": "Какое взаимодействие является главным источником дозы для персонала?",
+        "uz": "Xodim uchun asosiy doza manbai bo‘lgan o‘zaro ta’sir qaysi?"
+      },
+      "options": [
+        {
+          "en": "Photoelectric absorption",
+          "ru": "Фотоэлектрическое поглощение",
+          "uz": "Fotoelektrik yutilish"
+        },
+        {
+          "en": "Compton scatter",
+          "ru": "Комптоновское рассеяние",
+          "uz": "Kompton sochilishi"
+        },
+        {
+          "en": "Unchanged transmission",
+          "ru": "Прохождение без взаимодействия",
+          "uz": "O‘zgarishsiz o‘tish"
+        },
+        {
+          "en": "Thermionic emission",
+          "ru": "Термоэлектронная эмиссия",
+          "uz": "Termoelektron emissiya"
+        }
+      ],
+      "correct": 1,
+      "explain": {
+        "en": "In Compton scatter, photons change direction and leave the patient in all directions.",
+        "ru": "При комптоновском рассеянии фотоны меняют направление и выходят из тела пациента в стороны.",
+        "uz": "Kompton sochilishida foton yo‘nalishini o‘zgartirib bemor tanasidan atrofga tarqaladi."
+      }
+    },
+    {
+      "q": {
+        "en": "Which of these appears most radiopaque on a radiograph?",
+        "ru": "Какая из структур наиболее рентгеноконтрастна на снимке?",
+        "uz": "Quyidagilardan qaysi biri rentgenogrammada eng rentgenokontrast ko‘rinadi?"
+      },
+      "options": [
+        {
+          "en": "Dentin",
+          "ru": "Дентин",
+          "uz": "Dentin"
+        },
+        {
+          "en": "PDL space",
+          "ru": "Периодонтальная щель",
+          "uz": "Periodontal tirqish"
+        },
+        {
+          "en": "Pulp chamber",
+          "ru": "Полость пульпы",
+          "uz": "Pulpa kamerasi"
+        },
+        {
+          "en": "Amalgam filling",
+          "ru": "Амальгамовая пломба",
+          "uz": "Amalgam plomba"
+        }
+      ],
+      "correct": 3,
+      "explain": {
+        "en": "Metal absorbs almost all of the beam, so it looks whiter than even enamel.",
+        "ru": "Металл поглощает почти всё излучение и выглядит светлее даже эмали.",
+        "uz": "Metall nurni deyarli to‘liq yutadi, shuning uchun emaldan ham oqroq ko‘rinadi."
+      }
+    },
+    {
+      "q": {
+        "en": "What is the main purpose of aluminium filtration?",
+        "ru": "Каково основное назначение алюминиевого фильтра?",
+        "uz": "Alyuminiy filtrning asosiy vazifasi nima?"
+      },
+      "options": [
+        {
+          "en": "Remove low-energy photons and cut skin dose",
+          "ru": "Задерживать мягкие лучи и снижать дозу на кожу",
+          "uz": "Past energiyali nurlarni ushlab, teri dozasini kamaytirish"
+        },
+        {
+          "en": "Shape the beam into a rectangle",
+          "ru": "Придавать пучку прямоугольную форму",
+          "uz": "Dastani to‘rtburchak shaklga keltirish"
+        },
+        {
+          "en": "Cool the anode",
+          "ru": "Охлаждать анод",
+          "uz": "Anodni sovutish"
+        },
+        {
+          "en": "Magnify the image",
+          "ru": "Увеличивать изображение",
+          "uz": "Tasvirni kattalashtirish"
+        }
+      ],
+      "correct": 0,
+      "explain": {
+        "en": "Soft photons do not reach the receptor and are absorbed by skin; the filter removes them.",
+        "ru": "Мягкие лучи не участвуют в изображении и поглощаются кожей; фильтр их убирает.",
+        "uz": "Yumshoq nurlar tasvir bermaydi, faqat teri tomonidan yutiladi; filtr ularni olib tashlaydi."
+      }
+    },
+    {
+      "q": {
+        "en": "A radiograph is too light but contrast is acceptable. What is the likely cause?",
+        "ru": "Снимок получился слишком светлым при нормальном контрасте. Вероятная причина?",
+        "uz": "Rentgenogramma juda och (oqish) chiqdi, kontrast normal. Ehtimoliy sabab nima?"
+      },
+      "options": [
+        {
+          "en": "Exposure time too long",
+          "ru": "Слишком длинная экспозиция",
+          "uz": "Ekspozitsiya vaqti juda uzun"
+        },
+        {
+          "en": "Patient moved",
+          "ru": "Пациент двигался",
+          "uz": "Bemor qimirlagan"
+        },
+        {
+          "en": "Exposure time or mA too low",
+          "ru": "Слишком малы время или мА",
+          "uz": "Ekspozitsiya vaqti yoki mA juda kam"
+        },
+        {
+          "en": "Focal spot too small",
+          "ru": "Слишком малое фокусное пятно",
+          "uz": "Fokus dog‘i juda kichik"
+        }
+      ],
+      "correct": 2,
+      "explain": {
+        "en": "Density depends on photon number; low mA or time gives a light image.",
+        "ru": "Плотность зависит от количества фотонов; при малых мА или времени снимок светлый.",
+        "uz": "Zichlik fotonlar soniga bog‘liq; mA yoki vaqt kam bo‘lsa, tasvir och chiqadi."
+      }
+    },
+    {
+      "q": {
+        "en": "Which measure improves image sharpness?",
+        "ru": "Какая мера повышает резкость изображения?",
+        "uz": "Qaysi chora tasvir aniqligini oshiradi?"
+      },
+      "options": [
+        {
+          "en": "Increase object-to-receptor distance",
+          "ru": "Увеличить расстояние объект–приёмник",
+          "uz": "Obyekt-qabul qilgich masofasini oshirish"
+        },
+        {
+          "en": "Use a larger focal spot",
+          "ru": "Выбрать большее фокусное пятно",
+          "uz": "Kattaroq fokus dog‘ini tanlash"
+        },
+        {
+          "en": "Shorten source-to-object distance",
+          "ru": "Уменьшить расстояние источник–объект",
+          "uz": "Manba-obyekt masofasini qisqartirish"
+        },
+        {
+          "en": "Lengthen source-to-object distance",
+          "ru": "Увеличить расстояние источник–объект",
+          "uz": "Manba-obyekt masofasini uzaytirish"
+        }
+      ],
+      "correct": 3,
+      "explain": {
+        "en": "A long source-to-object distance reduces penumbra and magnification.",
+        "ru": "Большое расстояние источник–объект уменьшает полутень и увеличение.",
+        "uz": "Uzoq manba-obyekt masofasi yarim soyani kamaytiradi va kattalashishni pasaytiradi."
+      }
+    },
+    {
+      "q": {
+        "en": "What is the main advantage of a digital sensor over film?",
+        "ru": "Главное преимущество цифрового датчика перед плёнкой?",
+        "uz": "Raqamli sensorning plyonkaga nisbatan asosiy afzalligi qaysi?"
+      },
+      "options": [
+        {
+          "en": "Thin and flexible",
+          "ru": "Тонкий и гибкий",
+          "uz": "Yupqa va egiluvchan"
+        },
+        {
+          "en": "Instant image with no chemical processing",
+          "ru": "Мгновенный снимок без химической обработки",
+          "uz": "Tasvir darhol olinadi, kimyoviy ishlov kerak emas"
+        },
+        {
+          "en": "Always higher resolution",
+          "ru": "Всегда более высокое разрешение",
+          "uz": "Har doim yuqori aniqlik"
+        },
+        {
+          "en": "Needs no infection control",
+          "ru": "Не требует инфекционного контроля",
+          "uz": "Infeksiya nazorati kerak emas"
+        }
+      ],
+      "correct": 1,
+      "explain": {
+        "en": "A sensor gives an instant image, usually at lower dose, but it is bulky and still needs a barrier.",
+        "ru": "Датчик даёт снимок сразу и обычно при меньшей дозе, но он толстый и требует защитного чехла.",
+        "uz": "Sensor tasvirni bir zumda beradi va doza odatda kamroq; ammo u qalin va to‘siq bilan qoplanishi shart."
+      }
+    }
+  ]
+}

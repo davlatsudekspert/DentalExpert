@@ -1,0 +1,1002 @@
+{
+  "id": "esth-04",
+  "subject": "esth",
+  "n": 4,
+  "week": 4,
+  "type": "lecture",
+  "hours": 2,
+  "title": {
+    "en": "Tooth whitening",
+    "ru": "Отбеливание зубов",
+    "uz": "Tishlarni oqartirish"
+  },
+  "goals": [
+    {
+      "en": "Explain the mechanism of peroxide whitening",
+      "ru": "Объяснять механизм отбеливания пероксидом",
+      "uz": "Peroksid bilan oqartirish mexanizmini tushuntirish"
+    },
+    {
+      "en": "Compare in-office and at-home whitening",
+      "ru": "Сравнивать кабинетное и домашнее отбеливание",
+      "uz": "Klinikada va uyda oqartirish usullarini solishtirish"
+    },
+    {
+      "en": "Manage sensitivity and recognise contraindications",
+      "ru": "Управлять чувствительностью и выявлять противопоказания",
+      "uz": "Sezuvchanlikni boshqarish va qarshi ko‘rsatmalarni aniqlash"
+    }
+  ],
+  "links": [
+    "tooth-layers"
+  ],
+  "sources": [
+    "Greenwall L. Tooth Whitening Techniques, 2nd ed., 2017",
+    "Heymann HO et al. Sturdevant's Art and Science of Operative Dentistry, 7th ed., 2018"
+  ],
+  "slides": [
+    {
+      "layout": "title",
+      "title": {
+        "en": "Tooth whitening",
+        "ru": "Отбеливание зубов",
+        "uz": "Tishlarni oqartirish"
+      },
+      "subtitle": {
+        "en": "In-office and at-home whitening, mechanism, sensitivity, contraindications",
+        "ru": "Кабинетное и домашнее отбеливание, механизм, чувствительность, противопоказания",
+        "uz": "Klinikada va uyda oqartirish, ta’sir mexanizmi, sezuvchanlik, qarshi ko‘rsatmalar"
+      }
+    },
+    {
+      "layout": "key",
+      "title": {
+        "en": "Mechanism of action",
+        "ru": "Механизм действия",
+        "uz": "Ta’sir mexanizmi"
+      },
+      "term": {
+        "en": "Peroxide oxidation",
+        "ru": "Окисление пероксидом",
+        "uz": "Peroksid bilan oksidlanish"
+      },
+      "definition": {
+        "en": "Hydrogen peroxide diffuses through enamel and dentin and forms free radicals that break large coloured organic molecules (chromogens) into smaller, lighter ones. Carbamide peroxide breaks down into hydrogen peroxide and urea.",
+        "ru": "Пероксид водорода диффундирует через эмаль и дентин и образует свободные радикалы, которые расщепляют крупные окрашенные органические молекулы (хромогены) на более мелкие и светлые. Пероксид карбамида распадается на пероксид водорода и мочевину.",
+        "uz": "Vodorod peroksid emal va dentin orqali diffuziyalanib, erkin radikallar hosil qiladi; ular yirik rangli organik molekulalarni (xromogenlarni) mayda va ochroq molekulalarga parchalaydi. Karbamid peroksid parchalanib vodorod peroksid va mochevina hosil qiladi."
+      },
+      "note": {
+        "en": "Stress that the active part of carbamide peroxide is hydrogen peroxide, roughly one third of its weight.",
+        "ru": "Подчеркните, что активная часть пероксида карбамида — пероксид водорода, около трети его массы.",
+        "uz": "Karbamid peroksidning faol qismi vodorod peroksid ekanini va uning taxminan uchdan bir qismini tashkil qilishini ta’kidlang."
+      }
+    },
+    {
+      "layout": "figure",
+      "title": {
+        "en": "Peroxide penetration",
+        "ru": "Проникновение пероксида в зуб",
+        "uz": "Peroksidning tish ichiga kirishi"
+      },
+      "image": "cutaway",
+      "callouts": [
+        {
+          "at": "enamel",
+          "label": {
+            "en": "Diffusion through enamel",
+            "ru": "Диффузия через эмаль",
+            "uz": "Emal orqali diffuziya"
+          }
+        },
+        {
+          "at": "dentin",
+          "label": {
+            "en": "Chromogens in dentin",
+            "ru": "Хромогены в дентине",
+            "uz": "Dentindagi xromogenlar"
+          }
+        },
+        {
+          "at": "pulp",
+          "label": {
+            "en": "Pulp irritation: sensitivity",
+            "ru": "Раздражение пульпы: чувствительность",
+            "uz": "Pulpa ta’sirlanishi: sezuvchanlik"
+          }
+        }
+      ],
+      "bullets": [
+        {
+          "en": "Colour change occurs mainly in dentin",
+          "ru": "Изменение цвета происходит в основном в дентине",
+          "uz": "Rang o‘zgarishi asosan dentinda sodir bo‘ladi"
+        },
+        {
+          "en": "Peroxide reaching the pulp causes transient sensitivity",
+          "ru": "Пероксид, достигший пульпы, вызывает временную чувствительность",
+          "uz": "Pulpaga yetgan peroksid vaqtinchalik sezuvchanlik beradi"
+        }
+      ]
+    },
+    {
+      "layout": "compare",
+      "title": {
+        "en": "In-office versus at-home whitening",
+        "ru": "Кабинетное и домашнее отбеливание",
+        "uz": "Klinikada va uyda oqartirish"
+      },
+      "columns": [
+        {
+          "head": {
+            "en": "In-office",
+            "ru": "В кабинете",
+            "uz": "Klinikada"
+          },
+          "items": [
+            {
+              "en": "High-concentration hydrogen peroxide",
+              "ru": "Пероксид водорода высокой концентрации",
+              "uz": "Yuqori konsentratsiyali vodorod peroksid"
+            },
+            {
+              "en": "Gingival barrier mandatory",
+              "ru": "Обязательный барьер для десны",
+              "uz": "Milk himoya to‘sig‘i majburiy"
+            },
+            {
+              "en": "Fast result in a few visits",
+              "ru": "Быстрый результат за несколько сеансов",
+              "uz": "Natija tez, bir necha seansda"
+            },
+            {
+              "en": "Full clinician control",
+              "ru": "Полный контроль врача",
+              "uz": "Shifokor to‘liq nazorat qiladi"
+            }
+          ]
+        },
+        {
+          "head": {
+            "en": "At-home",
+            "ru": "Домашнее",
+            "uz": "Uyda"
+          },
+          "items": [
+            {
+              "en": "Low concentration, often 10% carbamide peroxide",
+              "ru": "Низкая концентрация, часто 10% пероксид карбамида",
+              "uz": "Past konsentratsiya, ko‘pincha 10% karbamid peroksid"
+            },
+            {
+              "en": "Custom-made tray",
+              "ru": "Индивидуальная капа",
+              "uz": "Individual kappa"
+            },
+            {
+              "en": "Over several weeks",
+              "ru": "В течение нескольких недель",
+              "uz": "Bir necha hafta davomida"
+            },
+            {
+              "en": "Depends on patient compliance",
+              "ru": "Важна приверженность пациента",
+              "uz": "Bemorning hamkorligi muhim"
+            }
+          ]
+        }
+      ],
+      "note": {
+        "en": "Mention that permitted concentrations differ between countries; the EU, for example, sets strict limits.",
+        "ru": "Упомяните, что допустимые концентрации регулируются по-разному в разных странах, например, в ЕС есть строгие ограничения.",
+        "uz": "Konsentratsiyaga oid qonuniy cheklovlar mamlakatlarda farq qilishini, masalan Yevropa Ittifoqida qat’iy chegaralar borligini aytib o‘ting."
+      }
+    },
+    {
+      "layout": "flow",
+      "title": {
+        "en": "In-office whitening steps",
+        "ru": "Этапы кабинетного отбеливания",
+        "uz": "Klinikada oqartirish bosqichlari"
+      },
+      "steps": [
+        {
+          "label": {
+            "en": "Examination and cleaning",
+            "ru": "Обследование и чистка",
+            "uz": "Tekshiruv va tozalash"
+          },
+          "detail": {
+            "en": "Caries, gingiva, professional cleaning",
+            "ru": "Кариес и десна, профессиональная гигиена",
+            "uz": "Karies va milk holati, professional gigiyena"
+          }
+        },
+        {
+          "label": {
+            "en": "Baseline shade",
+            "ru": "Исходный цвет",
+            "uz": "Boshlang‘ich rang"
+          },
+          "detail": {
+            "en": "Record with guide and photos",
+            "ru": "Фиксация по расцветке и фото",
+            "uz": "Shkala va surat bilan qayd"
+          }
+        },
+        {
+          "label": {
+            "en": "Gingival protection",
+            "ru": "Защита десны",
+            "uz": "Milkni himoyalash"
+          },
+          "detail": {
+            "en": "Light-cured barrier",
+            "ru": "Светоотверждаемый барьер",
+            "uz": "Yorug‘likda qotadigan to‘siq"
+          }
+        },
+        {
+          "label": {
+            "en": "Gel application",
+            "ru": "Нанесение геля",
+            "uz": "Gel qo‘llash"
+          },
+          "detail": {
+            "en": "Time per manufacturer's instructions",
+            "ru": "Время по инструкции производителя",
+            "uz": "Ishlab chiqaruvchi ko‘rsatmasi bo‘yicha vaqt"
+          }
+        },
+        {
+          "label": {
+            "en": "Rinse and evaluate",
+            "ru": "Смывание и оценка",
+            "uz": "Yuvish va baholash"
+          },
+          "detail": {
+            "en": "Compare shade again",
+            "ru": "Повторное сравнение цвета",
+            "uz": "Rangni qayta solishtirish"
+          }
+        }
+      ]
+    },
+    {
+      "layout": "tree",
+      "title": {
+        "en": "Contraindications to whitening",
+        "ru": "Противопоказания к отбеливанию",
+        "uz": "Oqartirishga qarshi ko‘rsatmalar"
+      },
+      "root": {
+        "en": "Contraindications",
+        "ru": "Противопоказания",
+        "uz": "Qarshi ko‘rsatmalar"
+      },
+      "children": [
+        {
+          "label": {
+            "en": "Patient factors",
+            "ru": "Со стороны пациента",
+            "uz": "Bemor bilan bog‘liq"
+          },
+          "items": [
+            {
+              "en": "Pregnancy and breastfeeding",
+              "ru": "Беременность и лактация",
+              "uz": "Homiladorlik va emizish"
+            },
+            {
+              "en": "Commonly under 18",
+              "ru": "Обычно до 18 лет",
+              "uz": "Ko‘pincha 18 yoshgacha"
+            },
+            {
+              "en": "Peroxide allergy",
+              "ru": "Аллергия на пероксид",
+              "uz": "Peroksidga allergiya"
+            },
+            {
+              "en": "Unrealistic expectations",
+              "ru": "Нереалистичные ожидания",
+              "uz": "Real bo‘lmagan kutishlar"
+            }
+          ]
+        },
+        {
+          "label": {
+            "en": "Dental factors",
+            "ru": "Со стороны зубов",
+            "uz": "Tish bilan bog‘liq"
+          },
+          "items": [
+            {
+              "en": "Untreated caries",
+              "ru": "Нелеченый кариес",
+              "uz": "Davolanmagan karies"
+            },
+            {
+              "en": "Exposed dentin, recession",
+              "ru": "Обнажённый дентин, рецессия",
+              "uz": "Ochiq dentin, retsessiya"
+            },
+            {
+              "en": "Severe sensitivity",
+              "ru": "Выраженная чувствительность",
+              "uz": "Kuchli sezuvchanlik"
+            }
+          ]
+        },
+        {
+          "label": {
+            "en": "Limited response",
+            "ru": "Ограниченный результат",
+            "uz": "Natija cheklangan"
+          },
+          "items": [
+            {
+              "en": "Restorations do not whiten",
+              "ru": "Реставрации не отбеливаются",
+              "uz": "Old restavratsiyalar oqarmaydi"
+            },
+            {
+              "en": "Tetracycline staining",
+              "ru": "Тетрациклиновые пятна",
+              "uz": "Tetratsiklin dog‘lari"
+            },
+            {
+              "en": "Grey discoloration",
+              "ru": "Серый оттенок",
+              "uz": "Kulrang tus"
+            }
+          ]
+        }
+      ],
+      "note": {
+        "en": "Ask which restorations may need replacing after whitening.",
+        "ru": "Спросите, какие реставрации может понадобиться заменить после отбеливания.",
+        "uz": "Talabalardan oqartirishdan keyin qaysi restavratsiyalarni almashtirish kerak bo‘lishi mumkinligini so‘rang."
+      }
+    },
+    {
+      "layout": "bullets",
+      "title": {
+        "en": "Sensitivity and other side effects",
+        "ru": "Чувствительность и другие побочные эффекты",
+        "uz": "Sezuvchanlik va boshqa nojo‘ya ta’sirlar"
+      },
+      "bullets": [
+        {
+          "en": "The most common side effect is transient sensitivity",
+          "ru": "Самый частый побочный эффект — временная чувствительность",
+          "uz": "Eng ko‘p uchraydigan nojo‘ya ta’sir: vaqtinchalik sezuvchanlik"
+        },
+        {
+          "en": "Potassium nitrate and fluoride reduce sensitivity",
+          "ru": "Нитрат калия и фториды уменьшают чувствительность",
+          "uz": "Kaliy nitrat va ftoridli vositalar sezuvchanlikni kamaytiradi"
+        },
+        {
+          "en": "Intervals can be lengthened or concentration lowered",
+          "ru": "Можно увеличить интервалы или снизить концентрацию",
+          "uz": "Seanslar orasini uzaytirish yoki konsentratsiyani pasaytirish mumkin"
+        },
+        {
+          "en": "Chemical gingival burns occur with a poor barrier",
+          "ru": "Химический ожог десны возникает при плохом барьере",
+          "uz": "Milkning kimyoviy kuyishi to‘siq yaxshi bo‘lmaganda yuzaga keladi"
+        },
+        {
+          "en": "Bonding is commonly delayed 1–2 weeks after whitening",
+          "ru": "Адгезивную фиксацию обычно откладывают на 1–2 недели",
+          "uz": "Oqartirishdan keyin adgeziv fiksatsiya odatda 1–2 hafta kechiktiriladi"
+        }
+      ],
+      "note": {
+        "en": "Explain that residual oxygen reduces composite bond strength, which is why bonding is delayed.",
+        "ru": "Объясните, что остаточный кислород снижает адгезию композита, поэтому фиксацию откладывают.",
+        "uz": "Qolgan kislorod kompozit adgeziyasini kamaytirishini, shu sabab bonding kechiktirilishini tushuntiring."
+      }
+    },
+    {
+      "layout": "table",
+      "title": {
+        "en": "Stain type and whitening response",
+        "ru": "Тип окраски и результат отбеливания",
+        "uz": "Dog‘ turi va oqartirish natijasi"
+      },
+      "head": [
+        {
+          "en": "Discoloration",
+          "ru": "Окраска",
+          "uz": "Rang"
+        },
+        {
+          "en": "Response",
+          "ru": "Ответ",
+          "uz": "Javob"
+        },
+        {
+          "en": "Comment",
+          "ru": "Комментарий",
+          "uz": "Izoh"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "en": "Yellow, age-related",
+            "ru": "Жёлтая, возрастная",
+            "uz": "Sariq, yosh bilan bog‘liq"
+          },
+          {
+            "en": "Good",
+            "ru": "Хороший",
+            "uz": "Yaxshi"
+          },
+          {
+            "en": "Whitens most easily",
+            "ru": "Отбеливается легче всего",
+            "uz": "Eng oson oqaradi"
+          }
+        ],
+        [
+          {
+            "en": "Brown",
+            "ru": "Коричневая",
+            "uz": "Jigarrang"
+          },
+          {
+            "en": "Moderate to good",
+            "ru": "Средний или хороший",
+            "uz": "O‘rtacha yoki yaxshi"
+          },
+          {
+            "en": "May need longer",
+            "ru": "Может потребоваться больше времени",
+            "uz": "Ko‘proq vaqt kerak bo‘lishi mumkin"
+          }
+        ],
+        [
+          {
+            "en": "Grey or bluish",
+            "ru": "Серая или синеватая",
+            "uz": "Kulrang yoki ko‘kimtir"
+          },
+          {
+            "en": "Poor",
+            "ru": "Слабый",
+            "uz": "Yomon"
+          },
+          {
+            "en": "Tetracycline stains respond slowly",
+            "ru": "Тетрациклиновые пятна отвечают медленно",
+            "uz": "Tetratsiklin dog‘lari sekin javob beradi"
+          }
+        ],
+        [
+          {
+            "en": "Restorations",
+            "ru": "Реставрации",
+            "uz": "Restavratsiyalar"
+          },
+          {
+            "en": "None",
+            "ru": "Отсутствует",
+            "uz": "Yo‘q"
+          },
+          {
+            "en": "Replaced after whitening",
+            "ru": "Заменяются после отбеливания",
+            "uz": "Oqartirishdan keyin almashtiriladi"
+          }
+        ]
+      ]
+    },
+    {
+      "layout": "summary",
+      "title": {
+        "en": "Summary",
+        "ru": "Итоги",
+        "uz": "Xulosa"
+      },
+      "bullets": [
+        {
+          "en": "Peroxide radicals break down chromogens",
+          "ru": "Свободные радикалы пероксида расщепляют хромогены",
+          "uz": "Peroksid erkin radikallari xromogenlarni parchalaydi"
+        },
+        {
+          "en": "In-office is fast; at-home is slower but effective",
+          "ru": "В кабинете быстро, дома медленнее, но эффективно",
+          "uz": "Klinikada tez, uyda sekin, lekin samarali"
+        },
+        {
+          "en": "Sensitivity is most common and transient",
+          "ru": "Чувствительность встречается чаще всего и проходит",
+          "uz": "Sezuvchanlik eng ko‘p uchraydi va vaqtinchalik"
+        },
+        {
+          "en": "Restorations do not whiten; bonding is delayed",
+          "ru": "Реставрации не отбеливаются, фиксацию откладывают",
+          "uz": "Restavratsiyalar oqarmaydi, bonding kechiktiriladi"
+        },
+        {
+          "en": "Contraindications are identified beforehand",
+          "ru": "Противопоказания выявляют заранее",
+          "uz": "Qarshi ko‘rsatmalar oldindan aniqlanadi"
+        }
+      ]
+    }
+  ],
+  "oral": [
+    {
+      "q": {
+        "en": "Explain the mechanism of peroxide whitening.",
+        "ru": "Объясните механизм отбеливания пероксидом.",
+        "uz": "Peroksid bilan oqartirish mexanizmini tushuntiring."
+      },
+      "plan": [
+        {
+          "en": "Peroxide diffuses through enamel and dentin",
+          "ru": "Пероксид диффундирует через эмаль и дентин",
+          "uz": "Peroksid emal va dentin orqali diffuziyalanadi"
+        },
+        {
+          "en": "Free radicals are formed",
+          "ru": "Образуются свободные радикалы",
+          "uz": "Erkin radikallar hosil bo‘ladi"
+        },
+        {
+          "en": "Chromogens are broken into smaller, lighter molecules",
+          "ru": "Хромогены распадаются на мелкие светлые молекулы",
+          "uz": "Xromogenlar mayda, ochroq molekulalarga parchalanadi"
+        },
+        {
+          "en": "Carbamide peroxide yields hydrogen peroxide and urea",
+          "ru": "Пероксид карбамида распадается на пероксид водорода и мочевину",
+          "uz": "Karbamid peroksid vodorod peroksid va mochevinaga parchalanadi"
+        }
+      ]
+    },
+    {
+      "q": {
+        "en": "Compare in-office and at-home whitening.",
+        "ru": "Сравните кабинетное и домашнее отбеливание.",
+        "uz": "Klinikada va uyda oqartirishni solishtiring."
+      },
+      "plan": [
+        {
+          "en": "Concentration: high versus low",
+          "ru": "Концентрация: высокая и низкая",
+          "uz": "Konsentratsiya: yuqori va past"
+        },
+        {
+          "en": "Gingival barrier in-office, custom tray at home",
+          "ru": "В кабинете барьер для десны, дома индивидуальная капа",
+          "uz": "Klinikada milk to‘sig‘i, uyda individual kappa"
+        },
+        {
+          "en": "Differences in speed and control",
+          "ru": "Различие в скорости и контроле",
+          "uz": "Tezlik va nazorat farqi"
+        },
+        {
+          "en": "At-home depends on compliance",
+          "ru": "Дома важна приверженность пациента",
+          "uz": "Uyda bemorning hamkorligi muhim"
+        }
+      ]
+    },
+    {
+      "q": {
+        "en": "Name the side effects of whitening and how to manage them.",
+        "ru": "Назовите побочные эффекты отбеливания и способы их устранения.",
+        "uz": "Oqartirishning nojo‘ya ta’sirlari va ularni bartaraf etish yo‘llarini ayting."
+      },
+      "plan": [
+        {
+          "en": "Transient sensitivity is most common",
+          "ru": "Временная чувствительность встречается чаще всего",
+          "uz": "Vaqtinchalik sezuvchanlik eng ko‘p uchraydi"
+        },
+        {
+          "en": "Potassium nitrate and fluoride",
+          "ru": "Нитрат калия и фториды",
+          "uz": "Kaliy nitrat va ftoridlar"
+        },
+        {
+          "en": "Barrier to prevent gingival burns",
+          "ru": "Барьер для предотвращения ожога десны",
+          "uz": "Milk kuyishining oldini olish uchun to‘siq"
+        },
+        {
+          "en": "Delaying adhesive bonding",
+          "ru": "Отсрочка адгезивной фиксации",
+          "uz": "Adgeziv fiksatsiyani kechiktirish"
+        }
+      ]
+    },
+    {
+      "q": {
+        "en": "What are the contraindications to whitening?",
+        "ru": "Каковы противопоказания к отбеливанию?",
+        "uz": "Oqartirishga qanday qarshi ko‘rsatmalar bor?"
+      },
+      "plan": [
+        {
+          "en": "Pregnancy, breastfeeding, commonly under 18",
+          "ru": "Беременность, лактация, обычно возраст до 18 лет",
+          "uz": "Homiladorlik, emizish, ko‘pincha 18 yoshgacha"
+        },
+        {
+          "en": "Untreated caries and exposed dentin",
+          "ru": "Нелеченый кариес и обнажённый дентин",
+          "uz": "Davolanmagan karies va ochiq dentin"
+        },
+        {
+          "en": "Large anterior restorations",
+          "ru": "Обширные реставрации передних зубов",
+          "uz": "Old tishlarda katta restavratsiyalar"
+        },
+        {
+          "en": "Unrealistic expectations",
+          "ru": "Нереалистичные ожидания",
+          "uz": "Real bo‘lmagan kutishlar"
+        }
+      ]
+    }
+  ],
+  "test": [
+    {
+      "q": {
+        "en": "What is the active agent in tooth whitening?",
+        "ru": "Какое вещество является активным при отбеливании зубов?",
+        "uz": "Tishlarni oqartirishda faol modda qaysi?"
+      },
+      "options": [
+        {
+          "en": "Sodium hypochlorite",
+          "ru": "Гипохлорит натрия",
+          "uz": "Natriy gipoxlorit"
+        },
+        {
+          "en": "Phosphoric acid",
+          "ru": "Фосфорная кислота",
+          "uz": "Fosfat kislota"
+        },
+        {
+          "en": "Hydrogen peroxide",
+          "ru": "Пероксид водорода",
+          "uz": "Vodorod peroksid"
+        },
+        {
+          "en": "Calcium hydroxide",
+          "ru": "Гидроксид кальция",
+          "uz": "Kalsiy gidroksid"
+        }
+      ],
+      "correct": 2,
+      "explain": {
+        "en": "Hydrogen peroxide, or compounds releasing it, oxidises the chromogens.",
+        "ru": "При отбеливании пероксид водорода или его предшественники окисляют хромогены.",
+        "uz": "Oqartirishda vodorod peroksid yoki undan hosil bo‘ladigan birikmalar xromogenlarni oksidlaydi."
+      }
+    },
+    {
+      "q": {
+        "en": "What does carbamide peroxide break down into?",
+        "ru": "На что распадается пероксид карбамида?",
+        "uz": "Karbamid peroksid parchalanganda nima hosil bo‘ladi?"
+      },
+      "options": [
+        {
+          "en": "Hydrogen peroxide and urea",
+          "ru": "Пероксид водорода и мочевину",
+          "uz": "Vodorod peroksid va mochevina"
+        },
+        {
+          "en": "Sodium perborate and water",
+          "ru": "Перборат натрия и воду",
+          "uz": "Natriy perborat va suv"
+        },
+        {
+          "en": "Oxygen and chlorine",
+          "ru": "Кислород и хлор",
+          "uz": "Kislorod va xlor"
+        },
+        {
+          "en": "Phosphate and calcium",
+          "ru": "Фосфат и кальций",
+          "uz": "Fosfat va kalsiy"
+        }
+      ],
+      "correct": 0,
+      "explain": {
+        "en": "Carbamide peroxide yields hydrogen peroxide and urea; the peroxide is the active part.",
+        "ru": "Пероксид карбамида распадается на пероксид водорода и мочевину; активен пероксид водорода.",
+        "uz": "Karbamid peroksid vodorod peroksid va mochevinaga parchalanadi; faol qismi vodorod peroksid."
+      }
+    },
+    {
+      "q": {
+        "en": "What is the most common side effect of whitening?",
+        "ru": "Какой побочный эффект отбеливания встречается чаще всего?",
+        "uz": "Oqartirishning eng ko‘p uchraydigan nojo‘ya ta’siri qaysi?"
+      },
+      "options": [
+        {
+          "en": "Pulp necrosis",
+          "ru": "Некроз пульпы",
+          "uz": "Pulpa nekrozi"
+        },
+        {
+          "en": "Transient sensitivity",
+          "ru": "Временная чувствительность",
+          "uz": "Vaqtinchalik sezuvchanlik"
+        },
+        {
+          "en": "Enamel fracture",
+          "ru": "Перелом эмали",
+          "uz": "Emal sinishi"
+        },
+        {
+          "en": "Root resorption",
+          "ru": "Резорбция корня",
+          "uz": "Ildiz rezorbsiyasi"
+        }
+      ],
+      "correct": 1,
+      "explain": {
+        "en": "Many patients experience transient sensitivity that usually resolves after treatment.",
+        "ru": "У многих пациентов возникает временная чувствительность, обычно проходящая после лечения.",
+        "uz": "Ko‘pchilik bemorlarda vaqtinchalik sezuvchanlik kuzatiladi va u odatda davolashdan keyin o‘tadi."
+      }
+    },
+    {
+      "q": {
+        "en": "Which agent is commonly used for at-home whitening?",
+        "ru": "Какое средство часто используют для домашнего отбеливания?",
+        "uz": "Uyda oqartirish uchun ko‘p qo‘llanadigan vosita qaysi?"
+      },
+      "options": [
+        {
+          "en": "35% hydrogen peroxide",
+          "ru": "35% пероксид водорода",
+          "uz": "35% vodorod peroksid"
+        },
+        {
+          "en": "37% phosphoric acid",
+          "ru": "37% фосфорная кислота",
+          "uz": "37% fosfat kislota"
+        },
+        {
+          "en": "Sodium perborate powder",
+          "ru": "Порошок пербората натрия",
+          "uz": "Natriy perborat kukuni"
+        },
+        {
+          "en": "10% carbamide peroxide in a tray",
+          "ru": "10% пероксид карбамида в капе",
+          "uz": "Kappada 10% karbamid peroksid"
+        }
+      ],
+      "correct": 3,
+      "explain": {
+        "en": "10% carbamide peroxide in a custom tray is the classic at-home technique.",
+        "ru": "10% пероксид карбамида в индивидуальной капе — классический метод домашнего отбеливания.",
+        "uz": "Individual kappada 10% karbamid peroksid uyda oqartirishning klassik usuli hisoblanadi."
+      }
+    },
+    {
+      "q": {
+        "en": "Why is a gingival barrier used in in-office whitening?",
+        "ru": "Зачем при кабинетном отбеливании применяют барьер для десны?",
+        "uz": "Klinikada oqartirishda milk to‘sig‘i nima uchun qo‘llanadi?"
+      },
+      "options": [
+        {
+          "en": "To speed up the colour change",
+          "ru": "Чтобы быстрее изменить цвет",
+          "uz": "Rangni tezroq o‘zgartirish uchun"
+        },
+        {
+          "en": "To heat the gel",
+          "ru": "Чтобы нагреть гель",
+          "uz": "Gelni qizdirish uchun"
+        },
+        {
+          "en": "To protect soft tissue from chemical burns",
+          "ru": "Чтобы защитить мягкие ткани от химического ожога",
+          "uz": "Yumshoq to‘qimalarni kimyoviy kuyishdan saqlash uchun"
+        },
+        {
+          "en": "To increase sensitivity",
+          "ru": "Чтобы повысить чувствительность",
+          "uz": "Sezuvchanlikni oshirish uchun"
+        }
+      ],
+      "correct": 2,
+      "explain": {
+        "en": "High-concentration peroxide burns the gingiva, so it is covered with a barrier.",
+        "ru": "Пероксид высокой концентрации обжигает десну, поэтому её закрывают барьером.",
+        "uz": "Yuqori konsentratsiyali peroksid milkni kuydiradi, shuning uchun u to‘siq bilan yopiladi."
+      }
+    },
+    {
+      "q": {
+        "en": "A patient with anterior composites wants whitening. What should they be told?",
+        "ru": "У пациента композитные реставрации передних зубов, он хочет отбелить зубы. О чём его нужно предупредить?",
+        "uz": "Bemor old tishlarida kompozit restavratsiyalari bor va oqartirishni xohlaydi. Uni nima haqida ogohlantirish kerak?"
+      },
+      "options": [
+        {
+          "en": "The restorations will whiten equally",
+          "ru": "Реставрации отбелятся так же",
+          "uz": "Restavratsiyalar ham bir xil oqaradi"
+        },
+        {
+          "en": "Restorations will not whiten and may need replacing",
+          "ru": "Реставрации не отбелятся и могут потребовать замены",
+          "uz": "Restavratsiyalar oqarmaydi va almashtirilishi mumkin"
+        },
+        {
+          "en": "The restorations will darken",
+          "ru": "Реставрации станут темнее",
+          "uz": "Restavratsiyalar to‘qroq bo‘lib qoladi"
+        },
+        {
+          "en": "The restorations will fall out",
+          "ru": "Реставрации обязательно выпадут",
+          "uz": "Restavratsiyalar albatta tushib ketadi"
+        }
+      ],
+      "correct": 1,
+      "explain": {
+        "en": "Composite and ceramics do not change colour, so they may mismatch after whitening.",
+        "ru": "Композит и керамика не меняют цвет под действием пероксида и после отбеливания могут не совпадать.",
+        "uz": "Kompozit va keramika peroksid ta’sirida rangini o‘zgartirmaydi, shuning uchun oqartirishdan keyin ular mos kelmay qolishi mumkin."
+      }
+    },
+    {
+      "q": {
+        "en": "Why is composite bonding usually delayed 1–2 weeks after whitening?",
+        "ru": "Почему композитную реставрацию после отбеливания обычно откладывают на 1–2 недели?",
+        "uz": "Oqartirishdan so‘ng kompozit restavratsiya nima uchun odatda 1–2 hafta kechiktiriladi?"
+      },
+      "options": [
+        {
+          "en": "Residual oxygen reduces bond strength",
+          "ru": "Остаточный кислород снижает адгезию",
+          "uz": "Qolgan kislorod adgeziyani kamaytiradi"
+        },
+        {
+          "en": "Enamel becomes soft",
+          "ru": "Эмаль становится мягкой",
+          "uz": "Emal yumshoq bo‘lib qoladi"
+        },
+        {
+          "en": "The pulp becomes inflamed",
+          "ru": "Пульпа воспаляется",
+          "uz": "Pulpa yallig‘lanadi"
+        },
+        {
+          "en": "Composite sets too fast",
+          "ru": "Композит быстро твердеет",
+          "uz": "Kompozit tez qotadi"
+        }
+      ],
+      "correct": 0,
+      "explain": {
+        "en": "Residual oxygen impairs polymerisation and bonding; the shade also stabilises in that time.",
+        "ru": "Остаточный кислород нарушает полимеризацию композита и адгезию; кроме того, цвет успевает стабилизироваться.",
+        "uz": "Tishda qolgan kislorod kompozit polimerizatsiyasini va adgeziyani buzadi; bundan tashqari rang ham barqarorlashadi."
+      }
+    },
+    {
+      "q": {
+        "en": "Which discoloration responds most slowly to whitening?",
+        "ru": "Какая окраска хуже всего поддаётся отбеливанию?",
+        "uz": "Qaysi rang o‘zgarishi oqartirishga eng sekin javob beradi?"
+      },
+      "options": [
+        {
+          "en": "Age-related yellow",
+          "ru": "Возрастная жёлтая окраска",
+          "uz": "Yosh bilan bog‘liq sariq rang"
+        },
+        {
+          "en": "Extrinsic tea and coffee stain",
+          "ru": "Внешние пятна от чая и кофе",
+          "uz": "Choy va qahvadan tashqi dog‘"
+        },
+        {
+          "en": "Light brown discoloration",
+          "ru": "Светло-коричневая окраска",
+          "uz": "Och jigarrang rang"
+        },
+        {
+          "en": "Tetracycline grey-blue staining",
+          "ru": "Тетрациклиновая серо-синяя окраска",
+          "uz": "Tetratsiklinli kulrang-ko‘k rang"
+        }
+      ],
+      "correct": 3,
+      "explain": {
+        "en": "Tetracycline stains are bound deep in dentin, grey-blue and need prolonged whitening.",
+        "ru": "Тетрациклиновые пятна глубоко связаны с дентином, имеют серо-синий цвет и требуют длительного отбеливания.",
+        "uz": "Tetratsiklin dog‘lari dentinga chuqur bog‘langan, kulrang-ko‘k bo‘lib, uzoq muddatli oqartirishni talab qiladi."
+      }
+    },
+    {
+      "q": {
+        "en": "A patient has multiple recessions with exposed dentin. What is correct before whitening?",
+        "ru": "У пациента множественные рецессии десны и обнажённый дентин. Как правильно поступить перед отбеливанием?",
+        "uz": "Bemorda ko‘p sohalarda milk retsessiyasi va ochiq dentin bor. Oqartirishdan oldin eng to‘g‘ri harakat qaysi?"
+      },
+      "options": [
+        {
+          "en": "Choose the highest concentration",
+          "ru": "Выбрать максимальную концентрацию",
+          "uz": "Eng yuqori konsentratsiyani tanlash"
+        },
+        {
+          "en": "Ignore the problem",
+          "ru": "Не обращать внимания",
+          "uz": "Muammoni e’tiborsiz qoldirish"
+        },
+        {
+          "en": "Explain the risk and plan to protect the dentin",
+          "ru": "Объяснить риск и спланировать защиту дентина",
+          "uz": "Xavfni tushuntirib, ochiq dentinni himoyalashni rejalash"
+        },
+        {
+          "en": "Leave gel on exposed dentin longer",
+          "ru": "Оставить гель на дентине надолго",
+          "uz": "Gelni ochiq dentinga uzoq qoldirish"
+        }
+      ],
+      "correct": 2,
+      "explain": {
+        "en": "Exposed dentin causes marked sensitivity, so it is protected and the patient informed.",
+        "ru": "Обнажённый дентин вызывает сильную чувствительность, поэтому его защищают и предупреждают пациента.",
+        "uz": "Ochiq dentin kuchli sezuvchanlikka olib keladi, shuning uchun u himoyalanadi va bemor ogohlantiriladi."
+      }
+    },
+    {
+      "q": {
+        "en": "Which step is essential before whitening?",
+        "ru": "Какой этап обязателен перед отбеливанием?",
+        "uz": "Oqartirishdan oldin qaysi bosqich majburiy?"
+      },
+      "options": [
+        {
+          "en": "Preparing all teeth",
+          "ru": "Препарирование всех зубов",
+          "uz": "Barcha tishlarni charxlash"
+        },
+        {
+          "en": "Examination, caries treatment and baseline shade record",
+          "ru": "Обследование, лечение кариеса и фиксация исходного цвета",
+          "uz": "Tekshiruv, karies davosi va boshlang‘ich rangni qayd etish"
+        },
+        {
+          "en": "Root canal treatment",
+          "ru": "Эндодонтическое лечение",
+          "uz": "Ildiz kanallarini davolash"
+        },
+        {
+          "en": "Tooth extraction",
+          "ru": "Удаление зубов",
+          "uz": "Tishlarni olib tashlash"
+        }
+      ],
+      "correct": 1,
+      "explain": {
+        "en": "The mouth is made healthy first and the baseline shade recorded with a guide and photos.",
+        "ru": "Перед отбеливанием проводят санацию и фиксируют исходный цвет по расцветке и фото.",
+        "uz": "Oqartirishdan oldin og‘iz bo‘shlig‘i sog‘lomlashtiriladi va boshlang‘ich rang shkala hamda surat bilan qayd etiladi."
+      }
+    }
+  ]
+}

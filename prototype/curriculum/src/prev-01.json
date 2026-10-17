@@ -1,0 +1,1014 @@
+{
+  "id": "prev-01",
+  "subject": "prev",
+  "n": 1,
+  "week": 1,
+  "type": "lecture",
+  "hours": 2,
+  "title": {
+    "en": "Dental plaque and biofilm",
+    "ru": "Зубной налёт и биоплёнка",
+    "uz": "Tish karashi va biofilm"
+  },
+  "goals": [
+    {
+      "en": "Define dental biofilm and describe the stages of its formation",
+      "ru": "Дать определение зубной биоплёнки и описать этапы её образования",
+      "uz": "Tish biofilmiga ta’rif berish va uning hosil bo‘lish bosqichlarini tavsiflash"
+    },
+    {
+      "en": "Explain the ecological plaque hypothesis of caries",
+      "ru": "Объяснить экологическую гипотезу налёта в развитии кариеса",
+      "uz": "Kariesning ekologik karash gipotezasini tushuntirish"
+    },
+    {
+      "en": "Describe the plaque pH response to sugar",
+      "ru": "Описать изменение pH налёта после приёма сахара",
+      "uz": "Shakar iste’molidan keyin karash pH o‘zgarishini tavsiflash"
+    },
+    {
+      "en": "Link plaque accumulation to gingivitis",
+      "ru": "Связать накопление налёта с развитием гингивита",
+      "uz": "Karash to‘planishini gingivit rivojlanishi bilan bog‘lash"
+    }
+  ],
+  "links": [
+    "caries-basics",
+    "oral-hygiene"
+  ],
+  "sources": [
+    "Marsh PD, Lewis MAO, Rogers H, Williams DW, Wilson M. Marsh and Martin's Oral Microbiology, 6th ed., 2016",
+    "Fejerskov O, Nyvad B, Kidd E. Dental Caries: The Disease and its Clinical Management, 3rd ed., 2015",
+    "Newman MG et al. Newman and Carranza's Clinical Periodontology, 13th ed., 2019"
+  ],
+  "slides": [
+    {
+      "layout": "title",
+      "title": {
+        "en": "Dental plaque and biofilm",
+        "ru": "Зубной налёт и биоплёнка",
+        "uz": "Tish karashi va biofilm"
+      },
+      "subtitle": {
+        "en": "The common cause of caries and gingivitis",
+        "ru": "Общая причина кариеса и гингивита",
+        "uz": "Karies va gingivitning umumiy sababi"
+      }
+    },
+    {
+      "layout": "key",
+      "title": {
+        "en": "What is dental biofilm?",
+        "ru": "Что такое зубная биоплёнка?",
+        "uz": "Tish biofilmi nima?"
+      },
+      "term": {
+        "en": "Dental biofilm (plaque)",
+        "ru": "Зубная биоплёнка (налёт)",
+        "uz": "Tish biofilmi (karash)"
+      },
+      "definition": {
+        "en": "A structured community of many bacterial species attached to the tooth surface and embedded in a matrix of polymers from bacteria and saliva. It is removed by mechanical cleaning, not by rinsing.",
+        "ru": "Структурированное сообщество многих видов бактерий, прикреплённое к поверхности зуба и погружённое в матрикс из полимеров бактерий и слюны. Удаляется механической чисткой, а не полосканием.",
+        "uz": "Tish yuzasiga yopishgan va bakteriya hamda so‘lak polimerlaridan iborat matriksga botgan ko‘p turdagi bakteriyalarning tartibli jamoasi. U chayish bilan emas, mexanik tozalash bilan olib tashlanadi."
+      },
+      "note": {
+        "en": "Stress that plaque is not food debris: it is an organised living community that rinsing alone does not remove.",
+        "ru": "Подчеркните: налёт — не остатки пищи, а организованное живое сообщество, которое не смывается полосканием.",
+        "uz": "Karash ovqat qoldig‘i emasligini ta’kidlang: bu chayish bilan ketmaydigan tartibli tirik jamoa."
+      }
+    },
+    {
+      "layout": "flow",
+      "title": {
+        "en": "How biofilm forms",
+        "ru": "Как образуется биоплёнка",
+        "uz": "Biofilm qanday hosil bo‘ladi"
+      },
+      "steps": [
+        {
+          "label": {
+            "en": "Acquired pellicle",
+            "ru": "Приобретённая пелликула",
+            "uz": "Orttirilgan pellikula"
+          },
+          "detail": {
+            "en": "Salivary proteins coat clean enamel within minutes",
+            "ru": "Белки слюны покрывают чистую эмаль за минуты",
+            "uz": "So‘lak oqsillari toza emalni bir necha daqiqada qoplaydi"
+          }
+        },
+        {
+          "label": {
+            "en": "Early attachment",
+            "ru": "Ранняя адгезия",
+            "uz": "Dastlabki yopishish"
+          },
+          "detail": {
+            "en": "Streptococci and Actinomyces bind to the pellicle",
+            "ru": "Стрептококки и актиномицеты прикрепляются к пелликуле",
+            "uz": "Streptokokklar va aktinomitsetlar pellikulaga yopishadi"
+          }
+        },
+        {
+          "label": {
+            "en": "Coaggregation",
+            "ru": "Коагрегация",
+            "uz": "Koagregatsiya"
+          },
+          "detail": {
+            "en": "Bridging species such as Fusobacterium join",
+            "ru": "Присоединяются виды-мосты, например фузобактерии",
+            "uz": "Fuzobakteriyalar kabi ko‘prik turlar qo‘shiladi"
+          }
+        },
+        {
+          "label": {
+            "en": "Maturation",
+            "ru": "Созревание",
+            "uz": "Yetilish"
+          },
+          "detail": {
+            "en": "Matrix builds up; anaerobes increase",
+            "ru": "Накапливается матрикс; растёт доля анаэробов",
+            "uz": "Matriks to‘planadi; anaeroblar ko‘payadi"
+          }
+        },
+        {
+          "label": {
+            "en": "Dispersal",
+            "ru": "Распространение",
+            "uz": "Tarqalish"
+          },
+          "detail": {
+            "en": "Cells detach and colonise new sites",
+            "ru": "Клетки отделяются и заселяют новые участки",
+            "uz": "Hujayralar ajralib, yangi joylarni egallaydi"
+          }
+        }
+      ]
+    },
+    {
+      "layout": "timeline",
+      "title": {
+        "en": "Plaque without cleaning",
+        "ru": "Налёт без чистки",
+        "uz": "Tozalanmagan karash"
+      },
+      "events": [
+        {
+          "when": {
+            "en": "Minutes",
+            "ru": "Минуты",
+            "uz": "Daqiqalar"
+          },
+          "label": {
+            "en": "Pellicle forms on the cleaned surface",
+            "ru": "На очищенной поверхности образуется пелликула",
+            "uz": "Tozalangan yuzada pellikula hosil bo‘ladi"
+          }
+        },
+        {
+          "when": {
+            "en": "Hours",
+            "ru": "Часы",
+            "uz": "Soatlar"
+          },
+          "label": {
+            "en": "Mainly gram-positive cocci",
+            "ru": "Преимущественно грамположительные кокки",
+            "uz": "Asosan grammusbat kokklar"
+          }
+        },
+        {
+          "when": {
+            "en": "Days",
+            "ru": "Дни",
+            "uz": "Kunlar"
+          },
+          "label": {
+            "en": "Rods and filaments, more complex structure",
+            "ru": "Палочки и нити, структура усложняется",
+            "uz": "Tayoqcha va iplar, tuzilma murakkablashadi"
+          }
+        },
+        {
+          "when": {
+            "en": "1–3 weeks",
+            "ru": "1–3 недели",
+            "uz": "1–3 hafta"
+          },
+          "label": {
+            "en": "Gram-negative anaerobes; gingivitis develops",
+            "ru": "Грамотрицательные анаэробы; развивается гингивит",
+            "uz": "Grammanfiy anaeroblar; gingivit rivojlanadi"
+          }
+        }
+      ],
+      "note": {
+        "en": "Mention the classic experimental gingivitis studies: gingivitis appeared when brushing stopped and resolved when it restarted.",
+        "ru": "Упомяните классические исследования экспериментального гингивита: гингивит появлялся при отказе от чистки и исчезал при её возобновлении.",
+        "uz": "Klassik tajribaviy gingivit tadqiqotlarini eslang: tish tozalash to‘xtatilganda gingivit paydo bo‘lgan va qayta boshlanganda yo‘qolgan."
+      }
+    },
+    {
+      "layout": "cycle",
+      "title": {
+        "en": "Ecological plaque hypothesis",
+        "ru": "Экологическая гипотеза налёта",
+        "uz": "Ekologik karash gipotezasi"
+      },
+      "center": {
+        "en": "Ecological shift",
+        "ru": "Экологический сдвиг",
+        "uz": "Ekologik siljish"
+      },
+      "steps": [
+        {
+          "label": {
+            "en": "Frequent sugar intake",
+            "ru": "Частый приём сахара",
+            "uz": "Tez-tez shakar iste’moli"
+          }
+        },
+        {
+          "label": {
+            "en": "Acid production by bacteria",
+            "ru": "Образование кислот бактериями",
+            "uz": "Bakteriyalarning kislota hosil qilishi"
+          }
+        },
+        {
+          "label": {
+            "en": "Plaque pH stays low",
+            "ru": "pH налёта остаётся низким",
+            "uz": "Karash pH past bo‘lib qoladi"
+          }
+        },
+        {
+          "label": {
+            "en": "Acid-tolerant species increase",
+            "ru": "Растёт доля кислотоустойчивых видов",
+            "uz": "Kislotaga chidamli turlar ko‘payadi"
+          }
+        },
+        {
+          "label": {
+            "en": "Enamel demineralisation",
+            "ru": "Деминерализация эмали",
+            "uz": "Emal demineralizatsiyasi"
+          }
+        }
+      ]
+    },
+    {
+      "layout": "table",
+      "title": {
+        "en": "Plaque pH after sugar",
+        "ru": "pH налёта после сахара",
+        "uz": "Shakardan keyin karash pH"
+      },
+      "head": [
+        {
+          "en": "Phase",
+          "ru": "Фаза",
+          "uz": "Bosqich"
+        },
+        {
+          "en": "What happens",
+          "ru": "Что происходит",
+          "uz": "Nima sodir bo‘ladi"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "en": "Resting",
+            "ru": "Покой",
+            "uz": "Tinch holat"
+          },
+          {
+            "en": "pH near neutral",
+            "ru": "pH близок к нейтральному",
+            "uz": "pH neytralga yaqin"
+          }
+        ],
+        [
+          {
+            "en": "Sugar intake",
+            "ru": "Приём сахара",
+            "uz": "Shakar iste’moli"
+          },
+          {
+            "en": "pH falls within minutes",
+            "ru": "pH падает за несколько минут",
+            "uz": "pH bir necha daqiqada pasayadi"
+          }
+        ],
+        [
+          {
+            "en": "Below critical pH",
+            "ru": "Ниже критического pH",
+            "uz": "Kritik pH dan past"
+          },
+          {
+            "en": "Enamel dissolves below about pH 5.5",
+            "ru": "Эмаль растворяется ниже pH около 5,5",
+            "uz": "pH taxminan 5,5 dan past bo‘lsa emal eriydi"
+          }
+        ],
+        [
+          {
+            "en": "Recovery",
+            "ru": "Восстановление",
+            "uz": "Tiklanish"
+          },
+          {
+            "en": "Saliva buffers; pH returns in about 30–60 min",
+            "ru": "Слюна нейтрализует; pH восстанавливается за 30–60 мин",
+            "uz": "So‘lak neytrallaydi; pH taxminan 30–60 daqiqada tiklanadi"
+          }
+        ]
+      ],
+      "note": {
+        "en": "Draw the Stephan curve on the board and ask what happens if sugar is taken again before pH recovers.",
+        "ru": "Нарисуйте кривую Стефана и спросите, что будет при повторном приёме сахара до восстановления pH.",
+        "uz": "Doskaga Stefan egri chizig‘ini chizing va pH tiklanmasdan qayta shakar iste’mol qilinsa nima bo‘lishini so‘rang."
+      }
+    },
+    {
+      "layout": "compare",
+      "title": {
+        "en": "Supragingival and subgingival plaque",
+        "ru": "Наддесневой и поддесневой налёт",
+        "uz": "Milk usti va milk osti karashi"
+      },
+      "columns": [
+        {
+          "head": {
+            "en": "Supragingival",
+            "ru": "Наддесневой",
+            "uz": "Milk usti"
+          },
+          "items": [
+            {
+              "en": "Above the gingival margin",
+              "ru": "Над краем десны",
+              "uz": "Milk chetidan yuqorida"
+            },
+            {
+              "en": "Mostly gram-positive, uses dietary sugars",
+              "ru": "Преимущественно грамположительный, использует сахара пищи",
+              "uz": "Asosan grammusbat, ovqatdagi shakardan foydalanadi"
+            },
+            {
+              "en": "Linked to caries and gingivitis",
+              "ru": "Связан с кариесом и гингивитом",
+              "uz": "Karies va gingivit bilan bog‘liq"
+            }
+          ]
+        },
+        {
+          "head": {
+            "en": "Subgingival",
+            "ru": "Поддесневой",
+            "uz": "Milk osti"
+          },
+          "items": [
+            {
+              "en": "In the sulcus or pocket",
+              "ru": "В борозде или кармане",
+              "uz": "Milk egati yoki cho‘ntakda"
+            },
+            {
+              "en": "Mostly gram-negative anaerobes, feeds on crevicular fluid",
+              "ru": "Преимущественно грамотрицательные анаэробы, питается десневой жидкостью",
+              "uz": "Asosan grammanfiy anaeroblar, milk suyuqligi bilan oziqlanadi"
+            },
+            {
+              "en": "Linked to periodontitis",
+              "ru": "Связан с пародонтитом",
+              "uz": "Parodontit bilan bog‘liq"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "layout": "tree",
+      "title": {
+        "en": "Factors that favour plaque",
+        "ru": "Факторы, способствующие налёту",
+        "uz": "Karash to‘planishiga yordam beruvchi omillar"
+      },
+      "root": {
+        "en": "Plaque retention",
+        "ru": "Ретенция налёта",
+        "uz": "Karash ushlanishi"
+      },
+      "children": [
+        {
+          "label": {
+            "en": "Tooth",
+            "ru": "Зуб",
+            "uz": "Tish"
+          },
+          "items": [
+            {
+              "en": "Deep fissures",
+              "ru": "Глубокие фиссуры",
+              "uz": "Chuqur fissuralar"
+            },
+            {
+              "en": "Crowding",
+              "ru": "Скученность",
+              "uz": "Tishlar zichligi"
+            }
+          ]
+        },
+        {
+          "label": {
+            "en": "Restorations",
+            "ru": "Реставрации",
+            "uz": "Restavratsiyalar"
+          },
+          "items": [
+            {
+              "en": "Overhangs",
+              "ru": "Нависающие края",
+              "uz": "Osilib turgan chetlar"
+            },
+            {
+              "en": "Rough surfaces",
+              "ru": "Шероховатые поверхности",
+              "uz": "G‘adir-budir yuzalar"
+            }
+          ]
+        },
+        {
+          "label": {
+            "en": "Host",
+            "ru": "Организм",
+            "uz": "Organizm"
+          },
+          "items": [
+            {
+              "en": "Low saliva flow",
+              "ru": "Сниженное слюноотделение",
+              "uz": "So‘lak ajralishining kamayishi"
+            },
+            {
+              "en": "Poor hygiene",
+              "ru": "Плохая гигиена",
+              "uz": "Yomon gigiyena"
+            }
+          ]
+        },
+        {
+          "label": {
+            "en": "Diet",
+            "ru": "Питание",
+            "uz": "Ovqatlanish"
+          },
+          "items": [
+            {
+              "en": "Frequent sugars",
+              "ru": "Частый сахар",
+              "uz": "Tez-tez shakar"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "layout": "bullets",
+      "title": {
+        "en": "Biofilm and the gingiva",
+        "ru": "Биоплёнка и десна",
+        "uz": "Biofilm va milk"
+      },
+      "bullets": [
+        {
+          "en": "Plaque at the gingival margin triggers inflammation",
+          "ru": "Налёт у края десны вызывает воспаление",
+          "uz": "Milk chetidagi karash yallig‘lanishni qo‘zg‘atadi"
+        },
+        {
+          "en": "Signs: redness, swelling, bleeding on brushing or probing",
+          "ru": "Признаки: покраснение, отёк, кровоточивость",
+          "uz": "Belgilari: qizarish, shish, tozalash yoki zondlashda qonash"
+        },
+        {
+          "en": "Gingivitis is reversible when plaque is removed regularly",
+          "ru": "Гингивит обратим при регулярном удалении налёта",
+          "uz": "Karash muntazam olib tashlansa gingivit qaytar jarayon"
+        },
+        {
+          "en": "Plaque that mineralises becomes calculus",
+          "ru": "Минерализованный налёт превращается в зубной камень",
+          "uz": "Minerallashgan karash tish toshiga aylanadi"
+        }
+      ]
+    },
+    {
+      "layout": "summary",
+      "title": {
+        "en": "Summary",
+        "ru": "Итоги",
+        "uz": "Xulosa"
+      },
+      "bullets": [
+        {
+          "en": "Biofilm forms in stages, starting with the pellicle",
+          "ru": "Биоплёнка образуется поэтапно, начиная с пелликулы",
+          "uz": "Biofilm bosqichma-bosqich, pellikuladan boshlab hosil bo‘ladi"
+        },
+        {
+          "en": "Frequent sugar shifts plaque towards acid-producing bacteria",
+          "ru": "Частый сахар сдвигает налёт в сторону кислотообразующих бактерий",
+          "uz": "Tez-tez shakar karashni kislota hosil qiluvchi bakteriyalar tomon siljitadi"
+        },
+        {
+          "en": "Enamel dissolves below about pH 5.5",
+          "ru": "Эмаль растворяется ниже pH около 5,5",
+          "uz": "Emal pH taxminan 5,5 dan past bo‘lganda eriydi"
+        },
+        {
+          "en": "Mechanical plaque removal prevents caries and gingivitis",
+          "ru": "Механическое удаление налёта предупреждает кариес и гингивит",
+          "uz": "Karashni mexanik olib tashlash karies va gingivitning oldini oladi"
+        }
+      ]
+    }
+  ],
+  "oral": [
+    {
+      "q": {
+        "en": "Describe the stages of dental biofilm formation.",
+        "ru": "Опишите этапы образования зубной биоплёнки.",
+        "uz": "Tish biofilmi hosil bo‘lish bosqichlarini tavsiflang."
+      },
+      "plan": [
+        {
+          "en": "Acquired pellicle from salivary proteins",
+          "ru": "Приобретённая пелликула из белков слюны",
+          "uz": "So‘lak oqsillaridan orttirilgan pellikula"
+        },
+        {
+          "en": "Attachment of early colonisers: streptococci, Actinomyces",
+          "ru": "Прикрепление ранних колонизаторов: стрептококки, актиномицеты",
+          "uz": "Dastlabki koloniyalovchilar: streptokokklar, aktinomitsetlar yopishadi"
+        },
+        {
+          "en": "Coaggregation and growth of the matrix",
+          "ru": "Коагрегация и рост матрикса",
+          "uz": "Koagregatsiya va matriks o‘sishi"
+        },
+        {
+          "en": "Maturation with more anaerobes, then dispersal",
+          "ru": "Созревание с ростом анаэробов, затем распространение",
+          "uz": "Anaeroblar ko‘payishi bilan yetilish, so‘ng tarqalish"
+        }
+      ]
+    },
+    {
+      "q": {
+        "en": "Explain the ecological plaque hypothesis.",
+        "ru": "Объясните экологическую гипотезу налёта.",
+        "uz": "Ekologik karash gipotezasini tushuntiring."
+      },
+      "plan": [
+        {
+          "en": "Caries bacteria are normal members of plaque",
+          "ru": "Кариесогенные бактерии — нормальные обитатели налёта",
+          "uz": "Kariesogen bakteriyalar karashning odatiy a’zolari"
+        },
+        {
+          "en": "Frequent sugar keeps plaque pH low",
+          "ru": "Частый сахар поддерживает низкий pH налёта",
+          "uz": "Tez-tez shakar karash pH ini past ushlab turadi"
+        },
+        {
+          "en": "Low pH selects acid-tolerant species",
+          "ru": "Низкий pH отбирает кислотоустойчивые виды",
+          "uz": "Past pH kislotaga chidamli turlarni tanlaydi"
+        },
+        {
+          "en": "Prevention targets the drivers: sugar and plaque",
+          "ru": "Профилактика направлена на причины: сахар и налёт",
+          "uz": "Profilaktika sabablarga qaratiladi: shakar va karash"
+        }
+      ]
+    },
+    {
+      "q": {
+        "en": "Describe the Stephan curve and its clinical meaning.",
+        "ru": "Опишите кривую Стефана и её клиническое значение.",
+        "uz": "Stefan egri chizig‘ini va uning klinik ahamiyatini tushuntiring."
+      },
+      "plan": [
+        {
+          "en": "pH falls within minutes after sugar",
+          "ru": "pH падает через несколько минут после сахара",
+          "uz": "Shakardan keyin bir necha daqiqada pH pasayadi"
+        },
+        {
+          "en": "Below about 5.5 enamel demineralises",
+          "ru": "Ниже около 5,5 эмаль деминерализуется",
+          "uz": "Taxminan 5,5 dan past bo‘lsa emal demineralizatsiyalanadi"
+        },
+        {
+          "en": "Saliva restores pH in about 30–60 minutes",
+          "ru": "Слюна восстанавливает pH за 30–60 минут",
+          "uz": "So‘lak pH ni taxminan 30–60 daqiqada tiklaydi"
+        },
+        {
+          "en": "Frequency of sugar matters more than amount",
+          "ru": "Частота приёма сахара важнее количества",
+          "uz": "Shakar miqdoridan ko‘ra iste’mol chastotasi muhimroq"
+        }
+      ]
+    },
+    {
+      "q": {
+        "en": "How does plaque cause gingivitis, and is it reversible?",
+        "ru": "Как налёт вызывает гингивит и обратим ли он?",
+        "uz": "Karash qanday qilib gingivit chaqiradi va bu qaytar jarayonmi?"
+      },
+      "plan": [
+        {
+          "en": "Plaque at the margin releases bacterial products",
+          "ru": "Налёт у края десны выделяет бактериальные продукты",
+          "uz": "Milk chetidagi karash bakterial mahsulotlar chiqaradi"
+        },
+        {
+          "en": "Host inflammation: redness, swelling, bleeding",
+          "ru": "Воспаление: покраснение, отёк, кровоточивость",
+          "uz": "Yallig‘lanish: qizarish, shish, qonash"
+        },
+        {
+          "en": "Develops within about 1–3 weeks without cleaning",
+          "ru": "Развивается примерно за 1–3 недели без чистки",
+          "uz": "Tozalanmasa taxminan 1–3 haftada rivojlanadi"
+        },
+        {
+          "en": "Resolves after plaque is removed regularly",
+          "ru": "Проходит после регулярного удаления налёта",
+          "uz": "Karash muntazam olib tashlangach yo‘qoladi"
+        }
+      ]
+    }
+  ],
+  "test": [
+    {
+      "q": {
+        "en": "What is the first stage in the formation of dental biofilm?",
+        "ru": "Каков первый этап образования зубной биоплёнки?",
+        "uz": "Tish biofilmi hosil bo‘lishining birinchi bosqichi qaysi?"
+      },
+      "options": [
+        {
+          "en": "Coaggregation of anaerobes",
+          "ru": "Коагрегация анаэробов",
+          "uz": "Anaeroblar koagregatsiyasi"
+        },
+        {
+          "en": "Calculus formation",
+          "ru": "Образование зубного камня",
+          "uz": "Tish toshi hosil bo‘lishi"
+        },
+        {
+          "en": "Formation of the acquired pellicle",
+          "ru": "Образование приобретённой пелликулы",
+          "uz": "Orttirilgan pellikula hosil bo‘lishi"
+        },
+        {
+          "en": "Dispersal of bacteria",
+          "ru": "Распространение бактерий",
+          "uz": "Bakteriyalar tarqalishi"
+        }
+      ],
+      "correct": 2,
+      "explain": {
+        "en": "Salivary proteins adsorb to enamel within minutes, forming the pellicle that bacteria then attach to.",
+        "ru": "Белки слюны за минуты адсорбируются на эмали и образуют пелликулу, к которой затем прикрепляются бактерии.",
+        "uz": "So‘lak oqsillari bir necha daqiqada emalga yopishib pellikula hosil qiladi, keyin bakteriyalar unga yopishadi."
+      }
+    },
+    {
+      "q": {
+        "en": "Which bacteria are typical early colonisers of a clean tooth surface?",
+        "ru": "Какие бактерии типичны для ранней колонизации чистой поверхности зуба?",
+        "uz": "Toza tish yuzasini dastlab qaysi bakteriyalar egallaydi?"
+      },
+      "options": [
+        {
+          "en": "Streptococci such as S. sanguinis",
+          "ru": "Стрептококки, например S. sanguinis",
+          "uz": "S. sanguinis kabi streptokokklar"
+        },
+        {
+          "en": "Porphyromonas gingivalis",
+          "ru": "Бактерии Porphyromonas gingivalis",
+          "uz": "Porphyromonas gingivalis bakteriyalari"
+        },
+        {
+          "en": "Spirochaetes",
+          "ru": "Спирохеты",
+          "uz": "Spiroxetalar"
+        },
+        {
+          "en": "Candida species",
+          "ru": "Грибы рода Candida",
+          "uz": "Candida zamburug‘lari"
+        }
+      ],
+      "correct": 0,
+      "explain": {
+        "en": "Streptococci and Actinomyces bind first to the pellicle; anaerobes like P. gingivalis come late.",
+        "ru": "Стрептококки и актиномицеты первыми прикрепляются к пелликуле; анаэробы, такие как P. gingivalis, появляются позже.",
+        "uz": "Streptokokklar va aktinomitsetlar pellikulaga birinchi yopishadi; P. gingivalis kabi anaeroblar keyin keladi."
+      }
+    },
+    {
+      "q": {
+        "en": "Which organism acts as an important bridge between early and late colonisers?",
+        "ru": "Какой микроорганизм служит важным мостом между ранними и поздними колонизаторами?",
+        "uz": "Qaysi mikroorganizm dastlabki va kech koloniyalovchilar o‘rtasida muhim ko‘prik vazifasini bajaradi?"
+      },
+      "options": [
+        {
+          "en": "Lactobacillus",
+          "ru": "Лактобациллы (Lactobacillus)",
+          "uz": "Laktobatsillalar (Lactobacillus)"
+        },
+        {
+          "en": "Fusobacterium nucleatum",
+          "ru": "Фузобактерия F. nucleatum",
+          "uz": "Fuzobakteriya F. nucleatum"
+        },
+        {
+          "en": "Streptococcus mitis",
+          "ru": "Стрептококк S. mitis",
+          "uz": "Streptokokk S. mitis"
+        },
+        {
+          "en": "Staphylococcus aureus",
+          "ru": "Стафилококк S. aureus",
+          "uz": "Stafilokokk S. aureus"
+        }
+      ],
+      "correct": 1,
+      "explain": {
+        "en": "F. nucleatum coaggregates with many species and links early colonisers to later anaerobes.",
+        "ru": "F. nucleatum коагрегирует со многими видами и связывает ранних колонизаторов с поздними анаэробами.",
+        "uz": "F. nucleatum ko‘p turlar bilan koagregatsiyalanib, dastlabki koloniyalovchilarni kech anaeroblar bilan bog‘laydi."
+      }
+    },
+    {
+      "q": {
+        "en": "The critical pH below which enamel starts to dissolve is about:",
+        "ru": "Критический pH, ниже которого начинает растворяться эмаль, составляет около:",
+        "uz": "Emal eriy boshlaydigan kritik pH taxminan qancha:"
+      },
+      "options": [
+        {
+          "en": "7.5",
+          "ru": "7,5",
+          "uz": "7,5"
+        },
+        {
+          "en": "6.8",
+          "ru": "6,8",
+          "uz": "6,8"
+        },
+        {
+          "en": "4.0",
+          "ru": "4,0",
+          "uz": "4,0"
+        },
+        {
+          "en": "5.5",
+          "ru": "5,5",
+          "uz": "5,5"
+        }
+      ],
+      "correct": 3,
+      "explain": {
+        "en": "Below roughly pH 5.5 saliva and plaque fluid become undersaturated with respect to enamel mineral.",
+        "ru": "Ниже pH около 5,5 слюна и жидкость налёта становятся недонасыщенными по минералам эмали.",
+        "uz": "pH taxminan 5,5 dan past bo‘lsa so‘lak va karash suyuqligi emal minerallariga nisbatan to‘yinmagan bo‘lib qoladi."
+      }
+    },
+    {
+      "q": {
+        "en": "According to the ecological plaque hypothesis, caries results from:",
+        "ru": "Согласно экологической гипотезе налёта, кариес возникает в результате:",
+        "uz": "Ekologik karash gipotezasiga ko‘ra karies nima natijasida yuzaga keladi:"
+      },
+      "options": [
+        {
+          "en": "A single specific infection",
+          "ru": "одной специфической инфекции",
+          "uz": "Bitta o‘ziga xos infeksiya"
+        },
+        {
+          "en": "Lack of calcium in the diet",
+          "ru": "недостатка кальция в пище",
+          "uz": "Ovqatda kalsiy yetishmasligi"
+        },
+        {
+          "en": "A sugar-driven shift in plaque bacteria",
+          "ru": "сдвига состава налёта под действием сахара",
+          "uz": "Shakar ta’sirida karash bakteriyalari tarkibining siljishi"
+        },
+        {
+          "en": "Genetic weakness of enamel",
+          "ru": "генетической слабости эмали",
+          "uz": "Emalning irsiy zaifligi"
+        }
+      ],
+      "correct": 2,
+      "explain": {
+        "en": "Repeated low pH from frequent sugar favours acid-tolerant species, which upsets the balance and causes demineralisation.",
+        "ru": "Повторное снижение pH от частого сахара благоприятствует кислотоустойчивым видам, нарушая баланс и вызывая деминерализацию.",
+        "uz": "Tez-tez shakar sababli pH ning takroriy pasayishi kislotaga chidamli turlarni ko‘paytirib, muvozanatni buzadi va demineralizatsiyaga olib keladi."
+      }
+    },
+    {
+      "q": {
+        "en": "In experimental gingivitis studies, when tooth cleaning stopped, gingivitis appeared within about:",
+        "ru": "В исследованиях экспериментального гингивита после прекращения чистки гингивит появлялся примерно через:",
+        "uz": "Tajribaviy gingivit tadqiqotlarida tish tozalash to‘xtatilgach gingivit taxminan qancha vaqtda paydo bo‘lgan:"
+      },
+      "options": [
+        {
+          "en": "2–3 hours",
+          "ru": "2–3 часа",
+          "uz": "2–3 soatda"
+        },
+        {
+          "en": "2–3 weeks",
+          "ru": "2–3 недели",
+          "uz": "2–3 haftada"
+        },
+        {
+          "en": "6 months",
+          "ru": "6 месяцев",
+          "uz": "6 oyda"
+        },
+        {
+          "en": "2 years",
+          "ru": "2 года",
+          "uz": "2 yilda"
+        }
+      ],
+      "correct": 1,
+      "explain": {
+        "en": "Gingivitis developed in about 10–21 days and resolved once cleaning was resumed.",
+        "ru": "Гингивит развивался примерно за 10–21 день и исчезал после возобновления чистки.",
+        "uz": "Gingivit taxminan 10–21 kunda rivojlangan va tozalash qayta boshlangach yo‘qolgan."
+      }
+    },
+    {
+      "q": {
+        "en": "Why are bacteria in a biofilm harder to kill with antiseptics than free bacteria?",
+        "ru": "Почему бактерии в биоплёнке труднее уничтожить антисептиками, чем свободные?",
+        "uz": "Nima uchun biofilmdagi bakteriyalarni antiseptiklar bilan yo‘q qilish erkin bakteriyalarga qaraganda qiyinroq?"
+      },
+      "options": [
+        {
+          "en": "The matrix limits penetration and cells change behaviour",
+          "ru": "Матрикс ограничивает проникновение, а клетки меняют свойства",
+          "uz": "Matriks kirishni cheklaydi, hujayralar xossasini o‘zgartiradi"
+        },
+        {
+          "en": "Biofilm bacteria are all viruses",
+          "ru": "Все бактерии биоплёнки — вирусы",
+          "uz": "Biofilm bakteriyalarining hammasi virus"
+        },
+        {
+          "en": "Antiseptics are inactivated by enamel",
+          "ru": "Эмаль инактивирует антисептики",
+          "uz": "Emal antiseptiklarni faolsizlantiradi"
+        },
+        {
+          "en": "Biofilm forms only inside the pulp",
+          "ru": "Биоплёнка образуется только в пульпе",
+          "uz": "Biofilm faqat pulpa ichida hosil bo‘ladi"
+        }
+      ],
+      "correct": 0,
+      "explain": {
+        "en": "The matrix slows diffusion and slow-growing cells tolerate agents, so mechanical removal is essential.",
+        "ru": "Матрикс замедляет диффузию, а медленно растущие клетки устойчивы, поэтому необходимо механическое удаление.",
+        "uz": "Matriks diffuziyani sekinlashtiradi, sekin o‘suvchi hujayralar chidamli, shuning uchun mexanik tozalash zarur."
+      }
+    },
+    {
+      "q": {
+        "en": "Dental calculus is best described as:",
+        "ru": "Зубной камень лучше всего описывается как:",
+        "uz": "Tish toshiga eng to‘g‘ri ta’rif:"
+      },
+      "options": [
+        {
+          "en": "Food debris stuck between teeth",
+          "ru": "остатки пищи между зубами",
+          "uz": "Tishlar orasida qolgan ovqat qoldig‘i"
+        },
+        {
+          "en": "Stained enamel",
+          "ru": "окрашенная эмаль",
+          "uz": "Bo‘yalgan emal"
+        },
+        {
+          "en": "Exposed root dentin",
+          "ru": "обнажённый дентин корня",
+          "uz": "Ochilib qolgan ildiz dentini"
+        },
+        {
+          "en": "Mineralised dental plaque",
+          "ru": "минерализованный зубной налёт",
+          "uz": "Minerallashgan tish karashi"
+        }
+      ],
+      "correct": 3,
+      "explain": {
+        "en": "Calcium phosphate from saliva or crevicular fluid mineralises plaque into calculus, which retains new plaque.",
+        "ru": "Фосфаты кальция из слюны или десневой жидкости минерализуют налёт в камень, на котором задерживается новый налёт.",
+        "uz": "So‘lak yoki milk suyuqligidagi kalsiy fosfat karashni tish toshiga aylantiradi, u yangi karashni ushlab qoladi."
+      }
+    },
+    {
+      "q": {
+        "en": "A teenager sips a sweet drink slowly through the whole school day. Why is the caries risk high?",
+        "ru": "Подросток медленно пьёт сладкий напиток в течение всего учебного дня. Почему риск кариеса высок?",
+        "uz": "O‘smir maktab kuni davomida shirin ichimlikni sekin-asta ichib yuradi. Nima uchun karies xavfi yuqori?"
+      },
+      "options": [
+        {
+          "en": "The drink contains too much water",
+          "ru": "В напитке слишком много воды",
+          "uz": "Ichimlikda suv juda ko‘p"
+        },
+        {
+          "en": "Plaque pH stays below critical for long periods",
+          "ru": "pH налёта долго остаётся ниже критического",
+          "uz": "Karash pH uzoq vaqt kritikdan past bo‘lib turadi"
+        },
+        {
+          "en": "Cold drinks crack the enamel",
+          "ru": "Холодные напитки вызывают трещины эмали",
+          "uz": "Sovuq ichimliklar emalni yoradi"
+        },
+        {
+          "en": "Saliva flow increases too much",
+          "ru": "Слюноотделение слишком усиливается",
+          "uz": "So‘lak ajralishi haddan ortiq ko‘payadi"
+        }
+      ],
+      "correct": 1,
+      "explain": {
+        "en": "Repeated sugar exposures prevent pH recovery, so the enamel spends long periods demineralising.",
+        "ru": "Повторные приёмы сахара не дают pH восстановиться, и эмаль долго деминерализуется.",
+        "uz": "Takroriy shakar iste’moli pH tiklanishiga imkon bermaydi, emal uzoq vaqt demineralizatsiyalanadi."
+      }
+    },
+    {
+      "q": {
+        "en": "Mature subgingival plaque in a periodontal pocket is dominated by:",
+        "ru": "В зрелом поддесневом налёте пародонтального кармана преобладают:",
+        "uz": "Parodontal cho‘ntakdagi yetilgan milk osti karashida qaysi bakteriyalar ustunlik qiladi:"
+      },
+      "options": [
+        {
+          "en": "Gram-positive aerobic cocci",
+          "ru": "грамположительные аэробные кокки",
+          "uz": "Grammusbat aerob kokklar"
+        },
+        {
+          "en": "Lactobacilli",
+          "ru": "лактобациллы",
+          "uz": "Laktobatsillalar"
+        },
+        {
+          "en": "Gram-negative anaerobes",
+          "ru": "грамотрицательные анаэробы",
+          "uz": "Grammanfiy anaeroblar"
+        },
+        {
+          "en": "Fungi",
+          "ru": "грибы",
+          "uz": "Zamburug‘lar"
+        }
+      ],
+      "correct": 2,
+      "explain": {
+        "en": "Low oxygen and protein-rich crevicular fluid favour gram-negative anaerobes linked to periodontitis.",
+        "ru": "Низкое содержание кислорода и богатая белком десневая жидкость благоприятствуют грамотрицательным анаэробам, связанным с пародонтитом.",
+        "uz": "Kislorod kamligi va oqsilga boy milk suyuqligi parodontit bilan bog‘liq grammanfiy anaeroblarga qulay sharoit yaratadi."
+      }
+    }
+  ]
+}

@@ -1,0 +1,1025 @@
+{
+  "id": "pros-03",
+  "subject": "pros",
+  "n": 3,
+  "week": 3,
+  "type": "practical",
+  "hours": 2,
+  "title": {
+    "en": "Impressions in prosthodontics",
+    "ru": "Оттиски в ортопедической стоматологии",
+    "uz": "Ortopedik stomatologiyada qoliplar"
+  },
+  "goals": [
+    {
+      "en": "Choose a suitable tray and impression material for the clinical task",
+      "ru": "Выбирать подходящую ложку и оттискной материал для клинической задачи",
+      "uz": "Klinik vazifaga mos qolip qoshig‘i va qolip materialini tanlash"
+    },
+    {
+      "en": "Describe one-step and two-step techniques and gingival retraction",
+      "ru": "Описывать одно- и двухэтапные методики и ретракцию десны",
+      "uz": "Bir va ikki bosqichli usullarni hamda milk retraksiyasini tavsiflash"
+    },
+    {
+      "en": "Disinfect impressions correctly before sending them to the laboratory",
+      "ru": "Правильно дезинфицировать оттиски перед отправкой в лабораторию",
+      "uz": "Qoliplarni laboratoriyaga yuborishdan oldin to‘g‘ri dezinfeksiya qilish"
+    }
+  ],
+  "links": [],
+  "sources": [
+    "Sakaguchi R et al. Craig's Restorative Dental Materials, 15th ed., 2018",
+    "Rosenstiel SF et al. Contemporary Fixed Prosthodontics, 5th ed., 2015"
+  ],
+  "slides": [
+    {
+      "layout": "title",
+      "title": {
+        "en": "Impressions in prosthodontics",
+        "ru": "Оттиски в ортопедической стоматологии",
+        "uz": "Ortopedik stomatologiyada qoliplar"
+      },
+      "subtitle": {
+        "en": "Trays, materials, techniques and disinfection",
+        "ru": "Ложки, материалы, методики и дезинфекция",
+        "uz": "Qoshiqlar, materiallar, usullar va dezinfeksiya"
+      }
+    },
+    {
+      "layout": "compare",
+      "title": {
+        "en": "Stock and custom trays",
+        "ru": "Стандартные и индивидуальные ложки",
+        "uz": "Standart va individual qoshiqlar"
+      },
+      "columns": [
+        {
+          "head": {
+            "en": "Stock tray",
+            "ru": "Стандартная ложка",
+            "uz": "Standart qoshiq"
+          },
+          "items": [
+            {
+              "en": "Ready-made, metal or plastic",
+              "ru": "Готовая, металлическая или пластмассовая",
+              "uz": "Tayyor, metall yoki plastmassa"
+            },
+            {
+              "en": "Perforated or rim-lock for retention",
+              "ru": "Перфорированная или с бортиком для ретенции",
+              "uz": "Ushlab turish uchun teshikli yoki chetli"
+            },
+            {
+              "en": "Preliminary and study impressions",
+              "ru": "Предварительные и диагностические оттиски",
+              "uz": "Dastlabki va diagnostik qoliplar"
+            }
+          ]
+        },
+        {
+          "head": {
+            "en": "Custom tray",
+            "ru": "Индивидуальная ложка",
+            "uz": "Individual qoshiq"
+          },
+          "items": [
+            {
+              "en": "Made on the patient's cast",
+              "ru": "Изготавливается по модели пациента",
+              "uz": "Bemor modeli bo‘yicha tayyorlanadi"
+            },
+            {
+              "en": "Even spacer for the material",
+              "ru": "Равномерный зазор для материала",
+              "uz": "Material uchun bir tekis bo‘shliq"
+            },
+            {
+              "en": "Final impressions, border moulding",
+              "ru": "Окончательные оттиски, оформление краёв",
+              "uz": "Yakuniy qoliplar, chetlarni shakllantirish"
+            }
+          ]
+        }
+      ],
+      "note": {
+        "en": "Ask why a custom tray gives a more even material thickness.",
+        "ru": "Спросите, почему индивидуальная ложка даёт более равномерную толщину материала.",
+        "uz": "Nima uchun individual qoshiq material qalinligini bir tekis qilishini so‘rang."
+      }
+    },
+    {
+      "layout": "table",
+      "title": {
+        "en": "Impression materials",
+        "ru": "Оттискные материалы",
+        "uz": "Qolip materiallari"
+      },
+      "head": [
+        {
+          "en": "Material",
+          "ru": "Материал",
+          "uz": "Material"
+        },
+        {
+          "en": "Key property",
+          "ru": "Главное свойство",
+          "uz": "Asosiy xususiyati"
+        },
+        {
+          "en": "Typical use",
+          "ru": "Типичное применение",
+          "uz": "Odatiy qo‘llanilishi"
+        }
+      ],
+      "rows": [
+        [
+          {
+            "en": "Alginate",
+            "ru": "Альгинат",
+            "uz": "Alginat"
+          },
+          {
+            "en": "Unstable; pour promptly",
+            "ru": "Нестабилен, отливать сразу",
+            "uz": "Barqaror emas, darhol quyiladi"
+          },
+          {
+            "en": "Study casts, RPD",
+            "ru": "Диагностические модели, бюгели",
+            "uz": "Diagnostik modellar, byugel protezlar"
+          }
+        ],
+        [
+          {
+            "en": "Addition silicone",
+            "ru": "А-силикон",
+            "uz": "A-silikon"
+          },
+          {
+            "en": "Very accurate and stable",
+            "ru": "Высокая точность и стабильность",
+            "uz": "Juda aniq va barqaror"
+          },
+          {
+            "en": "Crowns, bridges, implants",
+            "ru": "Коронки, мосты, имплантаты",
+            "uz": "Tojlar, ko‘priklar, implantlar"
+          }
+        ],
+        [
+          {
+            "en": "Polyether",
+            "ru": "Полиэфир",
+            "uz": "Poliefir"
+          },
+          {
+            "en": "Hydrophilic, rigid when set",
+            "ru": "Гидрофильный, жёсткий после отверждения",
+            "uz": "Gidrofil, qotgandan keyin qattiq"
+          },
+          {
+            "en": "Crowns, implant transfers",
+            "ru": "Коронки, перенос имплантатов",
+            "uz": "Tojlar, implant ko‘chirmalari"
+          }
+        ],
+        [
+          {
+            "en": "Zinc oxide–eugenol paste",
+            "ru": "Цинкоксидэвгенольная паста",
+            "uz": "Rux oksid-evgenol pastasi"
+          },
+          {
+            "en": "Rigid, mucostatic",
+            "ru": "Жёсткая, мукостатическая",
+            "uz": "Qattiq, mukostatik"
+          },
+          {
+            "en": "Edentulous final impressions",
+            "ru": "Окончательные оттиски беззубых челюстей",
+            "uz": "Tishsiz jag‘lardan yakuniy qoliplar"
+          }
+        ]
+      ]
+    },
+    {
+      "layout": "tree",
+      "title": {
+        "en": "Techniques for elastomers",
+        "ru": "Методики с эластомерами",
+        "uz": "Elastomerlar bilan ishlash usullari"
+      },
+      "root": {
+        "en": "Elastomer technique",
+        "ru": "Методика с эластомером",
+        "uz": "Elastomer usuli"
+      },
+      "children": [
+        {
+          "label": {
+            "en": "One-step",
+            "ru": "Одноэтапная",
+            "uz": "Bir bosqichli"
+          },
+          "items": [
+            {
+              "en": "Putty and wash together",
+              "ru": "База и корректор одновременно",
+              "uz": "Asos va korrektor birga"
+            },
+            {
+              "en": "Dual-mix",
+              "ru": "Двойное смешивание",
+              "uz": "Ikki xil qovushqoqlik"
+            }
+          ]
+        },
+        {
+          "label": {
+            "en": "Two-step",
+            "ru": "Двухэтапная",
+            "uz": "Ikki bosqichli"
+          },
+          "items": [
+            {
+              "en": "Putty first, then wash",
+              "ru": "Сначала база, затем корректор",
+              "uz": "Avval asos, keyin korrektor"
+            },
+            {
+              "en": "Relief space needed",
+              "ru": "Нужен зазор для корректора",
+              "uz": "Korrektor uchun joy kerak"
+            }
+          ]
+        },
+        {
+          "label": {
+            "en": "Monophase",
+            "ru": "Монофазная",
+            "uz": "Monofaza"
+          },
+          "items": [
+            {
+              "en": "One medium-body material",
+              "ru": "Один материал средней вязкости",
+              "uz": "O‘rta qovushqoqlikdagi bitta material"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "layout": "flow",
+      "title": {
+        "en": "Crown impression with retraction",
+        "ru": "Оттиск под коронку с ретракцией",
+        "uz": "Retraksiya bilan toj uchun qolip"
+      },
+      "steps": [
+        {
+          "label": {
+            "en": "Check tray and adhesive",
+            "ru": "Проверить ложку и адгезив",
+            "uz": "Qoshiq va adgezivni tekshirish"
+          },
+          "detail": {
+            "en": "Tray adhesive dries before loading",
+            "ru": "Адгезив высыхает до заполнения",
+            "uz": "Adgeziv to‘ldirishdan oldin quriydi"
+          }
+        },
+        {
+          "label": {
+            "en": "Place retraction cord",
+            "ru": "Уложить ретракционную нить",
+            "uz": "Retraksion ipni joylash"
+          },
+          "detail": {
+            "en": "Single or double cord",
+            "ru": "Одна или две нити",
+            "uz": "Bitta yoki ikkita ip"
+          }
+        },
+        {
+          "label": {
+            "en": "Remove cord, dry field",
+            "ru": "Удалить нить, высушить",
+            "uz": "Ipni olish, quritish"
+          },
+          "detail": {
+            "en": "Margin visible and dry",
+            "ru": "Край виден и сух",
+            "uz": "Chet ko‘rinadi va quruq"
+          }
+        },
+        {
+          "label": {
+            "en": "Syringe light body",
+            "ru": "Внести текучий слой",
+            "uz": "Suyuq qatlamni kiritish"
+          },
+          "detail": {
+            "en": "Around the margin first",
+            "ru": "Сначала вокруг края",
+            "uz": "Avval chet atrofiga"
+          }
+        },
+        {
+          "label": {
+            "en": "Seat loaded tray",
+            "ru": "Установить ложку",
+            "uz": "Qoshiqni o‘rnatish"
+          },
+          "detail": {
+            "en": "Hold still until set",
+            "ru": "Держать неподвижно до отверждения",
+            "uz": "Qotguncha qimirlatmay ushlash"
+          }
+        },
+        {
+          "label": {
+            "en": "Inspect the impression",
+            "ru": "Оценить оттиск",
+            "uz": "Qolipni baholash"
+          },
+          "detail": {
+            "en": "No voids, tears or drags",
+            "ru": "Без пор, разрывов и сдвигов",
+            "uz": "G‘ovak, yirtiq va siljishsiz"
+          }
+        }
+      ],
+      "note": {
+        "en": "Stress that the margin must be dry and fully exposed; a missed margin means a remake.",
+        "ru": "Подчеркните: край должен быть сухим и полностью открытым, иначе оттиск переделывают.",
+        "uz": "Preparatsiya cheti quruq va to‘liq ochiq bo‘lishi kerak, aks holda qolip qayta olinishini ta’kidlang."
+      }
+    },
+    {
+      "layout": "bullets",
+      "title": {
+        "en": "Common errors",
+        "ru": "Типичные ошибки",
+        "uz": "Ko‘p uchraydigan xatolar"
+      },
+      "bullets": [
+        {
+          "en": "Latex gloves can inhibit setting of addition silicone",
+          "ru": "Латексные перчатки могут нарушать полимеризацию А-силикона",
+          "uz": "Lateks qo‘lqoplar A-silikon qotishini buzishi mumkin"
+        },
+        {
+          "en": "Tray movement during setting distorts the impression",
+          "ru": "Смещение ложки при отверждении искажает оттиск",
+          "uz": "Qotish paytida qoshiq siljishi qolipni buzadi"
+        },
+        {
+          "en": "Saliva or blood at the margin causes voids",
+          "ru": "Слюна или кровь у края дают поры",
+          "uz": "Chetdagi so‘lak yoki qon g‘ovaklarga sabab bo‘ladi"
+        },
+        {
+          "en": "Delayed pouring of alginate changes its dimensions",
+          "ru": "Задержка отливки альгината меняет его размеры",
+          "uz": "Alginatni kech quyish uning o‘lchamlarini o‘zgartiradi"
+        }
+      ],
+      "note": {
+        "en": "Show a faulty impression and ask students to name each defect and its cause.",
+        "ru": "Покажите дефектный оттиск и попросите назвать каждый дефект и его причину.",
+        "uz": "Nuqsonli qolipni ko‘rsating va talabalardan har bir nuqson va uning sababini aytishni so‘rang."
+      }
+    },
+    {
+      "layout": "cycle",
+      "title": {
+        "en": "Impression disinfection",
+        "ru": "Дезинфекция оттиска",
+        "uz": "Qolipni dezinfeksiya qilish"
+      },
+      "center": {
+        "en": "Infection control",
+        "ru": "Инфекционный контроль",
+        "uz": "Infeksiya nazorati"
+      },
+      "steps": [
+        {
+          "label": {
+            "en": "Rinse off saliva and blood",
+            "ru": "Смыть слюну и кровь",
+            "uz": "So‘lak va qonni yuvish"
+          }
+        },
+        {
+          "label": {
+            "en": "Disinfect by spray or immersion",
+            "ru": "Обработать распылением или погружением",
+            "uz": "Purkash yoki botirish bilan ishlash"
+          }
+        },
+        {
+          "label": {
+            "en": "Follow contact time",
+            "ru": "Соблюсти экспозицию",
+            "uz": "Ta’sir vaqtiga rioya qilish"
+          }
+        },
+        {
+          "label": {
+            "en": "Rinse again",
+            "ru": "Повторно промыть",
+            "uz": "Qayta yuvish"
+          }
+        },
+        {
+          "label": {
+            "en": "Seal, label, send",
+            "ru": "Упаковать, подписать, отправить",
+            "uz": "Qadoqlash, belgilash, yuborish"
+          }
+        }
+      ],
+      "note": {
+        "en": "Ask which materials should not be immersed for long and why.",
+        "ru": "Спросите, какие материалы нельзя надолго погружать и почему.",
+        "uz": "Qaysi materiallarni uzoq vaqt botirish mumkin emasligini va nima uchunligini so‘rang."
+      }
+    },
+    {
+      "layout": "bullets",
+      "title": {
+        "en": "Disinfection by material",
+        "ru": "Дезинфекция по типу материала",
+        "uz": "Material turiga ko‘ra dezinfeksiya"
+      },
+      "bullets": [
+        {
+          "en": "Use a disinfectant the material maker approves",
+          "ru": "Используйте дезинфектант, одобренный производителем материала",
+          "uz": "Material ishlab chiqaruvchisi tavsiya qilgan dezinfektantdan foydalaning"
+        },
+        {
+          "en": "Silicones tolerate immersion well",
+          "ru": "Силиконы хорошо переносят погружение",
+          "uz": "Silikonlar botirishga yaxshi chidaydi"
+        },
+        {
+          "en": "Alginate and polyether: spray or short immersion",
+          "ru": "Альгинат и полиэфир: распыление или краткое погружение",
+          "uz": "Alginat va poliefir: purkash yoki qisqa botirish"
+        },
+        {
+          "en": "Commonly hypochlorite or iodophor solutions",
+          "ru": "Обычно растворы гипохлорита или йодофоров",
+          "uz": "Odatda gipoxlorit yoki yodofor eritmalari"
+        }
+      ]
+    },
+    {
+      "layout": "compare",
+      "title": {
+        "en": "Conventional and digital impressions",
+        "ru": "Традиционные и цифровые оттиски",
+        "uz": "An’anaviy va raqamli qoliplar"
+      },
+      "columns": [
+        {
+          "head": {
+            "en": "Conventional",
+            "ru": "Традиционный",
+            "uz": "An’anaviy"
+          },
+          "items": [
+            {
+              "en": "Proven for long-span work",
+              "ru": "Проверен для протяжённых работ",
+              "uz": "Uzun konstruksiyalar uchun sinalgan"
+            },
+            {
+              "en": "Needs disinfection and transport",
+              "ru": "Требует дезинфекции и доставки",
+              "uz": "Dezinfeksiya va tashishni talab qiladi"
+            }
+          ]
+        },
+        {
+          "head": {
+            "en": "Intraoral scan",
+            "ru": "Внутриротовое сканирование",
+            "uz": "Og‘iz ichi skanerlash"
+          },
+          "items": [
+            {
+              "en": "No material, instant file",
+              "ru": "Без материала, файл сразу",
+              "uz": "Materialsiz, fayl darhol"
+            },
+            {
+              "en": "Margins still need retraction and dryness",
+              "ru": "Краю всё равно нужны ретракция и сухость",
+              "uz": "Chetga baribir retraksiya va quruqlik kerak"
+            }
+          ]
+        }
+      ],
+      "note": {
+        "en": "Stress that scanning does not remove the need for good soft tissue management.",
+        "ru": "Подчеркните, что сканирование не отменяет необходимости управления мягкими тканями.",
+        "uz": "Skanerlash yumshoq to‘qimalarni boshqarish zaruratini yo‘qotmasligini ta’kidlang."
+      }
+    },
+    {
+      "layout": "summary",
+      "title": {
+        "en": "Summary",
+        "ru": "Итоги",
+        "uz": "Xulosa"
+      },
+      "bullets": [
+        {
+          "en": "Custom trays give even material thickness",
+          "ru": "Индивидуальные ложки дают равномерный слой материала",
+          "uz": "Individual qoshiqlar materialning bir tekis qatlamini beradi"
+        },
+        {
+          "en": "Elastomers for fixed work; alginate for study casts",
+          "ru": "Эластомеры — для несъёмных работ, альгинат — для моделей",
+          "uz": "Olinmaydigan ishlar uchun elastomerlar, modellar uchun alginat"
+        },
+        {
+          "en": "A dry, exposed margin is essential",
+          "ru": "Сухой и открытый край обязателен",
+          "uz": "Quruq va ochiq chet zarur"
+        },
+        {
+          "en": "Every impression is disinfected before the laboratory",
+          "ru": "Каждый оттиск дезинфицируют до отправки в лабораторию",
+          "uz": "Har bir qolip laboratoriyadan oldin dezinfeksiya qilinadi"
+        }
+      ]
+    }
+  ],
+  "oral": [
+    {
+      "q": {
+        "en": "Compare alginate and addition silicone.",
+        "ru": "Сравните альгинат и А-силикон.",
+        "uz": "Alginat va A-silikonni solishtiring."
+      },
+      "plan": [
+        {
+          "en": "Alginate is less accurate and must be poured promptly",
+          "ru": "Альгинат менее точен и требует быстрой отливки",
+          "uz": "Alginat kamroq aniq va darhol quyilishi kerak"
+        },
+        {
+          "en": "Silicone is accurate and dimensionally stable",
+          "ru": "Силикон точен и стабилен по размерам",
+          "uz": "Silikon aniq va o‘lchami barqaror"
+        },
+        {
+          "en": "Uses: study casts versus crowns and bridges",
+          "ru": "Применение: модели против коронок и мостов",
+          "uz": "Qo‘llanish: modellar va tojlar, ko‘priklar"
+        }
+      ]
+    },
+    {
+      "q": {
+        "en": "Describe the two-step putty–wash technique.",
+        "ru": "Опишите двухэтапную методику с базой и корректором.",
+        "uz": "Asos va korrektor bilan ikki bosqichli usulni tavsiflang."
+      },
+      "plan": [
+        {
+          "en": "Preliminary putty impression first",
+          "ru": "Сначала предварительный оттиск базовой массой",
+          "uz": "Avval asos massa bilan dastlabki qolip"
+        },
+        {
+          "en": "Create space for the wash material",
+          "ru": "Создание места для корректора",
+          "uz": "Korrektor uchun joy hosil qilish"
+        },
+        {
+          "en": "Wash syringed around margins and tray reseated",
+          "ru": "Корректор вносят вокруг краёв и повторно устанавливают ложку",
+          "uz": "Korrektor chetlar atrofiga kiritilib, qoshiq qayta o‘rnatiladi"
+        },
+        {
+          "en": "Risk: incomplete reseating",
+          "ru": "Риск: неполная повторная установка",
+          "uz": "Xavf: qoshiqning to‘liq o‘tirmasligi"
+        }
+      ]
+    },
+    {
+      "q": {
+        "en": "Why and how is the gingiva retracted before a crown impression?",
+        "ru": "Зачем и как проводят ретракцию десны перед оттиском под коронку?",
+        "uz": "Toj uchun qolip olishdan oldin milk nima uchun va qanday retraksiya qilinadi?"
+      },
+      "plan": [
+        {
+          "en": "To expose the margin and area beyond it",
+          "ru": "Чтобы открыть край и зону за ним",
+          "uz": "Chetni va undan keyingi sohani ochish uchun"
+        },
+        {
+          "en": "To control moisture and bleeding",
+          "ru": "Для контроля влаги и кровоточивости",
+          "uz": "Namlik va qonashni nazorat qilish uchun"
+        },
+        {
+          "en": "Cords, often double-cord technique, or retraction paste",
+          "ru": "Нити, часто двухнитевая методика, или паста",
+          "uz": "Iplar, ko‘pincha ikki ipli usul, yoki retraksion pasta"
+        }
+      ]
+    },
+    {
+      "q": {
+        "en": "How should impressions be disinfected?",
+        "ru": "Как следует дезинфицировать оттиски?",
+        "uz": "Qoliplar qanday dezinfeksiya qilinishi kerak?"
+      },
+      "plan": [
+        {
+          "en": "Rinse off saliva and blood first",
+          "ru": "Сначала смыть слюну и кровь",
+          "uz": "Avval so‘lak va qonni yuvish"
+        },
+        {
+          "en": "Disinfectant compatible with the material",
+          "ru": "Дезинфектант, совместимый с материалом",
+          "uz": "Material bilan mos dezinfektant"
+        },
+        {
+          "en": "Spray or short immersion for hydrophilic materials",
+          "ru": "Распыление или краткое погружение для гидрофильных материалов",
+          "uz": "Gidrofil materiallar uchun purkash yoki qisqa botirish"
+        },
+        {
+          "en": "Rinse, seal in a bag and label",
+          "ru": "Промыть, упаковать в пакет и подписать",
+          "uz": "Yuvish, paketga solish va belgilash"
+        }
+      ]
+    }
+  ],
+  "test": [
+    {
+      "q": {
+        "en": "Which material is most suitable for a final impression of three crown preparations?",
+        "ru": "Какой материал лучше всего подходит для окончательного оттиска трёх препарированных зубов?",
+        "uz": "Uchta preparatsiya qilingan tishdan yakuniy qolip olish uchun qaysi material eng mos?"
+      },
+      "options": [
+        {
+          "en": "Irreversible hydrocolloid",
+          "ru": "Необратимый гидроколлоид",
+          "uz": "Qaytmas gidrokolloid"
+        },
+        {
+          "en": "Impression compound",
+          "ru": "Термопластическая масса",
+          "uz": "Termoplastik massa"
+        },
+        {
+          "en": "Addition silicone",
+          "ru": "А-силикон",
+          "uz": "A-silikon"
+        },
+        {
+          "en": "Impression plaster",
+          "ru": "Оттискной гипс",
+          "uz": "Qolip gipsi"
+        }
+      ],
+      "correct": 2,
+      "explain": {
+        "en": "Addition silicone combines high accuracy, elastic recovery and dimensional stability.",
+        "ru": "А-силикон сочетает высокую точность, эластичность и стабильность размеров.",
+        "uz": "A-silikon yuqori aniqlik, elastik tiklanish va o‘lcham barqarorligini birlashtiradi."
+      }
+    },
+    {
+      "q": {
+        "en": "An alginate impression is left on the bench for two hours before pouring. The likely result is:",
+        "ru": "Альгинатный оттиск два часа лежал на столе до отливки. Вероятный результат:",
+        "uz": "Alginat qolip quyishdan oldin ikki soat stolda qoldi. Ehtimoliy natija:"
+      },
+      "options": [
+        {
+          "en": "An inaccurate cast from water loss",
+          "ru": "Неточная модель из-за потери воды",
+          "uz": "Suv yo‘qolishi tufayli noaniq model"
+        },
+        {
+          "en": "A more accurate cast",
+          "ru": "Более точная модель",
+          "uz": "Aniqroq model"
+        },
+        {
+          "en": "No change in dimensions",
+          "ru": "Размеры не изменятся",
+          "uz": "O‘lchamlar o‘zgarmaydi"
+        },
+        {
+          "en": "Faster setting of the stone",
+          "ru": "Ускоренное твердение гипса",
+          "uz": "Gipsning tezroq qotishi"
+        }
+      ],
+      "correct": 0,
+      "explain": {
+        "en": "Alginate loses or gains water (syneresis and imbibition) and distorts, so it should be poured promptly.",
+        "ru": "Альгинат теряет или набирает воду (синерезис и имбибиция) и деформируется, поэтому его отливают сразу.",
+        "uz": "Alginat suvni yo‘qotadi yoki yutadi (sinerezis va imbibitsiya) va shakli buziladi, shuning uchun darhol quyiladi."
+      }
+    },
+    {
+      "q": {
+        "en": "Setting of addition silicone putty is inhibited when it is mixed with:",
+        "ru": "Полимеризация базовой массы А-силикона нарушается при замешивании в:",
+        "uz": "A-silikon asos massasi qaysi holatda aralashtirilsa, qotishi buziladi?"
+      },
+      "options": [
+        {
+          "en": "Nitrile gloves",
+          "ru": "Нитриловых перчатках",
+          "uz": "Nitril qo‘lqoplarda"
+        },
+        {
+          "en": "A plastic spatula",
+          "ru": "Пластмассовым шпателем",
+          "uz": "Plastmassa shpatel bilan"
+        },
+        {
+          "en": "Clean dry hands",
+          "ru": "Чистыми сухими руками",
+          "uz": "Toza quruq qo‘llarda"
+        },
+        {
+          "en": "Latex gloves",
+          "ru": "Латексных перчатках",
+          "uz": "Lateks qo‘lqoplarda"
+        }
+      ],
+      "correct": 3,
+      "explain": {
+        "en": "Sulphur compounds in some latex gloves poison the platinum catalyst of addition silicones.",
+        "ru": "Соединения серы в некоторых латексных перчатках инактивируют платиновый катализатор А-силикона.",
+        "uz": "Ba’zi lateks qo‘lqoplardagi oltingugurt birikmalari A-silikonning platina katalizatorini ishdan chiqaradi."
+      }
+    },
+    {
+      "q": {
+        "en": "The main advantage of a custom tray over a stock tray is:",
+        "ru": "Главное преимущество индивидуальной ложки перед стандартной:",
+        "uz": "Individual qoshiqning standart qoshiqqa nisbatan asosiy afzalligi:"
+      },
+      "options": [
+        {
+          "en": "It needs no adhesive",
+          "ru": "Не требует адгезива",
+          "uz": "Adgeziv talab qilmaydi"
+        },
+        {
+          "en": "Even, controlled material thickness",
+          "ru": "Равномерная контролируемая толщина материала",
+          "uz": "Material qalinligining bir tekis va nazoratli bo‘lishi"
+        },
+        {
+          "en": "It is cheaper to make",
+          "ru": "Её дешевле изготовить",
+          "uz": "Uni tayyorlash arzonroq"
+        },
+        {
+          "en": "It can be reused for all patients",
+          "ru": "Её можно использовать у всех пациентов",
+          "uz": "Barcha bemorlar uchun qayta ishlatish mumkin"
+        }
+      ],
+      "correct": 1,
+      "explain": {
+        "en": "A uniform spacer reduces distortion and improves accuracy of the final impression.",
+        "ru": "Равномерный зазор уменьшает деформацию и повышает точность окончательного оттиска.",
+        "uz": "Bir tekis bo‘shliq deformatsiyani kamaytiradi va yakuniy qolip aniqligini oshiradi."
+      }
+    },
+    {
+      "q": {
+        "en": "Which material is hydrophilic and rigid after setting, so it should not be immersed for long?",
+        "ru": "Какой материал гидрофилен и жёсток после отверждения, поэтому его нельзя долго погружать?",
+        "uz": "Qaysi material gidrofil va qotgandan keyin qattiq bo‘lgani uchun uzoq botirilmasligi kerak?"
+      },
+      "options": [
+        {
+          "en": "Polyether",
+          "ru": "Полиэфир",
+          "uz": "Poliefir"
+        },
+        {
+          "en": "Addition silicone",
+          "ru": "А-силикон",
+          "uz": "A-silikon"
+        },
+        {
+          "en": "Condensation silicone",
+          "ru": "С-силикон",
+          "uz": "C-silikon"
+        },
+        {
+          "en": "Impression compound",
+          "ru": "Термопластическая масса",
+          "uz": "Termoplastik massa"
+        }
+      ],
+      "correct": 0,
+      "explain": {
+        "en": "Polyether absorbs water and swells, so spray or brief immersion is preferred.",
+        "ru": "Полиэфир поглощает воду и набухает, поэтому предпочтительны распыление или краткое погружение.",
+        "uz": "Poliefir suvni yutib bo‘kadi, shuning uchun purkash yoki qisqa botirish afzal."
+      }
+    },
+    {
+      "q": {
+        "en": "A crown impression shows a void exactly at the distal margin. The correct action is:",
+        "ru": "На оттиске под коронку видна пора точно на дистальном крае. Правильное действие:",
+        "uz": "Toj uchun qolipda aynan distal chetda g‘ovak ko‘rinmoqda. To‘g‘ri harakat:"
+      },
+      "options": [
+        {
+          "en": "Send it and ask the technician to guess",
+          "ru": "Отправить и попросить техника додумать",
+          "uz": "Yuborib, texnikdan taxmin qilishni so‘rash"
+        },
+        {
+          "en": "Fill the void with wax",
+          "ru": "Заполнить пору воском",
+          "uz": "G‘ovakni mum bilan to‘ldirish"
+        },
+        {
+          "en": "Repeat the impression after retraction",
+          "ru": "Повторить оттиск после ретракции",
+          "uz": "Retraksiyadan keyin qolipni qayta olish"
+        },
+        {
+          "en": "Pour it twice to improve detail",
+          "ru": "Отлить дважды для лучшей детализации",
+          "uz": "Aniqlik uchun ikki marta quyish"
+        }
+      ],
+      "correct": 2,
+      "explain": {
+        "en": "A margin that is not recorded cannot be reproduced reliably, so the impression must be repeated.",
+        "ru": "Не отобразившийся край нельзя надёжно воспроизвести, поэтому оттиск повторяют.",
+        "uz": "Qolipda aks etmagan chetni ishonchli tiklab bo‘lmaydi, shuning uchun qolip qayta olinadi."
+      }
+    },
+    {
+      "q": {
+        "en": "What is the correct first step when disinfecting an impression?",
+        "ru": "Какой первый шаг при дезинфекции оттиска?",
+        "uz": "Qolipni dezinfeksiya qilishda birinchi qadam qaysi?"
+      },
+      "options": [
+        {
+          "en": "Pour the cast immediately",
+          "ru": "Сразу отлить модель",
+          "uz": "Darhol model quyish"
+        },
+        {
+          "en": "Dry it with hot air",
+          "ru": "Высушить горячим воздухом",
+          "uz": "Issiq havo bilan quritish"
+        },
+        {
+          "en": "Place it in a sealed bag",
+          "ru": "Поместить в закрытый пакет",
+          "uz": "Yopiq paketga solish"
+        },
+        {
+          "en": "Rinse off saliva and blood",
+          "ru": "Смыть слюну и кровь",
+          "uz": "So‘lak va qonni yuvib tashlash"
+        }
+      ],
+      "correct": 3,
+      "explain": {
+        "en": "Organic debris reduces the effect of disinfectants, so the impression is rinsed first.",
+        "ru": "Органические загрязнения снижают действие дезинфектантов, поэтому сначала оттиск промывают.",
+        "uz": "Organik ifloslik dezinfektant ta’sirini kamaytiradi, shuning uchun avval qolip yuviladi."
+      }
+    },
+    {
+      "q": {
+        "en": "Which material is classically used for the final impression of an edentulous jaw in a custom tray?",
+        "ru": "Какой материал классически используют для окончательного оттиска беззубой челюсти индивидуальной ложкой?",
+        "uz": "Tishsiz jag‘dan individual qoshiq bilan yakuniy qolip olish uchun an’anaviy qaysi material ishlatiladi?"
+      },
+      "options": [
+        {
+          "en": "Zinc oxide–eugenol paste",
+          "ru": "Цинкоксидэвгенольная паста",
+          "uz": "Rux oksid-evgenol pastasi"
+        },
+        {
+          "en": "Alginate in a stock tray",
+          "ru": "Альгинат в стандартной ложке",
+          "uz": "Standart qoshiqdagi alginat"
+        },
+        {
+          "en": "Putty only",
+          "ru": "Только базовая масса",
+          "uz": "Faqat asos massa"
+        },
+        {
+          "en": "Dental stone",
+          "ru": "Супергипс",
+          "uz": "Supergips"
+        }
+      ],
+      "correct": 0,
+      "explain": {
+        "en": "Zinc oxide–eugenol paste is a fluid, rigid, mucostatic material suited to final edentulous impressions.",
+        "ru": "Цинкоксидэвгенольная паста текучая, жёсткая и мукостатическая — подходит для окончательных оттисков беззубых челюстей.",
+        "uz": "Rux oksid-evgenol pastasi suyuq, qattiq va mukostatik bo‘lib, tishsiz jag‘lardan yakuniy qolip uchun mos."
+      }
+    },
+    {
+      "q": {
+        "en": "In the double-cord technique, the thin first cord is:",
+        "ru": "При двухнитевой методике первая тонкая нить:",
+        "uz": "Ikki ipli usulda birinchi ingichka ip:"
+      },
+      "options": [
+        {
+          "en": "Removed before cord two is placed",
+          "ru": "Удаляется до укладки второй нити",
+          "uz": "Ikkinchi ip qo‘yilishidan oldin olinadi"
+        },
+        {
+          "en": "Left in the sulcus during the impression",
+          "ru": "Остаётся в борозде во время оттиска",
+          "uz": "Qolip olish paytida egatchada qoladi"
+        },
+        {
+          "en": "Placed above the margin only",
+          "ru": "Укладывается только над краем",
+          "uz": "Faqat chetdan yuqoriga qo‘yiladi"
+        },
+        {
+          "en": "Soaked in eugenol",
+          "ru": "Пропитывается эвгенолом",
+          "uz": "Evgenolga shimdiriladi"
+        }
+      ],
+      "correct": 1,
+      "explain": {
+        "en": "The deep thin cord stays to control fluid while the upper cord is removed just before the material is injected.",
+        "ru": "Глубокая тонкая нить остаётся для контроля жидкости, а верхнюю удаляют непосредственно перед внесением материала.",
+        "uz": "Chuqurdagi ingichka ip suyuqlikni nazorat qilish uchun qoladi, yuqori ip esa material kiritilishidan oldin olinadi."
+      }
+    },
+    {
+      "q": {
+        "en": "Which impression is usually adequate for study casts and RPD framework planning?",
+        "ru": "Какой оттиск обычно достаточен для диагностических моделей и планирования каркаса бюгеля?",
+        "uz": "Diagnostik modellar va byugel karkasini rejalashtirish uchun odatda qaysi qolip yetarli?"
+      },
+      "options": [
+        {
+          "en": "Polyether in a custom tray",
+          "ru": "Полиэфир в индивидуальной ложке",
+          "uz": "Individual qoshiqda poliefir"
+        },
+        {
+          "en": "Double-cord silicone impression",
+          "ru": "Двухнитевой силиконовый оттиск",
+          "uz": "Ikki ipli silikon qolip"
+        },
+        {
+          "en": "Alginate in a stock tray",
+          "ru": "Альгинат в стандартной ложке",
+          "uz": "Standart qoshiqda alginat"
+        },
+        {
+          "en": "Zinc oxide–eugenol wash",
+          "ru": "Цинкоксидэвгенольный корректор",
+          "uz": "Rux oksid-evgenol korrektori"
+        }
+      ],
+      "correct": 2,
+      "explain": {
+        "en": "Alginate in a stock tray records the arch with enough accuracy for study casts and many RPD frameworks.",
+        "ru": "Альгинат в стандартной ложке достаточно точен для диагностических моделей и многих каркасов бюгелей.",
+        "uz": "Standart qoshiqdagi alginat diagnostik modellar va ko‘plab byugel karkaslari uchun yetarli aniqlik beradi."
+      }
+    }
+  ]
+}
