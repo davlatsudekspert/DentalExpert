@@ -1,0 +1,32 @@
+<!doctype html><html><head><meta charset="utf-8"><style>html,body{margin:0;background:#e9f3f7}canvas{display:block}</style>
+<script type="importmap">{"imports":{"three":"/node_modules/three/build/three.module.js","three/addons/":"/node_modules/three/examples/jsm/"}}</script></head><body>
+<script type="module">
+import * as THREE from 'three';
+import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';
+import {RoomEnvironment} from 'three/addons/environments/RoomEnvironment.js';
+const q=new URLSearchParams(location.search);
+const yaw=+(q.get('yaw')||0),pitch=+(q.get('pitch')||10),W=+(q.get('w')||900),H=+(q.get('h')||900);
+const show=(q.get('show')||'enamel,dentin,pulp').split(',');
+const clip=q.get('clip');
+const r=new THREE.WebGLRenderer({antialias:true,preserveDrawingBuffer:true});r.setSize(W,H);r.setPixelRatio(1);
+r.toneMapping=THREE.ACESFilmicToneMapping;r.toneMappingExposure=1.05;r.localClippingEnabled=true;document.body.appendChild(r.domElement);
+const scene=new THREE.Scene();scene.background=new THREE.Color(0xe6f1f6);
+const pm=new THREE.PMREMGenerator(r);scene.environment=pm.fromScene(new RoomEnvironment(),0.04).texture;scene.environmentIntensity=0.55;
+const cam=new THREE.PerspectiveCamera(30,W/H,1,200);
+const root=new THREE.Group();scene.add(root);
+const l=new GLTFLoader();
+const mats={
+ enamel:new THREE.MeshPhysicalMaterial({vertexColors:true,roughness:0.5,clearcoat:0.35,clearcoatRoughness:0.38,sheen:0.35,sheenRoughness:0.6,sheenColor:new THREE.Color(0xfff1d6)}),
+ dentin:new THREE.MeshPhysicalMaterial({vertexColors:true,roughness:0.62,clearcoat:0.05}),
+ pulp:new THREE.MeshPhysicalMaterial({vertexColors:true,roughness:0.4,clearcoat:0.5})
+};
+const planes=clip?[new THREE.Plane(new THREE.Vector3(...clip.split(',').slice(0,3).map(Number)),+clip.split(',')[3])]:[];
+await Promise.all(['enamel','dentin','pulp'].map(n=>new Promise(res=>l.load(`/assets/tooth3d/molar3d/${n}.glb`,g=>{g.scene.traverse(o=>{if(o.isMesh){o.material=mats[n].clone();o.material.side=THREE.DoubleSide;o.material.clippingPlanes=planes;o.visible=show.includes(n)}});root.add(g.scene);res()}))));
+const key=new THREE.DirectionalLight(0xfff6ea,1.5);key.position.set(6,12,14);scene.add(key);
+const rim=new THREE.DirectionalLight(0xbfe6ff,0.8);rim.position.set(-10,4,-8);scene.add(rim);
+root.rotation.y=THREE.MathUtils.degToRad(yaw);
+const d=62,p=THREE.MathUtils.degToRad(pitch);
+cam.position.set(0,-2.5+Math.sin(p)*d,Math.cos(p)*d);cam.lookAt(0,-3.0,0);
+r.render(scene,cam);
+window.__ready=true;
+</script></body></html>
