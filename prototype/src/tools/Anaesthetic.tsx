@@ -8,24 +8,25 @@ import {Notice,Seg,Sources,type L,type Lang,type ToolProps} from './shared';
  * mgkg = MRD per kg body weight, max = absolute maximum per appointment.
  */
 export type DrugId='lido'|'arti'|'mepi'|'prilo'|'bupi';
-export type Drug={id:DrugId;pct:number;mgkg:number;max:number;epi:L|null;name:L};
+/** epiMgMl = epinephrine mg per mL at the strongest dilution listed for that drug (1:100,000 = 0.01 mg/mL; 1:200,000 = 0.005 mg/mL). */
+export type Drug={id:DrugId;pct:number;mgkg:number;max:number;epi:L|null;epiMgMl:number|null;epiRatio:string|null;name:L};
 
 export const DRUGS:Drug[]=[
  {id:'lido',pct:2,mgkg:7.0,max:500,
   name:{uz:'Lidokain 2%',ru:'Лидокаин 2%',en:'Lidocaine 2%'},
-  epi:{uz:'epinefrin 1:100 000 bilan',ru:'с эпинефрином 1:100 000',en:'with epinephrine 1:100,000'}},
+  epi:{uz:'epinefrin 1:100 000 bilan',ru:'с эпинефрином 1:100 000',en:'with epinephrine 1:100,000'},epiMgMl:0.01,epiRatio:'1:100 000'},
  {id:'arti',pct:4,mgkg:7.0,max:500,
   name:{uz:'Artikain 4%',ru:'Артикаин 4%',en:'Articaine 4%'},
-  epi:{uz:'epinefrin 1:100 000 yoki 1:200 000 bilan',ru:'с эпинефрином 1:100 000 или 1:200 000',en:'with epinephrine 1:100,000 or 1:200,000'}},
+  epi:{uz:'epinefrin 1:100 000 yoki 1:200 000 bilan',ru:'с эпинефрином 1:100 000 или 1:200 000',en:'with epinephrine 1:100,000 or 1:200,000'},epiMgMl:0.01,epiRatio:'1:100 000'},
  {id:'mepi',pct:3,mgkg:6.6,max:400,
   name:{uz:'Mepivakain 3%',ru:'Мепивакаин 3%',en:'Mepivacaine 3%'},
-  epi:null},
+  epi:null,epiMgMl:null,epiRatio:null},
  {id:'prilo',pct:4,mgkg:8.0,max:600,
   name:{uz:'Prilokain 4%',ru:'Прилокаин 4%',en:'Prilocaine 4%'},
-  epi:{uz:'oddiy yoki epinefrin 1:200 000 bilan',ru:'без вазоконстриктора или с эпинефрином 1:200 000',en:'plain or with epinephrine 1:200,000'}},
+  epi:{uz:'oddiy yoki epinefrin 1:200 000 bilan',ru:'без вазоконстриктора или с эпинефрином 1:200 000',en:'plain or with epinephrine 1:200,000'},epiMgMl:0.005,epiRatio:'1:200 000'},
  {id:'bupi',pct:0.5,mgkg:1.3,max:90,
   name:{uz:'Bupivakain 0,5%',ru:'Бупивакаин 0,5%',en:'Bupivacaine 0.5%'},
-  epi:{uz:'epinefrin 1:200 000 bilan',ru:'с эпинефрином 1:200 000',en:'with epinephrine 1:200,000'}},
+  epi:{uz:'epinefrin 1:200 000 bilan',ru:'с эпинефрином 1:200 000',en:'with epinephrine 1:200,000'},epiMgMl:0.005,epiRatio:'1:200 000'},
 ];
 
 export const VOLUMES=[1.8,1.7,2.2] as const;
@@ -35,6 +36,15 @@ export type Volume=typeof VOLUMES[number];
 export function floor1(x:number){return Math.floor(x*10+1e-9)/10}
 
 export type DoseResult={mgPerCart:number;byWeight:number;maxMg:number;carts:number;capped:boolean};
+
+/** Malamed: epinephrine per appointment, healthy adult 0.2 mg; clinically significant cardiovascular disease 0.04 mg. */
+export const EPI_HEALTHY_MG=0.2,EPI_CARDIAC_MG=0.04;
+export type EpiResult={perCart:number;healthyCarts:number;cardiacCarts:number};
+export function calcEpi(drug:Drug,volumeMl:number):EpiResult|null{
+ if(drug.epiMgMl===null)return null;
+ const perCart=drug.epiMgMl*volumeMl;
+ return {perCart,healthyCarts:floor1(EPI_HEALTHY_MG/perCart),cardiacCarts:floor1(EPI_CARDIAC_MG/perCart)};
+}
 
 /** mg per cartridge = concentration % × 10 × volume (mL); max mg = min(MRD mg/kg × weight, absolute max). */
 export function calcDose(drug:Drug,weightKg:number,volumeMl:number):DoseResult{
@@ -67,6 +77,8 @@ const T={
   childHint:'Kichik vazn: bolalar uchun eslatmaga e’tibor bering.',
   comboTitle:'Ikki anestetik birga',
   combo:'Ikki xil anestetik birga qo‘llansa, umumiy miqdor ikkalasining past maksimal dozasidan oshmasligi kerak.',
+  epi:(r:string,mg:string,h:string,c:string)=>`Epinefrin ${r}: karpulada ${mg} mg. Sog‘lom kattalarda 0,2 mg ≈ ${h} karpula; yurak-qon tomir kasalligida 0,04 mg ≈ ${c} karpula.`,
+  epiFirst:'Diqqat: epinefrin chegarasiga anestetik chegarasidan oldinroq yetiladi.',
   src:'Manba',
  },
  ru:{
@@ -89,6 +101,8 @@ const T={
   childHint:'Небольшая масса тела: обратите внимание на примечание для детей.',
   comboTitle:'Сочетание двух анестетиков',
   combo:'При сочетании двух анестетиков суммарная доза не должна превышать меньшую из их максимальных доз.',
+  epi:(r:string,mg:string,h:string,c:string)=>`Эпинефрин ${r}: ${mg} мг в карпуле. Здоровый взрослый: 0,2 мг ≈ ${h} карпулы; сердечно-сосудистое заболевание: 0,04 мг ≈ ${c} карпулы.`,
+  epiFirst:'Внимание: предел эпинефрина достигается раньше, чем предел анестетика.',
   src:'Источник',
  },
  en:{
@@ -111,6 +125,8 @@ const T={
   childHint:'Low body weight: see the note for children.',
   comboTitle:'Two anaesthetics combined',
   combo:'When two anaesthetics are combined, the total should not exceed the lower of their maximum doses.',
+  epi:(r:string,mg:string,h:string,c:string)=>`Epinephrine ${r}: ${mg} mg per cartridge. Healthy adult 0.2 mg ≈ ${h} cartridges; cardiovascular disease 0.04 mg ≈ ${c} cartridges.`,
+  epiFirst:'Note: the epinephrine limit is reached before the anaesthetic limit.',
   src:'Source',
  },
 };
@@ -144,6 +160,7 @@ export default function Anaesthetic({lang}:ToolProps){
  const w=Number(raw.replace(',','.'));
  const valid=raw.trim()!==''&&Number.isFinite(w)&&w>=1&&w<=250;
  const r=valid?calcDose(drug,w,vol):null;
+ const epi=calcEpi(drug,vol);
  const step=(d:number)=>{const base=valid?w:70;const n=Math.min(250,Math.max(1,Math.round(base+d)));setRaw(String(n))};
 
  return <div className="tl-stack">
@@ -192,6 +209,10 @@ export default function Anaesthetic({lang}:ToolProps){
      {r.capped&&<li className="tl-calc-cap">{t.capped(fmt(drug.max,lang))}</li>}
      <li className="tl-muted">{t.rule(fmt(drug.mgkg,lang),fmt(drug.max,lang))}. {t.rounding}</li>
     </ul>
+    {epi&&<div className={'tl-epi'+(r.carts>epi.healthyCarts?' tl-epi-warn':'')}>
+     <HeartPulse size={16} aria-hidden="true"/>
+     <p>{t.epi(lang==='en'?drug.epiRatio!.replace(' ',','):drug.epiRatio!,fmt(epi.perCart,lang,3),fmt(epi.healthyCarts,lang),fmt(epi.cardiacCarts,lang))}{r.carts>epi.healthyCarts&&<strong> {t.epiFirst}</strong>}</p>
+    </div>}
     {w<40&&<p className="tl-hint"><Baby size={16} aria-hidden="true"/>{t.childHint}</p>}
    </>}
   </section>
