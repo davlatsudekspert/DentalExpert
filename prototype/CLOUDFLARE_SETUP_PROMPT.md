@@ -11,3 +11,20 @@ Quyidagini Cloudflare dashboard'dagi AI yordamchiga (yoki kirgan hisobdagi agent
 ## Keyin Claude'ga qaytaring
 
 `database_id` va Pages manzilini yuborsangiz, `wrangler.toml`, SQLite migratsiyasi va `/api/doctors`, `/api/sponsors` funksiyalari shu qiymatlar bilan yoziladi.
+
+## Holat (2026-10-17)
+
+Cloudflare tomonida yaratilgan: Pages `dental-expert` (`dental-expert.pages.dev`), D1 `dental-expert`, R2 `dental-expert-media`. `wrangler.toml` repoda.
+
+**Qolgan qadam — D1 migratsiyalarini jonli bazaga qo‘llash** (bu qilinmaguncha `/api/*` jonli saytda 500 qaytaradi; frontend avtomatik demo ma’lumotga qaytadi):
+
+```
+cd prototype
+CLOUDFLARE_API_TOKEN=... npx wrangler d1 migrations apply dental-expert --remote
+```
+
+yoki Cloudflare yordamchisiga: «`dental-expert` D1 bazasida `prototype/migrations/0001_global_discovery.sql`, so‘ng `0002_demo_seed.sql` ni ketma-ket bajar».
+
+Lokal sinov: `npm run build && npm run db:local && npm run api:dev`, so‘ng `curl 'http://127.0.0.1:8788/api/sponsors?city=UZ-AN&includeDemo=1'`.
+
+**Xavfsizlik:** Cloudflare AI agentiga «Full access» token berilgan. Ishlar tugagach Cloudflare → My Profile → API Tokens bo‘limidan uni bekor qiling.

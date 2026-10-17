@@ -3,3 +3,4 @@ dist/
 *.log
 *.tsbuildinfo
 dental-expert-prototype.zip
+.wrangler/

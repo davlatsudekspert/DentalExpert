@@ -1,0 +1,12 @@
+name = "dental-expert"
+compatibility_date = "2026-10-01"
+pages_build_output_dir = "dist"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "dental-expert"
+database_id = "8b0734eb-b1db-4bd7-9bbf-60d9db51f658"
+
+[[r2_buckets]]
+binding = "MEDIA"
+bucket_name = "dental-expert-media"

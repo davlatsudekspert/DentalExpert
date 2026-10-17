@@ -46,7 +46,7 @@ return <div className="studio"><aside className="studio-aside"><div className="b
 <header className="home-header"><div className="avatar mint-avatar">AK</div><div><p>{t('greeting')}</p><h2>{t('name')} <span className="wave">✧</span></h2></div><button className="icon-button notification" aria-label={t('notifications')} onClick={()=>go('notifications')}><Bell size={22}/><i/></button></header>
 <LocationPicker lang={lang} country={country} city={cityId} customCity={customCity} onCountry={setRegionCountry} onCity={setCityId} onCustomCity={setCustomCity}/>
 <div className="hero card"><div className="hero-copy"><span className="eyebrow">DENTAL EXPERT</span><h1>{t('headline')}</h1><p>{t('sub')}</p><button onClick={()=>go('search')}>{t('find')}<ArrowUpRight size={16}/></button></div><div className="hero-tooth"><img className="hero-render" src={heroRender} alt="Premium molar illustration"/></div></div>
-{sponsoredForCity(cityId).length>0&&<SponsoredDemo lang={lang} doctors={sponsoredForCity(cityId)} onOpen={id=>{setDoctor(doctors.findIndex(x=>x.id===id));go('profile')}}/>}
+{sponsoredForCity(cityId).length>0&&<SponsoredDemo lang={lang} cityId={cityId} doctors={sponsoredForCity(cityId)} onOpen={id=>{setDoctor(doctors.findIndex(x=>x.id===id));go('profile')}}/>}
 <button className="search-field" onClick={()=>go('search')}><Search size={18}/><span>{t('find')}</span><SlidersHorizontal size={19}/></button>
 <div className="quick-grid">{[[Stethoscope,'search'],[CalendarDays,'booking'],[Layers,'anatomy'],[BookOpen,'courses']].map(([I,s])=><button key={s as string} onClick={()=>go(s as string)}><span>{icon(I as typeof Home)}</span>{t(s as Key)}</button>)}</div>
 
