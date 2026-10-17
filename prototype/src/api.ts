@@ -6,6 +6,11 @@ export const isNative=Capacitor.isNativePlatform();
 const API_BASE=isNative?((import.meta.env.VITE_API_BASE as string|undefined)||'https://dental-expert.pages.dev'):'';
 const url=(path:string)=>API_BASE+path;
 
+const TOKEN_KEY='de_token';
+const getToken=()=>{try{return isNative?localStorage.getItem(TOKEN_KEY):null}catch{return null}};
+const setToken=(t:string|null)=>{try{if(!isNative)return;if(t)localStorage.setItem(TOKEN_KEY,t);else localStorage.removeItem(TOKEN_KEY)}catch{/* storage unavailable */}};
+const authHeaders=():Record<string,string>=>{if(!isNative)return {};const t=getToken();return t?{'x-client':'native',authorization:'Bearer '+t}:{'x-client':'native'}};
+
 export type SponsorsResponse={cityId:string;sample:boolean;activeCount:number;sponsors:{id:string;isDemo:boolean}[]};
 
 /** Returns null when the API is unreachable (offline demo.html, dev server without Functions) so callers keep the local demo data. */
@@ -49,7 +54,7 @@ export type AuthState={enabled:boolean;user:AuthUser|null};
 
 async function post<T>(path:string,body:unknown,method='POST'):Promise<{ok:boolean;status:number;data:T&{error?:string;retryAfterSec?:number;attemptsLeft?:number}}>{
  try{
-  const res=await fetch(url(path),{method,headers:{'content-type':'application/json'},body:method==='DELETE'?undefined:JSON.stringify(body),credentials:'same-origin'});
+  const res=await fetch(url(path),{method,headers:{'content-type':'application/json',...authHeaders()},body:method==='DELETE'?undefined:JSON.stringify(body),credentials:'same-origin'});
   const data=await res.json().catch(()=>({})) as never;
   return {ok:res.ok,status:res.status,data};
  }catch{return {ok:false,status:0,data:{error:'network'} as never}}
@@ -57,17 +62,16 @@ async function post<T>(path:string,body:unknown,method='POST'):Promise<{ok:boole
 
 /** enabled=false means email-code sign-in is unavailable and the labelled demo flow stays. */
 export async function fetchAuth():Promise<AuthState>{
- if(isNative)return {enabled:false,user:null}; // cross-site cookies are unavailable in the native WebView; demo sign-in stays
  try{
-  const res=await fetch(url('/api/auth/me'),{credentials:'same-origin',headers:{accept:'application/json'}});
+  const res=await fetch(url('/api/auth/me'),{credentials:'same-origin',headers:{accept:'application/json',...authHeaders()}});
   if(!res.ok||!(res.headers.get('content-type')||'').includes('application/json'))return {enabled:false,user:null};
   return await res.json() as AuthState;
  }catch{return {enabled:false,user:null}}
 }
 export const requestCode=(b:{email:string;name?:string;role?:string;countryCode?:string;cityId?:string;lang:string})=>post<{ok?:boolean}>('/api/auth/request-code',b);
-export const verifyCode=(email:string,code:string)=>post<{user?:AuthUser}>('/api/auth/verify',{email,code});
-export const logout=()=>post<{ok?:boolean}>('/api/auth/logout',{});
-export const deleteAccount=()=>post<{ok?:boolean}>('/api/auth/account',null,'DELETE');
+export const verifyCode=async(email:string,code:string)=>{const r=await post<{user?:AuthUser;token?:string}>('/api/auth/verify',{email,code});if(r.ok&&r.data.token)setToken(r.data.token);return r};
+export const logout=async()=>{const r=await post<{ok?:boolean}>('/api/auth/logout',{});setToken(null);return r};
+export const deleteAccount=async()=>{const r=await post<{ok?:boolean}>('/api/auth/account',null,'DELETE');if(r.ok)setToken(null);return r};
 
 import type {Institution} from './institutionsData';
 /** Falls back to the bundled list when the API is unreachable. */

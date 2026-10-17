@@ -37,6 +37,32 @@ check('5 wrong then locked',codes==[400]*5 and call('/auth/verify',body={'email'
 # logout
 check('logout ok',call('/auth/logout',body={})[0]==200)
 check('after logout no user',call('/auth/me','GET')[1]['user'] is None)
+# native app: bearer token instead of cookie, cross-origin from the app WebView
+NJ=http.cookiejar.CookieJar();nop=urllib.request.build_opener(urllib.request.HTTPCookieProcessor(NJ))
+def ncall(path,method='POST',body=None,token=None):
+    h={'origin':'https://localhost','x-client':'native'}
+    if body is not None:h['content-type']='application/json'
+    if token:h['authorization']='Bearer '+token
+    r=urllib.request.Request(B+path,data=json.dumps(body).encode() if body is not None else None,headers=h,method=method)
+    try:
+        x=nop.open(r);return x.status,json.loads(x.read() or b'{}'),dict(x.headers)
+    except urllib.error.HTTPError as e:
+        return e.code,json.loads(e.read() or b'{}'),dict(e.headers)
+NE='native+'+str(__import__('time').time_ns())+'@example.com'
+s,r,h=ncall('/auth/request-code',body={'email':NE,'name':'Native User','role':'student','lang':'en'});check('native request-code allowed',s==200 and 'devCode' in r)
+check('native CORS header on auth',h.get('Access-Control-Allow-Origin')=='https://localhost' or h.get('access-control-allow-origin')=='https://localhost')
+s,r,h=ncall('/auth/verify',body={'email':NE,'code':r['devCode']});tok=r.get('token')
+check('native verify returns a token and no cookie',s==200 and bool(tok) and len(tok)>=20 and not any(c.name=='de_session' for c in NJ) and 'set-cookie' not in {k.lower() for k in h})
+check('native me with bearer returns user',ncall('/auth/me','GET',token=tok)[1]['user']['email']==NE)
+check('me without token is anonymous',ncall('/auth/me','GET')[1]['user'] is None)
+check('garbage token is anonymous',ncall('/auth/me','GET',token='x'*40)[1]['user'] is None)
+s,_,h=ncall('/auth/request-code',body={'email':'a@b.co'},token=None)
+r=urllib.request.Request(B+'/auth/request-code',data=b'{}',headers={'origin':'https://evil.example','content-type':'application/json'},method='POST')
+try: urllib.request.urlopen(r);evil=200
+except urllib.error.HTTPError as e: evil=e.code
+check('foreign origin still rejected',evil==403)
+check('native logout ok',ncall('/auth/logout',body={},token=tok)[0]==200)
+check('token dead after logout',ncall('/auth/me','GET',token=tok)[1]['user'] is None)
 import time;time.sleep(61)  # resend cooldown
 # login again (existing user keeps profile; new signup fields ignored)
 s,r=call('/auth/request-code',body={'email':E,'name':'Hacker','role':'patient'})

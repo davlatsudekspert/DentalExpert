@@ -3,6 +3,11 @@ import {json,type Env} from './db';
 export const ROLES=['patient','dentist','teacher','student'] as const;
 export type Role=typeof ROLES[number];
 export const COOKIE='de_session';
+/** Native app WebViews are cross-site, so they authenticate with a bearer token instead of the cookie. */
+export const NATIVE_ORIGINS=new Set(['https://localhost','capacitor://localhost','http://localhost']);
+export const isNativeClient=(request:Request)=>request.headers.get('x-client')==='native';
+export const bearerToken=(request:Request)=>{const m=(request.headers.get('authorization')||'').match(/^Bearer ([A-Za-z0-9_-]{20,100})$/);return m?m[1]:null};
+export const sessionToken=(request:Request)=>bearerToken(request)||readCookie(request,COOKIE);
 const SESSION_DAYS=30;
 const enc=new TextEncoder();
 const hex=(b:ArrayBuffer)=>[...new Uint8Array(b)].map(x=>x.toString(16).padStart(2,'0')).join('');
@@ -39,7 +44,7 @@ export const normalizeEmail=(v:unknown)=>{
 export function guardPost(request:Request){
  if(!(request.headers.get('content-type')||'').includes('application/json'))return json({error:'json_required'},415,'no-store');
  const origin=request.headers.get('origin');
- if(origin&&origin!==new URL(request.url).origin)return json({error:'bad_origin'},403,'no-store');
+ if(origin&&origin!==new URL(request.url).origin&&!NATIVE_ORIGINS.has(origin))return json({error:'bad_origin'},403,'no-store');
  return null;
 }
 
@@ -56,7 +61,7 @@ export const cookieHeader=(request:Request,value:string,maxAge:number)=>
 export type SessionUser={id:string;email:string;name:string|null;role:Role;countryCode:string|null;cityId:string|null};
 
 export async function sessionUser(env:Env,request:Request):Promise<SessionUser|null>{
- const token=readCookie(request,COOKIE);
+ const token=sessionToken(request);
  if(!token)return null;
  const row=await env.DB.prepare(
   `SELECT u.id,u.email,u.name,u.role,u.country_code,u.city_id FROM sessions s JOIN users u ON u.id=s.user_id
@@ -69,7 +74,7 @@ export async function createSession(env:Env,request:Request,userId:string){
  const token=randomToken();
  await env.DB.prepare(`INSERT INTO sessions (token_hash,user_id,expires_at) VALUES (?,?,datetime('now','+${SESSION_DAYS} days'))`)
   .bind(await sha256(token),userId).run();
- return cookieHeader(request,token,SESSION_DAYS*86400);
+ return {token,cookie:cookieHeader(request,token,SESSION_DAYS*86400)};
 }
 
 const mail={

@@ -6,6 +6,7 @@ const config:CapacitorConfig={
  appName:'Dental Expert',
  webDir:'dist',
  android:{allowMixedContent:false},
- ios:{contentInset:'automatic'}
+ backgroundColor:'#f0faff',
+ ios:{contentInset:'never',backgroundColor:'#f0faff'}
 };
 export default config;

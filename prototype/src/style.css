@@ -209,3 +209,22 @@
 .deck-q small{font-size:12px;opacity:.8;line-height:1.4}
 .deck-score{font-size:16px;font-weight:700;margin:0}
 .deck-quiz-actions{display:flex;gap:10px}.deck-quiz-actions button{flex:1;min-height:44px;border:0;border-radius:12px;background:rgba(255,255,255,.14);color:#fff;font:inherit;cursor:pointer}
+
+/* Native app: real device chrome replaces the prototype's fake phone frame; respect safe areas; stop iOS focus zoom. */
+html.native,html.native body{background:#f0faff;margin:0}
+html.native .phone:before{display:none}
+html.native .phone{padding-top:env(safe-area-inset-top);min-height:100dvh}
+/* floating tab bar sits just above the home indicator, with a soft fade underneath so scrolled content never shows through the gap */
+html.native .bottom-nav.five-tab-nav{bottom:max(10px,calc(env(safe-area-inset-bottom) - 12px));padding-bottom:10px}
+html.native::after{content:'';position:fixed;left:0;right:0;bottom:0;height:calc(env(safe-area-inset-bottom) + 92px);background:linear-gradient(to top,#f0faff 38%,#f0faff00);pointer-events:none;z-index:15}
+@media (pointer:coarse){input,select,textarea{font-size:16px!important}}
+
+.language-select{min-height:calc(100dvh - 120px);display:flex;flex-direction:column;justify-content:center;gap:10px;padding:24px 22px 40px;text-align:center}
+.language-brand{display:flex;align-items:center;justify-content:center;gap:10px;font-size:26px;font-weight:700;color:#10254e;margin-bottom:22px}
+.language-brand span span{color:#17a6b7}
+.language-select h1{margin:0;font-size:28px;line-height:1.15;color:#10254e}
+.language-select p{margin:0 0 18px;color:#5c7590;font-size:15px}
+.language-list{display:grid;gap:12px}
+.language-option{display:flex;flex-direction:column;align-items:center;gap:3px;min-height:72px;padding:14px;border:1.5px solid #cde8f0;border-radius:20px;background:#fff;color:#10254e;font:inherit;cursor:pointer;box-shadow:0 8px 24px #17a6b710}
+.language-option strong{font-size:21px}.language-option small{font-size:13px;color:#5c7590}
+.language-option:active{transform:scale(.98);border-color:#17a6b7}

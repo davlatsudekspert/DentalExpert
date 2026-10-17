@@ -1,0 +1,76 @@
+"""Walk the app the way the iOS/Android WebView runs it: Capacitor native flag, safe-area insets, touch viewport, bearer-token sign-in.
+Needs a build made with VITE_API_BASE=http://127.0.0.1:8788 served by `wrangler pages dev` (with .dev.vars AUTH_DEV_ECHO=1)."""
+from playwright.sync_api import sync_playwright
+import os,time,json
+BASE=os.environ.get('SIM_URL','http://127.0.0.1:8788');OUT=os.environ.get('SIM_OUT','/tmp/sim')
+log=[]
+def check(n,c,detail=''):
+ log.append((n,bool(c),detail));print(('PASS ' if c else 'FAIL ')+n+(' '+str(detail) if detail and not c else ''))
+with sync_playwright() as p:
+ b=p.chromium.launch(executable_path=os.environ['CHROMIUM_PATH'],args=['--no-sandbox'])
+ ctx=b.new_context(viewport={'width':430,'height':932},device_scale_factor=2,is_mobile=True,has_touch=True,user_agent='Mozilla/5.0 (iPhone; CPU iPhone OS 18_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148')
+ ctx.add_init_script("window.webkit={messageHandlers:{bridge:{postMessage(){}}}};")
+ pg=ctx.new_page();errs=[];pg.on('pageerror',lambda e:errs.append(str(e)))
+ cdp=ctx.new_cdp_session(pg)
+ try: cdp.send('Emulation.setSafeAreaInsetsOverride',{'insets':{'top':59,'bottom':34,'left':0,'right':0}});safe=True
+ except Exception as e: safe=False
+ codes=[];pg.on('response',lambda r:codes.append(r.json()) if r.url.endswith('/api/auth/request-code') and r.status==200 else None)
+ pg.goto(f'{BASE}/?lang=uz');pg.wait_for_selector('.screen');pg.wait_for_timeout(1200)
+ shot=lambda n:pg.screenshot(path=f'{OUT}/{n}.png')
+ shot('01-intro')
+ check('running as native (html.native)',pg.evaluate("document.documentElement.classList.contains('native')"))
+ check('no fake phone notch',pg.evaluate("getComputedStyle(document.querySelector('.phone'),'::before').display")=='none')
+ check('no fake status bar',pg.locator('.statusbar').count()==0)
+ check('no screen picker',pg.locator('.mobile-screen-picker').count()==0)
+ top=pg.evaluate("document.querySelector('.phone').getBoundingClientRect().top")
+ if safe: check('content sits below the safe area',pg.evaluate("parseFloat(getComputedStyle(document.querySelector('.phone')).paddingTop)")>=58,pg.evaluate("getComputedStyle(document.querySelector('.phone')).paddingTop"))
+ check('no horizontal overflow',pg.evaluate('document.documentElement.scrollWidth<=innerWidth'))
+ pg.get_by_role('button',name='Hisob yaratish').click();pg.wait_for_timeout(400)
+ shot('02-roles-or-next')
+ # go straight to signup like a tester would
+ pg.goto(f'{BASE}/?screen=signup&lang=uz');pg.wait_for_selector('form');pg.wait_for_timeout(1500)
+ shot('03-signup')
+ check('signup is real email-code (no password, "Kod yuborish")',pg.get_by_label('Parol',exact=True).count()==0 and pg.get_by_role('button',name='Kod yuborish').count()==1)
+ fs=pg.evaluate("[...document.querySelectorAll('input,select')].map(e=>parseFloat(getComputedStyle(e).fontSize))")
+ check('all form fields >=16px (no iOS focus zoom)',min(fs)>=16,fs)
+ email=f'sim+{time.time_ns()}@example.com'
+ pg.get_by_label('Ism va familiya').fill('Sim Tester');pg.get_by_label('Email manzilingiz').fill(email)
+ pg.get_by_label('Email manzilingiz').focus();pg.wait_for_timeout(300)
+ check('no horizontal overflow while typing',pg.evaluate('document.documentElement.scrollWidth<=innerWidth'))
+ shot('04-signup-filled')
+ pg.get_by_role('button',name='Kod yuborish').click();pg.wait_for_selector('.email-verification input');pg.wait_for_timeout(500)
+ shot('05-verify')
+ check('code requested through the hosted API',len(codes)==1 and len(codes[0].get('devCode',''))==6)
+ pg.locator('.email-verification input').fill(codes[0]['devCode']);pg.get_by_role('button',name='Tasdiqlash').click()
+ pg.wait_for_selector('.home-header',timeout=8000);pg.wait_for_timeout(1500)
+ shot('06-home')
+ check('signed in, home shown',pg.locator('.home-header').count()==1)
+ tok=pg.evaluate("localStorage.getItem('de_token')")
+ check('token stored on device',bool(tok) and len(tok)>=20)
+ check('no cookie used',not [c for c in ctx.cookies() if c['name']=='de_session'])
+ pg.reload();pg.wait_for_selector('.screen');pg.wait_for_timeout(1200)
+ pg.goto(f'{BASE}/?screen=settings&lang=uz');pg.wait_for_selector('.account-session',timeout=8000);shot('07-settings')
+ check('session survives restart (settings shows the email)',email in pg.locator('.account-session').inner_text())
+ check('bottom nav clear of the home indicator',pg.evaluate("(()=>{const n=document.querySelector('.bottom-nav');if(!n)return true;return n.getBoundingClientRect().bottom<=innerHeight})()"))
+ pg.goto(f'{BASE}/?screen=home&lang=uz');pg.wait_for_selector('.home-header');pg.wait_for_timeout(1200);shot('08-home-again')
+ check('no browser exceptions',not errs,errs[:2])
+ # --- fresh install: language first, then role, then registration
+ ctx2=b.new_context(viewport={'width':430,'height':932},device_scale_factor=2,is_mobile=True,has_touch=True)
+ ctx2.add_init_script("window.webkit={messageHandlers:{bridge:{postMessage(){}}}};")
+ p2=ctx2.new_page();p2.goto(f'{BASE}/');p2.wait_for_selector('.language-select');p2.wait_for_timeout(800)
+ p2.screenshot(path=f'{OUT}/09-language.png')
+ check('fresh install opens the language screen first',p2.locator('.language-option').count()==3)
+ check('options are English, Русский, O‘zbekcha',p2.locator('.language-option strong').all_inner_texts()==['English','Русский','O‘zbekcha'])
+ p2.get_by_role('button',name='Русский').click();p2.wait_for_selector('.role-list');p2.wait_for_timeout(500)
+ p2.screenshot(path=f'{OUT}/10-roles-ru.png')
+ check('role screen shows in the chosen language (ru)',p2.evaluate("document.documentElement.lang")=='ru')
+ p2.get_by_role('button',name='Стоматолог').click() if p2.get_by_role('button',name='Стоматолог').count() else None
+ p2.locator('button.button').last.click();p2.wait_for_selector('form');p2.wait_for_timeout(600)
+ p2.screenshot(path=f'{OUT}/11-signup-ru.png')
+ check('then registration opens',p2.get_by_role('button',name='Отправить код').count()==1)
+ check('language is remembered on the device',p2.evaluate("localStorage.getItem('de_lang')")=='ru')
+ p2.reload();p2.wait_for_selector('.screen');p2.wait_for_timeout(800)
+ check('next launch skips the language screen and keeps ru',p2.locator('.language-select').count()==0 and p2.evaluate('document.documentElement.lang')=='ru')
+ b.close()
+bad=[n for n,ok,_ in log if not ok]
+print('\nRESULT:',len(log)-len(bad),'passed,',len(bad),'failed',bad)

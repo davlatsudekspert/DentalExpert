@@ -1,4 +1,4 @@
-import {authEnabled,createSession,guardPost,hmac,normalizeEmail,timingSafeEqual,type Role} from '../../_lib/auth';
+import {authEnabled,createSession,guardPost,hmac,isNativeClient,normalizeEmail,timingSafeEqual,type Role} from '../../_lib/auth';
 import {json,type Env} from '../../_lib/db';
 
 const MAX_ATTEMPTS=5;
@@ -39,7 +39,11 @@ export const onRequestPost:PagesFunction<Env>=async({request,env})=>{
   user={id,email,name:p.name,role:p.role,country_code:p.countryCode,city_id:p.cityId};
  }else await env.DB.prepare(`UPDATE users SET email_verified_at=COALESCE(email_verified_at,datetime('now')) WHERE id=?`).bind(user.id).run();
 
- const res=json({user:{id:user.id,email:user.email,name:user.name,role:user.role,countryCode:user.country_code,cityId:user.city_id}},200,'no-store');
- res.headers.append('set-cookie',await createSession(env,request,user.id!));
+ const session=await createSession(env,request,user.id!);
+ const profile={id:user.id,email:user.email,name:user.name,role:user.role,countryCode:user.country_code,cityId:user.city_id};
+ // Native clients get the token in the body (stored on the device); browsers get an HttpOnly cookie.
+ if(isNativeClient(request))return json({user:profile,token:session.token},200,'no-store');
+ const res=json({user:profile},200,'no-store');
+ res.headers.append('set-cookie',session.cookie);
  return res;
 };
