@@ -1,7 +1,7 @@
 import {MapPin} from 'lucide-react';
 import Portrait from './Portrait';
-import clinicianSheet from '../assets/clinician-contact-sheet.png?inline';
-import headscarfSheet from '../assets/headscarf-clinicians.png?inline';
+import clinicianSheet from '../assets/clinician-contact-sheet.png';
+import headscarfSheet from '../assets/headscarf-clinicians.png';
 import {countryCodes} from './countryCodes';
 import {demoCities,type DemoDoctor,type Lang} from './discoveryData';
 

@@ -1,7 +1,7 @@
 import {useRef} from 'react';
-import front from '../assets/tooth3d/turntable-front.webp?inline';
-import right from '../assets/tooth3d/turntable-right.webp?inline';
-import back from '../assets/tooth3d/turntable-back.webp?inline';
+import front from '../assets/tooth3d/turntable-front.webp';
+import right from '../assets/tooth3d/turntable-right.webp';
+import back from '../assets/tooth3d/turntable-back.webp';
 
 type Props={angle:number;zoom:boolean;onRotate:(angle:number)=>void;label:string};
 const views=[front,right,back,right] as const;

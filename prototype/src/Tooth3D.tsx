@@ -3,7 +3,7 @@ import * as THREE from 'three';
 import {RoomEnvironment} from 'three/addons/environments/RoomEnvironment.js';
 import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';
 import referenceMolar from '../assets/tooth3d/reference-molar.glb?url';
-import referenceEnamel from '../assets/tooth3d/archive-healthy.webp?inline';
+import referenceEnamel from '../assets/tooth3d/archive-healthy.webp';
 
 type Layer = 'enamel' | 'dentin' | 'pulp' | 'root';
 type Props = {cut?: boolean; angle?: number; zoom?: boolean; layer?: Layer; variant?: 'hero' | 'study' | 'card'; onRotate?: (degrees: number) => void};

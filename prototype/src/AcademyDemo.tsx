@@ -1,7 +1,7 @@
 import {useState} from 'react';
 import {ArrowRight,BookOpen,Check,Download,Layers,RotateCw} from 'lucide-react';
-import cutaway from '../assets/tooth3d/premium-reference-cutaway-ivory.webp?inline';
-import slides from '../assets/academy/tooth-layers-demo-uz.pptx?inline';
+import cutaway from '../assets/tooth3d/premium-reference-cutaway-ivory.webp';
+import slides from '../assets/academy/tooth-layers-demo-uz.pptx';
 import type {Lang} from './discoveryData';
 
 const copy={
