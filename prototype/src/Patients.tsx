@@ -12,7 +12,7 @@ const UPPER=[18,17,16,15,14,13,12,11,21,22,23,24,25,26,27,28];
 const LOWER=[48,47,46,45,44,43,42,41,31,32,33,34,35,36,37,38];
 
 export const loadPatients=(uid?:string|null):Patient[]=>{try{const v=JSON.parse(localStorage.getItem(keyFor(uid))||'[]');return Array.isArray(v)?v:[]}catch{return []}};
-export const clearLocalData=(uid?:string|null)=>{try{localStorage.removeItem(keyFor(uid));localStorage.removeItem('de_daily');localStorage.removeItem('de_practice');for(const k of Object.keys(localStorage))if(k.startsWith('de_oral:')||k.startsWith('de_alias:'))localStorage.removeItem(k)}catch{/* storage unavailable */}};
+export const clearLocalData=(uid?:string|null)=>{try{localStorage.removeItem(keyFor(uid));localStorage.removeItem('de_daily');localStorage.removeItem('de_practice');for(const k of ['de_seen','de_last_topic','de_study_days','de_exam','de_review'])localStorage.removeItem(k);for(const k of Object.keys(localStorage))if(k.startsWith('de_oral:')||k.startsWith('de_alias:'))localStorage.removeItem(k)}catch{/* storage unavailable */}};
 const save=(uid:string|null|undefined,p:Patient[])=>{try{localStorage.setItem(keyFor(uid),JSON.stringify(p))}catch{/* storage unavailable */}};
 
 const words={

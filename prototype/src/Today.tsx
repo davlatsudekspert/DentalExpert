@@ -5,6 +5,7 @@ import {useTopic} from './Curriculum';
 import {SUBJECTS,TOPICS,loadLast,loadSeen,markSlide,topicMeta,tx,type TopicMeta} from './curriculum';
 import {SubjectIcon,subjectColor} from './subjectArt';
 import {localDay} from './dailyData';
+import {streakDays} from './Achievements';
 import type {Lang} from './discoveryData';
 
 const words={
@@ -13,15 +14,6 @@ const words={
  en:{cont:'Continue',start:'Start',today:'Today’s lesson',next:'Next topic',slide:'slide',streak:'day streak',noStreak:'Start your streak today',learned:'topics learned'}
 };
 
-/** Days in a row (ending today or yesterday) with any daily practice or slide study recorded on this device. */
-function streak(){
- let days:Record<string,unknown>={};
- try{days={...JSON.parse(localStorage.getItem('de_daily')||'{}'),...JSON.parse(localStorage.getItem('de_study_days')||'{}')}}catch{/* storage unavailable */}
- let n=0;const d=new Date();
- if(!days[localDay(d)])d.setDate(d.getDate()-1);
- while(days[localDay(d)]){n++;d.setDate(d.getDate()-1)}
- return n;
-}
 const markStudyDay=()=>{try{const k='de_study_days';const v=JSON.parse(localStorage.getItem(k)||'{}');v[localDay()]=1;localStorage.setItem(k,JSON.stringify(v))}catch{/* storage unavailable */}};
 
 /** Home card: continue the last topic where it stopped, or start the next unseen one; streak and progress. */
@@ -37,7 +29,7 @@ export default function Today({lang}:{lang:Lang}){
  const nextMeta:TopicMeta|undefined=unfinished||order.find(m=>!seen[m.id]||seen[m.id].s<seen[m.id].n);
  const topic=useTopic(nextMeta?.id||null);
  const learned=Object.values(seen).filter(x=>x.s>=x.n).length;
- const st=streak();
+ const st=streakDays();
  void tick;
  if(!nextMeta)return null;
  const a=subjectColor(nextMeta.subject);

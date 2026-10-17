@@ -46,5 +46,8 @@ export function markSlide(id:string,slide:number,total:number){
  const seen=loadSeen();const cur=seen[id];
  if(!cur||slide+1>cur.s){seen[id]={s:Math.min(slide+1,total),n:total};write(SEEN,seen)}
  write(LAST,{id,slide});
+ // Any study counts towards the day streak.
+ const d=new Date(),day=`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
+ const days=read<Record<string,number>>('de_study_days',{});if(!days[day]){days[day]=1;write('de_study_days',days)}
 }
 export const topicDone=(id:string)=>{const x=loadSeen()[id];return !!x&&x.s>=x.n};
