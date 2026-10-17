@@ -2,6 +2,8 @@ import {guardPost,sessionUser,type SessionUser} from './auth';
 import {json,type Env} from './db';
 
 export const noStore='no-store';
+/** Minutes a started student may still submit after the time limit or after the teacher finishes a test. */
+export const GRACE_MIN=2;
 const ALPHABET='ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
 export const newCode=()=>{const b=crypto.getRandomValues(new Uint8Array(6));return [...b].map(x=>ALPHABET[x%ALPHABET.length]).join('')};
 export const newId=()=>crypto.randomUUID();

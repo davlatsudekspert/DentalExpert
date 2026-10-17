@@ -49,7 +49,11 @@ export const onRequestPost:PagesFunction<Env>=async({request,env})=>{
  const row=await env.DB.prepare(`SELECT test_assignment_id AS t FROM class_topics WHERE group_id=? AND topic_id=?`).bind(groupId,topicId).first<{t:string|null}>();
  if(!row)return json({error:'not_open'},409,noStore);
  if(action==='close'){
-  await env.DB.prepare(`UPDATE class_topics SET closed_at=datetime('now') WHERE group_id=? AND topic_id=?`).bind(groupId,topicId).run();
+  // Hiding a topic also ends its running test, so nobody can start it from the hidden topic.
+  await env.DB.batch([
+   env.DB.prepare(`UPDATE class_topics SET closed_at=datetime('now') WHERE group_id=? AND topic_id=?`).bind(groupId,topicId),
+   env.DB.prepare(`UPDATE class_assignments SET status='closed',closed_at=datetime('now') WHERE id=? AND status='open'`).bind(row.t)
+  ]);
   return json({ok:true},200,noStore);
  }
  if(action==='lecture'||action==='oral'){

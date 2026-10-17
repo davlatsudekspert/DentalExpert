@@ -37,10 +37,17 @@ call('/classroom/start','POST',{'assignmentId':aid},S2)
 check('teacher finishes',call('/classroom/topics','POST',{'groupId':g,'topicId':tid,'action':'finish'},T)[0]==200)
 s,r=call('/classroom/submit','POST',{'assignmentId':aid,'answers':[key[i] for i in pick]},S2);check('grace: started student can still submit',s==200 and r['score']==3)
 s,r=call(f'/classroom/assignments?groupId={g}',token=S);a=[x for x in r['assignments'] if x['id']==aid][0]
+check('no review during the grace minutes','review' not in a['mine'])
+check('finished topic test cannot be reopened',call('/classroom/assignments','PUT',{'assignmentId':aid,'status':'open'},T)[0]==403)
+# Move the finish time past the grace window (local D1 only).
+import subprocess
+subprocess.run(['npx','wrangler','d1','execute','dental-expert','--local','--command',f"UPDATE class_assignments SET closed_at=datetime('now','-3 minutes') WHERE id='{aid}'"],capture_output=True,check=True)
+s,r=call(f'/classroom/assignments?groupId={g}',token=S);a=[x for x in r['assignments'] if x['id']==aid][0]
 check('review after finish',a['mine']['review']['correct']==[key[i] for i in pick] and a['mine']['review']['answers']==ans and len(a['mine']['review']['explain'])==3)
 s,r=call(f'/classroom/assignments?groupId={g}&assignmentId={aid}',token=T);check('teacher sees answers per student',sorted(m['score'] for m in r['members'])==[2,3] and all(m['answers'] for m in r['members']))
 s,r=call(f'/classroom/gradebook?groupId={g}',token=T);check('gradebook',len(r['members'])==2 and r['quizzes'][0]['total']==3 and sorted(m['scores'][aid] for m in r['members'])==[2,3])
 check('student cannot read gradebook',call(f'/classroom/gradebook?groupId={g}',token=S)[0]==403)
 check('teacher hides topic',call('/classroom/topics','POST',{'groupId':g,'topicId':tid,'action':'close'},T)[0]==200)
+check('hidden topic test not listed to students',all(x.get('topicId')!=tid for x in call(f'/classroom/assignments?groupId={g}',token=S)[1]['assignments']))
 check('student no longer sees it',call(f'/classroom/topics?groupId={g}',token=S)[1]['topics']==[])
 print(f'{len(ok)} checks passed')

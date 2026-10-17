@@ -1,7 +1,5 @@
 import {json,type Env} from '../../_lib/db';
-import {body,clean,groupRole,needUser,noStore} from '../../_lib/classroom';
-
-const GRACE_MIN=2;
+import {GRACE_MIN,body,clean,groupRole,needUser,noStore} from '../../_lib/classroom';
 
 // A member answers a task (text, editable while open) or a quiz (one attempt). Quiz scoring happens here against the
 // teacher's key, which is never sent to students.

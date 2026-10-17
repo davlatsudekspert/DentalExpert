@@ -75,6 +75,8 @@ with sync_playwright() as p:
     tp.locator('.lg-tabs button',has_text='Jurnal').click();tp.wait_for_timeout(500)
     check('gradebook row',tp.locator('.lg-book tbody tr').count()==1)
     tp.screenshot(path=OUT+'/t7-gradebook.png',full_page=True)
+    import subprocess
+    subprocess.run(['npx','wrangler','d1','execute','dental-expert','--local','--command',"UPDATE class_assignments SET closed_at=datetime('now','-3 minutes') WHERE closed_at IS NOT NULL"],capture_output=True,check=True)
     sp.reload();sp.wait_for_selector('.classroom');sp.locator('.lg-row',has_text='Terapiya 3-kurs').click();sp.wait_for_timeout(800)
     sp.locator('.lg-row',has_text=topic['title']['uz']).click();sp.wait_for_timeout(800)
     check('student review shown',sp.locator('.lg-review li').count()==3)
