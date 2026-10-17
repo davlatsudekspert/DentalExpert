@@ -4,3 +4,4 @@ dist/
 *.tsbuildinfo
 dental-expert-prototype.zip
 .wrangler/
+.dev.vars

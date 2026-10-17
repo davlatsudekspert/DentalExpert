@@ -20,6 +20,7 @@ const photoIndex:Record<string,number>={
 const headscarfIndex:Record<string,number>={malika:0,nodira:1,'tashkent-3':2,'dubai-4':3};
 
 export function DemoAvatar({doctor,large=false}:{doctor:DemoDoctor;large?:boolean}){
+ if(doctor.photoUrl)return <span className={'demo-avatar photo '+(large?'large':'')} role="img" aria-label={doctor.name} style={{backgroundImage:`url(${doctor.photoUrl})`,backgroundSize:'cover',backgroundPosition:'center'}}/>;
  if(doctor.portrait!==undefined)return <Portrait person={doctor.portrait} large={large}/>;
  const scarf=headscarfIndex[doctor.id];
  if(scarf!==undefined)return <span className={'demo-avatar photo headscarf '+(large?'large':'')} role="img" aria-label={doctor.name} style={{backgroundImage:`url(${headscarfSheet})`,backgroundSize:'200% 200%',backgroundPosition:`${(scarf%2)*100}% ${Math.floor(scarf/2)*100}%`,backgroundRepeat:'no-repeat'}}/>;

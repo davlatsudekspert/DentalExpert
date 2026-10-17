@@ -1,4 +1,4 @@
-export interface Env {DB:D1Database;MEDIA:R2Bucket}
+export interface Env {DB:D1Database;MEDIA:R2Bucket;AUTH_SECRET?:string;RESEND_API_KEY?:string;AUTH_FROM?:string;AUTH_DEV_ECHO?:string}
 
 type Row=Record<string,unknown>;
 const parse=(v:unknown)=>typeof v==='string'?JSON.parse(v):v;
@@ -24,7 +24,7 @@ export async function doctorsInCity(db:D1Database,cityId:string,ids?:string[]){
   const id=r.id as string;
   if(!byId.has(id))byId.set(id,{
    id,fullName:r.full_name,initials:r.initials,specialty:parse(r.specialty),bio:parse(r.bio),
-   languages:parse(r.languages),services:parse(r.services),years:r.years,photoUrl:r.photo_url,
+   languages:parse(r.languages),services:parse(r.services),years:r.years,rating:r.rating??null,photoUrl:r.photo_url,
    licenseStatus:r.license_status,isDemo:!!r.is_demo,clinics:[],contacts:[]
   });
   (byId.get(id)!.clinics as Row[]).push({id:r.clinic_id,name:r.clinic_name,logoUrl:r.logo_url,cityId:r.city_id,address:parse(r.address)});

@@ -23,8 +23,20 @@ cd prototype
 CLOUDFLARE_API_TOKEN=... npx wrangler d1 migrations apply dental-expert --remote
 ```
 
-yoki Cloudflare yordamchisiga: «`dental-expert` D1 bazasida `prototype/migrations/0001_global_discovery.sql`, so‘ng `0002_demo_seed.sql` ni ketma-ket bajar».
+yoki Cloudflare yordamchisiga: «`dental-expert` D1 bazasida `prototype/migrations/0001_global_discovery.sql`, so‘ng `0002_demo_seed.sql`, `0003_auth_and_ratings.sql`, `0004_demo_ratings.sql` ni ketma-ket bajar».
 
 Lokal sinov: `npm run build && npm run db:local && npm run api:dev`, so‘ng `curl 'http://127.0.0.1:8788/api/sponsors?city=UZ-AN&includeDemo=1'`.
 
 **Xavfsizlik:** Cloudflare AI agentiga «Full access» token berilgan. Ishlar tugagach Cloudflare → My Profile → API Tokens bo‘limidan uni bekor qiling.
+
+## Email-kod (auth) uchun Pages sozlamalari
+
+Pages → `dental-expert` → Settings → Variables and Secrets (production), **Secret** sifatida:
+
+- `AUTH_SECRET` — uzun tasodifiy qator (kamida 32 belgi), kodlarni xeshlash uchun. Masalan: `openssl rand -base64 48`.
+- `RESEND_API_KEY` — [Resend](https://resend.com) API kaliti (email jo‘natish xizmati).
+- `AUTH_FROM` — jo‘natuvchi, masalan `Dental Expert <noreply@sizning-domeningiz>` (Resend’da domen tasdiqlangan bo‘lishi kerak; sinov uchun standart `onboarding@resend.dev` faqat o‘z emailingizga jo‘natadi).
+
+Shulardan biri yo‘q bo‘lsa, `/api/auth/me` `enabled:false` qaytaradi va ilova belgilangan demo kirishni saqlaydi. **`AUTH_DEV_ECHO` ni jonli muhitga hech qachon qo‘ymang** (kod javobda qaytadi; u faqat localhost’da ishlaydi, lekin baribir qo‘ymang).
+
+Lokal sinov: `prototype/.dev.vars` ga `AUTH_SECRET=...` va `AUTH_DEV_ECHO=1` yozing (git’ga kirmaydi), so‘ng `python3 tools/auth_test.py` va `python3 tools/e2e_live.py` (avval `npx wrangler d1 execute dental-expert --local --file tools/e2e_seed.sql`).

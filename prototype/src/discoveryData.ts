@@ -7,6 +7,8 @@ export type DemoDoctor={
  cityId:CityId;countryCode:'UZ'|'AE';clinic:string;
  specialty:Translated;bio:Translated;address:Translated;
  languages:string[];years:number;score:string;services:Translated[];
+ // Present only for profiles loaded from the API; local demo profiles leave these unset.
+ isDemo?:boolean;photoUrl?:string;contacts?:{kind:string;value:string}[];
 };
 
 export const demoCities:{id:CityId;countryCode:'UZ'|'AE';label:Translated}[]=[
