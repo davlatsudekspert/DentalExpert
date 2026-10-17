@@ -1,0 +1,129 @@
+{
+ "title": "Tish yuzalari va yo‘nalish atamalari",
+ "subtitle": "Stomatologiyada joylashuvni to‘g‘ri aytish",
+ "audience": "1-kurs talabalari",
+ "slides": [
+  {
+   "layout": "title",
+   "title": "Tish yuzalari",
+   "bullets": [
+    "Joylashuvni aniq ifodalash"
+   ],
+   "image": "occlusal"
+  },
+  {
+   "layout": "image-right",
+   "title": "Okklyuzal yuza",
+   "bullets": [
+    "Chaynash yuzasi",
+    "Do‘mboqchalar (bo‘rtmalar) va egatchalar (fissuralar) bor",
+    "Tishning bu qismida ovqat qoldiqlari ko‘proq to‘planishi mumkin"
+   ],
+   "image": "occlusal",
+   "caption": "Yuqoridan ko‘rinish"
+  },
+  {
+   "layout": "image-left",
+   "title": "Vestibulyar yuza",
+   "bullets": [
+    "Lunj yoki lab tomonga qaragan yuza",
+    "Old tishlarda labial, orqa tishlarda bukkal deb ham ataladi"
+   ],
+   "image": "front",
+   "caption": "Lunj tomondan ko‘rinish"
+  },
+  {
+   "layout": "image-right",
+   "title": "Lingval (til) yuza",
+   "bullets": [
+    "Til tomonga qaragan yuza",
+    "Yuqori jagda palatinal yuza deb ham yuritiladi"
+   ],
+   "image": "back",
+   "caption": "Til tomondan ko‘rinish"
+  },
+  {
+   "layout": "image-left",
+   "title": "Proksimal yuzalar",
+   "bullets": [
+    "Qo‘shni tishga qaragan yuzalar",
+    "Mezial — jag yoyining o‘rtasiga yaqin tomon",
+    "Distal — o‘rtadan uzoq tomon"
+   ],
+   "image": "right",
+   "caption": "Yon tomondan ko‘rinish"
+  },
+  {
+   "layout": "compare",
+   "title": "Ikki ko‘rinishni solishtiring",
+   "image": "front",
+   "caption": "Vestibulyar",
+   "image2": "back",
+   "caption2": "Lingval"
+  },
+  {
+   "layout": "closing",
+   "title": "Eslab qoling",
+   "bullets": [
+    "Okklyuzal — chaynash yuzasi",
+    "Vestibulyar — lunj/lab tomon",
+    "Lingval — til tomon",
+    "Mezial va distal — qo‘shni tishlar tomon"
+   ],
+   "image": "occlusal"
+  }
+ ],
+ "quiz": [
+  {
+   "q": "Chaynash yuzasi qanday ataladi?",
+   "options": [
+    "Okklyuzal",
+    "Lingval",
+    "Distal"
+   ],
+   "correct": 0,
+   "explanation": "Okklyuzal yuza chaynashda qarshi tish bilan uchrashadi."
+  },
+  {
+   "q": "Til tomonga qaragan yuza qaysi?",
+   "options": [
+    "Vestibulyar",
+    "Lingval",
+    "Mezial"
+   ],
+   "correct": 1,
+   "explanation": "Lingval yuza til tomonga qaragan."
+  },
+  {
+   "q": "Jag yoyining o‘rtasiga yaqin proksimal yuza qaysi?",
+   "options": [
+    "Distal",
+    "Mezial",
+    "Okklyuzal"
+   ],
+   "correct": 1,
+   "explanation": "Mezial yuza o‘rta chiziqqa yaqin tomonda."
+  },
+  {
+   "q": "Fissuralar qaysi yuzada joylashadi?",
+   "options": [
+    "Okklyuzal",
+    "Distal",
+    "Vestibulyar"
+   ],
+   "correct": 0,
+   "explanation": "Egatchalar chaynash yuzasida joylashadi."
+  },
+  {
+   "q": "Lunj tomonga qaragan yuza qaysi?",
+   "options": [
+    "Lingval",
+    "Vestibulyar",
+    "Mezial"
+   ],
+   "correct": 1,
+   "explanation": "Vestibulyar yuza lunj yoki lab tomonga qaraydi."
+  }
+ ],
+ "id": "tooth-surfaces"
+}

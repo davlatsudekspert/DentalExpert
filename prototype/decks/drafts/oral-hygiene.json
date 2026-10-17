@@ -1,0 +1,118 @@
+{
+ "title": "Og‘iz gigiyenasi asoslari",
+ "subtitle": "Kundalik parvarish qadamlari",
+ "audience": "Umumiy ta’lim",
+ "slides": [
+  {
+   "layout": "title",
+   "title": "Og‘iz gigiyenasi asoslari",
+   "bullets": [
+    "Kundalik parvarish qadamlari"
+   ],
+   "image": "hero"
+  },
+  {
+   "layout": "image-right",
+   "title": "Nima uchun tozalash kerak?",
+   "bullets": [
+    "Tish yuzasida har kuni bakterial karash hosil bo‘ladi",
+    "Uni muntazam olib tashlash karies va milk yallig‘lanishi xavfini kamaytiradi"
+   ],
+   "image": "healthy",
+   "caption": "Sog‘lom tish"
+  },
+  {
+   "layout": "bullets",
+   "title": "Tish tozalash",
+   "bullets": [
+    "Kuniga ikki marta ftorli pasta bilan",
+    "Barcha yuzalarni tozalang: lunj, til va chaynash tomonlarini",
+    "Tozalashga yetarli vaqt ajrating, shoshilmang",
+    "Cho‘tkani eskirganda almashtiring"
+   ]
+  },
+  {
+   "layout": "image-left",
+   "title": "Chaynash yuzasiga e’tibor",
+   "bullets": [
+    "Egatchalarga cho‘tka tukchalarini yo‘naltiring",
+    "Orqa tishlarni ham to‘liq tozalang"
+   ],
+   "image": "occlusal",
+   "caption": "Egatchali chaynash yuzasi"
+  },
+  {
+   "layout": "bullets",
+   "title": "Tishlararo tozalash va ko‘rik",
+   "bullets": [
+    "Tishlar orasini tish ipi yoki tishlararo cho‘tkalar bilan tozalang",
+    "Tilning karashini yumshoq tozalang",
+    "Stomatolog tavsiya qilgan muddatda profilaktik ko‘rikdan o‘ting"
+   ]
+  },
+  {
+   "layout": "closing",
+   "title": "Eslab qoling",
+   "bullets": [
+    "Kuniga ikki marta ftorli pasta",
+    "Barcha yuzalarni tozalang",
+    "Tishlar orasini unutmang",
+    "Muntazam ko‘rik"
+   ],
+   "image": "hero"
+  }
+ ],
+ "quiz": [
+  {
+   "q": "Tish yuzasida har kuni nima hosil bo‘ladi?",
+   "options": [
+    "Bakterial karash",
+    "Yangi emal",
+    "Dentin"
+   ],
+   "correct": 0,
+   "explanation": "Bakterial karash muntazam tozalanishi kerak."
+  },
+  {
+   "q": "Odatda necha marta tish tozalash tavsiya etiladi?",
+   "options": [
+    "Kuniga ikki marta",
+    "Haftada bir marta",
+    "Faqat kasal bo‘lganda"
+   ],
+   "correct": 0,
+   "explanation": "Ftorli pasta bilan kuniga ikki marta."
+  },
+  {
+   "q": "Tishlar orasi qanday tozalanadi?",
+   "options": [
+    "Tish ipi yoki tishlararo cho‘tka bilan",
+    "Faqat chayish bilan",
+    "Tozalash shart emas"
+   ],
+   "correct": 0,
+   "explanation": "Cho‘tka tishlar orasiga yetib bormaydi."
+  },
+  {
+   "q": "Qaysi yuzaga alohida e’tibor kerak?",
+   "options": [
+    "Chaynash yuzasi egatchalari",
+    "Faqat old yuza",
+    "Hech qaysi"
+   ],
+   "correct": 0,
+   "explanation": "Egatchalarda karash to‘planishi mumkin."
+  },
+  {
+   "q": "Profilaktik ko‘rikni kim belgilaydi?",
+   "options": [
+    "Stomatolog tavsiyasi bo‘yicha",
+    "Reklama",
+    "Tasodif"
+   ],
+   "correct": 0,
+   "explanation": "Muddat stomatolog tavsiyasiga qarab belgilanadi."
+  }
+ ],
+ "id": "oral-hygiene"
+}

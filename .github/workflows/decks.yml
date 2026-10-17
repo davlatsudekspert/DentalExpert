@@ -1,0 +1,43 @@
+name: Generate decks with Claude
+
+on:
+  workflow_dispatch:
+    inputs:
+      ids:
+        description: 'Comma-separated deck ids (empty = all drafts)'
+        required: false
+        default: ''
+
+permissions:
+  contents: read
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: prototype
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install python-pptx pillow anthropic
+      - name: Install LibreOffice and poppler (slide rendering)
+        run: sudo apt-get update && sudo apt-get install -y --no-install-recommends libreoffice-impress poppler-utils fonts-liberation
+        working-directory: .
+      - name: Generate drafts with the Claude API
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          if [ -z "$ANTHROPIC_API_KEY" ]; then echo "::error::Missing secret ANTHROPIC_API_KEY"; exit 1; fi
+          if [ -n "${{ github.event.inputs.ids }}" ]; then python3 tools/decks.py generate --ids "${{ github.event.inputs.ids }}"; else python3 tools/decks.py generate; fi
+      - name: Build PPTX and slide images from the generated drafts (review only)
+        run: python3 tools/decks.py build --review
+      - uses: actions/upload-artifact@v4
+        with:
+          name: claude-generated-decks-for-review
+          path: |
+            prototype/decks/generated
+            prototype/decks/review
+          if-no-files-found: error

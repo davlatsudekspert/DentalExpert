@@ -11,3 +11,7 @@ android/app/build/
 android/build/
 ios/App/Pods/
 ios/DerivedData/
+decks/out/
+decks/generated/
+release/
+decks/review/

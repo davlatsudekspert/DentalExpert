@@ -1,0 +1,119 @@
+{
+ "title": "Tish turlari va FDI raqamlash",
+ "subtitle": "Doimiy va sut tishlari tizimi",
+ "audience": "1–2-kurs talabalari",
+ "slides": [
+  {
+   "layout": "title",
+   "title": "Tish turlari va FDI raqamlash",
+   "bullets": [
+    "Ikki xonali tizim"
+   ],
+   "image": "hero"
+  },
+  {
+   "layout": "image-right",
+   "title": "Tish turlari",
+   "bullets": [
+    "Kesuvchi tishlar — ovqatni kesadi",
+    "Qoziq tishlar — yirtadi",
+    "Kichik oziq (premolyar) va katta oziq (molyar) tishlar — maydalaydi"
+   ],
+   "image": "front",
+   "caption": "Molyar: ko‘p do‘mboqchali chaynash tishi"
+  },
+  {
+   "layout": "bullets",
+   "title": "Tishlar soni",
+   "bullets": [
+    "Doimiy tishlar: to‘liq tish yoyida 32 ta (aql tishlari bilan)",
+    "Sut tishlari: 20 ta",
+    "Bola o‘sishi bilan sut tishlari doimiylarga almashadi"
+   ]
+  },
+  {
+   "layout": "bullets",
+   "title": "FDI tizimi",
+   "bullets": [
+    "Har bir tish ikki xonali raqam bilan belgilanadi",
+    "Birinchi raqam — kvadrant (jag choragi)",
+    "Ikkinchi raqam — tishning o‘rta chiziqdan hisoblangan tartibi",
+    "Doimiy tishlarda kvadrantlar 1–4, sut tishlarida 5–8"
+   ]
+  },
+  {
+   "layout": "image-left",
+   "title": "Misol: molyar",
+   "bullets": [
+    "Molyarlar jag yoyining orqa qismida joylashadi",
+    "Katta chaynash yuzasiga ega",
+    "Ildizlar soni tish va jagga qarab farq qiladi"
+   ],
+   "image": "occlusal",
+   "caption": "Molyarning chaynash yuzasi"
+  },
+  {
+   "layout": "closing",
+   "title": "Eslab qoling",
+   "bullets": [
+    "32 ta doimiy, 20 ta sut tishi",
+    "FDI — ikki xonali raqam",
+    "Birinchi raqam kvadrantni bildiradi"
+   ],
+   "image": "hero"
+  }
+ ],
+ "quiz": [
+  {
+   "q": "Doimiy tishlar soni (aql tishlari bilan) nechta?",
+   "options": [
+    "20",
+    "28",
+    "32"
+   ],
+   "correct": 2,
+   "explanation": "To‘liq doimiy tish yoyida 32 ta tish bo‘ladi."
+  },
+  {
+   "q": "Sut tishlari nechta?",
+   "options": [
+    "20",
+    "24",
+    "32"
+   ],
+   "correct": 0,
+   "explanation": "Sut tishlari soni 20 ta."
+  },
+  {
+   "q": "FDI raqamining birinchi raqami nimani bildiradi?",
+   "options": [
+    "Kvadrantni",
+    "Tish rangini",
+    "Ildizlar sonini"
+   ],
+   "correct": 0,
+   "explanation": "Birinchi raqam jag chorak (kvadrant)ini ko‘rsatadi."
+  },
+  {
+   "q": "Qaysi tishlar asosan maydalaydi?",
+   "options": [
+    "Kesuvchi",
+    "Molyar",
+    "Qoziq"
+   ],
+   "correct": 1,
+   "explanation": "Molyarlar katta chaynash yuzasiga ega va ovqatni maydalaydi."
+  },
+  {
+   "q": "Doimiy tishlarda kvadrantlar qaysi raqamlar bilan belgilanadi?",
+   "options": [
+    "1–4",
+    "5–8",
+    "Faqat 1"
+   ],
+   "correct": 0,
+   "explanation": "Doimiy tishlarda 1–4, sut tishlarida 5–8."
+  }
+ ],
+ "id": "tooth-types-fdi"
+}

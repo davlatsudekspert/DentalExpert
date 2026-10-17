@@ -1,7 +1,7 @@
 import {useState} from 'react';
-import {ArrowRight,BookOpen,Check,Download,Layers,RotateCw} from 'lucide-react';
+import {ArrowRight,BookOpen,Check,Layers,RotateCw} from 'lucide-react';
 import cutaway from '../assets/tooth3d/premium-reference-cutaway-ivory.webp';
-import slides from '../assets/academy/tooth-layers-demo-uz.pptx';
+import DeckLibrary from './DeckLibrary';
 import type {Lang} from './discoveryData';
 
 const copy={
@@ -38,7 +38,7 @@ export default function AcademyDemo({screen,lang,onNavigate}:{screen:'lessonPage
   <div className="academy-visual"><img src={cutaway} alt={t.image}/></div>
   <div className="academy-layer-grid">{(['enamel','dentin','pulp','root'] as const).map((key,index)=><div key={key}><span className={'academy-dot layer-'+index}/><strong>{t[key]}</strong></div>)}</div>
   <p className="academy-source">{t.source}</p>
-  <a className="academy-download" href={slides} download="DentalExpert_Tish_Qatlamlari_Demo_UZ.pptx"><Download size={17}/>{t.presentation}</a>
+  <DeckLibrary lang={lang}/>
   <div className="academy-quiz-heading"><Layers size={22}/><div><h3>{t.quiz}</h3><p>{t.quizHint}</p></div></div>
   {questions[lang].map((question,index)=><div className="academy-question card" key={index}><strong>{String(index+1).padStart(2,'0')} · {question[0]}</strong><div>{question.slice(1).map((option,choice)=><button key={option} className={answers[index]===choice?'chosen':''} aria-pressed={answers[index]===choice} onClick={()=>setAnswers(prev=>prev.map((x,i)=>i===index?choice:x))}>{option}</button>)}</div>{answers[index]!==null&&<p className={answers[index]===0?'right':'try-again'}>{answers[index]===0?t.correct:t.wrong} · {t.image}</p>}</div>)}
   {answers.every(x=>x!==null)&&<p className="academy-score" role="status">{t.result}: {score} / 3</p>}

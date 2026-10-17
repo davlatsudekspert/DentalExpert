@@ -1,0 +1,132 @@
+{
+ "title": "Karies: umumiy tushuncha",
+ "subtitle": "Qanday paydo bo‘ladi va nima ta’sir qiladi",
+ "audience": "Umumiy ta’lim, 1–2-kurs",
+ "slides": [
+  {
+   "layout": "title",
+   "title": "Karies: umumiy tushuncha",
+   "bullets": [
+    "Ta’lim maqsadidagi qisqa tanishuv"
+   ],
+   "image": "healthy"
+  },
+  {
+   "layout": "image-right",
+   "title": "Karies nima?",
+   "bullets": [
+    "Tish qattiq to‘qimalarining kislotalar ta’sirida asta-sekin mineralsizlanishi",
+    "Jarayon tish yuzasidagi bakterial karash (biofilm) bilan bog‘liq",
+    "Dastlabki bosqichda tish yuzasi hali butun bo‘lishi mumkin"
+   ],
+   "image": "healthy",
+   "caption": "Sog‘lom molyar"
+  },
+  {
+   "layout": "bullets",
+   "title": "Rivojlanishga ta’sir qiluvchi omillar",
+   "bullets": [
+    "Tish yuzasidagi bakterial karash",
+    "Qand va boshqa tez fermentlanadigan uglevodlar (ayniqsa tez-tez iste’mol qilinsa)",
+    "Vaqt: karash qancha uzoq qolsa, xavf shuncha yuqori",
+    "Tishning o‘zi va so‘lak xususiyatlari"
+   ]
+  },
+  {
+   "layout": "image-left",
+   "title": "Nega chaynash yuzasi xavfliroq?",
+   "bullets": [
+    "Egatchalar (fissuralar) tor va chuqur bo‘lishi mumkin",
+    "Cho‘tka tukchalari ularga to‘liq kirmasligi mumkin",
+    "Shu sabab bu joylarni tozalashga alohida e’tibor kerak"
+   ],
+   "image": "occlusal",
+   "caption": "Chaynash yuzasidagi egatchalar"
+  },
+  {
+   "layout": "image-right",
+   "title": "Karies chuqurlashganda",
+   "bullets": [
+    "Emaldan dentinga o‘tishi mumkin",
+    "Dentin kanalchalari orqali sezuvchanlik oshishi mumkin",
+    "Davolash qarorini faqat stomatolog ko‘rikdan so‘ng qabul qiladi"
+   ],
+   "image": "cutaway",
+   "caption": "Emal, dentin va pulpa joylashuvi"
+  },
+  {
+   "layout": "bullets",
+   "title": "Profilaktika asoslari",
+   "bullets": [
+    "Kuniga ikki marta ftorli pasta bilan tish tozalash",
+    "Shirinlik iste’molining miqdori va chastotasini kamaytirish",
+    "Tishlararo bo‘shliqlarni tozalash",
+    "Stomatolog tavsiya qilgan muddatda ko‘rikdan o‘tish"
+   ]
+  },
+  {
+   "layout": "closing",
+   "title": "Eslab qoling",
+   "bullets": [
+    "Karies — kislota ta’sirida mineralsizlanish jarayoni",
+    "Biofilm va qand asosiy omillar",
+    "Profilaktika oddiy kundalik odatlardan boshlanadi",
+    "Tashxis va davolash — stomatolog vazifasi"
+   ],
+   "image": "healthy"
+  }
+ ],
+ "quiz": [
+  {
+   "q": "Karies qaysi jarayonga asoslanadi?",
+   "options": [
+    "Tishning kislotalar ta’sirida mineralsizlanishi",
+    "Tishning yangi hujayra bilan to‘lishi",
+    "Faqat tishning rangi o‘zgarishi"
+   ],
+   "correct": 0,
+   "explanation": "Karies — mineralsizlanish jarayoni."
+  },
+  {
+   "q": "Qaysi omil kariesga ta’sir qiladi?",
+   "options": [
+    "Biofilm va uglevodlar",
+    "Faqat tish shakli",
+    "Faqat yosh"
+   ],
+   "correct": 0,
+   "explanation": "Biofilm va tez fermentlanadigan uglevodlar asosiy omillardan."
+  },
+  {
+   "q": "Nega fissuralarni tozalash qiyin?",
+   "options": [
+    "Ular tor va chuqur bo‘lishi mumkin",
+    "Ular juda katta",
+    "Ular pulpada joylashgan"
+   ],
+   "correct": 0,
+   "explanation": "Tor egatchalarga cho‘tka tukchalari yetib bormasligi mumkin."
+  },
+  {
+   "q": "Karies davolash qarorini kim qabul qiladi?",
+   "options": [
+    "Stomatolog",
+    "Do‘st maslahati",
+    "Internetdagi video"
+   ],
+   "correct": 0,
+   "explanation": "Tashxis va davolash stomatolog ko‘rigidan keyin belgilanadi."
+  },
+  {
+   "q": "Profilaktikaga nima kiradi?",
+   "options": [
+    "Ftorli pasta bilan muntazam tozalash",
+    "Tish tozalamaslik",
+    "Faqat shirinlik"
+   ],
+   "correct": 0,
+   "explanation": "Muntazam gigiyena karies xavfini kamaytiradi."
+  }
+ ],
+ "id": "caries-basics"
+}

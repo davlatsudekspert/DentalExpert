@@ -1,0 +1,117 @@
+{
+ "title": "Parodont: tishni ushlab turuvchi to‘qimalar",
+ "subtitle": "Milk, boylam, suyak va sement",
+ "audience": "2-kurs talabalari",
+ "slides": [
+  {
+   "layout": "title",
+   "title": "Parodont",
+   "bullets": [
+    "Tishni ushlab turuvchi to‘qimalar"
+   ],
+   "image": "hero"
+  },
+  {
+   "layout": "image-right",
+   "title": "Parodont nima?",
+   "bullets": [
+    "Tish atrofidagi va uni ushlab turuvchi to‘qimalar majmuasi",
+    "Milk (gingiva), alveolyar suyak, periodontal boylam va ildiz sementi"
+   ],
+   "image": "cutaway",
+   "caption": "Ildiz atrofi"
+  },
+  {
+   "layout": "bullets",
+   "title": "Parodont tarkibi",
+   "bullets": [
+    "Milk — tish bo‘yni atrofini qoplaydigan yumshoq to‘qima",
+    "Alveolyar suyak — tish ildizi joylashgan jag suyagi chuquri",
+    "Periodontal boylam — tish va suyakni bog‘laydi",
+    "Sement — ildiz yuzasi, boylam tolalari birikadigan joy"
+   ]
+  },
+  {
+   "layout": "image-left",
+   "title": "Tishning mustahkam turishi",
+   "bullets": [
+    "Boylam tolalari bir uchi bilan sementga, ikkinchi uchi bilan suyakka birikadi",
+    "Chaynash kuchini suyakka teng taqsimlashga yordam beradi"
+   ],
+   "image": "right",
+   "caption": "Ildizlar jag suyagi ichida joylashadi"
+  },
+  {
+   "layout": "bullets",
+   "title": "Gingivit va parodontit",
+   "bullets": [
+    "Gingivit — milkning yallig‘lanishi; to‘g‘ri gigiyena va davo bilan qaytishi mumkin",
+    "Parodontit — yallig‘lanish tishni ushlab turuvchi to‘qimalarga, jumladan suyakka o‘tgan holat",
+    "Belgilar: milk qizarishi, qonashi; aniq tashxis stomatologdan"
+   ]
+  },
+  {
+   "layout": "closing",
+   "title": "Eslab qoling",
+   "bullets": [
+    "Parodont — to‘rt komponent",
+    "Boylam tishni suyakka bog‘laydi",
+    "Milk qonashi stomatologga murojaat sababi"
+   ],
+   "image": "hero"
+  }
+ ],
+ "quiz": [
+  {
+   "q": "Parodont tarkibiga nima kirmaydi?",
+   "options": [
+    "Emal",
+    "Milk",
+    "Periodontal boylam"
+   ],
+   "correct": 0,
+   "explanation": "Emal tojning qatlami; parodont tishni ushlab turuvchi to‘qimalar."
+  },
+  {
+   "q": "Boylam tolalari ildizning qaysi qatlamiga birikadi?",
+   "options": [
+    "Sement",
+    "Emal",
+    "Pulpa"
+   ],
+   "correct": 0,
+   "explanation": "Tolalar sementga birikadi."
+  },
+  {
+   "q": "Gingivit nima?",
+   "options": [
+    "Milk yallig‘lanishi",
+    "Emal yo‘qolishi",
+    "Suyak o‘sishi"
+   ],
+   "correct": 0,
+   "explanation": "Gingivit — milkning yallig‘lanishi."
+  },
+  {
+   "q": "Parodontit gingivitdan nimasi bilan farq qiladi?",
+   "options": [
+    "Tayanch to‘qimalar, jumladan suyak jarohatlanadi",
+    "Faqat tish rangi o‘zgaradi",
+    "Umuman farq yo‘q"
+   ],
+   "correct": 0,
+   "explanation": "Parodontitda tayanch to‘qimalar zararlanadi."
+  },
+  {
+   "q": "Milk qonashi bo‘lsa nima qilish kerak?",
+   "options": [
+    "Stomatologga murojaat qilish",
+    "Hech narsa qilmaslik",
+    "O‘zboshimchalik bilan davolash"
+   ],
+   "correct": 0,
+   "explanation": "Aniq sabab va davo stomatolog tomonidan belgilanadi."
+  }
+ ],
+ "id": "periodontium"
+}

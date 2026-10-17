@@ -1,0 +1,143 @@
+{
+ "title": "Tish qatlamlari",
+ "subtitle": "Emal, dentin, pulpa va sement",
+ "audience": "1–2-kurs talabalari",
+ "slides": [
+  {
+   "layout": "title",
+   "title": "Tish qatlamlari",
+   "bullets": [
+    "Emal",
+    "dentin",
+    "pulpa",
+    "sement"
+   ],
+   "image": "hero"
+  },
+  {
+   "layout": "image-right",
+   "title": "Tish qanday tuzilgan?",
+   "bullets": [
+    "Tish toji — og‘iz bo‘shlig‘iga ko‘rinib turgan qism",
+    "Tish ildizi — jag‘ suyagi ichida joylashgan qism",
+    "Toj va ildiz chegarasi — tish bo‘yni"
+   ],
+   "image": "front",
+   "caption": "Tashqi ko‘rinish"
+  },
+  {
+   "layout": "image-left",
+   "title": "Emal",
+   "bullets": [
+    "Tojni qoplaydigan tashqi qatlam",
+    "Inson tanasidagi eng qattiq mineralizatsiyalangan to‘qima",
+    "Tirik hujayralarga ega emas, shuning uchun o‘zi tiklanmaydi"
+   ],
+   "image": "cutaway",
+   "caption": "Kesimdagi tashqi oq qatlam"
+  },
+  {
+   "layout": "image-right",
+   "title": "Dentin",
+   "bullets": [
+    "Tishning asosiy qismini tashkil qiladi",
+    "Emal va sement ostida joylashgan",
+    "Mayda dentin kanalchalari bor; shuning uchun sezuvchanlik paydo bo‘lishi mumkin"
+   ],
+   "image": "cutaway2",
+   "caption": "Emal ostidagi oqish-sariq qatlam"
+  },
+  {
+   "layout": "image-left",
+   "title": "Pulpa",
+   "bullets": [
+    "Tish markazidagi yumshoq to‘qima",
+    "Qon tomirlari va nerv tolalari joylashgan",
+    "Tishni oziqlantiradi va sezgi beradi"
+   ],
+   "image": "cutaway",
+   "caption": "Markazdagi qizil qism"
+  },
+  {
+   "layout": "bullets",
+   "title": "Sement va ildiz",
+   "bullets": [
+    "Sement ildiz yuzasini qoplaydi",
+    "Parodont boylamlari sementga birikadi",
+    "Ildiz kanali pulpa to‘qimasini ildiz uchigacha davom ettiradi"
+   ]
+  },
+  {
+   "layout": "compare",
+   "title": "Qatlamlarni solishtiring",
+   "image": "front",
+   "caption": "Tashqi ko‘rinish",
+   "image2": "cutaway",
+   "caption2": "Ichki tuzilish"
+  },
+  {
+   "layout": "closing",
+   "title": "Eslab qoling",
+   "bullets": [
+    "Emal himoya qiladi",
+    "Dentin asosiy tayanch",
+    "Pulpa tirik to‘qima",
+    "Sement ildizni boylamlarga biriktiradi"
+   ],
+   "image": "hero"
+  }
+ ],
+ "quiz": [
+  {
+   "q": "Tojning tashqi qatlami qaysi?",
+   "options": [
+    "Emal",
+    "Pulpa",
+    "Sement"
+   ],
+   "correct": 0,
+   "explanation": "Emal tojni qoplaydi va eng qattiq to‘qimadir."
+  },
+  {
+   "q": "Qon tomirlari va nervlar qayerda joylashgan?",
+   "options": [
+    "Emalda",
+    "Pulpada",
+    "Sementda"
+   ],
+   "correct": 1,
+   "explanation": "Pulpa tishning yumshoq, tirik to‘qimasi."
+  },
+  {
+   "q": "Parodont boylamlari qaysi qatlamga birikadi?",
+   "options": [
+    "Sement",
+    "Emal",
+    "Dentin kanalchalari"
+   ],
+   "correct": 0,
+   "explanation": "Boylamlar ildiz sementiga mustahkamlanadi."
+  },
+  {
+   "q": "Dentin qayerda joylashgan?",
+   "options": [
+    "Emal ustida",
+    "Emal va sement ostida",
+    "Faqat ildiz uchida"
+   ],
+   "correct": 1,
+   "explanation": "Dentin emal va sement ostida, pulpa atrofida joylashadi."
+  },
+  {
+   "q": "Emal nima uchun o‘zi tiklanmaydi?",
+   "options": [
+    "Unda hujayralar yo‘q",
+    "U juda yumshoq",
+    "U pulpa ichida"
+   ],
+   "correct": 0,
+   "explanation": "Emal tirik hujayralarni saqlamaydi."
+  }
+ ],
+ "id": "tooth-layers"
+}

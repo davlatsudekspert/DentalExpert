@@ -1,0 +1,10 @@
+{
+ "hero": {"file": "assets/tooth3d/premium-reference-hero-ivory.webp", "about": "Molar tooth with a light-blue glow ring, transparent background; decorative opener"},
+ "front": {"file": "assets/tooth3d/turntable-front.webp", "about": "Molar seen from the cheek side (vestibular view), crown with cusps and roots"},
+ "right": {"file": "assets/tooth3d/turntable-right.webp", "about": "Molar seen from the side (proximal view)"},
+ "back": {"file": "assets/tooth3d/turntable-back.webp", "about": "Molar seen from the tongue side (lingual view)"},
+ "occlusal": {"file": "assets/tooth3d/archive-occlusal.webp", "about": "Chewing surface (occlusal view) with cusps and fissures"},
+ "healthy": {"file": "assets/tooth3d/archive-healthy.webp", "about": "Healthy molar, warm ivory enamel, full roots"},
+ "cutaway": {"file": "assets/tooth3d/premium-reference-cutaway-ivory.webp", "about": "Cutaway molar showing enamel, dentin, pulp chamber and root canal (red)"},
+ "cutaway2": {"file": "assets/tooth3d/archive-cutaway.webp", "about": "Second cutaway view with enamel, dentin and pulp"}
+}
