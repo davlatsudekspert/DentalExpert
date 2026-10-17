@@ -230,3 +230,24 @@ html.native::after{content:'';position:fixed;left:0;right:0;bottom:0;height:calc
 .language-option:active{transform:scale(.98);border-color:#17a6b7}
 
 .help-links{display:grid;gap:8px;padding:6px 20px 14px}.help-links a{display:block;padding:13px 16px;border:1px solid #d3e6ee;border-radius:14px;background:#fff;color:#10254e;text-decoration:none;font-size:14px}
+
+.atlas3d-launch{position:relative;display:flex;align-items:center;justify-content:space-between;gap:12px;width:calc(100% - 40px);margin:6px 20px 10px;padding:14px 16px;border:0;border-radius:20px;background:linear-gradient(120deg,#0d2447,#14437a 60%,#17a6b7);color:#fff;font:inherit;text-align:left;cursor:pointer;overflow:hidden;box-shadow:0 14px 32px #0d244755}
+.atlas3d-launch-glow{position:absolute;inset:-40% -10% auto auto;width:180px;height:180px;border-radius:50%;background:radial-gradient(circle,#7fe3ffaa,transparent 65%);pointer-events:none}
+.atlas3d-launch-text{display:flex;align-items:baseline;gap:12px;position:relative}.atlas3d-launch-text b{font-size:26px;letter-spacing:.04em}.atlas3d-launch-text span{font-size:13px;opacity:.9}
+.atlas3d{position:fixed;inset:0;z-index:120;display:flex;flex-direction:column;background:radial-gradient(ellipse at 50% 38%,#1c4f84 0%,#0d2447 55%,#06111f 100%);color:#fff;user-select:none;-webkit-user-select:none}
+.atlas3d-top{display:flex;align-items:center;gap:10px;padding:10px 14px;padding-top:calc(10px + env(safe-area-inset-top));position:relative;z-index:2}
+.atlas3d-top>div{flex:1;display:grid}.atlas3d-top strong{font-size:16px}.atlas3d-top small{font-size:12px;opacity:.7}
+.atlas3d-top button{width:42px;height:42px;border:0;border-radius:13px;background:#ffffff1f;color:#fff;display:grid;place-items:center;cursor:pointer}
+.atlas3d-stage{position:relative;flex:1;min-height:0;overflow:hidden}
+.atlas3d-stage.fallback{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:20px}.atlas3d-stage.fallback img{max-width:88%;max-height:70%;object-fit:contain}.atlas3d-stage.fallback p{opacity:.8;font-size:13px;text-align:center}
+.atlas3d-lines{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:1}
+.atlas3d-loading{position:absolute;inset:0;display:grid;place-items:center;z-index:3}.atlas3d-loading i{width:42px;height:42px;border:3px solid #ffffff33;border-top-color:#7fe3ff;border-radius:50%;animation:a3d-spin 1s linear infinite}
+@keyframes a3d-spin{to{transform:rotate(360deg)}}
+.atlas3d-bottom{position:relative;z-index:2;display:grid;gap:10px;padding:8px 12px calc(12px + env(safe-area-inset-bottom))}
+.atlas3d-card{display:flex;gap:12px;align-items:flex-start;padding:12px 14px;border:1.5px solid;border-radius:18px;background:#0b1e3bcc;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+.atlas3d-card i{width:12px;height:12px;border-radius:50%;margin-top:5px;flex:none;box-shadow:0 0 12px currentColor}.atlas3d-card strong{font-size:16px}.atlas3d-card p{margin:3px 0 0;font-size:13px;line-height:1.4;opacity:.88}
+.atlas3d-chips{display:flex;gap:8px;overflow-x:auto;padding-bottom:2px;scrollbar-width:none}.atlas3d-chips::-webkit-scrollbar{display:none}
+.atlas3d-chips button{flex:none;display:inline-flex;align-items:center;gap:7px;min-height:40px;padding:0 14px;border:1.5px solid #ffffff30;border-radius:999px;background:#ffffff14;color:#fff;font:inherit;font-size:13px;cursor:pointer}
+.atlas3d-chips button i{width:10px;height:10px;border-radius:50%;background:var(--c);box-shadow:0 0 8px var(--c)}
+.atlas3d-chips button.on{border-color:var(--c);background:#ffffff26}.atlas3d-chips .explode{background:linear-gradient(120deg,#17a6b7,#0b7ea0);border-color:transparent;font-weight:600}.atlas3d-chips .explode.on{background:#ffffff26;border-color:#7fe3ff}
+.atlas3d-note{font-size:11px;opacity:.55;text-align:center}

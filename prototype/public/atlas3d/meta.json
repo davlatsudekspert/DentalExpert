@@ -1,0 +1,43 @@
+{
+ "size": [
+  1024,
+  1024
+ ],
+ "plates": [
+  "interior",
+  "exterior",
+  "dentin",
+  "enamel",
+  "pulp",
+  "vessels",
+  "nerves"
+ ],
+ "anchors": {
+  "pulp": [
+   639,
+   557
+  ],
+  "dentin": [
+   663,
+   539
+  ],
+  "enamel": [
+   692,
+   224
+  ],
+  "exterior": [
+   351,
+   735
+  ],
+  "vessels": [
+   653,
+   425
+  ]
+ },
+ "bbox": [
+  189,
+  21,
+  837,
+  1005
+ ]
+}
