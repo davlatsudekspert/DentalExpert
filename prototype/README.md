@@ -2,7 +2,7 @@
 
 Mustaqil React + TypeScript + Vite dizayn prototipi. Backend, API, haqiqiy autentifikatsiya, to‘lov va bemor bazasi yo‘q. GitHub Pages manzili hozir 404 qaytaryapti; interaktiv demo hali onlayn ishlamaydi.
 
-Global mahsulot talablari [`PRODUCT_VISION.md`](PRODUCT_VISION.md)da, shahar reklamalari va Free/Pro taklifi [`MONETIZATION_PLAN.md`](MONETIZATION_PLAN.md)da, ustoz/talaba oqimi [`EDUCATION_PLAN.md`](EDUCATION_PLAN.md)da, App Store/Google Play’ga chiqarish talablari [`STORE_RELEASE_REQUIREMENTS.md`](STORE_RELEASE_REQUIREMENTS.md)da, Claude uchun birinchi kodlash bosqichi [`CLAUDE_NEXT_STEP.md`](CLAUDE_NEXT_STEP.md)da. Hozirgi ekranlar bu talablardagi haqiqiy xizmatlar tayyorligini anglatmaydi.
+Global mahsulot talablari [`PRODUCT_VISION.md`](PRODUCT_VISION.md)da, shahar reklamalari va Free/Pro taklifi [`MONETIZATION_PLAN.md`](MONETIZATION_PLAN.md)da, do‘kon komissiyasi hisobga olingan **sinov narxlari** [`STORE_PRICING_MODEL.md`](STORE_PRICING_MODEL.md)da, ustoz/talaba oqimi [`EDUCATION_PLAN.md`](EDUCATION_PLAN.md)da, App Store/Google Play’ga chiqarish talablari [`STORE_RELEASE_REQUIREMENTS.md`](STORE_RELEASE_REQUIREMENTS.md)da, Claude uchun birinchi kodlash bosqichi [`CLAUDE_NEXT_STEP.md`](CLAUDE_NEXT_STEP.md)da. Hozirgi ekranlar bu talablardagi haqiqiy xizmatlar tayyorligini anglatmaydi.
 
 ## Uyda ko‘rish va davom ettirish
 
