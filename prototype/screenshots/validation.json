@@ -1,5 +1,5 @@
 {
-  "passed": 296,
+  "passed": 298,
   "checks": [
     "uz/splash: content",
     "uz/splash: no horizontal overflow",
@@ -281,6 +281,8 @@
     "edit reflected in account",
     "five navigation destinations",
     "featured atlas opens",
+    "three sample sponsored cards",
+    "sample sponsored profile opens",
     "navigation compacts on scroll",
     "navigation expands at top",
     "register action opens form",

@@ -136,3 +136,17 @@
 .forum-post .forum-comment{background:#f0f8fa;border-left:3px solid #43afba;border-radius:8px;padding:10px;color:#527080;font-size:11px}
 .extra-small-button{padding:9px 12px;border-radius:10px;background:#e4f5f8;color:#008da4;font-size:11px;font-weight:700}
 .extra-report{display:flex;align-items:center;gap:5px;color:#9c6570;font-size:10px;margin-top:14px}
+
+/* Three clearly labelled sample placements; billing and targeting are not active. */
+.sponsored-demo{margin:26px -22px 0;padding:20px 22px 17px;background:linear-gradient(135deg,#edfaff,#e5f7fa 57%,#f7fcff);border-top:1px solid #d9f0f4;border-bottom:1px solid #d9f0f4}
+.sponsored-heading{display:flex;align-items:end;justify-content:space-between;gap:12px;margin-bottom:13px}
+.sponsored-heading h2{font-size:18px;font-weight:750;color:#09204a;margin-top:5px}
+.sponsored-heading>span{font-size:9px;color:#688a9c;white-space:nowrap}
+.sponsored-track{display:flex;gap:10px;overflow-x:auto;overscroll-behavior-inline:contain;scroll-snap-type:x mandatory;scrollbar-width:none;padding:2px 1px 12px}
+.sponsored-track::-webkit-scrollbar{display:none}
+.sponsored-card{flex:0 0 175px;min-height:178px;padding:12px;text-align:left;border:1px solid #d8edf3;border-radius:18px;background:#fff;box-shadow:0 8px 17px #22788f13;scroll-snap-align:start;display:flex;flex-direction:column;align-items:flex-start;transition:transform .2s,border-color .2s}
+.sponsored-card:hover{transform:translateY(-2px);border-color:#65c4d1}
+.sponsored-photo .portrait-art{width:50px;height:55px;border-radius:12px}
+.sponsored-badge{margin:8px 0 5px;padding:4px 6px;border-radius:7px;background:#e1f4f7;color:#007f99;font-size:8px;font-weight:750}
+.sponsored-card strong{font-size:11px;line-height:1.24;color:#10254e;min-height:29px}
+.sponsored-open{display:flex;align-items:center;gap:4px;margin-top:auto;color:#008fa8;font-size:9px;font-weight:700}

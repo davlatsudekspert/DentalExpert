@@ -2,7 +2,7 @@
 
 Mustaqil React + TypeScript + Vite dizayn prototipi. Backend, API, haqiqiy autentifikatsiya, to‘lov va bemor bazasi yo‘q. GitHub Pages manzili hozir 404 qaytaryapti; interaktiv demo hali onlayn ishlamaydi.
 
-Global mahsulot talablari [`PRODUCT_VISION.md`](PRODUCT_VISION.md)da, App Store/Google Play’ga chiqarish talablari [`STORE_RELEASE_REQUIREMENTS.md`](STORE_RELEASE_REQUIREMENTS.md)da, Claude uchun birinchi kodlash bosqichi [`CLAUDE_NEXT_STEP.md`](CLAUDE_NEXT_STEP.md)da. Hozirgi ekranlar bu talablardagi haqiqiy xizmatlar tayyorligini anglatmaydi.
+Global mahsulot talablari [`PRODUCT_VISION.md`](PRODUCT_VISION.md)da, shahar reklamalari va Free/Pro taklifi [`MONETIZATION_PLAN.md`](MONETIZATION_PLAN.md)da, ustoz/talaba oqimi [`EDUCATION_PLAN.md`](EDUCATION_PLAN.md)da, App Store/Google Play’ga chiqarish talablari [`STORE_RELEASE_REQUIREMENTS.md`](STORE_RELEASE_REQUIREMENTS.md)da, Claude uchun birinchi kodlash bosqichi [`CLAUDE_NEXT_STEP.md`](CLAUDE_NEXT_STEP.md)da. Hozirgi ekranlar bu talablardagi haqiqiy xizmatlar tayyorligini anglatmaydi.
 
 ## Uyda ko‘rish va davom ettirish
 
@@ -32,6 +32,7 @@ Build natijasi `dist/` ichida. `demo.html` esa shu buildning bitta faylga yig‘
 - Oddiy ochilganda premium ro‘yxatdan o‘tish/kirish ekrani chiqadi. `?screen=auth&lang=uz`, `?screen=profile&lang=en` kabi parametrlar ekranlarni bevosita ochadi.
 - Onboarding yoki Sozlamalardan UZ / RU / EN tilini tanlang.
 - Rol tanlash → premium kirish ekrani → ro‘yxatdan o‘tish yoki demo kirish → rol bosh sahifasi.
+- Bemorning Asosiy sahifasida 3 ta “Namuna reklama” kartasi gorizontal ko‘rinadi va mavjud demo profilga ochiladi. Hozircha shahar bo‘yicha kampaniya, to‘lov, Free/Pro obuna yoki haqiqiy reklama hisobi ishlamaydi; keyingi oqim va tarif taklifi `MONETIZATION_PLAN.md`da.
 - Shifokor kartasi → profil → qabul → kun / vaqt → demo tasdiq.
 - Odontogrammada 32 ta FDI raqami bor; tishni tanlab anatomiya ekraniga o‘ting.
 - Anatomiya sahifasida `Tish Rasm.rar`dagi kesim, tashqi va yuqori ko‘rinishlarni tanlash mumkin. «360° ko‘rinish»ni bosib uch ildizli tishning old, o‘ng, orqa va chap premium tasvirlarini aylantirib ko‘ring; drag, klaviatura strelkalari va yaqinlashtirish ishlaydi. Bu to‘rtta statik renderdan tuzilgan vizual prototip, uzluksiz 3D mesh emas. Qatlam tanlanganda premium kesim tasviri ochiladi.
