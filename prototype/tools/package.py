@@ -12,7 +12,7 @@ def inline_css(match):
  return '<style>'+css+'</style>'
 html=re.sub(r'<link rel="stylesheet" crossorigin href="([^"]+)">',inline_css,html)
 (ROOT/'demo.html').write_text(html)
-selected=[('onboard','01 / WELCOME'),('home','02 / PATIENT HOME'),('profile','03 / SPECIALIST'),('booking','04 / APPOINTMENT'),('dashboard','05 / DENTIST'),('record','06 / PATIENT RECORD'),('anatomy','07 / ANATOMY'),('student','08 / STUDENT')]
+selected=[('auth','01 / WELCOME'),('home','02 / PATIENT HOME'),('profile','03 / SPECIALIST'),('booking','04 / APPOINTMENT'),('dashboard','05 / DENTIST'),('record','06 / PATIENT RECORD'),('anatomy','07 / ANATOMY'),('student','08 / STUDENT')]
 W,H=1600,2400
 board=Image.new('RGB',(W,H),'#eaf5fa');draw=ImageDraw.Draw(board)
 font='/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf'

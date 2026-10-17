@@ -91,12 +91,26 @@
 .five-tab-nav.compact .nav-featured:active{transform:scale(.9)}
 @media(max-width:440px){.phone:has(.five-tab-nav) .screen{padding-bottom:130px}.bottom-nav.five-tab-nav{position:fixed;left:10px;right:10px;bottom:max(8px,env(safe-area-inset-bottom));margin:0;max-width:none}.phone:has(.five-tab-nav) .home-indicator{display:none}.phone:has(.five-tab-nav)~.mobile-screen-picker{bottom:100px}}
 
-/* Account and community demo screens follow the same light clinical palette. */
-.auth-brand{height:150px;display:flex;align-items:center;justify-content:center;gap:12px;margin:0 auto 12px;color:#10254e;font-size:17px;font-weight:750}
-.auth-brand img{width:116px;height:132px;object-fit:contain;filter:drop-shadow(0 9px 17px #3d9cb63b)}
-.auth-providers{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}
-.auth-providers button{min-height:44px;border:1px solid #d6e9f0;border-radius:13px;background:#fff;color:#20465c;font-size:12px;font-weight:650}
-.auth-providers button:hover{border-color:#00a2b7;background:#ecfaff}
+/* Entry and account screens use the approved ivory tooth visual. */
+.auth-entry{text-align:center;min-height:735px;display:flex;flex-direction:column;align-items:center;padding-top:10px}
+.auth-entry-brand,.auth-form-brand{display:flex;align-items:center;justify-content:center;gap:9px;color:#10254e;font-size:22px;font-weight:760;letter-spacing:-.9px}
+.auth-entry-brand>span:last-child>span,.auth-form-brand>span:last-child>span{color:#0697aa}
+.auth-entry-brand .brand-symbol{width:36px;height:38px;border-radius:12px;background:linear-gradient(145deg,#32bfd0,#0788a4)}
+.auth-entry>.eyebrow{margin-top:12px;font-size:8px;letter-spacing:2.5px;color:#548ca3}
+.auth-stage{width:calc(100% + 44px);height:385px;margin:13px -22px 0;display:grid;place-items:center;overflow:hidden;background:radial-gradient(ellipse at 50% 58%,#b8eaf3 2%,#ddf7fa 48%,#edfaff 71%,transparent 82%)}
+.auth-stage img{width:min(390px,110%);height:390px;object-fit:contain;filter:drop-shadow(0 18px 21px #1d749b30)}
+.auth-entry h2{max-width:300px;margin:8px 0 7px;color:#09204a;font-size:28px;line-height:1.12;font-weight:760;letter-spacing:-1px}
+.auth-entry>p{max-width:280px;font-size:11px;line-height:1.45;color:#607e99}
+.auth-entry .auth-primary{margin-top:20px;min-height:54px;background:linear-gradient(105deg,#12a9b9,#0089a5);box-shadow:0 10px 22px #008fa83b;font-size:14px}
+.auth-secondary{margin-top:12px;padding:9px;color:#6b8296;font-size:11px}
+.auth-secondary strong{color:#008da6;margin-left:3px}
+.auth-entry-languages{display:flex;gap:5px;margin-top:7px}
+.auth-entry-languages button{min-width:43px;padding:5px 7px;border-radius:12px;color:#8ba3b4;font-size:9px}
+.auth-entry-languages button.active{background:#d8f2f7;color:#008da5;font-weight:750}
+.auth-form-brand{justify-content:flex-start;margin:22px 0 36px;font-size:17px}
+.auth-form-brand .brand-symbol{width:32px;height:34px;border-radius:10px;background:linear-gradient(145deg,#32bfd0,#0788a4)}
+.phone:has(.auth-form-brand) .topbar h1,.phone:has(.auth-form-brand) .topbar button:last-child{visibility:hidden}
+@media(max-width:440px){.auth-entry{min-height:calc(100dvh - 70px)}.auth-stage{height:min(45dvh,385px)}.auth-stage img{height:100%;width:min(100vw,390px)}}
 .uploaded-avatar{width:104px;height:104px;object-fit:cover;border-radius:24px;border:2px solid #dcf0f6}
 .uploaded-avatar.small{width:44px;height:44px;border-radius:14px;flex-shrink:0}
 .extra-page{padding-top:8px;padding-bottom:35px}

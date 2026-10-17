@@ -6,7 +6,7 @@ ROOT=Path(__file__).resolve().parents[1]
 OUT=ROOT/'screenshots'; OUT.mkdir(exist_ok=True)
 OFFLINE_HTML=os.environ.get('PROTOTYPE_HTML')
 BASE='https://dental-demo.local' if OFFLINE_HTML else os.environ.get('PROTOTYPE_URL','http://127.0.0.1:5173')
-SCREENS=['splash','onboard','roles','login','signup','home','search','profile','clinics','booking','dashboard','edit','record','chart','anatomy','teacher','student','courses','settings','forgot','changePassword','privacy','forum','notifications']
+SCREENS=['splash','onboard','roles','auth','login','signup','home','search','profile','clinics','booking','dashboard','edit','record','chart','anatomy','teacher','student','courses','settings','forgot','changePassword','privacy','forum','notifications']
 checks=[]
 def check(name,condition):
  assert condition,name
@@ -33,13 +33,16 @@ with sync_playwright() as p:
     check(f'{lang}/{screen}: premium course image',page.locator('.course-render').evaluate('(e)=>e.complete && e.naturalWidth>0'))
    if screen in ['splash','onboard','home']:
     check(f'{lang}/{screen}: premium tooth image',page.locator('.hero-render').count()==1 and page.locator('.hero-render').evaluate('(e)=>e.complete && e.naturalWidth>0'))
+   if screen=='auth':
+    check(f'{lang}/{screen}: premium tooth image',page.locator('.auth-stage img').evaluate('(e)=>e.complete && e.naturalWidth>0'))
+    check(f'{lang}/{screen}: no social sign-in',page.get_by_role('button',name='Apple').count()==0 and page.get_by_role('button',name='Google').count()==0)
    if lang=='uz':
     page.wait_for_timeout(320)
     page.locator('.mobile-screen-picker').evaluate('(e)=>e.style.display="none"')
     page.screenshot(path=str(OUT/f'{screen}.png'),full_page=True)
  go('roles','en')
  for role,target in [('Dentist','Workspace'),('Educator','Educator'),('Student','Student'),('Patient','Home')]:
-  go('roles','en');page.get_by_role('button',name=role,exact=True).click();page.get_by_role('button',name='Continue',exact=True).click();page.get_by_label('Email address').fill('demo@example.com');page.get_by_label('Password',exact=True).fill('demopassword');page.get_by_role('button',name='Explore the demo',exact=True).click()
+  go('roles','en');page.get_by_role('button',name=role,exact=True).click();page.get_by_role('button',name='Continue',exact=True).click();page.get_by_role('button',name='Sign in').click();page.get_by_label('Email address').fill('demo@example.com');page.get_by_label('Password',exact=True).fill('demopassword');page.get_by_role('button',name='Explore the demo',exact=True).click()
   check('role navigation: '+role, page.locator('.dash-welcome').count()==1 if role!='Patient' else page.locator('.home-header').count()==1)
  go('settings','en');page.get_by_role('button',name='RU Русский').click();check('language switch',page.locator('.topbar h1').inner_text()=='Настройки')
  page.get_by_role('button',name='UZ O‘zbekcha').click();check('Uzbek language switch',page.locator('.topbar h1').inner_text()=='Sozlamalar')
@@ -54,7 +57,8 @@ with sync_playwright() as p:
  go('edit','en');page.get_by_label('Full name').fill('Demo User');page.get_by_label('Profile photo (demo)').set_input_files(str(ROOT/'assets/tooth3d/turntable-front.webp'));page.wait_for_selector('.uploaded-avatar');check('local photo preview',page.locator('.uploaded-avatar').evaluate('(e)=>e.complete && e.naturalWidth>0'));page.get_by_role('button',name='Save demo changes').click();check('edit confirmation',page.get_by_role('status').inner_text().startswith('Demo saved'));page.locator('.mobile-screen-picker select').select_option('settings');check('edit reflected in account',page.locator('.patient-header h2').inner_text()=='Demo User' and page.locator('.patient-header .uploaded-avatar').count()==1)
  go('home','en');nav=page.get_by_role('navigation',name='Main navigation');check('five navigation destinations',nav.get_by_role('button').count()==5);nav.get_by_role('button',name='3D atlas').click();check('featured atlas opens',page.locator('.anatomy-stage').count()==1)
  go('home','en');page.evaluate('window.scrollTo(0,220)');page.wait_for_timeout(100);check('navigation compacts on scroll',page.locator('.five-tab-nav.compact').count()==1);page.evaluate('window.scrollTo(0,0)');page.wait_for_timeout(100);check('navigation expands at top',page.locator('.five-tab-nav.compact').count()==0)
- go('login','en');check('auth tooth image',page.locator('.auth-brand img').evaluate('(e)=>e.complete && e.naturalWidth>0'));page.get_by_role('button',name='Forgot password?').click();check('forgot password opens',page.locator('.extra-page h2').inner_text()=='Reset password')
+ go('auth','en');page.get_by_role('button',name='Create account').click();check('register action opens form',page.locator('.screen h2').inner_text()=='Create account')
+ go('auth','en');page.get_by_role('button',name='Sign in').click();check('sign-in action opens form',page.locator('.screen h2').inner_text()=='Welcome back');page.get_by_role('button',name='Forgot password?').click();check('forgot password opens',page.locator('.extra-page h2').inner_text()=='Reset password')
  go('forgot','en');page.get_by_role('textbox',name='Email address').fill('test@example.com');page.get_by_role('button',name='Request reset').click();check('reset does not claim email sent','needs a real server' in page.get_by_role('status').inner_text())
  go('changePassword','en');page.get_by_label('Current password').fill('old-demo-password');page.get_by_label('New password',exact=True).fill('new-demo-password');page.get_by_label('Repeat new password').fill('different-password');page.get_by_role('button',name='Update password').click();check('password mismatch warning','must match' in page.get_by_role('status').inner_text())
  go('forum','en');page.get_by_role('textbox',name='Question or comment').fill('Political campaigning is here');page.get_by_role('button',name='Add demo post').click();check('off-topic content blocked','does not meet' in page.get_by_role('status').inner_text());page.get_by_role('textbox',name='Question or comment').fill('How does tooth enamel develop?');page.get_by_role('button',name='Add demo post').click();check('dental post appears',page.locator('.forum-post').count()==2);page.get_by_label('Reason for report').first.select_option('spam');page.get_by_role('button',name='Report').first.click();check('report hides post locally',page.locator('.forum-post').count()==1 and 'no moderator received' in page.get_by_role('status').inner_text())

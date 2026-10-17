@@ -27,7 +27,7 @@ Limitni tejash uchun avval mavjud kod, rasmlar, hujjatlar va testlarni qisqa ko�
 
 ## Avval holatni tekshir
 
-Repository `davlatsudekspert/DentalExpert`, `main`; ilova `prototype/`da. `README.md`, `DESIGN_HANDOFF.md`, `PRODUCT_VISION.md` va `CLAUDE_START_HERE.md`ni o‘qi. `npm run build` va `npm run dev` bilan mavjud React + TypeScript + Vite prototipini tekshir. 24 ekran, UZ/RU/EN, premium tish renderlari va 5 tugmali, scroll paytida ixchamlashadigan pastki navigatsiyani saqla. Parolni tiklash/almashtirish, forum, maxfiylik va bildirishnoma faqat lokal demo; Apple/Google, email va moderatsiya serverga ulanmagan. Markazdagi 3D atlas hozir asosiy vizual amal; keyingi real Case Studio qurilganda unga tabiiy kirish nuqtasi bo‘lishi mumkin. Hozir backend, haqiqiy email-kod, global stomatolog bazasi yoki klinik booking yo‘q. GitHub Pages oxirgi foydalanuvchi tekshiruvida 404 qaytargan; ishlayotgan live demo deb taqdim etma.
+Repository `davlatsudekspert/DentalExpert`, `main`; ilova `prototype/`da. `README.md`, `DESIGN_HANDOFF.md`, `PRODUCT_VISION.md` va `CLAUDE_START_HERE.md`ni o‘qi. `npm run build` va `npm run dev` bilan mavjud React + TypeScript + Vite prototipini tekshir. 25 ekran, UZ/RU/EN, premium tish renderlari va 5 tugmali, scroll paytida ixchamlashadigan pastki navigatsiyani saqla. Parolni tiklash/almashtirish, forum, maxfiylik va bildirishnoma faqat lokal demo; email va moderatsiya serverga ulanmagan. Markazdagi 3D atlas hozir asosiy vizual amal; keyingi real Case Studio qurilganda unga tabiiy kirish nuqtasi bo‘lishi mumkin. Hozir backend, haqiqiy email-kod, global stomatolog bazasi yoki klinik booking yo‘q. GitHub Pages oxirgi foydalanuvchi tekshiruvida 404 qaytargan; ishlayotgan live demo deb taqdim etma.
 
 ## Mahsulot maqsadi
 
@@ -50,7 +50,7 @@ Bir sessiyaga sig‘adigan eng kichik to‘liq bo‘lakni tanla, lekin faqat sta
 ## Qabul mezonlari
 
 - Telefon o‘lchamida mamlakat/shahar tanlash → beshta namunaviy stomatologni filtrlash → to‘liq profil va klinika xaritasini ochish → shifokorni saqlab qayta topish oqimi bosib ishlaydi. Til o‘zgarganda profil matnlari ham o‘zgaradi; ism va joy nomlari saqlanadi. “Yaqin” bosilganda ruxsat so‘raladi; rad etilganda qo‘lda qidiruv ishlaydi.
-- UZ/RU/EN matnlari va mavjud 24 ekran buzilmaydi. Demo ma’lumot va haqiqiy xizmat farqi foydalanuvchiga tushunarli.
+- UZ/RU/EN matnlari va mavjud 25 ekran buzilmaydi. Demo ma’lumot va haqiqiy xizmat farqi foydalanuvchiga tushunarli.
 - `npm run build` o‘tadi; yangi oqim uchun mazmunli browser testi qo‘shiladi. Frontend o‘zgarsa `python tools/package.py` bilan offline demo va haqiqiy screenshotlar yangilanadi, `PROTOTYPE_HTML=demo.html python tools/verify.py` ishlatiladi.
 - README’da bajarilgan qismi, keyingi server/auth talablari va ishlamaydigan integratsiyalar aniq yoziladi. Natijani commit qil. Tekshirilmagan GitHub Pages yoki email yuborishni ishlaydi deb yozma.
 
