@@ -382,7 +382,12 @@
             "uz": "Yon tishlarning distal yuzalari"
           }
         ]
-      ]
+      ],
+      "note": {
+        "en": "Let students match each Gracey number to a tooth surface on a model.",
+        "ru": "Пусть студенты на модели подберут каждой кюрете Грейси соответствующую поверхность зуба.",
+        "uz": "Talabalar modelda har bir Greysi raqamini mos tish yuzasiga moslashtirsin."
+      }
     },
     {
       "layout": "compare",

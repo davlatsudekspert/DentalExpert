@@ -484,7 +484,12 @@
             "uz": "Xavf bo‘lsa birinchi katta oziq tishlarni germetizatsiya; tozalashni nazorat qilish"
           }
         }
-      ]
+      ],
+      "note": {
+        "en": "Ask students what they would tell parents at a child's first dental visit.",
+        "ru": "Спросите студентов, что они скажут родителям на первом визите ребёнка.",
+        "uz": "Talabalardan bolaning birinchi tashrifida ota-onalarga nima deyishlarini so‘rang."
+      }
     },
     {
       "layout": "table",

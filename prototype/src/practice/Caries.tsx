@@ -199,7 +199,7 @@ function buildClass():ClassCase{
   return {view:'ant',teeth,target:ti,cls,spot};
  }
  const teeth:STooth[]=[];let x=rnd(8,20);
- for(const k of ['pm','pm','mo','mo'] as SKind[]){const w=k==='pm'?rnd(46,50):rnd(70,74);const h=k==='pm'?rnd(62,66):rnd(56,60);teeth.push({kind:k,cx:x+w/2,w,h});x+=w+0.5}
+ for(const k of ['pm','pm','mo','mo'] as SKind[]){const w=k==='pm'?rnd(46,50):rnd(68,72);const h=k==='pm'?rnd(66,70):rnd(60,64);teeth.push({kind:k,cx:x+w/2,w,h});x+=w+0.5}
  const ti=cls==='I'?pick([2,3]):pick([1,2]);const t=teeth[ti],side=pick([-1,1]);
  let spot:Spot;
  if(cls==='I')spot={kind:'ell',cx:t.cx,cy:CERV+t.h*0.58,rx:4.5,ry:5};
@@ -211,9 +211,9 @@ function buildClass():ClassCase{
 
 function SurfaceView({c,title}:{c:ClassCase;title:string}){
  const id=useId().replace(/:/g,'');
- const W=300,H=150;
+ const W=300,H=Math.round(CERV+Math.max(...c.teeth.map(t=>t.h))+14);
  const gum=():string=>{
-  const ts=c.teeth;const pap=(t:STooth)=>CERV+t.h*(t.kind==='mo'||t.kind==='pm'?0.2:0.24);
+  const ts=c.teeth;const pap=(t:STooth)=>CERV+t.h*(t.kind==='mo'||t.kind==='pm'?0.3:0.32);
   let d=`M-5 0L${W+5} 0L${W+5} ${r1(CERV+8)}`;
   const last=ts[ts.length-1];d+=`L${r1(last.cx+last.w/2)} ${r1(pap(last))}`;
   for(let i=ts.length-1;i>=0;i--){const t=ts[i],l=t.cx-t.w/2,r=t.cx+t.w/2;const nx=ts[i-1];const pl=nx?CERV+Math.min(pap(t),pap(nx))-CERV:pap(t);
@@ -228,7 +228,7 @@ function SurfaceView({c,title}:{c:ClassCase;title:string}){
    const o=outline(t);
    return <g key={i}>
     <path d={smoothOpen(o)+'Z'} fill="#fffdf6" stroke="#c9bfa5" strokeWidth={1.4}/>
-    <ellipse cx={t.cx-t.w*0.12} cy={CERV+t.h*0.45} rx={t.w*0.13} ry={t.h*0.26} fill="#fff" opacity={0.7}/>
+    <ellipse cx={t.cx-t.w*0.12} cy={CERV+t.h*0.45} rx={t.w*0.13} ry={t.h*0.26} fill="#fff" opacity={0.45}/>
     {t.kind==='mo'&&<path d={`M${r1(t.cx)} ${r1(CERV+t.h*0.86)}L${r1(t.cx)} ${r1(CERV+t.h*0.58)}`} stroke="#d8ccae" strokeWidth={1.4}/>}
    </g>})}
   {c.spot&&c.spot.kind==='ell'&&<g clipPath={`url(#${id}c${c.target})`}>

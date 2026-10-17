@@ -87,7 +87,7 @@
           {
             "en": "Explorer (sharp probe)",
             "ru": "Зонд стоматологический",
-            "uz": "Stomatologik zond"
+            "uz": "Stomatologik zond (o‘tkir zond)"
           },
           {
             "en": "Checking margins, calculus and surface texture",
@@ -287,7 +287,7 @@
           "head": {
             "en": "Low-speed micromotor",
             "ru": "Микромотор",
-            "uz": "Mikromotor"
+            "uz": "Past tezlikli mikromotor"
           },
           "items": [
             {
@@ -307,7 +307,12 @@
             }
           ]
         }
-      ]
+      ],
+      "note": {
+        "en": "Let students hear and feel both handpieces working on a model tooth.",
+        "ru": "Дайте студентам услышать и почувствовать работу обоих наконечников на модели зуба.",
+        "uz": "Talabalar ikkala uchlikning model tishda ishlashini eshitib, his qilib ko‘rsin."
+      }
     },
     {
       "layout": "table",

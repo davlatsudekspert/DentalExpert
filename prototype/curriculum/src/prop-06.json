@@ -432,6 +432,11 @@
         "en": "Dentin contains tubules filled with fluid and odontoblast processes. When dentin is exposed, cold, air or sweet stimuli move this fluid, which activates nerve endings near the pulp and causes short, sharp pain.",
         "ru": "Дентин содержит канальцы с жидкостью и отростками одонтобластов. При обнажении дентина холод, воздух или сладкое смещают жидкость, что раздражает нервные окончания у пульпы и вызывает короткую острую боль.",
         "uz": "Dentinda suyuqlik va odontoblast o‘simtalari bilan to‘lgan naychalar bor. Dentin ochilganda sovuq, havo yoki shirin ta’sirlar bu suyuqlikni siljitadi, pulpa yonidagi nerv uchlarini qo‘zg‘atadi va qisqa, o‘tkir og‘riq paydo bo‘ladi."
+      },
+      "note": {
+        "en": "Link this to the common complaint of pain from cold drinks on exposed roots.",
+        "ru": "Свяжите это с частой жалобой на боль от холодных напитков при обнажённых корнях.",
+        "uz": "Buni ochilgan ildizlarda sovuq ichimlikdan og‘riq degan keng tarqalgan shikoyat bilan bog‘lang."
       }
     },
     {

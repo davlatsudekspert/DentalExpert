@@ -592,7 +592,12 @@
             "uz": "Furkatsiya zararlanishi, kodga qo‘shiladi"
           }
         ]
-      ]
+      ],
+      "note": {
+        "en": "Show the black band of the WHO probe at 3.5–5.5 mm before students score sextants.",
+        "ru": "Покажите чёрную полосу зонда ВОЗ на отметке 3,5–5,5 мм, прежде чем студенты начнут оценивать секстанты.",
+        "uz": "Talabalar sekstantlarni baholashdan oldin JSST zondining 3,5–5,5 mm dagi qora chizig‘ini ko‘rsating."
+      }
     },
     {
       "layout": "compare",

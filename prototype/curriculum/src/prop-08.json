@@ -474,7 +474,12 @@
             "uz": "Klammerni bog‘laydi; kontaktlardan o‘tkazadi"
           }
         ]
-      ]
+      ],
+      "note": {
+        "en": "Pass the kit around and let students name each item before the demonstration.",
+        "ru": "Раздайте набор и попросите студентов назвать каждый элемент до демонстрации.",
+        "uz": "To‘plamni qo‘lma-qo‘l bering, namoyishdan oldin talabalar har bir qismni nomlasin."
+      }
     },
     {
       "layout": "flow",
