@@ -128,6 +128,9 @@ def check_text(lang, text):
             for w in LATIN_WORD.findall(chunk):
                 if len(w) == 1 and w in 'xX':
                     continue
+                # Clinical abbreviations and single-letter labels stay Latin in Russian dental texts (ASA, CBCT, A-delta, C).
+                if re.fullmatch(r"[A-Z][A-Z0-9]{0,6}-?", w):
+                    continue
                 if w.lower().strip("'‘’-") not in RU_LATIN_OK:
                     out.append(('Latin word in Russian', w))
         for m in re.finditer(r'(\d+)\+?\s+([а-яё]+)', t):

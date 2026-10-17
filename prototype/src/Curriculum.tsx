@@ -76,7 +76,7 @@ export function TopicOverview({lang,topic,subject}:{lang:Lang;topic:Topic;subjec
   <h3 className="lg-h">{t.oral}</h3>
   <OralList lang={lang} topic={topic}/>
   <p className="muted lg-small">{t.testInGroup}</p>
-  <div className="lg-card"><h3><BookOpen size={16}/>{t.sources}</h3><ul className="lg-sources">{topic.sources.map((s,k)=><li key={k}>{s}</li>)}</ul></div>
+  <div className="lg-card"><h3><BookOpen size={16}/>{t.sources}</h3><ul className="lg-sources" lang="en" translate="no">{topic.sources.map((s,k)=><li key={k}>{s}</li>)}</ul></div>
   {show&&<Slides title={tx(topic.title,lang)} eyebrow={tx(subject.title,lang)} slides={topic.slides} lang={lang} accent={subjectColor(subject.id).c}
    start={loadLast()?.id===topic.id?loadLast()!.slide:0} onProgress={i=>markSlide(topic.id,i,topic.slides.length)} onClose={()=>setShow(false)}/>}
  </>;
