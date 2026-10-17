@@ -4,12 +4,12 @@ Tekshirilgan sana: **2026-10-17**. Usul: rasmiy saytlarning bosh va bo'lim sahif
 
 ## Foydalanish huquqi
 
-Uchala sayt ham "barcha huquqlar himoyalangan" deydi. TDSI va SamDTU saytlari qo'shimcha: *"Sayt materiallaridan foydalanganda, … saytiga havola ko'rsatilishi shart."* Shuning uchun:
+Barcha sayt ham "barcha huquqlar himoyalangan" deydi. TDSI va SamDTU saytlari qo'shimcha: *"Sayt materiallaridan foydalanganda, … saytiga havola ko'rsatilishi shart."* Shuning uchun:
 
 - Rasmiy **dars jadvallarini ko'chirmaymiz va nusxalamaymiz**. Ilova faqat rasmiy sahifaga **havola** beradi va muassasa nomini ko'rsatadi.
 - Fakultet va kafedra nomlari tashkiliy ma'lumot sifatida havola bilan keltirilgan; matnlarni, rasmlarni, logotiplarni ko'chirmang.
 
-## Tasdiqlangan muassasalar (rasmiy sayt ochildi)
+## Tasdiqlangan muassasalar (rasmiy sayt ochildi, 4 ta)
 
 ### 1. Toshkent davlat stomatologiya instituti (TDSI)
 
@@ -45,6 +45,20 @@ Stomatologiyaga oid kafedralar. Sayt ularni **ingliz tilida** beradi; quyida say
 | Kafedralar (14, saytdagi ro'yxat) | Xorijiy tillar; Normal fiziologiya; Patologik fiziologiya; Patologik anatomiya va sud tibbiyoti; Bolalar stomatologiyasi; Propedevtik stomatologiya; Terapevtik stomatologiya; Ortopedik stomatologiya va ortodontiya; Yuz-jag' jarrohligi; Reabilitologiya, sport tibbiyoti, xalq tabobati va jismoniy tarbiya; Otorinologiya; Ftiziatriya va pulmonologiya, mikrobiologiya, immunologiya va virusologiya; 1-fakultet va gospital jarrohlik; Onkologiya |
 | Dars jadvali (rasmiy) | Bosh sahifada topilmadi. "O'quv faoliyati" bo'limi (https://adti.uz/oquv-faoliyati.html) ochilmadi — **tekshirish kerak** |
 | Foydalanish sharti | Saytda aniq shart topilmadi; "© ADTI.UZ Barcha huquqlar himoyalangan" |
+
+### 4. Alfraganus universiteti (nodavlat, Toshkent)
+
+| Maydon | Qiymat |
+| --- | --- |
+| Rasmiy sayt | https://afu.uz (aggregator [infoedu.uz](https://infoedu.uz/alfraganus-university) ham "Rasmiy veb-sayt manzili: afu.uz" deb yozadi). Eslatma: `alfraganus.uz` universitet sayti **emas** (dasturchi portfoliosi). |
+| Shahar | Toshkent |
+| Fakultet | Stomatologiya va farmatsiya fakulteti: https://afu.uz/uz/fakultet-detail/stomatologiya-va-farmatsiya-fakulteti |
+| Kafedralar | Stomatologiya kafedrasi: https://afu.uz/uz/kafedra-detail/stomatologiya-kafedrasi (sahifaga ko'ra 2025 yilda ochilgan); Farmatsevtika va kimyo kafedrasi |
+| Yo'nalishlar (saytga ko'ra) | Bakalavriat: Stomatologiya, Farmatsiya. Klinik ordinatura: Ortopedik stomatologiya, Yuz-jag' jarrohligi, Ortodontiya, Jarrohlik stomatologiyasi |
+| Dars jadvali (rasmiy) | "Talabalar → Dars jadvali" menyusi tashqi saqlash havolasiga olib boradi: https://storage.afu.uz/s/zte7Rwb94JecjjF (havola o'zgarishi mumkin; menyudan foydalaning) |
+| Foydalanish sharti | Faqat "Copyright © 2026 ALFRAGANUS UNIVERSITY. All rights reserved."; boshqa shart ko'rinmadi (sahifa matni qisqartirilgan bo'lishi mumkin) |
+
+Telegram guruhi @stomotologiya_alfraganus ("STOMOTOLOGIYA 4🩺", 73 a'zo) rasmiy emas va reestrga kiritilmaydi.
 
 ## Qisman tasdiqlangan / ziddiyatli
 
