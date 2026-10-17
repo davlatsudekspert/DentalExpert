@@ -21,6 +21,12 @@ Butun dunyodagi stomatologlar, klinikalar, bemorlar, ustozlar va talabalarni bit
 | Ustoz | Guruh/kurs ochish, talabani kod bilan qo‘shish, amaliy topshiriq berish, ishni ko‘rib izoh va tasdiq berish, ko‘nikma portfelini kuzatish. |
 | Talaba | Guruhga qo‘shilish, amaliy ish topshirish, ustoz izohini ko‘rish, qayta ishlash va portfelni yuritish. Test yordamchi, asosiy tajriba amaliy ish. |
 
+## Kasbiy ta’lim kutubxonasi
+
+Ustoz, talaba va stomatolog uchun bitta tartibli o‘quv bo‘limi bo‘lsin: mavzu va mutaxassislik bo‘yicha qidiriladigan qo‘llanmalar, rasmlar bilan darslar, PPTX taqdimotlar va qisqa testlar. Ustoz materialni guruhga biriktiradi, amaliy holat va test beradi, talabaning sababli javobi hamda ishiga izoh yozadi. Talaba o‘qigan materialini davom ettiradi, topshiriqni qayta ishlaydi va ko‘nikma portfelida natijani ko‘radi. Amaldagi stomatolog ham materiallardan malaka oshirish va kasbiy muhokama uchun foydalanadi. Test bilimni tekshirishga yordam beradi, ammo ilovaning asosiy qiziqarli tajribasi rasmli klinik holatni tahlil qilish va ustoz/hamkasb fikridir.
+
+PPTX uchun kamida fayl nomi, muallif, til, mavzu, tavsif, hajm va ochish/yuklab olish amali ko‘rinsin; telefonda qulay ko‘rish usuli tanlansin. Haqiqiy fayl saqlash va taqdimotni slaydga aylantirish server yoki mos xizmat talab qilsa, demo buni haqiqiy yuklash deb ko‘rsatmasin. Mualliflik huquqi va manba, tibbiy kontentning ekspert ko‘rigi, foydalanuvchi rollari bo‘yicha ko‘rish/yuklash ruxsati, bemor tasvirlarini shaxssizlantirish va test savollarining tibbiy aniqligi tekshirilsin. Sertifikat yoki chegirma faqat aniq mezon va haqiqiy beruvchi mavjud bo‘lganda va’da qilinsin.
+
 Shifokor bir necha klinikada ishlashi mumkin; xaritada klinika manzili va shifokorning shu manzildagi faoliyati alohida modellansin. Profilga telefon, Telegram, WhatsApp, Instagram, sayt va boshqa mos ijtimoiy havolalar logotipi bilan qo‘shilsin. Aloqa maydonlari ixtiyoriy, havolalar tekshiriladi va qaysisi ommaga ko‘rinishini egasi tanlaydi. Professional tasdiq mamlakatga qarab hujjat va inson tekshiruvi bilan yuritiladi; tasdiqlanmagan profilni tasdiqlangan shifokor sifatida ko‘rsatma.
 
 Aloqa tugmalari profilda ko‘rinadigan, brend ikonli va yozuvli bo‘lsin: qo‘ng‘iroq, Telegram, Instagram, email, xarita va raqamli vizitka (profil QR/ulashish). WhatsApp va sayt mavjud bo‘lsa qo‘shiladi. “Kuzatish” va ulashish alohida amallar. QR yoki vizitka to‘lov kartasi sifatida talqin qilinmasin. Bosiladigan tashqi havolalar tekshirilsin; demo profilning o‘ylab topilgan kontaktlari ishlaydigan deb ko‘rsatilmasin.
@@ -69,6 +75,7 @@ Birinchi kichik mahsulot bo‘lagi: Dental Expert’da bitta ruxsatli namunaviy 
 
 1. **Global poydevor:** 3 til, barcha mamlakatlar, email-kodli hisob arxitekturasi, ko‘p rolli profil, stomatolog/klinika katalogi, filtr va xarita, GPSga o‘z vaqtida ruxsat so‘rash. Avval demo ma’lumot bilan aniq ishlaydigan bir oqim; keyin haqiqiy auth, baza va tasdiqlash.
 2. **Ustoz/talaba:** guruh, amaliy ish, izoh, tasdiq va portfel. Bu oqim Forensic LabGuide’da ham mahsulot g‘oyasi sifatida ishlatilishi mumkin, ammo kod/baza avtomatik birlashtirilmasin.
+   Shu bosqichda ustoz, talaba va stomatolog uchun qo‘llanma, rasmli dars, PPTX taqdimot va yordamchi test kutubxonasining birinchi ishlaydigan oqimini ham qur; avval bitta mavzu va ruxsatli namunaviy materialdan boshlagin.
 3. **Hamjamiyat:** forum, izohlar, moderatsiya va matn tarjimasi.
 4. **Xizmatlar:** qabul jadvali va tasdiq, xabarlar, audio tarjima va keyingi integratsiyalar.
 5. **Mobil tarqatish:** ishlaydigan web oqimlari va backend tasdiqlangach PWA yoki native iOS/Android yo‘li tanlansin. Ilovani “butun dunyoda ishlaydi” deb atashdan oldin real email, geografik qidiruv, kasbiy tasdiq, xavfsizlik va xalqaro ish yuklamasi tekshirilsin.
