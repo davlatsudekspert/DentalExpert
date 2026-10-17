@@ -45,7 +45,7 @@ Build natijasi `dist/` ichida. `demo.html` esa shu buildning bitta faylga yig‘
 
 ## Vizual yo‘nalish va chegaralar
 
-Foydalanuvchi bergan ikki etalon asosida och moviy gradient, navy sarlavhalar, turquoise tugmalar, mint statuslar, yumaloq oq kartalar va tish atrofidagi orbitalar ishlatilgan. Bu etalonning pikselma-piksel nusxasi emas. Shifokor portretlari bitta original AI yaratilgan fotografik demo aktivdan olinadi. Ular haqiqiy shifokorlarning surati emas. Barcha portretlar mahalliy faylda, klinika xaritasi esa sxema. Dastlabki ochiq foto manzasiga tarmoq orqali kirish bloklandi; o‘rniga yuqori sifatli fiktsion demo aktiv tayyorlandi.
+Foydalanuvchi bergan ikki etalon asosida och moviy gradient, navy sarlavhalar, turquoise tugmalar, mint statuslar, yumaloq oq kartalar va tish atrofidagi orbitalar ishlatilgan. Bu etalonning pikselma-piksel nusxasi emas. Shifokor portretlari ikkita original AI yaratilgan fotografik demo aktivdan olinadi. Ular haqiqiy shifokorlarning surati emas. Barcha portretlar mahalliy faylda, klinika xaritasi esa sxema. Dastlabki ochiq foto manzasiga tarmoq orqali kirish bloklandi; o‘rniga yuqori sifatli fiktsion demo aktiv tayyorlandi.
 
 Splash va bosh sahifada `premium-reference-hero-ivory.webp`, anatomiyada esa kesim, tepadan ko‘rinish va `turntable-*.webp` asosidagi to‘rt burchakli 360° vizual ishlatiladi. Premium renderlar foydalanuvchi yuborgan JPGlar asosida tayyorlangan; original JPGlar `assets/tooth3d/user-views/`da saqlangan. Turntable old/o‘ng/orqa/chap ko‘rinishlarga ega, lekin bu yagona aylantiriladigan 3D mesh yoki klinik rekonstruksiya emas. `src/PremiumTurntable.tsx` drag va klaviatura orqali burchak almashtiradi; `src/Tooth3D.tsx`dagi eski WebGL drafti manba sifatida qoldirilgan, foydalanuvchi ekranlarida ko‘rsatilmaydi.
 
@@ -70,7 +70,7 @@ Login ma’lumotlarini hech qayerga yubormaydi. Maxfiylik sahifasi yuridik jihat
 `src/PremiumTurntable.tsx` — premium tasvirli 360° vizual boshqaruvi; `src/Tooth3D.tsx` — avvalgi WebGL drafti.
 `assets/tooth3d/` — original Blender `.blend` sahnasi va uning renderlari, premium hero hamda foydalanuvchi yuborgan kesim illyustratsiyasi (PNG/WebP/JPG); `tools/create_tooth_asset.py` — Blender generatori.
 `tools/build_reference_molar.py` — arxivdagi JPG ko‘rinishlari asosida uch ildizli tahrirlanadigan Blender sahnasi va GLB draft yaratadi.
-`public/clinicians.png` — 3 ta fiktsion shifokor portretidan iborat lokal fotografik aktiv; `src/Portrait.tsx` — uning vektor fallbacki. `src/LogoMark.tsx` — original vektor logo.
+`public/clinicians.png` — dastlabki 3 ta fiktsion portret; `assets/clinician-contact-sheet.png` — qolgan demo profillar uchun fotografik kontakt-varaq. Bular haqiqiy shifokorlarning suratlari emas; `src/Portrait.tsx` — uning vektor fallbacki. `src/LogoMark.tsx` — original vektor logo.
 `src/style.css` — mobil dizayn tizimi va responsive layout.
 `DESIGN_HANDOFF.md` — Claude Code yoki keyingi ishlab chiquvchi uchun topshirish.
 

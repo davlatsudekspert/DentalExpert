@@ -1,5 +1,6 @@
 import {MapPin} from 'lucide-react';
 import Portrait from './Portrait';
+import clinicianSheet from '../assets/clinician-contact-sheet.png?inline';
 import {countryCodes} from './countryCodes';
 import {demoCities,type DemoDoctor,type Lang} from './discoveryData';
 
@@ -9,8 +10,17 @@ const words={
  en:{country:'Country',city:'City',other:'Enter a city',demo:'Sample profile'}
 };
 
+// Fictional demo profiles use cells from one local photo sheet.
+const photoIndex:Record<string,number>={
+ umida:1,dilnoza:4,sardor:0,nodira:6,shahnoza:9,emma:11,
+ 'tashkent-1':12,'tashkent-2':7,'tashkent-3':3,'tashkent-4':10,
+ 'dubai-2':14,'dubai-3':15,'dubai-4':1
+};
+
 export function DemoAvatar({doctor,large=false}:{doctor:DemoDoctor;large?:boolean}){
  if(doctor.portrait!==undefined)return <Portrait person={doctor.portrait} large={large}/>;
+ const index=photoIndex[doctor.id];
+ if(index!==undefined)return <span className={'demo-avatar photo '+(large?'large':'')} role="img" aria-label={doctor.name} style={{backgroundImage:`url(${clinicianSheet})`,backgroundSize:'400% 400%',backgroundPosition:`${(index%4)*100/3}% ${Math.floor(index/4)*100/3}%`,backgroundRepeat:'no-repeat'}}/>;
  return <span className={'demo-avatar '+(large?'large':'')} aria-label={doctor.name}>{doctor.initials}</span>;
 }
 
