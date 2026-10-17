@@ -282,3 +282,14 @@ main,.screen,.app-main{animation:soft-in .35s ease both}
 .help-links a:last-child{border-bottom:0!important}
 .help-links a::after{content:'›';font-size:20px;color:#9bb0b6}
 .account-session .muted{font-size:12px;text-align:center}
+/* Learn hub */
+.learn>.chips{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;margin-left:-2px;padding:2px}
+.learn>.chips::-webkit-scrollbar{display:none}
+.learn>.chips button{flex:none}
+.learn .cr-row{min-height:64px;padding:12px 14px!important;border-radius:20px!important;border-color:#e6eff0!important;box-shadow:0 8px 24px #183e500a}
+.learn .cr-row>span{flex:1;min-width:0;display:flex;flex-direction:column;gap:3px}
+.learn .cr-row>svg:first-child{box-sizing:content-box;padding:10px;border-radius:50%;background:#fff1db;color:#8a5a0b;flex:none}
+.learn .cr-row>svg:last-child{color:#9bb0b6;flex:none}
+.atlas3d-launch-text{align-items:center!important}
+.atlas3d-launch-text b{white-space:nowrap}
+.atlas3d-launch-text span{line-height:1.35}
