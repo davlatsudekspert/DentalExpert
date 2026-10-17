@@ -4,6 +4,17 @@ Ertangi sessiyada Claude Code'ga shuni yozing: **“`prototype/CLAUDE_NEXT_STEP.
 
 Claude Code avval repo ichida ishlayotganini va `main`ning so‘nggi holatini olganini tekshirsin. Repo unga ko‘rinmasa yoki GitHub 404 qaytarsa, kodni o‘qiyapman deb taxmin qilmasin: GitHub hisobiga kirish huquqini tekshirib, foydalanuvchiga aniq to‘siqni aytsin. Dizayn yoki mahsulot bo‘yicha o‘z fikrini taklif qilishi mumkin, lekin yangi imkoniyatni haqiqatan ishlamaguncha “tayyor” deb atamasin. Katta g‘oyalar keyingi bosqichga yozilsin, birinchi bosqichdagi ishlaydigan oqimni tugatishga xalaqit bermasin.
 
+## Tasdiqlangan tish rasmlarini saqla
+
+Foydalanuvchi avvalgi protsedurali 3D tajribalarni multfilmga o‘xshagani uchun rad etdi. Hozir **tasdiqlangan fotorealistik rasmlar bilan ishlash** kerak; sifati past GLB, Blender renderi, chizilgan SVG yoki emoji tishni ularga almashtirma. Rasmlar allaqachon prototipga ulangan:
+
+- `assets/tooth3d/premium-reference-hero-ivory.webp` — onboarding va asosiy sahifadagi premium tish.
+- `assets/tooth3d/premium-reference-cutaway-ivory.webp` — anatomiya kesimi va qatlamlar.
+- `assets/tooth3d/turntable-front.webp`, `turntable-right.webp`, `turntable-back.webp` — atlasdagi aylantiriladigan tashqi ko‘rinishlar; chap tomoni o‘ng tasvirning aksi.
+- `assets/tooth3d/archive-occlusal.webp` — tepadan ko‘rinish. Foydalanuvchi yuborgan asl JPGlar `assets/tooth3d/user-views/`da saqlangan.
+
+`src/main.tsx` va `src/PremiumTurntable.tsx` aynan shu tasvirlarni ishlatadi. Atlasdagi aylanish **to‘rtta diskret surat**, uzluksiz 3D mesh emas; UI va taqdimotda bu farqni aniq saqla. Rasmlarni joylash, kesish yoki kattalashtirishda foydalanuvchi ma’qullagan oppoq emal, ochroq ildiz, tabiiy tekstura va yorug‘likni buzma. Keyinchalik haqiqiy 360° model qilsang, yangi modelni tasdiqlangan old/yon/kesim rasmlari bilan yonma-yon tekshir, telefon ekranidagi screenshot va ishlaydigan HTMLni foydalanuvchiga ko‘rsat; uning roziligigacha hozirgi rasmlarni va image fallbackni saqla. `reference-molar.glb`, `DentalExpert_Tooth.blend` va `Tooth3D.tsx` avvalgi draftlar: ularni premium tayyor model deb ishlatma.
+
 ## Avval holatni tekshir
 
 Repository `davlatsudekspert/DentalExpert`, `main`; ilova `prototype/`da. `README.md`, `DESIGN_HANDOFF.md`, `PRODUCT_VISION.md` va `CLAUDE_START_HERE.md`ni o‘qi. `npm run build` va `npm run dev` bilan mavjud React + TypeScript + Vite prototipini tekshir. 19 ekran, UZ/RU/EN, premium tish renderlari va 5 tugmali, scroll paytida ixchamlashadigan pastki navigatsiyani saqla. Markazdagi 3D atlas hozir asosiy vizual amal; keyingi real Case Studio qurilganda unga tabiiy kirish nuqtasi bo‘lishi mumkin. Hozir backend, haqiqiy email-kod, global stomatolog bazasi yoki klinik booking yo‘q. GitHub Pages oxirgi foydalanuvchi tekshiruvida 404 qaytargan; ishlayotgan live demo deb taqdim etma.
