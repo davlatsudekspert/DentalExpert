@@ -411,7 +411,12 @@
             "uz": "Suv ftorlanmaydigan joylarda muqobil usul"
           }
         ]
-      ]
+      ],
+      "note": {
+        "en": "Ask which children in your region would benefit most from a varnish programme.",
+        "ru": "Спросите, каким детям в вашем регионе программа фторлака принесла бы наибольшую пользу.",
+        "uz": "Sizning hududingizda ftorlak dasturidan qaysi bolalar eng ko‘p foyda ko‘rishini so‘rang."
+      }
     },
     {
       "layout": "tree",

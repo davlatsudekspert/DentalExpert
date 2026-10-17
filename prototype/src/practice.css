@@ -198,3 +198,4 @@
  .pr-fig{padding:8px}
  .pr-opts-2{gap:6px}
 }
+.pr-perio-answer .pr-seg{display:grid;grid-template-columns:repeat(3,1fr)}

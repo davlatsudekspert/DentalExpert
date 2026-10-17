@@ -13,7 +13,7 @@ const T={
   pd:'PD',gm:'GM',pdFull:'Zondlash chuqurligi, mm',gmFull:'Milk qirg‘og‘i – CEJ, mm',
   sign:'GM: «+» — retsessiya (milk qirg‘og‘i CEJ dan apikalda), «−» — milk qirg‘og‘i CEJ dan koronalda. M — mezial, D — distal, B — vestibulyar, L — oral; • — interdental nuqta.',
   cal:'Interdental CAL',calSub:'mm',stage:'Bosqich',
-  st:{1:'I bosqich',2:'II bosqich',3:'III / IV bosqich'} as Record<Stage,string>,
+  stShort:{1:'I',2:'II',3:'III / IV'} as Record<Stage,string>,st:{1:'I bosqich',2:'II bosqich',3:'III / IV bosqich'} as Record<Stage,string>,
   simple:'Soddalashtirilgan mashq: bosqich faqat interdental CAL bo‘yicha (AAP/EFP 2017); III va IV bosqichlar murakkablik omillari bilan farqlanadi.',
   title:'Parodont zondlash sxemasi',cej:'CEJ',
   explain:(site:string,pd:number,r:number,cal:number,st:string)=>`Eng og‘ir interdental nuqta ${site}: CAL = PD ${pd} ${r>=0?'+ retsessiya '+r:'− '+(-r)+' (milk CEJ dan koronalda)'} = ${cal} mm, demak ${st} (I: 1–2 mm, II: 3–4 mm, III/IV: ≥5 mm).`
@@ -24,7 +24,7 @@ const T={
   pd:'PD',gm:'GM',pdFull:'Глубина зондирования, мм',gmFull:'Десневой край – CEJ, мм',
   sign:'GM: «+» — рецессия (край десны апикальнее CEJ), «−» — край десны коронарнее CEJ. M — мезиально, D — дистально, B — вестибулярно, L — орально; • — межзубная точка.',
   cal:'Межзубный CAL',calSub:'мм',stage:'Стадия',
-  st:{1:'Стадия I',2:'Стадия II',3:'Стадия III / IV'} as Record<Stage,string>,
+  stShort:{1:'I',2:'II',3:'III / IV'} as Record<Stage,string>,st:{1:'Стадия I',2:'Стадия II',3:'Стадия III / IV'} as Record<Stage,string>,
   simple:'Упрощённое упражнение: стадия только по межзубному CAL (AAP/EFP 2017); стадии III и IV различаются по факторам сложности.',
   title:'Схема пародонтального зондирования',cej:'CEJ',
   explain:(site:string,pd:number,r:number,cal:number,st:string)=>`Самая тяжёлая межзубная точка ${site}: CAL = PD ${pd} ${r>=0?'+ рецессия '+r:'− '+(-r)+' (десна коронарнее CEJ)'} = ${cal} мм, значит ${st.toLowerCase()} (I: 1–2 мм, II: 3–4 мм, III/IV: ≥5 мм).`
@@ -35,7 +35,7 @@ const T={
   pd:'PD',gm:'GM',pdFull:'Probing depth, mm',gmFull:'Gingival margin – CEJ, mm',
   sign:'GM: “+” = recession (margin apical to the CEJ), “−” = margin coronal to the CEJ. M = mesial, D = distal, B = buccal, L = lingual; • = interdental site.',
   cal:'Interdental CAL',calSub:'mm',stage:'Stage',
-  st:{1:'Stage I',2:'Stage II',3:'Stage III / IV'} as Record<Stage,string>,
+  stShort:{1:'I',2:'II',3:'III / IV'} as Record<Stage,string>,st:{1:'Stage I',2:'Stage II',3:'Stage III / IV'} as Record<Stage,string>,
   simple:'Simplified exercise: stage from interdental CAL only (AAP/EFP 2017); stages III and IV differ by complexity factors.',
   title:'Periodontal probing diagram',cej:'CEJ',
   explain:(site:string,pd:number,r:number,cal:number,st:string)=>`Worst interdental site ${site}: CAL = PD ${pd} ${r>=0?'+ recession '+r:'− '+(-r)+' (margin coronal to the CEJ)'} = ${cal} mm, so ${st} (I: 1–2 mm, II: 3–4 mm, III/IV: ≥5 mm).`
@@ -80,14 +80,15 @@ function Panel({x0,sites,mirror,label}:{x0:number;sites:Site[];mirror:boolean;la
  const gmLine:[number,number][]=[[x0+4,gm[0]-6],[xs[0],gm[0]],[xs[1],gm[1]],[xs[2],gm[2]],[x0+166,gm[2]-6]];
  const crestY=base.map(b=>b+1.3*K);
  const bone=smoothOpen([[x0+2,crestY[0]-4],[xs[0],crestY[0]],[xs[1],crestY[1]],[xs[2],crestY[2]],[x0+168,crestY[2]-4]])+`L${x0+168} 250L${x0+2} 250Z`;
- const gum=smoothOpen(gmLine)+`L${x0+166} 250L${x0+4} 250Z`;
+ const gum=smoothOpen(gmLine)+smoothOpen([[x0+168,crestY[2]+2],[xs[2],crestY[2]+6],[xs[1],crestY[1]+6],[xs[0],crestY[0]+6],[x0+2,crestY[0]+2]],true)+'Z';
  const names=order.map(k=>SITES[k+(mirror?3:0)]);
  return <g>
   <text x={cx} y={14} textAnchor="middle" className="pr-perio-head">{label}</text>
-  <path d={bone} fill="#efe1cf" stroke="#d6bf9f" strokeWidth={1}/>
+  <path d={bone} fill="#ead6ba"/>
+  <path d={smoothOpen([[x0+2,crestY[0]-4],[xs[0],crestY[0]],[xs[1],crestY[1]],[xs[2],crestY[2]],[x0+168,crestY[2]-4]])} fill="none" stroke="#c9a978" strokeWidth={1.4}/>
   <path d={root} fill="#f7efdc" stroke="#d3c39c" strokeWidth={1.2}/>
   <path d={crown} fill="#ffffff" stroke="#b9c7c9" strokeWidth={1.3}/>
-  <path d={gum} fill="#f19aa0" opacity={0.62}/>
+  <path d={gum} fill="#f19aa0" opacity={0.5}/>
   <path d={smoothOpen(gmLine)} fill="none" stroke="#d2646d" strokeWidth={2}/>
   <line x1={cx-cw/2-10} y1={CEJ} x2={cx+cw/2+10} y2={CEJ} stroke="#10254e" strokeWidth={1.2} strokeDasharray="4 3"/>
   {xs.map((x,j)=><g key={j}>
@@ -136,7 +137,7 @@ export default function Perio({lang,locked,onAnswer}:SimProps){
      {([1,2,3] as Stage[]).map(s=>{
       const st=checked?(s===c.stage?' pr-seg-ok':s===stage?' pr-seg-bad':''):'';
       return <button key={s} type="button" role="radio" aria-checked={stage===s} className={'pr-seg-btn'+(stage===s?' pr-seg-on':'')+st} disabled={locked} onClick={()=>setStage(s)}>
-       {checked&&s===c.stage&&<Check size={14} strokeWidth={3}/>}{checked&&s===stage&&s!==c.stage&&<X size={14} strokeWidth={3}/>}{t.st[s]}
+       {checked&&s===c.stage&&<Check size={14} strokeWidth={3}/>}{checked&&s===stage&&s!==c.stage&&<X size={14} strokeWidth={3}/>}{t.stShort[s]}
       </button>})}
     </div>
    </div>

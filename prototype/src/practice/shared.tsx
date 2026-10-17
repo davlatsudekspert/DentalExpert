@@ -109,7 +109,7 @@ const kindOf=(p:number,primary:boolean):ToothKind=>p<=2?'inc':p===3?'can':primar
 export type ArchLayout={teeth:ArchTooth[];w:number;h:number;midY:number;upperCenter:number;lowerCenter:number};
 /** Positions all teeth of both arches along elliptical curves. Patient's right is on the viewer's left (FDI quadrants 1 and 4). */
 export function archLayout(primary:boolean,withThirds=true):ArchLayout{
- const W=360,a=primary?104:128,b=primary?100:138,phiMax=95*Math.PI/180,m=primary?30:26,gap=primary?64:72;
+ const W=360,a=primary?112:140,b=primary?100:138,phiMax=95*Math.PI/180,m=primary?30:26,gap=primary?64:72;
  const back=m+b*(1-Math.cos(phiMax));
  const topY=m,botY=back+gap+b*(1-Math.cos(phiMax)),H=botY+m;
  // arc-length table
@@ -121,7 +121,8 @@ export function archLayout(primary:boolean,withThirds=true):ArchLayout{
  const n=primary?5:8;
  for(const upper of [true,false]){
   const ws=primary?(upper?DW_U:DW_L):(upper?PW_U:PW_L),ds=primary?(upper?DD_U:DD_L):(upper?PD_U:PD_L);
-  const total=ws.reduce((x,y)=>x+y,0)+0.35*n;
+  const used=!withThirds&&!primary?ws.slice(0,7):ws;
+  const total=used.reduce((x,y)=>x+y,0)+0.35*used.length;
   const s=L/total;
   for(const side of [-1,1]){
    // side -1 = viewer's left = patient's right

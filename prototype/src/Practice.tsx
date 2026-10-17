@@ -110,7 +110,7 @@ export default function Practice({lang}:{lang:'uz'|'ru'|'en'}){
   if(nb){const b={...best,[run.sim.id]:run.score};setBest(b);saveBest(b)}
   setRun({...run,done:true,newBest:nb&&prev>=0});
  };
- useEffect(()=>{if(run?.fb){fbRef.current?.scrollIntoView({block:'nearest',behavior:'smooth'});nextRef.current?.focus({preventScroll:true})}},[run?.fb]);
+ useEffect(()=>{if(run?.fb){fbRef.current?.scrollIntoView({block:'nearest',behavior:'smooth'})}},[run?.fb]);
  useEffect(()=>{if(run&&!run.fb){const el=topRef.current;if(el&&el.getBoundingClientRect().top<0)el.scrollIntoView({block:'start'})}},[run?.i,run?.done]);// eslint-disable-line react-hooks/exhaustive-deps
 
  const footer=<p className="pr-footer">{t.footer}</p>;

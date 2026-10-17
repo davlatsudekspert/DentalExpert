@@ -90,9 +90,9 @@ function apices(t:Tooth):Pt[]{
  return t.kind==='pm'?[[cx+c,Y+rl]]:[[cx-cw*0.25+c,Y+rl*1.02],[cx+cw*0.25+c,Y+rl*0.98]];
 }
 function canals(t:Tooth):string{
- const {cx,cw,Y,rl,ch,curve:c}=t;
+ const {cx,cw,Y,rl,curve:c}=t;
  if(t.kind==='pm')return `M${r1(cx)} ${r1(Y+6)}Q${r1(cx+c*0.3)} ${r1(Y+rl*0.55)} ${r1(cx+c)} ${r1(Y+rl-2.5)}`;
- return `M${r1(cx-cw*0.17)} ${r1(Y+4)}Q${r1(cx-cw*0.2+c*0.4)} ${r1(Y+rl*0.55)} ${r1(cx-cw*0.25+c)} ${r1(Y+rl*1.02-2.5)}M${r1(cx+cw*0.17)} ${r1(Y+4)}Q${r1(cx+cw*0.2+c*0.4)} ${r1(Y+rl*0.55)} ${r1(cx+cw*0.25+c)} ${r1(Y+rl*0.98-2.5)}`+(ch?'':'');
+ return `M${r1(cx-cw*0.17)} ${r1(Y+4)}Q${r1(cx-cw*0.2+c*0.4)} ${r1(Y+rl*0.55)} ${r1(cx-cw*0.25+c)} ${r1(Y+rl*1.02-2.5)}M${r1(cx+cw*0.17)} ${r1(Y+4)}Q${r1(cx+cw*0.2+c*0.4)} ${r1(Y+rl*0.55)} ${r1(cx+cw*0.25+c)} ${r1(Y+rl*0.98-2.5)}`;
 }
 function chamber(t:Tooth):string{
  const {cx,cw,Y,ch}=t;
@@ -141,7 +141,7 @@ function buildScene():Scene{
  if(finding==='impact'){
   const m2=teeth[n-1],m3=makeTooth('m',0,top);m3.rl*=0.5;m3.curve=rnd(2,5);
   const rot=-rnd(36,48);
-  m3.cx=m2.cx+m2.w/2+m3.w*0.5+2;m3.Y=m2.Y+20+m3.ch/2;
+  m3.cx=m2.cx+m2.w/2+m3.w*0.5+2;m3.Y=m2.Y+30+m3.ch/2;
   teeth.push(m3);s.impact={i:n,rot};
  }
  if(finding==='boneloss')s.crestOff=rnd(0.36,0.46)*teeth[0].rl;
@@ -225,12 +225,13 @@ function Xray({s,title}:{s:Scene;title:string}){
    <filter id={`${id}soft`} x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation={3}/></filter>
    <filter id={`${id}soft2`} x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation={0.9}/></filter>
    <filter id={`${id}xr`}><feGaussianBlur stdDeviation={0.45}/></filter>
+   <linearGradient id={`${id}soft3`} x1="0" y1="0" x2="0" y2="1"><stop offset="0" stopColor="#1b2226" stopOpacity={0}/><stop offset="0.12" stopColor="#1b2226" stopOpacity={1}/></linearGradient>
    <clipPath id={`${id}bone`}><path d={bone}/></clipPath>
    <radialGradient id={`${id}vig`} cx="50%" cy="50%" r="70%"><stop offset="60%" stopColor="#000" stopOpacity={0}/><stop offset="100%" stopColor="#000" stopOpacity={0.55}/></radialGradient>
   </defs>
   <rect width={W} height={H} rx={14} fill="#0b0f12"/>
   <g filter={`url(#${id}xr)`} transform={s.maxilla?`translate(0 ${H}) scale(1 -1)`:undefined}>
-   <rect x={0} y={Y-14} width={W} height={H} fill="#1a2125"/>
+   <rect x={0} y={Y-34} width={W} height={H} fill={`url(#${id}soft3)`}/>
    <path d={bone} fill="#69737a"/>
    <path d={bone} fill="#000" filter={`url(#${id}tex)`}/>
    {!s.maxilla&&<g opacity={0.9}><path d={`M-10 ${H-14}Q${W/2} ${H-24} ${W+10} ${H-12}`} stroke="#2a3236" strokeWidth={13} fill="none"/><path d={`M-10 ${H-21}Q${W/2} ${H-31} ${W+10} ${H-19}`} stroke="#8d969c" strokeWidth={1.3} fill="none"/><path d={`M-10 ${H-7}Q${W/2} ${H-17} ${W+10} ${H-5}`} stroke="#8d969c" strokeWidth={1.3} fill="none"/></g>}

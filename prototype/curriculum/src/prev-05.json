@@ -379,7 +379,12 @@
             }
           ]
         }
-      ]
+      ],
+      "note": {
+        "en": "Give a short case and ask students to sort its factors into these four groups.",
+        "ru": "Дайте короткий клинический случай и попросите распределить его факторы по четырём группам.",
+        "uz": "Qisqa klinik holat berib, talabalardan uning omillarini shu to‘rt guruhga ajratishni so‘rang."
+      }
     },
     {
       "layout": "table",

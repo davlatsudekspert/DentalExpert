@@ -228,7 +228,7 @@
             {
               "en": "Stainless steel crown",
               "ru": "Стальная коронка",
-              "uz": "Po‘lat qoplama"
+              "uz": "Zanglamaydigan po‘lat qoplama"
             }
           ]
         },
@@ -686,7 +686,7 @@
         {
           "en": "Zinc phosphate cement",
           "ru": "Фосфатный цемент",
-          "uz": "Fosfat sement"
+          "uz": "Rux fosfat sement"
         }
       ],
       "correct": 2,

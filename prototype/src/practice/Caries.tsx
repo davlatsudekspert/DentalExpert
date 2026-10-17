@@ -132,27 +132,27 @@ function MolarSection({depth,title}:{depth:Depth;title:string}){
 
 function IncisorSection({depth,title,sides}:{depth:Depth;title:string;sides:[string,string]}){
  const id=useId().replace(/:/g,'');
- const tt=(y:number)=>Math.min(1,Math.max(0,(y-22)/128));
+ const C=128,tt=(y:number)=>Math.min(1,Math.max(0,(y-22)/(C-22)));
  const oL=(y:number)=>146-48*Math.sin(tt(y)*Math.PI/2);
  const oR=(y:number)=>154+44*Math.sin(tt(y)*Math.PI/2)+9*Math.exp(-(((tt(y)-0.8)/0.13)**2));
  const eL=(y:number)=>15*(1-tt(y)**5),eR=(y:number)=>11*(1-tt(y)**5);
  const pc=(y:number)=>150+2*tt(y);
- const phw=(y:number)=>y<150?1.5+11*Math.max(0,Math.min(1,(y-62)/88))**0.8:1.2+11.3*(1-(y-150)/96);
- const rs=(y:number)=>49*((y-150)/96)**1.6;
+ const phw=(y:number)=>y<C?1.5+11*Math.max(0,Math.min(1,(y-58)/(C-58)))**0.8:1.2+11.3*(1-(y-C)/(247-C));
+ const rs=(y:number)=>49*((y-C)/(247-C))**1.6;
  const ys=(a:number,b:number,st=4)=>{const r:number[]=[];for(let y=a;y<=b;y+=st)r.push(y);if(r[r.length-1]!==b)r.push(b);return r};
- const outer:Pt[]=[...ys(28,150).reverse().map(y=>[oL(y),y] as Pt),[147,22],[153,22],...ys(28,150).map(y=>[oR(y),y] as Pt)];
- const root:Pt[]=[...ys(154,240,6).map(y=>[198-rs(y),y] as Pt),[150,247],...ys(154,240,6).reverse().map(y=>[98+rs(y),y] as Pt)];
- const dejL=ys(40,150).map(y=>[oL(y)+eL(y),y] as Pt),dejR=ys(40,150).map(y=>[oR(y)-eR(y),y] as Pt);
+ const outer:Pt[]=[...ys(28,C).reverse().map(y=>[oL(y),y] as Pt),[147,22],[153,22],...ys(28,C).map(y=>[oR(y),y] as Pt)];
+ const root:Pt[]=[...ys(C+4,240,6).map(y=>[198-rs(y),y] as Pt),[150,247],...ys(C+4,240,6).reverse().map(y=>[98+rs(y),y] as Pt)];
+ const dejL=ys(36,C).map(y=>[oL(y)+eL(y),y] as Pt),dejR=ys(36,C).map(y=>[oR(y)-eR(y),y] as Pt);
  const dentin=smoothOpen([...dejL.reverse(),[150,35],...dejR,...root])+'Z';
  const pulpPts:Pt[]=[...ys(64,238,6).map(y=>[pc(y)-phw(y),y] as Pt),[150,243],...ys(64,238,6).reverse().map(y=>[pc(y)+phw(y),y] as Pt),[151,58]];
- const yL=r1(rnd(112,124)),sx=oL(yL),uD=eL(yL),uP=(pc(yL)-phw(yL))-sx;
+ const yL=r1(rnd(C-34,C-24)),sx=oL(yL),uD=eL(yL),uP=(pc(yL)-phw(yL))-sx;
  const prof=profileFor('smooth',depth,uD,uP,rnd(15,20));
  const map=(u:number,v:number):Pt=>[sx+u,yL+v];
  const hard=smoothOpen([...outer,...root])+'Z';
  return <svg className="pr-svg" viewBox="0 0 300 255" role="img" aria-label={title}>
   <defs><clipPath id={`${id}h`}><path d={hard}/>{depth==='pulp'&&<path d={smoothClosed(pulpPts)}/>}</clipPath></defs>
-  <path d="M0 178 Q80 170 150 174 T300 178 V255 H0Z" fill={COL.bone}/>
-  <path d="M0 150 Q50 140 92 146 L204 146 Q250 140 300 150 V182 Q230 174 150 178 T0 182Z" fill={COL.gum} opacity={0.75}/>
+  <g transform="translate(0 -20)"><path d="M0 178 Q80 170 150 174 T300 178 V275 H0Z" fill={COL.bone}/>
+  <path d="M0 150 Q50 140 92 146 L204 146 Q250 140 300 150 V182 Q230 174 150 178 T0 182Z" fill={COL.gum} opacity={0.75}/></g>
   <path d={hard} fill={COL.en} stroke={COL.enS} strokeWidth={1.4}/>
   <path d={dentin} fill={COL.de} stroke="#d4b672" strokeWidth={1}/>
   <path d={smoothClosed(pulpPts)} fill={COL.pu} stroke={COL.puS} strokeWidth={1}/>
@@ -161,8 +161,8 @@ function IncisorSection({depth,title,sides}:{depth:Depth;title:string;sides:[str
    <path d={lesion(prof,map)} fill={COL.core}/>
   </g>
   {depth==='pulp'&&<circle cx={sx+uP+3} cy={yL} r={4} fill="#b5262b" stroke="#fff" strokeWidth={1}/>}
-  <text x={40} y={120} textAnchor="middle" className="pr-svg-note">{sides[0]}</text>
-  <text x={262} y={120} textAnchor="middle" className="pr-svg-note">{sides[1]}</text>
+  <text x={40} y={100} textAnchor="middle" className="pr-svg-note">{sides[0]}</text>
+  <text x={262} y={100} textAnchor="middle" className="pr-svg-note">{sides[1]}</text>
  </svg>;
 }
 
@@ -213,16 +213,12 @@ function SurfaceView({c,title}:{c:ClassCase;title:string}){
  const id=useId().replace(/:/g,'');
  const W=300,H=150;
  const gum=():string=>{
-  let d=`M-5 0 L${W+5} 0 L${W+5} ${CERV+6}`;
-  const ts=[...c.teeth].reverse();
-  ts.forEach((t,i)=>{
-   const r=t.cx+t.w/2,l=t.cx-t.w/2,pap=CERV+t.h*(t.kind==='mo'||t.kind==='pm'?0.22:0.26);
-   if(i===0)d+=`L${r1(r+8)} ${CERV+6}`;
-   d+=`Q${r1(r-2)} ${r1(pap*0.92)} ${r1(r-t.w*0.12)} ${r1(CERV+12)}Q${r1(t.cx)} ${CERV+3} ${r1(l+t.w*0.12)} ${r1(CERV+12)}`;
-   const nx=ts[i+1];const pap2=nx?CERV+Math.min(t.h,nx.h)*0.24:CERV+8;
-   d+=`Q${r1(l+2)} ${r1(pap2*0.95)} ${r1(l)} ${r1(nx?pap2:CERV+8)}`;
-  });
-  return d+`L-5 ${CERV+6}Z`;
+  const ts=c.teeth;const pap=(t:STooth)=>CERV+t.h*(t.kind==='mo'||t.kind==='pm'?0.2:0.24);
+  let d=`M-5 0L${W+5} 0L${W+5} ${r1(CERV+8)}`;
+  const last=ts[ts.length-1];d+=`L${r1(last.cx+last.w/2)} ${r1(pap(last))}`;
+  for(let i=ts.length-1;i>=0;i--){const t=ts[i],l=t.cx-t.w/2,r=t.cx+t.w/2;const nx=ts[i-1];const pl=nx?CERV+Math.min(pap(t),pap(nx))-CERV:pap(t);
+   d+=`Q${r1(r-t.w*0.1)} ${r1(CERV+3)} ${r1(t.cx)} ${r1(CERV+3)}Q${r1(l+t.w*0.1)} ${r1(CERV+3)} ${r1(l)} ${r1(pl)}`;}
+  return d+`L-5 ${r1(CERV+8)}Z`;
  };
  const tgt=c.teeth[c.target];
  return <svg className="pr-svg" viewBox={`0 0 ${W} ${H}`} role="img" aria-label={title}>
@@ -232,7 +228,7 @@ function SurfaceView({c,title}:{c:ClassCase;title:string}){
    const o=outline(t);
    return <g key={i}>
     <path d={smoothOpen(o)+'Z'} fill="#fffdf6" stroke="#c9bfa5" strokeWidth={1.4}/>
-    <path d={smoothOpen(o.map(([x,y])=>[t.cx+(x-t.cx)*0.55,CERV+(y-CERV)*0.86] as Pt))} fill="none" stroke="#efe8d6" strokeWidth={5} strokeLinecap="round" opacity={0.9}/>
+    <ellipse cx={t.cx-t.w*0.12} cy={CERV+t.h*0.45} rx={t.w*0.13} ry={t.h*0.26} fill="#fff" opacity={0.7}/>
     {t.kind==='mo'&&<path d={`M${r1(t.cx)} ${r1(CERV+t.h*0.86)}L${r1(t.cx)} ${r1(CERV+t.h*0.58)}`} stroke="#d8ccae" strokeWidth={1.4}/>}
    </g>})}
   {c.spot&&c.spot.kind==='ell'&&<g clipPath={`url(#${id}c${c.target})`}>

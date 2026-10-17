@@ -146,7 +146,12 @@
             "uz": "Hujayralar ajralib, yangi joylarni egallaydi"
           }
         }
-      ]
+      ],
+      "note": {
+        "en": "Ask why the first colonisers are mostly streptococci and not anaerobes.",
+        "ru": "Спросите, почему первыми колонизаторами обычно бывают стрептококки, а не анаэробы.",
+        "uz": "Nima uchun dastlabki koloniyalovchilar ko‘pincha anaeroblar emas, balki streptokokklar ekanini so‘rang."
+      }
     },
     {
       "layout": "timeline",

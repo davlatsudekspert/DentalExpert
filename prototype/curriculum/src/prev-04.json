@@ -490,7 +490,12 @@
             "uz": "Tashxis qo‘yish va restavratsiya"
           }
         ]
-      ]
+      ],
+      "note": {
+        "en": "Stress that sealants need regular checks: an unnoticed partial loss can trap plaque.",
+        "ru": "Подчеркните: герметики требуют регулярного контроля, незамеченная частичная потеря задерживает налёт.",
+        "uz": "Germetiklar muntazam nazorat talab qilishini ta’kidlang: sezilmagan qisman yo‘qolish karashni ushlab qoladi."
+      }
     },
     {
       "layout": "summary",

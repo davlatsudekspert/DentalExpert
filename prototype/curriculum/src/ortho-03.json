@@ -397,7 +397,12 @@
           "ru": "Осмотр окклюзии со всех сторон",
           "uz": "Okklyuziyani har tomondan ko‘rish"
         }
-      ]
+      ],
+      "note": {
+        "en": "Have students measure the crowding on a model in millimetres.",
+        "ru": "Пусть студенты на модели посчитают величину скученности в миллиметрах.",
+        "uz": "Talabalar modelda qisilish miqdorini millimetrda hisoblab ko‘rsin."
+      }
     },
     {
       "layout": "table",
@@ -797,7 +802,7 @@
         {
           "en": "Anterior open bite",
           "ru": "Открытый прикус",
-          "uz": "Ochiq tishlov"
+          "uz": "Old ochiq tishlov"
         }
       ],
       "correct": 2,
@@ -1112,7 +1117,7 @@
         {
           "en": "Anterior open bite",
           "ru": "Открытый прикус",
-          "uz": "Ochiq tishlov"
+          "uz": "Old ochiq tishlov"
         }
       ],
       "correct": 0,

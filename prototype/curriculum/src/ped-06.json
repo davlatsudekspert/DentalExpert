@@ -54,7 +54,7 @@
       "title": {
         "en": "Classification of injuries",
         "ru": "Классификация травм",
-        "uz": "Shikastlar tasnifi"
+        "uz": "Tish shikastlarining tasnifi"
       },
       "root": {
         "en": "Dental injuries",
@@ -119,7 +119,7 @@
           "label": {
             "en": "Luxation injuries",
             "ru": "Вывихи",
-            "uz": "Lyuksatsiya"
+            "uz": "Lyuksatsion shikastlar"
           },
           "items": [
             {

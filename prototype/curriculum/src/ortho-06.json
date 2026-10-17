@@ -300,7 +300,7 @@
           "label": {
             "en": "Rectangular stainless steel",
             "ru": "Прямоугольная стальная",
-            "uz": "To‘rtburchak po‘lat"
+            "uz": "To‘rtburchak zanglamaydigan po‘lat"
           },
           "detail": {
             "en": "Space closure, working stage",
@@ -694,7 +694,7 @@
         {
           "en": "Rectangular stainless steel",
           "ru": "Прямоугольная стальная",
-          "uz": "To‘rtburchak po‘lat"
+          "uz": "To‘rtburchak zanglamaydigan po‘lat"
         },
         {
           "en": "Light round nickel-titanium",
@@ -779,7 +779,7 @@
         {
           "en": "The archwire material",
           "ru": "Материал дуги",
-          "uz": "Yoy materiali"
+          "uz": "Yoyning materiali"
         }
       ],
       "correct": 0,
@@ -919,7 +919,7 @@
         {
           "en": "A bracket without a wire",
           "ru": "Брекет без дуги",
-          "uz": "Yoysiz breket"
+          "uz": "Yoy o‘rnatilmagan breket"
         }
       ],
       "correct": 0,
