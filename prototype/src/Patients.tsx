@@ -1,3 +1,4 @@
+import emptyArt from '../assets/tooth3d/turntable-front.webp';
 import {useEffect,useState} from 'react';
 import {ChevronLeft,Plus,Trash2,UserRound} from 'lucide-react';
 import type {Lang} from './discoveryData';
@@ -64,7 +65,7 @@ export default function Patients({lang,uid,onChange}:{lang:Lang;uid?:string|null
  </section>;
  return <section className="patients">
   <h2>{t.title}</h2>
-  {list.length===0&&!adding&&<p className="muted">{t.empty}</p>}
+  {list.length===0&&!adding&&<div className="pt-empty"><img src={emptyArt} alt=""/><p>{t.empty}</p></div>}
   <div className="cr-list">{list.map(p=>{const n=Object.values(p.teeth).filter(s=>s!=='healthy').length;return <button key={p.id} className="cr-row" onClick={()=>setOpen(p.id)}><UserRound size={18}/><span><strong>{p.name}</strong><small>{p.phone||'—'} · {t.count}: {n}</small></span></button>})}</div>
   {adding?<div className="cr-form">
    <label>{t.name}<input value={f.name} maxLength={80} onChange={e=>setF({...f,name:e.target.value})}/></label>

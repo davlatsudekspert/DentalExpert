@@ -1,0 +1,41 @@
+/* Quiz sheet: soft premium look shared by every test (topic, deck, daily, exam). */
+.quiz-run{background:radial-gradient(circle at 85% -10%,#d8f1f2 0,#f4fafa 45%,#f7fbfb 100%)!important}
+.quiz-run-bar{background:#ffffffcc;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid #e3eef0!important}
+.quiz-run-bar strong{flex:1;min-width:0;font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:#10254e}
+.qr-count{padding:5px 10px;border-radius:20px;background:#e3f1f1;color:#0f6f6d;font-size:12px;font-weight:800;white-space:nowrap}
+.quiz-run-bar button{display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:#fff;box-shadow:0 4px 12px #183e5012}
+.quiz-run-body{max-width:620px;width:100%;margin:0 auto}
+.qr-steps{display:flex!important;gap:5px;height:6px!important;background:none!important}
+.quiz-run-progress.qr-steps i{display:block;width:auto!important;flex:1;height:6px;border-radius:6px;background:#dbe8ea;transition:background .25s}
+.quiz-run-progress.qr-steps i.done{background:linear-gradient(90deg,#17a6b7,#168d8b)}
+.quiz-run-progress.qr-steps i.now{background:#9fd6d9}
+.qr-card{display:flex;flex-direction:column;gap:10px;padding:18px 18px 20px;border-radius:24px;background:#fff;border:1px solid #e3eef0;box-shadow:0 12px 30px #183e500d}
+.qr-eyebrow{font-size:11px;font-weight:800;letter-spacing:1.4px;text-transform:uppercase;color:#168d8b}
+.qr-card h3{font-size:18px!important;line-height:1.4!important;color:#10254e;margin:0}
+.quiz-run-options{gap:10px!important}
+.quiz-run-options button{display:flex!important;align-items:center;gap:12px;min-height:58px;padding:12px 14px!important;border-radius:18px!important;background:#fff!important;border:1.5px solid #e1ecee!important;color:#183e50!important;font-size:14px!important;line-height:1.4;text-align:left;box-shadow:0 4px 12px #183e5008;transition:transform .12s,border-color .2s,background .2s}
+.quiz-run-options button:not(:disabled):active{transform:scale(.985)}
+.quiz-run-options button .qr-text{flex:1}
+.qr-letter{display:grid;place-items:center;flex:none;width:30px;height:30px;border-radius:10px;background:#eef5f6;color:#3d6270;font-style:normal;font-size:13px;font-weight:800}
+.quiz-run-options button.right{background:#e9f8f1!important;border-color:#2f9e6e!important;color:#14593d!important}
+.quiz-run-options button.right .qr-letter{background:#2f9e6e;color:#fff}
+.quiz-run-options button.wrong{background:#fdeeee!important;border-color:#d5544a!important;color:#8c2a22!important}
+.quiz-run-options button.wrong .qr-letter{background:#d5544a;color:#fff}
+.quiz-run-options button.chosen{background:#eef4ff!important;border-color:#2f5aa8!important}
+.quiz-run-options button.chosen .qr-letter{background:#2f5aa8;color:#fff}
+.quiz-run-options button:disabled:not(.right):not(.wrong):not(.chosen){opacity:.6}
+.quiz-run-why{display:flex;flex-direction:column;gap:4px;padding:12px 14px!important;border-radius:16px!important;font-size:13px;line-height:1.5;animation:qr-in .25s ease}
+.quiz-run-why b{font-size:14px}
+.quiz-run-why.ok{background:#e9f8f1!important;color:#14593d!important}
+.quiz-run-why.bad{background:#fff1db!important;color:#6b4508!important}
+.quiz-run-why.saved{background:#eef4ff!important;color:#24427a!important}
+@keyframes qr-in{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+.quiz-run-body>.button{align-self:stretch!important;width:100%!important;min-height:52px}
+.quiz-run-result{gap:12px!important}
+.qr-ring{display:grid;place-items:center;width:170px;height:170px;border-radius:50%;background:conic-gradient(#168d8b calc(var(--p)*1%),#dbe8ea 0);box-shadow:0 16px 40px #168d8b2a}
+.qr-ring>div{display:grid;place-items:center;width:136px;height:136px;border-radius:50%;background:#fff}
+.qr-ring b{font-size:30px;color:#10254e;line-height:1}
+.qr-ring small{font-size:13px;font-weight:800;color:#168d8b;margin-top:-18px}
+.qr-verdict{display:flex;align-items:center;gap:8px;font-size:20px!important;color:#10254e}
+.qr-verdict svg{color:#e0a01e}
+.quiz-run-result>p{color:#5b6f77}
