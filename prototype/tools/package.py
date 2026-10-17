@@ -7,8 +7,8 @@ html=(ROOT/'dist/index.html').read_text()
 html=re.sub(r'<script type="module" crossorigin src="([^"]+)"></script>',lambda m:'<script type="module">'+(ROOT/'dist'/m[1].lstrip('/')).read_text().replace('</script','<\\/script')+'</script>',html)
 def inline_css(match):
  css=(ROOT/'dist'/match[1].lstrip('/')).read_text()
- portrait=base64.b64encode((ROOT/'public/clinicians.png').read_bytes()).decode('ascii')
- css=css.replace('/clinicians.png','data:image/png;base64,'+portrait)
+ portrait=base64.b64encode((ROOT/'public/clinicians.webp').read_bytes()).decode('ascii')
+ css=css.replace('/clinicians.webp','data:image/webp;base64,'+portrait)
  return '<style>'+css+'</style>'
 html=re.sub(r'<link rel="stylesheet" crossorigin href="([^"]+)">',inline_css,html)
 (ROOT/'demo.html').write_text(html)
