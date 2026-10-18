@@ -59,9 +59,10 @@ with sync_playwright() as p:
     tp.locator('.lg-row',has_text='Terapiya 3-kurs').click();tp.wait_for_timeout(600)
     tp.locator('.lg-tabs button',has_text='Topshiriqlar').click();tp.wait_for_timeout(400)
     tp.locator('.lg-row',has_text='Karies: tezkor test').click();tp.wait_for_timeout(600)
-    # The row just tapped leaves the pointer where this button appears; its 1px hover lift could then jitter under it.
+    # The row just tapped leaves the pointer where this button appears; its 1px hover lift (a 0.2 s transform
+    # transition) can keep it "moving" for Playwright, so the click skips the stability wait once it is visible.
     tp.mouse.move(5,5)
-    tp.get_by_role('button',name='Katta ekran · QR').click();tp.wait_for_selector('svg.bs-qr',timeout=10000);tp.wait_for_timeout(800)
+    tp.get_by_role('button',name='Katta ekran · QR').wait_for(state='visible');tp.get_by_role('button',name='Katta ekran · QR').click(force=True);tp.wait_for_selector('svg.bs-qr',timeout=10000);tp.wait_for_timeout(800)
     check('board shows the join code',g['code'][:3] in tp.locator('.bs-code').inner_text())
     tp.screenshot(path=f'{OUT}/t1-board-empty-1920.png')
     y4m(tp.locator('svg.bs-qr').screenshot(),f'{OUT}/qr.y4m')
@@ -141,7 +142,7 @@ with sync_playwright() as p:
     p2.goto(B+'/?screen=teacher&lang=uz&shot=1');p2.wait_for_selector('.classroom');p2.locator('.lg-row',has_text='Terapiya 3-kurs').click();p2.wait_for_timeout(500)
     p2.locator('.lg-tabs button',has_text='Topshiriqlar').click();p2.locator('.lg-row',has_text='Karies: tezkor test').click();p2.wait_for_timeout(500)
     p2.mouse.move(5,5)
-    p2.get_by_role('button',name='Katta ekran · QR').click();p2.wait_for_selector('.bs-name');p2.wait_for_timeout(800);p2.screenshot(path=f'{OUT}/t4-board-results-1280.png')
+    p2.get_by_role('button',name='Katta ekran · QR').wait_for(state='visible');p2.get_by_role('button',name='Katta ekran · QR').click(force=True);p2.wait_for_selector('.bs-name');p2.wait_for_timeout(800);p2.screenshot(path=f'{OUT}/t4-board-results-1280.png')
     # Teacher finishes → hardest questions.
     tp.get_by_role('button',name='Testni yakunlash').first.click();tp.wait_for_timeout(400);tp.screenshot(path=f'{OUT}/t5-finish-confirm-1920.png')
     tp.locator('.bs-sheet-actions button').last.click();tp.wait_for_selector('text=Eng qiyin savollar',timeout=15000);tp.wait_for_timeout(800)
