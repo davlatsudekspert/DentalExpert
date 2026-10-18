@@ -92,7 +92,8 @@ check('no review during the grace minutes','review' not in mine(g,aid,S[0])['min
 sql(f"UPDATE class_assignments SET closed_at=datetime('now','-3 minutes') WHERE id='{aid}'")
 rv=mine(g,aid,S[0])['mine']['review']
 check('review: own questions, right answers, explanations',rv['questions']==q0 and rv['correct']==correct(q0) and len(rv['explain'])==5 and all(rv['explain']))
-check('a student who started but did not submit gets no review',mine(g,aid,S[2])['mine'].get('review') is None)
+m2=mine(g,aid,S[2])['mine']
+check('a student who started and never submitted is finished by the server after the grace (no answers → 0)',m2['answer']=='done' and m2['score']==0 and m2['review']['answers']==[-1]*5)
 
 # 6. Pool from topics the group has opened: 8 per student needs 16+ questions.
 tid2='perio-04'
@@ -134,7 +135,8 @@ check('no review during the grace after the deadline','review' not in mine(g,aid
 sql(f"UPDATE class_assignments SET deadline_at=datetime('now','-3 minutes') WHERE id='{aid4}'")
 check('beyond the grace a late submit is refused',call('/classroom/submit','POST',{'assignmentId':aid4,'answers':k4},S[1])==(409,{'error':'past_due'}))
 check('reveal "deadline": answers open after the deadline without the teacher',mine(g,aid4,S[0])['mine']['review']['correct']==k4)
-check('teacher stats once the deadline passed',call(f'/classroom/assignments?groupId={g}&assignmentId={aid4}',token=T)[1]['stats']==[{'right':1,'answered':1},{'right':1,'answered':1}])
+# The late student who started was finished by the server with no answers, so two attempts count.
+check('teacher stats once the deadline passed',call(f'/classroom/assignments?groupId={g}&assignmentId={aid4}',token=T)[1]['stats']==[{'right':1,'answered':2},{'right':1,'answered':2}])
 
 # 9. 200 members at most (198 seeded rows + the 4 students = full at 200).
 T3,_=login('teacher','Katta guruh');s,r=call('/classroom/groups','POST',{'name':'200 talaba'},T3);big=r['group']
