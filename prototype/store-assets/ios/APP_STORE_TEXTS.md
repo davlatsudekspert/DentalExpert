@@ -35,6 +35,9 @@ Use with the files in this folder. Language: English (primary) and Russian. Uzbe
   Это ранняя тестовая версия. Профили и реклама с пометкой «Пример» вымышлены. Учебные материалы не являются медицинской консультацией.
 - Keywords: стоматолог,зубы,анатомия зуба,стоматология,студент,Узбекистан,клиника
 
+## Pricing and availability (owner's rule)
+- Price: Free. Availability: **all countries and regions** (every territory App Store Connect offers, 175 at first submission). Keep it this way for every app and every new version.
+
 ## App Privacy answers (matches the current app)
 - Data collected (only if the user signs in on the web): email address and name (account), approximate city the user picks, and (from build 21) the profile photo a specialist chooses to upload (App Privacy → Photos or Videos, linked to the user, App Functionality). Used for app functionality and account; not used for tracking; not sold.
 - No advertising SDKs, no analytics SDKs, no tracking.
