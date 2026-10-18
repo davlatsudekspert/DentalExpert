@@ -1,10 +1,11 @@
 appId: uz.dentalexpert.app
-name: "(b3) Student: sign up, daily quiz, join the teacher's group with the code, answer the assignment, sign out"
+name: "(b3) Student - sign up, daily quiz, join the teacher's group with code and nickname, answer the assignment, take the topic test, sign out"
 tags:
   - signin
 # Local API only; run after 03_teacher.yaml. Needs -e STUDENT_EMAIL=... -e GROUP_NAME=... -e QUIZ_OPTION_RE=...
-# QUIZ_OPTION_RE (from tools/ios_sim/quiz_regex.mjs) matches every possible answer of the daily quiz, so the flow
-# can pick "the first answer" whatever questions today brings.
+# -e TOPIC_OPTION_RE=... QUIZ_OPTION_RE / TOPIC_OPTION_RE (tools/ios_sim/quiz_regex.mjs uz [card-01]) match every
+# possible answer of the daily quiz / of the topic test the teacher started, so the flow can pick "the first answer"
+# whatever questions and order come up.
 ---
 - runFlow:
     file: common/signup.yaml
@@ -39,6 +40,9 @@ tags:
     visible: "1 / 5"
     timeout: 10000
 - takeScreenshot: student-05-daily-question
+# "index: 0" is the first match in the screen's tree. The quiz dialog (aria-modal) hides the page behind it. Its eyebrow
+# "Savol 4 / 5" is one text now; it used to be the texts "Savol", "4", "/", "5", and on question 4 the bare "4" matched
+# the answer "4" above the options, so the tap hit the eyebrow (run 39102430794).
 - repeat:
     times: 5
     commands:
@@ -84,41 +88,148 @@ tags:
     timeout: 20000
     centerElement: true
 - tapOn: "6 belgili kod"
+- waitForAnimationToEnd:
+    timeout: 2000
 - inputText: ${output.groupCode}
+- assertVisible: "${output.groupCode}"
+- runFlow: common/dismiss_keyboard.yaml   # the nickname field is under the keyboard otherwise
+- scrollUntilVisible:
+    element:
+      text: "Masalan: Lola"
+    direction: DOWN
+    timeout: 20000
+    centerElement: true
 - tapOn: "Masalan: Lola"
+- waitForAnimationToEnd:
+    timeout: 2000
 - inputText: Zebra
+- assertVisible: "Zebra"
 - runFlow: common/dismiss_keyboard.yaml
 - takeScreenshot: student-08-join-code
-- tapOn: "Qo.shilish"          # exact: the button, not the "Guruhga qo‘shilish" label
+- scrollUntilVisible:
+    element:
+      text: "Qo.shilish"        # exact: the button, not the "Guruhga qo‘shilish" label
+    direction: DOWN
+    timeout: 10000
+    centerElement: true
+- tapOn: "Qo.shilish"
 - extendedWaitUntil:
     visible: "${GROUP_NAME}.*"
     timeout: 15000
+- assertVisible: ".*Zebra.*"      # the group row: "Ustoz: Ustoz Maestro · Zebra"
 - takeScreenshot: student-09-joined
 
 # Answer the written assignment (group tabs: Mavzular / Topshiriqlar)
+- scrollUntilVisible:
+    element:
+      text: "${GROUP_NAME}.*"
+    direction: DOWN
+    timeout: 20000
+    centerElement: true
 - tapOn: "${GROUP_NAME}.*"
-- extendedWaitUntil:
-    visible: "Topshiriqlar"
-    timeout: 10000
+- scrollUntilVisible:
+    element:
+      text: "Topshiriqlar"
+    direction: DOWN
+    timeout: 20000
+    centerElement: true
 - tapOn: "Topshiriqlar"
-- extendedWaitUntil:
-    visible: ".*Emalni tasvirlang.*"
-    timeout: 10000
+- scrollUntilVisible:
+    element:
+      text: ".*Emalni tasvirlang.*"
+    direction: DOWN
+    timeout: 20000
+    centerElement: true
 - tapOn: ".*Emalni tasvirlang.*"
-- tapOn: "Javobingiz"
+- scrollUntilVisible:
+    element:
+      text: "Javobingizni shu yerga yozing"   # placeholder of "Javobingiz"
+    direction: DOWN
+    timeout: 20000
+    centerElement: true
+- tapOn: "Javobingizni shu yerga yozing"
+- waitForAnimationToEnd:
+    timeout: 2000
 - inputText: "Eng qattiq to'qima, tojni qoplaydi"
+- assertVisible: "Eng qattiq to'qima, tojni qoplaydi"
 - runFlow: common/dismiss_keyboard.yaml
 - scrollUntilVisible:
     element:
       text: "Yuborish"
     direction: DOWN
-    timeout: 10000
+    timeout: 20000
     centerElement: true
 - tapOn: "Yuborish"
 - extendedWaitUntil:
     visible: "Yuborildi"
     timeout: 10000
 - takeScreenshot: student-10-answer-sent
+
+# The topic test the teacher started (classroom v2): group -> Mavzular -> topic -> Testni boshlash -> 10 questions
+# -> Topshirish -> score. The right answers stay hidden until the teacher finishes the test.
+- scrollUntilVisible:
+    element:
+      text: "${GROUP_NAME}"     # back to the group (the back button names it)
+    direction: DOWN
+    timeout: 10000
+    centerElement: true
+- tapOn: "${GROUP_NAME}"
+- scrollUntilVisible:
+    element:
+      text: "Mavzular"
+    direction: DOWN
+    timeout: 20000
+    centerElement: true
+- tapOn: "Mavzular"
+- scrollUntilVisible:
+    element:
+      text: ".*Kariesning etiologiyasi va patogenezi.*Test ochiq.*"
+    direction: DOWN
+    timeout: 20000
+    centerElement: true
+- tapOn: ".*Kariesning etiologiyasi va patogenezi.*"
+- scrollUntilVisible:
+    element:
+      text: "Testni boshlash"
+    direction: DOWN
+    timeout: 20000
+    centerElement: true
+- takeScreenshot: student-11-topic-test
+- tapOn: "Testni boshlash"
+- extendedWaitUntil:
+    visible: "1 / 10.*"          # the bar counter (with the time left when the teacher set a limit)
+    timeout: 15000
+- repeat:
+    times: 10
+    commands:
+      - tapOn:
+          text: ${TOPIC_OPTION_RE}
+          index: 0
+      - extendedWaitUntil:
+          visible: "(Keyingi|Topshirish)"
+          timeout: 5000
+      - runFlow:
+          when:
+            visible: "Keyingi"
+          commands:
+            - tapOn: "Keyingi"
+      - runFlow:
+          when:
+            visible: "Topshirish"
+          commands:
+            - takeScreenshot: student-12-topic-last-answer
+            - tapOn: "Topshirish"
+- extendedWaitUntil:
+    visible: ".*10 ta savoldan [0-9]+ tasiga to.g.ri javob berdingiz.*"
+    timeout: 15000
+- takeScreenshot: student-13-topic-result
+- tapOn:
+    text: "Yopish"
+    index: 0
+- extendedWaitUntil:
+    visible: "Natija: [0-9]+ / 10"
+    timeout: 10000
+- takeScreenshot: student-14-topic-done
 
 - runFlow:
     file: common/sign_out.yaml

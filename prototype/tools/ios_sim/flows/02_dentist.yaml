@@ -1,5 +1,5 @@
 appId: uz.dentalexpert.app
-name: "(b1) Dentist: sign up, dashboard with own name, patient, odontogram, 3D atlas, settings, sign out"
+name: "(b1) Dentist - sign up, dashboard with own name, patient, odontogram, 3D atlas, profile, sign out"
 tags:
   - signin
 # Local API only (see tools/ios_sim/start_local_api.sh). Needs -e DENTIST_EMAIL=...
@@ -34,18 +34,33 @@ tags:
 - extendedWaitUntil:
     visible: "Bemorlarim"
     timeout: 10000
+- scrollUntilVisible:
+    element:
+      text: "Bemor qo.shish.*"
+    direction: DOWN
+    timeout: 20000
+    centerElement: true
 - tapOn: "Bemor qo.shish.*"
-- tapOn: "Ism va familiya"
+# Tap the field itself (its placeholder), not the label text above it, and check every typed value before the next
+# field: in run 39102430794 only "T" stayed in the name field and "est Bemor" went into "Telefon" (Saqlash stayed off).
+- tapOn: "Masalan: Dilnoza Karimova"
+- waitForAnimationToEnd:
+    timeout: 2000            # the keyboard slides in and WebKit scrolls the field above it
 - inputText: Test Bemor
-- tapOn: "Telefon"
+- assertVisible: "Test Bemor"
+- tapOn: "\\+998 90 000 00 00"   # placeholder of the phone field
+- waitForAnimationToEnd:
+    timeout: 2000
 - inputText: "+998 91 000 00 00"
+- assertVisible: "\\+998 91 000 00 00"
+- assertVisible: "Test Bemor"
 - runFlow: common/dismiss_keyboard.yaml
 - takeScreenshot: dentist-05-new-patient
 - scrollUntilVisible:
     element:
       text: "Saqlash"
     direction: DOWN
-    timeout: 10000
+    timeout: 20000
     centerElement: true
 - tapOn: "Saqlash"
 - extendedWaitUntil:
@@ -78,8 +93,17 @@ tags:
     timeout: 15000
     centerElement: true
 - tapOn: "Nima qilindi."
+- waitForAnimationToEnd:
+    timeout: 2000
 - inputText: Karies davolandi
+- assertVisible: "Karies davolandi"
 - runFlow: common/dismiss_keyboard.yaml
+- scrollUntilVisible:
+    element:
+      text: "Qabul qaydini qo.shish"
+    direction: DOWN
+    timeout: 20000
+    centerElement: true
 - tapOn: "Qabul qaydini qo.shish"
 - extendedWaitUntil:
     visible: ".*Karies davolandi.*"
@@ -111,7 +135,7 @@ tags:
     notVisible: "3D tish atlasi"
     timeout: 5000
 
-# Settings and sign out
+# Profile and sign out
 - runFlow:
     file: common/sign_out.yaml
     env:

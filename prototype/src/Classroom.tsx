@@ -34,10 +34,10 @@ const joinErr={
 const words={
  uz:{student:'Talaba',nick:'Taxallus (ixtiyoriy)',nickPh:'Masalan: Lola',nickHint:'Ustoz sizni shu nom yoki raqam bilan ko‘radi',close:'Yopish',reopen:'Qayta ochish',closedLbl:'Yopilgan',errClosed:'Topshiriq yopilgan.',errDone:'Siz bu testni allaqachon topshirgansiz.',errStarted:'Bu test allaqachon boshlangan va qayta boshlab bo‘lmaydi.',errDue:'Topshirish muddati o‘tgan.',errRate:'Juda ko‘p urinish. Keyinroq qayta urinib ko‘ring.',errNick:'Taxallus 2–24 belgi: harf, raqam, bo‘sh joy.',errNickTaken:'“Talaba N” ko‘rinishidagi nom band — boshqa nom tanlang.',title:'Guruhlar va darslar',signIn:'Guruhlar uchun email orqali kiring.',signInBtn:'Kirish',offline:'Guruhlar hozir mavjud emas (internet yoki server).',
   newGroup:'Yangi guruh',groupName:'Guruh nomi',groupHint:'Masalan: Terapiya 3-kurs',create:'Yaratish',code:'Qo‘shilish kodi',members:'talaba',copy:'Kodni nusxalash',copyInvite:'Taklif matnini nusxalash',copied:'Nusxalandi',noGroups:'Hali guruh yo‘q.',
-  back:'Guruhlar',assignments:'Topshiriqlar',noAssign:'Hali topshiriq yo‘q.',add:'Topshiriq berish',kind:'Turi',task:'Matnli javob',quiz:'Test (taqdimot testi)',titleF:'Sarlavha',bodyF:'Izoh (ixtiyoriy)',due:'Muddat',deck:'Taqdimot',
+  back:'Guruhlar',assignments:'Topshiriqlar',noAssign:'Hali topshiriq yo‘q.',add:'Topshiriq berish',kind:'Turi',task:'Matnli javob',quiz:'Test (taqdimot testi)',titleF:'Sarlavha',titlePh:'Masalan: Emal tuzilishi',bodyF:'Izoh (ixtiyoriy)',due:'Muddat',deck:'Taqdimot',
   submitted:'topshirdi',delete:'O‘chirish',confirmDel:'Topshiriq o‘chirilsin?',roster:'Talabalar',notYet:'Topshirmagan',
   join:'Guruhga qo‘shilish',joinPh:'6 belgili kod',joinHint:'Ustoz bergan kod — bo‘sh joy bilan yozilsa ham bo‘ladi',joinBtn:'Qo‘shilish',leave:'Guruhdan chiqish',teacher:'Ustoz',
-  answer:'Javobingiz',send:'Yuborish',resend:'Qayta yuborish',sent:'Yuborildi',start:'Testni boshlash',result:'Natija',dueLbl:'Muddat',
+  answer:'Javobingiz',answerPh:'Javobingizni shu yerga yozing',send:'Yuborish',resend:'Qayta yuborish',sent:'Yuborildi',start:'Testni boshlash',result:'Natija',dueLbl:'Muddat',
   errName:'Nom kamida 2 belgi.',errCode:'Kod noto‘g‘ri yoki guruh topilmadi.',errGeneric:'Bajarilmadi. Qayta urinib ko‘ring.',errTeacher:'Guruhni faqat ustoz yaratadi.',
   note:'Test natijasi serverda hisoblanadi; rasmiy baho emas. Ustoz sizni taxallus yoki raqam bilan ko‘radi, email yoki ismingizni emas.',
   tabs:{plan:'O‘quv reja',work:'Topshiriqlar',book:'Jurnal',people:'Talabalar'},invite:'Talabalarni taklif qiling',inviteHint:'Talaba ilovada «Guruhga qo‘shilish» bo‘limiga shu kodni yozadi yoki QR kodni telefon kamerasi bilan o‘qiydi.',
@@ -51,10 +51,10 @@ const words={
   testOpen:'Test ochiq',timeLimit:'daqiqa',testWait:'Ustoz testni boshlaganda shu yerda paydo bo‘ladi.',reviewLater:'To‘g‘ri javoblar ustoz testni yakunlagach ko‘rinadi.',yourAns:'Sizning javobingiz',right:'To‘g‘ri javob',noAnswer:'Javob berilmagan',timeUp:'Vaqt tugadi.',goals:'Dars maqsadlari',pick:'Fan tanlang'},
  ru:{student:'Студент',nick:'Псевдоним (необязательно)',nickPh:'Например: Лола',nickHint:'Преподаватель увидит вас под этим именем или номером',close:'Закрыть приём',reopen:'Открыть снова',closedLbl:'Закрыто',errClosed:'Задание закрыто.',errDone:'Вы уже сдали этот тест.',errStarted:'Этот тест уже начат, начать заново нельзя.',errDue:'Срок сдачи истёк.',errRate:'Слишком много попыток. Попробуйте позже.',errNick:'Псевдоним 2–24 символа: буквы, цифры, пробел.',errNickTaken:'Имя вида «Студент N» занято — выберите другое.',title:'Группы и занятия',signIn:'Войдите по email, чтобы пользоваться группами.',signInBtn:'Войти',offline:'Группы сейчас недоступны (интернет или сервер).',
   newGroup:'Новая группа',groupName:'Название группы',groupHint:'Например: Терапия, 3 курс',create:'Создать',code:'Код для вступления',members:'студ.',copy:'Копировать код',copyInvite:'Копировать приглашение',copied:'Скопировано',noGroups:'Групп пока нет.',
-  back:'Группы',assignments:'Задания',noAssign:'Заданий пока нет.',add:'Дать задание',kind:'Тип',task:'Текстовый ответ',quiz:'Тест (по презентации)',titleF:'Заголовок',bodyF:'Описание (необязательно)',due:'Срок',deck:'Презентация',
+  back:'Группы',assignments:'Задания',noAssign:'Заданий пока нет.',add:'Дать задание',kind:'Тип',task:'Текстовый ответ',quiz:'Тест (по презентации)',titleF:'Заголовок',titlePh:'Например: Строение эмали',bodyF:'Описание (необязательно)',due:'Срок',deck:'Презентация',
   submitted:'сдали',delete:'Удалить',confirmDel:'Удалить задание?',roster:'Студенты',notYet:'Не сдано',
   join:'Вступить в группу',joinPh:'6-значный код',joinHint:'Код от преподавателя — можно вводить с пробелом',joinBtn:'Вступить',leave:'Выйти из группы',teacher:'Преподаватель',
-  answer:'Ваш ответ',send:'Отправить',resend:'Отправить снова',sent:'Отправлено',start:'Начать тест',result:'Результат',dueLbl:'Срок',
+  answer:'Ваш ответ',answerPh:'Напишите ответ здесь',send:'Отправить',resend:'Отправить снова',sent:'Отправлено',start:'Начать тест',result:'Результат',dueLbl:'Срок',
   errName:'Название — минимум 2 символа.',errCode:'Неверный код или группа не найдена.',errGeneric:'Не получилось. Попробуйте ещё раз.',errTeacher:'Группы создаёт только преподаватель.',
   note:'Результат теста считается на сервере; это не официальная оценка. Преподаватель видит вас по псевдониму или номеру, а не по email или имени.',
   tabs:{plan:'Учебный план',work:'Задания',book:'Журнал',people:'Студенты'},invite:'Пригласите студентов',inviteHint:'Студент вводит этот код в разделе «Вступить в группу» или считывает QR-код камерой телефона.',
@@ -68,10 +68,10 @@ const words={
   testOpen:'Тест открыт',timeLimit:'мин',testWait:'Появится здесь, когда преподаватель начнёт тест.',reviewLater:'Верные ответы появятся после завершения теста преподавателем.',yourAns:'Ваш ответ',right:'Верный ответ',noAnswer:'Нет ответа',timeUp:'Время вышло.',goals:'Цели занятия',pick:'Выберите предмет'},
  en:{student:'Student',nick:'Nickname (optional)',nickPh:'e.g. Lola',nickHint:'Your teacher sees you by this name or number',close:'Close submissions',reopen:'Reopen',closedLbl:'Closed',errClosed:'This assignment is closed.',errDone:'You have already submitted this quiz.',errStarted:'This quiz was already started and cannot be restarted.',errDue:'The due date has passed.',errRate:'Too many attempts. Try again later.',errNick:'Nickname: 2–24 letters, digits or spaces.',errNickTaken:'Names like “Student N” are reserved — choose another one.',title:'Groups and classes',signIn:'Sign in with your email to use groups.',signInBtn:'Sign in',offline:'Groups are unavailable right now (network or server).',
   newGroup:'New group',groupName:'Group name',groupHint:'For example: Therapy, year 3',create:'Create',code:'Join code',members:'students',copy:'Copy code',copyInvite:'Copy invitation',copied:'Copied',noGroups:'No groups yet.',
-  back:'Groups',assignments:'Assignments',noAssign:'No assignments yet.',add:'Give an assignment',kind:'Type',task:'Written answer',quiz:'Quiz (from a presentation)',titleF:'Title',bodyF:'Notes (optional)',due:'Due date',deck:'Presentation',
+  back:'Groups',assignments:'Assignments',noAssign:'No assignments yet.',add:'Give an assignment',kind:'Type',task:'Written answer',quiz:'Quiz (from a presentation)',titleF:'Title',titlePh:'e.g. Enamel structure',bodyF:'Notes (optional)',due:'Due date',deck:'Presentation',
   submitted:'submitted',delete:'Delete',confirmDel:'Delete this assignment?',roster:'Students',notYet:'Not submitted',
   join:'Join a group',joinPh:'6-character code',joinHint:'The code from your teacher — spaces are fine',joinBtn:'Join',leave:'Leave group',teacher:'Teacher',
-  answer:'Your answer',send:'Submit',resend:'Submit again',sent:'Submitted',start:'Start quiz',result:'Score',dueLbl:'Due',
+  answer:'Your answer',answerPh:'Write your answer here',send:'Submit',resend:'Submit again',sent:'Submitted',start:'Start quiz',result:'Score',dueLbl:'Due',
   errName:'Name needs at least 2 characters.',errCode:'Wrong code or group not found.',errGeneric:'That did not work. Please try again.',errTeacher:'Only teachers can create groups.',
   note:'Quiz scores are calculated on the server; they are not official grades. The teacher sees you by nickname or number, not by email or name.',
   tabs:{plan:'Curriculum',work:'Assignments',book:'Gradebook',people:'Students'},invite:'Invite your students',inviteHint:'Students enter this code under “Join a group”, or read the QR code with the phone camera.',
@@ -123,6 +123,11 @@ export default function Classroom({lang,user,onSignIn}:{lang:Lang;user:AuthUser|
  useEffect(()=>{const f=()=>{if(user)load()};addEventListener(CLASSROOM_CHANGED,f);return ()=>removeEventListener(CLASSROOM_CHANGED,f)},[user,load]);
  // A teacher with one group goes straight to the topic; with several the list asks which group.
  useEffect(()=>{if(assign&&groups?.length===1)setOpen(groups[0])},[assign,groups]);
+ // Coming from a topic page the teacher lands on the home screen, where the classroom is far below the fold: bring the
+ // topic (one group) or the "which group?" note (several) into view once it is there.
+ const shown=useRef('');
+ useEffect(()=>{if(!assign||groups===null||shown.current===assign||(groups.length===1&&!open))return;shown.current=assign;
+  requestAnimationFrame(()=>document.querySelector('.classroom')?.scrollIntoView({block:'start'}))},[assign,groups,open]);
  if(!user)return <section className="classroom card"><h2>{t.title}</h2><p className="muted">{t.signIn}</p><button className="button" onClick={onSignIn}><LogIn size={17}/>{t.signInBtn}</button></section>;
  if(offline)return <section className="classroom card"><h2>{t.title}</h2><p className="muted">{t.offline}</p></section>;
  if(open)return <GroupView lang={lang} group={open} teacher={teacher} user={user} initialTopic={assign} onBack={()=>{setOpen(null);setAssign(null);load()}}/>;
@@ -454,7 +459,7 @@ function StudentTopic({lang,user,topicId,test,onChanged}:{lang:Lang;user:AuthUse
    <button className="button" onClick={()=>setShow(true)}><Presentation size={16}/>{t.watch} · {topic.slides.length}</button>
    <div className={'lg-stage'+(finished?' done':'')}><span className="lg-eyebrow">{t.test}</span>
     {!test?<p className="muted">{t.testWait}</p>
-    :finished?<><p className="cr-score">{t.result}: {score?score[0]:mine?.score} / {score?score[1]:mine?.total}</p>
+    :finished?<><p className="cr-score">{`${t.result}: ${score?score[0]:mine?.score} / ${score?score[1]:mine?.total}`}</p>
      {review?(items?<TestReview lang={lang} items={items} review={review}/>:<p className="muted">…</p>):<p className="muted">{revealNote(test,lang)}</p>}</>
     :canStart?<><p className="muted">{[t.qCount(n),test.minutes?`${test.minutes} ${t.timeLimit}`:r.noLimit,test.deadlineAt?fmtDue(test.deadlineAt,lang):''].filter(Boolean).join(' · ')}</p>
      {test.variant&&<p className="lg-small muted">{studentWords[lang].own}</p>}
@@ -524,7 +529,7 @@ function NewAssignment({lang,groupId,decks,onDone,onCancel}:{lang:Lang;groupId:s
   <label>{t.kind}<select value={kind} onChange={e=>setKind(e.target.value as 'task'|'quiz')}><option value="task">{t.task}</option><option value="quiz" disabled={decks.length===0}>{t.quiz}</option></select></label>
   {kind==='quiz'&&<label>{t.deck}<select value={deck||decks[0]?.id} onChange={e=>setDeck(e.target.value)}>{decks.map(d=><option key={d.id} value={d.id}>{d.title}</option>)}</select></label>}
   {kind==='quiz'&&<RevealPick x={more[lang]} value={reveal} onChange={setReveal}/>}
-  <label>{t.titleF}<input value={title} maxLength={100} onChange={e=>setTitle(e.target.value)}/></label>
+  <label>{t.titleF}<input value={title} maxLength={100} placeholder={t.titlePh} onChange={e=>setTitle(e.target.value)}/></label>
   <label>{t.bodyF}<textarea rows={3} maxLength={1000} value={body} onChange={e=>setBody(e.target.value)}/></label>
   <label>{t.due}<input type="date" value={due} onChange={e=>setDue(e.target.value)}/></label>
   {err&&<p className="cr-error" role="alert">{err}</p>}
@@ -573,13 +578,13 @@ function AssignmentView({lang,groupId,code,user,a,teacher,roster,decks,members,o
    <button className="button secondary" onClick={()=>setAsking(true)}><Trash2 size={16}/>{t.delete}</button></div>
    {asking&&<ConfirmSheet text={t.confirmDel} ok={t.delete} cancel={t.cancel} danger onOk={del} onCancel={()=>setAsking(false)}/>}
   </>:a.kind==='task'?<>
-   <label>{t.answer}<textarea rows={5} maxLength={2000} value={answer} onChange={e=>{setAnswer(e.target.value);setDone(false)}}/></label>
+   <label>{t.answer}<textarea rows={5} maxLength={2000} value={answer} placeholder={t.answerPh} onChange={e=>{setAnswer(e.target.value);setDone(false)}}/></label>
    {a.status==='closed'&&<p className="muted">{t.errClosed}</p>}
    {err&&<p className="cr-error" role="alert">{err}</p>}
    <button className="button" disabled={!answer.trim()||done||a.status==='closed'} onClick={send}>{done?t.sent:a.mine?t.resend:t.send}</button>
   </>:<>
    {a.general&&!score&&<p className="muted">{[t.qCount(a.questionCount??0),a.minutes?`${a.minutes} ${t.timeLimit}`:runWords[lang].noLimit,a.deadlineAt?fmtDue(a.deadlineAt,lang):''].filter(Boolean).join(' · ')}</p>}
-   {score&&<p className="cr-score">{t.result}: {score[0]} / {score[1]}</p>}
+   {score&&<p className="cr-score">{`${t.result}: ${score[0]} / ${score[1]}`}</p>}
    {score&&(review?(items?<TestReview lang={lang} items={items} review={review}/>:null):a.general&&<p className="muted">{revealNote(a as TestMeta,lang)}</p>)}
    {(a.status==='closed'||a.ended&&a.mine?.answer!=='started')&&!score&&<p className="muted">{a.status==='open'?testError(lang,'past_due'):t.errClosed}</p>}
    {!score&&<button className="button" disabled={!canRun||a.status==='closed'||!!a.ended&&a.mine?.answer!=='started'} onClick={()=>{setErr('');setRun(true)}}>{a.mine?.answer==='started'?testWords[lang].resume:t.start}</button>}

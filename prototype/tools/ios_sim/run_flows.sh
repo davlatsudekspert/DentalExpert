@@ -2,7 +2,7 @@
 # Installs the simulator build, records a video and runs the given Maestro flows one after another on $SIM_UDID.
 # Usage: SIM_UDID=... APP_PATH=.../App.app OUT_DIR=... run_flows.sh flows/01_onboarding_uz.yaml [more flows...]
 # Values passed to the flows as Maestro env (-e) when set: DENTIST_EMAIL TEACHER_EMAIL STUDENT_EMAIL GROUP_NAME
-# QUIZ_OPTION_RE E2E_PROXY.
+# QUIZ_OPTION_RE TOPIC_OPTION_RE E2E_PROXY.
 # Output in $OUT_DIR: screenshots/<flow>/*.png, video/simulator.mp4, maestro/<flow>/ (reports, debug output,
 # failure screenshots), maestro/<flow>.xml (JUnit), logs/simulator-app*.log, summary.md.
 # Exit code: 0 when every flow passed, 1 otherwise. Every flow runs even if an earlier one failed.
@@ -44,7 +44,7 @@ sleep 3
 LOG_START="$(date '+%Y-%m-%d %H:%M:%S')"
 
 ENV_ARGS=()
-for v in DENTIST_EMAIL TEACHER_EMAIL STUDENT_EMAIL GROUP_NAME QUIZ_OPTION_RE E2E_PROXY; do
+for v in DENTIST_EMAIL TEACHER_EMAIL STUDENT_EMAIL GROUP_NAME QUIZ_OPTION_RE TOPIC_OPTION_RE E2E_PROXY; do
   if [ -n "${!v:-}" ]; then ENV_ARGS+=(-e "$v=${!v}"); fi
 done
 
@@ -64,6 +64,11 @@ for FLOW in "$@"; do
   RC=${PIPESTATUS[0]}
   SECS=$(( $(date +%s) - T0 ))
   echo "::endgroup::"
+  # Maestro names its output folders after the flow's `name:`; actions/upload-artifact refuses any path with
+  # " : < > | * ? CR or LF (run 39102430794). The flow names avoid them; this catches any that slip in.
+  find "$WORK" -depth -name $'*[":<>|*?\r\n]*' | while IFS= read -r p; do
+    mv "$p" "${p%/*}/$(printf '%s' "${p##*/}" | tr '":<>|*?\r\n' '_________')"
+  done
   # Named screenshots from takeScreenshot (onboarding-*, dentist-*, ...); Maestro's own per-step and failure
   # screenshots stay in maestro/<flow>/.
   find "$WORK" -type f -name '*.png' | grep -E '/(onboarding|dentist|teacher|student)-[^/]*\.png$' \

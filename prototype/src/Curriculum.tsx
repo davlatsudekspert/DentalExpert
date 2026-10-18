@@ -134,7 +134,7 @@ function SelfTest({lang,topic,teacher}:{lang:Lang;topic:Topic;teacher?:boolean})
   setQs(topic.test.map((x,k)=>({q:tx(x.q,lang),options:x.options.map(o=>tx(o,lang)),correct:r.data.correct[k],explanation:tx(r.data.explain[k],lang)})))};
  const done=(score:number,total:number)=>{const all=readBest();const prev=all[topic.id];if(!prev||score>prev.best){all[topic.id]={best:score,total};try{localStorage.setItem(BEST,JSON.stringify(all))}catch{/* storage unavailable */}setBest(all[topic.id])}};
  return <div className="lg-card lg-selftest">
-  <h3><ClipboardCheck size={16}/>{t.selfTest} · {topic.test.length} {t.q}</h3>
+  <h3><ClipboardCheck size={16}/>{`${t.selfTest} · ${topic.test.length} ${t.q}`}</h3>
   <p className="muted lg-small">{t.testNote}</p>
   {best&&<p className="lg-best">{t.best}: <b>{best.best}/{best.total}</b></p>}
   {err&&<p className="error-text" role="alert">{t.testErr}</p>}

@@ -186,6 +186,7 @@ jobs:
             echo "GROUP_NAME=Maestro Guruh ${RUN}"
             echo "E2E_PROXY=http://127.0.0.1:8789"
             echo "QUIZ_OPTION_RE=$(node tools/ios_sim/quiz_regex.mjs uz)"
+            echo "TOPIC_OPTION_RE=$(node tools/ios_sim/quiz_regex.mjs uz card-01)"   # the topic test 03_teacher starts
           } >> "$GITHUB_ENV"
           echo "Accounts: ${LOCAL}-{dentist,teacher,student}-${RUN}@${DOMAIN} (local D1 only)"
 

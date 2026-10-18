@@ -8,7 +8,7 @@ Bu sinov ilovani GitHub serveridagi Mac kompyuterda **iPhone simulyatorida** ish
 2. Chap ro‘yxatdan **iOS Simulator test** ni tanlang.
 3. O‘ng tomondagi **Run workflow** tugmasini bosing. Ochilgan oynada:
    - **sign_in_flow**: belgilanmagan bo‘lsa (odatiy), faqat qisqa sinov: til tanlash → O‘zbekcha → rollar → ro‘yxatdan o‘tish ekrani. Hech narsa yuborilmaydi, hisob yaratilmaydi, xat ketmaydi.
-     Belgilansa, to‘liq sinov ham o‘tadi: stomatolog, ustoz va talaba sifatida ro‘yxatdan o‘tish, bemor qo‘shish, tishlarni belgilash, 3D atlas, guruh va topshiriq, kunlik test, chiqish.
+     Belgilansa, to‘liq sinov ham o‘tadi: stomatolog, ustoz va talaba sifatida ro‘yxatdan o‘tish, bemor qo‘shish, tishlarni belgilash, 3D atlas, guruh va yozma topshiriq, mavzu sahifasidan «Guruhga topshirish» bilan mavzu testi, talaba kod va taxallus bilan qo‘shilib topshiriq va testni yechadi, kunlik test, chiqish.
    - **api_base**: qisqa sinovda ilova qaysi serverga ulanadi (odatda `https://dental-expert.pages.dev`; sinov serveringiz bo‘lsa, uning manzilini yozing). To‘liq sinovda bu maydon ishlatilmaydi (pastga qarang).
    - **test_email**: to‘liq sinovdagi hisoblar uchun asos manzil (masalan `maestro@example.test`). Undan `...-dentist-...`, `...-teacher-...`, `...-student-...` manzillari yasaladi. Bu manzillarga **xat yuborilmaydi**.
    - **device** va **maestro_version**: odatda o‘zgartirmang.
@@ -41,5 +41,5 @@ Ilovada parol yo‘q: emailga 6 xonali kod yuboriladi. Avtomatik sinov haqiqiy p
 ## Dasturchilar uchun qisqacha
 
 - Workflow: `.github/workflows/ios-simulator-test.yml`. Skriptlar va Maestro sinovlari: `prototype/tools/ios_sim/` (`flows/*.yaml`, `run_flows.sh`, `boot_simulator.sh`, `start_local_api.sh`, `e2e_proxy.mjs`).
-- Mac’da qo‘lda: `npm ci && VITE_API_BASE=http://127.0.0.1:8789 npm run build && npx cap sync ios`, Xcode’da simulyator uchun yig‘ing, so‘ng `tools/ios_sim/start_local_api.sh`, `tools/ios_sim/boot_simulator.sh` va `SIM_UDID=… APP_PATH=…/App.app OUT_DIR=/tmp/sim tools/ios_sim/run_flows.sh tools/ios_sim/flows/0*.yaml` (`DENTIST_EMAIL`, `TEACHER_EMAIL`, `STUDENT_EMAIL`, `GROUP_NAME`, `QUIZ_OPTION_RE` — workflow’dagi **Test identities** qadamiga qarang).
-- Matnlar o‘zgarganda selektorlarni Mac’siz tekshirish: `tools/ios_sim/chromium_dryrun.py` (ichidagi izohga qarang).
+- Mac’da qo‘lda: `npm ci && VITE_API_BASE=http://127.0.0.1:8789 npm run build && npx cap sync ios`, Xcode’da simulyator uchun yig‘ing, so‘ng `tools/ios_sim/start_local_api.sh`, `tools/ios_sim/boot_simulator.sh` va `SIM_UDID=… APP_PATH=…/App.app OUT_DIR=/tmp/sim tools/ios_sim/run_flows.sh tools/ios_sim/flows/0*.yaml` (`DENTIST_EMAIL`, `TEACHER_EMAIL`, `STUDENT_EMAIL`, `GROUP_NAME`, `QUIZ_OPTION_RE`, `TOPIC_OPTION_RE` — workflow’dagi **Test identities** qadamiga qarang).
+- Matnlar o‘zgarganda selektorlarni Mac’siz tekshirish: `tools/ios_sim/chromium_dryrun.py` — o‘sha YAML sinovlarni Playwright WebKit’da (iPhone 16 ekrani) buyruqma-buyruq bajaradi: iOS WebKit’dagidek har bir matn bo‘lagi alohida element, bosish ekran koordinatasiga (pastki panel yoki klaviatura ostidagi tugma xato beradi), klaviatura va «Done» tugmasi ham taqlid qilinadi (ichidagi izohga qarang).

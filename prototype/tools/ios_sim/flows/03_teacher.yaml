@@ -1,8 +1,10 @@
 appId: uz.dentalexpert.app
-name: "(b2) Teacher: sign up, create a group, give an assignment, sign out"
+name: "(b2) Teacher - sign up, create a group, give a written assignment and a topic test, sign out"
 tags:
   - signin
 # Local API only. Needs -e TEACHER_EMAIL=... -e GROUP_NAME=... (04_student.yaml joins this group afterwards).
+# Classroom v2: the topic test is given from the topic page (Learn -> O'quv reja -> subject -> topic ->
+# "Mavzu bo'yicha test" -> "Guruhga topshirish"), opened to the students and started; the student flow then takes it.
 ---
 - runFlow:
     file: common/signup.yaml
@@ -26,40 +28,142 @@ tags:
     timeout: 20000
     centerElement: true
 - tapOn: "Guruh nomi.*"
+- waitForAnimationToEnd:
+    timeout: 2000
 - inputText: ${GROUP_NAME}
+- assertVisible: "${GROUP_NAME}"
 - runFlow: common/dismiss_keyboard.yaml
+- scrollUntilVisible:
+    element:
+      text: "Yaratish"
+    direction: DOWN
+    timeout: 20000
+    centerElement: true
 - tapOn: "Yaratish"
 - extendedWaitUntil:
     visible: ".*kodi: [A-Z0-9]{6}.*"   # "0 talaba · Qo‘shilish kodi: ABC123"
     timeout: 15000
 - takeScreenshot: teacher-05-group-created
 
-# Assignment (written answer; the default type, so no native picker is needed)
+# Written assignment (the default type, so no native picker is needed)
+- scrollUntilVisible:
+    element:
+      text: "${GROUP_NAME}.*"
+    direction: DOWN
+    timeout: 20000
+    centerElement: true
 - tapOn: "${GROUP_NAME}.*"
 - extendedWaitUntil:
-    visible: "Topshiriqlar"     # group tabs: O‘quv reja / Topshiriqlar / Jurnal / Talabalar
+    visible: "Talabalarni taklif qiling"   # a new group opens on its QR invite card
     timeout: 10000
+# Group tabs (O'quv reja / Topshiriqlar / Jurnal / Talabalar) are below the invite card. Every button is scrolled to the
+# middle before it is tapped: in run 39102430794 "Topshiriq berish" sat under the floating bottom bar and the tap
+# opened Qidiruv.
+- scrollUntilVisible:
+    element:
+      text: "Topshiriqlar"
+    direction: DOWN
+    timeout: 20000
+    centerElement: true
 - tapOn: "Topshiriqlar"
-- extendedWaitUntil:
-    visible: "Topshiriq berish.*"
-    timeout: 10000
+- scrollUntilVisible:
+    element:
+      text: "Topshiriq berish.*"
+    direction: DOWN
+    timeout: 20000
+    centerElement: true
 - tapOn: "Topshiriq berish.*"
-- tapOn: "Sarlavha"
+- scrollUntilVisible:
+    element:
+      text: "Masalan: Emal tuzilishi"   # placeholder of "Sarlavha"
+    direction: DOWN
+    timeout: 20000
+    centerElement: true
+- tapOn: "Masalan: Emal tuzilishi"
+- waitForAnimationToEnd:
+    timeout: 2000
 - inputText: Emalni tasvirlang
+- assertVisible: "Emalni tasvirlang"
 - runFlow: common/dismiss_keyboard.yaml
 - scrollUntilVisible:
     element:
       text: "Yaratish"
     direction: DOWN
-    timeout: 10000
+    timeout: 20000
     centerElement: true
 - takeScreenshot: teacher-06-new-assignment
 - tapOn: "Yaratish"
 - extendedWaitUntil:
     visible: ".*Emalni tasvirlang.*"
     timeout: 10000
-- assertNotVisible: "Sarlavha"   # the form closed, so the assignment was saved
+- assertNotVisible: "Masalan: Emal tuzilishi"   # the form closed, so the assignment was saved
 - takeScreenshot: teacher-07-assignment-listed
+
+# Topic test from the topic page: the teacher is asked "give it to a group" or "try it myself".
+- tapOn: "O.rganish"           # bottom navigation (aria-label)
+- extendedWaitUntil:
+    visible: "O.quv reja"
+    timeout: 10000
+- scrollUntilVisible:
+    element:
+      text: "Terapevtik stomatologiya: kariesologiya.*"
+    direction: DOWN
+    timeout: 30000
+    centerElement: true
+- tapOn: "Terapevtik stomatologiya: kariesologiya.*"
+- scrollUntilVisible:
+    element:
+      text: ".*Kariesning etiologiyasi va patogenezi.*"
+    direction: DOWN
+    timeout: 20000
+    centerElement: true
+- tapOn: ".*Kariesning etiologiyasi va patogenezi.*"
+- scrollUntilVisible:
+    element:
+      text: "Mavzu bo.yicha test"      # the button (the card title above reads "Mavzu bo‘yicha test · 10 savol")
+    direction: DOWN
+    timeout: 30000
+    centerElement: true
+- tapOn: "Mavzu bo.yicha test"
+- extendedWaitUntil:
+    visible: "O.zim yechib ko.rish"
+    timeout: 5000
+- takeScreenshot: teacher-08-topic-choice
+- tapOn: "Guruhga topshirish"
+# One group: the classroom opens that topic in it and scrolls to it (the home screen has it far below the fold).
+- extendedWaitUntil:
+    visible: "Talabalarga ochish"
+    timeout: 15000
+- assertVisible: "Kariesning etiologiyasi va patogenezi"
+- scrollUntilVisible:
+    element:
+      text: "Talabalarga ochish"
+    direction: DOWN
+    timeout: 10000
+    centerElement: true
+- tapOn: "Talabalarga ochish"
+- scrollUntilVisible:
+    element:
+      text: "Testni boshlash.*"     # "Testni boshlash · 10" (the question count)
+    direction: DOWN
+    timeout: 30000
+    centerElement: true
+- takeScreenshot: teacher-09-test-setup
+- tapOn: "Testni boshlash.*"
+# The big screen opens and asks to turn a portrait phone sideways.
+- extendedWaitUntil:
+    visible: "Gorizontal holatga o.tamizmi."
+    timeout: 15000
+- tapOn: "Yo.q"
+- extendedWaitUntil:
+    visible: "Jonli natijalar"
+    timeout: 10000
+- takeScreenshot: teacher-10-big-screen
+- tapOn: "Yopish"
+- extendedWaitUntil:
+    notVisible: "Jonli natijalar"
+    timeout: 10000
+- takeScreenshot: teacher-11-test-running
 
 - runFlow:
     file: common/sign_out.yaml

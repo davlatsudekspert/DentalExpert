@@ -51,13 +51,13 @@ export default function QuizRun({title,questions,lang,reveal=true,deadline,clock
  return <div className="quiz-run" role="dialog" aria-modal="true" aria-label={title}>
   <div className="quiz-run-bar"><strong>{title}</strong><span className="qr-count">{finished?t.score:`${i+1} / ${questions.length}`}{deadline&&!finished?(clockFrom===undefined||left<=clockFrom?<em className={'quiz-run-timer'+(left<60?' low':'')}> · {Math.floor(left/60)}:{String(left%60).padStart(2,'0')}</em>:dueLabel?<em className="quiz-run-due"> · {dueLabel}</em>:null):null}</span><button data-close onClick={tryClose} aria-label={t.close}><X size={20}/></button></div>
   {finished?<div className="quiz-run-body quiz-run-result">{result??<>
-    <div className="qr-ring" style={{['--p' as string]:pct}}><div><b>{score} / {questions.length}</b><small>{pct}%</small></div></div>
-    <h3 className="qr-verdict"><Sparkles size={18}/>{pct>=80?t.great:pct>=60?t.good:t.more}</h3><p>{score} {t.correct}</p></>}
+    <div className="qr-ring" style={{['--p' as string]:pct}}><div><b>{`${score} / ${questions.length}`}</b><small>{`${pct}%`}</small></div></div>
+    <h3 className="qr-verdict"><Sparkles size={18}/>{pct>=80?t.great:pct>=60?t.good:t.more}</h3><p>{`${score} ${t.correct}`}</p></>}
    <button className="button" onClick={onClose}>{doneLabel||t.close}</button></div>
   :<div className="quiz-run-body">
    <div className="quiz-run-progress qr-steps" {...(nav?{role:'progressbar','aria-valuemin':0,'aria-valuemax':questions.length,'aria-valuenow':answered}:{'aria-hidden':true})}>{questions.map((_,k)=><i key={k} className={(nav?given[k]!==null:k<i||(k===i&&picked!==null))?'done':k===i?'now':''}/>)}</div>
    <div className="qr-card">
-    <span className="qr-eyebrow">{t.q} {i+1} / {questions.length}</span>
+    <span className="qr-eyebrow">{`${t.q} ${i+1} / ${questions.length}`}</span>
     {q.media}
     {q.q&&<h3>{q.q}</h3>}
    </div>

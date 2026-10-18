@@ -1,11 +1,13 @@
 appId: uz.dentalexpert.app
-name: Settings -> sign out
-# env: SHOT_PREFIX, EMAIL (shown in settings while signed in; emails are generated without regex characters).
+name: Profile, then sign out
+# env: SHOT_PREFIX, EMAIL (shown on the Profile card while signed in; emails are generated without regex characters).
 ---
 - tapOn: "Profil"              # bottom navigation (aria-label)
 - extendedWaitUntil:
     visible: "Ilova tili"          # the Profile screen (language section)
     timeout: 10000
+# The profile card at the top reads "<role> · <email>" as one text; check it before it scrolls away.
+- assertVisible: ".*${EMAIL}.*"
 - takeScreenshot: ${SHOT_PREFIX}-90-settings
 - scrollUntilVisible:
     element:
@@ -13,7 +15,6 @@ name: Settings -> sign out
     direction: DOWN
     timeout: 20000
     centerElement: true
-- assertVisible: "${EMAIL}"
 - takeScreenshot: ${SHOT_PREFIX}-91-settings-account
 - tapOn: "Chiqish"
 - extendedWaitUntil:

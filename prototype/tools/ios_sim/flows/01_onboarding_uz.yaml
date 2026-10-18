@@ -1,5 +1,5 @@
 appId: uz.dentalexpert.app
-name: "(a) Fresh install: language -> Uzbek -> roles -> sign-up screen"
+name: "(a) Fresh install - language, Uzbek, roles, sign-up screen"
 tags:
   - smoke
 # Safe against any API, including production: it only opens screens and never submits the sign-up form.

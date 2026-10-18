@@ -1,5 +1,5 @@
 appId: uz.dentalexpert.app
-name: Fresh install -> Uzbek -> role -> sign up with the email code (local API only)
+name: Fresh install, Uzbek, role, sign up with the email code (local API only)
 # Called by the role flows with env: ROLE_LABEL (Stomatolog | Ustoz | Talaba), FULL_NAME, EMAIL, SHOT_PREFIX.
 # The code is never emailed: the local API (AUTH_DEV_ECHO=1) returns it, e2e_proxy.mjs keeps it and
 # scripts/get_code.js reads it. Never point this flow at the production API.
