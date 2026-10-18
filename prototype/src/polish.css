@@ -72,3 +72,14 @@
 @media (min-width:2400px) and (min-height:1300px){.sl-slide{zoom:2.1}}
 .sl-refs{margin:0;padding-left:1.4em;display:flex;flex-direction:column;gap:10px;font-size:15px;line-height:1.5}
 .sl-refs li::marker{color:var(--sl-brand,#168d8b);font-weight:700}
+/* Live web: no design frame. The app fills a phone, and sits as a centred column on a desktop or TV. */
+.studio.web-app{display:block;max-width:none;margin:0;padding:0;gap:0}
+.studio.web-app .phone{width:100%;max-width:560px;margin:0 auto;min-height:100dvh;border:0;border-radius:0;box-shadow:none}
+.studio.web-app .phone:before,.studio.web-app .home-indicator{display:none}
+@media(min-width:600px){.studio.web-app .phone{box-shadow:0 0 0 1px #00000010,0 20px 60px #0000000f}.studio.web-app .phone:has(.five-tab-nav) .screen{padding-bottom:110px}.studio.web-app .bottom-nav.five-tab-nav{position:sticky;bottom:0}}
+/* Presenting on an upright phone (no rotation lock, e.g. Safari or AirPlay mirroring): turn the player so the slide fills the mirrored screen. */
+@media(orientation:portrait){.sl-player.presenting:not(:fullscreen){position:fixed;inset:auto;top:0;left:100vw;width:100dvh;height:100vw;transform:rotate(90deg);transform-origin:top left}}
+/* The player sizes its slides from its own box, so a phone turned by CSS lays out like a real landscape screen. */
+.sl-player.presenting{container:slp/size}
+@container slp (min-width:621px){.sl-tree-kids{grid-template-columns:repeat(var(--n),minmax(0,1fr));border-top:2px solid #9cc3c4;padding-top:14px}.sl-compare{grid-template-columns:repeat(var(--n),minmax(0,1fr))}.sl-figure{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}}
+@container slp (max-height:520px){.sl-bar{padding:4px 12px}.sl-bar small{display:none}.sl-bar button{width:38px;height:38px}.sl-nav{padding:4px 12px calc(4px + env(safe-area-inset-bottom))}.sl-nav .button{min-height:38px}.sl-stage{padding:6px 10px}.sl-slide{min-height:0;padding:12px 22px;gap:8px;font-size:13px}.sl-tree{gap:14px}.sl-tree-root{padding:8px 16px}.sl-tree-root::after{bottom:-14px;height:14px}}

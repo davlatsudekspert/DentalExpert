@@ -44,6 +44,8 @@ export default function Slides({title,eyebrow,slides:topicSlides,sources,lang,te
  };
  useEffect(()=>()=>{if(presenting)void present(false)},[presenting]);// eslint-disable-line react-hooks/exhaustive-deps
  const touch=useRef<number|null>(null);
+ // While presenting on an upright phone the player is turned a quarter by CSS, so a swipe along the slide runs down the screen.
+ const axis=(p:{clientX:number;clientY:number})=>presenting&&matchMedia('(orientation: portrait)').matches?p.clientY:p.clientX;
  const last=slides.length-1;
  const go=(d:number)=>setI(x=>{const n=Math.max(0,Math.min(last,x+d));if(n===last&&x!==last)onFinished?.();return n});
  useEffect(()=>{
@@ -54,7 +56,7 @@ export default function Slides({title,eyebrow,slides:topicSlides,sources,lang,te
  return <div ref={root} className={'sl-player'+(presenting?' presenting':'')} role="dialog" aria-modal="true" aria-label={title} style={accent?{['--lg-brand' as string]:accent,['--sl-brand' as string]:accent}:undefined}>
   <div className="sl-bar"><span><small>{eyebrow}</small><strong>{title}</strong></span><b>{i+1} / {slides.length}</b><button className="sl-present" onClick={()=>void present(!presenting)} aria-pressed={presenting} aria-label={t.present} title={t.present}><MonitorUp size={19}/></button><button onClick={()=>{if(presenting)void present(false);onClose()}} aria-label={t.close}><X size={20}/></button></div>
   <div className="sl-progress"><i style={{width:`${((i+1)/slides.length)*100}%`}}/></div>
-  <div className="sl-stage" onTouchStart={e=>{touch.current=e.touches[0].clientX}} onTouchEnd={e=>{if(touch.current===null)return;const dx=e.changedTouches[0].clientX-touch.current;touch.current=null;if(Math.abs(dx)>50)go(dx<0?1:-1)}}>
+  <div className="sl-stage" onTouchStart={e=>{touch.current=axis(e.touches[0])}} onTouchEnd={e=>{if(touch.current===null)return;const dx=axis(e.changedTouches[0])-touch.current;touch.current=null;if(Math.abs(dx)>50)go(dx<0?1:-1)}}>
    <article key={i} className={'sl-slide sl-l-'+s.layout} aria-roledescription={t.slide}>{(s.layout as string)==='refs'?<><h2 className="sl-title">{t.refs}</h2><ol className="sl-refs" lang="en" translate="no">{sources!.map((x,k)=><li key={k}>{x}</li>)}</ol></>:<SlideBody s={s} lang={lang} eyebrow={eyebrow}/>}</article>
   </div>
   {notes&&s.note&&<p className="sl-note"><MessageSquareText size={15}/>{tx(s.note,lang)}</p>}
