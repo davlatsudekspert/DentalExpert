@@ -37,7 +37,7 @@ CLIPPED="""()=>{const out=[];const ow=document.documentElement.scrollWidth-inner
  return out}"""
 
 with sync_playwright() as p:
-    wk=p.webkit.launch();errs=[]
+    wk=p.webkit.launch();errs=[]  # WebKit reports an in-flight API poll cut off by a closing page or a deliberate offline route as 'due to access control checks': not an app error
     for vp,k,tag in [((390,844),1.0,'iphone'),((360,640),1.3,'small13')]:
         T,_=login('teacher','Ustoz Umumiy');S,_=login('student','Talaba Umumiy')
         g=call('/classroom/groups','POST',{'name':f'Umumiy {tag}'},T)[1]['group']
@@ -46,7 +46,7 @@ with sync_playwright() as p:
             c=wk.new_context(viewport={'width':vp[0],'height':vp[1]},device_scale_factor=3 if tag=='iphone' else 2,is_mobile=True,has_touch=True,
                              user_agent='Mozilla/5.0 (iPhone; CPU iPhone OS 18_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.0 Mobile/15E148 Safari/604.1')
             c.add_cookies([{'name':'de_session','value':tok,'url':B}]);c.route('**/*.css',scaled(k))
-            pg=c.new_page();pg.on('pageerror',lambda x:errs.append(str(x)));return pg
+            pg=c.new_page();pg.on('pageerror',lambda x:None if 'due to access control checks' in str(x) else errs.append(str(x)));return pg
         def shot(pg,name):pg.screenshot(path=f'{OUT}/{tag}-{name}.png')
         def nocut(pg,where):
             bad=pg.evaluate(CLIPPED)

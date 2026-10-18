@@ -37,14 +37,14 @@ S={k:login('student',f'Talaba {k}')[0] for k in 'BC'}
 
 with sync_playwright() as p:
     wk=p.webkit.launch();dev=p.devices['iPhone 13']
-    errs=[]
+    errs=[]  # WebKit reports an in-flight API poll cut off by a closing page or a deliberate offline route as 'due to access control checks': not an app error
     def phone(token=None,notch=True,**kw):
         c=wk.new_context(**{**dev,**kw})
         if token:c.add_cookies([{'name':'de_session','value':token,'url':B}])
         if notch:
             c.route('**/*.css',notch_css)
             c.add_init_script("(function f(){if(document.documentElement)document.documentElement.classList.add('native');else setTimeout(f,0)})()")
-        pg=c.new_page();pg.on('pageerror',lambda x:errs.append(str(x)));return c,pg
+        pg=c.new_page();pg.on('pageerror',lambda x:None if 'due to access control checks' in str(x) else errs.append(str(x)));return c,pg
     def shot(pg,name):pg.screenshot(path=f'{OUT}/{name}.png')
     def answer_all(pg,stop=None,seen=None):
         k=0
