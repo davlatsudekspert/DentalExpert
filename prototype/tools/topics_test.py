@@ -50,4 +50,9 @@ check('student cannot read gradebook',call(f'/classroom/gradebook?groupId={g}',t
 check('teacher hides topic',call('/classroom/topics','POST',{'groupId':g,'topicId':tid,'action':'close'},T)[0]==200)
 check('hidden topic test not listed to students',all(x.get('topicId')!=tid for x in call(f'/classroom/assignments?groupId={g}',token=S)[1]['assignments']))
 check('student no longer sees it',call(f'/classroom/topics?groupId={g}',token=S)[1]['topics']==[])
+# Self-study key for a topic (Learn → topic → topic test): any visitor, valid ids only.
+s_,k=call('/curriculum/key?topicId=card-01')
+check('self-study key served',s_==200 and len(k['correct'])==10 and len(k['explain'])==10)
+check('unknown topic 404',call('/curriculum/key?topicId=zz-99')[0]==404)
+check('bad topic id 404',call('/curriculum/key?topicId=../etc')[0]==404)
 print(f'{len(ok)} checks passed')

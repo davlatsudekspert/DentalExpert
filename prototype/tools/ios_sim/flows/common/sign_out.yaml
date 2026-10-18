@@ -4,7 +4,7 @@ name: Settings -> sign out
 ---
 - tapOn: "Profil"              # bottom navigation (aria-label)
 - extendedWaitUntil:
-    visible: "Sozlamalar"
+    visible: "Ilova tili"          # the Profile screen (language section)
     timeout: 10000
 - takeScreenshot: ${SHOT_PREFIX}-90-settings
 - scrollUntilVisible:

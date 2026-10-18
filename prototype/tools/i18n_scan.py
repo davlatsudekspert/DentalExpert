@@ -269,7 +269,8 @@ def main():
                     add(lang, where, 'title', title)
 
             def go(screen, lang):
-                page.goto(f'{base}/?screen={screen}&lang={lang}')
+                # Signed out the app previews the patient view; the Learn screen is scanned with the student's full set of tabs.
+                page.goto(f'{base}/?screen={screen}&lang={lang}'+('&role=student' if screen=='courses' else ''))
                 page.wait_for_selector('.screen', timeout=15000)
                 page.wait_for_timeout(350)
 

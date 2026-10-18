@@ -20,7 +20,14 @@ tags:
     timeout: 3000
 - takeScreenshot: student-04-home
 
-# Daily quiz: 5 questions
+# Daily quiz: 5 questions (home tile "Kunlik mashq" opens Learn on the daily tab)
+- scrollUntilVisible:
+    element:
+      text: "Kunlik mashq"
+    direction: DOWN
+    timeout: 15000
+    centerElement: true
+- tapOn: "Kunlik mashq"
 - scrollUntilVisible:
     element:
       text: ".*Kunlik test.*"
@@ -63,6 +70,7 @@ tags:
 - extendedWaitUntil:
     visible: ".*Bajarildi.*"
     timeout: 5000
+- tapOn: "Asosiy"              # back to the student home for the group card (bottom navigation)
 
 # Join the teacher's group with the 6-character code
 - runScript:
@@ -71,13 +79,13 @@ tags:
       GROUP_NAME: ${GROUP_NAME}
 - scrollUntilVisible:
     element:
-      text: "Ustoz bergan 6 belgili kod"
+      text: "6 belgili kod"
     direction: DOWN
     timeout: 20000
     centerElement: true
-- tapOn: "Ustoz bergan 6 belgili kod"
+- tapOn: "6 belgili kod"
 - inputText: ${output.groupCode}
-- tapOn: "Ustoz sizni shu nom.*"
+- tapOn: "Masalan: Lola"
 - inputText: Zebra
 - runFlow: common/dismiss_keyboard.yaml
 - takeScreenshot: student-08-join-code
@@ -87,8 +95,12 @@ tags:
     timeout: 15000
 - takeScreenshot: student-09-joined
 
-# Answer the written assignment
+# Answer the written assignment (group tabs: Mavzular / Topshiriqlar)
 - tapOn: "${GROUP_NAME}.*"
+- extendedWaitUntil:
+    visible: "Topshiriqlar"
+    timeout: 10000
+- tapOn: "Topshiriqlar"
 - extendedWaitUntil:
     visible: ".*Emalni tasvirlang.*"
     timeout: 10000

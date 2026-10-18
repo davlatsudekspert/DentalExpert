@@ -68,7 +68,7 @@ def signup(pg, role, name, email, prefix):
     tap(pg, 'Tasdiqlash')
 
 def sign_out(pg, email, prefix):
-    tap(pg, 'Profil'); wait_visible(pg, 'Sozlamalar')
+    tap(pg, 'Profil'); wait_visible(pg, 'Ilova tili')
     wait_visible(pg, 'Chiqish'); wait_visible(pg, email)
     shot(pg, prefix + '-91-settings'); tap(pg, 'Chiqish')
     wait_visible(pg, 'Hisobingiz bormi.*', 15); wait_visible(pg, 'Hisob yaratish.*'); shot(pg, prefix + '-92-signed-out')
@@ -119,7 +119,7 @@ with sync_playwright() as p:
         tap(pg, '16 Sog.lom'); tap(pg, 'Plomba', 0); wait_visible(pg, '16 Plomba', 5)
         tap(pg, 'Nima qilindi.'); typ(pg, 'Karies davolandi'); tap(pg, 'Qabul qaydini qo.shish'); wait_visible(pg, '.*Karies davolandi.*')
         shot(pg, 'dentist-07-visit')
-        tap(pg, '3D atlas'); wait_visible(pg, 'Tish anatomiyasi'); tap(pg, '.*Qatlamlarni ajratib.*')
+        tap(pg, 'Atlas'); wait_visible(pg, 'Tish anatomiyasi'); tap(pg, '.*Qatlamlarni ajratib.*')
         wait_visible(pg, '3D tish atlasi', 20); pg.wait_for_timeout(1500); tap(pg, 'Ajratish'); wait_visible(pg, 'Yig.ish', 5)
         pg.wait_for_timeout(1500); shot(pg, 'dentist-10-exploded'); tap(pg, 'Yopish'); pg.wait_for_timeout(500); not_visible(pg, '3D tish atlasi')
         sign_out(pg, DENTIST, 'dentist')
@@ -131,7 +131,7 @@ with sync_playwright() as p:
         wait_visible(pg, '.*Ustoz Maestro.*', 20)
         tap(pg, 'Guruh nomi.*'); typ(pg, GROUP); tap(pg, 'Yaratish')
         wait_visible(pg, '.*kodi: [A-Z0-9]{6}.*', 15); shot(pg, 'teacher-05-group')
-        tap(pg, re.escape(GROUP) + '.*'); wait_visible(pg, 'Topshiriq berish.*'); tap(pg, 'Topshiriq berish.*')
+        tap(pg, re.escape(GROUP) + '.*'); wait_visible(pg, 'Topshiriqlar'); tap(pg, 'Topshiriqlar'); wait_visible(pg, 'Topshiriq berish.*'); tap(pg, 'Topshiriq berish.*')
         tap(pg, 'Sarlavha'); typ(pg, 'Emalni tasvirlang'); tap(pg, 'Yaratish')
         wait_visible(pg, '.*Emalni tasvirlang.*'); pg.wait_for_timeout(300); not_visible(pg, 'Sarlavha'); shot(pg, 'teacher-07-assignment')
         sign_out(pg, TEACHER, 'teacher')
@@ -141,7 +141,7 @@ with sync_playwright() as p:
     def s():
         signup(pg, 'Talaba', 'Talaba Maestro', STUDENT, 'student')
         wait_visible(pg, '.*Talaba Maestro.*', 20)
-        tap(pg, '.*Kunlik test.*'); wait_visible(pg, '1 / 5')
+        tap(pg, 'Kunlik mashq'); tap(pg, '.*Kunlik test.*'); wait_visible(pg, '1 / 5')
         for i in range(5):
             c = wait_visible(pg, QUIZ_RE, 5)
             print('   q%d option candidates: %s' % (i + 1, [x.inner_text()[:30] for x in c][:4]))
@@ -151,10 +151,11 @@ with sync_playwright() as p:
             if candidates(pg, 'Yakunlash'): tap(pg, 'Yakunlash')
         wait_visible(pg, 'Natija'); wait_visible(pg, '[0-5] / 5'); shot(pg, 'student-07-daily'); tap(pg, 'Yopish', 0)
         wait_visible(pg, '.*Bajarildi.*', 5)
+        tap(pg, 'Asosiy')
         gc = get('/__e2e/group-code?wait=8000&name=' + urllib.parse.quote(GROUP))['code']
-        tap(pg, 'Ustoz bergan 6 belgili kod'); typ(pg, gc); tap(pg, 'Ustoz sizni shu nom.*'); typ(pg, 'Zebra')
+        tap(pg, '6 belgili kod'); typ(pg, gc); tap(pg, 'Masalan: Lola'); typ(pg, 'Zebra')
         tap(pg, 'Qo.shilish'); wait_visible(pg, re.escape(GROUP) + '.*', 15); shot(pg, 'student-09-joined')
-        tap(pg, re.escape(GROUP) + '.*'); wait_visible(pg, '.*Emalni tasvirlang.*'); tap(pg, '.*Emalni tasvirlang.*')
+        tap(pg, re.escape(GROUP) + '.*'); wait_visible(pg, 'Topshiriqlar'); tap(pg, 'Topshiriqlar'); wait_visible(pg, '.*Emalni tasvirlang.*'); tap(pg, '.*Emalni tasvirlang.*')
         tap(pg, 'Javobingiz'); typ(pg, "Eng qattiq to'qima, tojni qoplaydi"); tap(pg, 'Yuborish'); wait_visible(pg, 'Yuborildi', 10)
         shot(pg, 'student-10-sent')
         sign_out(pg, STUDENT, 'student')

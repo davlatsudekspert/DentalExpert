@@ -9,7 +9,13 @@
     "en": "Propaedeutics of dentistry",
     "ru": "Пропедевтика стоматологии",
     "uz": "Propedevtik stomatologiya"
-   }
+   },
+   "national": [
+    {
+     "cite": "Irsaliev X.I., Akbarov A.N., Xabilov N.L., Salimov O.U., Ziyadullaeva N.S. Ortopedik stomatologiya propedevtikasi. Darslik. Toshkent: Lesson Press, 2022",
+     "url": "https://e-library.sammu.uz/en/book/3055"
+    }
+   ]
   },
   {
    "id": "prev",
@@ -19,7 +25,17 @@
     "en": "Prevention of dental diseases",
     "ru": "Профилактика стоматологических заболеваний",
     "uz": "Stomatologik kasalliklar profilaktikasi"
-   }
+   },
+   "national": [
+    {
+     "cite": "Rizayev J.A. Stomatologik kasalliklar profilaktikasi. Darslik. Samarqand, 2024",
+     "url": "https://e-library.sammu.uz/en/book/4568"
+    },
+    {
+     "cite": "Kubayev A.S. Stomatologik kasalliklar profilaktikasi. Darslik. Samarqand: Sarvar Mexroj baraka, 2022",
+     "url": "https://e-library.sammu.uz/en/book/2664"
+    }
+   ]
   },
   {
    "id": "mat",
@@ -29,7 +45,17 @@
     "en": "Dental materials",
     "ru": "Стоматологическое материаловедение",
     "uz": "Stomatologik materialshunoslik"
-   }
+   },
+   "national": [
+    {
+     "cite": "Nazarova N.Sh. Stomatologiyada qo‘llaniladigan zamonaviy xomashyolar. O‘quv qo‘llanma. Samarqand, 2023",
+     "url": "https://e-library.sammu.uz/en/book/3848"
+    },
+    {
+     "cite": "Исламова Н.Б., Шокиров Б.Ш. Основы стоматологических материалов и инструментов в ортопедической стоматологии. Учебное пособие. Самарканд: Dimal, 2026",
+     "url": "https://e-library.sammu.uz/en/book/6185"
+    }
+   ]
   },
   {
    "id": "card",
@@ -39,7 +65,21 @@
     "en": "Operative dentistry: cariology",
     "ru": "Терапевтическая стоматология: кариесология",
     "uz": "Terapevtik stomatologiya: kariesologiya"
-   }
+   },
+   "national": [
+    {
+     "cite": "Rizayev J.A. Terapevtik stomatologiya. Darslik. Toshkent: Hilol media, 2023",
+     "url": "https://e-library.sammu.uz/en/book/3524"
+    },
+    {
+     "cite": "Rizayev J.A., Kubayev A.S. Kariyes kasalligi. O‘quv qo‘llanma. Toshkent: Hilol Media, 2023",
+     "url": "https://e-library.sammu.uz/en/book/3137"
+    },
+    {
+     "cite": "Kamilov X.P. Fakultet terapevtik stomatologiya. Darslik. Toshkent, 2017",
+     "url": "https://e-library.sammu.uz/en/book/143"
+    }
+   ]
   },
   {
    "id": "radio",
@@ -49,7 +89,8 @@
     "en": "Dental radiology",
     "ru": "Стоматологическая рентгенология",
     "uz": "Dental radiologiya"
-   }
+   },
+   "national": []
   },
   {
    "id": "endo",
@@ -59,7 +100,17 @@
     "en": "Endodontics",
     "ru": "Эндодонтия",
     "uz": "Endodontiya"
-   }
+   },
+   "national": [
+    {
+     "cite": "Xamidov M.T., Xolmo‘minov N.N., Toshtemirova M.M. Klinik endodontiya. Darslik. Samarqand: Artex nashr, 2026",
+     "url": "https://e-library.sammu.uz/en/book/6107"
+    },
+    {
+     "cite": "Zoyirov T.E., Xolboyeva N.A. Klinik endodontiya asoslari. O‘quv qo‘llanma. Samarqand, 2026",
+     "url": "https://e-library.sammu.uz/en/book/5611"
+    }
+   ]
   },
   {
    "id": "surg",
@@ -69,7 +120,17 @@
     "en": "Oral surgery",
     "ru": "Хирургическая стоматология",
     "uz": "Jarrohlik stomatologiyasi"
-   }
+   },
+   "national": [
+    {
+     "cite": "Azimov M.I. Jarrohlik stomatologiyasi propedevtikasi. Darslik. Toshkent: O‘zbekiston milliy entsiklopediyasi, 2009",
+     "url": "https://e-library.sammu.uz/en/book/1226"
+    },
+    {
+     "cite": "Azimov M. Bolalar stomatologiyasida og‘riqsizlantirish. O‘quv qo‘llanma. Toshkent: Ilm ziyo, 2020",
+     "url": "https://e-library.sammu.uz/en/book/333"
+    }
+   ]
   },
   {
    "id": "pros",
@@ -79,7 +140,21 @@
     "en": "Prosthodontics",
     "ru": "Ортопедическая стоматология",
     "uz": "Ortopedik stomatologiya"
-   }
+   },
+   "national": [
+    {
+     "cite": "Rizayev J.A. Ortopedik stomatologiya. Darslik. Toshkent: Impress media, 2025",
+     "url": "https://e-library.sammu.uz/en/book/4405"
+    },
+    {
+     "cite": "Irsaliev X.I. va boshq. Ortopedik stomatologiya fakultet kursi. Darslik. Toshkent: Global Books, 2018",
+     "url": "https://e-library.sammu.uz/en/book/141"
+    },
+    {
+     "cite": "Akbarov A.N. Qisman olib qo‘yiladigan protezlar. Darslik. Toshkent: Smart press, 2022",
+     "url": "https://e-library.sammu.uz/en/book/4554"
+    }
+   ]
   },
   {
    "id": "perio",
@@ -89,7 +164,21 @@
     "en": "Periodontology",
     "ru": "Пародонтология",
     "uz": "Parodontologiya"
-   }
+   },
+   "national": [
+    {
+     "cite": "Zoyirov T.E. Parodontologiya. Darslik. Samarqand, 2023",
+     "url": "https://e-library.sammu.uz/en/book/3927"
+    },
+    {
+     "cite": "Dusmuxamedov M.Z. Parodontologiya. O‘quv qo‘llanma. Toshkent: Lesson Press, 2022",
+     "url": "https://e-library.sammu.uz/en/book/3056"
+    },
+    {
+     "cite": "Rizaev J.A. Jarrohlik parodontologiyasi. O‘quv qo‘llanma. Samarqand, 2024",
+     "url": "https://e-library.sammu.uz/en/book/3907"
+    }
+   ]
   },
   {
    "id": "oralmed",
@@ -99,7 +188,21 @@
     "en": "Oral medicine and diagnosis",
     "ru": "Заболевания слизистой оболочки рта и диагностика",
     "uz": "Og‘iz bo‘shlig‘i kasalliklari va diagnostikasi"
-   }
+   },
+   "national": [
+    {
+     "cite": "Комилов Х.П., Ибрагимова М.Х., Мирахмедова Д.У., Хамроева О.Ш. Терапевтик стоматология. Оғиз бўшлиғи шиллиқ пардаси касалликлари. Дарслик. Тошкент, 2005",
+     "url": "https://e-library.sammu.uz/en/book/3362"
+    },
+    {
+     "cite": "Камилов Х.П., Ахмедов К.Р. Оғиз бўшлиғи шиллиқ пардаси касалликлари. Ўқув қўлланма. Тошкент: Turon zamin ziyo, 2015",
+     "url": "https://e-library.sammu.uz/en/book/3461"
+    },
+    {
+     "cite": "G‘afforov S.A., Idiev G‘.E., Rizaev J.A. Og‘iz bo‘shlig‘i shilliq qavati va lab kasalliklari. O‘quv qo‘llanma. Toshkent: O‘zbekiston milliy entsiklopediyasi, 2008",
+     "url": "https://e-library.sammu.uz/en/book/54"
+    }
+   ]
   },
   {
    "id": "ped",
@@ -109,7 +212,21 @@
     "en": "Paediatric dentistry",
     "ru": "Детская стоматология",
     "uz": "Bolalar stomatologiyasi"
-   }
+   },
+   "national": [
+    {
+     "cite": "Xalilov I.X. va boshq. Bolalar terapevtik stomatologiyasi. Toshkent: Delta print service, 2017",
+     "url": "https://e-library.sammu.uz/en/book/1679"
+    },
+    {
+     "cite": "Murtazayev S.S. va boshq. Bolalar og‘iz bo‘shlig‘i shilliq qavati kasalliklari. Darslik. Toshkent, 2018",
+     "url": "https://e-library.sammu.uz/en/book/168"
+    },
+    {
+     "cite": "Камилов Х.П. Факультетская детская терапевтическая стоматология. Учебник. Ташкент: Тафаккур бўстони, 2015",
+     "url": "https://e-library.sammu.uz/en/book/2833"
+    }
+   ]
   },
   {
    "id": "ortho",
@@ -119,7 +236,17 @@
     "en": "Orthodontics",
     "ru": "Ортодонтия",
     "uz": "Ortodontiya"
-   }
+   },
+   "national": [
+    {
+     "cite": "Абдуазимов А.Д., Файзуллаев Ф.Ш. Ортодонтия ва болалар учун тиш протезлари. Дарслик. Тошкент: Абу Али ибн Сино номидаги тиббиёт нашриёти, 2002",
+     "url": "https://e-library.sammu.uz/en/book/3242"
+    },
+    {
+     "cite": "Хабилов Н.Л., Шомухамедова Ф.А. Ортодонтия с детским зубным протезированием. Учебное пособие. Ташкент: Adabiyot uchqunlari, 2016",
+     "url": "https://e-library.sammu.uz/en/book/3491"
+    }
+   ]
   },
   {
    "id": "mfs",
@@ -129,7 +256,21 @@
     "en": "Maxillofacial surgery",
     "ru": "Челюстно-лицевая хирургия",
     "uz": "Yuz-jag‘ jarrohligi"
-   }
+   },
+   "national": [
+    {
+     "cite": "Azimov M. Yuz-jag‘ travmatologiyasi. Darslik. Toshkent: Ilm ziyo, 2016",
+     "url": "https://e-library.sammu.uz/en/book/2214"
+    },
+    {
+     "cite": "Abdullaev Sh.Yu., Arjansev A.P., Abdullaev D.Sh., Yusupova D.Z., Adilov Z.K. Yuz-jag‘ jarohatlari. Darslik. Toshkent: Lesson Press, 2022",
+     "url": "https://e-library.sammu.uz/en/book/3061"
+    },
+    {
+     "cite": "Rizayev J.A., Gaffarov U.B., Ibragimov D.D. Yuz-jag‘ sohasi odontogen va noodontogen yallig‘lanish kasalliklari. Darslik. Samarqand: Sarvar Mexroj baraka, 2023",
+     "url": "https://e-library.sammu.uz/en/book/2426"
+    }
+   ]
   },
   {
    "id": "esth",
@@ -139,7 +280,17 @@
     "en": "Aesthetic and restorative dentistry",
     "ru": "Эстетическая и реставрационная стоматология",
     "uz": "Estetik va restavratsion stomatologiya"
-   }
+   },
+   "national": [
+    {
+     "cite": "Bekjanova O.E., Yusupalixodjayeva S.X. Klinik restavratsion stomatologiya. Darslik. Toshkent: Cho‘lpon nomidagi NMIU, 2019",
+     "url": "https://e-library.sammu.uz/en/book/47"
+    },
+    {
+     "cite": "Shukurova U.A. Preklinik restavratsion stomatologiya. Darslik. Toshkent: Ziyo nashr-matbaa, 2023",
+     "url": "https://e-library.sammu.uz/en/book/4555"
+    }
+   ]
   },
   {
    "id": "impl",
@@ -149,7 +300,18 @@
     "en": "Implantology and clinical practice",
     "ru": "Имплантология и клиническая практика",
     "uz": "Implantologiya va klinik amaliyot"
-   }
+   },
+   "national": [
+    {
+     "cite": "Қудратов Ш.Ш. Дентал имплантология асослари. Дарслик. Тошкент, 2022",
+     "url": "https://e-library.sammu.uz/en/book/3484"
+    },
+    {
+     "cite": "Xazratov A.I. Dental implantologiya. O‘quv qo‘llanma. Samarqand, 2025",
+     "url": "https://e-library.sammu.uz/en/book/4457"
+    }
+   ]
   }
- ]
+ ],
+ "national_note": "'national' lists Uzbek-authored textbooks (Uzbek or Russian) found in the Samarkand State Medical University e-library catalogue (e-library.sammu.uz); each entry keeps the catalogue URL it was verified against."
 }

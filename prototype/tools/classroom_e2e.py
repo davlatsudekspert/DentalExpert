@@ -57,7 +57,7 @@ with sync_playwright() as p:
     check('teacher sees student answer',tp.get_by_text('Hardest tissue').count()==1)
     tp.screenshot(path=OUT+'/c4-teacher-roster.png')
     # daily practice
-    sp.goto(BASE+'/?screen=courses&lang=ru');sp.locator('.learn > .chips button',has_text='Ежедневно').click();sp.wait_for_selector('.daily');sp.wait_for_timeout(500)
+    sp.goto(BASE+'/?screen=courses&lang=ru');sp.locator('.learn > .chips button',has_text='Задания дня').click();sp.wait_for_selector('.daily');sp.wait_for_timeout(500)
     sp.screenshot(path=OUT+'/c5-daily.png')
     sp.get_by_role('button',name='Тест дня',exact=False).click();sp.wait_for_timeout(300)
     for _ in range(5):

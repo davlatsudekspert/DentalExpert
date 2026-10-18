@@ -87,7 +87,7 @@ tags:
 - takeScreenshot: dentist-07-visit-note
 
 # 3D atlas: open, explode the layers, close
-- tapOn: "3D atlas"            # bottom navigation (aria-label)
+- tapOn: "Atlas"               # bottom navigation (aria-label)
 - extendedWaitUntil:
     visible: "Tish anatomiyasi"
     timeout: 10000

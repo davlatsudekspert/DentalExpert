@@ -309,10 +309,10 @@ function TeacherTopic({lang,groupId,code,topicId,row,test,members,onChanged}:{la
    </Stage>
    <Stage n={3} t={t} title={t.test} done={!!test&&test.status==='closed'} hint={test?'':t.testHint}>
     {test?<TestRunning lang={lang} groupId={groupId} code={code} topic={topic} test={test} members={members} label={label} onFinish={()=>setAsking(true)} onChanged={onChanged}/>
-    :<TestSetup lang={lang} groupId={groupId} topic={topic} disabled={!isOpen||busy} onStart={(questions,minutes,reveal)=>act('test',{questions,minutes,reveal,title:tx(topic.title,lang)})}/>}
+    :<TestSetup lang={lang} groupId={groupId} topic={topic} disabled={!isOpen||busy} onStart={(questions,minutes,reveal)=>{bigFor={id:topic.id,until:Date.now()+20000};act('test',{questions,minutes,reveal,title:tx(topic.title,lang)})}}/>}
    </Stage>
    {asking&&<ConfirmSheet text={t.confirmFinish} ok={t.finishTest} cancel={t.cancel} onOk={async()=>{setAsking(false);await act('finish')}} onCancel={()=>setAsking(false)}/>}
-   {show&&<Slides title={tx(topic.title,lang)} eyebrow={tx(subject.title,lang)} slides={topic.slides} lang={lang} accent={subjectColor(subject.id).c} teacher onClose={()=>setShow(false)}/>}
+   {show&&<Slides title={tx(topic.title,lang)} eyebrow={tx(subject.title,lang)} slides={topic.slides} sources={topic.sources} lang={lang} accent={subjectColor(subject.id).c} teacher onClose={()=>setShow(false)}/>}
   </>}
  </>;
 }
@@ -343,6 +343,8 @@ function useKey(groupId:string,topicId:string){
  return key;
 }
 
+let bigFor:{id:string;until:number}|null=null;
+
 function TestSetup({lang,groupId,topic,disabled,onStart}:{lang:Lang;groupId:string;topic:Topic;disabled:boolean;onStart:(q:number[],m:number,r:Reveal)=>void}){
  const t=words[lang],x=more[lang];
  const [reveal,setReveal]=useState<Reveal>('closed');
@@ -363,7 +365,9 @@ function TestRunning({lang,groupId,code,topic,test,members,label,onFinish,onChan
  const key=useKey(groupId,topic.id);
  const [res,setRes]=useState<Member[]|null>(null);
  const [showRes,setShowRes]=useState(false);
- const [big,setBig]=useState(false);
+ // Starting a topic test goes straight to the big screen (QR + live results); reopening the topic later does not.
+ const [big,setBig]=useState(()=>!!bigFor&&bigFor.id===topic.id&&Date.now()<bigFor.until);
+ useEffect(()=>{if(big)bigFor=null},[big]);
  useEffect(()=>{if(showRes)callApi<{members:Member[]}>(`/classroom/assignments?groupId=${groupId}&assignmentId=${test.id}`).then(r=>{if(r.ok)setRes(r.data.members)})},[showRes,groupId,test.id,test.submitted]);
  const qs=test.questions||[];
  const done=(res||[]).filter(m=>m.answer==='done');
@@ -413,7 +417,7 @@ function StudentTopic({lang,topicId,test,onChanged}:{lang:Lang;topicId:string;te
    </div>
    <h3 className="lg-h">{t.prepare}</h3>
    <OralList lang={lang} topic={topic}/>
-   {show&&<Slides title={tx(topic.title,lang)} eyebrow={tx(subject.title,lang)} slides={topic.slides} lang={lang} accent={subjectColor(subject.id).c} onClose={()=>setShow(false)}/>}
+   {show&&<Slides title={tx(topic.title,lang)} eyebrow={tx(subject.title,lang)} slides={topic.slides} sources={topic.sources} lang={lang} accent={subjectColor(subject.id).c} onClose={()=>setShow(false)}/>}
    {run&&test&&<TestRun lang={lang} a={test} onExit={()=>{setRun(false);onChanged()}} onError={e=>{setRun(false);setErr(testError(lang,e));onChanged()}} onSubmitted={(s,n)=>setScore([s,n])}/>}
   </>}
  </>;

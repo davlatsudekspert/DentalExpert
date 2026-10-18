@@ -1,24 +1,26 @@
 import {useEffect,useRef,useState,type ReactNode} from 'react';
-import {BookOpen,CheckCircle2,ChevronDown,ChevronLeft,ChevronRight,Presentation,Target} from 'lucide-react';
+import {BookOpen,CheckCircle2,ClipboardCheck,ChevronDown,ChevronLeft,ChevronRight,Presentation,Target} from 'lucide-react';
 import Slides from './Slides';
+import QuizRun,{type RunQ} from './QuizRun';
+import {callApi} from './api';
 import './learn.css';
 import {SubjectIcon,subjectColor} from './subjectArt';
 import {SUBJECTS,courseWord,loadLast,loadSeen,loadTopic,markSlide,metaLine,topicsOf,tx,type Subject,type Topic,type TopicMeta} from './curriculumData';
 import type {Lang} from './discoveryData';
 
 export const cw={
- uz:{title:'Dars jadvali',sub:'Kurs → fan → mavzu. Har bir mavzuda taqdimot, og‘zaki savollar va test bor.',all:'Hammasi',topics:'mavzu',back:'Orqaga',goals:'Dars maqsadlari',
+ uz:{title:'O‘quv reja',sub:'Kurs → fan → mavzu. Har bir mavzuda taqdimot, og‘zaki savollar va test bor.',all:'Hammasi',topics:'mavzu',back:'Orqaga',goals:'Dars maqsadlari',
   slides:'Taqdimotni ko‘rish',doneT:'Taqdimot tugadi',doneS:'Endi og‘zaki savollar bilan o‘zingizni tekshiring — har birida javob rejasi bor.',slidesN:'slayd',oral:'Og‘zaki savollar',plan:'Javob rejasi',sources:'Manbalar',materials:'Ilovadagi materiallar',empty:'Bu fan bo‘yicha mavzular tayyorlanmoqda.',
   note:'Namuna o‘quv reja: mazmun Dental Expert tomonidan tayyorlangan, muassasaning rasmiy dasturi emas. Rasmiy jadval — o‘z institutingiz sahifasida.',
-  testInGroup:'Mavzu testi ustoz guruhda ochganda topshiriladi.'},
+  testInGroup:'Mavzu testi ustoz guruhda ochganda topshiriladi.',selfTest:'Mavzu bo‘yicha test',q:'savol',best:'Eng yaxshi natija',testNote:'O‘zingizni sinang: javoblar va izohlar darhol ko‘rsatiladi. Guruhdagi baholanadigan testni ustoz ochadi.',testErr:'Test yuklanmadi. Internetni tekshirib, qayta urinib ko‘ring.'},
  ru:{title:'Учебный план',sub:'Курс → предмет → тема. В каждой теме — презентация, устные вопросы и тест.',all:'Все',topics:'тем',back:'Назад',goals:'Цели занятия',
   slides:'Смотреть презентацию',doneT:'Презентация пройдена',doneS:'Теперь проверьте себя устными вопросами — у каждого есть план ответа.',slidesN:'слайдов',oral:'Устные вопросы',plan:'План ответа',sources:'Источники',materials:'Материалы в приложении',empty:'Темы по этому предмету готовятся.',
   note:'Примерный учебный план: содержание подготовлено Dental Expert, это не официальная программа вуза. Официальное расписание — на сайте вашего вуза.',
-  testInGroup:'Тест по теме сдаётся, когда преподаватель откроет его в группе.'},
+  testInGroup:'Тест по теме сдаётся, когда преподаватель откроет его в группе.',selfTest:'Тест по теме',q:'вопросов',best:'Лучший результат',testNote:'Проверьте себя: ответы и пояснения показываются сразу. Оцениваемый тест в группе открывает преподаватель.',testErr:'Тест не загрузился. Проверьте интернет и попробуйте ещё раз.'},
  en:{title:'Curriculum',sub:'Year → subject → topic. Every topic has slides, oral questions and a test.',all:'All',topics:'topics',back:'Back',goals:'Learning goals',
   slides:'View the slides',doneT:'Slides finished',doneS:'Now test yourself with the oral questions — each has an answer plan.',slidesN:'slides',oral:'Oral questions',plan:'Answer plan',sources:'Sources',materials:'Materials in the app',empty:'Topics for this subject are being prepared.',
   note:'Sample curriculum: content prepared by Dental Expert, not an institution’s official syllabus. Your official timetable is on your institution’s site.',
-  testInGroup:'The topic test is taken when your teacher opens it in a group.'}
+  testInGroup:'The topic test is taken when your teacher opens it in a group.',selfTest:'Topic test',q:'questions',best:'Best score',testNote:'Test yourself: answers and explanations appear right away. The graded test in a group is opened by your teacher.',testErr:'The test did not load. Check your connection and try again.'}
 };
 
 /** Brings a lesson screen's top back into view after navigating inside it (when it has scrolled above the viewport). */
@@ -80,9 +82,9 @@ export function TopicOverview({lang,topic,subject}:{lang:Lang;topic:Topic;subjec
   {done&&<div className="lg-done" role="status"><CheckCircle2 size={20}/><div><b>{t.doneT}</b><small>{t.doneS}</small></div></div>}
   <h3 className="lg-h">{t.oral}</h3>
   <OralList lang={lang} topic={topic}/>
-  <p className="muted lg-small">{t.testInGroup}</p>
+  <SelfTest lang={lang} topic={topic}/>
   <div className="lg-card"><h3><BookOpen size={16}/>{t.sources}</h3><ul className="lg-sources" lang="en" translate="no">{topic.sources.map((s,k)=><li key={k}>{s}</li>)}</ul></div>
-  {show&&<Slides title={tx(topic.title,lang)} eyebrow={tx(subject.title,lang)} slides={topic.slides} lang={lang} accent={subjectColor(subject.id).c}
+  {show&&<Slides title={tx(topic.title,lang)} eyebrow={tx(subject.title,lang)} slides={topic.slides} sources={topic.sources} lang={lang} accent={subjectColor(subject.id).c}
    start={loadLast()?.id===topic.id?loadLast()!.slide:0} onProgress={i=>markSlide(topic.id,i,topic.slides.length)} onFinished={()=>setDone(true)} onClose={()=>setShow(false)}/>}
  </>;
 }
@@ -110,4 +112,27 @@ export default function Curriculum({lang}:{lang:Lang}){
   :!meta?<><SubjectHero lang={lang} subject={subject}/><TopicList lang={lang} subject={subject} onPick={setMeta}/></>
   :topic?<TopicOverview lang={lang} topic={topic} subject={subject}/>:<p className="muted">…</p>}
  </section>;
+}
+
+const BEST='de_topic_tests';
+const readBest=():Record<string,{best:number;total:number}>=>{try{return JSON.parse(localStorage.getItem(BEST)||'{}')}catch{return {}}};
+/** Self-study topic test: the questions ship with the app, the key comes from the server when the test starts. */
+function SelfTest({lang,topic}:{lang:Lang;topic:Topic}){
+ const t=cw[lang];
+ const [qs,setQs]=useState<RunQ[]|null>(null);
+ const [busy,setBusy]=useState(false);const [err,setErr]=useState(false);
+ const [best,setBest]=useState(()=>readBest()[topic.id]);
+ if(!topic.test?.length)return <p className="muted lg-small">{t.testInGroup}</p>;
+ const start=async()=>{setBusy(true);setErr(false);const r=await callApi<{correct:number[];explain:{en:string;ru:string;uz:string}[]}>('/curriculum/key?topicId='+topic.id);setBusy(false);
+  if(!r.ok||!Array.isArray(r.data.correct)){setErr(true);return}
+  setQs(topic.test.map((x,k)=>({q:tx(x.q,lang),options:x.options.map(o=>tx(o,lang)),correct:r.data.correct[k],explanation:tx(r.data.explain[k],lang)})))};
+ const done=(score:number,total:number)=>{const all=readBest();const prev=all[topic.id];if(!prev||score>prev.best){all[topic.id]={best:score,total};try{localStorage.setItem(BEST,JSON.stringify(all))}catch{/* storage unavailable */}setBest(all[topic.id])}};
+ return <div className="lg-card lg-selftest">
+  <h3><ClipboardCheck size={16}/>{t.selfTest} · {topic.test.length} {t.q}</h3>
+  <p className="muted lg-small">{t.testNote}</p>
+  {best&&<p className="lg-best">{t.best}: <b>{best.best}/{best.total}</b></p>}
+  {err&&<p className="error-text" role="alert">{t.testErr}</p>}
+  <button className="button secondary" disabled={busy} onClick={start}><ClipboardCheck size={17}/>{t.selfTest}</button>
+  {qs&&<QuizRun title={tx(topic.title,lang)} lang={lang} questions={qs} onDone={done} onClose={()=>setQs(null)}/>}
+ </div>;
 }

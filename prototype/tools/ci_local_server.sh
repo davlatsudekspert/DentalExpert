@@ -5,7 +5,7 @@ set -euo pipefail
 cd "$(dirname "$0")/.."
 if ! curl -sf http://127.0.0.1:8788/api/auth/me >/dev/null; then
  printf 'AUTH_SECRET=%s\nAUTH_DEV_ECHO=1\n' "$(openssl rand -hex 32)" > .dev.vars
- yes | npx wrangler d1 migrations apply dental-expert --local >/dev/null
+ CI=1 npx wrangler d1 migrations apply dental-expert --local >/dev/null
  npx wrangler pages dev dist --port 8788 --d1 DB=8b0734eb-b1db-4bd7-9bbf-60d9db51f658 --show-interactive-dev-session=false > /tmp/pages-dev.log 2>&1 &
 fi
 for i in $(seq 1 60); do curl -sf http://127.0.0.1:8788/api/auth/me >/dev/null && break; sleep 2; done

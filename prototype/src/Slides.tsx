@@ -1,5 +1,6 @@
 import {useEffect,useRef,useState} from 'react';
-import {Check,ChevronLeft,ChevronRight,MessageSquareText,X} from 'lucide-react';
+import {Check,ChevronLeft,ChevronRight,MessageSquareText,MonitorUp,X} from 'lucide-react';
+import {Capacitor} from '@capacitor/core';
 import cutaway from '../assets/tooth3d/premium-reference-cutaway-ivory.webp';
 import front from '../assets/tooth3d/turntable-front.webp';
 import occlusal from '../assets/tooth3d/archive-occlusal.webp';
@@ -14,17 +15,34 @@ const ANCHORS:Record<keyof typeof IMAGES,Partial<Record<Anchor,[number,number]>>
  occlusal:{cusp:[25,25],fissure:[38,51],fossa:[53,51],ridge:[50,88]}
 };
 const words={
- uz:{prev:'Oldingi',next:'Keyingi',close:'Yopish',done:'Yakunlash',notes:'Ustoz izohi',slide:'Slayd'},
- ru:{prev:'Назад',next:'Далее',close:'Закрыть',done:'Завершить',notes:'Заметка преподавателя',slide:'Слайд'},
- en:{prev:'Previous',next:'Next',close:'Close',done:'Finish',notes:'Teacher note',slide:'Slide'}
+ uz:{prev:'Oldingi',next:'Keyingi',close:'Yopish',done:'Yakunlash',present:'Ekranga chiqarish',refs:'Adabiyotlar',notes:'Ustoz izohi',slide:'Slayd'},
+ ru:{prev:'Назад',next:'Далее',close:'Закрыть',done:'Завершить',present:'На большой экран',refs:'Литература',notes:'Заметка преподавателя',slide:'Слайд'},
+ en:{prev:'Previous',next:'Next',close:'Close',done:'Finish',present:'Present on a screen',refs:'References',notes:'Teacher note',slide:'Slide'}
 };
 
 /** Full-screen lecture player for curriculum topics. Diagrams are drawn natively so every language stays sharp. */
-export default function Slides({title,eyebrow,slides,lang,teacher=false,accent,start=0,onProgress,onClose,onFinished}:{title:string;eyebrow?:string;slides:Slide[];lang:Lang;teacher?:boolean;accent?:string;start?:number;onProgress?:(i:number)=>void;onClose:()=>void;onFinished?:()=>void}){
+export default function Slides({title,eyebrow,slides:topicSlides,sources,lang,teacher=false,accent,start=0,onProgress,onClose,onFinished}:{title:string;eyebrow?:string;slides:Slide[];sources?:string[];lang:Lang;teacher?:boolean;accent?:string;start?:number;onProgress?:(i:number)=>void;onClose:()=>void;onFinished?:()=>void}){
+ // The deck always ends with the topic's references, so the sources are on screen when the lecture is shown.
+ const slides:Slide[]=sources?.length?[...topicSlides,{layout:'refs'} as unknown as Slide]:topicSlides;
  const t=words[lang];
  const [i,setI]=useState(()=>Math.max(0,Math.min(slides.length-1,start)));
- useEffect(()=>{onProgress?.(i)},[i]);// eslint-disable-line react-hooks/exhaustive-deps
+ useEffect(()=>{onProgress?.(Math.min(i,topicSlides.length-1))},[i]);// eslint-disable-line react-hooks/exhaustive-deps
  const [notes,setNotes]=useState(teacher);
+ // Presenting: landscape and screen kept on (native app — fills a TV/monitor over AirPlay or HDMI), fullscreen on the web.
+ const root=useRef<HTMLDivElement>(null);
+ const [presenting,setPresenting]=useState(false);
+ const native=Capacitor.isNativePlatform();
+ const present=async(on:boolean)=>{
+  setPresenting(on);
+  try{
+   if(native){
+    const [{ScreenOrientation},{KeepAwake}]=await Promise.all([import('@capacitor/screen-orientation'),import('@capacitor-community/keep-awake')]);
+    if(on){await ScreenOrientation.lock({orientation:'landscape'});await KeepAwake.keepAwake()}else{await ScreenOrientation.unlock();await KeepAwake.allowSleep()}
+   }else if(on){const el=root.current as (HTMLElement&{webkitRequestFullscreen?:()=>void})|null;await (el?.requestFullscreen?.()??el?.webkitRequestFullscreen?.());await (screen.orientation as ScreenOrientation&{lock?:(o:string)=>Promise<void>}).lock?.('landscape').catch(()=>{})}
+   else if(document.fullscreenElement)await document.exitFullscreen();
+  }catch{/* not supported here: rotating the phone by hand works too */}
+ };
+ useEffect(()=>()=>{if(presenting)void present(false)},[presenting]);// eslint-disable-line react-hooks/exhaustive-deps
  const touch=useRef<number|null>(null);
  const last=slides.length-1;
  const go=(d:number)=>setI(x=>{const n=Math.max(0,Math.min(last,x+d));if(n===last&&x!==last)onFinished?.();return n});
@@ -33,11 +51,11 @@ export default function Slides({title,eyebrow,slides,lang,teacher=false,accent,s
   window.addEventListener('keydown',k);return ()=>window.removeEventListener('keydown',k);
  });
  const s=slides[i];
- return <div className="sl-player" role="dialog" aria-modal="true" aria-label={title} style={accent?{['--lg-brand' as string]:accent,['--sl-brand' as string]:accent}:undefined}>
-  <div className="sl-bar"><span><small>{eyebrow}</small><strong>{title}</strong></span><b>{i+1} / {slides.length}</b><button onClick={onClose} aria-label={t.close}><X size={20}/></button></div>
+ return <div ref={root} className={'sl-player'+(presenting?' presenting':'')} role="dialog" aria-modal="true" aria-label={title} style={accent?{['--lg-brand' as string]:accent,['--sl-brand' as string]:accent}:undefined}>
+  <div className="sl-bar"><span><small>{eyebrow}</small><strong>{title}</strong></span><b>{i+1} / {slides.length}</b><button className="sl-present" onClick={()=>void present(!presenting)} aria-pressed={presenting} aria-label={t.present} title={t.present}><MonitorUp size={19}/></button><button onClick={()=>{if(presenting)void present(false);onClose()}} aria-label={t.close}><X size={20}/></button></div>
   <div className="sl-progress"><i style={{width:`${((i+1)/slides.length)*100}%`}}/></div>
   <div className="sl-stage" onTouchStart={e=>{touch.current=e.touches[0].clientX}} onTouchEnd={e=>{if(touch.current===null)return;const dx=e.changedTouches[0].clientX-touch.current;touch.current=null;if(Math.abs(dx)>50)go(dx<0?1:-1)}}>
-   <article key={i} className={'sl-slide sl-l-'+s.layout} aria-roledescription={t.slide}><SlideBody s={s} lang={lang} eyebrow={eyebrow}/></article>
+   <article key={i} className={'sl-slide sl-l-'+s.layout} aria-roledescription={t.slide}>{(s.layout as string)==='refs'?<><h2 className="sl-title">{t.refs}</h2><ol className="sl-refs" lang="en" translate="no">{sources!.map((x,k)=><li key={k}>{x}</li>)}</ol></>:<SlideBody s={s} lang={lang} eyebrow={eyebrow}/>}</article>
   </div>
   {notes&&s.note&&<p className="sl-note"><MessageSquareText size={15}/>{tx(s.note,lang)}</p>}
   <div className="sl-nav">

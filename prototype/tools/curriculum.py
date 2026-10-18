@@ -248,13 +248,16 @@ def build():
     for old in (out / 'topics').glob('*.json'):
         old.unlink()
     keys = {}
+    nat = {s['id']: s.get('national', []) for s in subjects()}
     for t in topics:
         pub = dict(t)
+        # Topic sources (international textbooks) followed by the subject's Uzbek textbooks (verified catalogue entries).
+        pub['sources'] = t['sources'] + [n['cite'] for n in nat.get(t['subject'], [])]
         pub['test'] = [{'q': q['q'], 'options': q['options']} for q in t['test']]
         (out / 'topics' / f"{t['id']}.json").write_text(json.dumps(pub, ensure_ascii=False, separators=(',', ':')))
         keys[t['id']] = {'c': [q['correct'] for q in t['test']], 'e': [q['explain'] for q in t['test']]}
     index = {
-        'subjects': subjects(),
+        'subjects': [{k: v for k, v in s.items() if k != 'national'} for s in subjects()],
         'topics': [{'id': t['id'], 'subject': t['subject'], 'n': t['n'], 'week': t['week'], 'type': t['type'], 'hours': t['hours'],
                     'title': t['title'], 'tests': len(t['test'])}
                    for t in sorted(topics, key=lambda t: (t['subject'], t['n']))],

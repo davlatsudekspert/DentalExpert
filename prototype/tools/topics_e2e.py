@@ -52,6 +52,11 @@ with sync_playwright() as p:
     boxes=tp.locator('.lg-qpick > li input[type=checkbox]')
     for i in range(3,boxes.count()):boxes.nth(i).uncheck()
     tp.get_by_role('button',name='Testni boshlash · 3').click();tp.wait_for_timeout(900)
+    # On a portrait phone the board asks to rotate first; the QR panel sits behind its toggle there.
+    tp.wait_for_selector('.bs-top',timeout=10000);check('starting the test opens the big screen',tp.locator('.bs-top').count()==1)
+    tp.screenshot(path=OUT+'/t5b-big-screen.png')
+    tp.get_by_role('button',name='Yo‘q').click();tp.wait_for_timeout(300)
+    tp.locator('.bs-close').first.click();tp.wait_for_timeout(500)
     check('test running',tp.get_by_text('Test ketmoqda').count()>=1)
     tp.screenshot(path=OUT+'/t5-test-running.png',full_page=True)
     # student takes the test

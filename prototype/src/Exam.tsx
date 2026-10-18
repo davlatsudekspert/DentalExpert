@@ -3,9 +3,11 @@ import {AlarmClock,Check,ChevronRight,CircleAlert,Database,History,RotateCcw,Tro
 import type {Lang} from './discoveryData';
 import QuizRun,{type RunQ} from './QuizRun';
 import {ruPl} from './Review';
+import {SUBJECTS,TOPICS,loadTopic,topicsOf,tx} from './curriculumData';
+import {callApi} from './api';
 import './review.css';
 
-/** "Imtihon rejimi": timed mock exam drawn only from professional questions whose answers ship in the app (mini-lesson deck quizzes). The patient-level daily bank is deliberately left out. */
+/** "Imtihon rejimi": timed mock exam from the curriculum bank (15 subjects × 8 topics × 10 questions, keys fetched per topic) plus the mini-lesson deck quizzes. The patient-level daily bank is deliberately left out. */
 
 type Deck={id:string;title:string;quiz:{q:string;options:string[];correct:number;explanation:string}[]};
 type ExamQ=RunQ&{source:string};
@@ -14,14 +16,14 @@ type Result={qs:ExamQ[];answers:number[];used:number;mins:number};
 
 const KEY='de_exam';
 const PASS=60;
-const COUNTS=[20,30] as const;
+const COUNTS=[20,40,60] as const;
 type Count=typeof COUNTS[number];
 const ruQ=(n:number)=>`${n} ${ruPl(n,['вопрос','вопроса','вопросов'])}`;
 
 const dict={
  uz:{title:'Imtihon rejimi',sub:'Haqiqiy imtihondagidek: vaqt cheklangan, natija va xatolar oxirida ko‘rsatiladi',
   count:'Savollar soni',time:'Vaqt',q:(n:number)=>`${n} ta savol`,min:(n:number)=>`${n} daqiqa`,
-  pool:'Savollar bazasi',poolText:(n:number)=>`Hozir bazada mini-dars testlaridan ${n} ta kasbiy savol bor. Har safar tasodifiy aralashtiriladi.`,
+  pool:'Savollar bazasi',poolText:(n:number)=>`Bazada ${n} ta kasbiy savol: fan mavzulari testlari va mini-darslar. Har safar tasodifiy tanlanadi.`,subject:'Fan',mix:'Barcha fanlar aralash',
   poolNote:'Fan mavzulari bo‘yicha testlarning javoblari faqat serverda (guruh testlari uchun) saqlanadi, shuning uchun ular bu imtihonga kiritilmagan.',
   repeat:'Baza hali kichik — urinishlar orasida savollar takrorlanishi mumkin.',
   capped:(n:number)=>`Bazada atigi ${n} ta savol bor, shuning uchun imtihon ${n} ta savoldan iborat bo‘ladi.`,
@@ -34,7 +36,7 @@ const dict={
   best:'Eng yaxshi natija',avg:'O‘rtacha',ok:'O‘tdi',fail:'O‘tmadi'},
  ru:{title:'Режим экзамена',sub:'Как на настоящем экзамене: время ограничено, результат и ошибки видны в конце',
   count:'Количество вопросов',time:'Время',q:ruQ,min:(n:number)=>`${n} мин`,
-  pool:'База вопросов',poolText:(n:number)=>`Сейчас в базе ${ruQ(n)} из тестов мини-уроков. Каждый раз они перемешиваются случайно.`,
+  pool:'База вопросов',poolText:(n:number)=>`В базе ${ruQ(n)}: тесты по темам предметов и мини-уроки. Каждый раз выбираются случайно.`,subject:'Предмет',mix:'Все предметы вперемешку',
   poolNote:'Ответы к тестам по темам предметов хранятся только на сервере (для групповых тестов), поэтому они не входят в этот экзамен.',
   repeat:'База пока небольшая — вопросы могут повторяться между попытками.',
   capped:(n:number)=>`В базе всего ${ruQ(n)}, поэтому экзамен будет из ${ruQ(n)}.`,
@@ -47,7 +49,7 @@ const dict={
   best:'Лучший результат',avg:'В среднем',ok:'Сдан',fail:'Не сдан'},
  en:{title:'Exam mode',sub:'Just like the real exam: timed, with your score and mistakes shown at the end',
   count:'Number of questions',time:'Time',q:(n:number)=>`${n} questions`,min:(n:number)=>`${n} min`,
-  pool:'Question pool',poolText:(n:number)=>`The pool has ${n} professional questions from the mini-lesson quizzes. They are shuffled every time.`,
+  pool:'Question pool',poolText:(n:number)=>`The pool has ${n} professional questions: the subject topic tests and the mini-lessons. Picked at random every time.`,subject:'Subject',mix:'All subjects mixed',
   poolNote:'Answers to the subject topic tests are kept only on the server (for group tests), so those are not part of this exam.',
   repeat:'The pool is still small, so questions may repeat between attempts.',
   capped:(n:number)=>`The pool has only ${n} questions, so this exam will have ${n}.`,
@@ -91,6 +93,8 @@ export default function Exam({lang}:{lang:'uz'|'ru'|'en'}){
  const l=lang as Lang;
  const [decks,setDecks]=useState<Deck[]|null>(null);
  const [count,setCount]=useState<Count>(20);
+ const [subj,setSubj]=useState('mix');
+ const [busy,setBusy]=useState(false);const [failed,setFailed]=useState(false);
  const [mins,setMins]=useState<20|40>(20);
  const [run,setRun]=useState<{qs:ExamQ[];deadline:number;started:number;mins:number}|null>(null);
  const [result,setResult]=useState<Result|null>(null);
@@ -100,14 +104,23 @@ export default function Exam({lang}:{lang:'uz'|'ru'|'en'}){
  useEffect(()=>{let live=true;setDecks(null);fetch(`/decks/manifest.${lang}.json`).then(r=>r.ok?r.json():[]).then(d=>{if(live)setDecks(Array.isArray(d)?d:[])}).catch(()=>{if(live)setDecks([])});return ()=>{live=false}},[lang]);
 
  const deckQs=useMemo<ExamQ[]>(()=>(decks||[]).flatMap(d=>d.quiz.map(q=>({q:q.q,options:q.options,correct:q.correct,explanation:q.explanation,source:d.title}))),[decks]);
- const pool=deckQs;
- const size=Math.min(count,pool.length);
+ const bank=subj==='mix'?TOPICS:topicsOf(subj);
+ const poolN=bank.reduce((a,m)=>a+(m.tests||0),0)+(subj==='mix'?deckQs.length:0);
+ const size=Math.min(count,poolN);
 
- const start=()=>{
-  if(!pool.length)return;
+ // Topic questions ship with the app; their keys come from the server per topic (enough topics for the chosen size).
+ const start=async()=>{
+  if(!poolN||busy)return;
+  setBusy(true);setFailed(false);
+  const picked=subj==='mix'?shuffle(TOPICS).slice(0,Math.ceil(count/10)+3):bank;
+  const parts=await Promise.all(picked.map(async m=>{const [tp,k]=await Promise.all([loadTopic(m.id),callApi<{correct:number[];explain:{en:string;ru:string;uz:string}[]}>('/curriculum/key?topicId='+m.id)]);
+   return tp&&k.ok?tp.test.map((x,i)=>({q:tx(x.q,l),options:x.options.map(o=>tx(o,l)),correct:k.data.correct[i],explanation:tx(k.data.explain[i],l),source:tx(tp.title,l)})):[]}));
+  setBusy(false);
+  const qs=[...parts.flat(),...(subj==='mix'?deckQs:[])];
+  if(!qs.length){setFailed(true);return}
   const now=Date.now();
   setResult(null);
-  setRun({qs:shuffle(pool).slice(0,size),deadline:now+mins*60000,started:now,mins});
+  setRun({qs:shuffle(qs).slice(0,size),deadline:now+mins*60000,started:now,mins});
  };
  const done=(answers:number[])=>{
   if(!run)return;
@@ -168,21 +181,17 @@ export default function Exam({lang}:{lang:'uz'|'ru'|'en'}){
  return <div className="rv-root ex-root">
   <header className="rv-head"><h2>{t.title}</h2><p>{t.sub}</p></header>
   <section className="ex-setup">
+   <label className="ex-subject"><span>{t.subject}</span><select value={subj} onChange={e=>setSubj(e.target.value)}><option value="mix">{t.mix}</option>{SUBJECTS.map(x=><option key={x.id} value={x.id}>{tx(x.title,l)}</option>)}</select></label>
    <Seg label={t.count} value={count} options={[...COUNTS]} render={t.q} onChange={setCount}/>
    <Seg label={t.time} value={mins} options={[20,40] as (20|40)[]} render={t.min} onChange={setMins}/>
    <ul className="ex-rules">{t.rules.map((r,k)=><li key={k}>{k===1?<AlarmClock size={16}/>:<Check size={16}/>}<span>{r}</span></li>)}</ul>
    {decks===null?<div className="rv-loading" role="status"><span className="rv-spin"/>{t.loading}</div>
-   :pool.length===0?<p className="ex-warn">{t.empty}</p>
-   :<>{size<count&&<p className="ex-warn">{t.capped(pool.length)}</p>}
-    <button className="rv-primary rv-start" onClick={start}>{t.start} · {t.q(size)}<ChevronRight size={18}/></button></>}
+   :<>{failed&&<p className="ex-warn">{t.empty}</p>}{size<count&&<p className="ex-warn">{t.capped(poolN)}</p>}
+    <button className="rv-primary rv-start" disabled={busy} onClick={start}>{busy?t.loading:<>{t.start} · {t.q(size)}<ChevronRight size={18}/></>}</button></>}
   </section>
   <section className="ex-pool">
-   <div className="ex-pool-head"><Database size={18}/><strong>{t.pool}</strong><span className="ex-pool-n">{decks===null?'…':pool.length}</span></div>
-   {decks!==null&&<>
-    <p>{t.poolText(pool.length)}</p>
-    {pool.length<count*2&&<p className="ex-amber">{t.repeat}</p>}
-   </>}
-   <p className="rv-muted">{t.poolNote}</p>
+   <div className="ex-pool-head"><Database size={18}/><strong>{t.pool}</strong><span className="ex-pool-n">{decks===null?'…':poolN}</span></div>
+   {decks!==null&&<p>{t.poolText(poolN)}</p>}
   </section>
   <section className="ex-history">
    <div className="ex-history-head"><History size={18}/><h3>{t.history}</h3></div>

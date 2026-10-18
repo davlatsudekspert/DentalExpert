@@ -37,6 +37,10 @@ tags:
 # Assignment (written answer; the default type, so no native picker is needed)
 - tapOn: "${GROUP_NAME}.*"
 - extendedWaitUntil:
+    visible: "Topshiriqlar"     # group tabs: O‘quv reja / Topshiriqlar / Jurnal / Talabalar
+    timeout: 10000
+- tapOn: "Topshiriqlar"
+- extendedWaitUntil:
     visible: "Topshiriq berish.*"
     timeout: 10000
 - tapOn: "Topshiriq berish.*"
