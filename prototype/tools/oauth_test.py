@@ -87,7 +87,7 @@ def check(n,c,info=''):
     if not c:raise AssertionError(f'{n} {info}')
     ok.append(n)
 
-PROFILE_KEYS={'id','email','name','role','countryCode','cityId','phone','workplace','bio','specialty','telegram','instagram','publicEmail','address','mapUrl','publishRequested','verified'}
+PROFILE_KEYS={'id','email','name','role','countryCode','cityId','phone','workplace','bio','specialty','telegram','instagram','publicEmail','address','mapUrl','publishRequested','verified','photoUrl'}
 procs=[]
 try:
     # 1) No client IDs configured: the endpoint answers 503 oauth_disabled.
