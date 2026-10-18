@@ -34,7 +34,7 @@ Sign-in uses a one-time email code. For review accounts the code is fixed and no
 3. Enter the 6-digit code given in the Password field.
 Teacher view: reviewer-teacher@review.invalid, student view: reviewer-student@review.invalid (same code).
 Learning content, the 3D tooth atlas and daily practice are on the Learn and Atlas tabs.
-The dentist patient list is stored only on the device. No payments, no ads.
+This Android build is the education edition: no patient records, no dentist search and no booking. No payments, no ads.
 ```
 
 Keep the two secrets in place for as long as the app is on Play: reviewers check updates as well.

@@ -62,6 +62,8 @@ jobs:
         run: SIM_OUT=/tmp/sim bash tools/ci_local_server.sh profile_e2e classroom_e2e topics_e2e quick_e2e classroom_v2_e2e general_e2e
       - name: Live site on a TV and slides in present mode
         run: python3 tools/present_test.py dist
+      - name: Education edition (Android / Google Play) has no patient role, dentist search, booking or patient records
+        run: python3 tools/edu_edition_test.py dist
       - name: Every screen in uz/ru/en (offline build)
         run: npm run build:offline && python3 tools/package.py && PROTOTYPE_HTML=demo.html python3 tools/verify.py
       - name: Upload screenshots when something fails

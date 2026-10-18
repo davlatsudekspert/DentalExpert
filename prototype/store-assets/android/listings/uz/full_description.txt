@@ -1,22 +1,22 @@
-Dental Expert — stomatologlar, stomatologiya o‘qituvchilari va talabalari uchun o‘qish va ish yordamchisi. Ilova o‘zbek, rus va ingliz tillarida.
+Dental Expert — stomatologiyani o‘rganish uchun ilova: stomatologiya talabalari, o‘qituvchilari va stomatologlar uchun. Ilova o‘zbek, rus va ingliz tillarida.
 
-STOMATOLOGLAR UCHUN
-• Tish formulasi (odontogramma, FDI raqamlash) va tashrif izohlari bilan o‘z bemorlar ro‘yxatingizni yuriting.
-• Bemorlar ro‘yxati faqat telefoningizda saqlanadi va serverimizga yuklanmaydi.
-• Xohlasangiz, bemorlar sizni topishi uchun profilingizni e’lon qiling: ish joyi, qisqa ma’lumot va o‘zingiz tanlagan aloqa kanallari (telefon, Telegram, Instagram, email, xarita havolasi).
+BOSQICHMA-BOSQICH O‘RGANING
+• Namunaviy o‘quv reja: kurs → fan → mavzu, propedevtikadan implantologiyagacha.
+• Har bir mavzuda rasmli slaydlar, og‘zaki savollar va test.
+• Rasmli amaliyot, xatolarni takrorlash va vaqtli imtihon rejimi.
+• Kunlik mashq: har kuni qisqa test va rasmli topshiriq. Natijalar qurilmangizda saqlanadi.
+
+3D TISH ATLASI
+• Tishni aylantiring, emal, dentin, pulpa va ildizni kesimda o‘rganing.
 
 O‘QITUVCHI VA TALABALAR UCHUN
-• O‘qituvchi guruh yaratadi va talabalarga qo‘shilish kodini beradi.
-• Topshiriqlar va testlar; testlar avtomatik baholanadi.
+• O‘qituvchi guruh yaratadi va talabalarga qo‘shilish kodi yoki QR kodni beradi.
+• Istalgan mavzu bo‘yicha topshiriq va testlar; testlar avtomatik baholanadi.
+• Testni katta ekranda o‘tkazish mumkin, talabalar telefonidan javob beradi.
 • O‘qituvchi talabalarni faqat ular tanlagan taxallus bilan ko‘radi, email ko‘rsatilmaydi.
 
-HAR KUNI O‘RGANING
-• Kunlik mashq: har kuni qisqa test va rasmli topshiriq. Natijalar qurilmangizda saqlanadi.
-• Rasmli darslar va faqat ko‘rish uchun taqdimotlar — o‘zbek, rus va ingliz tillarida.
-• 3D tish atlasi: tishni aylantiring, emal, dentin, pulpa va ildizni kesimda o‘rganing.
-
-STOMATOLOG TOPISH
-• Mamlakat va shahar bo‘yicha stomatologlar. “Namuna” belgili profillar namoyish uchun to‘qilgan.
+STOMATOLOGLAR UCHUN
+• O‘quv reja, darslar va 3D atlas bilan bilimingizni yangilang.
 
 KIRISH
 • Emailga yuborilgan bir martalik kod yoki Google hisobingiz orqali.
@@ -27,6 +27,6 @@ MAXFIYLIK
 • Hisobni istalgan vaqtda o‘chirish: Sozlamalar → Hisobni o‘chirish.
 
 MUHIM
-Dental Expert — ta’lim va ma’lumot vositasi. U tibbiy buyum emas: tashxis qo‘ymaydi, davolash tayinlamaydi va malakali stomatolog maslahatining o‘rnini bosmaydi. Bu dastlabki versiya; fikringizni Sozlamalar → Shikoyat yoki murojaat yuborish orqali yoki davlatsudekspert@gmail.com manziliga yuboring.
+Dental Expert — ta’lim va ma’lumotnoma ilovasi. U tibbiy buyum emas: tashxis qo‘ymaydi, davolash tayinlamaydi va malakali stomatolog maslahatining o‘rnini bosmaydi. Bu dastlabki versiya; fikringizni Sozlamalar → Shikoyat yoki murojaat yuborish orqali yoki davlatsudekspert@gmail.com manziliga yuboring.
 
 Maxfiylik siyosati: https://dental-expert.pages.dev/privacy/

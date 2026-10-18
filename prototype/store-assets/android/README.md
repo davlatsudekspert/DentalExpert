@@ -11,8 +11,11 @@ Owner guide (Uzbek, step by step): `../../PLAY_RELEASE.md`.
 | `app_access.md` | App content → App access (reviewer sign-in) |
 | `closed_testing_plan.md` | 12 testers / 14 days rule, plan and recruiting message |
 
-Lengths (characters, as Play counts them): title 16 in every language; short description en-US 76, ru-RU 69, uz 76;
-full description about 1.8-1.9k in every language.
+Lengths (characters, as Play counts them): title 16 in every language; short description en-US 71, ru-RU 67, uz 66;
+full description about 1.7k in every language.
+
+The Android app is the **education edition** (no patient role, dentist search, booking or patient records; see
+`health_apps_declaration.md`), so these texts describe only the learning features. iOS keeps the full app.
 
 Languages:
 - **en-US**: set as the default language of the listing.

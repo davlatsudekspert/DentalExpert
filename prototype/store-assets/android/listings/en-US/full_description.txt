@@ -1,22 +1,22 @@
-Dental Expert is a study and work companion for dentists, dental teachers and dental students, in Uzbek, Russian and English.
+Dental Expert is an app for learning dentistry, for dental students, teachers and dentists, in Uzbek, Russian and English.
 
-FOR DENTISTS
-• Keep your own patient list with a tooth chart (odontogram, FDI numbering) and visit notes.
-• The patient list is stored only on your phone. It is not uploaded to our server.
-• Optionally publish a public profile so patients can find you: workplace, short bio and the contact channels you choose (phone, Telegram, Instagram, email, map link).
+LEARN STEP BY STEP
+• A sample curriculum: year → subject → topic, from propaedeutics to implantology.
+• Every topic has illustrated slides, oral questions and a test.
+• Picture practice, review of mistakes and a timed exam mode.
+• Daily practice: a short quiz and a picture task every day. Your daily results stay on your device.
+
+3D TOOTH ATLAS
+• Rotate a tooth and explore enamel, dentin, pulp and root in cutaway views.
 
 FOR TEACHERS AND STUDENTS
-• Teachers create groups and share a join code with their students.
-• Give assignments and quizzes; quizzes are scored automatically.
+• Teachers create groups and share a join code or a QR code with their students.
+• Give assignments and class tests from any topic; tests are scored automatically.
+• Run a test live on the big screen while students answer on their phones.
 • Teachers see students only by the nickname they choose, never by email.
 
-LEARN EVERY DAY
-• Daily practice: a short quiz and a picture task every day. Your daily results stay on your device.
-• Illustrated lessons and view-only slide presentations in Uzbek, Russian and English.
-• 3D tooth atlas: rotate a tooth and explore enamel, dentin, pulp and root in cutaway views.
-
-FIND A DENTIST
-• Browse dentists by country and city. Profiles marked "Sample" are fictional demonstrations.
+FOR DENTISTS
+• Refresh your knowledge with the curriculum, the lessons and the 3D atlas.
 
 SIGN IN YOUR WAY
 • Sign in with a one-time code sent to your email, or with your Google account.
@@ -27,6 +27,6 @@ PRIVACY FIRST
 • Delete your account at any time in Settings → Delete account.
 
 IMPORTANT
-Dental Expert is an educational and reference tool. It is not a medical device, does not diagnose or treat any condition and does not replace a consultation with a qualified dentist. This is an early version; we welcome your feedback through Settings → Send a complaint or message or davlatsudekspert@gmail.com.
+Dental Expert is an educational and reference app. It is not a medical device, does not diagnose or treat any condition and does not replace a consultation with a qualified dentist. This is an early version; we welcome your feedback through Settings → Send a complaint or message or davlatsudekspert@gmail.com.
 
 Privacy policy: https://dental-expert.pages.dev/privacy/
