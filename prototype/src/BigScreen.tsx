@@ -3,30 +3,30 @@ import {BarChart3,Flag,QrCode,Users,X} from 'lucide-react';
 import qrcode from 'qrcode-generator';
 import {Capacitor} from '@capacitor/core';
 import {callApi,joinLink} from './api';
-import {loadTopic,tx} from './curriculumData';
+import {fmtDue,refItems} from './classTest';
 import type {Lang} from './discoveryData';
 import './bigscreen.css';
 
 /** Teacher's "big screen": live leaderboard of a running test for a projector or TV, with a join QR, and the hardest questions once finished. */
 type M={no:number;nickname:string|null;answer:string|null;score:number|null;total:number|null;startedAt:string|null;submittedAt:string|null;answered?:number};
-type A={id:string;kind:string;title:string;status:'open'|'closed';questionCount?:number;topicId?:string;questions?:number[];minutes?:number;deckId:string|null;submitted?:number};
+type A={id:string;kind:string;title:string;status:'open'|'closed';questionCount?:number;topicId?:string;questions?:number[];items?:string[];variant?:boolean;minutes?:number;deadlineAt?:string;ended?:boolean;deckId:string|null;submitted?:number};
 type Stat={right:number;answered:number};
 export type BigTest={id:string;title:string;topicId?:string;deckId?:string|null};
 
 const ruPlural=(n:number,one:string,few:string,many:string)=>{const a=n%10,b=n%100;return a===1&&b!==11?one:a>=2&&a<=4&&(b<12||b>14)?few:many};
 const words={
  uz:{eyebrow:'Jonli natijalar',qCount:(n:number)=>`${n} ta savol`,joined:'Qo‘shildi',submitted:'Topshirdi',live:'Davom etmoqda',ended:'Yakunlandi',close:'Yopish',finish:'Testni yakunlash',
-  confirm:'Test yakunlansin? Boshlagan talabalarga 2 daqiqa beriladi, so‘ng eng qiyin savollar ko‘rinadi.',cancel:'Bekor qilish',waiting:'Kutilmoqda',solving:'Yechmoqda',done:'Topshirdi',student:'Talaba',
+  confirm:'Test yakunlansin? Boshlagan talabalarga 2 daqiqa beriladi, so‘ng eng qiyin savollar ko‘rinadi.',cancel:'Bekor qilish',waiting:'Qo‘shildi',solving:'Yechmoqda',done:'Topshirdi',student:'Talaba',
   scan:'Skanerlang yoki kodni kiriting',code:'Guruh kodi',hardest:'Eng qiyin savollar',avg:'O‘rtacha natija',noOne:'Hali hech kim qo‘shilmadi',noOneHint:'QR kodni telefon kamerasi bilan skanerlang',
   noStats:'Hali hech kim topshirmagan',offline:'Aloqa yo‘q — oxirgi ma’lumot ko‘rsatilmoqda',showQr:'QR kodni ko‘rsatish',showStats:'Eng qiyin savollar',qN:(n:number)=>`${n}-savol`,rightN:(r:number,n:number)=>`${r}/${n} to‘g‘ri`,
   rotate:'Gorizontal holatga o‘tamizmi?',rotateHint:'Natijalar jadvali yotiq ekranda yaxshiroq ko‘rinadi.',yes:'Ha',no:'Yo‘q',err:'Bajarilmadi. Qayta urinib ko‘ring.'},
  ru:{eyebrow:'Результаты в реальном времени',qCount:(n:number)=>`${n} ${ruPlural(n,'вопрос','вопроса','вопросов')}`,joined:'Подключились',submitted:'Сдали',live:'Идёт',ended:'Завершён',close:'Закрыть',finish:'Завершить тест',
-  confirm:'Завершить тест? Начавшим студентам даётся 2 минуты, затем появятся самые трудные вопросы.',cancel:'Отмена',waiting:'Ожидает',solving:'Решает',done:'Сдано',student:'Студент',
+  confirm:'Завершить тест? Начавшим студентам даётся 2 минуты, затем появятся самые трудные вопросы.',cancel:'Отмена',waiting:'Подключился',solving:'Решает',done:'Сдано',student:'Студент',
   scan:'Отсканируйте или введите код',code:'Код группы',hardest:'Самые трудные вопросы',avg:'Средний результат',noOne:'Пока никто не подключился',noOneHint:'Наведите камеру телефона на QR-код',
   noStats:'Пока никто не сдал',offline:'Нет связи — показаны последние данные',showQr:'Показать QR-код',showStats:'Самые трудные вопросы',qN:(n:number)=>`Вопрос ${n}`,rightN:(r:number,n:number)=>`${r}/${n} верно`,
   rotate:'Перейти в горизонтальный режим?',rotateHint:'Таблица результатов лучше видна на горизонтальном экране.',yes:'Да',no:'Нет',err:'Не получилось. Попробуйте ещё раз.'},
  en:{eyebrow:'Live results',qCount:(n:number)=>`${n} question${n===1?'':'s'}`,joined:'Joined',submitted:'Submitted',live:'In progress',ended:'Finished',close:'Close',finish:'Finish the test',
-  confirm:'Finish the test? Students who started get 2 more minutes, then the hardest questions appear.',cancel:'Cancel',waiting:'Waiting',solving:'Answering',done:'Submitted',student:'Student',
+  confirm:'Finish the test? Students who started get 2 more minutes, then the hardest questions appear.',cancel:'Cancel',waiting:'Joined',solving:'Answering',done:'Submitted',student:'Student',
   scan:'Scan or enter the code',code:'Group code',hardest:'Hardest questions',avg:'Average score',noOne:'Nobody has joined yet',noOneHint:'Point a phone camera at the QR code',
   noStats:'Nobody has submitted yet',offline:'Offline — showing the last data',showQr:'Show the QR code',showStats:'Hardest questions',qN:(n:number)=>`Question ${n}`,rightN:(r:number,n:number)=>`${r}/${n} correct`,
   rotate:'Switch to landscape?',rotateHint:'The results board reads better on a landscape screen.',yes:'Yes',no:'No',err:'That did not work. Please try again.'}
@@ -65,7 +65,8 @@ export default function BigScreen({lang,groupId,groupCode,test,onClose}:{lang:La
  const [fresh,setFresh]=useState<Set<number>>(new Set());
  const [now,setNow]=useState(Date.now());
  const prev=useRef<Map<number,string|null>|null>(null);
- const closed=a?.status==='closed';
+ // Over when the teacher finished it or its deadline passed.
+ const closed=a?.status==='closed'||!!a?.ended;
  // The join QR shows by default on big screens; with a full class on a smaller screen the board gets the room instead.
  const showSide=side??(closed||wide()&&((members?.length??0)<=24||innerWidth>=1600));
 
@@ -127,11 +128,12 @@ export default function BigScreen({lang,groupId,groupCode,test,onClose}:{lang:La
 
  // Question texts for the "hardest questions" panel (topic test: the topic JSON; deck quiz: the bundled deck manifest).
  const [qText,setQText]=useState<string[]|null>(null);
- const topicId=a?.topicId||test.topicId,deckId=a?.deckId||test.deckId,qIdx=a?.questions;
+ // Topic tests: the stats follow `items` (the fixed questions, or every question of a variant pool).
+ const deckId=a?.deckId||test.deckId,items=a?.items;
  useEffect(()=>{if(!closed)return;let live=true;
-  if(topicId)loadTopic(topicId).then(tp=>{if(live&&tp)setQText((qIdx||tp.test.map((_,k)=>k)).map(i=>tx(tp.test[i]?.q,lang)))});
+  if(items)refItems(items,lang).then(it=>{if(live&&it)setQText(it.map(q=>q.q))});
   else if(deckId)fetch(`/decks/manifest.${lang}.json`).then(r=>r.ok?r.json():[]).then((ds:{id:string;quiz:{q:string}[]}[])=>{const d=ds.find(x=>x.id===deckId);if(live&&d)setQText(d.quiz.map(q=>q.q))}).catch(()=>{});
-  return ()=>{live=false}},[closed,topicId,deckId,qIdx?.join(','),lang]);
+  return ()=>{live=false}},[closed,deckId,items?.join(','),lang]);
 
  const list=useMemo(()=>rank(members||[]),[members]);
  const total=a?.questionCount??a?.questions?.length??0;
@@ -142,7 +144,7 @@ export default function BigScreen({lang,groupId,groupCode,test,onClose}:{lang:La
   <header className="bs-top">
    <div className="bs-title"><span className="bs-eyebrow">{t.eyebrow}</span><h1>{title}</h1></div>
    <div className="bs-meta">
-    {total>0&&<span className="bs-qc">{t.qCount(total)}</span>}
+    {total>0&&<span className="bs-qc">{t.qCount(total)}</span>}{a?.deadlineAt&&!closed&&<span className="bs-qc">{fmtDue(a.deadlineAt,lang)}</span>}
     <span>{t.joined} <b>{members?.length??'…'}</b> · {t.submitted} <b>{members?done.length:'…'}</b></span>
     <span className={'bs-pill '+(closed?'ended':'live')}><i/>{closed?t.ended:t.live}</span>
     {offline&&<span className="bs-off" role="status" title={t.offline} aria-label={t.offline}/>}

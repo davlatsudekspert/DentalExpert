@@ -2,9 +2,9 @@ import {Suspense,lazy,useCallback,useEffect,useMemo,useRef,useState} from 'react
 import {BarChart3,BookOpen,Check,ChevronLeft,ClipboardList,Copy,Eye,EyeOff,LogIn,Plus,Presentation,QrCode,Timer,Trash2,UserMinus,Users,Tv} from 'lucide-react';
 import qrcode from 'qrcode-generator';
 import {callApi,joinLink,parseJoin,type AuthUser} from './api';
-import QrScanner from './QrScanner';
-import QuickJoin from './QuickJoin';
-import {TestRun,TestReview,testError,testWords,topicItems} from './classTest';
+import {CLASSROOM_CHANGED,openJoin,openScan} from './joinLink';
+import {APOSTROPHES,VARIANT_POOL_MAX,checkNick,maxVariantCount,variantAllowed} from './classroomShared';
+import {PreviewRun,TestRun,TestReview,fmtDue,loadTestItems,refItems,revealNote,testError,testWords,type Reveal,type TestItem,type TestMeta} from './classTest';
 import Slides from './Slides';
 import type {BigTest} from './BigScreen';
 const BigScreen=lazy(()=>import('./BigScreen'));
@@ -16,8 +16,8 @@ import type {Lang} from './discoveryData';
 type Group={id:string;name:string;code?:string;members?:number;teacher?:string|null;myNo?:number;myNickname?:string|null};
 type Review={answers:number[]|null;correct:number[];explain:({en:string;ru:string;uz:string}|null)[]};
 type Assignment={id:string;kind:'task'|'quiz';title:string;body:string|null;deckId:string|null;status:'open'|'closed';dueDate:string|null;submitted?:number;
- topicId?:string;questions?:number[];minutes?:number;questionCount?:number;
- mine:{answer:string|null;score:number|null;total:number|null;startedAt?:string|null;review?:Review}|null};
+ topicId?:string;questions?:number[];minutes?:number;questionCount?:number;items?:string[];variant?:boolean;perStudent?:number;deadlineAt?:string;ended?:boolean;reveal?:Reveal;
+ mine:{answer:string|null;score:number|null;total:number|null;startedAt?:string|null;questions?:string[];review?:Review&{questions?:string[]}}|null};
 type Member={no:number;nickname:string|null;answer:string|null;answers?:number[]|null;score:number|null;total:number|null;submittedAt:string|null};
 type BookMember={no:number;nickname:string|null;scores:Record<string,number|null>};
 type Book={quizzes:{id:string;title:string;topicId:string|null;total:number}[];members:BookMember[]};
@@ -26,9 +26,9 @@ type Deck={id:string;title:string;quiz:{q:string;options:string[];correct:number
 
 const ruPlural=(n:number,one:string,few:string,many:string)=>{const a=n%10,b=n%100;return a===1&&b!==11?one:a>=2&&a<=4&&(b<12||b>14)?few:many};
 const joinErr={
- uz:{taken:'Bu nom guruhda band — boshqasini yozing.',rude:'Bu nomni ishlatib bo‘lmaydi — boshqa nom tanlang.',full:'Guruh to‘lgan (500 talaba). Ustozingizga ayting.'},
- ru:{taken:'Это имя в группе уже занято — напишите другое.',rude:'Это имя использовать нельзя — выберите другое.',full:'Группа заполнена (500 студентов). Сообщите преподавателю.'},
- en:{taken:'That name is taken in this group — try another.',rude:'That name can’t be used — choose another one.',full:'The group is full (500 students). Tell your teacher.'}
+ uz:{taken:'Bu nom guruhda band — boshqasini yozing.',rude:'Bu nomni ishlatib bo‘lmaydi — boshqa nom tanlang.',full:'Guruh to‘lgan (200 talaba). Ustozingizga ayting.',ambiguous:'Kodda 0, O, 1 va I bo‘lmaydi — ustoz ko‘rsatgan kodni qayta tekshiring.',own:'Bu sizning guruhingiz — siz uning ustozisiz.',signin:'Sessiya tugagan — qayta kiring.',network:'Internet aloqasi yo‘q. Ulanishni tekshiring.'},
+ ru:{taken:'Это имя в группе уже занято — напишите другое.',rude:'Это имя использовать нельзя — выберите другое.',full:'Группа заполнена (200 студентов). Сообщите преподавателю.',ambiguous:'В кодах нет 0, O, 1 и I — проверьте код преподавателя ещё раз.',own:'Это ваша группа — вы её преподаватель.',signin:'Сессия истекла — войдите снова.',network:'Нет подключения к интернету. Проверьте связь.'},
+ en:{taken:'That name is taken in this group — try another.',rude:'That name can’t be used — choose another one.',full:'The group is full (200 students). Tell your teacher.',ambiguous:'Codes never contain 0, O, 1 or I — check your teacher’s code again.',own:'This is your own group — you teach it.',signin:'Your session has expired — sign in again.',network:'No internet connection. Check it and try again.'}
 };
 const words={
  uz:{student:'Talaba',nick:'Taxallus (ixtiyoriy)',nickPh:'Masalan: Lola',nickHint:'Ustoz sizni shu nom yoki raqam bilan ko‘radi',close:'Yopish',reopen:'Qayta ochish',closedLbl:'Yopilgan',errClosed:'Topshiriq yopilgan.',errDone:'Siz bu testni allaqachon topshirgansiz.',errStarted:'Bu test allaqachon boshlangan va qayta boshlab bo‘lmaydi.',errDue:'Topshirish muddati o‘tgan.',errRate:'Juda ko‘p urinish. Keyinroq qayta urinib ko‘ring.',errNick:'Taxallus 2–24 belgi: harf, raqam, bo‘sh joy.',errNickTaken:'“Talaba N” ko‘rinishidagi nom band — boshqa nom tanlang.',title:'Guruhlar va darslar',signIn:'Guruhlar uchun email orqali kiring.',signInBtn:'Kirish',offline:'Guruhlar hozir mavjud emas (internet yoki server).',
@@ -86,11 +86,10 @@ const words={
 type W=typeof words.uz;
 const scanWords={uz:'QR skanerlash',ru:'Сканировать QR',en:'Scan QR'};
 const more={
- uz:{big:'Katta ekran · QR',reveal:'To‘g‘ri javoblar',revealClosed:'test yakunlangach',revealInstant:'darhol (topshirgach)',revealWarn:'Diqqat: birinchi topshirgan talaba to‘g‘ri javoblarni ko‘radi va hali yechayotganlarga aytib qo‘yishi mumkin. Nazorat testlari uchun «test yakunlangach»ni tanlang.',remove:'Chiqarish',confirmRemove:(n:string)=>`${n} guruhdan chiqarilsinmi? Uning shu guruhdagi javoblari o‘chiriladi.`},
- ru:{big:'Большой экран · QR',reveal:'Верные ответы',revealClosed:'после завершения теста',revealInstant:'сразу (после сдачи)',revealWarn:'Внимание: первый сдавший увидит верные ответы и может подсказать тем, кто ещё решает. Для контрольных выберите «после завершения теста».',remove:'Исключить',confirmRemove:(n:string)=>`Исключить ${n} из группы? Ответы в этой группе будут удалены.`},
- en:{big:'Big screen · QR',reveal:'Right answers',revealClosed:'after the test is finished',revealInstant:'right away (after submitting)',revealWarn:'Note: the first student to submit sees the right answers and could pass them to classmates still answering. For graded tests choose “after the test is finished”.',remove:'Remove',confirmRemove:(n:string)=>`Remove ${n} from the group? Their answers in this group are deleted.`}
+ uz:{big:'Katta ekran · QR',reveal:'To‘g‘ri javoblar',revealClosed:'ustoz testni yakunlagach',revealDeadline:'muddat tugagach (yoki ustoz yakunlagach)',revealInstant:'darhol (topshirgach)',revealWarn:'Diqqat: birinchi topshirgan talaba to‘g‘ri javoblarni ko‘radi va hali yechayotganlarga aytib qo‘yishi mumkin. Nazorat testlari uchun «test yakunlangach»ni tanlang.',remove:'Chiqarish',confirmRemove:(n:string)=>`${n} guruhdan chiqarilsinmi? Uning shu guruhdagi javoblari o‘chiriladi.`},
+ ru:{big:'Большой экран · QR',reveal:'Верные ответы',revealClosed:'когда преподаватель завершит тест',revealDeadline:'после срока (или когда преподаватель завершит)',revealInstant:'сразу (после сдачи)',revealWarn:'Внимание: первый сдавший увидит верные ответы и может подсказать тем, кто ещё решает. Для контрольных выберите «после завершения теста».',remove:'Исключить',confirmRemove:(n:string)=>`Исключить ${n} из группы? Ответы в этой группе будут удалены.`},
+ en:{big:'Big screen · QR',reveal:'Right answers',revealClosed:'when the teacher finishes the test',revealDeadline:'after the deadline (or when the teacher finishes)',revealInstant:'right away (after submitting)',revealWarn:'Note: the first student to submit sees the right answers and could pass them to classmates still answering. For graded tests choose “after the test is finished”.',remove:'Remove',confirmRemove:(n:string)=>`Remove ${n} from the group? Their answers in this group are deleted.`}
 };
-type Reveal='closed'|'instant';
 /** Lazy-loaded teacher big screen (live results + join QR). */
 const Big=({lang,groupId,code,test,onClose}:{lang:Lang;groupId:string;code:string;test:BigTest;onClose:(finished:boolean)=>void})=><Suspense fallback={null}><BigScreen lang={lang} groupId={groupId} groupCode={code} test={test} onClose={onClose}/></Suspense>;
 
@@ -100,6 +99,7 @@ const nn=(n:number)=>String(n).padStart(2,'0');
 const subjectOf=(m:TopicMeta)=>SUBJECTS.find(s=>s.id===m.subject)!;
 
 export default function Classroom({lang,user,onSignIn}:{lang:Lang;user:AuthUser|null;onSignIn:()=>void}){
+ const j=joinErr[lang];
  const t=words[lang];
  const teacher=user?.role==='teacher'||user?.role==='dentist';
  const [groups,setGroups]=useState<Group[]|null>(null);
@@ -109,37 +109,35 @@ export default function Classroom({lang,user,onSignIn}:{lang:Lang;user:AuthUser|
  const [name,setName]=useState('');
  const [code,setCode]=useState('');
  const [nick,setNick]=useState('');
- const [scan,setScan]=useState(false);
- const [quick,setQuick]=useState<{code:string;testId?:string}|null>(null);
- const errText=(e?:string)=>e==='rate_limited'?t.errRate:e==='bad_nickname'?(/^(student|talaba|студент)\s*\d+$/iu.test(nick.trim())?t.errNickTaken:t.errNick):e==='name_required'?t.errName:e==='not_found'||e==='bad_code'?t.errCode:e==='teacher_only'?t.errTeacher:e==='nick_taken'?joinErr[lang].taken:e==='nickname_rejected'?joinErr[lang].rude:e==='group_full'?joinErr[lang].full:t.errGeneric;
+ const errText=(e?:string)=>e==='rate_limited'?t.errRate:e==='bad_nickname'?t.errNick:e==='reserved_nickname'?t.errNickTaken:e==='name_required'?t.errName:e==='not_found'||e==='bad_code'?t.errCode:e==='ambiguous_code'?j.ambiguous:e==='own_group'?j.own:e==='unauthorized'?j.signin:e==='network'?j.network:e==='teacher_only'?t.errTeacher:e==='nick_taken'?j.taken:e==='nickname_rejected'?j.rude:e==='group_full'?j.full:t.errGeneric;
  const load=useCallback(async()=>{
   const r=await callApi<{groups:Group[]}>('/classroom/groups');
   if(r.status===0||r.status===404){setOffline(true);return}
   if(r.ok){setOffline(false);setGroups(r.data.groups)}
  },[]);
  useEffect(()=>{if(user)load();else setGroups(null)},[user,load]);
+ // A join through the QR sheet (an overlay at the app root) reloads the list.
+ useEffect(()=>{const f=()=>{if(user)load()};addEventListener(CLASSROOM_CHANGED,f);return ()=>removeEventListener(CLASSROOM_CHANGED,f)},[user,load]);
  if(!user)return <section className="classroom card"><h2>{t.title}</h2><p className="muted">{t.signIn}</p><button className="button" onClick={onSignIn}><LogIn size={17}/>{t.signInBtn}</button></section>;
  if(offline)return <section className="classroom card"><h2>{t.title}</h2><p className="muted">{t.offline}</p></section>;
- if(open)return <GroupView lang={lang} group={open} teacher={teacher} onBack={()=>{setOpen(null);load()}}/>;
+ if(open)return <GroupView lang={lang} group={open} teacher={teacher} user={user} onBack={()=>{setOpen(null);load()}}/>;
  const create=async()=>{setMsg('');const r=await callApi('/classroom/groups','POST',{name});if(r.ok){setName('');load()}else setMsg(errText(r.data.error))};
- const join=async()=>{setMsg('');const r=await callApi('/classroom/join','POST',{code,nickname:nick});if(r.ok){setCode('');load()}else setMsg(errText(r.data.error))};
+ const join=async()=>{setMsg('');const c=nick.trim()?checkNick(nick):null;if(c&&!c.ok){setMsg(errText(c.error));return}const r=await callApi('/classroom/join','POST',{code,nickname:c?.nick||''});if(r.ok){setCode('');load()}else setMsg(errText(r.status===0?'network':r.data.error))};
  return <section className="classroom card" aria-label={t.title}>
   <h2>{t.title}</h2>
   {groups===null?<p className="muted">…</p>:groups.length===0?<p className="muted">{t.noGroups}</p>:<div className="lg-list">{groups.map(g=>
    <button key={g.id} className="lg-row" onClick={()=>setOpen(g)}><span className="lg-ico"><Users size={18}/></span><span className="lg-row-text"><strong>{g.name}</strong><small>{teacher?`${g.members??0} ${t.members} · ${t.code}: ${g.code}`:(g.teacher?`${t.teacher}: ${g.teacher} · `:'')+(g.myNickname||`${t.student} ${nn(g.myNo??0)}`)}</small></span></button>)}</div>}
   {teacher?<div className="cr-form"><label>{t.newGroup}<input value={name} maxLength={60} placeholder={t.groupName} aria-describedby="cr-group-hint" onChange={e=>setName(e.target.value)}/><small id="cr-group-hint" className="cr-help">{t.groupHint}</small></label><button className="button" disabled={name.trim().length<2} onClick={create}><Plus size={17}/>{t.create}</button></div>
-  :<div className="cr-form"><button className="button secondary cr-scan" onClick={()=>setScan(true)}><QrCode size={18}/>{scanWords[lang]}</button>
+  :<div className="cr-form"><button className="button secondary cr-scan" onClick={openScan}><QrCode size={18}/>{scanWords[lang]}</button>
    {/* A pasted QR link or invite text fills the code; one that names a test opens the quick test straight away. */}
-   <label>{t.join}<input value={code} autoCapitalize="characters" autoComplete="off" spellCheck={false} placeholder={t.joinPh} aria-describedby="cr-code-hint" onChange={e=>{const v=e.target.value;const p=v.length>7?parseJoin(v):null;if(p?.testId){setCode(p.code);setQuick(p);return}setCode(p?p.code:v.toUpperCase().replace(/[^A-Z0-9]/g,'').slice(0,6))}}/><small id="cr-code-hint" className="cr-help">{t.joinHint}</small></label>
-   <label>{t.nick}<input value={nick} maxLength={24} placeholder={t.nickPh} aria-describedby="cr-nick-hint" onChange={e=>setNick(e.target.value)}/><small id="cr-nick-hint" className="cr-help">{t.nickHint}</small></label><button className="button" disabled={code.length!==6} onClick={join}><LogIn size={17}/>{t.joinBtn}</button></div>}
+   <label>{t.join}<input value={code} autoCapitalize="characters" autoComplete="off" spellCheck={false} placeholder={t.joinPh} aria-describedby="cr-code-hint" onChange={e=>{const v=e.target.value;const p=v.length>7?parseJoin(v):null;if(p?.testId){setCode(p.code);openJoin(p);return}setCode(p?p.code:v.toUpperCase().replace(/[^A-Z0-9]/g,'').slice(0,6))}}/><small id="cr-code-hint" className="cr-help">{t.joinHint}</small></label>
+   <label>{t.nick}<input value={nick} maxLength={24} placeholder={t.nickPh} aria-describedby="cr-nick-hint" onChange={e=>setNick(e.target.value.replace(APOSTROPHES,"'"))}/><small id="cr-nick-hint" className="cr-help">{t.nickHint}</small></label><button className="button" disabled={code.length!==6} onClick={join}><LogIn size={17}/>{t.joinBtn}</button></div>}
   {msg&&<p className="cr-error" role="alert">{msg}</p>}
   {!teacher&&<small className="muted">{t.note}</small>}
-  {scan&&<QrScanner lang={lang} onResult={r=>{setScan(false);setQuick(r)}} onClose={()=>setScan(false)}/>}
-  {quick&&<QuickJoin lang={lang} code={quick.code} testId={quick.testId} signedIn onDone={()=>{setCode('');load()}} onClose={()=>{setQuick(null);load()}}/>}
  </section>;
 }
 
-function GroupView({lang,group,teacher,onBack}:{lang:Lang;group:Group;teacher:boolean;onBack:()=>void}){
+function GroupView({lang,group,teacher,user,onBack}:{lang:Lang;group:Group;teacher:boolean;user:AuthUser;onBack:()=>void}){
  const t=words[lang];
  const [tab,setTab]=useState<'plan'|'work'|'book'|'people'>('plan');
  const [items,setItems]=useState<Assignment[]|null>(null);
@@ -176,9 +174,9 @@ function GroupView({lang,group,teacher,onBack}:{lang:Lang;group:Group;teacher:bo
  useEffect(()=>{if(first.current){first.current=false;return}toTop(top.current)},[sel,topicId]);
  return <section className="classroom card lg-group" ref={top}>
   <button className="cr-back" onClick={backTo}><ChevronLeft size={16}/>{backLabel}</button>
-  {sel?<AssignmentView lang={lang} groupId={group.id} code={group.code||''} a={sel} teacher={teacher} roster={roster} decks={decks} onChanged={load} onDeleted={()=>{setSel(null);load()}}/>
-  :topicId?(teacher?<TeacherTopic lang={lang} groupId={group.id} code={group.code||''} topicId={topicId} row={row} test={items?.find(a=>a.id===row?.testId)||null} members={book?.members||[]} onChanged={load}/>
-   :<StudentTopic lang={lang} topicId={topicId} test={items?.find(a=>a.id===row?.testId)||null} onChanged={load}/>)
+  {sel?<AssignmentView lang={lang} groupId={group.id} code={group.code||''} user={user} a={sel} teacher={teacher} roster={roster} decks={decks} onChanged={load} onDeleted={()=>{setSel(null);load()}}/>
+  :topicId?(teacher?<TeacherTopic lang={lang} groupId={group.id} code={group.code||''} user={user} topicId={topicId} row={row} topics={topics} test={items?.find(a=>a.id===row?.testId)||null} members={book?.members||[]} onChanged={load}/>
+   :<StudentTopic lang={lang} user={user} topicId={topicId} test={items?.find(a=>a.id===row?.testId)||null} onChanged={load}/>)
   :<>
    <span className="lg-eyebrow">{teacher?`${memberCount} ${t.members}`:(group.teacher?`${t.teacher}: ${group.teacher}`:'')}</span>
    <h2>{group.name}</h2>
@@ -212,7 +210,8 @@ function InviteCard({lang,group}:{lang:Lang;group:Group}){
  const t=words[lang];
  const [copied,setCopied]=useState('');
  const code=group.code||'';
- const qr=useMemo(()=>{if(!code)return '';const q=qrcode(0,'M');q.addData(code);q.make();return q.createDataURL(6,2)},[code]);
+ // The QR holds the join link: a phone camera opens the /j/ page, the in-app scanner reads the code from it.
+ const qr=useMemo(()=>{if(!code)return '';const q=qrcode(0,'M');q.addData(joinLink(code));q.make();return q.createDataURL(5,2)},[code]);
  const copy=(k:string,v:string)=>{try{navigator.clipboard?.writeText(v)}catch{/* clipboard unavailable */}setCopied(k);setTimeout(()=>setCopied(''),1500)};
  return <div className="lg-card lg-invite">
   <h3><QrCode size={16}/>{t.invite}</h3>
@@ -263,12 +262,13 @@ function MyResults({lang,items}:{lang:Lang;items:Assignment[]|null}){
 
 type Oral={asked:number[];marks:Record<string,Record<string,'y'|'p'|'n'>>};
 
-function TeacherTopic({lang,groupId,code,topicId,row,test,members,onChanged}:{lang:Lang;groupId:string;code:string;topicId:string;row:TopicRow|null;test:Assignment|null;members:BookMember[];onChanged:()=>void}){
+function TeacherTopic({lang,groupId,code,user,topicId,row,topics,test,members,onChanged}:{lang:Lang;groupId:string;code:string;user:AuthUser;topicId:string;row:TopicRow|null;topics:TopicRow[]|null;test:Assignment|null;members:BookMember[];onChanged:()=>void}){
  const t=words[lang];
  const topic=useTopic(topicId);
  const meta=topicMeta(topicId);
  const [show,setShow]=useState(false);
  const [err,setErr]=useState('');
+ const [testErr,setTestErr]=useState('');
  const [busy,setBusy]=useState(false);
  const okey=`de_oral:${groupId}:${topicId}`;
  const [oral,setOral]=useState<Oral>(()=>lsGet(okey,{asked:[],marks:{}}));
@@ -279,7 +279,7 @@ function TeacherTopic({lang,groupId,code,topicId,row,test,members,onChanged}:{la
   setErr('');setBusy(true);
   const r=await callApi('/classroom/topics','POST',{groupId,topicId,action,...extra});
   setBusy(false);
-  if(!r.ok)setErr(r.data.error==='not_open'?t.needOpen:t.errGeneric);
+  if(!r.ok){if(action==='test')setTestErr(r.data.error||'other');else setErr(r.data.error==='not_open'?t.needOpen:t.errGeneric)}else setTestErr('');
   onChanged();return r.ok;
  };
  const saveOral=(o:Oral)=>{setOral(o);lsSet(okey,o)};
@@ -308,8 +308,8 @@ function TeacherTopic({lang,groupId,code,topicId,row,test,members,onChanged}:{la
     <DoneToggle t={t} done={!!row?.oralDoneAt} disabled={!isOpen||busy} onSet={d=>act('oral',{done:d})}/>
    </Stage>
    <Stage n={3} t={t} title={t.test} done={!!test&&test.status==='closed'} hint={test?'':t.testHint}>
-    {test?<TestRunning lang={lang} groupId={groupId} code={code} topic={topic} test={test} members={members} label={label} onFinish={()=>setAsking(true)} onChanged={onChanged}/>
-    :<TestSetup lang={lang} groupId={groupId} topic={topic} disabled={!isOpen||busy} onStart={(questions,minutes,reveal)=>{bigFor={id:topic.id,until:Date.now()+20000};act('test',{questions,minutes,reveal,title:tx(topic.title,lang)})}}/>}
+    {test?<TestRunning lang={lang} groupId={groupId} code={code} user={user} topic={topic} test={test} members={members} label={label} onFinish={()=>setAsking(true)} onChanged={onChanged}/>
+    :<TestSetup lang={lang} groupId={groupId} topic={topic} topics={topics} disabled={!isOpen||busy} error={testErr} onStart={p=>{bigFor={id:topic.id,until:Date.now()+20000};act('test',{...p,title:tx(topic.title,lang)})}}/>}
    </Stage>
    {asking&&<ConfirmSheet text={t.confirmFinish} ok={t.finishTest} cancel={t.cancel} onOk={async()=>{setAsking(false);await act('finish')}} onCancel={()=>setAsking(false)}/>}
    {show&&<Slides title={tx(topic.title,lang)} eyebrow={tx(subject.title,lang)} slides={topic.slides} sources={topic.sources} lang={lang} accent={subjectColor(subject.id).c} teacher onClose={()=>setShow(false)}/>}
@@ -345,61 +345,155 @@ function useKey(groupId:string,topicId:string){
 
 let bigFor:{id:string;until:number}|null=null;
 
-function TestSetup({lang,groupId,topic,disabled,onStart}:{lang:Lang;groupId:string;topic:Topic;disabled:boolean;onStart:(q:number[],m:number,r:Reveal)=>void}){
- const t=words[lang],x=more[lang];
- const [reveal,setReveal]=useState<Reveal>('closed');
+const setupWords={
+ uz:{count:'Savollar soni',variant:'Har bir talabaga boshqa savollar',variantOn:(pool:number,n:number)=>`Har bir talaba ${pool} ta savollik hovuzdan o‘ziga xos ${n} ta savol oladi. Kim qaysi savolni olgani natijalarda ko‘rinadi.`,
+  variantNo:(need:number,pool:number,max:number,extra:boolean)=>`Variantlar uchun savollar hovuzi kamida ${need} ta bo‘lishi kerak (savollar sonining 2 barobari), bu mavzuda esa ${pool} ta. Savollar sonini ${max} tagacha kamaytiring${extra?' yoki o‘tilgan mavzular savollarini qo‘shing':''}.`,
+  extra:(k:number,q:number)=>`O‘tilgan mavzular savollarini ham qo‘shish (${k} ta mavzu, +${q} savol)`,extraHint:'Har bir talabaning savollarining yarmi shu mavzudan, qolgani shu guruhda ochilgan boshqa mavzulardan.',
+  time:'Vaqt chegarasi',noTime:'Vaqt chegarasi yo‘q',deadline:'Topshirish muddati (ixtiyoriy)',deadlineHint:'Muddat tugagach test yopiladi. Vaqt chegarasi bo‘lmasa, talaba muddat sanasini ko‘radi, oxirgi bir soatda esa teskari sanoq.',
+  badDeadline:'Muddat kelajakda (kamida 1 daqiqadan keyin) bo‘lsin.',picked:(n:number)=>`${n} ta savol tanlandi`,
+  err:{variant_pool_small:'Savollar hovuzi kichik — savollar sonini kamaytiring.',bad_deadline:'Muddat kelajakda (bir yil ichida) bo‘lsin.',reveal_needs_deadline:'«Muddat tugagach» uchun muddatni belgilang.',bad_minutes:'Vaqt 1–180 daqiqa bo‘lsin.',bad_questions:'Savollarni tekshiring.',test_exists:'Bu mavzuda test allaqachon boshlangan.'}},
+ ru:{count:'Количество вопросов',variant:'Каждому студенту свои вопросы',variantOn:(pool:number,n:number)=>`Каждый студент получает свои ${n} вопросов из банка в ${pool}. Кому какие достались — видно в результатах.`,
+  variantNo:(need:number,pool:number,max:number,extra:boolean)=>`Для вариантов в банке нужно не меньше ${need} вопросов (вдвое больше, чем в тесте), а в этой теме ${pool}. Уменьшите число вопросов до ${max}${extra?' или добавьте вопросы пройденных тем':''}.`,
+  extra:(k:number,q:number)=>`Добавить вопросы пройденных тем (${k} тем, +${q} вопросов)`,extraHint:'Половина вопросов каждого студента — из этой темы, остальные — из других тем, открытых в этой группе.',
+  time:'Ограничение времени',noTime:'Без ограничения времени',deadline:'Срок сдачи (необязательно)',deadlineHint:'После срока тест закрывается. Без ограничения времени студент видит дату срока, а в последний час — обратный отсчёт.',
+  badDeadline:'Срок должен быть в будущем (хотя бы через минуту).',picked:(n:number)=>`Выбрано вопросов: ${n}`,
+  err:{variant_pool_small:'Банк вопросов мал — уменьшите число вопросов.',bad_deadline:'Срок должен быть в будущем (в пределах года).',reveal_needs_deadline:'Для «после срока» укажите срок.',bad_minutes:'Время — от 1 до 180 минут.',bad_questions:'Проверьте вопросы.',test_exists:'Тест по этой теме уже начат.'}},
+ en:{count:'Number of questions',variant:'Different questions for each student',variantOn:(pool:number,n:number)=>`Each student gets their own ${n} questions from a pool of ${pool}. The results show who got which question.`,
+  variantNo:(need:number,pool:number,max:number,extra:boolean)=>`Variants need a pool of at least ${need} questions (twice the test length); this topic has ${pool}. Lower the number of questions to ${max}${extra?' or add questions from topics already covered':''}.`,
+  extra:(k:number,q:number)=>`Add questions from topics already covered (${k} topics, +${q} questions)`,extraHint:'Half of each student’s questions come from this topic, the rest from the other topics opened in this group.',
+  time:'Time limit',noTime:'No time limit',deadline:'Deadline (optional)',deadlineHint:'The test closes at the deadline. Without a time limit students see the date, and a countdown in the last hour.',
+  badDeadline:'The deadline must be in the future (at least a minute ahead).',picked:(n:number)=>`${n} questions chosen`,
+  err:{variant_pool_small:'The question pool is too small — lower the number of questions.',bad_deadline:'The deadline must be in the future (within a year).',reveal_needs_deadline:'Set a deadline for “after the deadline”.',bad_minutes:'Time must be 1–180 minutes.',bad_questions:'Check the questions.',test_exists:'A test for this topic has already started.'}}
+};
+export type TestPayload={questions?:number[];variant?:{count:number;extra:boolean};minutes:number|null;deadline?:string;reveal:Reveal};
+const pad=(n:number)=>String(n).padStart(2,'0');
+const localInput=(d:Date)=>`${d.getFullYear()}-${pad(d.getMonth()+1)}-${pad(d.getDate())}T${pad(d.getHours())}:${pad(d.getMinutes())}`;
+
+/** Topic test settings: how many questions (or which), per-student variants, time limit, deadline, when answers show. */
+function TestSetup({lang,groupId,topic,topics,disabled,error,onStart}:{lang:Lang;groupId:string;topic:Topic;topics:TopicRow[]|null;disabled:boolean;error?:string;onStart:(p:TestPayload)=>void}){
+ const t=words[lang],x=more[lang],w=setupWords[lang];
+ const total=topic.test.length;
  const key=useKey(groupId,topic.id);
+ const [count,setCount]=useState(total);
  const [pick,setPick]=useState<number[]>(()=>topic.test.map((_,k)=>k));
- const [minutes,setMinutes]=useState(Math.max(5,topic.test.length*2));
+ const [variant,setVariant]=useState(false);
+ const [extra,setExtra]=useState(false);
+ const [timed,setTimed]=useState(true);
+ const [minutes,setMinutes]=useState(Math.max(5,total*2));
+ const [deadline,setDeadline]=useState('');
+ const [reveal,setReveal]=useState<Reveal>('closed');
+ // Other topics of the same subject this group has opened, newest first — the server builds the pool the same way.
+ const prefix=topic.id.slice(0,topic.id.lastIndexOf('-')+1);
+ const others=(topics||[]).filter(r=>r.topicId!==topic.id&&r.topicId.startsWith(prefix)&&topicMeta(r.topicId)).sort((a,b)=>b.openedAt.localeCompare(a.openedAt)||a.topicId.localeCompare(b.topicId));
+ const extraTopics:string[]=[];let extraQ=0;
+ for(const r of others){const n=topicMeta(r.topicId)?.tests||10;if(total+extraQ+n>VARIANT_POOL_MAX)break;extraTopics.push(r.topicId);extraQ+=n}
+ const pool=total+(extra?extraQ:0);
+ const max=maxVariantCount(pool);
+ const canVariant=variantAllowed(pool,count);
+ const due=deadline?new Date(deadline):null;
+ const dueBad=!!due&&!(due.getTime()>Date.now()+60_000);
+ useEffect(()=>{if(!deadline&&reveal==='deadline')setReveal('closed')},[deadline,reveal]);
+ const setN=(n:number)=>{const v=Math.max(1,Math.min(variant?max:total,n||1));setCount(v);if(!variant)setPick(topic.test.map((_,k)=>k).slice(0,v))};
+ const start=()=>onStart({...(variant?{variant:{count,extra}}:{questions:pick}),minutes:timed?minutes:null,deadline:due?due.toISOString():undefined,reveal});
  return <>
-  <ol className="lg-qpick">{topic.test.map((q,k)=><li key={k}><label className="lg-check"><input type="checkbox" checked={pick.includes(k)} onChange={e=>setPick(e.target.checked?[...pick,k].sort((a,b)=>a-b):pick.filter(x=>x!==k))}/><b>{tx(q.q,lang)}</b></label>
-   <ul>{q.options.map((o,j)=><li key={j} className={key?.[k]===j?'right':''}>{tx(o,lang)}</li>)}</ul></li>)}</ol>
-  <div className="cr-form lg-inline"><label>{t.minutes}<input type="number" min={1} max={180} value={minutes} onChange={e=>setMinutes(Math.max(1,Math.min(180,Number(e.target.value)||1)))}/></label>
-   <RevealPick x={x} value={reveal} onChange={setReveal}/>
-   <button className="button" disabled={disabled||!pick.length} onClick={()=>onStart(pick,minutes,reveal)}><Timer size={16}/>{t.startTest} · {pick.length}</button></div>
+  <div className="cr-form lg-setup">
+   <label>{w.count}<input type="number" inputMode="numeric" min={1} max={variant?max:total} value={variant?count:pick.length} onChange={e=>setN(Number(e.target.value))}/></label>
+   <label className="lg-check"><input type="checkbox" checked={variant} disabled={!variant&&!canVariant} onChange={e=>{setVariant(e.target.checked);if(!e.target.checked)setPick(topic.test.map((_,k)=>k).slice(0,count))}}/><span><b>{w.variant}</b>
+    <small className="lg-small muted">{variant||canVariant?w.variantOn(pool,count):w.variantNo(count*2,pool,maxVariantCount(pool),extraTopics.length>0&&!extra)}</small></span></label>
+   {extraTopics.length>0&&<label className="lg-check"><input type="checkbox" checked={extra} onChange={e=>{setExtra(e.target.checked);if(!e.target.checked&&variant&&count>maxVariantCount(total)){setCount(maxVariantCount(total))}}}/><span>{w.extra(extraTopics.length,extraQ)}<small className="lg-small muted">{w.extraHint} {extraTopics.map(id=>tx(topicMeta(id)?.title,lang)).join(' · ')}</small></span></label>}
+  </div>
+  {!variant&&<><p className="lg-small muted">{w.picked(pick.length)}</p><ol className="lg-qpick">{topic.test.map((q,k)=><li key={k}><label className="lg-check"><input type="checkbox" checked={pick.includes(k)} onChange={e=>{const p=e.target.checked?[...pick,k].sort((a,b)=>a-b):pick.filter(x=>x!==k);setPick(p);setCount(Math.max(1,p.length))}}/><b>{tx(q.q,lang)}</b></label>
+   <ul>{q.options.map((o,j)=><li key={j} className={key?.[k]===j?'right':''}>{tx(o,lang)}</li>)}</ul></li>)}</ol></>}
+  <div className="cr-form lg-setup">
+   <div className="lg-inline"><label>{w.time} ({t.timeLimit})<input type="number" inputMode="numeric" min={1} max={180} value={minutes} disabled={!timed} onChange={e=>setMinutes(Math.max(1,Math.min(180,Number(e.target.value)||1)))}/></label>
+    <label className="lg-check"><input type="checkbox" checked={!timed} onChange={e=>setTimed(!e.target.checked)}/>{w.noTime}</label></div>
+   <label>{w.deadline}<input type="datetime-local" value={deadline} min={localInput(new Date(Date.now()+120_000))} aria-invalid={dueBad||undefined} aria-describedby="lg-due-hint" onChange={e=>setDeadline(e.target.value)}/><small id="lg-due-hint" className="cr-help">{dueBad?w.badDeadline:w.deadlineHint}</small></label>
+   <RevealPick x={x} value={reveal} deadline={!!due&&!dueBad} onChange={setReveal}/>
+   {error&&<p className="cr-error" role="alert">{error in w.err?w.err[error as keyof typeof w.err]:t.errGeneric}</p>}
+   <button className="button" disabled={disabled||dueBad||(variant?!canVariant:!pick.length)} onClick={start}><Timer size={16}/>{t.startTest} · {variant?count:pick.length}</button>
+  </div>
  </>;
 }
 
-function TestRunning({lang,groupId,code,topic,test,members,label,onFinish,onChanged}:{lang:Lang;groupId:string;code:string;topic:Topic;test:Assignment;members:BookMember[];label:(m:BookMember)=>string;onFinish:()=>void;onChanged:()=>void}){
- const t=words[lang];
- const key=useKey(groupId,topic.id);
- const [res,setRes]=useState<Member[]|null>(null);
- const [showRes,setShowRes]=useState(false);
+type Live=Member&{startedAt?:string|null;answered?:number;questions?:string[]};
+const liveState=(m:Live)=>m.answer==='done'?2:m.answer==='started'?1:0;
+
+/** The running (or finished) topic test on the teacher's phone: one QR for everyone, every student as a live row
+ * (joined → answering → submitted with the score), the big screen, a student preview and the per-question results. */
+function TestRunning({lang,groupId,code,user,topic,test,members,label,onFinish,onChanged}:{lang:Lang;groupId:string;code:string;user:AuthUser|null;topic:Topic;test:Assignment;members:BookMember[];label:(m:BookMember)=>string;onFinish:()=>void;onChanged:()=>void}){
+ const t=words[lang],r=runWords[lang];
+ const [res,setRes]=useState<Live[]|null>(null);
+ const [stats,setStats]=useState<{right:number;answered:number}[]|null>(null);
+ const [qText,setQText]=useState<string[]|null>(null);
+ const [preview,setPreview]=useState(false);
  // Starting a topic test goes straight to the big screen (QR + live results); reopening the topic later does not.
  const [big,setBig]=useState(()=>!!bigFor&&bigFor.id===topic.id&&Date.now()<bigFor.until);
  useEffect(()=>{if(big)bigFor=null},[big]);
- useEffect(()=>{if(showRes)callApi<{members:Member[]}>(`/classroom/assignments?groupId=${groupId}&assignmentId=${test.id}`).then(r=>{if(r.ok)setRes(r.data.members)})},[showRes,groupId,test.id,test.submitted]);
- const qs=test.questions||[];
- const done=(res||[]).filter(m=>m.answer==='done');
+ const over=test.status==='closed'||!!test.ended;
+ const load=useCallback(async()=>{const x=await callApi<{members:Live[];stats?:{right:number;answered:number}[]}>(`/classroom/assignments?groupId=${groupId}&assignmentId=${test.id}`);if(x.ok){setRes(x.data.members);setStats(x.data.stats||null)}},[groupId,test.id]);
+ useEffect(()=>{load()},[load,test.status,test.submitted]);
+ // Live rows every 5 s while the test runs and the app is in front.
+ useEffect(()=>{if(over||big||preview)return;const id=setInterval(()=>{if(document.visibilityState==='visible')load()},5000);return ()=>clearInterval(id)},[over,big,preview,load]);
+ useEffect(()=>{if(!stats||!test.items)return;let live=true;refItems(test.items,lang).then(it=>{if(live&&it)setQText(it.map(q=>q.q))});return ()=>{live=false}},[stats,test.items,lang]);
  const byNo=new Map(members.map(m=>[m.no,m]));
+ const rows=[...(res||[])].sort((a,b)=>liveState(b)-liveState(a)||(b.score??-1)-(a.score??-1)||a.no-b.no);
+ const done=rows.filter(m=>m.answer==='done').length;
+ const n=test.questionCount??test.questions?.length??0;
+ const info=[t.qCount(n),test.minutes?`${test.minutes} ${t.timeLimit}`:r.noLimit,test.deadlineAt?fmtDue(test.deadlineAt,lang):'',test.variant?r.variant(test.items?.length||0):''].filter(Boolean).join(' · ');
  return <>
-  <div className="lg-mine"><div><b>{test.submitted??0}/{members.length}</b> <small>{t.submitted}</small></div><span className={'lg-tag '+(test.status==='open'?'warn':'brand')}>{test.status==='open'?t.st.testing:t.st.done}</span>
-   <div className="lg-bar"><i style={{width:`${members.length?(test.submitted??0)/members.length*100:0}%`}}/></div></div>
-  <p className="muted">{t.qCount(qs.length)} · {test.minutes} {t.timeLimit}</p>
-  {code&&<button className="button lg-big" onClick={()=>setBig(true)}><Tv size={18}/>{more[lang].big}</button>}
-  {big&&<Big lang={lang} groupId={groupId} code={code} test={{id:test.id,title:test.title,topicId:topic.id}} onClose={()=>{setBig(false);onChanged()}}/>}
-  <div className="cr-actions"><button className="button secondary" onClick={()=>setShowRes(!showRes)}><BarChart3 size={16}/>{t.results}</button>{test.status==='open'&&<button className="button" onClick={onFinish}>{t.finishTest}</button>}</div>
-  {showRes&&(res===null?<p className="muted">…</p>:<>
-   <div className="lg-list">{[...res].sort((a,b)=>(b.score??-1)-(a.score??-1)).map(m=>{const bm=byNo.get(m.no);return <div key={m.no} className="lg-row static"><span className="lg-row-text"><strong>{bm?label(bm):m.nickname||`${t.student} ${nn(m.no)}`}</strong><small>{m.answer==='done'?`${m.score}/${m.total}`:m.answer==='started'?t.st.testing:t.notYet}</small></span>{m.answer==='done'&&m.total?<span className="lg-tag brand">{Math.round((m.score||0)/m.total*100)}%</span>:null}</div>})}</div>
-   {done.length>0&&key&&<div className="lg-errs"><h3>{t.perQ}</h3>{qs.map((qi,k)=>{const right=done.filter(m=>m.answers?.[k]===key[qi]).length;const pct=Math.round(right/done.length*100);
-    return <div key={k} className={'lg-err '+(pct>=60?'good':'bad')}><span className="lg-err-q"><b>{t.qN(k+1)}</b> {tx(topic.test[qi]?.q,lang)}</span><div className="lg-bar" role="img" aria-label={`${t.rightN(right,done.length)} · ${pct}%`}><i style={{width:Math.max(pct,2)+'%'}}/></div><small>{t.rightN(right,done.length)}</small></div>})}</div>}
-  </>)}
+  <div className="lg-mine"><div><b>{done}/{rows.length||members.length}</b> <small>{t.submitted}</small></div><span className={'lg-tag '+(over?'brand':'warn')}>{over?t.st.done:t.st.testing}</span>
+   <div className="lg-bar"><i style={{width:`${rows.length?done/rows.length*100:0}%`}}/></div></div>
+  <p className="muted">{info}</p>
+  {!over&&code&&<QrCard lang={lang} code={code} testId={test.id}/>}
+  <div className="cr-actions">{code&&<button className="button lg-big" onClick={()=>setBig(true)}><Tv size={18}/>{more[lang].big}</button>}</div>
+  <div className="cr-actions"><button className="button secondary" onClick={()=>setPreview(true)}><Eye size={16}/>{r.preview}</button>{test.status==='open'&&<button className="button" onClick={onFinish}>{t.finishTest}</button>}</div>
+  {big&&<Big lang={lang} groupId={groupId} code={code} test={{id:test.id,title:test.title,topicId:topic.id}} onClose={()=>{setBig(false);onChanged();load()}}/>}
+  {preview&&user&&<PreviewRun lang={lang} a={test as TestMeta} userId={user.id} onExit={()=>setPreview(false)}/>}
+  <h3 className="lg-h">{t.results}</h3>
+  {res===null?<p className="muted">…</p>:!rows.length?<p className="muted">{r.nobody}</p>
+  :<div className="lg-list lg-live" aria-live="polite">{rows.map(m=>{const bm=byNo.get(m.no);const st=liveState(m);const pct=st===2&&m.total?Math.round((m.score||0)/m.total*100):null;
+   return <div key={m.no} className={'lg-row static s'+st}><span className="lg-ico">{nn(m.no)}</span><span className="lg-row-text"><strong>{bm?label(bm):m.nickname||`${t.student} ${nn(m.no)}`}</strong>
+    <small>{st===2?`${r.done} · ${m.score}/${m.total}`:st===1?`${r.solving} · ${m.answered??0}/${m.total||n}`:r.joined}</small></span>
+    {pct!==null?<span className={'lg-tag '+(pct>=60?'brand':'warn')}>{pct}%</span>:st===1?<span className="lg-tag warn">{r.solving}</span>:null}</div>})}</div>}
+  {over&&stats&&stats.some(s=>s.answered)&&<div className="lg-errs"><h3>{t.perQ}</h3>{stats.map((s,k)=>{if(!s.answered)return null;const pct=Math.round(s.right/s.answered*100);
+   return <div key={k} className={'lg-err '+(pct>=60?'good':'bad')}><span className="lg-err-q"><b>{t.qN(k+1)}</b> {qText?.[k]||''}</span><div className="lg-bar" role="img" aria-label={`${t.rightN(s.right,s.answered)} · ${pct}%`}><i style={{width:Math.max(pct,2)+'%'}}/></div><small>{t.rightN(s.right,s.answered)}</small></div>})}</div>}
  </>;
 }
 
-function StudentTopic({lang,topicId,test,onChanged}:{lang:Lang;topicId:string;test:Assignment|null;onChanged:()=>void}){
- const t=words[lang];
+/** One QR for the whole class: the test link (the same for everyone), with the code for typing. */
+function QrCard({lang,code,testId}:{lang:Lang;code:string;testId:string}){
+ const r=runWords[lang];
+ const qr=useMemo(()=>{const q=qrcode(0,'M');q.addData(joinLink(code,testId));q.make();return q.createDataURL(5,2)},[code,testId]);
+ return <div className="lg-card lg-invite lg-qrcard"><h3><QrCode size={16}/>{r.qrTitle}</h3>
+  <div className="lg-invite-body"><img src={qr} alt={`QR: ${code}`} width={200} height={200}/><div><small>{words[lang].code}</small><b translate="no">{code.slice(0,3)} {code.slice(3)}</b><p className="muted">{r.qrHint}</p></div></div></div>;
+}
+
+const runWords={
+ uz:{noLimit:'vaqt cheklanmagan',variant:(p:number)=>`variantli (hovuz ${p})`,preview:'Talaba ko‘rinishida sinash',nobody:'Hali hech kim qo‘shilmadi — talabalar QR’ni skanerlasin.',joined:'Qo‘shildi',solving:'Yechmoqda',done:'Topshirdi',
+  qrTitle:'Talabalar uchun QR',qrHint:'Hamma uchun bitta QR: ilovadagi skaner yoki telefon kamerasi bilan o‘qiladi. Kirmagan talaba avval hisobiga kiradi.'},
+ ru:{noLimit:'без ограничения времени',variant:(p:number)=>`с вариантами (банк ${p})`,preview:'Попробовать как студент',nobody:'Пока никто не подключился — пусть студенты отсканируют QR.',joined:'Подключился',solving:'Решает',done:'Сдал',
+  qrTitle:'QR для студентов',qrHint:'Один QR для всех: сканер в приложении или камера телефона. Студент без входа сначала входит в аккаунт.'},
+ en:{noLimit:'no time limit',variant:(p:number)=>`variants (pool of ${p})`,preview:'Try it as a student',nobody:'Nobody has joined yet — let the students scan the QR.',joined:'Joined',solving:'Answering',done:'Submitted',
+  qrTitle:'QR for students',qrHint:'One QR for everyone: the in-app scanner or the phone camera. A student who is not signed in signs in first.'}
+};
+
+function StudentTopic({lang,user,topicId,test,onChanged}:{lang:Lang;user:AuthUser;topicId:string;test:Assignment|null;onChanged:()=>void}){
+ const t=words[lang],r=runWords[lang];
  const topic=useTopic(topicId);
  const meta=topicMeta(topicId);
  const [show,setShow]=useState(false);
  const [run,setRun]=useState(false);
  const [score,setScore]=useState<[number,number]|null>(null);
  const [err,setErr]=useState('');
+ const [items,setItems]=useState<TestItem[]|null>(null);
+ const mine=test?.mine;
+ const review=mine?.review;
+ useEffect(()=>{if(!review||!test)return;let live=true;loadTestItems(test as TestMeta,lang).then(x=>{if(live)setItems(x)});return ()=>{live=false}},[review,test,lang]);
  if(!meta)return null;
  const subject=subjectOf(meta);
- const mine=test?.mine;
  const finished=mine?.answer==='done'||!!score;
- const qs=topic&&test?.questions?test.questions.map(i=>topic.test[i]).filter(Boolean):[];
+ const n=test?.questionCount??test?.questions?.length??0;
+ const canStart=!!test&&test.status==='open'&&(!test.ended||mine?.answer==='started');
  return <>
   <span className="lg-eyebrow">{tx(subject.title,lang)}</span>
   <h2>{tx(meta.title,lang)}</h2>
@@ -410,18 +504,21 @@ function StudentTopic({lang,topicId,test,onChanged}:{lang:Lang;topicId:string;te
    <div className={'lg-stage'+(finished?' done':'')}><span className="lg-eyebrow">{t.test}</span>
     {!test?<p className="muted">{t.testWait}</p>
     :finished?<><p className="cr-score">{t.result}: {score?score[0]:mine?.score} / {score?score[1]:mine?.total}</p>
-     {mine?.review?<TestReview lang={lang} items={topicItems(topic,test.questions||[],lang)} review={mine.review}/>:<p className="muted">{t.reviewLater}</p>}</>
-    :test.status==='open'?<><p className="muted">{t.qCount(qs.length)} · {test.minutes} {t.timeLimit}</p><button className="button" onClick={()=>{setErr('');setRun(true)}}><Timer size={16}/>{mine?.answer==='started'?testWords[lang].resume:t.start}</button></>
-    :<p className="muted">{t.errClosed}</p>}
+     {review?(items?<TestReview lang={lang} items={items} review={review}/>:<p className="muted">…</p>):<p className="muted">{revealNote(test,lang)}</p>}</>
+    :canStart?<><p className="muted">{[t.qCount(n),test.minutes?`${test.minutes} ${t.timeLimit}`:r.noLimit,test.deadlineAt?fmtDue(test.deadlineAt,lang):''].filter(Boolean).join(' · ')}</p>
+     {test.variant&&<p className="lg-small muted">{studentWords[lang].own}</p>}
+     <button className="button" onClick={()=>{setErr('');setRun(true)}}><Timer size={16}/>{mine?.answer==='started'?testWords[lang].resume:t.start}</button></>
+    :<p className="muted">{test.status==='open'&&test.ended?testError(lang,'past_due'):t.errClosed}</p>}
     {err&&<p className="cr-error" role="alert">{err}</p>}
    </div>
    <h3 className="lg-h">{t.prepare}</h3>
    <OralList lang={lang} topic={topic}/>
    {show&&<Slides title={tx(topic.title,lang)} eyebrow={tx(subject.title,lang)} slides={topic.slides} sources={topic.sources} lang={lang} accent={subjectColor(subject.id).c} onClose={()=>setShow(false)}/>}
-   {run&&test&&<TestRun lang={lang} a={test} onExit={()=>{setRun(false);onChanged()}} onError={e=>{setRun(false);setErr(testError(lang,e));onChanged()}} onSubmitted={(s,n)=>setScore([s,n])}/>}
+   {run&&test&&<TestRun lang={lang} a={test as TestMeta} userId={user.id} onExit={()=>{setRun(false);onChanged()}} onError={e=>{setRun(false);setErr(testError(lang,e));onChanged()}} onSubmitted={(s,n)=>setScore([s,n])}/>}
   </>}
  </>;
 }
+const studentWords={uz:{own:'Har bir talabaga o‘z savollari tushadi.'},ru:{own:'У каждого студента свой набор вопросов.'},en:{own:'Every student gets their own set of questions.'}};
 
 function Gradebook({lang,groupId,book}:{lang:Lang;groupId:string;book:Book|null}){
  const t=words[lang];
@@ -454,8 +551,8 @@ function People({lang,groupId,members,onChanged}:{lang:Lang;groupId:string;membe
 }
 
 /** Whether students see the right answers straight after submitting or only once the teacher finishes the test. */
-function RevealPick({x,value,onChange}:{x:typeof more.uz;value:Reveal;onChange:(r:Reveal)=>void}){
- return <><label>{x.reveal}<select value={value} onChange={e=>onChange(e.target.value as Reveal)}><option value="closed">{x.revealClosed}</option><option value="instant">{x.revealInstant}</option></select></label>{value==='instant'&&<small className="muted lg-small" role="note">{x.revealWarn}</small>}</>;
+function RevealPick({x,value,deadline,onChange}:{x:typeof more.uz;value:Reveal;deadline?:boolean;onChange:(r:Reveal)=>void}){
+ return <><label>{x.reveal}<select value={value} onChange={e=>onChange(e.target.value as Reveal)}><option value="closed">{x.revealClosed}</option>{deadline&&<option value="deadline">{x.revealDeadline}</option>}<option value="instant">{x.revealInstant}</option></select></label>{value==='instant'&&<small className="muted lg-small" role="note">{x.revealWarn}</small>}</>;
 }
 
 function NewAssignment({lang,groupId,decks,onDone,onCancel}:{lang:Lang;groupId:string;decks:Deck[];onDone:()=>void;onCancel:()=>void}){
@@ -484,7 +581,7 @@ function NewAssignment({lang,groupId,decks,onDone,onCancel}:{lang:Lang;groupId:s
  </div>;
 }
 
-function AssignmentView({lang,groupId,code,a,teacher,roster,decks,onChanged,onDeleted}:{lang:Lang;groupId:string;code:string;a:Assignment;teacher:boolean;roster:Member[]|null;decks:Deck[];onChanged:()=>void;onDeleted:()=>void}){
+function AssignmentView({lang,groupId,code,user,a,teacher,roster,decks,onChanged,onDeleted}:{lang:Lang;groupId:string;code:string;user:AuthUser;a:Assignment;teacher:boolean;roster:Member[]|null;decks:Deck[];onChanged:()=>void;onDeleted:()=>void}){
  const t=words[lang];
  const [answer,setAnswer]=useState(a.mine?.answer||'');
  const [done,setDone]=useState(!!a.mine);
@@ -519,7 +616,7 @@ function AssignmentView({lang,groupId,code,a,teacher,roster,decks,onChanged,onDe
    {a.status==='closed'&&!score&&<p className="muted">{t.errClosed}</p>}
    {!score&&<button className="button" disabled={!deck||a.status==='closed'} onClick={()=>{setErr('');setRun(true)}}>{a.mine?.answer==='started'?testWords[lang].resume:t.start}</button>}
    {err&&<p className="cr-error" role="alert">{err}</p>}
-   {run&&<TestRun lang={lang} a={a} onExit={()=>{setRun(false);onChanged()}} onError={e=>{setRun(false);setErr(testError(lang,e));onChanged()}} onSubmitted={(s,n)=>{setScore([s,n]);setDone(true)}}/>}
+   {run&&<TestRun lang={lang} a={a as TestMeta} userId={user.id} onExit={()=>{setRun(false);onChanged()}} onError={e=>{setRun(false);setErr(testError(lang,e));onChanged()}} onSubmitted={(s,n)=>{setScore([s,n]);setDone(true)}}/>}
   </>}
  </>;
 }

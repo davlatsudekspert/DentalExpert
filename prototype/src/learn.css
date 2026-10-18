@@ -362,3 +362,23 @@ button.cr-back{min-height:44px;padding:10px 14px 10px 0;margin:-6px 0}
 /* Teacher: big screen entry and removing a student from the roster. */
 .lg-big{align-self:stretch;width:100%;min-height:56px;margin-top:2px;font-size:15px;font-weight:800;letter-spacing:.01em}
 .lg-remove{flex:none;align-self:center;display:grid;place-items:center;width:44px;height:44px;border-radius:14px;background:var(--lg-red-bg);color:var(--lg-red)}
+/* Teacher–student test v2: settings, live rows, sign-in and teacher panels in the join sheet. */
+.lg-setup label.lg-check>span{display:flex;flex-direction:column;gap:3px;line-height:1.4}
+.lg-setup label.lg-check>span small{font-weight:500}
+.lg-setup .lg-inline .lg-check{flex:0 1 auto;min-width:0;padding-bottom:10px}
+.lg-setup input[aria-invalid]{border-color:var(--lg-red)}
+.lg-live .lg-row{transition:background .3s}
+.lg-live .lg-row.s1 .lg-ico{background:var(--lg-amber-bg);color:var(--lg-amber)}
+.lg-live .lg-row.s2 .lg-ico{background:var(--lg-soft);color:#0f6f6d}
+:root[data-theme="mono"] .lg-live .lg-row.s2 .lg-ico{color:#171716}
+.quiz-run-due{font-style:normal;font-weight:700;white-space:nowrap}
+.qj-signin{align-items:stretch;text-align:center}
+.qj-signin .qj-badge{align-self:center}
+.qj-signin .qj-h{margin:4px 0 0}
+.qj-owner .qj-help{max-width:340px;margin-top:-4px}
+.qj-owner .auth-link{background:none;border:0;padding:10px;color:var(--qj-sub);font-weight:700;text-decoration:underline;cursor:pointer}
+.cr-form .lg-check input[type=checkbox]{width:20px;height:20px;padding:0;margin:0;flex:none}
+.lg-setup label.lg-check{color:inherit;font-size:13px}
+.lg-qrcard .lg-invite-body{flex-direction:column;align-items:center;text-align:center;gap:10px}
+.lg-qrcard .lg-invite-body img{width:min(200px,60vw);height:auto;image-rendering:pixelated}
+.lg-qrcard .lg-invite-body b{white-space:nowrap}

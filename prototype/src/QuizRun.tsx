@@ -11,10 +11,11 @@ const words={
 };
 
 /** One-question-at-a-time quiz sheet. Calls onDone(score,total) once, when the learner finishes the last question. */
-/** `deadline` (epoch ms) adds a countdown and finishes the run automatically, unanswered questions as -1; `result` replaces the local score screen (server-scored tests). */
+/** `deadline` (epoch ms) adds a countdown and finishes the run automatically, unanswered questions as -1; `result` replaces the local score screen (server-scored tests).
+ *  With `clockFrom` (seconds) the countdown only appears once that little time is left; until then `dueLabel` (e.g. "Muddat: 20-okt, 18:00") is shown. */
 /** Resumable server tests: `initial` (saved answers, original option indices) starts at the first unanswered question, `onAnswer` gets every change,
  *  `canBack` adds Back and lets the student change an answer (only without `reveal`); `finishLabel`/`leaveText`/`doneLabel` reword the last button, the leave sheet and the result button. */
-export default function QuizRun({title,questions,lang,reveal=true,deadline,result,initial,onAnswer,canBack=false,finishLabel,leaveText,doneLabel,onDone,onClose}:{title:string;questions:RunQ[];lang:Lang;reveal?:boolean;deadline?:number;result?:ReactNode;
+export default function QuizRun({title,questions,lang,reveal=true,deadline,clockFrom,dueLabel,result,initial,onAnswer,canBack=false,finishLabel,leaveText,doneLabel,onDone,onClose}:{title:string;questions:RunQ[];lang:Lang;reveal?:boolean;deadline?:number;clockFrom?:number;dueLabel?:string;result?:ReactNode;
  initial?:(number|null)[];onAnswer?:(answers:(number|null)[])=>void;canBack?:boolean;finishLabel?:string;leaveText?:string;doneLabel?:string;onDone?:(score:number,total:number,answers:number[])=>void;onClose:()=>void}){
  const t=words[lang];
  const nav=canBack&&!reveal;
@@ -48,7 +49,7 @@ export default function QuizRun({title,questions,lang,reveal=true,deadline,resul
  const ok=picked!==null&&picked===q?.correct;
  const answered=given.filter(x=>x!==null).length;
  return <div className="quiz-run" role="dialog" aria-modal="true" aria-label={title}>
-  <div className="quiz-run-bar"><strong>{title}</strong><span className="qr-count">{finished?t.score:`${i+1} / ${questions.length}`}{deadline&&!finished?<em className={'quiz-run-timer'+(left<60?' low':'')}> · {Math.floor(left/60)}:{String(left%60).padStart(2,'0')}</em>:null}</span><button data-close onClick={tryClose} aria-label={t.close}><X size={20}/></button></div>
+  <div className="quiz-run-bar"><strong>{title}</strong><span className="qr-count">{finished?t.score:`${i+1} / ${questions.length}`}{deadline&&!finished?(clockFrom===undefined||left<=clockFrom?<em className={'quiz-run-timer'+(left<60?' low':'')}> · {Math.floor(left/60)}:{String(left%60).padStart(2,'0')}</em>:dueLabel?<em className="quiz-run-due"> · {dueLabel}</em>:null):null}</span><button data-close onClick={tryClose} aria-label={t.close}><X size={20}/></button></div>
   {finished?<div className="quiz-run-body quiz-run-result">{result??<>
     <div className="qr-ring" style={{['--p' as string]:pct}}><div><b>{score} / {questions.length}</b><small>{pct}%</small></div></div>
     <h3 className="qr-verdict"><Sparkles size={18}/>{pct>=80?t.great:pct>=60?t.good:t.more}</h3><p>{score} {t.correct}</p></>}

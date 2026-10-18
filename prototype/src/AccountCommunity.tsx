@@ -18,21 +18,21 @@ const PRIVACY:Record<Lang,{lead:string;full:string;items:[string,string][]}>={
   ['Hisob','Email, ism, rol va (xohlasangiz) telefon, ish joyi va tavsif serverda saqlanadi. Kirish email kodi, Google yoki Apple orqali.'],
   ['Profil rasmi','Ixtiyoriy. Rasm serverimizda saqlanadi va bemorlarga faqat stomatolog profilini e’lon qilganda (ilova egasi tasdiqlagach) ko‘rsatiladi. «O‘chirish» tugmasi yoki hisobni o‘chirish uni o‘chiradi.'],
   ['Guruhlar','Guruhga qo‘shilsangiz, taxallusingiz va javoblaringiz ustozga ko‘rinadi. Email va ismingiz ko‘rinmaydi. Guruhdan chiqsangiz javoblaringiz o‘chadi.'],
-  ['Tezkor hisob (QR test)','QR orqali kirmasdan qo‘shilsangiz, shu qurilma uchun faqat sinf hisobi ochiladi: email va parolsiz, faqat taxallus va test natijalari. Kalit qurilmaning xavfsiz xotirasida saqlanadi. 180 kun ishlatilmasa o‘chadi; keyin email, Google yoki Apple orqali kirsangiz natijalar saqlanadi.'],
+  ['QR orqali sinf testi','QR testlar faqat hisobga kirgan foydalanuvchi uchun: kirmagan bo‘lsangiz, ilova avval kirishni so‘raydi. Ustoz faqat taxallusingiz va natijangizni ko‘radi. Oldingi tezkor (emailsiz) hisoblar endi yaratilmaydi; bor hisob bilan kirsangiz, uning natijalari sizning hisobingizga o‘tadi.'],
   ['Bemorlar ro‘yxati va kunlik mashqlar','Stomatolog qo‘shgan bemorlar va kunlik mashq natijalari faqat shu qurilmada saqlanadi, serverga yuborilmaydi.'],
   ['Hisobni o‘chirish','Sozlamalar → Hisobni o‘chirish: hisob, sessiyalar, guruhlar va javoblar o‘chiriladi, shu qurilmadagi ma’lumotlar ham tozalanadi.']]},
  ru:{lead:'Dental Expert хранит ваши данные только для работы приложения и не использует их для рекламы.',full:'Полная политика конфиденциальности',items:[
   ['Аккаунт','На сервере хранятся email, имя, роль и (по желанию) телефон, место работы и описание. Вход по коду из email, через Google или Apple.'],
   ['Фото профиля','Необязательно. Фото хранится на нашем сервере и показывается пациентам, только если стоматолог опубликует профиль (после проверки владельцем приложения). Удаляется кнопкой «Удалить» или вместе с аккаунтом.'],
   ['Группы','Если вы вступаете в группу, преподаватель видит ваш псевдоним и ответы, но не email и не имя. При выходе из группы ответы удаляются.'],
-  ['Быстрый аккаунт (тест по QR)','Если вы вступаете по QR без входа, для этого устройства создаётся аккаунт только для занятий: без email и пароля, только ник и результаты тестов. Ключ хранится в защищённом хранилище устройства. Удаляется через 180 дней без использования; если позже войти через email, Google или Apple, результаты сохранятся.'],
+  ['Тест в группе по QR','Тесты по QR — только после входа в аккаунт: если вы не вошли, приложение сначала попросит войти. Преподаватель видит только ваш псевдоним и результат. Прежние быстрые аккаунты без email больше не создаются; при входе их результаты переходят в ваш аккаунт.'],
   ['Список пациентов и ежедневные задания','Пациенты, добавленные стоматологом, и результаты заданий хранятся только на этом устройстве и не отправляются на сервер.'],
   ['Удаление аккаунта','Настройки → Удалить аккаунт: удаляются аккаунт, сессии, группы и ответы, а также данные на этом устройстве.']]},
  en:{lead:'Dental Expert stores your data only to run the app and never uses it for advertising.',full:'Full privacy policy',items:[
   ['Account','Email, name, role and (optionally) phone, workplace and bio are stored on our server. You sign in with an email code, Google or Apple.'],
   ['Profile photo','Optional. The photo is stored on our server and shown to patients only if the dentist publishes their profile (after the app owner verifies it). “Remove” or deleting the account deletes it.'],
   ['Groups','If you join a group, the teacher sees your nickname and answers, not your email or name. Leaving the group deletes your answers.'],
-  ['Quick account (QR test)','Joining by QR without signing in creates a class-only account for this device: no email or password, just a nickname and test results. Its key is kept in the device’s secure storage. It is deleted after 180 days without use; signing in later with email, Google or Apple keeps your results.'],
+  ['Class tests by QR','QR tests need a signed-in account: if you are not signed in, the app asks you to sign in first. Your teacher sees only your nickname and result. The old quick accounts without an email are no longer created; signing in moves an old one’s results to your account.'],
   ['Patient list and daily practice','Patients a dentist adds and daily-practice results stay on this device and are never sent to a server.'],
   ['Deleting your account','Settings → Delete account removes your account, sessions, groups and answers, and clears the data on this device.']]}
 };

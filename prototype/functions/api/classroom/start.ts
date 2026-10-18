@@ -23,7 +23,7 @@ export const onRequestPost:PagesFunction<Env>=async({request,env})=>{
  const s=await env.DB.prepare(`SELECT answer,progress,questions,started_at,(julianday('now')-julianday(started_at))*1440 AS elapsed FROM class_submissions WHERE assignment_id=? AND user_id=?`)
   .bind(id,user.id).first<{answer:string;progress:string|null;questions:string|null;started_at:string;elapsed:number}>();
  const clock=(startedAt:string)=>{const st=Date.parse(isoOf(startedAt)!);const ends=[as.minutes?st+as.minutes*60000:Infinity,as.deadline_at?Date.parse(isoOf(as.deadline_at)!):Infinity];const e=Math.min(...ends);
-  return {minutes:as.minutes,startedAt:isoOf(startedAt),deadlineAt:isoOf(as.deadline_at),endsAt:Number.isFinite(e)?new Date(e).toISOString():null}};
+  return {now:new Date().toISOString(),minutes:as.minutes,startedAt:isoOf(startedAt),deadlineAt:isoOf(as.deadline_at),endsAt:Number.isFinite(e)?new Date(e).toISOString():null}};
  if(s){
   // The same student coming back (app closed, phone locked) continues the attempt they started: same clock, the same
   // questions, the answers saved so far. A finished attempt or one whose time ran out cannot be reopened.

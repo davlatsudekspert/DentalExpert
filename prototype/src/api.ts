@@ -9,22 +9,23 @@ const url=(path:string)=>API_BASE+path;
 export const mediaUrl=(p?:string|null)=>p?(p.startsWith('/')?url(p):p):undefined;
 
 const TOKEN_KEY='de_token';
-// A class-only guest (QR quick test) keeps its secret in the Keychain / Android Keystore, not in web storage. It is read
-// once at start-up; until then API calls wait for it. Signing in properly replaces it (the server moves the guest's results).
+// Class-only guest accounts (the old QR quick test) are no longer created. A device that still holds an old guest key
+// (Keychain / Android Keystore) reads it once at start-up, so that guest can still see its results and, by signing in,
+// move them to a real account (the server's adoptGuest). The key is never written again; sign-in or sign-out removes it.
 const GUEST_KEY='de_guest';
 let guestToken:string|null=null;
 // Never resolve a promise WITH a Capacitor plugin object: its proxy answers every property, including `then`, so the
 // promise would wait forever (that froze sign-in on iOS). Call the method inside instead and return its result.
 type Secure=typeof import('capacitor-secure-storage-plugin')['SecureStoragePlugin'];
 const secure=async<T,>(f:(s:Secure)=>Promise<T>)=>{const m=await import('capacitor-secure-storage-plugin');return f(m.SecureStoragePlugin)};
-// Reading the key may never block start-up for long: after 1.5 s the app carries on without a guest session.
+// Reading the key may never block start-up for long: after 1.5 s the app carries on without it.
 export const tokenReady:Promise<void>=isNative?Promise.race([secure(s=>s.get({key:GUEST_KEY})).then(r=>{guestToken=r.value||null}).catch(()=>{guestToken=null}),new Promise<void>(r=>setTimeout(r,1500))]):Promise.resolve();
-const setGuest=async(t:string|null)=>{guestToken=t;if(!isNative)return;try{await secure(s=>t?s.set({key:GUEST_KEY,value:t}):s.remove({key:GUEST_KEY}))}catch{/* keychain unavailable */}};
+const dropGuest=async()=>{guestToken=null;if(!isNative)return;try{await secure(s=>s.remove({key:GUEST_KEY}))}catch{/* keychain unavailable */}};
 const getToken=()=>{try{return isNative?localStorage.getItem(TOKEN_KEY)||guestToken:null}catch{return guestToken}};
 const setToken=(t:string|null)=>{try{if(!isNative)return;if(t)localStorage.setItem(TOKEN_KEY,t);else localStorage.removeItem(TOKEN_KEY)}catch{/* storage unavailable */}};
 const authHeaders=():Record<string,string>=>{if(!isNative)return {};const t=getToken();return t?{'x-client':'native',authorization:'Bearer '+t}:{'x-client':'native'}};
-/** A real sign-in or sign-out ends the device's guest session. */
-const signedInAs=(t:string|null)=>{setToken(t);void setGuest(null)};
+/** A real sign-in or sign-out ends the device's old guest session. */
+const signedInAs=(t:string|null)=>{setToken(t);void dropGuest()};
 
 /** Fetch helpers below return null when the API is unreachable (offline demo.html, dev server without Functions) so callers keep the local demo data. */
 type ApiDoctor={id:string;fullName:string;initials?:string|null;specialty:Translated;bio?:Translated|null;languages:string[];services:Translated[];years?:number|null;rating?:number|null;photoUrl?:string|null;isDemo:boolean;clinics:{name:string;address?:Translated|null;cityId:string}[];contacts:{kind:string;value:string}[]};
@@ -123,10 +124,7 @@ export async function ownPhotoSrc(photoUrl:string):Promise<{src:string;revoke?:(
 }
 
 export {SITE,joinLink,parseJoin} from './joinLink';
-export type QuickJoined={group:{id:string;name:string};test:{id:string;title:string;status:string}|null;user?:AuthUser&{guest?:boolean}};
-/** QR quick test: joins the group (signed in), or creates this device's class-only guest with just a nickname. */
-export async function quickJoin(code:string,nickname:string,testId?:string){
- const r=await post<QuickJoined&{token?:string}>('/api/classroom/quick',{code,nickname,assignmentId:testId});
- if(r.ok&&r.data.token)await setGuest(r.data.token);
- return r;
-}
+export type QuickJoined={role:'owner'|'member'|'none';group:{id?:string;name:string};test:{id:string;title:string;status:string;ended?:boolean}|null;nickname?:string|null;joined?:boolean;needNickname?:boolean};
+/** QR join for a signed-in account: tells whether the caller teaches the group, is in it, or still needs a nickname
+ * (then call again with one to join). A signed-out device gets 401 and goes through sign-in first. */
+export const quickJoin=(code:string,nickname:string,testId?:string)=>post<QuickJoined>('/api/classroom/quick',{code,nickname:nickname||undefined,assignmentId:testId});
