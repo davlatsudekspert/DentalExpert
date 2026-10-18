@@ -1516,3 +1516,5 @@
 :root[data-theme="dark"] select option{background:#16283a;color:#e8f1f4}
 :root[data-theme="dark"] .card{background:#111f2e;border-color:#22384b;box-shadow:0 1px 0 #ffffff06 inset,0 8px 24px #00000030}
 
+:root[data-theme="mono"] .admin-bars b{color:#252422}
+:root[data-theme="dark"] .admin-bars b{color:#e6eef2}

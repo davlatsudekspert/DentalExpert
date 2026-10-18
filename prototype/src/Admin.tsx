@@ -32,13 +32,15 @@ export default function Admin({onClose}:{onClose:()=>void}){
 
 function StatsView({s}:{s:Stats}){
  const max=Math.max(1,...s.users.daily.map(d=>d.n));
+ // The server lists only days with sign-ups: lay out all 14 days so one busy day is one bar, not a block across the whole chart.
+ const days=Array.from({length:14},(_,i)=>{const day=new Date(Date.now()-(13-i)*864e5).toISOString().slice(0,10);return {day,n:s.users.daily.find(d=>d.day===day)?.n||0}});
  const card=(n:number|string,l:string)=><div className="admin-card"><b>{n}</b><span>{l}</span></div>;
  return <>
   <div className="admin-grid">{card(s.users.total,'Jami foydalanuvchi')}{card(s.users.last7,'7 kunda yangi')}{card(s.users.last30,'30 kunda yangi')}{card(s.users.activeSessions,'Hozir tizimda (faol sessiya)')}</div>
   <h3>Rollar</h3>
   <div className="admin-grid">{Object.entries(ROLE).map(([k,l])=>card(s.users.byRole[k]||0,l))}</div>
   <h3>Oxirgi 14 kun ro‘yxatdan o‘tish</h3>
-  <div className="admin-bars" aria-label="Kunlik ro‘yxatdan o‘tish">{s.users.daily.map(d=><div key={d.day} title={`${d.day}: ${d.n}`}><i style={{height:`${(d.n/max)*100}%`}}/><small>{d.day.slice(8)}</small></div>)}{s.users.daily.length===0&&<p className="muted">Hali yo‘q</p>}</div>
+  <div className="admin-bars" aria-label="Kunlik ro‘yxatdan o‘tish">{days.map(d=><div key={d.day} title={`${d.day}: ${d.n}`}>{d.n>0&&<b>{d.n}</b>}<i style={{height:`${(d.n/max)*100}%`}}/><small>{d.day.slice(8)}</small></div>)}</div>
   <h3>Sinf xonasi</h3>
   <div className="admin-grid">{card(s.classroom.groups,'Guruhlar')}{card(s.classroom.members,'A’zolar')}{card(s.classroom.assignments,'Topshiriqlar')}{card(s.classroom.submissions,'Javoblar')}</div>
   <h3>Shifokorlar</h3>
