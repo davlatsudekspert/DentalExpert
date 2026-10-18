@@ -60,7 +60,7 @@ export default function BigScreen({lang,groupId,groupCode,test,onClose}:{lang:La
  const [closedAt,setClosedAt]=useState(0);
  const wide=()=>innerWidth>=1000&&innerHeight>=560;
  const [side,setSide]=useState<boolean|null>(null);
- const [askRotate,setAskRotate]=useState(()=>innerHeight>innerWidth);
+ const [askRotate,setAskRotate]=useState(()=>innerHeight>innerWidth&&!rotatePref());
  const [rot,setRot]=useState(false);
  const [fresh,setFresh]=useState<Set<number>>(new Set());
  const [now,setNow]=useState(Date.now());
@@ -123,6 +123,8 @@ export default function BigScreen({lang,groupId,groupCode,test,onClose}:{lang:La
   try{if(Capacitor.isNativePlatform()){await (await import('@capacitor/screen-orientation')).ScreenOrientation.lock({orientation:'landscape'});return}
    const o=screen.orientation as unknown as {lock?:(x:string)=>Promise<void>};if(!o?.lock)throw new Error('no lock');await o.lock('landscape')}catch{setRot(true)}
  };
+ // The teacher already said yes this session: turn the board again without asking.
+ useEffect(()=>{if(innerHeight>innerWidth&&rotatePref()==='yes')void landscape()},[]);// eslint-disable-line react-hooks/exhaustive-deps
 
  const finish=async()=>{setErr('');const r=await callApi('/classroom/assignments','PUT',{assignmentId:test.id,status:'closed'});if(!r.ok){setErr(t.err);return}setAsking(false);setClosedAt(Date.now());setSide(null);load()};
 
@@ -164,7 +166,7 @@ export default function BigScreen({lang,groupId,groupCode,test,onClose}:{lang:La
     </aside>)}
   </main>
   {asking&&<Sheet text={t.confirm} ok={t.finish} cancel={t.cancel} err={err} onOk={finish} onCancel={()=>setAsking(false)}/>}
-  {askRotate&&<Sheet text={t.rotate} hint={t.rotateHint} ok={t.yes} cancel={t.no} onOk={landscape} onCancel={()=>setAskRotate(false)}/>}
+  {askRotate&&<Sheet text={t.rotate} hint={t.rotateHint} ok={t.yes} cancel={t.no} onOk={()=>{setRotatePref('yes');void landscape()}} onCancel={()=>{setRotatePref('no');setAskRotate(false)}}/>}
  </div>;
 }
 
@@ -219,6 +221,11 @@ function Hardest({t,stats,qText,done}:{t:W;stats:Stat[]|null;qText:string[]|null
 }
 
 /** In-overlay confirmation: focus starts on Cancel, Escape or the backdrop cancels, focus returns afterwards. */
+/** The teacher's answer to "switch to landscape?" for this session (sessionStorage, with an in-memory copy when storage is blocked). */
+const ROTATE='de_bs_rotate';let rotateMem:string|null=null;
+const rotatePref=()=>{try{return sessionStorage.getItem(ROTATE)??rotateMem}catch{return rotateMem}};
+const setRotatePref=(v:'yes'|'no')=>{rotateMem=v;try{sessionStorage.setItem(ROTATE,v)}catch{/* storage unavailable */}};
+
 function Sheet({text,hint,ok,cancel,err,onOk,onCancel}:{text:string;hint?:string;ok:string;cancel:string;err?:string;onOk:()=>void;onCancel:()=>void}){
  const ref=useRef<HTMLButtonElement>(null);
  const esc=useRef(onCancel);esc.current=onCancel;

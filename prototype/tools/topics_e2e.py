@@ -63,7 +63,12 @@ with sync_playwright() as p:
     # On a portrait phone the board asks to rotate first; the QR panel sits behind its toggle there.
     tp.wait_for_selector('.bs-top',timeout=10000);check('starting the test opens the big screen',tp.locator('.bs-top').count()==1)
     tp.screenshot(path=OUT+'/t5b-big-screen.png')
+    check('portrait board asks to rotate the first time',tp.get_by_text('Gorizontal holatga o‘tamizmi?').count()==1)
     tp.get_by_role('button',name='Yo‘q').click();tp.wait_for_timeout(300)
+    tp.locator('.bs-close').first.click();tp.wait_for_timeout(500)
+    # The answer is kept for the session: reopening the board does not ask again.
+    tp.get_by_role('button',name='Katta ekran · QR').first.click();tp.wait_for_selector('.bs-top',timeout=10000);tp.wait_for_timeout(500)
+    check('reopened board does not ask to rotate again after "Yo‘q"',tp.get_by_text('Gorizontal holatga o‘tamizmi?').count()==0)
     tp.locator('.bs-close').first.click();tp.wait_for_timeout(500)
     check('test running',tp.get_by_text('Test ketmoqda').count()>=1)
     tp.screenshot(path=OUT+'/t5-test-running.png',full_page=True)
