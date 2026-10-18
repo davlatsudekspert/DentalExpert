@@ -4,7 +4,7 @@ healthcare-service features. `?edition=edu` forces that edition on the web; this
 - the role picker has no patient role (dentist, teacher, student only);
 - no doctor search, doctor cards or profiles, clinics, booking calendar, patient list, patient record or odontogram;
 - blocked screens (?screen=, in-app links, history) land on the role's home; an old 'patient' account gets the student home;
-- the bottom bar has four tabs and no find-a-dentist Search tab; the dentist profile editor has no public listing;
+- the bottom bar has four tabs and no find-a-dentist Search tab; the dentist profile editor has no public listing and the Profil role picker (Rolim) has no patient role;
 - no page errors.
 Without the flag the full app (iOS, website) still has all of it.
 Usage: python3 tools/edu_edition_test.py [dist_dir] [screenshot_dir]"""
@@ -112,6 +112,9 @@ with sync_playwright() as p:
     check('edu dentist editor: no public-listing option',sp.locator('.publish-card').count()==0 and sp.get_by_text('Show my profile to patients').count()==0)
     check('edu dentist editor: no patient contact fields',sp.get_by_text('Contact buttons for patients').count()==0 and sp.locator('input[placeholder="@username"]').count()==0)
     if OUT:sp.screenshot(path=f'{OUT}/edu-edit-dentist.png',full_page=True)
+    goto(sp,'screen=settings&role=dentist&edition=edu',1200);sp.locator('.pf-rolehead').click();sp.wait_for_timeout(300)
+    check('edu Profil role picker: dentist, educator, student; no patient',sp.locator('.pf-roles button').all_inner_texts()==['Dentist','Educator','Student'],str(sp.locator('.pf-roles button').all_inner_texts()))
+    if OUT:sp.screenshot(path=f'{OUT}/edu-profil-roles.png',full_page=True)
     sp.context.close()
     # ---- Full app (iOS, website): everything is still there ----
     goto(pg,'screen=roles')
@@ -134,6 +137,8 @@ with sync_playwright() as p:
     check('full dentist home: the empty patients card has inner padding',pad[0]>=12 and pad[1]>=12,str(pad))
     sp=page('dentist');goto(sp,'screen=edit',1400)
     check('full dentist editor: public-listing option',sp.locator('.publish-card').count()==1)
+    goto(sp,'screen=settings&role=dentist',1200);sp.locator('.pf-rolehead').click();sp.wait_for_timeout(300)
+    check('full Profil role picker: four roles with patient',sp.locator('.pf-roles button').all_inner_texts()==['Dentist','Educator','Student','Patient'],str(sp.locator('.pf-roles button').all_inner_texts()))
     sp.context.close()
     check('no page errors',not errs,'; '.join(errs[:5]))
     b.close()

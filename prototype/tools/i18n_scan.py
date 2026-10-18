@@ -301,7 +301,7 @@ def main():
                     if s == 'settings':
                         got = page.locator('.settings-list').first.locator('.lang-mark').all_inner_texts()
                         if [x.lower() for x in got] != ORDER: order_problems.append((lang, 'Settings language list', got))
-                        if try_(lambda: page.locator('.account-session button').first.click()):
+                        if try_(lambda: page.locator('.pf-report').first.click()):
                             page.wait_for_selector('.quiz-run', timeout=3000); collect(lang, 'settings › report form')
                     if s == 'anatomy':
                         if try_(lambda: page.locator('.atlas3d-launch').first.click()):

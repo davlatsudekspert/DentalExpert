@@ -26,6 +26,11 @@ with sync_playwright() as p:
     pg.get_by_role('button',name='Profil').last.click();pg.wait_for_timeout(1200)
     pg.wait_for_selector('.admin-entry',timeout=8000)
     check('admin entry still there after saving the profile',pg.locator('.admin-entry').count()==1)
+    # Switching role (Profil → Rolim) answers without isAdmin too: the entry must survive it, both ways.
+    for to,home in (('Ustoz','.classroom'),('Stomatolog','.home-header')):
+        pg.locator('.pf-rolehead').click();pg.locator('.pf-roles button',has_text=to).click();pg.get_by_role('button',name='Rolni almashtirish').click();pg.wait_for_selector(home,timeout=10000)
+        pg.get_by_role('button',name='Profil').last.click();pg.wait_for_selector('.admin-entry',timeout=8000)
+        check(f'admin entry still there after switching to {to}',pg.locator('.admin-entry').count()==1)
     pg.screenshot(path=OUT+'/admin-flag.png')
     # A non-admin never gets the entry.
     ctx2=b.new_context(viewport={'width':430,'height':932},is_mobile=True,has_touch=True)

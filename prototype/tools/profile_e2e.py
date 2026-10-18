@@ -1,4 +1,6 @@
-"""Dentist signs in: sees their own name, edits and saves the profile for real, adds a patient, marks teeth, data survives reload."""
+"""Dentist signs in: sees their own name, edits and saves the profile for real, adds a patient, marks teeth, data survives reload.
+Then, on the Profil screen: header (name, role chip, verification badge) and Profil → Rolim: dentist (with a public
+profile: asks first) → Ustoz → Talaba → Stomatolog, each landing on that role's home with the Profil header updated at once."""
 from playwright.sync_api import sync_playwright
 import os,json,time
 BASE=f'http://127.0.0.1:{os.environ.get("DE_PORT","8788")}';OUT=os.environ.get('SIM_OUT','/tmp/sim')
@@ -39,6 +41,34 @@ with sync_playwright() as p:
     pg.goto(BASE+'/?lang=uz');pg.wait_for_selector('.home-header');pg.wait_for_timeout(500)
     check('dashboard shows 1 patient',pg.get_by_text('Test Bemor').count()==1)
     pg.screenshot(path=OUT+'/p3-dashboard-after.png')
+    # Role switching in Profil → Rolim: Stomatolog with a public profile → Ustoz (asks first) → Talaba.
+    ctx.request.put(BASE+'/api/auth/profile',data=json.dumps({**{k:me[k] or '' for k in ('name','phone','workplace','bio','specialty','address','telegram','instagram','publicEmail','mapUrl')},'publishRequested':True}),headers={'content-type':'application/json'})
+    pg.goto(BASE+'/?screen=settings&lang=uz');pg.wait_for_selector('.pf-card');pg.wait_for_timeout(500)
+    check('Profil header: name, role chip and the pending-verification badge',pg.locator('.pf-id h2').inner_text()==me['name'] and pg.locator('.pf-chip').first.inner_text()=='Stomatolog' and pg.locator('.pf-chip.st.s1').count()==1)
+    pg.screenshot(path=OUT+'/p3b-profil.png',full_page=True)
+    pg.locator('.pf-rolehead').click();pg.wait_for_selector('.pf-roles')
+    check('role picker offers the four roles, the current one chosen',pg.locator('.pf-roles button').all_inner_texts()==['Stomatolog','Ustoz','Talaba','Bemor'] and pg.locator('.pf-roles button[aria-checked=true]').inner_text()=='Stomatolog')
+    pg.locator('.pf-roles button',has_text='Ustoz').click();pg.wait_for_timeout(300)
+    check('leaving a public dentist profile asks first, nothing changed yet',pg.get_by_text('Ommaviy profilingiz yashiriladi',exact=False).count()==1 and ctx.request.get(BASE+'/api/auth/me').json()['user']['role']=='dentist')
+    pg.locator('.pf-rolebox').scroll_into_view_if_needed();pg.screenshot(path=OUT+'/p4-role-confirm.png',full_page=True)
+    pg.get_by_role('button',name='Ha, almashtirish').click();pg.wait_for_selector('.classroom',timeout=10000);pg.wait_for_timeout(500)
+    me=ctx.request.get(BASE+'/api/auth/me').json()['user']
+    check('switched to teacher: teacher home, listing request cleared',me['role']=='teacher' and me['publishRequested'] is False and pg.locator('.cr-form input').count()>=1)
+    pg.screenshot(path=OUT+'/p5-teacher-home.png')
+    pg.locator('.bottom-nav button[aria-label="Profil"]').click();pg.wait_for_selector('.pf-card');pg.wait_for_timeout(500)
+    check('Profil says Ustoz at once, no status badge',pg.locator('.pf-chip').first.inner_text()=='Ustoz' and pg.locator('.pf-chip.st').count()==0)
+    pg.locator('.pf-rolehead').click();pg.locator('.pf-roles button',has_text='Talaba').click();pg.wait_for_timeout(300)
+    check('a teacher switching to student is not warned about a public profile',pg.get_by_text('Ommaviy profilingiz',exact=False).count()==0)
+    pg.get_by_role('button',name='Rolni almashtirish').click()
+    pg.wait_for_selector('.cr-scan',timeout=10000);pg.wait_for_timeout(400)
+    check('switched to student: student home',ctx.request.get(BASE+'/api/auth/me').json()['user']['role']=='student')
+    pg.screenshot(path=OUT+'/p6-student-home.png')
+    pg.locator('.bottom-nav button[aria-label="Profil"]').click();pg.wait_for_selector('.pf-card');pg.wait_for_timeout(500)
+    check('Profil says Talaba at once, with level / XP / streak',pg.locator('.pf-chip').first.inner_text()=='Talaba' and pg.locator('.pf-stats small').all_inner_texts()==['Daraja','XP','Kun ketma-ket'])
+    pg.locator('.pf-rolehead').click();pg.locator('.pf-roles button',has_text='Stomatolog').click();pg.get_by_role('button',name='Rolni almashtirish').click()
+    pg.wait_for_selector('.home-header',timeout=10000);pg.wait_for_timeout(400)
+    check('back to dentist: dentist home, not listed again until requested',ctx.request.get(BASE+'/api/auth/me').json()['user']['role']=='dentist' and ctx.request.get(BASE+'/api/auth/me').json()['user']['publishRequested'] is False)
+    pg.screenshot(path=OUT+'/p7-dentist-home.png')
     check('no page errors',not errs)
     b.close()
 print('PROFILE E2E OK')

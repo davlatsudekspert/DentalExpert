@@ -51,7 +51,7 @@ s,r=call('/auth/role','PUT',{'role':'teacher'},D)
 check('dentist → teacher: switched, listing request and verification cleared',s==200 and r['user']['role']=='teacher' and r['user']['publishRequested'] is False and r['user']['verified'] is False)
 check('/auth/me shows the new role',call('/auth/me',token=D)[1]['user']['role']=='teacher')
 check('no longer listed for patients',all(d['fullName']!='Dr Public Test' for d in call('/doctors?city=UZ-TK')[1]['doctors']))
-s,r=call('/classroom/groups','POST',{'name':'Rol guruhi'},D);check('as a teacher: can create a group',s==200);gid=r['group']['id']
+s,r=call('/classroom/groups','POST',{'name':'Rol guruhi'},D);check('as a teacher: can create a group',s in (200,201));gid=r['group']['id']
 s,r=call('/auth/role','PUT',{'role':'student'},D);check('teacher → student',s==200 and r['user']['role']=='student')
 check('as a student: cannot create new groups',call('/classroom/groups','POST',{'name':'Yana'},D)==(403,{'error':'teacher_only'}))
 check('as a student: the owned group still answers as its owner',call(f'/classroom/assignments?groupId={gid}',token=D)[1].get('role')=='owner')
