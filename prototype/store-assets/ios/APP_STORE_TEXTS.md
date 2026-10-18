@@ -36,7 +36,7 @@ Use with the files in this folder. Language: English (primary) and Russian. Uzbe
 - Keywords: стоматолог,зубы,анатомия зуба,стоматология,студент,Узбекистан,клиника
 
 ## App Privacy answers (matches the current app)
-- Data collected (only if the user signs in on the web): email address and name (account), approximate city the user picks. Used for app functionality and account; not used for tracking; not sold.
+- Data collected (only if the user signs in on the web): email address and name (account), approximate city the user picks, and (from build 21) the profile photo a specialist chooses to upload (App Privacy → Photos or Videos, linked to the user, App Functionality). Used for app functionality and account; not used for tracking; not sold.
 - No advertising SDKs, no analytics SDKs, no tracking.
 - Account deletion: available in Settings when signed in (web). Native demo sign-in stores nothing on a server.
 - Age rating: 4+ (medical/treatment information: infrequent/mild). Review the questionnaire honestly.

@@ -30,6 +30,7 @@ behalf as service providers; Play does not count service providers as sharing.
 | Personal info → **Address** | Yes | Optional | App functionality | Only the workplace address a dentist chooses to publish. |
 | Personal info → **Other info** | Yes | Optional | App functionality | Workplace, specialty, bio, Telegram/Instagram handles, map link, group nickname, role (patient/dentist/teacher/student). |
 | Location → **Approximate location** | Yes | Optional | App functionality | Not GPS: the country/city the user picks is saved on the account. The app has no location permission. Declare it to be safe; if you decide a manually typed city is not "location", you may answer No, but Yes is the conservative choice. |
+| Photos and videos → **Photos** | Yes | Optional | App functionality, Account management | Only the profile photo a signed-in specialist uploads (cropped to 512×512 on the device, max 200 KB). Shown publicly only on a verified public profile; deleted with the photo or the account. |
 | App activity → **Other user-generated content** | Yes | Optional | App functionality | Answers/quiz results submitted to a teacher's group; text of complaints/messages sent from Settings (plus optional contact). |
 
 Processing details asked for each type:
@@ -44,7 +45,6 @@ Processing details asked for each type:
   stored **only on the device** in the app's WebView storage and is never sent to the server. Daily practice results
   are also on-device only. Backup is disabled (`android:allowBackup="false"` plus data-extraction rules that exclude
   everything), so this data does not leave the phone through Google backup or device transfer either.
-- **Photos and videos:** No. A profile photo picked in the form is only previewed on the device, not uploaded.
 - **Precise location, Contacts, Calendar, Messages (email/SMS), Files and docs, Audio, Financial info, Web browsing,
   App info and performance (crash logs, diagnostics), Device or other IDs, Race/ethnicity, Political or religious
   beliefs, Sexual orientation:** No.
