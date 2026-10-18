@@ -85,7 +85,7 @@
   {
    "q": "Gingivit nima?",
    "options": [
-    "Emal yo‘qolishi",
+    "Tishlarda emal yo‘qolishi",
     "Suyak o‘sishi",
     "Milk yallig‘lanishi"
    ],
@@ -97,7 +97,7 @@
    "options": [
     "Tayanch to‘qimalar, jumladan suyak jarohatlanadi",
     "Umuman farq yo‘q",
-    "Faqat tish rangi o‘zgaradi"
+    "Vaqt o‘tishi bilan faqat tish rangi o‘zgaradi"
    ],
    "correct": 0,
    "explanation": "Parodontitda tayanch to‘qimalar zararlanadi."

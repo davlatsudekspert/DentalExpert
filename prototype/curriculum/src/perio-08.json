@@ -744,9 +744,9 @@
       },
       "options": [
         {
-          "en": "PD ≥3 mm and any radiolucency",
-          "ru": "Глубина ≥3 мм и любое просветление",
-          "uz": "Chuqurlik ≥3 mm va har qanday yorug‘lanish"
+          "en": "PD ≥3 mm and any radiolucency around the implant",
+          "ru": "Глубина ≥3 мм и любое просветление вокруг имплантата",
+          "uz": "Chuqurlik ≥3 mm va implant atrofida har qanday yorug‘lanish"
         },
         {
           "en": "Implant mobility only",
@@ -824,9 +824,9 @@
           "uz": "Suyak plastikasi"
         },
         {
-          "en": "Long systemic antibiotic courses",
-          "ru": "Длительными курсами антибиотиков",
-          "uz": "Uzoq tizimli antibiotik kurslari"
+          "en": "Long courses of systemic antibiotics alone",
+          "ru": "Длительными курсами только системных антибиотиков",
+          "uz": "Faqat uzoq muddatli tizimli antibiotik kurslari"
         },
         {
           "en": "Hygiene reinforcement and professional debridement",
@@ -959,7 +959,7 @@
           "uz": "Nuqtalarning 5% da qonash"
         },
         {
-          "en": "No pockets over 4 mm",
+          "en": "No pockets deeper than 4 mm",
           "ru": "Нет карманов глубже 4 мм",
           "uz": "4 mm dan chuqur cho‘ntak yo‘q"
         },

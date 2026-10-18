@@ -873,9 +873,9 @@
           "uz": "Lunj nervi"
         },
         {
-          "en": "Facial nerve",
-          "ru": "Лицевой нерв",
-          "uz": "Yuz nervi"
+          "en": "Marginal mandibular branch",
+          "ru": "Краевая ветвь нижней челюсти",
+          "uz": "Pastki jag‘ chekka shoxchasi"
         }
       ],
       "correct": 0,
@@ -1033,9 +1033,9 @@
       },
       "options": [
         {
-          "en": "Superficial and middle layers",
-          "ru": "Между поверхностным и средним листками",
-          "uz": "Yuza va o‘rta varaqlar orasida"
+          "en": "Between the superficial and middle layers",
+          "ru": "Между поверхностным и средним листками шейной фасции",
+          "uz": "Bo‘yin fassiyasining yuza va o‘rta varaqlari orasida"
         },
         {
           "en": "Inside the carotid sheath",

@@ -741,9 +741,9 @@
           "uz": "Tojni mustahkamlash"
         },
         {
-          "en": "To disinfect the canal",
-          "ru": "Дезинфицировать канал",
-          "uz": "Kanalni dezinfeksiya qilish"
+          "en": "To disinfect the canal before bleaching",
+          "ru": "Дезинфицировать канал перед отбеливанием",
+          "uz": "Oqartirishdan oldin kanalni dezinfeksiya qilish"
         }
       ],
       "correct": 1,
@@ -771,14 +771,14 @@
           "uz": "Fosfat kislota"
         },
         {
-          "en": "Calcium hydroxide",
-          "ru": "Гидроксид кальция",
-          "uz": "Kalsiy gidroksid"
+          "en": "Calcium hydroxide paste",
+          "ru": "Паста гидроксида кальция",
+          "uz": "Kalsiy gidroksid pastasi"
         },
         {
           "en": "Sodium perborate mixed with water",
           "ru": "Перборат натрия с водой",
-          "uz": "Suv bilan aralashtirilgan natriy perborat"
+          "uz": "Natriy perborat va suv aralashmasi"
         }
       ],
       "correct": 3,
@@ -976,9 +976,9 @@
           "uz": "Rang barqarorlashgach, bir necha kun yoki haftadan keyin"
         },
         {
-          "en": "The same day the agent is placed",
-          "ru": "В день внесения средства",
-          "uz": "Vosita kiritilgan kuni"
+          "en": "At the same visit, right after placing the agent",
+          "ru": "В тот же визит, сразу после внесения отбеливающего средства",
+          "uz": "Shu tashrifning o‘zida, vosita kiritilgandan so‘ng"
         },
         {
           "en": "After one year",

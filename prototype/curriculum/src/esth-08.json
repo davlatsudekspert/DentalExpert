@@ -822,9 +822,9 @@
           "uz": "Faqat suv bilan yuvish"
         },
         {
-          "en": "Treat with sodium hypochlorite",
-          "ru": "Обработка гипохлоритом натрия",
-          "uz": "Natriy gipoxlorit bilan ishlash"
+          "en": "Treat the surface with sodium hypochlorite",
+          "ru": "Обработка поверхности гипохлоритом натрия",
+          "uz": "Yuzani natriy gipoxlorit bilan ishlash"
         },
         {
           "en": "Apply cement only",
@@ -962,9 +962,9 @@
           "uz": "Anesteziyasiz ishlash"
         },
         {
-          "en": "Leaving the acid for a long time",
-          "ru": "Длительная экспозиция кислоты",
-          "uz": "Kislotani uzoq qoldirish"
+          "en": "Leaving the acid on for a long time",
+          "ru": "Длительная экспозиция кислоты на поверхности",
+          "uz": "Kislotani yuzada uzoq vaqt qoldirish"
         },
         {
           "en": "Omitting silane",
@@ -1027,9 +1027,9 @@
           "uz": "Tuzatish har doim abadiy xizmat qiladi"
         },
         {
-          "en": "Repair needs no isolation",
-          "ru": "Для починки не нужна изоляция",
-          "uz": "Tuzatish uchun izolyatsiya kerak emas"
+          "en": "Repair needs no isolation or bonding protocol",
+          "ru": "Для починки не нужна изоляция и адгезивный протокол",
+          "uz": "Tuzatish uchun izolyatsiya va adgeziv protokol kerak emas"
         },
         {
           "en": "Tooth tissue is preserved and the cavity does not enlarge",

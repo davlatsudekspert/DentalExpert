@@ -841,7 +841,7 @@
           "uz": "Til yon yuzasi va og‘iz tubi"
         },
         {
-          "en": "Inner upper lip",
+          "en": "Inner surface of the upper lip",
           "ru": "Внутренняя поверхность верхней губы",
           "uz": "Yuqori lab ichki yuzasi"
         },
@@ -971,9 +971,9 @@
       },
       "options": [
         {
-          "en": "'Small ulcer on tongue'",
-          "ru": "«Небольшая язва на языке»",
-          "uz": "«Tilda kichik yara»"
+          "en": "'Small ulcer somewhere on the tongue, looks harmless, observe'",
+          "ru": "«Небольшая язвочка где-то на языке, на вид безобидная, наблюдать»",
+          "uz": "«Tilda kichik yara bor, ko‘rinishi zararsiz, keyin kuzatiladi»"
         },
         {
           "en": "'6×4 mm ulcer, right lateral tongue, well-defined, soft base'",
@@ -1016,9 +1016,9 @@
           "uz": "Leykoedemada"
         },
         {
-          "en": "For Fordyce granules",
-          "ru": "При гранулах Фордайса",
-          "uz": "Fordays donachalarida"
+          "en": "For typical Fordyce granules",
+          "ru": "При типичных гранулах Фордайса",
+          "uz": "Odatiy Fordays donachalarida"
         },
         {
           "en": "For every aphtha",

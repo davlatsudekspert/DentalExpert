@@ -1001,9 +1001,9 @@
           "uz": "Ildiz shakllanmagan bo‘lsa"
         },
         {
-          "en": "The tooth was recently traumatised",
-          "ru": "Недавняя травма зуба",
-          "uz": "Tish yaqinda travma olgan bo‘lsa"
+          "en": "The tooth was traumatised a few days ago",
+          "ru": "Зуб получил травму несколько дней назад",
+          "uz": "Tish bir necha kun oldin travma olgan bo‘lsa"
         }
       ],
       "correct": 0,

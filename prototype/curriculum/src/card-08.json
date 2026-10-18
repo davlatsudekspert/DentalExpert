@@ -875,9 +875,9 @@
           "uz": "Gemostaz kerak emas"
         },
         {
-          "en": "You can fill straight away",
-          "ru": "Можно сразу пломбировать",
-          "uz": "Plomba darhol qo‘yish mumkin"
+          "en": "You can fill straight away over the exposure",
+          "ru": "Можно сразу пломбировать поверх вскрытия",
+          "uz": "Ochilgan joy ustidan darhol plomba qo‘yish mumkin"
         },
         {
           "en": "The pulp is inflamed; more extensive treatment is needed",
@@ -1055,9 +1055,9 @@
           "uz": "Qatlamlab kiritish"
         },
         {
-          "en": "Checking occlusion",
-          "ru": "Проверка окклюзии",
-          "uz": "Okklyuziyani tekshirish"
+          "en": "Checking occlusion with articulating paper",
+          "ru": "Проверка окклюзии артикуляционной бумагой",
+          "uz": "Okklyuziyani artikulyatsion qog‘oz bilan tekshirish"
         }
       ],
       "correct": 0,
@@ -1075,9 +1075,9 @@
       },
       "options": [
         {
-          "en": "The filling retains better",
-          "ru": "Пломба лучше держится",
-          "uz": "Plomba yaxshiroq ushlanadi"
+          "en": "The filling retains better at the margin",
+          "ru": "Пломба лучше держится за счёт эмали",
+          "uz": "Plomba chekkada yaxshiroq ushlanadi"
         },
         {
           "en": "Enamel chips, leaving a marginal gap",

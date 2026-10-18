@@ -819,9 +819,9 @@
       },
       "options": [
         {
-          "en": "Darkening of a tooth with age",
-          "ru": "Потемнение зуба с возрастом",
-          "uz": "Tishning yosh bilan to‘qlashishi"
+          "en": "Darkening of a tooth with age and wear",
+          "ru": "Потемнение зуба с возрастом и стиранием",
+          "uz": "Tishning yosh va yeyilish bilan to‘qlashishi"
         },
         {
           "en": "Colours matching under one light but not another",

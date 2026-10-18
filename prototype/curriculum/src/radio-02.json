@@ -631,9 +631,9 @@
           "uz": "Nurlanish keltirib chiqargan saraton"
         },
         {
-          "en": "Hair loss",
-          "ru": "Выпадение волос",
-          "uz": "Soch to‘kilishi"
+          "en": "Hair loss in the exposed area",
+          "ru": "Выпадение волос на облучённом участке",
+          "uz": "Nurlangan sohada soch to‘kilishi"
         }
       ],
       "correct": 2,
@@ -797,7 +797,7 @@
         },
         {
           "en": "Avoid all radiographs until delivery",
-          "ru": "Не делать снимков до родов",
+          "ru": "Не делать никаких снимков до родов",
           "uz": "Tug‘ruqqacha rentgenogramma olmaslik"
         },
         {
@@ -832,7 +832,7 @@
         },
         {
           "en": "Deterministic effects are common in children",
-          "ru": "У детей чаще детерминированные эффекты",
+          "ru": "У детей чаще возникают детерминированные эффекты",
           "uz": "Bolalarda deterministik ta’sir tez-tez"
         },
         {

@@ -744,7 +744,7 @@
         },
         {
           "en": "Dentigerous cyst",
-          "ru": "Фолликулярная (зубосодержащая) киста",
+          "ru": "Фолликулярная киста",
           "uz": "Follikulyar (dentigeroz) kista"
         },
         {
@@ -878,7 +878,7 @@
       },
       "options": [
         {
-          "en": "Repeat imaging in 6 months",
+          "en": "Repeat the radiograph in 6 months",
           "ru": "Повторный снимок через 6 месяцев",
           "uz": "6 oydan keyin qayta rentgenogramma"
         },
@@ -983,9 +983,9 @@
       },
       "options": [
         {
-          "en": "Smoothly displaces them",
-          "ru": "Плавно смещает их",
-          "uz": "Ularni silliq siljitadi"
+          "en": "Smoothly displaces them without resorption",
+          "ru": "Плавно смещает их без разрушения кости",
+          "uz": "Ularni suyakni yemirmasdan silliq siljitadi"
         },
         {
           "en": "Destroys surrounding bone, teeth float",

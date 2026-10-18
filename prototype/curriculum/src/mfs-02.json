@@ -718,9 +718,9 @@
           "uz": "Ikki tomonlama jag‘ osti, til osti va iyak osti"
         },
         {
-          "en": "Unilateral buccal and canine",
-          "ru": "Одностороннее щёчное и клыковое",
-          "uz": "Bir tomonlama lunj va qoziq tish"
+          "en": "Unilateral buccal and canine spaces only",
+          "ru": "Только одностороннее щёчное и клыковое пространства",
+          "uz": "Faqat bir tomonlama lunj va qoziq tish sohalari"
         },
         {
           "en": "Temporal and infratemporal",
@@ -923,9 +923,9 @@
       },
       "options": [
         {
-          "en": "Staphylococci only",
-          "ru": "Только стафилококки",
-          "uz": "Faqat stafilokokklar"
+          "en": "Staphylococcus aureus only",
+          "ru": "Только золотистый стафилококк",
+          "uz": "Faqat oltin rang stafilokokk"
         },
         {
           "en": "Mainly fungi",

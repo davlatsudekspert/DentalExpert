@@ -769,9 +769,9 @@
           "uz": "Tanglay yuzasi markazidan"
         },
         {
-          "en": "From the labial surface",
-          "ru": "С вестибулярной поверхности",
-          "uz": "Lab yuzasidan"
+          "en": "From the centre of the labial surface",
+          "ru": "С центра вестибулярной поверхности",
+          "uz": "Lab yuzasi markazidan"
         },
         {
           "en": "From the cervical area",
@@ -831,7 +831,7 @@
         {
           "en": "Next to the distobuccal orifice",
           "ru": "Рядом с дистально-щёчным устьем",
-          "uz": "Distal-lunj og‘zi yonida"
+          "uz": "Distal-lunj og‘zi yonida, distal devorga yaqin"
         },
         {
           "en": "Inside the palatal canal",
@@ -844,9 +844,9 @@
           "uz": "Kamera tubining markazida"
         },
         {
-          "en": "Palatal to MB, on the line between MB and palatal",
+          "en": "Palatal to MB, on the MB–palatal line",
           "ru": "От MB к нёбному, на линии между ними",
-          "uz": "MB og‘zidan tanglay tomon, ular orasidagi chiziqda"
+          "uz": "MB og‘zidan tanglay tomon, MB–tanglay chizig‘ida"
         }
       ],
       "correct": 3,
@@ -909,9 +909,9 @@
           "uz": "Distal joylashgan uchburchak"
         },
         {
-          "en": "The whole occlusal surface",
-          "ru": "Вся жевательная поверхность",
-          "uz": "Butun chaynov yuzasi"
+          "en": "Opening the whole occlusal surface",
+          "ru": "Раскрытие всей жевательной поверхности",
+          "uz": "Butun chaynov yuzasi bo‘ylab keng ochish"
         },
         {
           "en": "An oval on the buccal surface",
@@ -1039,9 +1039,9 @@
       },
       "options": [
         {
-          "en": "A lateral canal",
-          "ru": "Латеральный канал",
-          "uz": "Lateral kanal"
+          "en": "An accessory lateral canal",
+          "ru": "Дополнительный латеральный канал",
+          "uz": "Qo‘shimcha lateral kanal"
         },
         {
           "en": "A pulp polyp",

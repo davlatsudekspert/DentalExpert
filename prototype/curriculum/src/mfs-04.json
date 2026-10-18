@@ -766,9 +766,9 @@
           "uz": "Ravoq bo‘lagi toj o‘simtasiga bosadi"
         },
         {
-          "en": "Salivary gland inflammation",
-          "ru": "Воспаление слюнной железы",
-          "uz": "So‘lak bezi yallig‘lanishi"
+          "en": "Inflammation of the parotid gland",
+          "ru": "Воспаление околоушной слюнной железы",
+          "uz": "Quloq oldi so‘lak bezi yallig‘lanishi"
         }
       ],
       "correct": 2,
@@ -871,9 +871,9 @@
           "uz": "Ko‘z harakatini ta’minlash"
         },
         {
-          "en": "Protecting nerves",
-          "ru": "Защита нервов",
-          "uz": "Nervlarni himoya qilish"
+          "en": "Protecting the facial nerves",
+          "ru": "Защита нервов лица от травмы",
+          "uz": "Yuz nervlarini shikastdan himoya qilish"
         }
       ],
       "correct": 1,
@@ -906,9 +906,9 @@
           "uz": "Bosh suyagi asosi shikasti, likvoreya"
         },
         {
-          "en": "Maxillary sinusitis",
-          "ru": "Верхнечелюстной синусит",
-          "uz": "Yuqori jag‘ sinusiti"
+          "en": "Acute maxillary sinusitis",
+          "ru": "Острый верхнечелюстной синусит",
+          "uz": "O‘tkir yuqori jag‘ sinusiti"
         }
       ],
       "correct": 2,

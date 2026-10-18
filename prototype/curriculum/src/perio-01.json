@@ -886,9 +886,9 @@
       },
       "options": [
         {
-          "en": "Collagen fibre bundles",
-          "ru": "Пучков коллагеновых волокон",
-          "uz": "Kollagen tolalar tutamlari"
+          "en": "Collagen fibre bundles inserted into cementum",
+          "ru": "Пучков коллагеновых волокон, вплетённых в цемент",
+          "uz": "Sementga kirib boruvchi kollagen tolalar tutamlari"
         },
         {
           "en": "Cementoblasts",
@@ -936,9 +936,9 @@
           "uz": "Alveola usti birikishining buzilishi"
         },
         {
-          "en": "Pulpitis of the abutment",
-          "ru": "Пульпит опорного зуба",
-          "uz": "Tayanch tish pulpiti"
+          "en": "Pulpitis of the abutment tooth",
+          "ru": "Пульпит опорного зуба под коронкой",
+          "uz": "Koronka ostidagi tayanch tish pulpiti"
         }
       ],
       "correct": 2,
@@ -961,9 +961,9 @@
           "uz": "Egatchani yuvish va immun hujayralar hamda antitanalarni tashish"
         },
         {
-          "en": "Mineralising the plaque",
-          "ru": "Минерализации налёта",
-          "uz": "Karashni minerallashtirish"
+          "en": "Mineralising the plaque into protective calculus",
+          "ru": "Минерализации налёта в защитный зубной камень",
+          "uz": "Karashni himoya qiluvchi tish toshiga aylantirish"
         },
         {
           "en": "Forming new cementum",
@@ -985,37 +985,37 @@
     },
     {
       "q": {
-        "en": "Cellular cementum is found mainly:",
-        "ru": "Клеточный цемент находится в основном:",
-        "uz": "Hujayrali sement asosan qayerda joylashadi?"
+        "en": "Which cementum covers the cervical third of the root and anchors most PDL fibres?",
+        "ru": "Какой цемент покрывает пришеечную треть корня и закрепляет большинство волокон периодонта?",
+        "uz": "Ildizning bo‘yin uchdan birini qaysi sement qoplaydi va periodont tolalarining ko‘pchiligini mahkamlaydi?"
       },
       "options": [
         {
-          "en": "Over the cervical third",
-          "ru": "В пришеечной трети",
-          "uz": "Bo‘yin uchdan birida"
+          "en": "Cellular mixed stratified cementum",
+          "ru": "Клеточный смешанный слоистый цемент",
+          "uz": "Hujayrali aralash qatlamli sement"
         },
         {
-          "en": "On the enamel surface",
-          "ru": "На поверхности эмали",
-          "uz": "Emal yuzasida"
+          "en": "Cellular intrinsic fibre cementum",
+          "ru": "Клеточный цемент с собственными волокнами",
+          "uz": "Hujayrali, ichki tolali sement"
         },
         {
-          "en": "In the pulp chamber",
-          "ru": "В полости зуба",
-          "uz": "Pulpa kamerasida"
+          "en": "Secondary dentine laid down by odontoblasts",
+          "ru": "Вторичный дентин, образуемый одонтобластами",
+          "uz": "Odontoblastlar hosil qiladigan ikkilamchi dentin"
         },
         {
-          "en": "In the apical third and furcations",
-          "ru": "В апикальной трети и фуркациях",
-          "uz": "Apikal uchdan birda va furkatsiyalarda"
+          "en": "Acellular extrinsic fibre cementum",
+          "ru": "Бесклеточный цемент с внешними волокнами",
+          "uz": "Hujayrasiz, tashqi tolali sement"
         }
       ],
       "correct": 3,
       "explain": {
-        "en": "Acellular cementum covers the cervical root, while cellular cementum is found apically and in furcations.",
-        "ru": "Бесклеточный цемент покрывает пришеечную часть корня, клеточный — апикальную часть и фуркации.",
-        "uz": "Hujayrasiz sement ildiz bo‘yin qismini, hujayrali sement esa apikal qism va furkatsiyalarni qoplaydi."
+        "en": "Acellular extrinsic fibre cementum covers the cervical root and anchors Sharpey’s fibres; cellular cementum lies apically and in furcations.",
+        "ru": "Бесклеточный цемент с внешними волокнами покрывает пришеечную часть корня и закрепляет шарпеевские волокна; клеточный цемент находится апикально и в фуркациях.",
+        "uz": "Hujayrasiz tashqi tolali sement ildiz bo‘yin qismini qoplab, Sharpey tolalarini mahkamlaydi; hujayrali sement esa apikal qism va furkatsiyalarda joylashadi."
       }
     },
     {

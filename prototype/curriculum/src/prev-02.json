@@ -857,9 +857,9 @@
           "uz": "Saqich"
         },
         {
-          "en": "Thin waxed floss",
-          "ru": "Тонкая вощёная нить",
-          "uz": "Ingichka mumlangan ip"
+          "en": "Thin waxed floss used daily",
+          "ru": "Тонкая вощёная нить ежедневно",
+          "uz": "Har kuni ingichka mumlangan ip"
         },
         {
           "en": "Interdental brush of the right size",
@@ -922,7 +922,7 @@
           "uz": "Ortodontik va tishlararo cho‘tkachalar"
         },
         {
-          "en": "Only a hard toothbrush",
+          "en": "Only a hard manual toothbrush",
           "ru": "Только жёсткая щётка",
           "uz": "Faqat qattiq cho‘tka"
         },
@@ -1027,9 +1027,9 @@
           "uz": "Har hafta"
         },
         {
-          "en": "Once a year",
-          "ru": "раз в год",
-          "uz": "Yiliga bir marta"
+          "en": "Once a year, at the dental check-up",
+          "ru": "раз в год, при профилактическом осмотре",
+          "uz": "Yiliga bir marta, profilaktik ko‘rikda"
         },
         {
           "en": "About every three months or when worn",

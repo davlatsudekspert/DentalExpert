@@ -840,7 +840,7 @@
           "uz": "U cho‘ntak tubidagi yallig‘lanishni ko‘rsatadi"
         },
         {
-          "en": "It shows tooth mobility",
+          "en": "It shows how mobile the teeth are",
           "ru": "Она показывает подвижность зубов",
           "uz": "U tish qimirlashini ko‘rsatadi"
         },
@@ -970,9 +970,9 @@
       },
       "options": [
         {
-          "en": "No further examination",
+          "en": "No further examination is needed",
           "ru": "Дальнейшее обследование не нужно",
-          "uz": "Qo‘shimcha tekshiruv kerak emas"
+          "uz": "Qo‘shimcha tekshiruv umuman kerak emas"
         },
         {
           "en": "Polishing only",

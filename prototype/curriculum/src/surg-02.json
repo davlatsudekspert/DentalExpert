@@ -711,8 +711,8 @@
           "uz": "Nervlar qalinlashadi"
         },
         {
-          "en": "Rapid liver breakdown",
-          "ru": "Быстрый распад в печени",
+          "en": "Rapid breakdown of the anaesthetic in the liver",
+          "ru": "Быстрый распад анестетика в печени",
           "uz": "Anestetik jigarda tez parchalanadi"
         },
         {
@@ -886,9 +886,9 @@
           "uz": "Arterial bosimning keskin ko‘tarilishi va bradikardiya"
         },
         {
-          "en": "Methaemoglobinaemia",
-          "ru": "Метгемоглобинемия",
-          "uz": "Metgemoglobinemiya"
+          "en": "Methaemoglobinaemia with cyanosis and hypoxia",
+          "ru": "Метгемоглобинемия с цианозом и гипоксией",
+          "uz": "Sianoz va gipoksiya bilan metgemoglobinemiya"
         },
         {
           "en": "Allergic reaction",
@@ -961,9 +961,9 @@
           "uz": "Molekula rangi"
         },
         {
-          "en": "Solution temperature",
-          "ru": "Температура раствора",
-          "uz": "Eritma harorati"
+          "en": "Temperature of the injected solution",
+          "ru": "Температура вводимого раствора",
+          "uz": "Yuborilayotgan eritma harorati"
         }
       ],
       "correct": 0,

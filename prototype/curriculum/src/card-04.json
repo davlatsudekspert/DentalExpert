@@ -823,37 +823,37 @@
     },
     {
       "q": {
-        "en": "What is the main drawback of silver diamine fluoride?",
-        "ru": "Каков основной недостаток диаминфторида серебра?",
-        "uz": "Kumush diamin ftoridning asosiy kamchiligi qaysi?"
+        "en": "How does silver diamine fluoride arrest caries?",
+        "ru": "Как диаминфторид серебра останавливает кариес?",
+        "uz": "Kumush diamin ftorid kariesni qanday to‘xtatadi?"
       },
       "options": [
         {
-          "en": "It does not arrest caries",
-          "ru": "Не останавливает кариес",
-          "uz": "Kariesni to‘xtatmaydi"
+          "en": "It chemically dissolves the infected dentine",
+          "ru": "Химически растворяет инфицированный дентин",
+          "uz": "Infeksiyalangan dentinni kimyoviy eritadi"
         },
         {
-          "en": "Adults only",
-          "ru": "Только для взрослых",
-          "uz": "Faqat kattalarda ishlatiladi"
+          "en": "It forms a resin seal over the lesion",
+          "ru": "Образует полимерную плёнку над очагом",
+          "uz": "O‘choq ustida polimer parda hosil qiladi"
         },
         {
-          "en": "It stains lesions black",
-          "ru": "Окрашивает очаг в чёрный цвет",
-          "uz": "Lezyonni qora rangga bo‘yaydi"
+          "en": "Silver kills bacteria, fluoride remineralises",
+          "ru": "Серебро убивает бактерии, фтор реминерализует",
+          "uz": "Kumush bakteriyani o‘ldiradi, ftor reminerallaydi"
         },
         {
-          "en": "It needs an injection",
-          "ru": "Требует болезненной инъекции",
-          "uz": "Og‘riqli in’yeksiya kerak"
+          "en": "It raises the pH of saliva for several weeks",
+          "ru": "Повышает pH слюны на несколько недель",
+          "uz": "So‘lak pH darajasini bir necha haftaga oshiradi"
         }
       ],
       "correct": 2,
       "explain": {
-        "en": "SDF arrests caries effectively, but silver turns the lesion black, an aesthetic problem.",
-        "ru": "SDF эффективно останавливает кариес, но серебро окрашивает очаг в чёрный, что неэстетично.",
-        "uz": "SDF faol kariesni samarali to‘xtatadi, ammo kumush tufayli lezyon qorayadi, bu estetik muammo."
+        "en": "Silver ions are antibacterial and fluoride promotes remineralisation; the arrested lesion turns black.",
+        "ru": "Ионы серебра действуют антибактериально, а фтор способствует реминерализации; остановленный очаг чернеет.",
+        "uz": "Kumush ionlari bakteriyalarga qarshi ta’sir qiladi, ftor esa reminerallashni kuchaytiradi; to‘xtagan o‘choq qorayadi."
       }
     },
     {
@@ -1009,9 +1009,9 @@
           "uz": "Bir martalik tekshiruvsiz"
         },
         {
-          "en": "Only by the patient’s report",
-          "ru": "Только со слов пациента",
-          "uz": "Faqat bemorning so‘zi bilan"
+          "en": "Only by whether the patient complains",
+          "ru": "Только по наличию жалоб пациента",
+          "uz": "Faqat bemorning shikoyati bor-yo‘qligi bilan"
         },
         {
           "en": "By signs of arrest at recall",

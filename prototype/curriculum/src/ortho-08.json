@@ -801,7 +801,7 @@
         {
           "en": "Supracrestal fibrotomy",
           "ru": "Надальвеолярная фиберотомия",
-          "uz": "Milk usti tolalarini kesish (fibrotomiya)"
+          "uz": "Milk usti fibrotomiyasi"
         },
         {
           "en": "Fluoride varnish",
@@ -1004,9 +1004,9 @@
           "uz": "Retensiya kerak emas"
         },
         {
-          "en": "Only Hawley retainers work",
-          "ru": "Работает только ретейнер Хаули",
-          "uz": "Faqat Hawley retayneri ishlaydi"
+          "en": "Only Hawley retainers prevent relapse",
+          "ru": "Предотвращает рецидив только ретейнер Хаули",
+          "uz": "Qaytalanishni faqat Hawley retayneri oldini oladi"
         },
         {
           "en": "One month of retention is enough",

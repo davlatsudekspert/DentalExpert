@@ -892,7 +892,7 @@
       },
       "options": [
         {
-          "en": "To shorten exposure time",
+          "en": "To shorten the exposure time",
           "ru": "Чтобы сократить время экспозиции",
           "uz": "Ekspozitsiya vaqtini kamaytirish uchun"
         },
@@ -937,7 +937,7 @@
           "uz": "Faqat bitewing rentgenogramma"
         },
         {
-          "en": "Treat without a radiograph",
+          "en": "Treat the tooth without any radiograph",
           "ru": "Лечение без снимка",
           "uz": "Rentgenogrammasiz davolash"
         },

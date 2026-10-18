@@ -706,9 +706,9 @@
       },
       "options": [
         {
-          "en": "Within 1 week",
-          "ru": "В течение 1 недели",
-          "uz": "1 hafta ichida"
+          "en": "Within 1 week of placement",
+          "ru": "В течение 1 недели после установки",
+          "uz": "O‘rnatilgandan keyin 1 hafta ichida"
         },
         {
           "en": "Between 1 week and 2 months",
@@ -716,9 +716,9 @@
           "uz": "1 haftadan 2 oygacha"
         },
         {
-          "en": "After 6 months",
-          "ru": "Более 6 месяцев",
-          "uz": "6 oydan keyin"
+          "en": "After 6 months of healing",
+          "ru": "После 6 месяцев заживления",
+          "uz": "6 oylik bitishdan keyin"
         },
         {
           "en": "After 1 year",
@@ -746,7 +746,7 @@
           "uz": "O‘tmas burg‘ularni qayta ishlatish"
         },
         {
-          "en": "Full depth with one drill",
+          "en": "Full depth with one drill in one pass",
           "ru": "Сразу на полную глубину одним сверлом",
           "uz": "Bitta burg‘u bilan to‘liq chuqurlikka"
         },
@@ -781,9 +781,9 @@
           "uz": "Ikki bosqichli bitish va an’anaviy yuklama"
         },
         {
-          "en": "Fit a final crown at once",
-          "ru": "Немедленная постоянная коронка",
-          "uz": "Darhol doimiy koronka qo‘yish"
+          "en": "Fit a final crown at once to splint it",
+          "ru": "Немедленная постоянная коронка для шинирования",
+          "uz": "Shinalash uchun darhol doimiy koronka qo‘yish"
         },
         {
           "en": "Immediate full loading",
@@ -811,9 +811,9 @@
       },
       "options": [
         {
-          "en": "Sinus perforation",
-          "ru": "Перфорация синуса",
-          "uz": "Sinus perforatsiyasi"
+          "en": "Perforation of the maxillary sinus floor",
+          "ru": "Перфорация дна верхнечелюстной пазухи",
+          "uz": "Yuqori jag‘ bo‘shlig‘i tubining teshilishi"
         },
         {
           "en": "Facial palsy",
@@ -886,9 +886,9 @@
           "uz": "Gingivektomiya"
         },
         {
-          "en": "Apicectomy",
-          "ru": "Резекция верхушки",
-          "uz": "Apikal rezeksiya"
+          "en": "Root-end resection (apicectomy)",
+          "ru": "Резекция верхушки корня",
+          "uz": "Ildiz uchi rezeksiyasi (apikoektomiya)"
         },
         {
           "en": "Frenotomy",

@@ -889,9 +889,9 @@
           "uz": "Bazis ichki yuzasidagi bosim joylarini topish"
         },
         {
-          "en": "Improve denture retention",
-          "ru": "Улучшить фиксацию протеза",
-          "uz": "Protez retensiyasini yaxshilash"
+          "en": "Improve denture retention by suction",
+          "ru": "Улучшить фиксацию протеза за счёт присоса",
+          "uz": "So‘rilish orqali protez retensiyasini yaxshilash"
         },
         {
           "en": "Change the tooth shade",
@@ -964,14 +964,14 @@
           "uz": "Past haroratda eriydigan termoplastik massa"
         },
         {
-          "en": "Retraction cord",
+          "en": "Gingival retraction cord",
           "ru": "Ретракционная нить",
           "uz": "Retraksion ip"
         },
         {
           "en": "Zirconia powder",
           "ru": "Порошок диоксида циркония",
-          "uz": "Sirkoniy dioksidi kukuni"
+          "uz": "Sirkoniy dioksidi kukuni aralashmasi"
         }
       ],
       "correct": 1,
@@ -1006,7 +1006,7 @@
         {
           "en": "To take a new preliminary impression",
           "ru": "Чтобы снять новый предварительный оттиск",
-          "uz": "Yangi dastlabki qolip olish uchun"
+          "uz": "Bemordan yangi dastlabki anatomik qolip olish uchun"
         }
       ],
       "correct": 2,

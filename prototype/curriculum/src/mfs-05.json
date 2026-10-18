@@ -854,7 +854,7 @@
         {
           "en": "Gingival index",
           "ru": "Гингивальный индекс",
-          "uz": "Milk indeksi"
+          "uz": "Milk yallig‘lanish indeksi"
         }
       ],
       "correct": 0,
@@ -879,7 +879,7 @@
         {
           "en": "Observation only",
           "ru": "Только наблюдение",
-          "uz": "Faqat kuzatuv"
+          "uz": "Faqat dinamik kuzatuv"
         },
         {
           "en": "Marsupialisation",
@@ -947,7 +947,7 @@
           "uz": "Aniq chegarali, sklerotik qirrali radiolyusent soha"
         },
         {
-          "en": "Ill-defined moth-eaten area",
+          "en": "Ill-defined moth-eaten area of bone loss",
           "ru": "Нечёткая зона «изъеденная молью»",
           "uz": "Noaniq chegarali «kuya yegan» soha"
         },

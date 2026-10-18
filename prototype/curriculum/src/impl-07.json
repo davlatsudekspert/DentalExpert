@@ -884,9 +884,9 @@
       },
       "options": [
         {
-          "en": "Patients are not sensitive",
-          "ru": "Пациент нечувствителен к облучению",
-          "uz": "Bemor nurlanishga sezgir emas"
+          "en": "Patients are not sensitive to radiation",
+          "ru": "Организм пациента нечувствителен к облучению",
+          "uz": "Bemor organizmi nurlanishga umuman sezgir emas"
         },
         {
           "en": "Dental doses are zero",

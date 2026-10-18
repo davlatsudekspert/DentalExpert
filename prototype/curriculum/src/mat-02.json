@@ -845,9 +845,9 @@
           "uz": "Kirishishni oshiradi"
         },
         {
-          "en": "Increases water sorption",
-          "ru": "Увеличивает водопоглощение",
-          "uz": "Suv shimishni oshiradi"
+          "en": "Increases water sorption and solubility",
+          "ru": "Увеличивает водопоглощение и растворимость",
+          "uz": "Suv shimishni va eruvchanlikni oshiradi"
         },
         {
           "en": "Reduces shrinkage, increases strength",
@@ -995,9 +995,9 @@
           "uz": "Kirishishni to‘xtatadi"
         },
         {
-          "en": "It raises radiopacity",
-          "ru": "Повышает рентгеноконтрастность",
-          "uz": "Rentgenokontrastlikni oshiradi"
+          "en": "It raises the filling’s radiopacity",
+          "ru": "Повышает рентгеноконтрастность пломбы",
+          "uz": "Plombaning rentgenokontrastligini oshiradi"
         }
       ],
       "correct": 0,
@@ -1030,9 +1030,9 @@
           "uz": "Kam to‘ldirilgani sababli yuqori kirishish"
         },
         {
-          "en": "They do not light-cure",
-          "ru": "Не отверждаются светом",
-          "uz": "Yorug‘likda qotmasligi"
+          "en": "They cannot be cured with a curing light",
+          "ru": "Не отверждаются светом полимеризационной лампы",
+          "uz": "Polimerizatsiya lampasi nurida qotmasligi"
         }
       ],
       "correct": 2,

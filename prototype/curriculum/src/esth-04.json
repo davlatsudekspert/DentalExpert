@@ -811,9 +811,9 @@
           "uz": "Yumshoq to‘qimalarni kimyoviy kuyishdan saqlash uchun"
         },
         {
-          "en": "To increase sensitivity",
-          "ru": "Чтобы повысить чувствительность",
-          "uz": "Sezuvchanlikni oshirish uchun"
+          "en": "To increase sensitivity after whitening",
+          "ru": "Чтобы усилить чувствительность после отбеливания",
+          "uz": "Oqartirishdan keyingi sezuvchanlikni oshirish uchun"
         }
       ],
       "correct": 2,
@@ -831,9 +831,9 @@
       },
       "options": [
         {
-          "en": "The restorations will whiten equally",
-          "ru": "Реставрации отбелятся так же",
-          "uz": "Restavratsiyalar ham bir xil oqaradi"
+          "en": "The restorations will whiten like the teeth",
+          "ru": "Реставрации отбелятся так же, как зубы",
+          "uz": "Restavratsiyalar ham tishlar kabi oqaradi"
         },
         {
           "en": "Restorations will not whiten and may need replacing",
@@ -951,9 +951,9 @@
           "uz": "Xavfni tushuntirib, ochiq dentinni himoyalashni rejalash"
         },
         {
-          "en": "Leave gel on exposed dentin longer",
-          "ru": "Оставить гель на дентине надолго",
-          "uz": "Gelni ochiq dentinga uzoq qoldirish"
+          "en": "Leave gel on the exposed dentin for longer",
+          "ru": "Оставить гель на обнажённом дентине подольше",
+          "uz": "Gelni ochiq dentinga uzoqroq qoldirib qo‘yish"
         }
       ],
       "correct": 2,
@@ -981,9 +981,9 @@
           "uz": "Tekshiruv, karies davosi va boshlang‘ich rangni qayd etish"
         },
         {
-          "en": "Root canal treatment",
-          "ru": "Эндодонтическое лечение",
-          "uz": "Ildiz kanallarini davolash"
+          "en": "Root canal treatment of the teeth to be whitened",
+          "ru": "Эндодонтическое лечение всех отбеливаемых зубов",
+          "uz": "Oqartiriladigan tishlarning ildiz kanalini davolash"
         },
         {
           "en": "Tooth extraction",

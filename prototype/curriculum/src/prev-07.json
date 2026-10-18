@@ -845,7 +845,7 @@
           "uz": "Tavsiyalarni aniqlash; shubha bo‘lsa qo‘l asboblari"
         },
         {
-          "en": "Use maximum power to finish quickly",
+          "en": "Use maximum power to finish as quickly as possible",
           "ru": "Максимальная мощность, чтобы закончить быстрее",
           "uz": "Tez tugatish uchun maksimal quvvat"
         }
@@ -905,9 +905,9 @@
           "uz": "Pigmentni oladigan eng kam abraziv pasta"
         },
         {
-          "en": "Always the coarsest paste",
-          "ru": "всегда самую грубую",
-          "uz": "Doimo eng dag‘al pasta"
+          "en": "Always the coarsest paste, to save time",
+          "ru": "всегда самую грубую, чтобы быстрее",
+          "uz": "Vaqtni tejash uchun doimo eng dag‘al pasta"
         },
         {
           "en": "Any paste, at high speed",
@@ -936,7 +936,7 @@
       "options": [
         {
           "en": "Point pressed hard at 90° to the surface",
-          "ru": "Кончиком с силой под 90° к поверхности",
+          "ru": "Кончиком, с силой прижимая под 90° к поверхности",
           "uz": "Uchi bilan yuzaga 90° da qattiq bosib"
         },
         {

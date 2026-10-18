@@ -653,37 +653,37 @@
     },
     {
       "q": {
-        "en": "What kind of diagnosis is leukoplakia?",
-        "ru": "Каким диагнозом является лейкоплакия?",
-        "uz": "Leykoplakiya qanday tashxis hisoblanadi?"
+        "en": "A leukoplakia biopsy shows hyperkeratosis without dysplasia. What is the correct follow-up?",
+        "ru": "Биопсия лейкоплакии показала гиперкератоз без дисплазии. Какова правильная дальнейшая тактика?",
+        "uz": "Leykoplakiya biopsiyasida displaziyasiz giperkeratoz aniqlandi. Keyingi to‘g‘ri yo‘l qaysi?"
       },
       "options": [
         {
-          "en": "A clinical diagnosis of exclusion",
-          "ru": "Клинический диагноз исключения",
-          "uz": "Istisno yo‘li bilan qo‘yiladigan klinik tashxis"
+          "en": "Stop risk habits and review regularly; re-biopsy if it changes",
+          "ru": "Устранить факторы риска и наблюдать; при изменениях — повторная биопсия",
+          "uz": "Xavf omillarini bartaraf etib kuzatish; o‘zgarsa, qayta biopsiya"
         },
         {
-          "en": "A laboratory diagnosis only",
-          "ru": "Только лабораторный диагноз",
-          "uz": "Faqat laboratoriya tashxisi"
+          "en": "Discharge the patient: without dysplasia it never turns malignant",
+          "ru": "Снять с наблюдения: без дисплазии озлокачествления не бывает",
+          "uz": "Kuzatuvdan chiqarish: displaziyasiz o‘choq hech qachon xavfli bo‘lmaydi"
         },
         {
-          "en": "Always a cancer",
-          "ru": "Всегда рак",
-          "uz": "Har doim saraton"
+          "en": "Wide excision with neck dissection, as for carcinoma",
+          "ru": "Широкое иссечение с шейной диссекцией, как при раке",
+          "uz": "Saratondagidek bo‘yin disseksiyasi bilan keng kesib olish"
         },
         {
-          "en": "An infectious disease",
-          "ru": "Инфекционное заболевание",
-          "uz": "Yuqumli kasallik"
+          "en": "A course of radiotherapy to prevent cancer",
+          "ru": "Курс лучевой терапии для профилактики рака",
+          "uz": "Saraton oldini olish uchun nur terapiyasi kursi"
         }
       ],
       "correct": 0,
       "explain": {
-        "en": "A white patch is called leukoplakia only after other known causes are excluded.",
-        "ru": "Белое пятно называют лейкоплакией после исключения других известных причин.",
-        "uz": "Oq dog‘ boshqa ma’lum sabablar istisno qilingandan keyin leykoplakiya deyiladi."
+        "en": "Leukoplakia without dysplasia can still transform, so habits are stopped and the lesion is reviewed, with re-biopsy if it changes.",
+        "ru": "Лейкоплакия без дисплазии всё же может озлокачествиться, поэтому устраняют факторы риска, наблюдают и при изменениях повторяют биопсию.",
+        "uz": "Displaziyasiz leykoplakiya ham xavfli o‘smaga aylanishi mumkin, shuning uchun xavf omillari bartaraf etiladi, o‘choq kuzatiladi va o‘zgarsa, qayta biopsiya olinadi."
       }
     },
     {
@@ -844,9 +844,9 @@
           "uz": "Odatni to‘xtatish bo‘yicha maslahat va biopsiyaga yo‘llash"
         },
         {
-          "en": "Immediate laser removal",
-          "ru": "Немедленное лазерное удаление",
-          "uz": "Lazer bilan darhol olib tashlash"
+          "en": "Immediate laser removal without biopsy",
+          "ru": "Немедленное лазерное удаление без биопсии",
+          "uz": "Biopsiyasiz lazer bilan darhol olib tashlash"
         },
         {
           "en": "Review in a year",

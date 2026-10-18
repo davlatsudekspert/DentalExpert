@@ -818,9 +818,9 @@
           "uz": "Bitta o‘ziga xos infeksiya"
         },
         {
-          "en": "Lack of calcium in the diet",
-          "ru": "недостатка кальция в пище",
-          "uz": "Ovqatda kalsiy yetishmasligi"
+          "en": "Lack of calcium and vitamin D in the diet",
+          "ru": "недостатка кальция и витамина D в пище",
+          "uz": "Ovqatda kalsiy va D vitamini yetishmasligi"
         },
         {
           "en": "A sugar-driven shift in plaque bacteria",
@@ -893,9 +893,9 @@
           "uz": "Biofilm bakteriyalarining hammasi virus"
         },
         {
-          "en": "Antiseptics are inactivated by enamel",
-          "ru": "Эмаль инактивирует антисептики",
-          "uz": "Emal antiseptiklarni faolsizlantiradi"
+          "en": "Antiseptics are inactivated by contact with enamel",
+          "ru": "Эмаль инактивирует антисептики при контакте",
+          "uz": "Emal bilan aloqada antiseptiklar faolsizlanadi"
         },
         {
           "en": "Biofilm forms only inside the pulp",

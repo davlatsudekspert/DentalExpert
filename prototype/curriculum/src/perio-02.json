@@ -620,7 +620,7 @@
           "uz": "Bosqich va darajali parodontitga birlashtirildi"
         },
         {
-          "en": "Moved to peri-implant diseases",
+          "en": "Moved to the peri-implant disease group",
           "ru": "Перенесены в периимплантные заболевания",
           "uz": "Implant atrofi kasalliklariga o‘tkazildi"
         }
@@ -710,14 +710,14 @@
       },
       "options": [
         {
-          "en": "BOP at more than 30% of sites",
-          "ru": "Кровоточивость более 30% участков",
-          "uz": "Nuqtalarning 30% dan ortig‘ida qonash"
+          "en": "Bleeding on probing at more than 30% of sites",
+          "ru": "Кровоточивость при зондировании более 30% участков",
+          "uz": "Zondlashda nuqtalarning 30% dan ortig‘ida qonash"
         },
         {
           "en": "Interdental CAL at two or more non-adjacent teeth",
           "ru": "Межзубная потеря прикрепления у двух и более несоседних зубов",
-          "uz": "Ikki va undan ortiq qo‘shni bo‘lmagan tishda tishlararo birikish yo‘qolishi"
+          "uz": "Ikki va undan ortiq qo‘shni bo‘lmagan tishda tishlararo CAL"
         },
         {
           "en": "Gingival enlargement",
@@ -785,9 +785,9 @@
           "uz": "Nekrotik parodontit"
         },
         {
-          "en": "Plaque-induced gingivitis",
-          "ru": "Гингивит, ассоциированный с налётом",
-          "uz": "Karash bilan bog‘liq gingivit"
+          "en": "Plaque-induced gingivitis of childhood",
+          "ru": "Гингивит, ассоциированный с налётом, у детей",
+          "uz": "Bolalikdagi karash bilan bog‘liq gingivit"
         },
         {
           "en": "Periodontitis as a manifestation of systemic disease",

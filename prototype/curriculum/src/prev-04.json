@@ -655,19 +655,19 @@
       },
       "options": [
         {
-          "en": "A molar with a large dentin cavity",
-          "ru": "Моляр с большой полостью в дентине",
-          "uz": "Dentinda katta kovakli katta oziq tish"
+          "en": "A molar with a large cavity extending into dentin",
+          "ru": "Моляр с большой кариозной полостью, доходящей до дентина",
+          "uz": "Dentingacha yetgan katta kovakli molyar"
         },
         {
-          "en": "A lower incisor in a low-risk adult",
-          "ru": "Нижний резец у взрослого с низким риском",
-          "uz": "Past xavfli kattaning pastki kesuvchi tishi"
+          "en": "A lower incisor in a low-risk adult with no caries",
+          "ru": "Нижний резец у взрослого пациента с низким риском кариеса",
+          "uz": "Karies xavfi past bo‘lgan katta yoshli odamning pastki kesuvchisi"
         },
         {
           "en": "A fully erupted first molar with deep fissures in a high-risk child",
-          "ru": "Полностью прорезавшийся первый моляр с глубокими фиссурами у ребёнка с высоким риском",
-          "uz": "Yuqori xavfli bolada chuqur fissurali to‘liq chiqqan birinchi katta oziq tish"
+          "ru": "Прорезавшийся первый моляр с глубокими фиссурами у ребёнка высокого риска",
+          "uz": "Yuqori xavfli bolada chuqur fissurali to‘liq chiqqan birinchi molyar"
         },
         {
           "en": "A crowned premolar",
@@ -880,7 +880,7 @@
           "uz": "Dag‘al olmos bor bilan silliqlash"
         },
         {
-          "en": "Apply a second etch and bond",
+          "en": "Apply a second etch and bonding layer",
           "ru": "повторно протравить и нанести адгезив",
           "uz": "Qayta yedirib, adgeziv surtish"
         }
@@ -985,9 +985,9 @@
           "uz": "Kislota emalga yetishi uchun karash va qoldiqlarni olib tashlash"
         },
         {
-          "en": "To make the patient salivate less",
-          "ru": "Чтобы уменьшить слюноотделение",
-          "uz": "So‘lak ajralishini kamaytirish uchun"
+          "en": "To make the patient salivate less during etching",
+          "ru": "Чтобы уменьшить слюноотделение во время травления",
+          "uz": "Yedirish paytida so‘lak ajralishini kamaytirish uchun"
         }
       ],
       "correct": 2,

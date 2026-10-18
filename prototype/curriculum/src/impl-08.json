@@ -751,9 +751,9 @@
           "uz": "Holat tavsifi"
         },
         {
-          "en": "Cohort study",
-          "ru": "Когортное исследование",
-          "uz": "Kogort tadqiqot"
+          "en": "Large prospective cohort study",
+          "ru": "Крупное проспективное когортное исследование",
+          "uz": "Yirik prospektiv kogort tadqiqot"
         },
         {
           "en": "Expert opinion",
@@ -831,9 +831,9 @@
           "uz": "Darslik, o‘qituvchi, imtihon"
         },
         {
-          "en": "Advertising, tradition, habit",
-          "ru": "Реклама, традиция, привычка",
-          "uz": "Reklama, an’ana, odat"
+          "en": "Advertising, tradition, colleagues’ habits",
+          "ru": "Реклама, традиция, привычки коллег",
+          "uz": "Reklama, an’ana, hamkasblar odati"
         }
       ],
       "correct": 0,
@@ -886,9 +886,9 @@
       },
       "options": [
         {
-          "en": "The child alone",
-          "ru": "Только сам ребёнок",
-          "uz": "Faqat bolaning o‘zi"
+          "en": "The child alone, without parents",
+          "ru": "Только сам ребёнок, без родителей",
+          "uz": "Faqat bolaning o‘zi, ota-onasiz"
         },
         {
           "en": "A parent or legal guardian",
@@ -996,9 +996,9 @@
           "uz": "Batafsil aytib berish"
         },
         {
-          "en": "Give the diagnosis only",
-          "ru": "Сообщить только диагноз",
-          "uz": "Faqat tashxisni aytish"
+          "en": "Give the diagnosis only, briefly",
+          "ru": "Сообщить только диагноз, кратко",
+          "uz": "Faqat tashxisni qisqacha aytish"
         },
         {
           "en": "Share nothing without consent",
@@ -1036,9 +1036,9 @@
           "uz": "Dalil sifati va tavsiya kuchini"
         },
         {
-          "en": "Clinic ratings",
-          "ru": "Рейтинг клиники",
-          "uz": "Klinika reytingini"
+          "en": "Clinic ratings and patient satisfaction",
+          "ru": "Рейтинг клиник и удовлетворённость пациентов",
+          "uz": "Klinika reytingi va bemor mamnunligi"
         },
         {
           "en": "Drug prices",
@@ -1061,9 +1061,9 @@
       },
       "options": [
         {
-          "en": "Say nothing to the patient",
-          "ru": "Не говорить пациенту",
-          "uz": "Bemorga aytmaslik"
+          "en": "Say nothing and simply fix it next time",
+          "ru": "Ничего не говорить и молча исправить позже",
+          "uz": "Bemorga aytmay, keyingi safar jimgina tuzatish"
         },
         {
           "en": "Leave it out of the notes",

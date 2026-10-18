@@ -697,14 +697,14 @@
       },
       "options": [
         {
-          "en": "Inner lip",
+          "en": "Inner surface of the lip",
           "ru": "На внутренней поверхности губы",
           "uz": "Lab ichki yuzasida"
         },
         {
           "en": "Buccal mucosa",
           "ru": "На слизистой щеки",
-          "uz": "Lunj shilliq qavatida"
+          "uz": "Lunj shilliq qavatining ichki yuzasida"
         },
         {
           "en": "Lateral tongue",
@@ -743,7 +743,7 @@
         },
         {
           "en": "Biopsy of each aphtha",
-          "ru": "Биопсия каждой афты",
+          "ru": "Биопсия каждой отдельной афты",
           "uz": "Har bir aftadan biopsiya"
         },
         {
@@ -817,9 +817,9 @@
           "uz": "Tizimli antibiotik"
         },
         {
-          "en": "Discharge without review",
-          "ru": "Отпустить без наблюдения",
-          "uz": "Kuzatishsiz qo‘yib yuborish"
+          "en": "Discharge without any review",
+          "ru": "Отпустить без какого-либо наблюдения",
+          "uz": "Hech qanday kuzatishsiz qo‘yib yuborish"
         }
       ],
       "correct": 1,
@@ -922,9 +922,9 @@
           "uz": "Antiseptik chayish va mahalliy kortikosteroid"
         },
         {
-          "en": "Systemic antiviral",
-          "ru": "Системный противовирусный препарат",
-          "uz": "Tizimli antivirus dori"
+          "en": "Systemic antiviral such as aciclovir",
+          "ru": "Системный противовирусный препарат (ацикловир)",
+          "uz": "Atsiklovir kabi tizimli antivirus dori"
         }
       ],
       "correct": 2,

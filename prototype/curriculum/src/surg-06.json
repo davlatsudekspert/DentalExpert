@@ -698,14 +698,14 @@
           "uz": "Milk birikmasini ajratib, qisqichni chuqur qo‘yish"
         },
         {
-          "en": "Section the roots",
-          "ru": "Разделить корни",
-          "uz": "Ildizlarni bo‘lish"
+          "en": "Section the roots of a multirooted tooth",
+          "ru": "Разделить корни многокорневого зуба",
+          "uz": "Ko‘p ildizli tishning ildizlarini bo‘lish"
         },
         {
-          "en": "Curette the socket",
-          "ru": "Выполнить кюретаж лунки",
-          "uz": "Lunkani kyuretaj qilish"
+          "en": "Curette the socket after the tooth is out",
+          "ru": "Выскоблить лунку после удаления зуба",
+          "uz": "Tish olingach lunkani kyuretaj qilish"
         },
         {
           "en": "Place sutures",
@@ -803,9 +803,9 @@
           "uz": "Emal-sement chegarasidan apikalroq, ildizga"
         },
         {
-          "en": "On the crown only",
-          "ru": "Только на коронку",
-          "uz": "Faqat tojga"
+          "en": "On the crown only, above the CEJ",
+          "ru": "Только на коронку, выше эмалево-цементной границы",
+          "uz": "Faqat tojga, emal-sement chegarasidan yuqoriroq"
         },
         {
           "en": "On the adjacent tooth",
@@ -868,9 +868,9 @@
       },
       "options": [
         {
-          "en": "Facial nerve palsy",
-          "ru": "Парез лицевого нерва",
-          "uz": "Yuz nervi falaji"
+          "en": "Facial nerve palsy on that side",
+          "ru": "Парез лицевого нерва на этой стороне",
+          "uz": "Shu tomonda yuz nervi falaji"
         },
         {
           "en": "Gingivitis",
@@ -973,8 +973,8 @@
       },
       "options": [
         {
-          "en": "To replace sutures",
-          "ru": "Вместо наложения швов",
+          "en": "To replace suturing of the wound",
+          "ru": "Вместо наложения швов на рану",
           "uz": "Tikuvni almashtirish uchun"
         },
         {
@@ -988,9 +988,9 @@
           "uz": "Kengaygan alveolani joyiga qaytarish uchun"
         },
         {
-          "en": "To keep it bleeding",
-          "ru": "Чтобы не останавливать кровь",
-          "uz": "Qonni to‘xtatmaslik uchun"
+          "en": "To keep the socket bleeding freely",
+          "ru": "Чтобы лунка продолжала свободно кровоточить",
+          "uz": "Lunkadan qon erkin oqib turishi uchun"
         }
       ],
       "correct": 2,

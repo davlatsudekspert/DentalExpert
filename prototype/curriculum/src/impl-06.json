@@ -776,9 +776,9 @@
           "uz": "Adrenalin yuborish"
         },
         {
-          "en": "Keep the patient sitting",
-          "ru": "Оставить сидя",
-          "uz": "O‘tirgan holatda qoldirish"
+          "en": "Keep the patient sitting upright",
+          "ru": "Оставить сидя в кресле",
+          "uz": "Bemorni o‘tirgan holatda qoldirish"
         },
         {
           "en": "Lay flat and raise the legs",
@@ -951,14 +951,14 @@
           "uz": "Salbutamol ingalyatori"
         },
         {
-          "en": "Glucose",
-          "ru": "Глюкоза",
-          "uz": "Glyukoza"
+          "en": "Oral glucose gel",
+          "ru": "Гель глюкозы внутрь",
+          "uz": "Og‘iz orqali glyukoza geli"
         },
         {
-          "en": "Aspirin",
-          "ru": "Аспирин",
-          "uz": "Aspirin"
+          "en": "Aspirin 300 mg chewed",
+          "ru": "Аспирин 300 мг разжевать",
+          "uz": "Aspirin 300 mg chaynash"
         },
         {
           "en": "Midazolam",
@@ -991,9 +991,9 @@
           "uz": "Glyukagon"
         },
         {
-          "en": "Continue treatment",
-          "ru": "Продолжить лечение",
-          "uz": "Muolajani davom ettirish"
+          "en": "Continue treatment and observe",
+          "ru": "Продолжить лечение и наблюдать",
+          "uz": "Muolajani davom ettirib, kuzatish"
         },
         {
           "en": "Stop and give sublingual GTN",
@@ -1016,8 +1016,8 @@
       },
       "options": [
         {
-          "en": "Move instruments away",
-          "ru": "Убрать инструменты вокруг",
+          "en": "Move instruments away from the patient",
+          "ru": "Убрать инструменты вокруг пациента",
           "uz": "Atrofdagi asboblarni olib qo‘yish"
         },
         {

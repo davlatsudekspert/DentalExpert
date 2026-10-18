@@ -720,7 +720,7 @@
       },
       "options": [
         {
-          "en": "On the lower distal cusp",
+          "en": "On the distal cusp of the lower first molar",
           "ru": "На дистальном бугре нижнего моляра",
           "uz": "Pastki molyarning distal do‘mbog‘ida"
         },
@@ -830,7 +830,7 @@
           "uz": "Yuqori kesuvchining kesuvchi qirrasi"
         },
         {
-          "en": "The lower incisor apex",
+          "en": "The root apex of the lower incisor",
           "ru": "Верхушка корня нижнего резца",
           "uz": "Pastki kesuvchining ildiz uchi"
         },
@@ -860,9 +860,9 @@
       },
       "options": [
         {
-          "en": "True skeletal asymmetry",
-          "ru": "Истинную скелетную асимметрию",
-          "uz": "Haqiqiy skelet asimmetriyasi"
+          "en": "True skeletal asymmetry of the mandible",
+          "ru": "Истинную скелетную асимметрию самой нижней челюсти",
+          "uz": "Pastki jag‘ning haqiqiy skelet asimmetriyasi"
         },
         {
           "en": "A Class III malocclusion",
@@ -976,7 +976,7 @@
         },
         {
           "en": "Over the lower first molar",
-          "ru": "Над нижним первым моляром",
+          "ru": "Над нижним первым постоянным моляром",
           "uz": "Pastki birinchi molyar ustida"
         },
         {

@@ -120,8 +120,8 @@
   {
    "q": "Profilaktikaga nima kiradi?",
    "options": [
-    "Faqat shirinlik",
-    "Tish tozalamaslik",
+    "Ovqatlar orasida tez-tez shirinlik yeyish",
+    "Haftada bir marta pastasiz tozalash",
     "Ftorli pasta bilan muntazam tozalash"
    ],
    "correct": 2,

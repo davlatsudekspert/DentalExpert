@@ -855,7 +855,7 @@
         {
           "en": "Electric pulp testing",
           "ru": "Электроодонтодиагностика",
-          "uz": "Pulpa elektrodiagnostikasi"
+          "uz": "Pulpa elektrodiagnostikasi (EOD)"
         },
         {
           "en": "Saliva testing",
@@ -953,9 +953,9 @@
       },
       "options": [
         {
-          "en": "It cannot be cleaned",
-          "ru": "Его невозможно чистить",
-          "uz": "Uni tozalab bo‘lmaydi"
+          "en": "It cannot be cleaned by the child",
+          "ru": "Его невозможно чистить в домашних условиях",
+          "uz": "Uni uyda tozalab bo‘lmaydi"
         },
         {
           "en": "It spoils appearance",
@@ -988,9 +988,9 @@
       },
       "options": [
         {
-          "en": "Extract the permanent canine",
-          "ru": "Сразу удалить постоянный клык",
-          "uz": "Doimiy qoziqni darhol olish"
+          "en": "Extract the permanent canine straight away",
+          "ru": "Сразу удалить постоянный клык, не дожидаясь снимка",
+          "uz": "Snimkani kutmay doimiy qoziqni darhol olish"
         },
         {
           "en": "Do nothing",
@@ -1004,7 +1004,7 @@
         },
         {
           "en": "Radiograph and refer to an orthodontist if needed",
-          "ru": "Рентгенологическое обследование и при необходимости направление к ортодонту",
+          "ru": "Рентгенограмма и при необходимости направление к ортодонту",
           "uz": "Rentgenologik tekshiruv va kerak bo‘lsa ortodontga yuborish"
         }
       ],
@@ -1023,9 +1023,9 @@
       },
       "options": [
         {
-          "en": "Align every tooth fully",
-          "ru": "Выровнять все зубы",
-          "uz": "Barcha tishlarni to‘g‘rilash"
+          "en": "Align every tooth fully in one stage",
+          "ru": "Полностью выровнять все зубы за один этап",
+          "uz": "Barcha tishlarni bir bosqichda to‘liq to‘g‘rilash"
         },
         {
           "en": "Stop or reduce a developing problem early",

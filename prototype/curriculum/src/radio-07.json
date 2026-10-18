@@ -656,9 +656,9 @@
       },
       "options": [
         {
-          "en": "On the occlusal surface",
-          "ru": "На окклюзионной поверхности",
-          "uz": "Okklyuzion yuzada"
+          "en": "In the occlusal fissures and pits",
+          "ru": "На окклюзионной поверхности в фиссурах",
+          "uz": "Okklyuzion yuzadagi fissura va chuqurchalarda"
         },
         {
           "en": "At the root apex",
@@ -802,7 +802,7 @@
         },
         {
           "en": "The image is faulty",
-          "ru": "Снимок сделан неверно",
+          "ru": "Снимок сделан технически неверно",
           "uz": "Rentgenogramma noto‘g‘ri olingan"
         },
         {
@@ -846,9 +846,9 @@
           "uz": "Amalgama va pulpa"
         },
         {
-          "en": "Mental foramen and canal",
-          "ru": "Подбородочное отверстие и канал",
-          "uz": "Iyak teshigi va kanal"
+          "en": "Mental foramen and mandibular canal",
+          "ru": "Подбородочное отверстие и нижнечелюстной канал",
+          "uz": "Iyak teshigi va pastki jag‘ kanali"
         }
       ],
       "correct": 0,

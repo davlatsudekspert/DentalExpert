@@ -677,9 +677,9 @@
           "uz": "Mandibulyar blokada va lunj nervi blokadasi"
         },
         {
-          "en": "Infraorbital block",
-          "ru": "Инфраорбитальная блокада",
-          "uz": "Infraorbital blokada"
+          "en": "Infraorbital block plus palatal infiltration",
+          "ru": "Инфраорбитальная блокада и нёбная инфильтрация",
+          "uz": "Infraorbital blokada va tanglay infiltratsiyasi"
         },
         {
           "en": "PSA block",
@@ -782,9 +782,9 @@
           "uz": "Yuqori lab uvishishi"
         },
         {
-          "en": "Numbness of the nose tip",
-          "ru": "Онемение кончика носа",
-          "uz": "Burun uchi uvishishi"
+          "en": "Numbness of the nose tip and cheek",
+          "ru": "Онемение кончика носа и щеки",
+          "uz": "Burun uchi va yonoq uvishishi"
         },
         {
           "en": "Numbness of the lower lip and chin",
@@ -807,9 +807,9 @@
       },
       "options": [
         {
-          "en": "Infraorbital",
-          "ru": "Инфраорбитальная",
-          "uz": "Infraorbital"
+          "en": "Infraorbital (anterior superior alveolar)",
+          "ru": "Инфраорбитальная (передний верхний альвеолярный)",
+          "uz": "Infraorbital (oldingi yuqori alveolyar)"
         },
         {
           "en": "Nasopalatine",
@@ -847,9 +847,9 @@
           "uz": "Vazirani-Akinosi (og‘iz yopiq)"
         },
         {
-          "en": "Gow-Gates",
-          "ru": "Гоу-Гейтс",
-          "uz": "Gow-Gates"
+          "en": "Gow-Gates (wide-open mouth)",
+          "ru": "Гоу-Гейтс (рот широко открыт)",
+          "uz": "Gow-Gates (og‘iz keng ochiq)"
         },
         {
           "en": "Infraorbital block",

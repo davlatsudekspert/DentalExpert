@@ -766,9 +766,9 @@
       },
       "options": [
         {
-          "en": "As hard as possible by hand",
-          "ru": "Рукой как можно сильнее",
-          "uz": "Qo‘l bilan iloji boricha kuchli"
+          "en": "As hard as possible by hand, to the stop",
+          "ru": "Рукой как можно сильнее, до упора",
+          "uz": "Qo‘l bilan iloji boricha kuchli, oxirigacha"
         },
         {
           "en": "With a dental handpiece",
@@ -841,9 +841,9 @@
           "uz": "Yaxshi gigiyena"
         },
         {
-          "en": "Implant too long",
-          "ru": "Слишком длинный имплантат",
-          "uz": "Implant juda uzun"
+          "en": "Implant too long for the bone",
+          "ru": "Слишком длинный имплантат для этой кости",
+          "uz": "Implant suyakka nisbatan juda uzun"
         },
         {
           "en": "Occlusal overload or wrong torque",
@@ -851,9 +851,9 @@
           "uz": "Okklyuzion ortiqcha yuklama yoki noto‘g‘ri moment"
         },
         {
-          "en": "Zirconia shade",
-          "ru": "Цвет циркониевой коронки",
-          "uz": "Sirkoniy toj rangi"
+          "en": "Wrongly chosen zirconia shade",
+          "ru": "Неверно подобран цвет циркония",
+          "uz": "Sirkoniy toj rangi noto‘g‘ri tanlangan"
         }
       ],
       "correct": 2,
@@ -921,9 +921,9 @@
           "uz": "Implant qisqaroq bo‘ladi"
         },
         {
-          "en": "No abutment needed",
-          "ru": "Абатмент не нужен",
-          "uz": "Abatment kerak emas"
+          "en": "No abutment is needed at all",
+          "ru": "Абатмент вообще не нужен",
+          "uz": "Abatment umuman kerak emas"
         }
       ],
       "correct": 0,
@@ -956,9 +956,9 @@
           "uz": "Narxni kamaytiradi"
         },
         {
-          "en": "It removes the need for hygiene",
-          "ru": "Исключает гигиену",
-          "uz": "Gigiyenani to‘xtatadi"
+          "en": "It removes the patient’s need for hygiene",
+          "ru": "Избавляет пациента от необходимости гигиены",
+          "uz": "Bemorga gigiyena qilish zaruratini yo‘qotadi"
         }
       ],
       "correct": 1,

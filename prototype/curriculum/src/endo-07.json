@@ -708,9 +708,9 @@
           "uz": "Eritmalarni isitish"
         },
         {
-          "en": "Mix EDTA with hypochlorite",
-          "ru": "Смешать ЭДТА с гипохлоритом",
-          "uz": "EDTAni gipoxlorit bilan aralashtirish"
+          "en": "Mix EDTA with hypochlorite in the syringe",
+          "ru": "Смешать ЭДТА с гипохлоритом в шприце",
+          "uz": "EDTAni gipoxlorit bilan shpritsda aralashtirish"
         }
       ],
       "correct": 1,
@@ -728,14 +728,14 @@
       },
       "options": [
         {
-          "en": "It dissolves tissue",
-          "ru": "Растворяет ткани",
-          "uz": "To‘qimani eritadi"
+          "en": "It dissolves necrotic pulp tissue",
+          "ru": "Растворяет некротизированные ткани пульпы",
+          "uz": "Nekrotik pulpa to‘qimasini eritadi"
         },
         {
-          "en": "It removes the smear layer",
-          "ru": "Удаляет смазанный слой",
-          "uz": "Surtma qatlamni oladi"
+          "en": "It removes the smear layer like EDTA",
+          "ru": "Удаляет смазанный слой, как ЭДТА",
+          "uz": "EDTA kabi surtma qatlamni oladi"
         },
         {
           "en": "It is cheap and odourless",
@@ -803,9 +803,9 @@
           "uz": "Gipoxlorit apeksdan chiqib ketgan"
         },
         {
-          "en": "Allergy to the anaesthetic",
-          "ru": "Аллергия на анестетик",
-          "uz": "Anestetikka allergiya"
+          "en": "An allergic reaction to the anaesthetic",
+          "ru": "Аллергическая реакция на анестетик",
+          "uz": "Anestetikka allergik reaksiya"
         },
         {
           "en": "A pulpitis flare-up",
@@ -943,7 +943,7 @@
           "uz": "Kanalni quritish"
         },
         {
-          "en": "To enlarge the foramen",
+          "en": "To enlarge the apical foramen",
           "ru": "Расширить апикальное отверстие",
           "uz": "Apikal teshikni kengaytirish"
         },

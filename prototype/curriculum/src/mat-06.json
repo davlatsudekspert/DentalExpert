@@ -835,9 +835,9 @@
           "uz": "Ekzotermik reaksiyani sekinlatib, ish vaqtini uzaytirish uchun"
         },
         {
-          "en": "To increase fluoride release",
-          "ru": "Чтобы усилить выделение фтора",
-          "uz": "Ftor ajralishini oshirish uchun"
+          "en": "To increase fluoride release and adhesion",
+          "ru": "Чтобы усилить выделение фтора и повысить адгезию цемента",
+          "uz": "Ftor ajralishini va adgeziyani oshirish uchun"
         },
         {
           "en": "To change its colour",
@@ -910,9 +910,9 @@
           "uz": "Rang yaxshilanishi uchun"
         },
         {
-          "en": "So the cement dissolves faster",
-          "ru": "Чтобы цемент быстрее растворялся",
-          "uz": "Sement tezroq erishi uchun"
+          "en": "So the cement dissolves faster under the crown",
+          "ru": "Чтобы цемент быстрее растворялся под коронкой",
+          "uz": "Sement koronka ostida tezroq erib ketishi uchun"
         }
       ],
       "correct": 0,
@@ -980,9 +980,9 @@
           "uz": "Vaqt o‘tishi bilan eriydi va mustahkamligi past"
         },
         {
-          "en": "It stains the tooth yellow",
-          "ru": "Окрашивает зуб в жёлтый",
-          "uz": "Tishni sariq rangga bo‘yaydi"
+          "en": "It stains the tooth yellow over time",
+          "ru": "Со временем окрашивает зуб в жёлтый",
+          "uz": "Vaqt o‘tishi bilan tishni sariq rangga bo‘yaydi"
         }
       ],
       "correct": 2,
@@ -1045,9 +1045,9 @@
           "uz": "Gel holatida, qisqa yoritishdan keyin"
         },
         {
-          "en": "A day after cementation",
-          "ru": "Через сутки после фиксации",
-          "uz": "Fiksatsiyadan bir kun keyin"
+          "en": "A day after cementation, once fully set",
+          "ru": "Через сутки после фиксации, когда всё затвердеет",
+          "uz": "Fiksatsiyadan bir kun keyin, to‘liq qotganda"
         },
         {
           "en": "Before mixing",

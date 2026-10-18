@@ -863,9 +863,9 @@
           "uz": "Kukun va suv nisbati noto‘g‘ri"
         },
         {
-          "en": "The material is too hydrophilic",
-          "ru": "Материал слишком гидрофилен",
-          "uz": "Material juda gidrofil"
+          "en": "The material was too hydrophilic to set",
+          "ru": "Материал слишком гидрофилен, чтобы затвердеть",
+          "uz": "Material haddan tashqari gidrofil bo‘lgani uchun qotmagan"
         }
       ],
       "correct": 1,
@@ -964,7 +964,7 @@
         },
         {
           "en": "It decomposes in light",
-          "ru": "Разрушается на свету",
+          "ru": "Разрушается под действием света",
           "uz": "U yorug‘likda parchalanadi"
         },
         {
@@ -1028,9 +1028,9 @@
           "uz": "Alginat"
         },
         {
-          "en": "Impression compound",
-          "ru": "Термопластическая масса",
-          "uz": "Termoplastik massa"
+          "en": "Thermoplastic impression compound",
+          "ru": "Термопластическая оттискная масса",
+          "uz": "Termoplastik qolip massasi"
         },
         {
           "en": "Hydrophilic A-silicone or polyether",
@@ -1065,17 +1065,17 @@
         {
           "en": "Polyether",
           "ru": "Полиэфир",
-          "uz": "Polieter"
+          "uz": "Polieter massasi"
         },
         {
           "en": "A-silicone",
           "ru": "А-силикон",
-          "uz": "A-silikon"
+          "uz": "A-silikon massasi"
         },
         {
           "en": "Alginate",
           "ru": "Альгинат",
-          "uz": "Alginat"
+          "uz": "Alginat massasi"
         }
       ],
       "correct": 0,

@@ -725,9 +725,9 @@
           "uz": "Shakar iste’molining chastotasi"
         },
         {
-          "en": "Amount of protein",
-          "ru": "Количество белка",
-          "uz": "Oqsil miqdori"
+          "en": "Amount of protein in food",
+          "ru": "Количество белка в пище",
+          "uz": "Ovqatdagi oqsil miqdori"
         },
         {
           "en": "Food temperature",
@@ -840,9 +840,9 @@
           "uz": "Shakar iste’moli kamaygan"
         },
         {
-          "en": "Bacteria disappeared entirely",
-          "ru": "Бактерии полностью исчезли",
-          "uz": "Bakteriyalar butunlay yo‘qolgan"
+          "en": "Oral bacteria disappeared entirely",
+          "ru": "Бактерии полости рта полностью исчезли",
+          "uz": "Og‘iz bakteriyalari butunlay yo‘qolgan"
         }
       ],
       "correct": 0,
@@ -905,9 +905,9 @@
           "uz": "Mutans streptokokklari va laktobakteriyalar"
         },
         {
-          "en": "Periodontal anaerobes",
-          "ru": "Пародонтопатогенные анаэробы",
-          "uz": "Parodontopatogen anaeroblar"
+          "en": "Periodontal anaerobes (P. gingivalis)",
+          "ru": "Пародонтопатогенные анаэробы (P. gingivalis)",
+          "uz": "Parodontopatogen anaeroblar (P. gingivalis)"
         },
         {
           "en": "Escherichia coli",
@@ -975,9 +975,9 @@
           "uz": "Ildizda bakteriya bo‘lmaydi"
         },
         {
-          "en": "Roots are made of fluorapatite",
-          "ru": "Корень состоит из фторапатита",
-          "uz": "Ildiz ftorapatitdan iborat"
+          "en": "Root surfaces are made mainly of fluorapatite",
+          "ru": "Поверхность корня состоит в основном из фторапатита",
+          "uz": "Ildiz yuzasi asosan ftorapatitdan iborat"
         },
         {
           "en": "Saliva never reaches roots",

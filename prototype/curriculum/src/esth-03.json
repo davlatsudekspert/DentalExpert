@@ -787,9 +787,9 @@
           "uz": "O‘tishni yashirish va adgeziyani oshirish"
         },
         {
-          "en": "To remove the contact point",
-          "ru": "Устранить контактный пункт",
-          "uz": "Kontakt nuqtasini olib tashlash"
+          "en": "To remove the contact point entirely",
+          "ru": "Полностью устранить контактный пункт",
+          "uz": "Kontakt nuqtasini butunlay olib tashlash"
         },
         {
           "en": "To lower the occlusion",
@@ -927,9 +927,9 @@
           "uz": "Kislorod bilan ingibitsiya qatlamini kamaytirish uchun"
         },
         {
-          "en": "To remove the adhesive",
-          "ru": "Чтобы удалить адгезив",
-          "uz": "Adgezivni olib tashlash uchun"
+          "en": "To remove excess adhesive",
+          "ru": "Чтобы удалить излишки адгезива",
+          "uz": "Ortiqcha adgezivni olib tashlash uchun"
         },
         {
           "en": "To cool the pulp",
@@ -958,7 +958,7 @@
         },
         {
           "en": "Grind the opposing tooth heavily",
-          "ru": "Сильно сошлифовать антагонист",
+          "ru": "Сильно сошлифовать зуб-антагонист",
           "uz": "Antagonist tishni ko‘p charxlash"
         },
         {

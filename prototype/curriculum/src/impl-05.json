@@ -624,9 +624,9 @@
           "uz": "Implant harakatchanligi"
         },
         {
-          "en": "Progressive bone loss",
-          "ru": "Прогрессирующая убыль кости",
-          "uz": "Progressiv suyak yo‘qolishi"
+          "en": "Progressive bone loss around the implant",
+          "ru": "Прогрессирующая убыль кости вокруг имплантата",
+          "uz": "Implant atrofida progressiv suyak yo‘qolishi"
         },
         {
           "en": "Implant fracture",
@@ -651,7 +651,7 @@
         {
           "en": "Mucosal redness",
           "ru": "Покраснение десны",
-          "uz": "Milk qizarishi"
+          "uz": "Shilliq qavat qizarishi"
         },
         {
           "en": "Presence of plaque",
@@ -804,9 +804,9 @@
           "uz": "Yengil kuch bilan zondlash muhim tashxis usuli"
         },
         {
-          "en": "Probe only if there is pain",
-          "ru": "Зондируют только при боли",
-          "uz": "Faqat og‘riq bo‘lsa zondlanadi"
+          "en": "Probe only when the patient reports pain",
+          "ru": "Зондируют только при жалобах на боль",
+          "uz": "Faqat og‘riq bo‘lsagina zondlash mumkin"
         }
       ],
       "correct": 2,
@@ -834,9 +834,9 @@
           "uz": "Suyak plastikasi"
         },
         {
-          "en": "Systemic antibiotics",
-          "ru": "Системные антибиотики",
-          "uz": "Tizimli antibiotik"
+          "en": "Systemic antibiotics for one week",
+          "ru": "Системные антибиотики в течение недели",
+          "uz": "Bir hafta davomida tizimli antibiotik"
         },
         {
           "en": "Mechanical cleaning and better hygiene",
@@ -909,9 +909,9 @@
           "uz": "Keyingi ko‘rikni belgilamaslik"
         },
         {
-          "en": "Test-unscrew the implant",
-          "ru": "Пробное выкручивание имплантата",
-          "uz": "Implantni tortib ko‘rish"
+          "en": "Test-unscrew the implant to check it",
+          "ru": "Пробное выкручивание имплантата для проверки",
+          "uz": "Tekshirish uchun implantni burab chiqarib ko‘rish"
         }
       ],
       "correct": 0,

@@ -725,7 +725,7 @@
         {
           "en": "Extract the lateral incisors",
           "ru": "Удалить боковые резцы",
-          "uz": "Yon kesuvchilarni olish"
+          "uz": "Yon kesuvchi tishlarni olib tashlash"
         },
         {
           "en": "Monitor until the canines erupt",
@@ -853,9 +853,9 @@
       },
       "options": [
         {
-          "en": "Distal drift of the molars",
-          "ru": "За счёт дистального сдвига моляров",
-          "uz": "Molyarlar orqaga siljishi hisobiga"
+          "en": "Distal drift of the first permanent molars",
+          "ru": "За счёт дистального сдвига первых постоянных моляров",
+          "uz": "Birinchi doimiy molyarlar orqaga siljishi hisobiga"
         },
         {
           "en": "More upright incisors",
@@ -923,9 +923,9 @@
       },
       "options": [
         {
-          "en": "A short upper lip frenum",
-          "ru": "Короткая уздечка верхней губы",
-          "uz": "Yuqori lab yuganchasining kaltaligi"
+          "en": "A short or low-attached upper lip frenum",
+          "ru": "Короткая или низко прикреплённая уздечка губы",
+          "uz": "Yuqori lab yuganchasining kalta yoki past birikkani"
         },
         {
           "en": "A digit-sucking habit",

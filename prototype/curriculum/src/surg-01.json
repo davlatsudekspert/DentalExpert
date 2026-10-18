@@ -832,9 +832,9 @@
           "uz": "Spirtli artish"
         },
         {
-          "en": "Ultraviolet light",
-          "ru": "Ультрафиолетовое облучение",
-          "uz": "Ultrabinafsha nurlash"
+          "en": "Ultraviolet light in a closed cabinet",
+          "ru": "Ультрафиолетовое облучение в закрытой камере",
+          "uz": "Yopiq kamerada ultrabinafsha nurlash"
         },
         {
           "en": "Boiling",
@@ -977,9 +977,9 @@
           "uz": "Rejali aralashuvni kechiktirib, kardiolog bilan maslahatlashish"
         },
         {
-          "en": "Give antibiotics and extract immediately",
-          "ru": "Дать антибиотик и сразу удалить",
-          "uz": "Antibiotik berib, darhol olish"
+          "en": "Give antibiotics and extract immediately at this visit",
+          "ru": "Назначить антибиотик и удалить зуб сразу в этот визит",
+          "uz": "Antibiotik berib, tishni shu tashrifning o‘zida darhol olish"
         }
       ],
       "correct": 2,
@@ -1037,14 +1037,14 @@
           "uz": "Antirezorbtiv dorilar (masalan, bisfosfonatlar)"
         },
         {
-          "en": "Antihistamines",
-          "ru": "Антигистаминные",
-          "uz": "Antigistaminlar"
+          "en": "Antihistamines (e.g. loratadine)",
+          "ru": "Антигистаминные (например, лоратадин)",
+          "uz": "Antigistaminlar (masalan, loratadin)"
         },
         {
-          "en": "Proton pump inhibitors",
-          "ru": "Ингибиторы протонной помпы",
-          "uz": "Proton pompa ingibitorlari"
+          "en": "Proton pump inhibitors (e.g. omeprazole)",
+          "ru": "Ингибиторы протонной помпы (например, омепразол)",
+          "uz": "Proton pompa ingibitorlari (masalan, omeprazol)"
         },
         {
           "en": "Paracetamol",
@@ -1107,9 +1107,9 @@
           "uz": "Sog‘lom 25 yoshli talaba"
         },
         {
-          "en": "A smoker with no other disease",
-          "ru": "Курильщик без других болезней",
-          "uz": "Chekuvchi, boshqa kasalligi yo‘q"
+          "en": "A smoker with no other systemic disease",
+          "ru": "Курильщик без других системных заболеваний",
+          "uz": "Chekuvchi, boshqa tizimli kasalligi yo‘q"
         },
         {
           "en": "Severe heart failure limiting activity",
@@ -1117,9 +1117,9 @@
           "uz": "Faoliyatni cheklaydigan og‘ir yurak yetishmovchiligi"
         },
         {
-          "en": "A brain-dead organ donor",
-          "ru": "Донор со смертью мозга",
-          "uz": "Miya o‘limi qayd etilgan donor"
+          "en": "A brain-dead organ donor awaiting retrieval",
+          "ru": "Донор органов с констатированной смертью мозга",
+          "uz": "Miya o‘limi qayd etilgan, organ donori bo‘lgan bemor"
         }
       ],
       "correct": 2,

@@ -818,9 +818,9 @@
           "uz": "Emal gipoplaziyasi"
         },
         {
-          "en": "Pulp canal obliteration",
-          "ru": "Облитерация пульпы",
-          "uz": "Pulpa obliteratsiyasi"
+          "en": "Pulp canal obliteration (calcific metamorphosis)",
+          "ru": "Облитерация канала пульпы (кальцификация)",
+          "uz": "Pulpa kanali obliteratsiyasi (kalsifikatsiya)"
         },
         {
           "en": "Ankylosis and replacement resorption",
@@ -953,8 +953,8 @@
       },
       "options": [
         {
-          "en": "Scrub the root with a brush",
-          "ru": "Почистить корень щёткой",
+          "en": "Scrub the root surface with a brush",
+          "ru": "Почистить поверхность корня щёткой",
           "uz": "Cho‘tka bilan ildizni ishqalash"
         },
         {

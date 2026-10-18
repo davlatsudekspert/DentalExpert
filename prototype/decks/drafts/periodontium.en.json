@@ -85,7 +85,7 @@
   {
    "q": "What is gingivitis?",
    "options": [
-    "Loss of enamel",
+    "Loss of enamel from the teeth",
     "Bone growth",
     "Inflammation of the gingiva"
    ],
@@ -97,7 +97,7 @@
    "options": [
     "The supporting tissues, including bone, are damaged",
     "There is no difference at all",
-    "Only the tooth color changes"
+    "Only the tooth color changes over time"
    ],
    "correct": 0,
    "explanation": "In periodontitis, the supporting tissues are damaged."

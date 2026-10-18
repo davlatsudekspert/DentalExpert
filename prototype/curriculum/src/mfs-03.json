@@ -709,9 +709,9 @@
           "uz": "Tish qatorida pog‘ona va patologik harakat"
         },
         {
-          "en": "Periorbital bruising",
-          "ru": "Периорбитальная гематома",
-          "uz": "Ko‘z atrofi gematomasi"
+          "en": "Bilateral periorbital bruising (raccoon eyes)",
+          "ru": "Двусторонняя периорбитальная гематома («очки»)",
+          "uz": "Ikki tomonlama ko‘z atrofi gematomasi"
         }
       ],
       "correct": 2,
@@ -769,7 +769,7 @@
           "uz": "Tishlarning sezuvchanligi"
         },
         {
-          "en": "Joint ankylosis",
+          "en": "Ankylosis of the TM joint",
           "ru": "Анкилоз сустава",
           "uz": "Bo‘g‘im ankilozi"
         },
@@ -839,9 +839,9 @@
           "uz": "Toj o‘simtasi sinishi"
         },
         {
-          "en": "Alveolar fracture",
-          "ru": "Перелом альвеолярного отростка",
-          "uz": "Alveolyar o‘simta sinishi"
+          "en": "Alveolar process fracture of the incisors",
+          "ru": "Перелом альвеолярного отростка во фронтальном отделе",
+          "uz": "Old qismdagi alveolyar o‘simta sinishi"
         },
         {
           "en": "Body or angle fracture through the canal",
@@ -954,9 +954,9 @@
           "uz": "Ildizi singan yoki repozitsiyaga to‘sqinlik qilsa"
         },
         {
-          "en": "Only at the patient’s request",
-          "ru": "Только по желанию пациента",
-          "uz": "Faqat bemor xohlasa"
+          "en": "Only at the patient’s own request",
+          "ru": "Только по собственному желанию пациента",
+          "uz": "Faqat bemorning o‘zi xohlagan taqdirdagina"
         }
       ],
       "correct": 2,
@@ -981,7 +981,7 @@
         {
           "en": "Rinsing with toothpaste only",
           "ru": "Только полоскание с пастой",
-          "uz": "Faqat tish pastasi bilan yuvish"
+          "uz": "Faqat tish pastasi bilan og‘izni yuvish"
         },
         {
           "en": "Applying heat to the site",
@@ -989,8 +989,8 @@
           "uz": "Sinish joyini qizdirish"
         },
         {
-          "en": "Watching for a month",
-          "ru": "Наблюдение в течение месяца",
+          "en": "Watching for a month without treatment",
+          "ru": "Наблюдение в течение месяца без лечения",
           "uz": "Bir oy kuzatib turish"
         }
       ],

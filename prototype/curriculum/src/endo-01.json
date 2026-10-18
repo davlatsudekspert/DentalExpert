@@ -956,9 +956,9 @@
       },
       "options": [
         {
-          "en": "Resorption of primary dentin",
-          "ru": "Резорбция первичного дентина",
-          "uz": "Birlamchi dentin rezorbsiyasi"
+          "en": "Age-related resorption of primary dentin",
+          "ru": "Резорбция первичного дентина с возрастом",
+          "uz": "Yosh bilan birlamchi dentin rezorbsiyasi"
         },
         {
           "en": "Internal resorption",
@@ -1008,7 +1008,7 @@
         {
           "en": "A possible second lingual canal",
           "ru": "Возможный второй язычный канал",
-          "uz": "Ikkinchi til tomon kanali bo‘lishi mumkinligini"
+          "uz": "Ikkinchi lingval kanal ehtimolini"
         }
       ],
       "correct": 3,
@@ -1028,7 +1028,7 @@
         {
           "en": "In response to injury such as caries",
           "ru": "В ответ на раздражитель, например кариес",
-          "uz": "Ta’sirga, masalan karies yoki preparatsiyaga javoban"
+          "uz": "Karies kabi shikastlovchi ta’sirga javoban"
         },
         {
           "en": "Only before tooth eruption",

@@ -15,8 +15,9 @@ Banks:
 Hard errors (exit 1): missing stem/options/explanation, fewer than 2 options, key not a valid in-range index, empty or
 duplicate options, the same question twice, languages that disagree on option count / key / "all-none of the above"
 position, generated or served copies that differ from the source, script leaks (Cyrillic in uz/en, no Cyrillic in ru),
-Uzbek o‘/g‘ written with a wrong apostrophe.
-Warnings (reported, never fail): skewed key positions per subject, the key being the much-longer option (counts only),
+Uzbek o‘/g‘ written with a wrong apostrophe, more than GIVEAWAY_MAX_SHARE of a subject's questions whose key is the
+conspicuously longest option (see giveaway()).
+Warnings (reported, never fail): skewed key positions per subject,
 Latin words inside Russian text, text left identical across languages, "all/none of the above" options.
 """
 import json, re, subprocess, sys
@@ -187,6 +188,9 @@ def check_question(qid, per):
                 err(f'{qid} {field}', f'{a} and {b} are identical (untranslated): {vals[a]!r}')
 
 
+GIVEAWAY_MAX_SHARE = 0.15   # hard error above this share per subject/bank (12 of 80 topic questions, 4 of 30 deck, 3 of 20 daily)
+
+
 def giveaway(per):
     """The key is the longest option and ≥1.5× the longest distractor (en/uz/ru checked separately)."""
     hits = []
@@ -308,6 +312,12 @@ def main():
         if flag:
             warn('skew', subj, f'key positions {dict(sorted(cnt.items()))} of {tot}')
         print(f'  {subj:8s} {n} opts  n={tot:4d}  {row}{flag}   longest-key giveaway: {give[subj]}/{give_total[subj]}')
+    # regression guard: the "pick the conspicuously longest option" strategy must not pay off in any bank
+    for subj in sorted(give_total):
+        limit = int(GIVEAWAY_MAX_SHARE * give_total[subj])
+        if give[subj] > limit:
+            err(subj, f'{give[subj]}/{give_total[subj]} questions have the key as the conspicuously longest option '
+                      f'(limit {limit}); lengthen the distractors or tighten the key (see giveaway())')
 
     kinds = Counter(k for k, _ in warnings)
     if not quiet:

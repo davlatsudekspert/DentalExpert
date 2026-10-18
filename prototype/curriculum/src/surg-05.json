@@ -674,14 +674,14 @@
           "uz": "Tiklab bo‘lmaydigan, chuqur buzilgan tish"
         },
         {
-          "en": "Reversible pulpitis",
-          "ru": "Обратимый пульпит",
-          "uz": "Qaytar pulpit"
+          "en": "Reversible pulpitis in a restorable tooth",
+          "ru": "Обратимый пульпит в восстановимом зубе",
+          "uz": "Tiklanadigan tishdagi qaytar pulpit"
         },
         {
-          "en": "Enamel caries",
-          "ru": "Кариес эмали",
-          "uz": "Emal kariesi"
+          "en": "Enamel caries on a proximal surface",
+          "ru": "Кариес эмали на контактной поверхности",
+          "uz": "Kontakt yuzadagi emal kariesi"
         },
         {
           "en": "Gingivitis",
@@ -739,9 +739,9 @@
       },
       "options": [
         {
-          "en": "Palatal beak, for the palatal root",
-          "ru": "На нёбной, для нёбного корня",
-          "uz": "Tanglay jag‘ida, tanglay ildizi uchun"
+          "en": "Palatal beak, to grip the palatal root",
+          "ru": "На нёбной, чтобы захватить нёбный корень",
+          "uz": "Tanglay jag‘ida, tanglay ildizini ushlash uchun"
         },
         {
           "en": "On both beaks",
@@ -849,9 +849,9 @@
           "uz": "Dori bilan bog‘liq jag‘ osteonekrozi"
         },
         {
-          "en": "Anaphylaxis",
-          "ru": "Анафилаксия",
-          "uz": "Anafilaksiya"
+          "en": "Anaphylaxis to the local anaesthetic",
+          "ru": "Анафилаксия на местный анестетик",
+          "uz": "Mahalliy anestetikka anafilaksiya"
         },
         {
           "en": "Excess bone formation",
@@ -914,9 +914,9 @@
       },
       "options": [
         {
-          "en": "Curetting the socket",
-          "ru": "Кюретаж лунки",
-          "uz": "Lunkani kyuretaj qilish"
+          "en": "Curetting granulation tissue from the socket",
+          "ru": "Кюретаж грануляций из лунки",
+          "uz": "Lunkadan granulyatsiyalarni kyuretaj qilish"
         },
         {
           "en": "Placing sutures",
@@ -929,7 +929,7 @@
           "uz": "Ildizni bo‘lish"
         },
         {
-          "en": "Detaching the gingival attachment around the neck",
+          "en": "Detaching the gingiva around the tooth neck",
           "ru": "Отслоение десны вокруг шейки зуба",
           "uz": "Tish bo‘yni atrofidagi milk birikmasini ajratish"
         }

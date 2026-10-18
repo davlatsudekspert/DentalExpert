@@ -931,9 +931,9 @@
           "uz": "Hujayra kulturasida sitotoksiklik testi"
         },
         {
-          "en": "Clinical trial in patients",
-          "ru": "Клиническое исследование у пациентов",
-          "uz": "Bemorlarda klinik tadqiqot"
+          "en": "Large clinical trial in patients",
+          "ru": "Крупное клиническое исследование у пациентов",
+          "uz": "Bemorlarda keng ko‘lamli klinik tadqiqot"
         },
         {
           "en": "Pulp usage test",
@@ -961,9 +961,9 @@
       },
       "options": [
         {
-          "en": "Very high hardness",
-          "ru": "Очень высокая твёрдость",
-          "uz": "Juda yuqori qattiqlik"
+          "en": "Very high hardness and stiffness",
+          "ru": "Очень высокая твёрдость и жёсткость",
+          "uz": "Juda yuqori qattiqlik va bikrlik"
         },
         {
           "en": "High thermal conductivity",
@@ -1081,9 +1081,9 @@
           "uz": "Rangini yaxshilash uchun"
         },
         {
-          "en": "To raise thermal conductivity",
-          "ru": "Для повышения теплопроводности",
-          "uz": "Issiqlik o‘tkazuvchanlikni oshirish uchun"
+          "en": "To raise the filling’s thermal conductivity",
+          "ru": "Для повышения теплопроводности пломбы",
+          "uz": "Plombaning issiqlik o‘tkazuvchanligini oshirish uchun"
         }
       ],
       "correct": 0,

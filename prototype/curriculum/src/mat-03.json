@@ -762,9 +762,9 @@
           "uz": "Emal bog‘lanishi kuchayadi"
         },
         {
-          "en": "The smear layer reforms",
-          "ru": "Смазанный слой образуется снова",
-          "uz": "Smear qatlami qayta hosil bo‘ladi"
+          "en": "The smear layer reforms on the dentin",
+          "ru": "Смазанный слой образуется на дентине снова",
+          "uz": "Smear qatlami dentinda qayta hosil bo‘ladi"
         },
         {
           "en": "The composite cures faster",
@@ -787,9 +787,9 @@
       },
       "options": [
         {
-          "en": "Rinse it away completely",
-          "ru": "Полностью смывают его",
-          "uz": "To‘liq yuvib tashlaydi"
+          "en": "Rinse it away completely before bonding",
+          "ru": "Полностью смывают его перед бондингом",
+          "uz": "Bonddan oldin uni to‘liq yuvib tashlaydi"
         },
         {
           "en": "Leave it untouched",
@@ -857,9 +857,9 @@
       },
       "options": [
         {
-          "en": "Only in etch-and-rinse mode",
-          "ru": "Только в режиме тотального травления",
-          "uz": "Faqat total-etch rejimida"
+          "en": "Only in etch-and-rinse mode, never self-etch",
+          "ru": "Только в режиме тотального травления, без самопротравливания",
+          "uz": "Faqat total-etch rejimida, self-etch rejimisiz"
         },
         {
           "en": "Only for ceramics",
@@ -907,7 +907,7 @@
           "uz": "Silan ishlatilmagan"
         },
         {
-          "en": "Composite too highly filled",
+          "en": "The composite was too highly filled",
           "ru": "Композит слишком наполнен",
           "uz": "Kompozit juda ko‘p to‘ldirilgan"
         }
@@ -997,9 +997,9 @@
       },
       "options": [
         {
-          "en": "Too many steps",
-          "ru": "Слишком много этапов",
-          "uz": "Juda ko‘p bosqichlar"
+          "en": "Too many separate application steps",
+          "ru": "Слишком много отдельных этапов нанесения",
+          "uz": "Juda ko‘p alohida qo‘llash bosqichlari"
         },
         {
           "en": "Requires rinsing",

@@ -714,9 +714,9 @@
       },
       "options": [
         {
-          "en": "Mumps",
+          "en": "Epidemic parotitis (mumps)",
           "ru": "Эпидемический паротит",
-          "uz": "Epidemik parotit"
+          "uz": "Epidemik parotit (tepki)"
         },
         {
           "en": "Acute bacterial sialadenitis",
@@ -864,14 +864,14 @@
           "uz": "O‘sma juda tez o‘sadi"
         },
         {
-          "en": "The gland stops working",
+          "en": "The gland stops working completely",
           "ru": "Железа полностью перестаёт работать",
           "uz": "Bez butunlay ishlamay qoladi"
         },
         {
-          "en": "The nerve is always cut",
+          "en": "The facial nerve is always cut",
           "ru": "Всегда пересекается нерв",
-          "uz": "Doimo yuz nervi kesiladi"
+          "uz": "Har doim yuz nervi kesib yuboriladi"
         }
       ],
       "correct": 0,

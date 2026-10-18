@@ -730,9 +730,9 @@
           "uz": "Rangni yaxshilaydi"
         },
         {
-          "en": "It removes shrinkage",
-          "ru": "Устраняет усадку",
-          "uz": "Kirishishni yo‘qotadi"
+          "en": "It eliminates polymerisation shrinkage",
+          "ru": "Устраняет полимеризационную усадку",
+          "uz": "Polimerizatsion kirishishni yo‘qotadi"
         },
         {
           "en": "It provides a dry field for bonding",
@@ -805,9 +805,9 @@
           "uz": "Rangni tanlash uchun"
         },
         {
-          "en": "To cure the composite",
-          "ru": "Для отверждения композита",
-          "uz": "Kompozitni qotirish uchun"
+          "en": "To help cure the composite through the matrix",
+          "ru": "Для лучшего отверждения композита через матрицу",
+          "uz": "Kompozitni matritsa orqali yaxshiroq qotirish uchun"
         },
         {
           "en": "For anaesthesia",
@@ -830,9 +830,9 @@
       },
       "options": [
         {
-          "en": "Clear strip",
-          "ru": "Прозрачная полоска",
-          "uz": "Shaffof lenta"
+          "en": "Clear polyester strip and wedge",
+          "ru": "Прозрачная полиэстеровая полоска и клин",
+          "uz": "Shaffof poliester lenta va pona"
         },
         {
           "en": "Sectional matrix with ring",
@@ -900,9 +900,9 @@
       },
       "options": [
         {
-          "en": "Wait for the patient to adapt",
-          "ru": "Ждать, пока пациент привыкнет",
-          "uz": "Bemorni ko‘nikishini kutish"
+          "en": "Wait for the patient to adapt over weeks",
+          "ru": "Ждать несколько недель, пока пациент привыкнет",
+          "uz": "Bemor bir necha haftada ko‘nikishini kutish"
         },
         {
           "en": "Remove the whole filling",
@@ -951,8 +951,8 @@
         },
         {
           "en": "Fluoride varnish",
-          "ru": "Фторлак",
-          "uz": "Ftor laki"
+          "ru": "Фторсодержащий лак",
+          "uz": "Ftorli lak qoplamasi"
         }
       ],
       "correct": 0,
@@ -1005,9 +1005,9 @@
       },
       "options": [
         {
-          "en": "Zinc oxide eugenol",
-          "ru": "Цинк-оксид-эвгенол",
-          "uz": "Rux oksid-evgenol"
+          "en": "Zinc oxide eugenol cement",
+          "ru": "Цинк-оксид-эвгеноловый цемент",
+          "uz": "Rux oksid-evgenol sementi"
         },
         {
           "en": "Amalgam",

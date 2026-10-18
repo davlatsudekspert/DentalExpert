@@ -772,9 +772,9 @@
           "uz": "Gastroezofageal reflyuks yoki qusish"
         },
         {
-          "en": "A hard toothbrush",
-          "ru": "Жёсткая щётка",
-          "uz": "Qattiq cho‘tka"
+          "en": "Brushing with a hard toothbrush",
+          "ru": "Чистка жёсткой зубной щёткой",
+          "uz": "Qattiq tish cho‘tkasi bilan tozalash"
         },
         {
           "en": "Bruxism",
@@ -912,9 +912,9 @@
           "uz": "Turner tishi (mahalliy gipoplaziya)"
         },
         {
-          "en": "Systemic hypoplasia",
-          "ru": "Системная гипоплазия",
-          "uz": "Tizimli gipoplaziya"
+          "en": "Systemic (chronological) hypoplasia",
+          "ru": "Системная (хронологическая) гипоплазия",
+          "uz": "Tizimli (xronologik) gipoplaziya"
         },
         {
           "en": "Fluorosis",
@@ -1024,7 +1024,7 @@
         {
           "en": "Facets matching antagonists",
           "ru": "Фасетки, совпадающие с антагонистом",
-          "uz": "Antagonistga mos fasetkalar"
+          "uz": "Antagonist tishga mos keladigan fasetkalar"
         },
         {
           "en": "Pits on one tooth",
@@ -1047,9 +1047,9 @@
       },
       "options": [
         {
-          "en": "Bacterial acid",
-          "ru": "Действием бактериальной кислоты",
-          "uz": "Bakterial kislota ta’siri"
+          "en": "Bacterial acid dissolving the cervical enamel",
+          "ru": "Действием бактериальной кислоты на пришеечную эмаль",
+          "uz": "Bakterial kislotaning bo‘yin emaliga ta’siri"
         },
         {
           "en": "Excess fluoride",

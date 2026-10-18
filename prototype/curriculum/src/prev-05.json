@@ -812,9 +812,9 @@
           "uz": "Butun bir oy"
         },
         {
-          "en": "Only on school days",
+          "en": "Only on school or work days",
           "ru": "Только в учебные дни",
-          "uz": "Faqat o‘qish kunlari"
+          "uz": "Faqat o‘qish yoki ish kunlari"
         }
       ],
       "correct": 1,
@@ -917,9 +917,9 @@
           "uz": "Tozalash, neytrallash va reminerallashish kamayadi"
         },
         {
-          "en": "Fluoride is absorbed faster",
-          "ru": "Фторид быстрее всасывается",
-          "uz": "Ftor tezroq so‘riladi"
+          "en": "Fluoride is absorbed faster into the blood",
+          "ru": "Фторид быстрее всасывается в кровь",
+          "uz": "Ftor og‘izdan qonga tezroq so‘rilib ketadi"
         }
       ],
       "correct": 2,
@@ -953,7 +953,7 @@
         },
         {
           "en": "Keep sweets to mealtimes and snack on safer foods",
-          "ru": "Есть сладкое только с едой, перекусывать безопасными продуктами",
+          "ru": "Сладкое — только с едой, перекусы — безопасными продуктами",
           "uz": "Shirinlikni faqat ovqat bilan, gazakka xavfsizroq ovqatlar"
         }
       ],

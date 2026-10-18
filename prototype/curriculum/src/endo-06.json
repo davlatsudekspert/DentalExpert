@@ -949,9 +949,9 @@
           "uz": "Faylni oldindan egish"
         },
         {
-          "en": "Place a temporary filling",
-          "ru": "Временно запломбировать канал",
-          "uz": "Kanalni vaqtincha plombalash"
+          "en": "Place a temporary filling in the canal",
+          "ru": "Временно запломбировать канал на неделю",
+          "uz": "Kanalni bir haftaga vaqtincha plombalash"
         }
       ],
       "correct": 0,

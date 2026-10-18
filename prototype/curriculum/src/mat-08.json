@@ -834,9 +834,9 @@
           "uz": "U tezroq qotadi"
         },
         {
-          "en": "It expands more",
-          "ru": "Он сильнее расширяется",
-          "uz": "U ko‘proq kengayadi"
+          "en": "It expands more on setting",
+          "ru": "Он сильнее расширяется при твердении",
+          "uz": "U qotishda ko‘proq kengayadi"
         }
       ],
       "correct": 0,
@@ -939,9 +939,9 @@
           "uz": "Mum rangini yo‘qotadi"
         },
         {
-          "en": "The wax absorbs water",
-          "ru": "Воск впитывает воду",
-          "uz": "Mum suvni shimadi"
+          "en": "The wax absorbs moisture and swells",
+          "ru": "Воск впитывает влагу из воздуха и набухает",
+          "uz": "Mum havodagi namlikni shimib, shishib ketadi"
         }
       ],
       "correct": 0,
@@ -1044,9 +1044,9 @@
           "uz": "Ko‘proq suv qo‘shish"
         },
         {
-          "en": "Dumping all the gypsum at once",
-          "ru": "Заливка всего гипса сразу",
-          "uz": "Gipsni bir martada to‘kish"
+          "en": "Dumping all the gypsum into the water at once",
+          "ru": "Засыпать весь гипс в воду сразу",
+          "uz": "Gipsning hammasini suvga bir martada to‘kish"
         }
       ],
       "correct": 0,
@@ -1064,9 +1064,9 @@
       },
       "options": [
         {
-          "en": "It is quicker to make",
-          "ru": "Быстрее изготавливается",
-          "uz": "Tezroq tayyorlanadi"
+          "en": "It is quicker to make in the lab",
+          "ru": "Быстрее изготавливается в лаборатории",
+          "uz": "Laboratoriyada tezroq tayyorlanadi"
         },
         {
           "en": "It is radiopaque",

@@ -677,7 +677,7 @@
           "uz": "Fokus qatlamidan oldinda"
         },
         {
-          "en": "Behind the trough",
+          "en": "Too far back, behind the trough",
           "ru": "Кзади от фокусного слоя",
           "uz": "Fokus qatlamidan orqada"
         },
@@ -757,9 +757,9 @@
           "uz": "O‘rtada, aniq chegarali"
         },
         {
-          "en": "Same side, lower and dark",
-          "ru": "На той же стороне, ниже и тёмное",
-          "uz": "Shu tomonda, pastroq va qora"
+          "en": "Same side, lower, dark and sharp",
+          "ru": "На той же стороне, ниже, тёмное и чёткое",
+          "uz": "Shu tomonda, pastroqda, qora va aniq"
         }
       ],
       "correct": 1,
@@ -817,9 +817,9 @@
           "uz": "Bemor bukchaygan, umurtqa soyasi"
         },
         {
-          "en": "Tongue off palate",
+          "en": "Tongue not placed on the palate",
           "ru": "Язык не у нёба",
-          "uz": "Til tanglayda emas"
+          "uz": "Til tanglayga tegizilmagan"
         },
         {
           "en": "Chin up",
@@ -917,9 +917,9 @@
       },
       "options": [
         {
-          "en": "Ghost image",
-          "ru": "«Призрачное» изображение",
-          "uz": "Arvoh tasvir"
+          "en": "A ghost image of the opposite side",
+          "ru": "«Призрачное» изображение противоположной стороны",
+          "uz": "Qarama-qarshi tomonning arvoh tasviri"
         },
         {
           "en": "Patient moved during exposure",

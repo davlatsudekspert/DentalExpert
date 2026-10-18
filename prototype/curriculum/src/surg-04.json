@@ -697,37 +697,37 @@
   "test": [
     {
       "q": {
-        "en": "What is the most common emergency in the dental surgery?",
-        "ru": "Какое неотложное состояние чаще всего встречается в стоматологическом кабинете?",
-        "uz": "Stomatologik kabinetda eng ko‘p uchraydigan shoshilinch holat qaysi?"
+        "en": "What is the mechanism of vasovagal syncope, the commonest emergency during dental injections?",
+        "ru": "Каков механизм вазовагального обморока — самого частого неотложного состояния при стоматологических инъекциях?",
+        "uz": "Stomatologik in’yeksiyalarda eng ko‘p uchraydigan vazovagal sinkopening mexanizmi qanday?"
       },
       "options": [
         {
-          "en": "Anaphylaxis",
-          "ru": "Анафилаксия",
-          "uz": "Anafilaksiya"
+          "en": "An allergic reaction to the anaesthetic",
+          "ru": "Аллергическая реакция на анестетик",
+          "uz": "Anestetikka allergik reaksiya"
         },
         {
-          "en": "Vasovagal syncope",
-          "ru": "Вазовагальный обморок",
-          "uz": "Vazovagal sinkope (hushdan ketish)"
+          "en": "Reflex bradycardia and vasodilation",
+          "ru": "Рефлекторная брадикардия и расширение сосудов",
+          "uz": "Reflektor bradikardiya va tomirlarning kengayishi"
         },
         {
-          "en": "Myocardial infarction",
-          "ru": "Инфаркт миокарда",
-          "uz": "Miokard infarkti"
+          "en": "A toxic anaesthetic level in the blood",
+          "ru": "Токсическая концентрация анестетика в крови",
+          "uz": "Qonda anestetikning toksik konsentratsiyasi"
         },
         {
-          "en": "Hypoglycaemia",
-          "ru": "Гипогликемия",
-          "uz": "Gipoglikemiya"
+          "en": "A sudden fall in blood glucose",
+          "ru": "Резкое падение уровня глюкозы в крови",
+          "uz": "Qondagi glyukoza miqdorining keskin pasayishi"
         }
       ],
       "correct": 1,
       "explain": {
-        "en": "Vasovagal syncope, linked to fear and pain, is the most common emergency.",
-        "ru": "Вазовагальный обморок, связанный со страхом и болью, — самое частое неотложное состояние.",
-        "uz": "Qo‘rquv va og‘riq bilan bog‘liq vazovagal sinkope eng ko‘p uchraydigan shoshilinch holatdir."
+        "en": "Fear and pain trigger a vagal reflex: bradycardia and vasodilation reduce cerebral perfusion and the patient faints.",
+        "ru": "Страх и боль запускают вагусный рефлекс: брадикардия и расширение сосудов снижают мозговой кровоток, и пациент теряет сознание.",
+        "uz": "Qo‘rquv va og‘riq vagus refleksini qo‘zg‘atadi: bradikardiya va tomirlar kengayishi miyaga qon oqimini kamaytiradi, bemor hushdan ketadi."
       }
     },
     {
@@ -738,9 +738,9 @@
       },
       "options": [
         {
-          "en": "Lingual nerve injury",
-          "ru": "Травма язычного нерва",
-          "uz": "Til nervi shikasti"
+          "en": "Lingual nerve injury by the needle",
+          "ru": "Травма язычного нерва иглой",
+          "uz": "Igna bilan til nervining shikastlanishi"
         },
         {
           "en": "Intravascular injection",
@@ -788,9 +788,9 @@
           "uz": "Lunj nervi"
         },
         {
-          "en": "Mental",
-          "ru": "Ментальной",
-          "uz": "Iyak nervi"
+          "en": "Mental (at the mental foramen)",
+          "ru": "Ментальной (у подбородочного отверстия)",
+          "uz": "Iyak nervi (iyak teshigi sohasida)"
         }
       ],
       "correct": 0,
@@ -808,9 +808,9 @@
       },
       "options": [
         {
-          "en": "Give more anaesthetic",
-          "ru": "Ввести ещё анестетик",
-          "uz": "Yana anestetik yuborish"
+          "en": "Give more anaesthetic to complete the block",
+          "ru": "Ввести ещё анестетик, чтобы завершить блокаду",
+          "uz": "Blokadani tugatish uchun yana anestetik yuborish"
         },
         {
           "en": "Send the patient home",
@@ -818,9 +818,9 @@
           "uz": "Bemorni uyga jo‘natish"
         },
         {
-          "en": "Give an antihistamine",
-          "ru": "Дать антигистаминное",
-          "uz": "Antigistamin berish"
+          "en": "Give an antihistamine and continue the procedure",
+          "ru": "Дать антигистаминное и продолжить лечение",
+          "uz": "Antigistamin berib, davolashni davom ettirish"
         },
         {
           "en": "Stop, call for help and give oxygen",
@@ -848,9 +848,9 @@
           "uz": "0,5 mg mushak ichiga, son old-yon yuzasiga"
         },
         {
-          "en": "5 mg IV rapidly",
-          "ru": "5 мг в/в быстро",
-          "uz": "5 mg vena ichiga tez"
+          "en": "5 mg IV as a rapid undiluted bolus",
+          "ru": "5 мг в/в быстро, неразведённым болюсом",
+          "uz": "5 mg vena ichiga tez, suyultirilmagan holda"
         },
         {
           "en": "0.05 mg sublingually",
@@ -913,9 +913,9 @@
       },
       "options": [
         {
-          "en": "Facial nerve palsy",
-          "ru": "Парез лицевого нерва",
-          "uz": "Yuz nervi falaji"
+          "en": "Facial nerve palsy from parotid deposition",
+          "ru": "Парез лицевого нерва (анестетик в околоушной железе)",
+          "uz": "Yuz nervi falaji (anestetik quloq oldi bezida)"
         },
         {
           "en": "Anaesthetic allergy",
@@ -988,9 +988,9 @@
           "uz": "Ignani asosigacha botirmaslik va egmaslik"
         },
         {
-          "en": "Use only short needles",
-          "ru": "Использовать только короткие иглы",
-          "uz": "Faqat qisqa igna ishlatish"
+          "en": "Use only short 25 mm needles for every block",
+          "ru": "Использовать только короткие иглы для всех блокад",
+          "uz": "Har bir blokada uchun faqat qisqa igna ishlatish"
         },
         {
           "en": "Inject quickly",

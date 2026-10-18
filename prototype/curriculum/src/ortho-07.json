@@ -672,9 +672,9 @@
       },
       "options": [
         {
-          "en": "From metal springs",
-          "ru": "От металлических пружин",
-          "uz": "Metall prujinalardan"
+          "en": "From the pressure of metal springs",
+          "ru": "От давления металлических пружин",
+          "uz": "Metall prujinalarning bosimidan"
         },
         {
           "en": "From muscles and soft tissues",
@@ -701,9 +701,9 @@
     },
     {
       "q": {
-        "en": "A 12-year-old girl has Class II division 1 with a 10 mm overjet. Which appliance suits?",
-        "ru": "Девочке 12 лет со II классом 1-го подкласса и щелью 10 мм какой аппарат подходит?",
-        "uz": "II sinf 1-bo‘limli, overjeti 10 mm bo‘lgan 12 yoshli qiz uchun qaysi apparat mos?"
+        "en": "An 11-year-old girl has Class II division 1 with a 10 mm overjet. Which appliance suits?",
+        "ru": "У девочки 11 лет II класс 1-го подкласса и сагиттальная щель 10 мм. Какой аппарат подходит?",
+        "uz": "II sinf 1-bo‘limli, overjeti 10 mm bo‘lgan 11 yoshli qiz uchun qaysi apparat mos?"
       },
       "options": [
         {
@@ -729,9 +729,9 @@
       ],
       "correct": 2,
       "explain": {
-        "en": "In a growing Class II division 1 patient, a functional such as a Twin Block reduces the overjet.",
-        "ru": "В период роста при II классе 1-го подкласса функциональный аппарат, например твин-блок, уменьшает щель.",
-        "uz": "O‘sish davridagi II sinf 1-bo‘limda Twin Block kabi funksional apparat overjetni kamaytiradi."
+        "en": "An 11-year-old girl is still before her pubertal growth peak, so a functional appliance such as a Twin Block can reduce the overjet.",
+        "ru": "В 11 лет девочка ещё не прошла пубертатный пик роста, поэтому функциональный аппарат, например твин-блок, уменьшает щель.",
+        "uz": "11 yoshli qiz hali balog‘at davridagi o‘sish cho‘qqisidan o‘tmagan, shuning uchun Twin Block kabi funksional apparat overjetni kamaytiradi."
       }
     },
     {
@@ -992,9 +992,9 @@
           "uz": "Twin Block"
         },
         {
-          "en": "Facemask",
-          "ru": "Лицевая маска",
-          "uz": "Yuz niqobi"
+          "en": "Facemask protraction of the maxilla",
+          "ru": "Лицевая маска для протракции верхней челюсти",
+          "uz": "Yuqori jag‘ni oldinga tortuvchi yuz niqobi"
         },
         {
           "en": "Orthodontics with orthognathic surgery",

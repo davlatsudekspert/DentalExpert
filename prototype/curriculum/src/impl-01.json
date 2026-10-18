@@ -671,9 +671,9 @@
           "uz": "Suyak zichligi, implant shakli va jarrohlik texnikasi"
         },
         {
-          "en": "New bone formation",
-          "ru": "Образование новой кости",
-          "uz": "Yangi suyak hosil bo‘lishi"
+          "en": "New bone formation around the implant surface",
+          "ru": "Образование новой кости на поверхности имплантата",
+          "uz": "Implant yuzasida yangi suyak hosil bo‘lishi"
         },
         {
           "en": "Prosthesis material",
@@ -716,9 +716,9 @@
           "uz": "Titan korroziyasi"
         },
         {
-          "en": "Soft tissue ingrowth",
-          "ru": "Врастание мягких тканей",
-          "uz": "Yumshoq to‘qima o‘sib kiradi"
+          "en": "Soft tissue grows in around the implant",
+          "ru": "Врастание мягких тканей вокруг имплантата",
+          "uz": "Implant atrofiga yumshoq to‘qima o‘sib kiradi"
         }
       ],
       "correct": 1,
@@ -746,9 +746,9 @@
           "uz": "Bitta katta burg‘u bilan ishlash"
         },
         {
-          "en": "Working fast without cooling",
-          "ru": "Быстрая работа без охлаждения",
-          "uz": "Sovitmasdan tez ishlash"
+          "en": "Working fast without cooling to save time",
+          "ru": "Быстрая работа без охлаждения ради экономии времени",
+          "uz": "Vaqtni tejash uchun sovitmasdan tez ishlash"
         },
         {
           "en": "Sharp drills, irrigation and intermittent motion",
@@ -891,9 +891,9 @@
           "uz": "Milk juda qalin"
         },
         {
-          "en": "Titanium does not conduct heat",
-          "ru": "Титан не проводит тепло",
-          "uz": "Titan issiqlikni o‘tkazmaydi"
+          "en": "Titanium does not conduct heat or cold",
+          "ru": "Титан не проводит тепло и холод",
+          "uz": "Titan issiqlik va sovuqni o‘tkazmaydi"
         }
       ],
       "correct": 0,

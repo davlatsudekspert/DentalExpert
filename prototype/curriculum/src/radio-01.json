@@ -1089,9 +1089,9 @@
           "uz": "Har doim yuqori aniqlik"
         },
         {
-          "en": "Needs no infection control",
-          "ru": "Не требует инфекционного контроля",
-          "uz": "Infeksiya nazorati kerak emas"
+          "en": "Needs no infection control between patients",
+          "ru": "Не требует инфекционного контроля между пациентами",
+          "uz": "Bemorlar orasida infeksiya nazorati kerak emas"
         }
       ],
       "correct": 1,

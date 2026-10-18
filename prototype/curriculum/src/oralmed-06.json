@@ -771,7 +771,7 @@
         {
           "en": "A radiographic diagnosis",
           "ru": "Рентгенологический диагноз",
-          "uz": "Rentgenogramma bo‘yicha tashxis"
+          "uz": "Rentgenogramma asosida qo‘yiladigan tashxis"
         }
       ],
       "correct": 2,
@@ -866,7 +866,7 @@
         {
           "en": "Course of antifungal treatment",
           "ru": "Курс противогрибкового лечения",
-          "uz": "Antifungal davo kursi"
+          "uz": "Antifungal dori bilan davolash kursi"
         },
         {
           "en": "Corticosteroid ointment",
@@ -1034,9 +1034,9 @@
       },
       "options": [
         {
-          "en": "Frequent tea drinking",
-          "ru": "Частое питьё чая",
-          "uz": "Tez-tez choy ichish"
+          "en": "Drinking hot tea many times a day",
+          "ru": "Частое питьё горячего чая",
+          "uz": "Kuniga ko‘p marta issiq choy ichish"
         },
         {
           "en": "Smoking or smokeless tobacco",

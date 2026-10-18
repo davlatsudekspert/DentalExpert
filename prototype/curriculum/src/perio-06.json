@@ -704,14 +704,14 @@
       },
       "options": [
         {
-          "en": "Perform periodontal surgery",
+          "en": "Perform periodontal surgery on deep pockets",
           "ru": "Проведение хирургии пародонта",
           "uz": "Parodont jarrohligini bajarish"
         },
         {
           "en": "Change behaviour and control supragingival biofilm and risk factors",
           "ru": "Изменение поведения, контроль наддесневой биоплёнки и факторов риска",
-          "uz": "Xulq-atvorni o‘zgartirish, milk usti biofilmi va xavf omillarini nazorat"
+          "uz": "Xulq-atvor, milk usti biofilmi va xavf omillari nazorati"
         },
         {
           "en": "Place dental implants",
@@ -719,9 +719,9 @@
           "uz": "Implantlar o‘rnatish"
         },
         {
-          "en": "Prescribe antibiotics to all patients",
-          "ru": "Назначение антибиотиков всем",
-          "uz": "Barcha bemorlarga antibiotik buyurish"
+          "en": "Prescribe systemic antibiotics to all patients",
+          "ru": "Назначение системных антибиотиков всем пациентам",
+          "uz": "Barcha bemorlarga darhol tizimli antibiotik buyurish"
         }
       ],
       "correct": 1,
@@ -784,9 +784,9 @@
           "uz": "Sog‘lom yopilgan cho‘ntak"
         },
         {
-          "en": "An indication for extraction",
-          "ru": "Показанием к удалению",
-          "uz": "Tish olishga ko‘rsatma"
+          "en": "An indication to extract the tooth",
+          "ru": "Показанием к удалению зуба",
+          "uz": "Tishni olib tashlashga ko‘rsatma"
         },
         {
           "en": "A sign of gingival recession",
@@ -854,9 +854,9 @@
           "uz": "Klinik jihatdan o‘xshash; istalganini tanlash mumkin"
         },
         {
-          "en": "Much more effective",
-          "ru": "Значительно эффективнее",
-          "uz": "Ancha samaraliroq"
+          "en": "Much more effective than any other approach",
+          "ru": "Значительно эффективнее любого другого метода",
+          "uz": "Boshqa har qanday usuldan ancha samaraliroq"
         },
         {
           "en": "Only for implants",
@@ -919,9 +919,9 @@
           "uz": "Uzun birikma epiteliy va yallig‘lanishning kamayishi"
         },
         {
-          "en": "Complete regeneration of bone",
-          "ru": "Полной регенерации кости",
-          "uz": "Suyakning to‘liq regeneratsiyasi"
+          "en": "Complete regeneration of bone and attachment",
+          "ru": "Полной регенерации кости и прикрепления",
+          "uz": "Suyak va birikishning to‘liq regeneratsiyasi"
         },
         {
           "en": "New enamel formation",
@@ -964,8 +964,8 @@
           "uz": "Shish qaytdi va biroz retsessiya yuzaga keldi"
         },
         {
-          "en": "A sign of treatment failure",
-          "ru": "Признак неудачи лечения",
+          "en": "A sign that the treatment has failed",
+          "ru": "Признак того, что лечение не удалось",
           "uz": "Davolash muvaffaqiyatsizligi belgisi"
         }
       ],
@@ -984,9 +984,9 @@
       },
       "options": [
         {
-          "en": "Root resection",
-          "ru": "Резекция корня",
-          "uz": "Ildiz rezeksiyasi"
+          "en": "Root resection (amputation)",
+          "ru": "Резекция (ампутация) корня",
+          "uz": "Ildiz rezeksiyasi (amputatsiya)"
         },
         {
           "en": "Subgingival instrumentation",
@@ -1034,9 +1034,9 @@
           "uz": "Faqat silliqlash"
         },
         {
-          "en": "Return to step 1 only",
+          "en": "Only return to step 1 again",
           "ru": "Только возврат к этапу 1",
-          "uz": "Faqat 1-bosqichga qaytish"
+          "uz": "Faqat 1-bosqichga qayta-qayta qaytish"
         }
       ],
       "correct": 0,

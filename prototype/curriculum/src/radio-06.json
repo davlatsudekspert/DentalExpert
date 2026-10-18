@@ -805,9 +805,9 @@
       },
       "options": [
         {
-          "en": "Mental foramen",
-          "ru": "Подбородочное отверстие",
-          "uz": "Iyak teshigi"
+          "en": "Mental foramen seen end-on",
+          "ru": "Подбородочное отверстие в проекции",
+          "uz": "Iyak teshigining proyeksiyasi"
         },
         {
           "en": "Lingual foramen and genial tubercles",
@@ -845,9 +845,9 @@
           "uz": "Ikki oq chiziq orasidagi qora tasma"
         },
         {
-          "en": "Uniform white band",
-          "ru": "Однородная светлая полоса",
-          "uz": "Bir tekis oq tasma"
+          "en": "Uniform white radiopaque band",
+          "ru": "Однородная светлая рентгеноконтрастная полоса",
+          "uz": "Bir tekis oq rentgenokontrast tasma"
         },
         {
           "en": "Round dark area",
@@ -880,9 +880,9 @@
           "uz": "Radikulyar kista"
         },
         {
-          "en": "Odontogenic keratocyst",
-          "ru": "Одонтогенная кератокиста",
-          "uz": "Odontogen keratokista"
+          "en": "Odontogenic keratocyst at the apex",
+          "ru": "Одонтогенная кератокиста у апекса",
+          "uz": "Apeks sohasidagi odontogen keratokista"
         },
         {
           "en": "Dental papilla of a developing root",
@@ -945,9 +945,9 @@
       },
       "options": [
         {
-          "en": "Zygomatic arch",
-          "ru": "Скуловая дуга",
-          "uz": "Yonoq yoyi"
+          "en": "Zygomatic process of the maxilla",
+          "ru": "Скуловой отросток верхней челюсти",
+          "uz": "Yuqori jag‘ yonoq o‘simtasi"
         },
         {
           "en": "Coronoid process of the mandible",

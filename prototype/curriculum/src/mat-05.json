@@ -769,9 +769,9 @@
       },
       "options": [
         {
-          "en": "By chemical bonding",
-          "ru": "Химической связью",
-          "uz": "Kimyoviy bog‘lanish bilan"
+          "en": "By chemical bonding to enamel and dentine",
+          "ru": "Химической связью с эмалью и дентином",
+          "uz": "Emal va dentin bilan kimyoviy bog‘lanish"
         },
         {
           "en": "Through a hybrid layer",
@@ -839,9 +839,9 @@
       },
       "options": [
         {
-          "en": "Immediate total ban",
-          "ru": "Немедленный полный запрет",
-          "uz": "Darhol to‘liq taqiq"
+          "en": "Immediate total ban in all countries",
+          "ru": "Немедленный полный запрет во всех странах",
+          "uz": "Barcha mamlakatlarda darhol to‘liq taqiq"
         },
         {
           "en": "No restrictions",

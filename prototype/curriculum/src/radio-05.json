@@ -805,9 +805,9 @@
           "uz": "Tasvir sifati oshadi"
         },
         {
-          "en": "Clearer soft tissue",
-          "ru": "Мягкие ткани чётче",
-          "uz": "Yumshoq to‘qima aniqroq"
+          "en": "Clearer soft tissue contrast",
+          "ru": "Мягкие ткани станут более чёткими",
+          "uz": "Yumshoq to‘qimalar aniqroq ko‘rinadi"
         },
         {
           "en": "Lower dose",
@@ -875,9 +875,9 @@
           "uz": "Tasvir 2D"
         },
         {
-          "en": "It does not show bone",
-          "ru": "Не показывает кость",
-          "uz": "Suyakni ko‘rsatmaydi"
+          "en": "It cannot show bone structure",
+          "ru": "Не показывает структуру кости",
+          "uz": "Suyak tuzilishini ko‘rsatmaydi"
         },
         {
           "en": "Higher dose without proven benefit",

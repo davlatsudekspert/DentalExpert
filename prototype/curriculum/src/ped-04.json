@@ -930,7 +930,7 @@
         },
         {
           "en": "Zinc phosphate filling",
-          "ru": "Пломба из фосфат-цемента",
+          "ru": "Пломба из цинк-фосфатного цемента",
           "uz": "Fosfat sement plomba"
         }
       ],
@@ -956,7 +956,7 @@
         {
           "en": "A post in the pulp chamber",
           "ru": "Штифтом в полости зуба",
-          "uz": "Pulpa kamerasiga kirgan shtift"
+          "uz": "Pulpa kamerasiga kiritilgan shtift orqali"
         },
         {
           "en": "Cement adhesion alone",
@@ -964,7 +964,7 @@
           "uz": "Faqat sementning yopishqoqligi"
         },
         {
-          "en": "Splinting to the next tooth",
+          "en": "Splinting it to the adjacent tooth",
           "ru": "Шинированием к соседнему зубу",
           "uz": "Qo‘shni tishga bog‘lash"
         }
@@ -996,12 +996,12 @@
         {
           "en": "Its mercury content is being phased down by treaty",
           "ru": "Из-за ртути её сокращают по Минаматской конвенции",
-          "uz": "Simob tufayli Minamata konvensiyasi bo‘yicha qisqartirilmoqda"
+          "uz": "Simob sababli Minamata konvensiyasi bilan kamaytirilmoqda"
         },
         {
-          "en": "It wears away very quickly",
-          "ru": "Она очень быстро изнашивается",
-          "uz": "U juda tez yeyilib ketadi"
+          "en": "It wears away very quickly in primary teeth",
+          "ru": "Она очень быстро изнашивается во временных зубах",
+          "uz": "Sut tishlarida u juda tez yeyilib ketadi"
         }
       ],
       "correct": 2,

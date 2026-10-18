@@ -855,9 +855,9 @@
       },
       "options": [
         {
-          "en": "Mandibular position",
-          "ru": "Положение нижней челюсти",
-          "uz": "Pastki jag‘ning holatini"
+          "en": "Mandibular position relative to the cranial base",
+          "ru": "Положение нижней челюсти относительно основания черепа",
+          "uz": "Pastki jag‘ning kalla asosiga nisbatan holatini"
         },
         {
           "en": "Upper incisor inclination",
@@ -890,9 +890,9 @@
       },
       "options": [
         {
-          "en": "For every patient before treatment",
-          "ru": "Каждому пациенту перед лечением",
-          "uz": "Har bir bemorga, davolashdan oldin"
+          "en": "For every patient before treatment begins",
+          "ru": "Каждому пациенту перед началом лечения",
+          "uz": "Har bir bemorga, davolash boshlanishidan oldin"
         },
         {
           "en": "In selected cases such as impacted canines",
@@ -970,9 +970,9 @@
           "uz": "Pulpa holatini baholash"
         },
         {
-          "en": "Detecting root resorption",
-          "ru": "Оценка резорбции корней",
-          "uz": "Ildiz rezorbsiyasini ko‘rish"
+          "en": "Detecting root resorption of incisors",
+          "ru": "Выявление резорбции корней резцов",
+          "uz": "Kesuvchilar ildizi rezorbsiyasini aniqlash"
         },
         {
           "en": "Measuring the cranial base",
@@ -1045,9 +1045,9 @@
           "uz": "Bemorni chalg‘itish uchun"
         },
         {
-          "en": "To replace study models",
-          "ru": "Чтобы заменить модели",
-          "uz": "Modellar o‘rnini bosish uchun"
+          "en": "To replace the study models entirely",
+          "ru": "Чтобы полностью заменить модели",
+          "uz": "Modellar o‘rnini to‘liq bosish uchun"
         }
       ],
       "correct": 1,
@@ -1065,9 +1065,9 @@
       },
       "options": [
         {
-          "en": "Cephalometric numbers only",
+          "en": "Cephalometric measurements only",
           "ru": "Только на цефалометрических цифрах",
-          "uz": "Faqat sefalometrik raqamlarga"
+          "uz": "Faqat sefalometrik o‘lchov raqamlariga"
         },
         {
           "en": "The patient's age alone",

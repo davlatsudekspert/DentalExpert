@@ -638,9 +638,9 @@
       },
       "options": [
         {
-          "en": "Minor aphthous stomatitis",
-          "ru": "Малый афтозный стоматит",
-          "uz": "Kichik aftoz stomatit"
+          "en": "Minor aphthous stomatitis with gingivitis",
+          "ru": "Малый афтозный стоматит с гингивитом",
+          "uz": "Gingivit bilan kechuvchi kichik aftoz stomatit"
         },
         {
           "en": "Candidiasis",
@@ -743,7 +743,7 @@
       },
       "options": [
         {
-          "en": "Inner lip",
+          "en": "Inner surface of the lip",
           "ru": "На внутренней поверхности губы",
           "uz": "Lab ichki yuzasida"
         },
@@ -760,7 +760,7 @@
         {
           "en": "Buccal mucosa",
           "ru": "На слизистой щеки",
-          "uz": "Lunj shilliq qavatida"
+          "uz": "Lunj shilliq qavatining ichki yuzasida"
         }
       ],
       "correct": 2,
@@ -788,7 +788,7 @@
           "uz": "Gerpangina"
         },
         {
-          "en": "Herpes zoster",
+          "en": "Herpes zoster (shingles)",
           "ru": "Опоясывающий лишай",
           "uz": "Belbog‘li temiratki"
         },
@@ -888,9 +888,9 @@
           "uz": "Rejali davolashni o‘choq bitguncha qoldirish"
         },
         {
-          "en": "Treat now without precautions",
-          "ru": "Лечить сразу без защиты",
-          "uz": "Darhol davolash, himoyasiz"
+          "en": "Treat now without any precautions",
+          "ru": "Лечить сразу без какой-либо защиты",
+          "uz": "Darhol, hech qanday himoyasiz davolash"
         },
         {
           "en": "Open the vesicles",

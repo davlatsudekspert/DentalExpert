@@ -688,9 +688,9 @@
           "uz": "Yuqori kesuvchi tishni olish"
         },
         {
-          "en": "Extracting a primary tooth",
-          "ru": "Удаление молочного зуба",
-          "uz": "Sut tishini olish"
+          "en": "Extracting a primary tooth in a child",
+          "ru": "Удаление молочного зуба у ребёнка",
+          "uz": "Bolada sut tishini olish"
         },
         {
           "en": "Placing sutures",
@@ -758,9 +758,9 @@
           "uz": "Doka tampon bilan 20–30 daqiqa bosim"
         },
         {
-          "en": "Immediate IV medication",
-          "ru": "Немедленно внутривенный препарат",
-          "uz": "Darhol vena ichiga dori"
+          "en": "Immediate IV haemostatic medication",
+          "ru": "Немедленно внутривенный гемостатик",
+          "uz": "Darhol vena ichiga gemostatik dori"
         },
         {
           "en": "Blood transfusion",
@@ -798,9 +798,9 @@
           "uz": "Darhol radikal gaymorotomiya"
         },
         {
-          "en": "Pack the socket tightly with iodoform",
-          "ru": "Плотно затампонировать йодоформом",
-          "uz": "Lunkaga yod tampon zich tiqish"
+          "en": "Pack the socket tightly with iodoform gauze and leave it",
+          "ru": "Плотно затампонировать лунку йодоформной турундой",
+          "uz": "Lunkaga yodoform tamponni zich tiqib, qoldirish"
         },
         {
           "en": "Figure-of-eight suture, haemostatic and sinus precautions",
@@ -908,9 +908,9 @@
           "uz": "Lunkani bog‘lam o‘rniga ishlatiladi"
         },
         {
-          "en": "Only together with analgesics",
-          "ru": "Только вместе с обезболивающими",
-          "uz": "Faqat og‘riq qoldiruvchi bilan birga"
+          "en": "Only together with strong analgesics",
+          "ru": "Только вместе с сильными обезболивающими",
+          "uz": "Faqat kuchli og‘riq qoldiruvchi bilan birga"
         }
       ],
       "correct": 1,
@@ -928,14 +928,14 @@
       },
       "options": [
         {
-          "en": "After 7–10 days due to infection",
-          "ru": "Через 7–10 дней из-за инфекции",
-          "uz": "7–10 kundan keyin infeksiya tufayli"
+          "en": "After 7–10 days due to infection of the clot",
+          "ru": "Через 7–10 дней из-за инфекционного разрушения сгустка",
+          "uz": "7–10 kundan keyin, laxta infeksiyalanishi tufayli"
         },
         {
-          "en": "During surgery from a cut vessel",
-          "ru": "Во время операции при ранении сосуда",
-          "uz": "Operatsiya paytida tomir kesilganda"
+          "en": "During surgery itself, from a cut larger vessel",
+          "ru": "Во время самой операции из-за ранения крупного сосуда",
+          "uz": "Operatsiya paytining o‘zida, yirik tomir kesilganda"
         },
         {
           "en": "Hours later, as the vasoconstrictor wears off",

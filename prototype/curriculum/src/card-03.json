@@ -1002,9 +1002,9 @@
           "uz": "Bakterial porfirinlar fluoressensiyasi"
         },
         {
-          "en": "Pulpal blood flow",
-          "ru": "Кровоток пульпы",
-          "uz": "Pulpa qon oqimi"
+          "en": "Pulpal blood flow by Doppler",
+          "ru": "Кровоток пульпы по Допплеру",
+          "uz": "Doppler bo‘yicha pulpa qon oqimi"
         },
         {
           "en": "Enamel hardness",
@@ -1042,8 +1042,8 @@
           "uz": "Dastlabki lezyonlar va yuza teksturasini ko‘rish uchun"
         },
         {
-          "en": "To reduce radiation",
-          "ru": "Чтобы снизить лучевую нагрузку",
+          "en": "To reduce the radiation dose",
+          "ru": "Чтобы снизить лучевую нагрузку при снимках",
           "uz": "Rentgen nurlanishini kamaytirish uchun"
         },
         {

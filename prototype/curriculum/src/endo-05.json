@@ -664,13 +664,13 @@
       "options": [
         {
           "en": "Files are not radiopaque",
-          "ru": "Файлы не рентгеноконтрастны",
+          "ru": "Файлы не рентгеноконтрастны и не видны на снимке",
           "uz": "Fayllar rentgenokontrast emas"
         },
         {
-          "en": "The canal is always straight",
-          "ru": "Канал всегда прямой",
-          "uz": "Kanal har doim to‘g‘ri"
+          "en": "The canal is always straight to the apex",
+          "ru": "Канал всегда прямой до самой верхушки",
+          "uz": "Kanal har doim apeksgacha to‘g‘ri bo‘ladi"
         },
         {
           "en": "The foramen often exits laterally and the image is 2D",
@@ -815,7 +815,7 @@
         {
           "en": "Measuring canal temperature",
           "ru": "Измерение температуры канала",
-          "uz": "Kanal haroratini o‘lchash"
+          "uz": "Kanal ichidagi haroratni o‘lchash"
         },
         {
           "en": "Ultrasonic echo",
@@ -848,9 +848,9 @@
           "uz": "Apikal qismda infeksiyalangan to‘qima qoladi"
         },
         {
-          "en": "The apical foramen is enlarged",
-          "ru": "Расширяется апикальное отверстие",
-          "uz": "Apikal teshik kengayadi"
+          "en": "The apical foramen is torn and enlarged",
+          "ru": "Расширяется и разрушается апикальное отверстие",
+          "uz": "Apikal teshik yirtilib kengayadi"
         },
         {
           "en": "A root perforation occurs",

@@ -662,9 +662,9 @@
           "uz": "Inhalyatorni to‘xtatish"
         },
         {
-          "en": "Daily fluconazole",
-          "ru": "Ежедневный флуконазол",
-          "uz": "Har kuni flukonazol"
+          "en": "Daily long-term fluconazole",
+          "ru": "Ежедневный длительный флуконазол",
+          "uz": "Har kuni uzoq muddat flukonazol"
         },
         {
           "en": "Add an antibiotic",
@@ -742,8 +742,8 @@
           "uz": "Antifungal, chekishni tashlash, saqlansa biopsiya"
         },
         {
-          "en": "Immediate excision",
-          "ru": "Сразу иссечь",
+          "en": "Immediate wide surgical excision",
+          "ru": "Немедленное широкое хирургическое иссечение",
           "uz": "Darhol jarrohlik yo‘li bilan olib tashlash"
         }
       ],
@@ -804,7 +804,7 @@
         {
           "en": "Geographic tongue",
           "ru": "Географический язык",
-          "uz": "Geografik til"
+          "uz": "Geografik til (migratsion glossit)"
         },
         {
           "en": "Fissured tongue",
@@ -872,9 +872,9 @@
           "uz": "Tizimli antibiotik"
         },
         {
-          "en": "Wear the denture day and night",
-          "ru": "Носить протез круглосуточно",
-          "uz": "Protezni kun-u tun taqish"
+          "en": "Wear the denture day and night without removal",
+          "ru": "Носить протез круглосуточно, не снимая",
+          "uz": "Protezni olmasdan kun-u tun taqib yurish"
         },
         {
           "en": "Remove at night, clean and disinfect the denture",
@@ -902,7 +902,7 @@
       },
       "options": [
         {
-          "en": "Geographic tongue",
+          "en": "Benign migratory glossitis",
           "ru": "Географический язык",
           "uz": "Geografik til"
         },
@@ -942,9 +942,9 @@
           "uz": "Faqat protez gigiyenasi"
         },
         {
-          "en": "Topical corticosteroid",
-          "ru": "Местный кортикостероид",
-          "uz": "Mahalliy kortikosteroid"
+          "en": "Topical corticosteroid ointment only",
+          "ru": "Только местная кортикостероидная мазь",
+          "uz": "Faqat mahalliy kortikosteroid malham"
         },
         {
           "en": "Observation",

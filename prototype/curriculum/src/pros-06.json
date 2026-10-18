@@ -788,9 +788,9 @@
       },
       "options": [
         {
-          "en": "Above the height of contour",
-          "ru": "Выше экватора",
-          "uz": "Ekvatordan yuqorida"
+          "en": "Above the height of contour, in no undercut",
+          "ru": "Выше экватора, вне поднутрения",
+          "uz": "Ekvatordan yuqorida, chuqurlikdan tashqarida"
         },
         {
           "en": "On the occlusal surface",
@@ -860,7 +860,7 @@
         {
           "en": "On the most distal abutments only",
           "ru": "Только на самых дистальных опорах",
-          "uz": "Faqat eng orqa tayanchlarda"
+          "uz": "Faqat eng orqadagi distal tayanchlarda"
         },
         {
           "en": "On the denture bases",

@@ -787,9 +787,9 @@
           "uz": "Pastki jag‘ tez o‘sadi"
         },
         {
-          "en": "Molars erupt faster",
-          "ru": "Моляры быстро прорезываются",
-          "uz": "Molyarlar tez chiqadi"
+          "en": "Molars erupt faster and tip buccally",
+          "ru": "Моляры прорезываются быстрее и смещаются щёчно",
+          "uz": "Molyarlar tezroq chiqib, lunj tomonga og‘adi"
         },
         {
           "en": "Caries increases",
@@ -929,7 +929,7 @@
         {
           "en": "A local factor: ectopic canine",
           "ru": "Местного фактора: эктопии клыка",
-          "uz": "Mahalliy tish omili: ektopik qoziq"
+          "uz": "Mahalliy omil: ektopik qoziq"
         },
         {
           "en": "A skeletal Class II",
@@ -952,7 +952,7 @@
       },
       "options": [
         {
-          "en": "The main cause of open bite",
+          "en": "The main primary cause of open bite",
           "ru": "Главная причина открытого прикуса",
           "uz": "Ochiq tishlamning asosiy sababi"
         },
@@ -987,7 +987,7 @@
       },
       "options": [
         {
-          "en": "Mandibular overgrowth",
+          "en": "Overgrowth of the mandible",
           "ru": "Избыточный рост нижней челюсти",
           "uz": "Pastki jag‘ning ortiqcha o‘sishi"
         },

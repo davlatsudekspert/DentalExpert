@@ -49,8 +49,8 @@
    {
     "q": "Profilaktikaga nima kiradi?",
     "options": [
-     "Faqat shirinlik",
-     "Tish tozalamaslik",
+     "Ovqatlar orasida tez-tez shirinlik yeyish",
+     "Haftada bir marta pastasiz tozalash",
      "Ftorli pasta bilan muntazam tozalash"
     ],
     "correct": 2,
@@ -90,7 +90,7 @@
     "options": [
      "Faqat chayish bilan",
      "Tish ipi yoki tishlararo cho‘tka bilan",
-     "Tozalash shart emas"
+     "Old yuzalarni tozalash yetarli"
     ],
     "correct": 1,
     "explanation": "Cho‘tka tishlar orasiga yetib bormaydi."
@@ -100,7 +100,7 @@
     "options": [
      "Chaynash yuzasi egatchalari",
      "Faqat old yuza",
-     "Hech qaysi"
+     "Faqat plombali yuzalar"
     ],
     "correct": 0,
     "explanation": "Egatchalarda karash to‘planishi mumkin."
@@ -108,9 +108,9 @@
    {
     "q": "Profilaktik ko‘rik muddatini nima belgilaydi?",
     "options": [
-     "Reklama",
+     "Klinikalar reklamasi",
      "Stomatolog tavsiyasi bo‘yicha",
-     "Tasodif"
+     "Faqat tish og‘riy boshlaganda"
     ],
     "correct": 1,
     "explanation": "Muddat stomatolog tavsiyasiga qarab belgilanadi."
@@ -147,7 +147,7 @@
    {
     "q": "Gingivit nima?",
     "options": [
-     "Emal yo‘qolishi",
+     "Tishlarda emal yo‘qolishi",
      "Suyak o‘sishi",
      "Milk yallig‘lanishi"
     ],
@@ -159,7 +159,7 @@
     "options": [
      "Tayanch to‘qimalar, jumladan suyak jarohatlanadi",
      "Umuman farq yo‘q",
-     "Faqat tish rangi o‘zgaradi"
+     "Vaqt o‘tishi bilan faqat tish rangi o‘zgaradi"
     ],
     "correct": 0,
     "explanation": "Parodontitda tayanch to‘qimalar zararlanadi."

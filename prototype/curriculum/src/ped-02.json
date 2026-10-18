@@ -672,9 +672,9 @@
       },
       "options": [
         {
-          "en": "The procedure is started at once",
-          "ru": "Сразу начинают процедуру",
-          "uz": "Muolajani darhol boshlash"
+          "en": "The procedure starts at once without explanation",
+          "ru": "Сразу начинают процедуру без объяснений",
+          "uz": "Muolaja tushuntirishsiz darhol boshlanadi"
         },
         {
           "en": "The sound and feel of the instrument are shown",
@@ -922,9 +922,9 @@
           "uz": "Bolaga baqirib buyruq berish"
         },
         {
-          "en": "Not talking to the child at all",
+          "en": "Not talking to the child at all, working silently",
           "ru": "Полный отказ от разговора с ребёнком",
-          "uz": "Bola bilan umuman gaplashmaslik"
+          "uz": "Bola bilan umuman gaplashmaslik, jim ishlash"
         },
         {
           "en": "Deliberately changing voice volume and tone",

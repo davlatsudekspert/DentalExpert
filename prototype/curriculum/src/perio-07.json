@@ -702,7 +702,7 @@
           "uz": "Karash yo‘q"
         },
         {
-          "en": "Bone loss is reversed",
+          "en": "Bone loss has been reversed",
           "ru": "Убыль кости обратима",
           "uz": "Suyak yo‘qolishi qaytgan"
         }
@@ -872,9 +872,9 @@
           "uz": "Emal qalinligining ortishi"
         },
         {
-          "en": "Reduced plaque formation",
-          "ru": "Уменьшение образования налёта",
-          "uz": "Karash hosil bo‘lishining kamayishi"
+          "en": "Reduced plaque formation in diabetics",
+          "ru": "Уменьшение образования налёта у диабетиков",
+          "uz": "Diabetda karash hosil bo‘lishining kamayishi"
         },
         {
           "en": "Higher salivary fluoride",
@@ -903,7 +903,7 @@
         },
         {
           "en": "Plaque control",
-          "ru": "Гигиена полости рта",
+          "ru": "Качество гигиены полости рта",
           "uz": "Og‘iz gigiyenasi"
         },
         {

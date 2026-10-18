@@ -676,7 +676,7 @@
           "uz": "Oqartirishga javob bermagan rang o‘zgarishi"
         },
         {
-          "en": "Loss of most of the crown",
+          "en": "Loss of most of the clinical crown",
           "ru": "Утрачена большая часть коронки",
           "uz": "Tojning katta qismi yo‘qolgan"
         },
@@ -781,9 +781,9 @@
           "uz": "Rux fosfat sementi"
         },
         {
-          "en": "Glass ionomer cement",
-          "ru": "Стеклоиономерный цемент",
-          "uz": "Shisha-ionomer sement"
+          "en": "Conventional glass ionomer cement",
+          "ru": "Традиционный стеклоиономерный цемент",
+          "uz": "An’anaviy shisha-ionomer sement"
         },
         {
           "en": "Light-cured resin cement",
@@ -846,9 +846,9 @@
       },
       "options": [
         {
-          "en": "No anaesthesia is needed",
-          "ru": "Не требуется анестезия",
-          "uz": "Anesteziya kerak bo‘lmaydi"
+          "en": "No local anaesthesia is needed",
+          "ru": "Не требуется местная анестезия",
+          "uz": "Mahalliy anesteziya kerak bo‘lmaydi"
         },
         {
           "en": "It changes the veneer shade",
@@ -916,9 +916,9 @@
       },
       "options": [
         {
-          "en": "Allergy to ceramic",
-          "ru": "Аллергия на керамику",
-          "uz": "Keramikaga allergiya"
+          "en": "Allergy to the ceramic material",
+          "ru": "Аллергия на керамический материал",
+          "uz": "Keramika materialiga allergiya"
         },
         {
           "en": "The veneer is too thin",

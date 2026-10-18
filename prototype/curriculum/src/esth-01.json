@@ -818,9 +818,9 @@
           "uz": "Lunj yo‘laklarining kengligi"
         },
         {
-          "en": "The lower border of the upper lip",
-          "ru": "Нижняя граница верхней губы",
-          "uz": "Yuqori labning pastki chegarasi"
+          "en": "The lower border of the upper lip in a smile",
+          "ru": "Нижняя граница верхней губы при улыбке",
+          "uz": "Tabassumdagi yuqori labning pastki chegarasi"
         },
         {
           "en": "Upper incisal edge curve following the lower lip",
@@ -883,8 +883,8 @@
           "uz": "Emalning gipoplaziyasi"
         },
         {
-          "en": "High value of the teeth",
-          "ru": "Высокая светлота зубов",
+          "en": "High value (brightness) of the teeth",
+          "ru": "Высокая светлота (яркость) зубов",
           "uz": "Tishlarning yuqori yorqinligi"
         },
         {
@@ -928,9 +928,9 @@
           "uz": "Faqat tojlar rangini o‘zgartirish"
         },
         {
-          "en": "Hide it by lengthening the crowns",
-          "ru": "Скрыть её, удлинив коронки",
-          "uz": "Tojlarni uzunroq qilib yashirish"
+          "en": "Simply hide it by making the crowns longer",
+          "ru": "Скрыть её, просто сделав коронки длиннее",
+          "uz": "Tojlarni uzunroq qilib, shunchaki yashirish"
         }
       ],
       "correct": 1,

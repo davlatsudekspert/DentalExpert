@@ -912,7 +912,7 @@
         {
           "en": "Using a longer bur",
           "ru": "Использовать более длинный бор",
-          "uz": "Uzunroq bordan foydalanish"
+          "uz": "Uzunroq bordan foydalanib ishlash"
         }
       ],
       "correct": 0,
@@ -1016,7 +1016,7 @@
         },
         {
           "en": "Through the static zone behind the head",
-          "ru": "через статическую зону за головой",
+          "ru": "через статическую зону за головой пациента",
           "uz": "Bosh orqasidagi statik hudud orqali"
         }
       ],

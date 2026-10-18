@@ -784,9 +784,9 @@
           "uz": "Sirpanib ketsa yoki sinsa, uni chiqarib olish uchun"
         },
         {
-          "en": "To make the clamp tighter",
-          "ru": "Чтобы кламмер держал крепче",
-          "uz": "Klammerni mahkamroq qilish uchun"
+          "en": "To make the clamp grip tighter",
+          "ru": "Чтобы кламмер держался на зубе крепче",
+          "uz": "Klammerni tishda mahkamroq ushlash uchun"
         },
         {
           "en": "To clean the contacts",
@@ -921,7 +921,7 @@
         {
           "en": "Faster setting of the composite",
           "ru": "Ускоренное твердение композита",
-          "uz": "Kompozitning tezroq qotishi"
+          "uz": "Kompozitning ancha tezroq qotishi"
         },
         {
           "en": "Discolouration of the gingiva",
@@ -964,9 +964,9 @@
           "uz": "Tanglayga"
         },
         {
-          "en": "Between the incisors",
-          "ru": "между резцами",
-          "uz": "Kesuvchi tishlar orasiga"
+          "en": "Between the upper central incisors",
+          "ru": "между верхними центральными резцами",
+          "uz": "Yuqori markaziy kesuvchilar orasiga"
         },
         {
           "en": "In the vestibule near the parotid duct opening",
@@ -1041,7 +1041,7 @@
         {
           "en": "Long working time",
           "ru": "Длительное рабочее время",
-          "uz": "Uzoq ishlash vaqti"
+          "uz": "Materialning uzoq ishlash vaqti"
         }
       ],
       "correct": 0,
@@ -1059,9 +1059,9 @@
       },
       "options": [
         {
-          "en": "The time until it is fully hardened",
-          "ru": "время до полного затвердевания",
-          "uz": "To‘liq qotguncha bo‘lgan vaqt"
+          "en": "The time from mixing until fully hardened",
+          "ru": "время от замешивания до полного затвердевания",
+          "uz": "Aralashtirilgandan to‘liq qotguncha bo‘lgan vaqt"
         },
         {
           "en": "The shelf life of the package",

@@ -804,9 +804,9 @@
           "uz": "Sababni bartaraf etish va yiringni chiqarish"
         },
         {
-          "en": "Warm compress and observation",
-          "ru": "Тёплый компресс и наблюдение",
-          "uz": "Iliq kompress va kuzatuv"
+          "en": "Warm compress and a few days of observation",
+          "ru": "Тёплый компресс и наблюдение несколько дней",
+          "uz": "Iliq kompress qo‘yish va bir necha kun kuzatish"
         }
       ],
       "correct": 2,
@@ -944,9 +944,9 @@
           "uz": "Ikkinchi molyar o‘qiga nisbatan burchak"
         },
         {
-          "en": "Distance to the ramus",
-          "ru": "Расстояние до ветви",
-          "uz": "Pastki jag‘ shoxiga masofa"
+          "en": "Distance to the anterior border of the ramus",
+          "ru": "Расстояние до переднего края ветви",
+          "uz": "Pastki jag‘ shoxining oldingi chetigacha masofa"
         }
       ],
       "correct": 2,
@@ -1044,14 +1044,14 @@
           "uz": "Tish kariesga uchragan"
         },
         {
-          "en": "A root fracture",
-          "ru": "Перелом корня",
-          "uz": "Ildiz sinishi"
+          "en": "A horizontal fracture of the root",
+          "ru": "Горизонтальный перелом корня зуба мудрости",
+          "uz": "Ildizning gorizontal sinishi"
         },
         {
-          "en": "A normal finding",
-          "ru": "Норма",
-          "uz": "Normal holat"
+          "en": "A normal anatomical variant, no risk",
+          "ru": "Анатомическая норма без риска",
+          "uz": "Xavfsiz normal anatomik holat"
         }
       ],
       "correct": 0,
@@ -1084,9 +1084,9 @@
           "uz": "Qarama-qarshi tishni tekislash yoki olishni ko‘rib chiqish"
         },
         {
-          "en": "Restore the lower tooth at once",
-          "ru": "Сразу запломбировать нижний зуб",
-          "uz": "Pastki tishni darhol plombalash"
+          "en": "Restore the lower third molar at this visit",
+          "ru": "Сразу запломбировать нижний зуб мудрости",
+          "uz": "Pastki aql tishini shu tashrifda darhol plombalash"
         }
       ],
       "correct": 2,

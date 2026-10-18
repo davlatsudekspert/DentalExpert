@@ -824,8 +824,8 @@
       },
       "options": [
         {
-          "en": "Calcium loss from the teeth to the baby",
-          "ru": "потерей кальция зубами в пользу плода",
+          "en": "Calcium loss from the mother’s teeth to the baby",
+          "ru": "потерей кальция из зубов матери в пользу плода",
           "uz": "Tishlardan kalsiyning homilaga o‘tishi"
         },
         {
@@ -1014,9 +1014,9 @@
           "uz": "So‘lak orqali kariesogen bakteriyalarning erta o‘tishi"
         },
         {
-          "en": "Delay in tooth eruption",
-          "ru": "Задержка прорезывания зубов",
-          "uz": "Tish chiqishining kechikishi"
+          "en": "Delay in primary tooth eruption",
+          "ru": "Задержка прорезывания молочных зубов",
+          "uz": "Bolada sut tishlari chiqishining kechikishi"
         }
       ],
       "correct": 2,

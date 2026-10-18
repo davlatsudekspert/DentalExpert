@@ -651,9 +651,9 @@
           "uz": "Kanal tizimini uch o‘lchamda germetik to‘ldirish"
         },
         {
-          "en": "To strengthen the tooth",
-          "ru": "Укрепление зуба",
-          "uz": "Tishni mustahkamlash"
+          "en": "To strengthen the root against fracture",
+          "ru": "Укрепление корня и защита его от перелома",
+          "uz": "Ildizni sinishdan himoyalab mustahkamlash"
         },
         {
           "en": "To stop pain immediately",
@@ -692,7 +692,7 @@
         },
         {
           "en": "Halfway down the canal",
-          "ru": "До середины канала",
+          "ru": "До середины длины канала",
           "uz": "Kanal yarmigacha"
         }
       ],
@@ -727,8 +727,8 @@
         },
         {
           "en": "The cone is beyond the apex",
-          "ru": "Штифт выведен за апекс",
-          "uz": "Shtift apeksdan chiqqan"
+          "ru": "Штифт выведен за апикальное отверстие",
+          "uz": "Shtift apikal teshikdan chiqib ketgan"
         }
       ],
       "correct": 2,
@@ -756,9 +756,9 @@
           "uz": "Rentgenda ko‘rinishi uchun"
         },
         {
-          "en": "To disinfect the canal",
-          "ru": "Для дезинфекции канала",
-          "uz": "Kanalni dezinfeksiya qilish uchun"
+          "en": "To disinfect the canal walls permanently",
+          "ru": "Для постоянной дезинфекции стенок канала",
+          "uz": "Kanal devorlarini doimiy dezinfeksiya qilish uchun"
         },
         {
           "en": "Gutta-percha does not bond to walls; sealer fills gaps",
@@ -791,9 +791,9 @@
           "uz": "Kanal qayta yuviladi"
         },
         {
-          "en": "The orifice is sealed temporarily",
-          "ru": "Устье временно закрывают",
-          "uz": "Kanal og‘zi vaqtincha yopiladi"
+          "en": "The orifice is sealed temporarily with cotton",
+          "ru": "Устье временно закрывают ватой и повязкой",
+          "uz": "Kanal og‘zi paxta bilan vaqtincha yopiladi"
         },
         {
           "en": "Accessory cones are added",
@@ -937,7 +937,7 @@
         },
         {
           "en": "Time of day of treatment",
-          "ru": "Время суток лечения",
+          "ru": "Время суток проведения лечения",
           "uz": "Davolash kunining vaqti"
         }
       ],
@@ -961,9 +961,9 @@
           "uz": "Og‘ir periodontit"
         },
         {
-          "en": "A well-defined lesion",
-          "ru": "Чётко очерченный очаг",
-          "uz": "Aniq chegarali o‘choq"
+          "en": "A well-defined radiolucent lesion",
+          "ru": "Чётко очерченный очаг разрежения",
+          "uz": "Aniq chegarali yorug‘lanish o‘chog‘i"
         },
         {
           "en": "Normal periapical structures",

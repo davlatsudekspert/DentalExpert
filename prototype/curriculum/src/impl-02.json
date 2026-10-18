@@ -815,9 +815,9 @@
           "uz": "Jag‘ osteonekrozi xavfi yuqori, odatda tavsiya etilmaydi"
         },
         {
-          "en": "The implant strengthens bone",
-          "ru": "Имплантат укрепляет кость",
-          "uz": "Implant suyakni mustahkamlaydi"
+          "en": "The implant strengthens the weakened bone",
+          "ru": "Имплантат укрепляет ослабленную кость",
+          "uz": "Implant zaiflashgan suyakni mustahkamlaydi"
         }
       ],
       "correct": 2,
@@ -870,9 +870,9 @@
       },
       "options": [
         {
-          "en": "Choose the longest implant first",
-          "ru": "Сначала выбрать самый длинный имплантат",
-          "uz": "Avval eng uzun implantni tanlash"
+          "en": "Choose the longest, widest implant first",
+          "ru": "Сначала выбрать самый длинный и широкий имплантат",
+          "uz": "Avval eng uzun va eng keng implantni tanlash"
         },
         {
           "en": "Place only where bone is",
@@ -940,9 +940,9 @@
       },
       "options": [
         {
-          "en": "Place an implant now",
-          "ru": "Немедленная имплантация",
-          "uz": "Darhol implant qo‘yish"
+          "en": "Place an implant now to preserve the bone",
+          "ru": "Немедленная имплантация для сохранения кости",
+          "uz": "Suyakni saqlash uchun darhol implant qo‘yish"
         },
         {
           "en": "Wait until growth ends, use a temporary",

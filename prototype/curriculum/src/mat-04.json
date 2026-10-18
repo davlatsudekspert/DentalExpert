@@ -716,9 +716,9 @@
           "uz": "Gidroksiapatit kalsiyi bilan ion almashinuvi orqali"
         },
         {
-          "en": "Only by mechanical retention",
-          "ru": "Только механической ретенцией",
-          "uz": "Faqat mexanik retensiya bilan"
+          "en": "Only by mechanical retention in undercuts",
+          "ru": "Только механической ретенцией в поднутрениях",
+          "uz": "Faqat kovak shakli bilan mexanik ushlanish"
         },
         {
           "en": "Through a hybrid layer",
@@ -756,9 +756,9 @@
           "uz": "Smear qatlamini olib, sirtni tozalash"
         },
         {
-          "en": "To disinfect the pulp",
-          "ru": "Дезинфицировать пульпу",
-          "uz": "Pulpani dezinfeksiya qilish"
+          "en": "To disinfect the dentine and pulp",
+          "ru": "Чтобы продезинфицировать дентин и пульпу",
+          "uz": "Dentin va pulpani dezinfeksiya qilish"
         },
         {
           "en": "To set the cement",
@@ -786,9 +786,9 @@
           "uz": "Namlik tushishi yoki qurib qolishi"
         },
         {
-          "en": "Exposure to light",
-          "ru": "Воздействие света",
-          "uz": "Yorug‘lik ta’siri"
+          "en": "Exposure to the operating light",
+          "ru": "Воздействие света операционной лампы",
+          "uz": "Operatsion chiroq yorug‘ligi ta’siri"
         },
         {
           "en": "Fluoride release",
@@ -971,9 +971,9 @@
           "uz": "Mustahkamligi va yeyilishga chidamliligi past"
         },
         {
-          "en": "It conducts heat well",
-          "ru": "Хорошо проводит тепло",
-          "uz": "Issiqlikni yaxshi o‘tkazadi"
+          "en": "It conducts heat too well",
+          "ru": "Слишком хорошо проводит тепло",
+          "uz": "Issiqlikni haddan tashqari yaxshi o‘tkazadi"
         }
       ],
       "correct": 2,

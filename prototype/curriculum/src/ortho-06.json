@@ -832,9 +832,9 @@
       },
       "options": [
         {
-          "en": "Faster tooth movement",
-          "ru": "Зуб перемещается быстрее",
-          "uz": "Tish tezroq siljiydi"
+          "en": "Faster and more efficient tooth movement",
+          "ru": "Зуб перемещается быстрее и эффективнее",
+          "uz": "Tish tezroq va samaraliroq siljiydi"
         },
         {
           "en": "Hyalinisation and root resorption",
@@ -972,9 +972,9 @@
       },
       "options": [
         {
-          "en": "Superelasticity",
-          "ru": "Сверхэластичность",
-          "uz": "O‘ta elastikligi"
+          "en": "Superelasticity at low, constant force",
+          "ru": "Сверхэластичность при малой постоянной силе",
+          "uz": "Kichik doimiy kuchda o‘ta elastiklik"
         },
         {
           "en": "Stiffness, formability and low friction",
@@ -1007,9 +1007,9 @@
       },
       "options": [
         {
-          "en": "Bonding a bracket to the tooth",
-          "ru": "Приклеивание брекета к зубу",
-          "uz": "Breketni tishga yopishtirish"
+          "en": "Bonding a bracket to the tooth surface",
+          "ru": "Приклеивание брекета к поверхности зуба",
+          "uz": "Breketni tish yuzasiga yopishtirish"
         },
         {
           "en": "Changing the archwire",

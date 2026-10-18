@@ -88,7 +88,7 @@
    "options": [
     "By rinsing only",
     "With dental floss or an interdental brush",
-    "Cleaning is not necessary"
+    "Brushing the front surfaces is enough"
    ],
    "correct": 1,
    "explanation": "A toothbrush does not reach between the teeth."
@@ -98,7 +98,7 @@
    "options": [
     "The grooves of the chewing surface",
     "Only the front surface",
-    "None"
+    "Surfaces that already have fillings only"
    ],
    "correct": 0,
    "explanation": "Plaque can accumulate in the grooves."
@@ -106,9 +106,9 @@
   {
    "q": "What determines when to have a preventive check-up?",
    "options": [
-    "Advertising",
+    "Advertising for dental clinics",
     "A dentist’s recommendation",
-    "Chance"
+    "Only when a tooth starts to hurt"
    ],
    "correct": 1,
    "explanation": "The interval is set according to the dentist’s recommendation."

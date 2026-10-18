@@ -824,9 +824,9 @@
           "uz": "Yumshoq dentin"
         },
         {
-          "en": "Leathery dentin",
-          "ru": "Кожистый дентин",
-          "uz": "Terisimon dentin"
+          "en": "Leathery dentin left at the margins",
+          "ru": "Кожистый дентин по краям полости",
+          "uz": "Chekkalarda terisimon dentin"
         },
         {
           "en": "It does not matter",
@@ -919,9 +919,9 @@
       },
       "options": [
         {
-          "en": "Extend through all fissures with a bur",
-          "ru": "Расширить все фиссуры бором",
-          "uz": "Barcha fissuralarni bor bilan kengaytirish"
+          "en": "Extend through all fissures (extension for prevention)",
+          "ru": "Расширить все фиссуры бором («профилактическое расширение»)",
+          "uz": "Barcha fissuralarni bor bilan kengaytirish (profilaktik)"
         },
         {
           "en": "Extract the tooth",
@@ -935,7 +935,7 @@
         },
         {
           "en": "Minimal preparation and seal remaining fissures",
-          "ru": "Минимально препарировать полость, остальные фиссуры герметизировать",
+          "ru": "Минимальное препарирование и герметизация остальных фиссур",
           "uz": "Kovakni minimal preparatsiya, qolgan fissuralarni germetiklash"
         }
       ],
@@ -959,9 +959,9 @@
           "uz": "Germetik restavratsiya ostida ular oziqsiz qoladi"
         },
         {
-          "en": "Fluoride kills them all",
-          "ru": "Они погибают от фтора",
-          "uz": "Ular ftor bilan o‘ladi"
+          "en": "Fluoride from the filling kills them all",
+          "ru": "Все они погибают от фтора из пломбы",
+          "uz": "Plombadagi ftor ularning hammasini o‘ldiradi"
         },
         {
           "en": "They move into the pulp",

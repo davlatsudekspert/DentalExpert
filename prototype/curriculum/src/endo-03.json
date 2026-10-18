@@ -662,9 +662,9 @@
       },
       "options": [
         {
-          "en": "Occlusal trauma",
-          "ru": "Окклюзионная травма",
-          "uz": "Okklyuzion travma"
+          "en": "Occlusal trauma to the tooth",
+          "ru": "Окклюзионная травма зуба",
+          "uz": "Tishning okklyuzion travmasi"
         },
         {
           "en": "Root canal microorganisms",
@@ -882,9 +882,9 @@
           "uz": "Faqat og‘riq qoldiruvchi berish"
         },
         {
-          "en": "Immediate permanent canal filling",
-          "ru": "Немедленная постоянная пломбировка канала",
-          "uz": "Kanalni darhol doimiy plombalash"
+          "en": "Immediate permanent canal filling at this visit",
+          "ru": "Немедленная постоянная пломбировка канала в этот визит",
+          "uz": "Kanalni shu tashrifda darhol doimiy plombalash"
         },
         {
           "en": "Observation for 2 weeks",
@@ -982,9 +982,9 @@
           "uz": "Oqmaga gutta-percha shtift kiritib rentgen olish"
         },
         {
-          "en": "Extract the tooth nearest the tract",
-          "ru": "Удалить ближайший к свищу зуб",
-          "uz": "Oqma yaqinidagi tishni olib tashlash"
+          "en": "Extract the tooth nearest the tract opening",
+          "ru": "Удалить зуб, ближайший к устью свища",
+          "uz": "Oqma og‘ziga eng yaqin tishni olib tashlash"
         },
         {
           "en": "Percussion alone",

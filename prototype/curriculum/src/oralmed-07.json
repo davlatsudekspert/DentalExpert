@@ -725,9 +725,9 @@
           "uz": "Til biopsiyasi"
         },
         {
-          "en": "Salivary flow test",
-          "ru": "Измерение слюноотделения",
-          "uz": "So‘lak oqimini o‘lchash"
+          "en": "Salivary flow rate measurement",
+          "ru": "Измерение скорости слюноотделения",
+          "uz": "So‘lak ajralish tezligini o‘lchash"
         }
       ],
       "correct": 0,

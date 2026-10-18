@@ -626,9 +626,9 @@
       },
       "options": [
         {
-          "en": "With tooth preparation",
-          "ru": "С препарирования зубов",
-          "uz": "Tishlarni charxlashdan"
+          "en": "With preparing the teeth for veneers",
+          "ru": "С препарирования зубов под виниры",
+          "uz": "Vinirlar uchun tishlarni charxlashdan"
         },
         {
           "en": "With facial photos and reference lines",
@@ -767,7 +767,7 @@
       "options": [
         {
           "en": "Vertical dimension of occlusion",
-          "ru": "Окклюзионную высоту",
+          "ru": "Вертикальную окклюзионную высоту",
           "uz": "Okklyuzion balandlikni"
         },
         {
@@ -876,9 +876,9 @@
           "uz": "Skaner talab qilmaydi"
         },
         {
-          "en": "It requires no skill",
-          "ru": "Не требует никаких навыков",
-          "uz": "Hech qanday mahorat talab qilmaydi"
+          "en": "It requires no clinical or design skill",
+          "ru": "Не требует никаких клинических навыков",
+          "uz": "Hech qanday klinik mahorat talab qilmaydi"
         },
         {
           "en": "It is always cheaper",

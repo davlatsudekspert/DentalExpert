@@ -849,7 +849,7 @@
         },
         {
           "en": "Inflammation of the periodontal ligament",
-          "ru": "Воспаление периодонта",
+          "ru": "Воспаление периодонтальной связки корня",
           "uz": "Periodont yallig‘lanishi"
         },
         {
@@ -983,8 +983,8 @@
       },
       "options": [
         {
-          "en": "Nerve fibres inside dentinal tubules",
-          "ru": "нервные волокна в дентинных канальцах",
+          "en": "Nerve fibres running inside dentinal tubules",
+          "ru": "нервные волокна, идущие в дентинных канальцах",
           "uz": "Dentin naychalaridagi nerv tolalari"
         },
         {
