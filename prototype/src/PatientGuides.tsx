@@ -4,7 +4,7 @@ import {
   Info, ShieldPlus, Siren, Sparkles, TriangleAlert, Waypoints, Wind, Zap,
   type LucideIcon,
 } from 'lucide-react';
-import { GUIDES, GUIDE_UI, type Guide, type GuideIcon, type GuideLang } from './patientGuides';
+import { GUIDES, GUIDE_UI, type Guide, type GuideIcon, type GuideLang } from './guideContent';
 import './guides.css';
 
 const ICONS: Record<GuideIcon, LucideIcon> = {
