@@ -58,7 +58,7 @@ for k,tok in enumerate(S):
     sets.append(tuple(sorted(r['questions'])))
     s,r2=call('/classroom/start','POST',{'assignmentId':aid},tok)
     check(f'student {k+1}: resume keeps the same questions',r2['resumed'] and r2['questions']==r['questions'])
-check('the four students got four different sets',len(set(sets))==4)
+check('the students got different sets (each its own draw; a chance repeat of 5 of 10 is allowed)',len(set(sets))>=3)
 q0=call('/classroom/start','POST',{'assignmentId':aid},S[0])[1]['questions']
 check('wrong answer count refused',call('/classroom/submit','POST',{'assignmentId':aid,'answers':[0]*4},S[0])[0]==400)
 s,r=call('/classroom/submit','POST',{'assignmentId':aid,'answers':correct(q0)},S[0])

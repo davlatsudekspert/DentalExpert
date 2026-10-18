@@ -170,7 +170,9 @@ with sync_playwright() as p:
     check('student A saw exactly their drawn questions',seenA==exp['A'])
     check('student B saw exactly their drawn questions',seenB==exp['B'])
     check('student C saw exactly their drawn questions (across the reload)',seenC==exp['C'])
-    check('the three students got three different question sets',len({tuple(sorted(x)) for x in (seenA,seenB,seenC)})==3)
+    # Each set is that account's own draw (checked above); two random accounts can draw the same 5 of 10 by chance (~1%),
+    # so only identical sets for everyone would mean variants are off.
+    check('the students got different question sets',len({tuple(sorted(x)) for x in (seenA,seenB,seenC)})>=2)
 
     # ── Teacher screen and big screen: all three results.
     tp.wait_for_timeout(5500)
