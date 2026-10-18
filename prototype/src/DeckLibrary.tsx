@@ -1,4 +1,4 @@
-import {useCallback,useEffect,useRef,useState} from 'react';
+import {useCallback,useEffect,useMemo,useRef,useState} from 'react';
 import {Check,ChevronLeft,ChevronRight,ClipboardCheck,Maximize,Presentation,X} from 'lucide-react';
 import type {Lang} from './discoveryData';
 
@@ -42,6 +42,8 @@ function Viewer({deck,lang,onClose,onProgress}:{deck:Deck;lang:Lang;onClose:()=>
  // Copy/save affordances are removed; screenshots of a displayed screen cannot be prevented.
  const block=(e:{preventDefault:()=>void})=>e.preventDefault();
  const score=answers.filter((a,i)=>a===deck.quiz[i].correct).length;
+ // Show the options in a random order so the stored position of the answer is never a hint.
+ const order=useMemo(()=>deck.quiz.map(q=>{const o=q.options.map((_,i)=>i);for(let i=o.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[o[i],o[j]]=[o[j],o[i]]}return o}),[deck]);
  useEffect(()=>{onProgress({viewed:true})},[]);// eslint-disable-line react-hooks/exhaustive-deps
  useEffect(()=>{if(answers.every(a=>a!==null))onProgress({score,total:deck.quiz.length})},[answers]);// eslint-disable-line react-hooks/exhaustive-deps
  return <div className="deck-viewer" ref={root} role="dialog" aria-label={deck.title} onContextMenu={block} onCopy={block} onCut={block} onDragStart={block}>
@@ -65,7 +67,7 @@ function Viewer({deck,lang,onClose,onProgress}:{deck:Deck;lang:Lang;onClose:()=>
   </>:<div className="deck-quiz">
    {deck.quiz.map((q,qi)=><div className="deck-q" key={qi}>
     <strong>{qi+1}. {q.q}</strong>
-    <div>{q.options.map((o,oi)=>{const picked=answers[qi]===oi;const done=answers[qi]!==null;return <button key={oi} disabled={done} className={done?(oi===q.correct?'right':picked?'wrong':''):''} onClick={()=>setAnswers(a=>a.map((x,i)=>i===qi?oi:x))}>{o}{done&&oi===q.correct&&<Check size={15}/>}</button>})}</div>
+    <div>{(order[qi]||q.options.map((_,i)=>i)).map(oi=>{const o=q.options[oi];const picked=answers[qi]===oi;const done=answers[qi]!==null;return <button key={oi} disabled={done} className={done?(oi===q.correct?'right':picked?'wrong':''):''} onClick={()=>setAnswers(a=>a.map((x,i)=>i===qi?oi:x))}>{o}{done&&oi===q.correct&&<Check size={15}/>}</button>})}</div>
     {answers[qi]!==null&&<small>{q.explanation}</small>}
    </div>)}
    {answers.every(a=>a!==null)&&<p className="deck-score" role="status">{t.result}: {score} / {deck.quiz.length}</p>}

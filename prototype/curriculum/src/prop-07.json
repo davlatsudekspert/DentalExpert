@@ -523,7 +523,7 @@
             "uz": "Pt"
           },
           {
-            "en": "Periodontitis",
+            "en": "Apical periodontitis",
             "ru": "Периодонтит",
             "uz": "Periodontit"
           }
@@ -957,7 +957,7 @@
       },
       "options": [
         {
-          "en": "Periodontitis",
+          "en": "Apical periodontitis",
           "ru": "периодонтит",
           "uz": "Periodontit"
         },
@@ -979,7 +979,7 @@
       ],
       "correct": 0,
       "explain": {
-        "en": "In common chart notation P is pulpitis and Pt is periodontitis.",
+        "en": "In common chart notation P is pulpitis and Pt is apical periodontitis.",
         "ru": "В распространённых обозначениях P — пульпит, Pt — периодонтит.",
         "uz": "Keng tarqalgan belgilarda P — pulpit, Pt — periodontit."
       }

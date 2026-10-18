@@ -834,22 +834,22 @@
       "options": [
         {
           "en": "Acidic pH",
-          "ru": "Кислому pH",
+          "ru": "Кислым pH",
           "uz": "Kislotali pH ga"
         },
         {
           "en": "High alkaline pH",
-          "ru": "Высокому щелочному pH",
+          "ru": "Высоким щелочным pH",
           "uz": "Yuqori ishqoriy pH ga"
         },
         {
           "en": "Release of iodine",
-          "ru": "Выделению йода",
+          "ru": "Выделением йода",
           "uz": "Yod ajralishiga"
         },
         {
           "en": "Its antibiotic content",
-          "ru": "Содержанию антибиотика",
+          "ru": "Содержанием антибиотика",
           "uz": "Antibiotik tarkibiga"
         }
       ],

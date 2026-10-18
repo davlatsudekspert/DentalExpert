@@ -345,9 +345,9 @@
               "uz": "Bosh oyoqlardan pastda"
             },
             {
-              "en": "Emergencies such as fainting",
-              "ru": "Неотложные состояния, например обморок",
-              "uz": "Hushdan ketish kabi shoshilinch holatlar"
+              "en": "In a faint, lying flat with the legs raised is now preferred",
+              "ru": "При обмороке сейчас предпочитают горизонтальное положение с приподнятыми ногами",
+              "uz": "Hushdan ketishda endi gorizontal holat va oyoqlarni ko‘tarish afzal"
             }
           ]
         }
@@ -818,21 +818,21 @@
           "uz": "Yarim tik holat"
         },
         {
-          "en": "Supine, head level with knees",
-          "ru": "Горизонтальное, голова на уровне коленей",
-          "uz": "Gorizontal, bosh tizza sathida"
+          "en": "Supine with the legs raised",
+          "ru": "Горизонтальное с приподнятыми ногами",
+          "uz": "Gorizontal, oyoqlar ko‘tarilgan"
         },
         {
-          "en": "Subsupine, head below feet",
-          "ru": "Голова ниже ног (Тренделенбург)",
-          "uz": "Bosh oyoqdan past (Trendelenburg)"
+          "en": "Seated, head between the knees",
+          "ru": "Сидя, голова между коленями",
+          "uz": "O‘tirgan holda, bosh tizzalar orasida"
         }
       ],
-      "correct": 3,
+      "correct": 2,
       "explain": {
-        "en": "Lowering the head below the feet improves blood flow to the brain in a simple faint.",
-        "ru": "Опускание головы ниже ног улучшает кровоснабжение мозга при обмороке.",
-        "uz": "Boshni oyoqdan pastga tushirish hushdan ketishda miyaga qon oqimini yaxshilaydi."
+        "en": "Lay the patient flat and raise the legs: blood returns to the heart and brain. Steep head-down tilt is no longer advised.",
+        "ru": "Пациента укладывают горизонтально и приподнимают ноги: кровь возвращается к сердцу и мозгу. Резкий наклон головой вниз больше не рекомендуют.",
+        "uz": "Bemor gorizontal yotqiziladi va oyoqlari ko‘tariladi: qon yurak va miyaga qaytadi. Boshni keskin pastga engashtirish endi tavsiya etilmaydi."
       }
     },
     {

@@ -39,6 +39,7 @@ jobs:
           python3 tools/curriculum.py
           python3 tools/curriculum.py build
           git diff --exit-code -- src/curriculum functions/_lib/curriculumKeys.ts
+          python3 tools/question_audit.py --quiet
       - name: Unit tests (QR/invite parsing, nickname filter)
         run: npx tsx tools/join_link_test.ts && npx tsx tools/profanity_test.ts
       - name: Build (app type check + bundle)

@@ -965,9 +965,9 @@
     },
     {
       "q": {
-        "en": "A 40-year-old has 40% maximum bone loss. Which AAP/EFP 2017 grade applies?",
-        "ru": "У пациента 40 лет максимальная убыль кости 40%. Какая степень по AAP/EFP 2017?",
-        "uz": "40 yoshli bemorda eng ko‘p suyak yo‘qolishi 40%. AAP/EFP 2017 bo‘yicha daraja qanday?"
+        "en": "A 40-year-old has 30% maximum bone loss. Which AAP/EFP 2017 grade applies?",
+        "ru": "У пациента 40 лет максимальная убыль кости 30%. Какая степень по AAP/EFP 2017?",
+        "uz": "40 yoshli bemorda eng ko‘p suyak yo‘qolishi 30%. AAP/EFP 2017 bo‘yicha daraja qanday?"
       },
       "options": [
         {
@@ -993,9 +993,9 @@
       ],
       "correct": 1,
       "explain": {
-        "en": "40% divided by 40 years is 1.0, within 0.25–1.0, which is grade B.",
-        "ru": "40% / 40 лет = 1,0 — в пределах 0,25–1,0, то есть степень B.",
-        "uz": "40% / 40 yosh = 1,0, bu 0,25–1,0 oralig‘ida, ya’ni B daraja."
+        "en": "30% divided by 40 years is 0.75, within 0.25–1.0, which is grade B.",
+        "ru": "30% / 40 лет = 0,75 — в пределах 0,25–1,0, то есть степень B.",
+        "uz": "30% / 40 yosh = 0,75, bu 0,25–1,0 oralig‘ida, ya’ni B daraja."
       }
     }
   ]
