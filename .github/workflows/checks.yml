@@ -48,7 +48,7 @@ jobs:
       - name: API suites on a local server
         run: bash tools/ci_local_server.sh auth_test admin_test classroom_test topics_test profile_public_test quick_test
       - name: Google / Apple sign-in suite
-        run: python3 tools/oauth_test.py
+        run: pip install cryptography && python3 tools/oauth_test.py
       - name: Browsers for the walks
         run: |
           pip install playwright==1.64.0 pillow
