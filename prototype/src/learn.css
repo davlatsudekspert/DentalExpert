@@ -329,9 +329,9 @@ body::before{content:'';position:fixed;left:0;right:0;top:0;height:env(safe-area
 .bottom-nav button.active{color:#0f7f7d!important}
 .chips button{color:#3f5862}
 body{-webkit-text-size-adjust:100%}
-.theme-grid{display:grid!important;grid-template-columns:repeat(3,1fr);gap:8px;padding:8px!important}
+.theme-grid{display:grid!important;grid-template-columns:repeat(2,1fr);gap:8px;padding:8px!important}
 .theme-grid button{flex-direction:column;justify-content:center;gap:8px!important;min-height:92px;border:1.5px solid #e6eff0!important;border-radius:18px;padding:10px 4px!important}
 .theme-grid button.on{border-color:#168d8b!important;background:#effaf9}
 .theme-swatch{width:44px;height:30px;border-radius:10px;border:1px solid #d6e5e6;background:#fff}
-.theme-swatch.dark{background:linear-gradient(135deg,#0b1726,#14324a)}
-.theme-swatch.system{background:linear-gradient(135deg,#fff 50%,#0b1726 50%)}
+.theme-swatch.mono{background:linear-gradient(180deg,#fff 0 70%,#000 70%)}
+.theme-swatch.color{background:linear-gradient(135deg,#e6f9fc,#17a6b7)}
