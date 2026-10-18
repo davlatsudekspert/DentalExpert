@@ -47,7 +47,6 @@
 .learn > .chips.learn-tabs{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px!important;overflow:visible!important;padding:0!important}
 .learn > .chips.learn-tabs button{width:100%;justify-content:center;min-height:42px;padding:0 6px!important;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .learn > .chips.learn-tabs:has(> :nth-child(2):last-child){grid-template-columns:1fr 1fr}
-.settings-profile .sp-edit-label{width:auto!important;padding:0 14px!important;gap:6px;display:inline-flex;align-items:center;border-radius:999px!important;font:inherit;font-size:13px;font-weight:600;min-height:40px;white-space:nowrap}
 /* Slides on a sideways phone or a TV: slim bars so the slide gets the height. */
 .sl-bar .sl-present{margin-left:auto}
 @media (orientation:landscape) and (max-height:520px){

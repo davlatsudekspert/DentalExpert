@@ -53,6 +53,9 @@ const words={
 const levelOf=(xp:number)=>Math.floor(Math.sqrt(xp/40))+1;
 const xpFor=(level:number)=>(level-1)**2*40;
 
+/** Level, XP, finished topics and day streak for the Profil header (same numbers as the card on Today). */
+export const progressSummary=()=>{const s=stats();return {level:levelOf(s.xp),xp:s.xp,streak:s.streak,topics:s.done}};
+
 export default function Achievements({lang}:{lang:Lang}){
  const t=words[lang];
  const [open,setOpen]=useState(false);

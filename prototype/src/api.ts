@@ -107,6 +107,8 @@ export async function callApi<T=Record<string,unknown>>(path:string,method:'GET'
 
 export type ProfileInput={name:string;phone:string;workplace:string;bio:string;specialty:string;address:string;telegram:string;instagram:string;publicEmail:string;mapUrl:string;publishRequested:boolean};
 export const saveProfile=(b:ProfileInput)=>post<{user?:AuthUser}>('/api/auth/profile',b,'PUT');
+/** Switches the signed-in user's own role (functions/api/auth/role.ts); leaving 'dentist' takes the public listing down. */
+export const changeRole=(role:AuthUser['role'])=>post<{user?:AuthUser}>('/api/auth/role',{role},'PUT');
 /** Profile photo: a data URL (image/webp, image/jpeg or image/png, at most 200 KB decoded) the client already cropped to 512×512. */
 export const uploadPhoto=(image:string)=>post<{user?:AuthUser}>('/api/auth/photo',{image},'PUT');
 export const deletePhoto=()=>post<{user?:AuthUser}>('/api/auth/photo',null,'DELETE');

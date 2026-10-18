@@ -301,7 +301,7 @@ html.native::after{content:'';position:fixed;left:0;right:0;bottom:0;height:calc
 .role-tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:14px 0}
 .role-tiles button{display:flex;flex-direction:column;align-items:center;gap:6px;padding:14px 6px;border-radius:16px;background:#fff;border:1px solid #d6e5e6;font-size:13px;color:#183e50}.role-tiles span{font-size:24px}.role-tiles b{font-weight:650}
 .deck-done{color:#127f7d!important;font-weight:700}
-.admin-entry{margin:0 0 12px}
+
 .learn{display:flex;flex-direction:column;gap:12px}
 .bottom-nav button{font-size:11px}
 .profile-form{display:flex;flex-direction:column;gap:12px}.profile-form label{display:flex;flex-direction:column;gap:6px;font-size:13px;font-weight:650;color:#3d6270}
