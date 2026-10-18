@@ -382,3 +382,4 @@ button.cr-back{min-height:44px;padding:10px 14px 10px 0;margin:-6px 0}
 .lg-qrcard .lg-invite-body{flex-direction:column;align-items:center;text-align:center;gap:10px}
 .lg-qrcard .lg-invite-body img{width:min(200px,60vw);height:auto;image-rendering:pixelated}
 .lg-qrcard .lg-invite-body b{white-space:nowrap}
+.qj-hero .lg-tag{white-space:normal;max-width:100%;text-align:center;line-height:1.35}

@@ -146,7 +146,7 @@ with sync_playwright() as p:
     check('opening the same link twice mid-test: one sheet, same question',cp.locator('.quiz-run').count()==1 and cp.locator('.qr-count').inner_text().split(' · ')[0]==q_before)
     tp.wait_for_timeout(5500)
     check('teacher screen shows C answering and A, B submitted',tp.locator('.lg-live .lg-row.s1').count()==1 and tp.locator('.lg-live .lg-row.s2').count()==2)
-    shot(tp,'t07-teacher-live')
+    tp.locator('.lg-live').scroll_into_view_if_needed();shot(tp,'t07-teacher-live')
     cp.reload();cp.wait_for_selector('.quiz-run-options button',timeout=15000);cp.wait_for_timeout(500)
     check('reload mid-test resumes the attempt (pending test)',cp.locator('.qr-count').inner_text().startswith('3 /'))
     rest=[];k=2
