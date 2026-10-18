@@ -37,7 +37,7 @@ export default function Slides({title,eyebrow,slides,lang,teacher=false,accent,s
   <div className="sl-bar"><span><small>{eyebrow}</small><strong>{title}</strong></span><b>{i+1} / {slides.length}</b><button onClick={onClose} aria-label={t.close}><X size={20}/></button></div>
   <div className="sl-progress"><i style={{width:`${((i+1)/slides.length)*100}%`}}/></div>
   <div className="sl-stage" onTouchStart={e=>{touch.current=e.touches[0].clientX}} onTouchEnd={e=>{if(touch.current===null)return;const dx=e.changedTouches[0].clientX-touch.current;touch.current=null;if(Math.abs(dx)>50)go(dx<0?1:-1)}}>
-   <article key={i} className={'sl-slide sl-'+s.layout} aria-roledescription={t.slide}><SlideBody s={s} lang={lang} eyebrow={eyebrow}/></article>
+   <article key={i} className={'sl-slide sl-l-'+s.layout} aria-roledescription={t.slide}><SlideBody s={s} lang={lang} eyebrow={eyebrow}/></article>
   </div>
   {notes&&s.note&&<p className="sl-note"><MessageSquareText size={15}/>{tx(s.note,lang)}</p>}
   <div className="sl-nav">
