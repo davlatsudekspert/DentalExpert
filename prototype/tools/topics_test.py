@@ -1,4 +1,5 @@
 """Curriculum topic flow against a local `npm run api:dev` (needs .dev.vars with AUTH_SECRET and AUTH_DEV_ECHO=1, migration 0012)."""
+import os
 import json,sys
 sys.path.insert(0,'tools')
 from classroom_test_lib import call,login  # noqa: E402
@@ -41,7 +42,7 @@ check('no review during the grace minutes','review' not in a['mine'])
 check('finished topic test cannot be reopened',call('/classroom/assignments','PUT',{'assignmentId':aid,'status':'open'},T)[0]==403)
 # Move the finish time past the grace window (local D1 only).
 import subprocess
-subprocess.run(['npx','wrangler','d1','execute','dental-expert','--local','--command',f"UPDATE class_assignments SET closed_at=datetime('now','-3 minutes') WHERE id='{aid}'"],capture_output=True,check=True)
+subprocess.run(['npx','wrangler','d1','execute','dental-expert','--local',*(['--persist-to',os.environ['D1_PERSIST']] if os.environ.get('D1_PERSIST') else []),'--command',f"UPDATE class_assignments SET closed_at=datetime('now','-3 minutes') WHERE id='{aid}'"],capture_output=True,check=True)
 s,r=call(f'/classroom/assignments?groupId={g}',token=S);a=[x for x in r['assignments'] if x['id']==aid][0]
 check('review after finish',a['mine']['review']['correct']==[key[i] for i in pick] and a['mine']['review']['answers']==ans and len(a['mine']['review']['explain'])==3)
 s,r=call(f'/classroom/assignments?groupId={g}&assignmentId={aid}',token=T);check('teacher sees answers per student',sorted(m['score'] for m in r['members'])==[2,3] and all(m['answers'] for m in r['members']))

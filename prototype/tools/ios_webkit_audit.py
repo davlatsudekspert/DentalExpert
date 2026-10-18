@@ -4,7 +4,7 @@ Checks on every screen: bottom nav on screen, no horizontal overflow; and that f
 quiz) cover the viewport with their header and controls visible."""
 from playwright.sync_api import sync_playwright
 import json,os,sys,time
-B='http://127.0.0.1:8788';lang=sys.argv[1] if len(sys.argv)>1 else 'uz';OUT=os.environ.get('SIM_OUT','/tmp/sim-ios');os.makedirs(OUT,exist_ok=True)
+B=f'http://127.0.0.1:{os.environ.get("DE_PORT","8788")}';lang=sys.argv[1] if len(sys.argv)>1 else 'uz';OUT=os.environ.get('SIM_OUT','/tmp/sim-ios');os.makedirs(OUT,exist_ok=True)
 SCREENS=['home','search','profile','clinics','booking','dashboard','edit','record','chart','anatomy','teacher','student','courses','settings','privacy','forum','notifications']
 bad=[];TH=('&theme='+os.environ['THEME']) if os.environ.get('THEME') else ''
 def check(name,ok,info=''):

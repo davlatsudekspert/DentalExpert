@@ -2,7 +2,7 @@
 a student takes it and reviews it. Needs `npm run build` on wrangler pages dev :8788 (AUTH_DEV_ECHO=1) and CHROMIUM_PATH."""
 from playwright.sync_api import sync_playwright
 import os,time,json
-BASE='http://127.0.0.1:8788';OUT=os.environ.get('SIM_OUT','/tmp/sim');os.makedirs(OUT,exist_ok=True)
+BASE=f'http://127.0.0.1:{os.environ.get("DE_PORT","8788")}';OUT=os.environ.get('SIM_OUT','/tmp/sim');os.makedirs(OUT,exist_ok=True)
 idx=json.load(open('src/curriculum/index.json'))
 topic=idx['topics'][0];subj=[s for s in idx['subjects'] if s['id']==topic['subject']][0]
 def check(n,c):print(('PASS ' if c else 'FAIL ')+n);assert c,n
@@ -81,7 +81,7 @@ with sync_playwright() as p:
     check('gradebook row',tp.locator('.lg-book tbody tr').count()==1)
     tp.screenshot(path=OUT+'/t7-gradebook.png',full_page=True)
     import subprocess
-    subprocess.run(['npx','wrangler','d1','execute','dental-expert','--local','--command',"UPDATE class_assignments SET closed_at=datetime('now','-3 minutes') WHERE closed_at IS NOT NULL"],capture_output=True,check=True)
+    subprocess.run(['npx','wrangler','d1','execute','dental-expert','--local',*(['--persist-to',os.environ['D1_PERSIST']] if os.environ.get('D1_PERSIST') else []),'--command',"UPDATE class_assignments SET closed_at=datetime('now','-3 minutes') WHERE closed_at IS NOT NULL"],capture_output=True,check=True)
     sp.reload();sp.wait_for_selector('.classroom');sp.locator('.lg-row',has_text='Terapiya 3-kurs').click();sp.wait_for_timeout(800)
     sp.locator('.lg-row',has_text=topic['title']['uz']).click();sp.wait_for_timeout(800)
     check('student review shown',sp.locator('.lg-review li').count()==3)

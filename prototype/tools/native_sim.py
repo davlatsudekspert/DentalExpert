@@ -2,7 +2,7 @@
 Needs a build made with VITE_API_BASE=http://127.0.0.1:8788 served by `wrangler pages dev` (with .dev.vars AUTH_DEV_ECHO=1)."""
 from playwright.sync_api import sync_playwright
 import os,time,json
-BASE=os.environ.get('SIM_URL','http://127.0.0.1:8788');OUT=os.environ.get('SIM_OUT','/tmp/sim')
+BASE=os.environ.get('SIM_URL',f'http://127.0.0.1:{os.environ.get("DE_PORT","8788")}');OUT=os.environ.get('SIM_OUT','/tmp/sim')
 log=[]
 def check(n,c,detail=''):
  log.append((n,bool(c),detail));print(('PASS ' if c else 'FAIL ')+n+(' '+str(detail) if detail and not c else ''))

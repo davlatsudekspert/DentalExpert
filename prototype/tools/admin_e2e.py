@@ -1,7 +1,7 @@
 """Admin UI: the owner sees the panel, a normal user does not; a user files a complaint that the admin then resolves."""
 from playwright.sync_api import sync_playwright
 import os,json,time
-BASE='http://127.0.0.1:8788';OUT=os.environ.get('SIM_OUT','/tmp/sim')
+BASE=f'http://127.0.0.1:{os.environ.get("DE_PORT","8788")}';OUT=os.environ.get('SIM_OUT','/tmp/sim')
 def check(n,c):print(('PASS ' if c else 'FAIL ')+n);assert c,n
 def mk(b,email,role,name):
     ctx=b.new_context(viewport={'width':430,'height':932},device_scale_factor=2,is_mobile=True,has_touch=True)

@@ -2,7 +2,7 @@
 Needs `npm run build` served by `wrangler pages dev` (.dev.vars AUTH_DEV_ECHO=1) on :8788 and CHROMIUM_PATH."""
 from playwright.sync_api import sync_playwright
 import os,time,json,urllib.request
-BASE='http://127.0.0.1:8788';OUT=os.environ.get('SIM_OUT','/tmp/sim')
+BASE=f'http://127.0.0.1:{os.environ.get("DE_PORT","8788")}';OUT=os.environ.get('SIM_OUT','/tmp/sim')
 def check(n,c):print(('PASS ' if c else 'FAIL ')+n);assert c,n
 def api(ctx,path,body):
     return ctx.request.post(BASE+path,data=json.dumps(body),headers={'content-type':'application/json'}).json()

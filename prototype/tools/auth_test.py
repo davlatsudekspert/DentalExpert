@@ -1,6 +1,7 @@
 """API auth tests against a local `npm run api:dev` (needs .dev.vars with AUTH_SECRET and AUTH_DEV_ECHO=1)."""
+import os
 import json,urllib.request,urllib.error,http.cookiejar,sys
-B='http://127.0.0.1:8788/api'
+B=f'http://127.0.0.1:{os.environ.get("DE_PORT","8788")}/api'
 jar=http.cookiejar.CookieJar();op=urllib.request.build_opener(urllib.request.HTTPCookieProcessor(jar))
 def call(path,method='POST',body=None,ct='application/json',origin=None,opener=op):
     h={'content-type':ct} if body is not None else {}

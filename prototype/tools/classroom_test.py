@@ -1,6 +1,7 @@
 """Classroom API tests against a local `npm run api:dev` (needs .dev.vars with AUTH_SECRET and AUTH_DEV_ECHO=1)."""
+import os
 import json,urllib.request,urllib.error,time
-B='http://127.0.0.1:8788/api'
+B=f'http://127.0.0.1:{os.environ.get("DE_PORT","8788")}/api'
 def call(path,method='GET',body=None,token=None):
     h={'x-client':'native','origin':'https://localhost'}
     if body is not None:h['content-type']='application/json'

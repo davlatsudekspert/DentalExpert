@@ -1,7 +1,7 @@
 """Signs in per role (API) and screenshots the main screens into /tmp/audit for a visual review. Needs wrangler dev on :8788."""
 from playwright.sync_api import sync_playwright
 import os,json,time,sys
-BASE='http://127.0.0.1:8788';OUT='/tmp/audit';os.makedirs(OUT,exist_ok=True)
+BASE=f'http://127.0.0.1:{os.environ.get("DE_PORT","8788")}';OUT='/tmp/audit';os.makedirs(OUT,exist_ok=True)
 SCREENS={'patient':['home','search','profile','clinics','booking','anatomy','courses','settings'],
  'dentist':['dashboard','record','chart','edit','settings'],
  'teacher':['teacher','courses','settings'],'student':['student','courses','caseStudy','settings']}

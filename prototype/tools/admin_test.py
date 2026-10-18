@@ -1,6 +1,7 @@
 """Admin panel API tests against a local `npm run api:dev` (.dev.vars with AUTH_SECRET and AUTH_DEV_ECHO=1)."""
+import os
 import subprocess,json,urllib.parse,urllib.request,urllib.error,time
-B='http://127.0.0.1:8788/api'
+B=f'http://127.0.0.1:{os.environ.get("DE_PORT","8788")}/api'
 def call(path,method='GET',body=None,token=None):
     h={'x-client':'native','origin':'https://localhost'}
     if body is not None:h['content-type']='application/json'
@@ -13,7 +14,7 @@ def login(email,role='patient',name='T'):
     s,r=call('/auth/request-code','POST',{'email':email,'name':name,'role':role,'lang':'en'})
     s,r=call('/auth/verify','POST',{'email':email,'code':r['devCode']});return r['token'],r['user']
 ok=[]
-def clear():subprocess.run(['npx','wrangler','d1','execute','dental-expert','--local','--command','DELETE FROM auth_codes;'],capture_output=True)
+def clear():subprocess.run(['npx','wrangler','d1','execute','dental-expert','--local',*(['--persist-to',os.environ['D1_PERSIST']] if os.environ.get('D1_PERSIST') else []),'--command','DELETE FROM auth_codes;'],capture_output=True)
 def check(n,c):
     assert c,n;ok.append(n)
 ADMIN,au=login('davlatsudekspert@gmail.com','patient','Owner')

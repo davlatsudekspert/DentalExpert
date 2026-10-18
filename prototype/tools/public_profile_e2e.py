@@ -2,7 +2,7 @@
 from playwright.sync_api import sync_playwright
 import os,json,time
 UNIQ=str(time.time_ns())[-6:]
-BASE='http://127.0.0.1:8788';OUT=os.environ.get('SIM_OUT','/tmp/sim')
+BASE=f'http://127.0.0.1:{os.environ.get("DE_PORT","8788")}';OUT=os.environ.get('SIM_OUT','/tmp/sim')
 def check(n,c):print(('PASS ' if c else 'FAIL ')+n);assert c,n
 with sync_playwright() as p:
     b=p.chromium.launch(executable_path=os.environ['CHROMIUM_PATH'],args=['--no-sandbox'])

@@ -1,7 +1,7 @@
 """Regression tests for the issues found by the audit: patient records stay private, back navigation, data cleared on delete."""
 from playwright.sync_api import sync_playwright
 import os,json,time
-BASE='http://127.0.0.1:8788'
+BASE=f'http://127.0.0.1:{os.environ.get("DE_PORT","8788")}'
 def check(n,c):print(('PASS ' if c else 'FAIL ')+n);assert c,n
 def signin(ctx,role,name):
     e=f'{role}+{time.time_ns()}@example.com'

@@ -1,7 +1,7 @@
 """Live browser e2e against `npm run api:dev` with .dev.vars (AUTH_SECRET, AUTH_DEV_ECHO=1) and tools/e2e_seed.sql applied."""
 from playwright.sync_api import sync_playwright
 import os,time
-BASE=os.environ.get('PROTOTYPE_URL','http://127.0.0.1:8788')
+BASE=os.environ.get('PROTOTYPE_URL',f'http://127.0.0.1:{os.environ.get("DE_PORT","8788")}')
 checks=[]
 def check(n,c):
  assert c,n;checks.append(n)

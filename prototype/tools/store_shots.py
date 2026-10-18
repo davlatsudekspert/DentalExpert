@@ -2,7 +2,7 @@
 Output: store-assets/shots/{play,ios69}/<lang>/NN-name.png (fictional sample data only)."""
 from playwright.sync_api import sync_playwright
 import os,json,time,pathlib
-BASE='http://127.0.0.1:8788';ROOT=pathlib.Path('store-assets/shots')
+BASE=f'http://127.0.0.1:{os.environ.get("DE_PORT","8788")}';ROOT=pathlib.Path('store-assets/shots')
 DEV={'play':(390,780),'ios69':(430,932)}
 def api(rq,path,body=None,token=None,method='POST'):
     h={'content-type':'application/json','x-client':'native','origin':'https://localhost'}

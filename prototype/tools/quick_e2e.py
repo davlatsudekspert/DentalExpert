@@ -7,7 +7,7 @@ Needs CHROMIUM_PATH and PLAYWRIGHT_BROWSERS_PATH with WebKit."""
 from playwright.sync_api import sync_playwright
 from PIL import Image
 import io,json,os,random,time,urllib.request
-B='http://127.0.0.1:8788';OUT=os.environ.get('SIM_OUT','/tmp/sim-quick');os.makedirs(OUT,exist_ok=True)
+B=f'http://127.0.0.1:{os.environ.get("DE_PORT","8788")}';OUT=os.environ.get('SIM_OUT','/tmp/sim-quick');os.makedirs(OUT,exist_ok=True)
 CH=os.environ.get('CHROMIUM_PATH','/usr/bin/chromium')
 n=0
 def check(name,cond):
