@@ -6,7 +6,7 @@ import QuizRun from './QuizRun';
 import Slides from './Slides';
 import {OralList,SubjectHero,SubjectList,TopicList,useTopic} from './Curriculum';
 import {subjectColor} from './subjectArt';
-import {SUBJECTS,metaLine,topicMeta,tx,type Subject,type Topic,type TopicMeta} from './curriculum';
+import {SUBJECTS,metaLine,topicMeta,tx,type Subject,type Topic,type TopicMeta} from './curriculumData';
 import type {Lang} from './discoveryData';
 
 type Group={id:string;name:string;code?:string;members?:number;teacher?:string|null;myNo?:number;myNickname?:string|null};

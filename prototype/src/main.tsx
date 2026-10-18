@@ -23,7 +23,7 @@ import Daily from './Daily';
 import Learn,{type Tab as LearnTab} from './Learn';
 import Today from './Today';
 import Achievements from './Achievements';
-import {loadSeen} from './curriculum';
+import {loadSeen} from './curriculumData';
 import ProfileForm from './ProfileForm';
 import Admin from './Admin';
 import ReportForm from './ReportForm';

@@ -1,6 +1,6 @@
 import {useState} from 'react';
 import {Award,BookOpenCheck,CalendarCheck,ChevronDown,Crown,Eye,Flame,GraduationCap,Medal,Repeat,Sparkles,Target,Trophy} from 'lucide-react';
-import {SUBJECTS,loadSeen,topicsOf} from './curriculum';
+import {SUBJECTS,loadSeen,topicsOf} from './curriculumData';
 import {localDay} from './dailyData';
 import type {Lang} from './discoveryData';
 

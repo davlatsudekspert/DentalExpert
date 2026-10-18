@@ -1,7 +1,7 @@
 import {useEffect,useMemo,useState,type ReactNode} from 'react';
 import {ArrowLeft,BookOpen,Check,ChevronRight,Flame,Layers,RotateCcw,Sparkles} from 'lucide-react';
 import type {Lang} from './discoveryData';
-import {SUBJECTS,TOPICS,loadTopic,tx,type Topic} from './curriculum';
+import {SUBJECTS,TOPICS,loadTopic,tx,type Topic} from './curriculumData';
 import {localDay} from './dailyData';
 import './review.css';
 

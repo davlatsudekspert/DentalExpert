@@ -2,7 +2,7 @@ import {useState} from 'react';
 import {Flame,Play,Sparkles} from 'lucide-react';
 import Slides from './Slides';
 import {useTopic} from './Curriculum';
-import {SUBJECTS,TOPICS,loadLast,loadSeen,markSlide,topicMeta,tx,type TopicMeta} from './curriculum';
+import {SUBJECTS,TOPICS,loadLast,loadSeen,markSlide,topicMeta,tx,type TopicMeta} from './curriculumData';
 import {SubjectIcon,subjectColor} from './subjectArt';
 import {localDay} from './dailyData';
 import {streakDays} from './Achievements';

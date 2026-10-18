@@ -3,7 +3,7 @@ import {ChevronLeft,ChevronRight,MessageSquareText,X} from 'lucide-react';
 import cutaway from '../assets/tooth3d/premium-reference-cutaway-ivory.webp';
 import front from '../assets/tooth3d/turntable-front.webp';
 import occlusal from '../assets/tooth3d/archive-occlusal.webp';
-import {tx,type Anchor,type L,type Slide} from './curriculum';
+import {tx,type Anchor,type L,type Slide} from './curriculumData';
 import type {Lang} from './discoveryData';
 
 const IMAGES={cutaway,front,occlusal};

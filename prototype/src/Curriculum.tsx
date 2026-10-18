@@ -3,7 +3,7 @@ import {BookOpen,ChevronDown,ChevronLeft,ChevronRight,Presentation,Target} from 
 import Slides from './Slides';
 import './learn.css';
 import {SubjectIcon,subjectColor} from './subjectArt';
-import {SUBJECTS,courseWord,loadLast,loadSeen,loadTopic,markSlide,metaLine,topicsOf,tx,type Subject,type Topic,type TopicMeta} from './curriculum';
+import {SUBJECTS,courseWord,loadLast,loadSeen,loadTopic,markSlide,metaLine,topicsOf,tx,type Subject,type Topic,type TopicMeta} from './curriculumData';
 import type {Lang} from './discoveryData';
 
 export const cw={
