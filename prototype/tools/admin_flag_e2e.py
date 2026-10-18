@@ -11,6 +11,8 @@ with sync_playwright() as p:
     post=lambda path,body:ctx.request.post(BASE+path,data=json.dumps(body),headers={'content-type':'application/json'})
     r=post('/api/auth/request-code',{'email':ADMIN,'name':'Ali Abduraxmonov','role':'dentist','lang':'uz'}).json()
     v=post('/api/auth/verify',{'email':ADMIN,'code':r['devCode']}).json()
+    # Earlier suites on the same database may already have created this address with another role: the walk needs a dentist ("Ish joyi" is a professional field).
+    ctx.request.put(BASE+'/api/auth/role',data=json.dumps({'role':'dentist'}),headers={'content-type':'application/json'})
     check('the sign-in answer itself has no isAdmin (why the client must ask /me)','isAdmin' not in v['user'])
     check('/auth/me says this address is an admin',ctx.request.get(BASE+'/api/auth/me').json()['user']['isAdmin'] is True)
     pg=ctx.new_page();errs=[];pg.on('pageerror',lambda x:errs.append(str(x)))
