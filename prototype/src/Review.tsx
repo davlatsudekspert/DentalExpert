@@ -174,7 +174,7 @@ export default function Review({lang}:{lang:'uz'|'ru'|'en'}){
   const groupTitle=groups.find(g=>g.id===card.group)?.title||'';
   return <div className="rv-root rv-session">
    <div className="rv-topbar">
-    <button className="rv-icon" onClick={()=>{setQueue(null);setFinished(tally.done+tally.again>0)}} aria-label={t.stop}><ArrowLeft size={20}/></button>
+    <button className="rv-icon" data-back onClick={()=>{setQueue(null);setFinished(tally.done+tally.again>0)}} aria-label={t.stop}><ArrowLeft size={20}/></button>
     <div className="rv-bar" role="progressbar" aria-valuemin={0} aria-valuemax={total} aria-valuenow={tally.done}><i style={{width:`${total?tally.done/total*100:0}%`}}/></div>
     <span className="rv-left">{t.left(queue.length)}</span>
    </div>

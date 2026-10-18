@@ -77,6 +77,20 @@ const startRole=()=>go(role==='patient'?'home':role==='dentist'?'dashboard':role
 const [navCompact,setNavCompact]=useState(false);
 const historyRef=useRef<string[]>([]);historyRef.current=history;
 // System/browser/Android back pops our in-memory screen stack instead of leaving the app.
+useEffect(()=>{
+ // iOS-style edge swipe: from the left edge to the right goes back (closes an open sheet first).
+ let start:{x:number;y:number}|null=null;
+ const down=(e:TouchEvent)=>{const t=e.touches[0];start=t.clientX<28?{x:t.clientX,y:t.clientY}:null};
+ const up=(e:TouchEvent)=>{if(!start)return;const t=e.changedTouches[0];const dx=t.clientX-start.x,dy=Math.abs(t.clientY-start.y);start=null;
+  if(dx<70||dy>60)return;
+  // Order: an open sheet, then the in-page back of a sub-view (topic, tool, drill), then the screen history.
+  const close=document.querySelector<HTMLButtonElement>('.sl-bar button, .quiz-run-bar button, .atlas3d-top button:last-of-type, .admin-close')
+   ||document.querySelector<HTMLButtonElement>('[data-back], .tl-back, .cr-back, .lg-section > .lg-link, .lg-group .lg-link');
+  if(close){close.click();return}
+  if(historyRef.current.length)window.history.back()};
+ window.addEventListener('touchstart',down,{passive:true});window.addEventListener('touchend',up,{passive:true});
+ return ()=>{window.removeEventListener('touchstart',down);window.removeEventListener('touchend',up)};
+},[]);
 useEffect(()=>{const onPop=()=>{const h=historyRef.current;if(!h.length)return;setScreen(h[h.length-1]);setHistory(h.slice(0,-1));window.scrollTo(0,0)};window.addEventListener('popstate',onPop);return()=>window.removeEventListener('popstate',onPop)},[]);
 useEffect(()=>{setNavCompact(false);let previous=window.scrollY;const onScroll=()=>{const current=window.scrollY;const delta=current-previous;if(current<70)setNavCompact(false);else if(Math.abs(delta)>5)setNavCompact(delta>0);previous=current};window.addEventListener('scroll',onScroll,{passive:true});return()=>window.removeEventListener('scroll',onScroll)},[screen]);
 const btn=(text:string,action:()=>void,secondary=false)=><button className={secondary?'button secondary':'button'} onClick={action}>{text}<ArrowRight size={18}/></button>;

@@ -1,0 +1,61 @@
+"""iPhone (WebKit) layout audit: the checks the Chromium suites missed. Run against `wrangler pages dev` on :8788.
+  PLAYWRIGHT_BROWSERS_PATH=<dir with webkit> python3 tools/ios_webkit_audit.py [lang]
+Checks on every screen: bottom nav on screen, no horizontal overflow; and that full-screen sheets (3D atlas, slides,
+quiz) cover the viewport with their header and controls visible."""
+from playwright.sync_api import sync_playwright
+import json,os,sys,time
+B='http://127.0.0.1:8788';lang=sys.argv[1] if len(sys.argv)>1 else 'uz';OUT=os.environ.get('SIM_OUT','/tmp/sim-ios');os.makedirs(OUT,exist_ok=True)
+SCREENS=['home','search','profile','clinics','booking','dashboard','edit','record','chart','anatomy','teacher','student','courses','settings','privacy','forum','notifications']
+bad=[]
+def check(name,ok,info=''):
+    print(('PASS ' if ok else 'FAIL ')+name+(f' ({info})' if info and not ok else ''))
+    if not ok:bad.append(name)
+def inview(pg,sel):
+    return pg.evaluate("""s=>{const e=document.querySelector(s);if(!e)return null;const r=e.getBoundingClientRect();return {top:r.top,bottom:r.bottom,h:innerHeight,w:innerWidth,left:r.left,right:r.right}}""",sel)
+with sync_playwright() as p:
+    b=p.webkit.launch()
+    dev=p.devices['iPhone 15']
+    for role in ('dentist','teacher'):
+        c=b.new_context(**dev)
+        e=f'{role}+{time.time_ns()}@example.com'
+        r=c.request.post(B+'/api/auth/request-code',data=json.dumps({'email':e,'name':'Lola Karimova','role':role,'lang':lang}),headers={'content-type':'application/json'}).json()
+        c.request.post(B+'/api/auth/verify',data=json.dumps({'email':e,'code':r['devCode']}),headers={'content-type':'application/json'})
+        pg=c.new_page();errs=[];pg.on('pageerror',lambda x:errs.append(str(x)))
+        for s in SCREENS:
+            pg.goto(f'{B}/?screen={s}&lang={lang}&shot=1');pg.wait_for_timeout(900)
+            pg.evaluate('window.scrollTo(0,document.body.scrollHeight)');pg.wait_for_timeout(300)
+            n=inview(pg,'.bottom-nav')
+            if n:check(f'{role}/{s}: bottom nav on screen',0<=n['top']<n['h'] and n['bottom']<=n['h']+1,str(n))
+            ov=pg.evaluate('document.documentElement.scrollWidth-innerWidth')
+            check(f'{role}/{s}: no horizontal overflow',ov<=1,f'{ov}px')
+        # 3D atlas sheet
+        pg.goto(f'{B}/?screen=anatomy&lang={lang}&shot=1');pg.wait_for_timeout(800)
+        pg.evaluate('window.scrollTo(0,400)');pg.locator('.atlas3d-launch').click();pg.wait_for_timeout(2500)
+        a=inview(pg,'.atlas3d');t=inview(pg,'.atlas3d-top');ch=inview(pg,'.atlas3d-chips')
+        check(f'{role}: 3D atlas covers screen',a and abs(a['top'])<2 and abs(a['bottom']-a['h'])<2,str(a))
+        check(f'{role}: 3D atlas header visible',t and t['top']>=0 and t['bottom']<=t['h'],str(t))
+        check(f'{role}: 3D atlas layer buttons visible',ch and ch['bottom']<=ch['h'] and ch['right']<=ch['w']+1,str(ch))
+        pg.screenshot(path=f'{OUT}/{role}-atlas3d.png')
+        pg.locator('.atlas3d-top button').last.click();pg.wait_for_timeout(400)
+        # slides from the curriculum
+        pg.goto(f'{B}/?screen=courses&lang={lang}&shot=1');pg.wait_for_timeout(800)
+        pg.evaluate('window.scrollTo(0,300)')
+        pg.locator('.lg-section .lg-row').first.click();pg.wait_for_timeout(300);pg.locator('.lg-section .lg-row').first.click();pg.wait_for_timeout(600)
+        pg.locator('.lg-section > .button').first.click();pg.wait_for_timeout(600)
+        sl=inview(pg,'.sl-player');nv=inview(pg,'.sl-nav')
+        check(f'{role}: slides cover screen',sl and abs(sl['top'])<2 and abs(sl['bottom']-sl['h'])<2,str(sl))
+        check(f'{role}: slide buttons visible',nv and nv['bottom']<=nv['h']+1,str(nv))
+        pg.screenshot(path=f'{OUT}/{role}-slides.png')
+        pg.locator('.sl-bar button').click();pg.wait_for_timeout(300)
+        # quiz sheet
+        pg.goto(f'{B}/?screen=courses&lang={lang}&shot=1');pg.wait_for_timeout(800)
+        pg.locator('.learn > .chips button').nth(6).click();pg.wait_for_timeout(500)
+        pg.evaluate('window.scrollTo(0,300)');pg.locator('.learn .cr-row').first.click();pg.wait_for_timeout(500)
+        q=inview(pg,'.quiz-run')
+        check(f'{role}: quiz covers screen',q and abs(q['top'])<2 and abs(q['bottom']-q['h'])<2,str(q))
+        pg.screenshot(path=f'{OUT}/{role}-quiz.png')
+        check(f'{role}: no page errors',not errs,'; '.join(errs[:2]))
+        c.close()
+    b.close()
+print(f'\n{"FAIL" if bad else "PASS"}: {len(bad)} problems')
+sys.exit(1 if bad else 0)

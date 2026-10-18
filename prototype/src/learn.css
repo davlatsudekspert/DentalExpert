@@ -223,8 +223,9 @@
 .lg-row:active,.role-tiles button:active,.td-go:active{transform:scale(.985)}
 .lg-row,.td-go{transition:transform .15s ease,box-shadow .2s ease}
 .td-card{box-shadow:0 18px 40px #10254e2e}
-main,.screen,.app-main{animation:soft-in .35s ease both}
-@keyframes soft-in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+/* Opacity only: a transform here would make every position:fixed child (bottom nav, 3D atlas, slides) relative to the page. */
+.screen{animation:soft-in .3s ease}
+@keyframes soft-in{from{opacity:0}to{opacity:1}}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 .dash-banner.compact{display:flex!important;align-items:center;gap:12px;width:100%;min-height:0!important;padding:12px 14px!important;margin:4px 0 12px;border-radius:20px;text-align:left;color:#fff}
 .db-ring{display:grid;place-items:center;flex:none;width:46px;height:46px;border-radius:50%;background:conic-gradient(#fff calc(var(--p)*1%),#ffffff40 0)}
@@ -315,3 +316,16 @@ main,.screen,.app-main{animation:soft-in .35s ease both}
 .ac-badge b{font-size:13px;color:#10254e}
 .ac-badge small{font-size:11.5px;line-height:1.35;color:#5b6f77}
 .ac-note{display:block;margin-top:10px;font-size:11.5px;color:#7d9097}
+
+/* iPhone status bar: content scrolling under it gets a soft backdrop so the clock never overlaps text. */
+body::before{content:'';position:fixed;left:0;right:0;top:0;height:env(safe-area-inset-top);background:#f2f9fdee;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);z-index:80;pointer-events:none}
+/* Readability: darker secondary text and larger small labels (owner feedback: text was hard to read on the phone). */
+.muted{color:#3f5862!important}
+.lg-row small,.lg-card small,.td-main small,.ac-info>small,.db-text small,.home-header p,.hero p,.disclaimer{color:#3f5862!important}
+.lg-row small{font-size:12.5px!important}
+.hero p{font-size:12.5px!important;line-height:1.45!important;max-width:175px!important}
+.bottom-nav.five-tab-nav{background:#ffffff!important;box-shadow:0 10px 30px #10254e1f!important;border:1px solid #e3eef0!important}
+.bottom-nav button{color:#5f7780!important;font-weight:600}
+.bottom-nav button.active{color:#0f7f7d!important}
+.chips button{color:#3f5862}
+body{-webkit-text-size-adjust:100%}

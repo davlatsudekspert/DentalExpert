@@ -118,7 +118,7 @@ export default function Practice({lang}:{lang:'uz'|'ru'|'en'}){
  if(setup){
   const s=setup.sim,Icon=s.icon;
   return <div className="pr" ref={topRef}>
-   <div className="pr-bar"><button type="button" className="pr-icon-btn" aria-label={t.back} onClick={()=>setSetup(null)}><ArrowLeft size={20}/></button><span className="pr-bar-title">{s.title[lang]}</span></div>
+   <div className="pr-bar"><button type="button" className="pr-icon-btn" data-back aria-label={t.back} onClick={()=>setSetup(null)}><ArrowLeft size={20}/></button><span className="pr-bar-title">{s.title[lang]}</span></div>
    <section className="pr-card pr-setup">
     <span className="pr-sim-icon pr-sim-icon-lg" aria-hidden="true"><Icon size={26}/></span>
     <h2>{s.title[lang]}</h2>
@@ -153,7 +153,7 @@ export default function Practice({lang}:{lang:'uz'|'ru'|'en'}){
   const answered=run.i+(run.fb?1:0);
   return <div className="pr" ref={topRef}>
    <div className="pr-bar">
-    <button type="button" className="pr-icon-btn" aria-label={t.back} onClick={()=>setRun(null)}><ArrowLeft size={20}/></button>
+    <button type="button" className="pr-icon-btn" data-back aria-label={t.back} onClick={()=>setRun(null)}><ArrowLeft size={20}/></button>
     <span className="pr-bar-title">{run.sim.title[lang]}</span>
     <span className="pr-chip" aria-label={`${t.score}: ${run.score}`}><Check size={14}/>{run.score}</span>
    </div>
