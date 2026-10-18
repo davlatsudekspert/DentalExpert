@@ -1,17 +1,18 @@
 import {cityIdOk,doctorsInCity,json,type Env} from '../_lib/db';
+import {photoUrl} from '../_lib/photo';
 
 type Row=Record<string,string|number|null>;
 const tr=(v:unknown)=>{const t=typeof v==='string'?v:'';return {uz:t,ru:t,en:t}};
 /** Dentists who asked to be listed and were verified by the owner: shown like any other doctor, with the contacts they entered. */
 async function publishedDentists(env:Env,city:string){
  const {results}=await env.DB.prepare(
-  `SELECT id,name,phone,workplace,bio,specialty,telegram,instagram,public_email,address,map_url,city_id FROM users
+  `SELECT id,name,phone,workplace,bio,specialty,telegram,instagram,public_email,address,map_url,city_id,photo_at FROM users
    WHERE role='dentist' AND publish_requested=1 AND verified_at IS NOT NULL AND suspended_at IS NULL AND city_id=? ORDER BY verified_at DESC LIMIT 100`
  ).bind(city).all<Row>();
  return results.map(r=>{
   const contacts=[['phone',r.phone],['telegram',r.telegram],['instagram',r.instagram],['email',r.public_email],['map',r.map_url]]
    .filter(([,v])=>v).map(([kind,value])=>({kind,value,verified:true}));
-  return {id:'u-'+r.id,fullName:r.name,initials:null,specialty:tr(r.specialty),bio:tr(r.bio),languages:[],services:[],years:null,rating:null,photoUrl:null,
+  return {id:'u-'+r.id,fullName:r.name,initials:null,specialty:tr(r.specialty),bio:tr(r.bio),languages:[],services:[],years:null,rating:null,photoUrl:photoUrl(r.id,r.photo_at),
    licenseStatus:'verified',isDemo:false,clinics:[{id:null,name:r.workplace||'',logoUrl:null,cityId:r.city_id,address:tr(r.address)}],contacts};
  });
 }

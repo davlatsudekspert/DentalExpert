@@ -1,4 +1,5 @@
 import {json,type Env} from './db';
+import {photoUrl} from './photo';
 
 export const ROLES=['patient','dentist','teacher','student'] as const;
 export type Role=typeof ROLES[number];
@@ -59,7 +60,7 @@ export function readCookie(request:Request,name:string){
 export const cookieHeader=(request:Request,value:string,maxAge:number)=>
  `${COOKIE}=${value}; Path=/; HttpOnly; SameSite=Lax; Max-Age=${maxAge}${isLocal(request)?'':'; Secure'}`;
 
-export type SessionUser={id:string;guest:boolean;email:string;name:string|null;role:Role;countryCode:string|null;cityId:string|null;phone:string|null;workplace:string|null;bio:string|null;specialty:string|null;telegram:string|null;instagram:string|null;publicEmail:string|null;address:string|null;mapUrl:string|null;publishRequested:boolean;verified:boolean};
+export type SessionUser={id:string;guest:boolean;email:string;name:string|null;role:Role;countryCode:string|null;cityId:string|null;phone:string|null;workplace:string|null;bio:string|null;specialty:string|null;telegram:string|null;instagram:string|null;publicEmail:string|null;address:string|null;mapUrl:string|null;publishRequested:boolean;verified:boolean;photoUrl:string|null};
 
 /** A class-only guest session (QR quick test) is accepted only here; every other endpoint treats it as signed out. */
 const GUEST_PATHS=/^\/api\/(classroom\/(groups|join|quick|start|submit|progress|assignments|topics)|auth\/(me|logout|account))$/;
@@ -71,11 +72,11 @@ export async function sessionUser(env:Env,request:Request):Promise<SessionUser|n
  const token=sessionToken(request);
  if(!token)return null;
  const row=await env.DB.prepare(
-  `SELECT u.id,u.guest,u.email,u.name,u.role,u.country_code,u.city_id,u.phone,u.workplace,u.bio,u.specialty,u.telegram,u.instagram,u.public_email,u.address,u.map_url,u.publish_requested,u.verified_at FROM sessions s JOIN users u ON u.id=s.user_id
+  `SELECT u.id,u.guest,u.email,u.name,u.role,u.country_code,u.city_id,u.phone,u.workplace,u.bio,u.specialty,u.telegram,u.instagram,u.public_email,u.address,u.map_url,u.publish_requested,u.verified_at,u.photo_at FROM sessions s JOIN users u ON u.id=s.user_id
    WHERE s.token_hash=? AND s.expires_at>datetime('now') AND u.suspended_at IS NULL`
  ).bind(await sha256(token)).first<Record<string,string|number|null>>();
  if(row?.guest&&!GUEST_PATHS.test(new URL(request.url).pathname))return null;
- return row?{id:row.id as string,guest:!!row.guest,email:row.email as string,name:row.name as string|null,role:row.role as Role,countryCode:row.country_code as string|null,cityId:row.city_id as string|null,phone:row.phone as string|null,workplace:row.workplace as string|null,bio:row.bio as string|null,specialty:row.specialty as string|null,telegram:row.telegram as string|null,instagram:row.instagram as string|null,publicEmail:row.public_email as string|null,address:row.address as string|null,mapUrl:row.map_url as string|null,publishRequested:!!row.publish_requested,verified:!!row.verified_at}:null;
+ return row?{id:row.id as string,guest:!!row.guest,email:row.email as string,name:row.name as string|null,role:row.role as Role,countryCode:row.country_code as string|null,cityId:row.city_id as string|null,phone:row.phone as string|null,workplace:row.workplace as string|null,bio:row.bio as string|null,specialty:row.specialty as string|null,telegram:row.telegram as string|null,instagram:row.instagram as string|null,publicEmail:row.public_email as string|null,address:row.address as string|null,mapUrl:row.map_url as string|null,publishRequested:!!row.publish_requested,verified:!!row.verified_at,photoUrl:photoUrl(row.id,row.photo_at)}:null;
 }
 
 export async function createSession(env:Env,request:Request,userId:string,days=SESSION_DAYS){
@@ -106,8 +107,8 @@ async function adoptGuest(env:Env,request:Request,userId:string,role:unknown){
 }
 
 /** Profile shape returned by every sign-in endpoint. */
-export const USER_COLUMNS='id,email,name,role,country_code,city_id,phone,workplace,bio,specialty,telegram,instagram,public_email,address,map_url,publish_requested,verified_at';
-export const profileOf=(u:Record<string,string|number|null>)=>({id:u.id,email:u.email,name:u.name,role:u.role,countryCode:u.country_code,cityId:u.city_id,phone:u.phone,workplace:u.workplace,bio:u.bio,specialty:u.specialty,telegram:u.telegram,instagram:u.instagram,publicEmail:u.public_email,address:u.address,mapUrl:u.map_url,publishRequested:!!u.publish_requested,verified:!!u.verified_at});
+export const USER_COLUMNS='id,email,name,role,country_code,city_id,phone,workplace,bio,specialty,telegram,instagram,public_email,address,map_url,publish_requested,verified_at,photo_at';
+export const profileOf=(u:Record<string,string|number|null>)=>({id:u.id,email:u.email,name:u.name,role:u.role,countryCode:u.country_code,cityId:u.city_id,phone:u.phone,workplace:u.workplace,bio:u.bio,specialty:u.specialty,telegram:u.telegram,instagram:u.instagram,publicEmail:u.public_email,address:u.address,mapUrl:u.map_url,publishRequested:!!u.publish_requested,verified:!!u.verified_at,photoUrl:photoUrl(u.id,u.photo_at)});
 
 /** Opens a session: native clients get the token in the body (stored on the device); browsers get an HttpOnly cookie. */
 export async function signedIn(env:Env,request:Request,user:Record<string,string|number|null>){

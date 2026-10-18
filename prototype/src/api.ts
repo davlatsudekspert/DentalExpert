@@ -5,6 +5,8 @@ import {Capacitor} from '@capacitor/core';
 export const isNative=Capacitor.isNativePlatform();
 const API_BASE=isNative?((import.meta.env.VITE_API_BASE as string|undefined)||'https://dental-expert.pages.dev'):'';
 const url=(path:string)=>API_BASE+path;
+/** Server-relative media paths (profile photos) must point at the hosted API in native builds. */
+export const mediaUrl=(p?:string|null)=>p?(p.startsWith('/')?url(p):p):undefined;
 
 const TOKEN_KEY='de_token';
 // A class-only guest (QR quick test) keeps its secret in the Keychain / Android Keystore, not in web storage. It is read
@@ -39,7 +41,7 @@ export function apiDoctorToView(a:ApiDoctor,countryCode:string,local?:DemoDoctor
   cityId:(clinic?.cityId||local?.cityId||'') as DemoDoctor['cityId'],countryCode:countryCode as DemoDoctor['countryCode'],
   clinic:a.clinics.map(c=>c.name).join(' · '),specialty:a.specialty,bio:a.bio||none,address:clinic?.address||none,
   languages:a.languages,years:a.years??0,score:a.rating!=null?a.rating.toFixed(1):'',services:a.services,
-  isDemo:a.isDemo,photoUrl:a.photoUrl||undefined,contacts:a.contacts
+  isDemo:a.isDemo,photoUrl:mediaUrl(a.photoUrl),contacts:a.contacts
  };
 }
 
@@ -52,7 +54,7 @@ export async function fetchDoctors(cityId:string,signal?:AbortSignal):Promise<Ap
  }catch{return null}
 }
 
-export type AuthUser={id:string;guest?:boolean;email:string;name:string|null;role:'patient'|'dentist'|'teacher'|'student';countryCode:string|null;cityId:string|null;phone?:string|null;workplace?:string|null;bio?:string|null;isAdmin?:boolean;specialty?:string|null;telegram?:string|null;instagram?:string|null;publicEmail?:string|null;address?:string|null;mapUrl?:string|null;publishRequested?:boolean;verified?:boolean};
+export type AuthUser={id:string;guest?:boolean;email:string;name:string|null;role:'patient'|'dentist'|'teacher'|'student';countryCode:string|null;cityId:string|null;phone?:string|null;workplace?:string|null;bio?:string|null;isAdmin?:boolean;specialty?:string|null;telegram?:string|null;instagram?:string|null;publicEmail?:string|null;address?:string|null;mapUrl?:string|null;publishRequested?:boolean;verified?:boolean;photoUrl?:string|null};
 export type AuthState={enabled:boolean;user:AuthUser|null};
 
 async function post<T>(path:string,body:unknown,method:'POST'|'PUT'|'DELETE'='POST'):Promise<{ok:boolean;status:number;data:T&{error?:string;retryAfterSec?:number;attemptsLeft?:number}}>{
@@ -104,6 +106,21 @@ export async function callApi<T=Record<string,unknown>>(path:string,method:'GET'
 
 export type ProfileInput={name:string;phone:string;workplace:string;bio:string;specialty:string;address:string;telegram:string;instagram:string;publicEmail:string;mapUrl:string;publishRequested:boolean};
 export const saveProfile=(b:ProfileInput)=>post<{user?:AuthUser}>('/api/auth/profile',b,'PUT');
+/** Profile photo: a data URL (image/webp, image/jpeg or image/png, at most 200 KB decoded) the client already cropped to 512×512. */
+export const uploadPhoto=(image:string)=>post<{user?:AuthUser}>('/api/auth/photo',{image},'PUT');
+export const deletePhoto=()=>post<{user?:AuthUser}>('/api/auth/photo',null,'DELETE');
+/** The signed-in user's own photo. On the web the session cookie lets <img> load it directly; native apps authenticate with a
+ * bearer token an <img> cannot send, so the bytes are fetched and shown from a blob URL (the caller revokes it). */
+export async function ownPhotoSrc(photoUrl:string):Promise<{src:string;revoke?:()=>void}|null>{
+ if(!isNative)return {src:photoUrl};
+ await tokenReady;
+ try{
+  const res=await fetch(url(photoUrl),{headers:authHeaders()});
+  if(!res.ok||!(res.headers.get('content-type')||'').startsWith('image/'))return null;
+  const src=URL.createObjectURL(await res.blob());
+  return {src,revoke:()=>URL.revokeObjectURL(src)};
+ }catch{return null}
+}
 
 export {SITE,joinLink,parseJoin} from './joinLink';
 export type QuickJoined={group:{id:string;name:string};test:{id:string;title:string;status:string}|null;user?:AuthUser&{guest?:boolean}};

@@ -46,7 +46,7 @@
 	<key>CFBundleVersion</key>
 	<string>$(CURRENT_PROJECT_VERSION)</string>
 	<key>NSCameraUsageDescription</key>
-	<string>Dental Expert uses the camera only to scan your teacher’s QR code to join a class test. No photos are taken or stored.</string>
+	<string>Dental Expert uses the camera to scan your teacher’s QR code to join a class test and, only if you choose to, to take your profile photo.</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>ITSAppUsesNonExemptEncryption</key>

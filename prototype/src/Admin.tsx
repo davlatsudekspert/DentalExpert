@@ -1,10 +1,13 @@
 import {useCallback,useEffect,useState} from 'react';
 import {ExternalLink,X} from 'lucide-react';
 import {callApi} from './api';
+import {useOwnPhoto} from './ProfileForm';
+/** The dentist's photo, checked before verifying (private until verified, so it is loaded with the admin's session). */
+function AdminPhoto({url}:{url:string}){const src=useOwnPhoto(url);return src?<img className="uploaded-avatar small" src={src} alt="Rasm"/>:null}
 
 type Stats={users:{total:number;byRole:Record<string,number>;last7:number;last30:number;activeSessions:number;suspended:number;daily:{day:string;n:number}[]};classroom:{groups:number;members:number;assignments:number;submissions:number};doctors:{verified:number;demo:number};reports:{open:number;total:number}};
 type Report={id:string;category:string;subject:string|null;body:string;contact:string|null;lang:string|null;status:'open'|'resolved';note:string|null;createdAt:string;reporter:string|null};
-type User={id:string;email:string;name:string|null;role:string;createdAt:string;suspended:boolean;admin:boolean;publishRequested?:boolean;verified?:boolean;profile?:{phone:string|null;workplace:string|null;specialty:string|null;telegram:string|null;instagram:string|null;email:string|null;address:string|null;map:string|null;city:string|null}|null};
+type User={id:string;email:string;name:string|null;role:string;createdAt:string;suspended:boolean;admin:boolean;publishRequested?:boolean;verified?:boolean;profile?:{phone:string|null;workplace:string|null;specialty:string|null;telegram:string|null;instagram:string|null;email:string|null;address:string|null;map:string|null;city:string|null;photoUrl?:string|null}|null};
 const ROLE:Record<string,string>={patient:'Bemor',dentist:'Stomatolog',teacher:'Ustoz',student:'Talaba'};
 const CAT:Record<string,string>={complaint:'Shikoyat',content:'Nomaqbul kontent',bug:'Xato',advertising:'Reklama',other:'Boshqa'};
 
@@ -81,6 +84,7 @@ function Users(){
   {list===null?<p className="muted">…</p>:list.length===0?<p className="muted">Topilmadi.</p>:list.map(u=><div key={u.id} className={'card admin-user'+(u.suspended?' off':'')}>
    <div><strong>{u.name||'—'}</strong>{u.admin&&<span className="pill">Admin</span>}{u.suspended&&<span className="pill warn">To‘xtatilgan</span>}<small>{u.email} · {u.createdAt.slice(0,10)}</small></div>
    {u.role==='dentist'&&u.publishRequested&&u.profile&&<div className="admin-profile">
+    {u.profile.photoUrl&&<AdminPhoto url={u.profile.photoUrl}/>}
     <b>{u.verified?'✓ Tasdiqlangan (bemorlarga ko‘rinadi)':'Tasdiqlash kutilmoqda'}</b>
     <small>{[u.profile.specialty,u.profile.workplace,u.profile.address,u.profile.city].filter(Boolean).join(' · ')||'—'}</small>
     <small>{[u.profile.phone&&'☎ '+u.profile.phone,u.profile.telegram&&'TG '+u.profile.telegram,u.profile.instagram&&'IG '+u.profile.instagram,u.profile.email].filter(Boolean).join(' · ')||'—'}</small>
