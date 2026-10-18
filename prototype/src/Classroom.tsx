@@ -1,9 +1,10 @@
 import {Suspense,lazy,useCallback,useEffect,useMemo,useRef,useState} from 'react';
-import {BarChart3,BookOpen,Check,ChevronLeft,ClipboardList,Copy,Eye,EyeOff,LogIn,Plus,Presentation,QrCode,Timer,Trash2,UserMinus,Users,Tv} from 'lucide-react';
+import {BarChart3,BookOpen,Check,ChevronLeft,ClipboardList,Copy,Eye,EyeOff,Layers,LogIn,Plus,Presentation,QrCode,Timer,Trash2,UserMinus,Users,Tv} from 'lucide-react';
 import qrcode from 'qrcode-generator';
 import {callApi,joinLink,parseJoin,type AuthUser} from './api';
-import {CLASSROOM_CHANGED,openJoin,openScan} from './joinLink';
+import {CLASSROOM_CHANGED,openJoin,openScan,takeAssignTopic} from './joinLink';
 import {APOSTROPHES,VARIANT_POOL_MAX,checkNick,maxVariantCount,variantAllowed} from './classroomShared';
+import {GeneralSetup,TopicTestSetup,type TestPayload} from './testSetup';
 import {PreviewRun,TestRun,TestReview,fmtDue,loadTestItems,refItems,revealNote,testError,testWords,type Reveal,type TestItem,type TestMeta} from './classTest';
 import Slides from './Slides';
 import type {BigTest} from './BigScreen';
@@ -15,7 +16,7 @@ import type {Lang} from './discoveryData';
 
 type Group={id:string;name:string;code?:string;members?:number;teacher?:string|null;myNo?:number;myNickname?:string|null};
 type Review={answers:number[]|null;correct:number[];explain:({en:string;ru:string;uz:string}|null)[]};
-type Assignment={id:string;kind:'task'|'quiz';title:string;body:string|null;deckId:string|null;status:'open'|'closed';dueDate:string|null;submitted?:number;
+type Assignment={id:string;kind:'task'|'quiz';general?:boolean;title:string;body:string|null;deckId:string|null;status:'open'|'closed';dueDate:string|null;submitted?:number;
  topicId?:string;questions?:number[];minutes?:number;questionCount?:number;items?:string[];variant?:boolean;perStudent?:number;deadlineAt?:string;ended?:boolean;reveal?:Reveal;
  mine:{answer:string|null;score:number|null;total:number|null;startedAt?:string|null;questions?:string[];review?:Review&{questions?:string[]}}|null};
 type Member={no:number;nickname:string|null;answer:string|null;answers?:number[]|null;score:number|null;total:number|null;submittedAt:string|null};
@@ -105,6 +106,8 @@ export default function Classroom({lang,user,onSignIn}:{lang:Lang;user:AuthUser|
  const [groups,setGroups]=useState<Group[]|null>(null);
  const [offline,setOffline]=useState(false);
  const [open,setOpen]=useState<Group|null>(null);
+ // "Guruhga topshirish" from a topic page (Learn → curriculum): open that topic's test settings in a group.
+ const [assign,setAssign]=useState<string|null>(()=>takeAssignTopic());
  const [msg,setMsg]=useState('');
  const [name,setName]=useState('');
  const [code,setCode]=useState('');
@@ -118,13 +121,16 @@ export default function Classroom({lang,user,onSignIn}:{lang:Lang;user:AuthUser|
  useEffect(()=>{if(user)load();else setGroups(null)},[user,load]);
  // A join through the QR sheet (an overlay at the app root) reloads the list.
  useEffect(()=>{const f=()=>{if(user)load()};addEventListener(CLASSROOM_CHANGED,f);return ()=>removeEventListener(CLASSROOM_CHANGED,f)},[user,load]);
+ // A teacher with one group goes straight to the topic; with several the list asks which group.
+ useEffect(()=>{if(assign&&groups?.length===1)setOpen(groups[0])},[assign,groups]);
  if(!user)return <section className="classroom card"><h2>{t.title}</h2><p className="muted">{t.signIn}</p><button className="button" onClick={onSignIn}><LogIn size={17}/>{t.signInBtn}</button></section>;
  if(offline)return <section className="classroom card"><h2>{t.title}</h2><p className="muted">{t.offline}</p></section>;
- if(open)return <GroupView lang={lang} group={open} teacher={teacher} user={user} onBack={()=>{setOpen(null);load()}}/>;
+ if(open)return <GroupView lang={lang} group={open} teacher={teacher} user={user} initialTopic={assign} onBack={()=>{setOpen(null);setAssign(null);load()}}/>;
  const create=async()=>{setMsg('');const r=await callApi('/classroom/groups','POST',{name});if(r.ok){setName('');load()}else setMsg(errText(r.data.error))};
  const join=async()=>{setMsg('');const c=nick.trim()?checkNick(nick):null;if(c&&!c.ok){setMsg(errText(c.error));return}const r=await callApi('/classroom/join','POST',{code,nickname:c?.nick||''});if(r.ok){setCode('');load()}else setMsg(errText(r.status===0?'network':r.data.error))};
  return <section className="classroom card" aria-label={t.title}>
   <h2>{t.title}</h2>
+  {teacher&&assign&&groups&&<p className="lg-note" role="status">{(groups.length?assignWords[lang].pickGroup:assignWords[lang].noGroup)(tx(topicMeta(assign)?.title,lang))}</p>}
   {groups===null?<p className="muted">…</p>:groups.length===0?<p className="muted">{t.noGroups}</p>:<div className="lg-list">{groups.map(g=>
    <button key={g.id} className="lg-row" onClick={()=>setOpen(g)}><span className="lg-ico"><Users size={18}/></span><span className="lg-row-text"><strong>{g.name}</strong><small>{teacher?`${g.members??0} ${t.members} · ${t.code}: ${g.code}`:(g.teacher?`${t.teacher}: ${g.teacher} · `:'')+(g.myNickname||`${t.student} ${nn(g.myNo??0)}`)}</small></span></button>)}</div>}
   {teacher?<div className="cr-form"><label>{t.newGroup}<input value={name} maxLength={60} placeholder={t.groupName} aria-describedby="cr-group-hint" onChange={e=>setName(e.target.value)}/><small id="cr-group-hint" className="cr-help">{t.groupHint}</small></label><button className="button" disabled={name.trim().length<2} onClick={create}><Plus size={17}/>{t.create}</button></div>
@@ -137,7 +143,7 @@ export default function Classroom({lang,user,onSignIn}:{lang:Lang;user:AuthUser|
  </section>;
 }
 
-function GroupView({lang,group,teacher,user,onBack}:{lang:Lang;group:Group;teacher:boolean;user:AuthUser;onBack:()=>void}){
+function GroupView({lang,group,teacher,user,initialTopic,onBack}:{lang:Lang;group:Group;teacher:boolean;user:AuthUser;initialTopic?:string|null;onBack:()=>void}){
  const t=words[lang];
  const [tab,setTab]=useState<'plan'|'work'|'book'|'people'>('plan');
  const [items,setItems]=useState<Assignment[]|null>(null);
@@ -145,9 +151,10 @@ function GroupView({lang,group,teacher,user,onBack}:{lang:Lang;group:Group;teach
  const [book,setBook]=useState<Book|null>(null);
  const [decks,setDecks]=useState<Deck[]>([]);
  const [sel,setSel]=useState<Assignment|null>(null);
- const [topicId,setTopicId]=useState<string|null>(null);
+ const [topicId,setTopicId]=useState<string|null>(initialTopic&&teacher?initialTopic:null);
  const [roster,setRoster]=useState<Member[]|null>(null);
  const [adding,setAdding]=useState(false);
+ const [general,setGeneral]=useState(false);
  const load=useCallback(async()=>{
   const [a,tp]=await Promise.all([callApi<{assignments:Assignment[]}>('/classroom/assignments?groupId='+group.id),callApi<{topics:TopicRow[]}>('/classroom/topics?groupId='+group.id)]);
   if(a.ok)setItems(a.data.assignments);
@@ -166,22 +173,26 @@ function GroupView({lang,group,teacher,user,onBack}:{lang:Lang;group:Group;teach
  };
  const leave=async()=>{await callApi(`/classroom/join?groupId=${group.id}`,'DELETE');onBack()};
  const memberCount=book?.members.length??group.members??0;
- const backTo=sel?()=>{setSel(null);load()}:topicId?()=>{setTopicId(null);load()}:onBack;
- const backLabel=sel?group.name:topicId?group.name:t.back;
+ const backTo=sel?()=>{setSel(null);load()}:topicId?()=>{setTopicId(null);load()}:general?()=>setGeneral(false):onBack;
+ const backLabel=sel||topicId||general?group.name:t.back;
+ // A new general test opens on its live page.
+ const opened=async(id:string)=>{setGeneral(false);const a=await callApi<{assignments:Assignment[]}>('/classroom/assignments?groupId='+group.id);if(a.ok){setItems(a.data.assignments);const x=a.data.assignments.find(y=>y.id===id);if(x){bigFor={id:x.id,until:Date.now()+20000};setSel(x)}}load()};
  const row=topics?.find(r=>r.topicId===topicId)||null;
  const top=useRef<HTMLElement>(null);
  const first=useRef(true);
- useEffect(()=>{if(first.current){first.current=false;return}toTop(top.current)},[sel,topicId]);
+ useEffect(()=>{if(first.current){first.current=false;return}toTop(top.current)},[sel,topicId,general]);
  return <section className="classroom card lg-group" ref={top}>
   <button className="cr-back" onClick={backTo}><ChevronLeft size={16}/>{backLabel}</button>
-  {sel?<AssignmentView lang={lang} groupId={group.id} code={group.code||''} user={user} a={sel} teacher={teacher} roster={roster} decks={decks} onChanged={load} onDeleted={()=>{setSel(null);load()}}/>
+  {sel?<AssignmentView lang={lang} groupId={group.id} code={group.code||''} user={user} a={items?.find(x=>x.id===sel.id)||sel} teacher={teacher} roster={roster} decks={decks} members={book?.members||[]} onChanged={load} onDeleted={()=>{setSel(null);load()}}/>
   :topicId?(teacher?<TeacherTopic lang={lang} groupId={group.id} code={group.code||''} user={user} topicId={topicId} row={row} topics={topics} test={items?.find(a=>a.id===row?.testId)||null} members={book?.members||[]} onChanged={load}/>
    :<StudentTopic lang={lang} user={user} topicId={topicId} test={items?.find(a=>a.id===row?.testId)||null} onChanged={load}/>)
+  :general&&teacher?<GeneralSetup lang={lang} groupId={group.id} onDone={opened} onCancel={()=>setGeneral(false)}/>
   :<>
    <span className="lg-eyebrow">{teacher?`${memberCount} ${t.members}`:(group.teacher?`${t.teacher}: ${group.teacher}`:'')}</span>
    <h2>{group.name}</h2>
    {teacher&&memberCount===0&&<InviteCard lang={lang} group={group}/>}
    {!teacher&&<MyResults lang={lang} items={items}/>}
+   {teacher&&<div className="cr-actions lg-assign"><button className="button" onClick={()=>{setTab('plan');setTimeout(()=>document.querySelector('.lg-group .lg-tabs')?.scrollIntoView({block:'start',behavior:'smooth'}),50)}}><ClipboardList size={17}/>{assignWords[lang].topic}</button><button className="button secondary" onClick={()=>setGeneral(true)}><Layers size={17}/>{assignWords[lang].general}</button></div>}
    <div className="chips lg-tabs" role="tablist">{(teacher?['plan','work','book','people'] as const:['plan','work'] as const).map(k=><button key={k} role="tab" aria-selected={tab===k} className={tab===k?'active':''} onClick={()=>setTab(k)}>{k==='plan'&&!teacher?t.topics:t.tabs[k]}</button>)}</div>
    {tab==='plan'&&(teacher?<TeacherPlan lang={lang} topics={topics} items={items} onPick={setTopicId} onNav={()=>toTop(top.current)}/>:<StudentPlan lang={lang} topics={topics} items={items} onPick={setTopicId}/>)}
    {tab==='work'&&<>
@@ -196,6 +207,10 @@ function GroupView({lang,group,teacher,user,onBack}:{lang:Lang;group:Group;teach
   </>}
  </section>;
 }
+
+const assignWords={uz:{topic:'Mavzu testi berish',general:'Umumiy test berish',label:'Umumiy test',pickGroup:(t:string)=>`«${t}» testini qaysi guruhga berasiz? Guruhni tanlang.`,noGroup:(t:string)=>`«${t}» testini berish uchun avval guruh yarating.`},
+ ru:{topic:'Дать тест по теме',general:'Дать общий тест',label:'Общий тест',pickGroup:(t:string)=>`Какой группе дать тест «${t}»? Выберите группу.`,noGroup:(t:string)=>`Чтобы дать тест «${t}», сначала создайте группу.`},
+ en:{topic:'Give a topic test',general:'Give a general test',label:'General test',pickGroup:(t:string)=>`Which group gets the “${t}” test? Choose a group.`,noGroup:(t:string)=>`Create a group first to give the “${t}” test.`}};
 
 function AssignTag({t,a,teacher}:{t:W;a:Assignment;teacher:boolean}){
  if(a.status==='closed')return <span className="lg-tag">{t.closedLbl}</span>;
@@ -308,7 +323,7 @@ function TeacherTopic({lang,groupId,code,user,topicId,row,topics,test,members,on
     <DoneToggle t={t} done={!!row?.oralDoneAt} disabled={!isOpen||busy} onSet={d=>act('oral',{done:d})}/>
    </Stage>
    <Stage n={3} t={t} title={t.test} done={!!test&&test.status==='closed'} hint={test?'':t.testHint}>
-    {test?<TestRunning lang={lang} groupId={groupId} code={code} user={user} topic={topic} test={test} members={members} label={label} onFinish={()=>setAsking(true)} onChanged={onChanged}/>
+    {test?<TestRunning lang={lang} groupId={groupId} code={code} user={user} topicId={topic.id} test={test} members={members} label={label} onFinish={()=>setAsking(true)} onChanged={onChanged}/>
     :<TestSetup lang={lang} groupId={groupId} topic={topic} topics={topics} disabled={!isOpen||busy} error={testErr} onStart={p=>{bigFor={id:topic.id,until:Date.now()+20000};act('test',{...p,title:tx(topic.title,lang)})}}/>}
    </Stage>
    {asking&&<ConfirmSheet text={t.confirmFinish} ok={t.finishTest} cancel={t.cancel} onOk={async()=>{setAsking(false);await act('finish')}} onCancel={()=>setAsking(false)}/>}
@@ -345,74 +360,10 @@ function useKey(groupId:string,topicId:string){
 
 let bigFor:{id:string;until:number}|null=null;
 
-const setupWords={
- uz:{count:'Savollar soni',variant:'Har bir talabaga boshqa savollar',variantOn:(pool:number,n:number)=>`Har bir talaba ${pool} ta savollik hovuzdan o‘ziga xos ${n} ta savol oladi. Kim qaysi savolni olgani natijalarda ko‘rinadi.`,
-  variantNo:(need:number,pool:number,max:number,extra:boolean)=>`Variantlar uchun savollar hovuzi kamida ${need} ta bo‘lishi kerak (savollar sonining 2 barobari), bu mavzuda esa ${pool} ta. Savollar sonini ${max} tagacha kamaytiring${extra?' yoki o‘tilgan mavzular savollarini qo‘shing':''}.`,
-  extra:(k:number,q:number)=>`O‘tilgan mavzular savollarini ham qo‘shish (${k} ta mavzu, +${q} savol)`,extraHint:'Har bir talabaning savollarining yarmi shu mavzudan, qolgani shu guruhda ochilgan boshqa mavzulardan.',
-  time:'Vaqt chegarasi',noTime:'Vaqt chegarasi yo‘q',deadline:'Topshirish muddati (ixtiyoriy)',deadlineHint:'Muddat tugagach test yopiladi. Vaqt chegarasi bo‘lmasa, talaba muddat sanasini ko‘radi, oxirgi bir soatda esa teskari sanoq.',
-  badDeadline:'Muddat kelajakda (kamida 1 daqiqadan keyin) bo‘lsin.',picked:(n:number)=>`${n} ta savol tanlandi`,
-  err:{variant_pool_small:'Savollar hovuzi kichik — savollar sonini kamaytiring.',bad_deadline:'Muddat kelajakda (bir yil ichida) bo‘lsin.',reveal_needs_deadline:'«Muddat tugagach» uchun muddatni belgilang.',bad_minutes:'Vaqt 1–180 daqiqa bo‘lsin.',bad_questions:'Savollarni tekshiring.',test_exists:'Bu mavzuda test allaqachon boshlangan.'}},
- ru:{count:'Количество вопросов',variant:'Каждому студенту свои вопросы',variantOn:(pool:number,n:number)=>`Каждый студент получает свои ${n} вопросов из банка в ${pool}. Кому какие достались — видно в результатах.`,
-  variantNo:(need:number,pool:number,max:number,extra:boolean)=>`Для вариантов в банке нужно не меньше ${need} вопросов (вдвое больше, чем в тесте), а в этой теме ${pool}. Уменьшите число вопросов до ${max}${extra?' или добавьте вопросы пройденных тем':''}.`,
-  extra:(k:number,q:number)=>`Добавить вопросы пройденных тем (${k} тем, +${q} вопросов)`,extraHint:'Половина вопросов каждого студента — из этой темы, остальные — из других тем, открытых в этой группе.',
-  time:'Ограничение времени',noTime:'Без ограничения времени',deadline:'Срок сдачи (необязательно)',deadlineHint:'После срока тест закрывается. Без ограничения времени студент видит дату срока, а в последний час — обратный отсчёт.',
-  badDeadline:'Срок должен быть в будущем (хотя бы через минуту).',picked:(n:number)=>`Выбрано вопросов: ${n}`,
-  err:{variant_pool_small:'Банк вопросов мал — уменьшите число вопросов.',bad_deadline:'Срок должен быть в будущем (в пределах года).',reveal_needs_deadline:'Для «после срока» укажите срок.',bad_minutes:'Время — от 1 до 180 минут.',bad_questions:'Проверьте вопросы.',test_exists:'Тест по этой теме уже начат.'}},
- en:{count:'Number of questions',variant:'Different questions for each student',variantOn:(pool:number,n:number)=>`Each student gets their own ${n} questions from a pool of ${pool}. The results show who got which question.`,
-  variantNo:(need:number,pool:number,max:number,extra:boolean)=>`Variants need a pool of at least ${need} questions (twice the test length); this topic has ${pool}. Lower the number of questions to ${max}${extra?' or add questions from topics already covered':''}.`,
-  extra:(k:number,q:number)=>`Add questions from topics already covered (${k} topics, +${q} questions)`,extraHint:'Half of each student’s questions come from this topic, the rest from the other topics opened in this group.',
-  time:'Time limit',noTime:'No time limit',deadline:'Deadline (optional)',deadlineHint:'The test closes at the deadline. Without a time limit students see the date, and a countdown in the last hour.',
-  badDeadline:'The deadline must be in the future (at least a minute ahead).',picked:(n:number)=>`${n} questions chosen`,
-  err:{variant_pool_small:'The question pool is too small — lower the number of questions.',bad_deadline:'The deadline must be in the future (within a year).',reveal_needs_deadline:'Set a deadline for “after the deadline”.',bad_minutes:'Time must be 1–180 minutes.',bad_questions:'Check the questions.',test_exists:'A test for this topic has already started.'}}
-};
-export type TestPayload={questions?:number[];variant?:{count:number;extra:boolean};minutes:number|null;deadline?:string;reveal:Reveal};
-const pad=(n:number)=>String(n).padStart(2,'0');
-const localInput=(d:Date)=>`${d.getFullYear()}-${pad(d.getMonth()+1)}-${pad(d.getDate())}T${pad(d.getHours())}:${pad(d.getMinutes())}`;
-
-/** Topic test settings: how many questions (or which), per-student variants, time limit, deadline, when answers show. */
+/** Topic test settings (src/testSetup.tsx) with the teacher's key for marking the right options. */
 function TestSetup({lang,groupId,topic,topics,disabled,error,onStart}:{lang:Lang;groupId:string;topic:Topic;topics:TopicRow[]|null;disabled:boolean;error?:string;onStart:(p:TestPayload)=>void}){
- const t=words[lang],x=more[lang],w=setupWords[lang];
- const total=topic.test.length;
  const key=useKey(groupId,topic.id);
- const [count,setCount]=useState(total);
- const [pick,setPick]=useState<number[]>(()=>topic.test.map((_,k)=>k));
- const [variant,setVariant]=useState(false);
- const [extra,setExtra]=useState(false);
- const [timed,setTimed]=useState(true);
- const [minutes,setMinutes]=useState(Math.max(5,total*2));
- const [deadline,setDeadline]=useState('');
- const [reveal,setReveal]=useState<Reveal>('closed');
- // Other topics of the same subject this group has opened, newest first — the server builds the pool the same way.
- const prefix=topic.id.slice(0,topic.id.lastIndexOf('-')+1);
- const others=(topics||[]).filter(r=>r.topicId!==topic.id&&r.topicId.startsWith(prefix)&&topicMeta(r.topicId)).sort((a,b)=>b.openedAt.localeCompare(a.openedAt)||a.topicId.localeCompare(b.topicId));
- const extraTopics:string[]=[];let extraQ=0;
- for(const r of others){const n=topicMeta(r.topicId)?.tests||10;if(total+extraQ+n>VARIANT_POOL_MAX)break;extraTopics.push(r.topicId);extraQ+=n}
- const pool=total+(extra?extraQ:0);
- const max=maxVariantCount(pool);
- const canVariant=variantAllowed(pool,count);
- const due=deadline?new Date(deadline):null;
- const dueBad=!!due&&!(due.getTime()>Date.now()+60_000);
- useEffect(()=>{if(!deadline&&reveal==='deadline')setReveal('closed')},[deadline,reveal]);
- const setN=(n:number)=>{const v=Math.max(1,Math.min(variant?max:total,n||1));setCount(v);if(!variant)setPick(topic.test.map((_,k)=>k).slice(0,v))};
- const start=()=>onStart({...(variant?{variant:{count,extra}}:{questions:pick}),minutes:timed?minutes:null,deadline:due?due.toISOString():undefined,reveal});
- return <>
-  <div className="cr-form lg-setup">
-   <label>{w.count}<input type="number" inputMode="numeric" min={1} max={variant?max:total} value={variant?count:pick.length} onChange={e=>setN(Number(e.target.value))}/></label>
-   <label className="lg-check"><input type="checkbox" checked={variant} disabled={!variant&&!canVariant} onChange={e=>{setVariant(e.target.checked);if(!e.target.checked)setPick(topic.test.map((_,k)=>k).slice(0,count))}}/><span><b>{w.variant}</b>
-    <small className="lg-small muted">{variant||canVariant?w.variantOn(pool,count):w.variantNo(count*2,pool,maxVariantCount(pool),extraTopics.length>0&&!extra)}</small></span></label>
-   {extraTopics.length>0&&<label className="lg-check"><input type="checkbox" checked={extra} onChange={e=>{setExtra(e.target.checked);if(!e.target.checked&&variant&&count>maxVariantCount(total)){setCount(maxVariantCount(total))}}}/><span>{w.extra(extraTopics.length,extraQ)}<small className="lg-small muted">{w.extraHint} {extraTopics.map(id=>tx(topicMeta(id)?.title,lang)).join(' · ')}</small></span></label>}
-  </div>
-  {!variant&&<><p className="lg-small muted">{w.picked(pick.length)}</p><ol className="lg-qpick">{topic.test.map((q,k)=><li key={k}><label className="lg-check"><input type="checkbox" checked={pick.includes(k)} onChange={e=>{const p=e.target.checked?[...pick,k].sort((a,b)=>a-b):pick.filter(x=>x!==k);setPick(p);setCount(Math.max(1,p.length))}}/><b>{tx(q.q,lang)}</b></label>
-   <ul>{q.options.map((o,j)=><li key={j} className={key?.[k]===j?'right':''}>{tx(o,lang)}</li>)}</ul></li>)}</ol></>}
-  <div className="cr-form lg-setup">
-   <div className="lg-inline"><label>{w.time} ({t.timeLimit})<input type="number" inputMode="numeric" min={1} max={180} value={minutes} disabled={!timed} onChange={e=>setMinutes(Math.max(1,Math.min(180,Number(e.target.value)||1)))}/></label>
-    <label className="lg-check"><input type="checkbox" checked={!timed} onChange={e=>setTimed(!e.target.checked)}/>{w.noTime}</label></div>
-   <label>{w.deadline}<input type="datetime-local" value={deadline} min={localInput(new Date(Date.now()+120_000))} aria-invalid={dueBad||undefined} aria-describedby="lg-due-hint" onChange={e=>setDeadline(e.target.value)}/><small id="lg-due-hint" className="cr-help">{dueBad?w.badDeadline:w.deadlineHint}</small></label>
-   <RevealPick x={x} value={reveal} deadline={!!due&&!dueBad} onChange={setReveal}/>
-   {error&&<p className="cr-error" role="alert">{error in w.err?w.err[error as keyof typeof w.err]:t.errGeneric}</p>}
-   <button className="button" disabled={disabled||dueBad||(variant?!canVariant:!pick.length)} onClick={start}><Timer size={16}/>{t.startTest} · {variant?count:pick.length}</button>
-  </div>
- </>;
+ return <TopicTestSetup lang={lang} topic={topic} topics={topics} keyOf={key} disabled={disabled} error={error} onStart={onStart}/>;
 }
 
 type Live=Member&{startedAt?:string|null;answered?:number;questions?:string[]};
@@ -420,14 +371,14 @@ const liveState=(m:Live)=>m.answer==='done'?2:m.answer==='started'?1:0;
 
 /** The running (or finished) topic test on the teacher's phone: one QR for everyone, every student as a live row
  * (joined → answering → submitted with the score), the big screen, a student preview and the per-question results. */
-function TestRunning({lang,groupId,code,user,topic,test,members,label,onFinish,onChanged}:{lang:Lang;groupId:string;code:string;user:AuthUser|null;topic:Topic;test:Assignment;members:BookMember[];label:(m:BookMember)=>string;onFinish:()=>void;onChanged:()=>void}){
+function TestRunning({lang,groupId,code,user,topicId,test,members,label,onFinish,onChanged}:{lang:Lang;groupId:string;code:string;user:AuthUser|null;topicId?:string;test:Assignment;members:BookMember[];label:(m:BookMember)=>string;onFinish:()=>void;onChanged:()=>void}){
  const t=words[lang],r=runWords[lang];
  const [res,setRes]=useState<Live[]|null>(null);
  const [stats,setStats]=useState<{right:number;answered:number}[]|null>(null);
  const [qText,setQText]=useState<string[]|null>(null);
  const [preview,setPreview]=useState(false);
  // Starting a topic test goes straight to the big screen (QR + live results); reopening the topic later does not.
- const [big,setBig]=useState(()=>!!bigFor&&bigFor.id===topic.id&&Date.now()<bigFor.until);
+ const [big,setBig]=useState(()=>!!bigFor&&bigFor.id===(topicId||test.id)&&Date.now()<bigFor.until);
  useEffect(()=>{if(big)bigFor=null},[big]);
  const over=test.status==='closed'||!!test.ended;
  const load=useCallback(async()=>{const x=await callApi<{members:Live[];stats?:{right:number;answered:number}[]}>(`/classroom/assignments?groupId=${groupId}&assignmentId=${test.id}`);if(x.ok){setRes(x.data.members);setStats(x.data.stats||null)}},[groupId,test.id]);
@@ -447,7 +398,7 @@ function TestRunning({lang,groupId,code,user,topic,test,members,label,onFinish,o
   {!over&&code&&<QrCard lang={lang} code={code} testId={test.id}/>}
   <div className="cr-actions">{code&&<button className="button lg-big" onClick={()=>setBig(true)}><Tv size={18}/>{more[lang].big}</button>}</div>
   <div className="cr-actions"><button className="button secondary" onClick={()=>setPreview(true)}><Eye size={16}/>{r.preview}</button>{test.status==='open'&&<button className="button" onClick={onFinish}>{t.finishTest}</button>}</div>
-  {big&&<Big lang={lang} groupId={groupId} code={code} test={{id:test.id,title:test.title,topicId:topic.id}} onClose={()=>{setBig(false);onChanged();load()}}/>}
+  {big&&<Big lang={lang} groupId={groupId} code={code} test={{id:test.id,title:test.title,topicId}} onClose={()=>{setBig(false);onChanged();load()}}/>}
   {preview&&user&&<PreviewRun lang={lang} a={test as TestMeta} userId={user.id} onExit={()=>setPreview(false)}/>}
   <h3 className="lg-h">{t.results}</h3>
   {res===null?<p className="muted">…</p>:!rows.length?<p className="muted">{r.nobody}</p>
@@ -581,7 +532,7 @@ function NewAssignment({lang,groupId,decks,onDone,onCancel}:{lang:Lang;groupId:s
  </div>;
 }
 
-function AssignmentView({lang,groupId,code,user,a,teacher,roster,decks,onChanged,onDeleted}:{lang:Lang;groupId:string;code:string;user:AuthUser;a:Assignment;teacher:boolean;roster:Member[]|null;decks:Deck[];onChanged:()=>void;onDeleted:()=>void}){
+function AssignmentView({lang,groupId,code,user,a,teacher,roster,decks,members,onChanged,onDeleted}:{lang:Lang;groupId:string;code:string;user:AuthUser;a:Assignment;teacher:boolean;roster:Member[]|null;decks:Deck[];members:BookMember[];onChanged:()=>void;onDeleted:()=>void}){
  const t=words[lang];
  const [answer,setAnswer]=useState(a.mine?.answer||'');
  const [done,setDone]=useState(!!a.mine);
@@ -594,6 +545,21 @@ function AssignmentView({lang,groupId,code,user,a,teacher,roster,decks,onChanged
  const [asking,setAsking]=useState(false);
  const [big,setBig]=useState(false);
  const del=async()=>{setAsking(false);await callApi('/classroom/assignments?assignmentId='+a.id,'DELETE');onDeleted()};
+ const [finishing,setFinishing]=useState(false);
+ const [items,setItems]=useState<TestItem[]|null>(null);
+ const review=a.mine?.review;
+ useEffect(()=>{if(!review)return;let live=true;loadTestItems(a as TestMeta,lang).then(x=>{if(live)setItems(x)});return ()=>{live=false}},[review,a,lang]);
+ const aliases=lsGet<Record<string,string>>(`de_alias:${groupId}`,{});
+ const label=(m:BookMember)=>(aliases[m.no]?aliases[m.no]+' · ':'')+(m.nickname||`${t.student} ${nn(m.no)}`);
+ // A general test: the same live page as a topic test (one QR, live rows, big screen, student preview, results).
+ if(teacher&&a.general)return <>
+  <span className="lg-eyebrow">{assignWords[lang].label}</span><h2>{a.title}</h2>
+  <TestRunning lang={lang} groupId={groupId} code={code} user={user} test={a} members={members} label={label} onFinish={()=>setFinishing(true)} onChanged={onChanged}/>
+  <div className="cr-actions"><button className="button secondary" onClick={()=>setAsking(true)}><Trash2 size={16}/>{t.delete}</button></div>
+  {finishing&&<ConfirmSheet text={t.confirmFinish} ok={t.finishTest} cancel={t.cancel} onOk={async()=>{setFinishing(false);await callApi('/classroom/assignments','PUT',{assignmentId:a.id,status:'closed'});onChanged()}} onCancel={()=>setFinishing(false)}/>}
+  {asking&&<ConfirmSheet text={t.confirmDel} ok={t.delete} cancel={t.cancel} danger onOk={del} onCancel={()=>setAsking(false)}/>}
+ </>;
+ const canRun=!!deck||!!a.items;
  return <>
   <h2>{a.title}</h2>
   {a.dueDate&&<p className="muted">{t.dueLbl}: {a.dueDate}</p>}
@@ -612,9 +578,11 @@ function AssignmentView({lang,groupId,code,user,a,teacher,roster,decks,onChanged
    {err&&<p className="cr-error" role="alert">{err}</p>}
    <button className="button" disabled={!answer.trim()||done||a.status==='closed'} onClick={send}>{done?t.sent:a.mine?t.resend:t.send}</button>
   </>:<>
+   {a.general&&!score&&<p className="muted">{[t.qCount(a.questionCount??0),a.minutes?`${a.minutes} ${t.timeLimit}`:runWords[lang].noLimit,a.deadlineAt?fmtDue(a.deadlineAt,lang):''].filter(Boolean).join(' · ')}</p>}
    {score&&<p className="cr-score">{t.result}: {score[0]} / {score[1]}</p>}
-   {a.status==='closed'&&!score&&<p className="muted">{t.errClosed}</p>}
-   {!score&&<button className="button" disabled={!deck||a.status==='closed'} onClick={()=>{setErr('');setRun(true)}}>{a.mine?.answer==='started'?testWords[lang].resume:t.start}</button>}
+   {score&&(review?(items?<TestReview lang={lang} items={items} review={review}/>:null):a.general&&<p className="muted">{revealNote(a as TestMeta,lang)}</p>)}
+   {(a.status==='closed'||a.ended&&a.mine?.answer!=='started')&&!score&&<p className="muted">{a.status==='open'?testError(lang,'past_due'):t.errClosed}</p>}
+   {!score&&<button className="button" disabled={!canRun||a.status==='closed'||!!a.ended&&a.mine?.answer!=='started'} onClick={()=>{setErr('');setRun(true)}}>{a.mine?.answer==='started'?testWords[lang].resume:t.start}</button>}
    {err&&<p className="cr-error" role="alert">{err}</p>}
    {run&&<TestRun lang={lang} a={a as TestMeta} userId={user.id} onExit={()=>{setRun(false);onChanged()}} onError={e=>{setRun(false);setErr(testError(lang,e));onChanged()}} onSubmitted={(s,n)=>{setScore([s,n]);setDone(true)}}/>}
   </>}

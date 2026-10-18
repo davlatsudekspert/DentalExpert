@@ -27,7 +27,7 @@ export default function Learn({lang,uid,role='student',initialTab}:{lang:Lang;ui
  useEffect(()=>setTab(pick(initialTab)),[initialTab,role]);// eslint-disable-line react-hooks/exhaustive-deps
  return <section className="learn">
   <div className="chips learn-tabs">{tabs.map(k=><button key={k} className={tab===k?'active':''} onClick={()=>setTab(k)}>{t.tabs[k]}</button>)}</div>
-  {tab==='plan'&&<Curriculum lang={lang}/>}
+  {tab==='plan'&&<Curriculum lang={lang} teacher={role==='teacher'||role==='dentist'}/>}
   <Suspense fallback={<p className="muted">…</p>}>{tab==='practice'&&<Practice lang={lang}/>}{tab==='review'&&<Review lang={lang}/>}{tab==='exam'&&<Exam lang={lang}/>}{tab==='tools'&&<Tools lang={lang}/>}</Suspense>
   {tab==='lessons'&&<DeckLibrary lang={lang} uid={uid}/>}
   {tab==='daily'&&<Daily lang={lang}/>}

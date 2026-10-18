@@ -1,8 +1,9 @@
 import {useEffect,useRef,useState,type ReactNode} from 'react';
-import {BookOpen,CheckCircle2,ClipboardCheck,ChevronDown,ChevronLeft,ChevronRight,Presentation,Target} from 'lucide-react';
+import {BookOpen,CheckCircle2,ClipboardCheck,ChevronDown,ChevronLeft,ChevronRight,Presentation,Target,Users} from 'lucide-react';
 import Slides from './Slides';
 import QuizRun,{type RunQ} from './QuizRun';
 import {callApi} from './api';
+import {askAssignTopic} from './joinLink';
 import './learn.css';
 import {SubjectIcon,subjectColor} from './subjectArt';
 import {SUBJECTS,courseWord,loadLast,loadSeen,loadTopic,markSlide,metaLine,topicsOf,tx,type Subject,type Topic,type TopicMeta} from './curriculumData';
@@ -69,7 +70,7 @@ export function OralList({lang,topic,extra}:{lang:Lang;topic:Topic;extra?:(k:num
 }
 
 /** Self-study page of one topic: goals, slides, oral questions, sources. */
-export function TopicOverview({lang,topic,subject}:{lang:Lang;topic:Topic;subject:Subject}){
+export function TopicOverview({lang,topic,subject,teacher}:{lang:Lang;topic:Topic;subject:Subject;teacher?:boolean}){
  const t=cw[lang];
  const [show,setShow]=useState(false);
  const seen=loadSeen()[topic.id];const [done,setDone]=useState(!!seen&&seen.s>=seen.n);
@@ -82,7 +83,7 @@ export function TopicOverview({lang,topic,subject}:{lang:Lang;topic:Topic;subjec
   {done&&<div className="lg-done" role="status"><CheckCircle2 size={20}/><div><b>{t.doneT}</b><small>{t.doneS}</small></div></div>}
   <h3 className="lg-h">{t.oral}</h3>
   <OralList lang={lang} topic={topic}/>
-  <SelfTest lang={lang} topic={topic}/>
+  <SelfTest lang={lang} topic={topic} teacher={teacher}/>
   <div className="lg-card"><h3><BookOpen size={16}/>{t.sources}</h3><ul className="lg-sources" lang="en" translate="no">{topic.sources.map((s,k)=><li key={k}>{s}</li>)}</ul></div>
   {show&&<Slides title={tx(topic.title,lang)} eyebrow={tx(subject.title,lang)} slides={topic.slides} sources={topic.sources} lang={lang} accent={subjectColor(subject.id).c}
    start={loadLast()?.id===topic.id?loadLast()!.slide:0} onProgress={i=>markSlide(topic.id,i,topic.slides.length)} onFinished={()=>setDone(true)} onClose={()=>setShow(false)}/>}
@@ -98,7 +99,7 @@ export function SubjectHero({lang,subject}:{lang:Lang;subject:Subject}){
 }
 
 /** Curriculum browser for everyone (Learn → Curriculum). */
-export default function Curriculum({lang}:{lang:Lang}){
+export default function Curriculum({lang,teacher}:{lang:Lang;teacher?:boolean}){
  const t=cw[lang];
  const [subject,setSubject]=useState<Subject|null>(null);
  const [meta,setMeta]=useState<TopicMeta|null>(null);
@@ -110,14 +111,19 @@ export default function Curriculum({lang}:{lang:Lang}){
   {subject&&<button className="cr-back" onClick={()=>meta?setMeta(null):setSubject(null)}><ChevronLeft size={16}/>{meta?tx(subject.title,lang):t.title}</button>}
   {!subject?<><p className="muted">{t.sub}</p><SubjectList lang={lang} onPick={setSubject}/><small className="muted lg-small">{t.note}</small></>
   :!meta?<><SubjectHero lang={lang} subject={subject}/><TopicList lang={lang} subject={subject} onPick={setMeta}/></>
-  :topic?<TopicOverview lang={lang} topic={topic} subject={subject}/>:<p className="muted">…</p>}
+  :topic?<TopicOverview lang={lang} topic={topic} subject={subject} teacher={teacher}/>:<p className="muted">…</p>}
  </section>;
 }
 
+const chooseWords={uz:{group:'Guruhga topshirish',groupHint:'Savollar soni, vaqt va muddatni belgilab, guruhingizga berasiz.',self:'O‘zim yechib ko‘rish',selfHint:'O‘zingiz uchun mashq: javoblar darhol ko‘rinadi, hech kimga yuborilmaydi.',cancel:'Bekor qilish'},
+ ru:{group:'Дать группе',groupHint:'Выберите число вопросов, время и срок и дайте тест группе.',self:'Решить самому',selfHint:'Тренировка для себя: ответы видны сразу, никуда не отправляются.',cancel:'Отмена'},
+ en:{group:'Assign to a group',groupHint:'Choose the number of questions, time and window and give it to your group.',self:'Try it myself',selfHint:'Practice for yourself: answers show right away and nothing is sent.',cancel:'Cancel'}};
 const BEST='de_topic_tests';
 const readBest=():Record<string,{best:number;total:number}>=>{try{return JSON.parse(localStorage.getItem(BEST)||'{}')}catch{return {}}};
 /** Self-study topic test: the questions ship with the app, the key comes from the server when the test starts. */
-function SelfTest({lang,topic}:{lang:Lang;topic:Topic}){
+function SelfTest({lang,topic,teacher}:{lang:Lang;topic:Topic;teacher?:boolean}){
+ const [choose,setChoose]=useState(false);
+ const ch=chooseWords[lang];
  const t=cw[lang];
  const [qs,setQs]=useState<RunQ[]|null>(null);
  const [busy,setBusy]=useState(false);const [err,setErr]=useState(false);
@@ -132,7 +138,13 @@ function SelfTest({lang,topic}:{lang:Lang;topic:Topic}){
   <p className="muted lg-small">{t.testNote}</p>
   {best&&<p className="lg-best">{t.best}: <b>{best.best}/{best.total}</b></p>}
   {err&&<p className="error-text" role="alert">{t.testErr}</p>}
-  <button className="button secondary" disabled={busy} onClick={start}><ClipboardCheck size={17}/>{t.selfTest}</button>
+  {/* A teacher is asked first: give it to a group, or try it themself. A student starts right away. */}
+  <button className="button secondary" disabled={busy} onClick={teacher?()=>setChoose(true):start}><ClipboardCheck size={17}/>{t.selfTest}</button>
+  {choose&&<div className="lg-confirm" onClick={e=>{if(e.target===e.currentTarget)setChoose(false)}}><div className="lg-confirm-sheet lg-choose" role="dialog" aria-modal="true" aria-labelledby="lg-choose-t">
+   <p id="lg-choose-t"><b>{t.selfTest}</b> · {tx(topic.title,lang)}</p>
+   <button className="button" autoFocus onClick={()=>{setChoose(false);askAssignTopic(topic.id)}}><Users size={17}/>{ch.group}</button><small className="lg-small muted">{ch.groupHint}</small>
+   <button className="button secondary" onClick={()=>{setChoose(false);start()}}><ClipboardCheck size={17}/>{ch.self}</button><small className="lg-small muted">{ch.selfHint}</small>
+   <button className="lg-link" onClick={()=>setChoose(false)}>{ch.cancel}</button></div></div>}
   {qs&&<QuizRun title={tx(topic.title,lang)} lang={lang} questions={qs} onDone={done} onClose={()=>setQs(null)}/>}
  </div>;
 }

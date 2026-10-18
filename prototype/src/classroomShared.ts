@@ -35,6 +35,8 @@ export const refIndex=(ref:string)=>Number(ref.slice(ref.lastIndexOf(':')+1));
 /** Largest pool a variant test draws from (the topic itself plus up to five topics already opened in the group). */
 export const VARIANT_POOL_MAX=60;
 /** Variants only make sense when each student gets at most half of the pool; otherwise two students share most questions. */
+/** A general test: at most 50 questions per student, from at most 1500 in the chosen sources. */
+export const GENERAL_MAX=50,GENERAL_POOL_MAX=1500;
 export const variantAllowed=(poolSize:number,perStudent:number)=>perStudent>=1&&poolSize>=perStudent*2;
 export const maxVariantCount=(poolSize:number)=>Math.floor(poolSize/2);
 

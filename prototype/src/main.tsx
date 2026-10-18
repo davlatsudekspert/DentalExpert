@@ -38,7 +38,7 @@ import Classroom from './Classroom';
 const Atlas3D=lazy(()=>import('./Atlas3D'));
 const QuickJoin=lazy(()=>import('./QuickJoin'));
 const QrScanner=lazy(()=>import('./QrScanner'));
-import {JOIN_EVENT,SCAN_EVENT,classroomChanged,pendingInvite,sameInvite,type Invite} from './joinLink';
+import {ASSIGN_EVENT,JOIN_EVENT,SCAN_EVENT,classroomChanged,pendingInvite,sameInvite,type Invite} from './joinLink';
 import DeckLibrary from './DeckLibrary';
 import {LANG_ORDER,LANG_LABEL,monthYear,fullDate,spokenLanguages,ruForm} from './i18n';
 import './style.css';
@@ -73,6 +73,8 @@ useEffect(()=>setPatientCount(loadPatients(authUser?.id).length),[authUser?.id])
 // sign-up, the email code and Google/Apple), reopens once someone is signed in.
 const openInvite=(j:Invite)=>setQuick(q=>sameInvite(q,j)?q:{code:j.code,testId:j.testId});
 useEffect(()=>{if(authUser){const p=pendingInvite();if(p)openInvite(p)}},[authUser?.id]);// eslint-disable-line react-hooks/exhaustive-deps
+// "Guruhga topshirish" on a topic page: the classroom screen opens that topic's test settings.
+useEffect(()=>{const f=()=>go('teacher');addEventListener(ASSIGN_EVENT,f);return ()=>removeEventListener(ASSIGN_EVENT,f)});
 useEffect(()=>{const j=(e:Event)=>{const d=(e as CustomEvent<Invite>).detail;if(d?.code)openInvite(d)};const s=()=>setScan(true);addEventListener(JOIN_EVENT,j);addEventListener(SCAN_EVENT,s);return ()=>{removeEventListener(JOIN_EVENT,j);removeEventListener(SCAN_EVENT,s)}},[]);
 // QR tests: dentalexpert://j?c=CODE&a=TEST (from the /j/ page or the phone camera) opens the join sheet over any screen.
 useEffect(()=>{if(!isNative)return;let off:(()=>void)|undefined;const open=(u?:string)=>{const j=u&&/^dentalexpert:/i.test(u)?parseJoin(u):null;if(j)openInvite(j)};import('@capacitor/app').then(({App})=>{App.getLaunchUrl().then(r=>open(r?.url)).catch(()=>{});App.addListener('appUrlOpen',e=>open(e.url)).then(h=>{off=()=>h.remove()})}).catch(()=>{});return ()=>off?.()},[]);

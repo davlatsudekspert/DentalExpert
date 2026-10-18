@@ -383,3 +383,40 @@ button.cr-back{min-height:44px;padding:10px 14px 10px 0;margin:-6px 0}
 .lg-qrcard .lg-invite-body img{width:min(200px,60vw);height:auto;image-rendering:pixelated}
 .lg-qrcard .lg-invite-body b{white-space:nowrap}
 .qj-hero .lg-tag{white-space:normal;max-width:100%;text-align:center;line-height:1.35}
+/* Assigning tests: preset chips with a custom value, the general test page, the teacher's choice on a topic test. */
+.lg-pick{border:0;margin:0;padding:0;min-width:0;display:flex;flex-direction:column;gap:8px}
+.lg-pick legend{padding:0;margin-bottom:8px;font-size:13px;font-weight:700;color:var(--lg-ink)}
+.lg-chips{display:flex;flex-wrap:wrap;gap:8px}
+.lg-chips>button{min-height:44px;padding:8px 14px;border-radius:999px;border:1px solid var(--lg-line);background:var(--lg-paper,#fff);color:var(--lg-ink);font:inherit;font-size:14px;font-weight:650;cursor:pointer;white-space:nowrap}
+.lg-chips>button.on,.lg-custom.on{background:var(--lg-ink);border-color:var(--lg-ink);color:#fff}
+.lg-custom{display:inline-flex;align-items:center;gap:6px;min-height:44px;padding:0 6px 0 14px;border-radius:999px;border:1px solid var(--lg-line);font-size:14px;font-weight:650;flex:1 1 150px;max-width:220px}
+.lg-group .lg-custom,.classroom .lg-custom{flex-direction:row}
+.lg-custom input{flex:1;min-width:0;width:auto!important;min-height:34px;padding:4px 10px!important;border-radius:999px!important;border:1px solid var(--lg-line)!important;background:#fff!important;color:var(--lg-ink)!important;font-size:15px}
+.lg-date{margin-top:4px}
+.lg-reveal select{max-width:100%}
+.lg-assign{margin:2px 0 4px}
+.lg-assign .button{margin-top:0}
+.lg-note{padding:10px 12px;border-radius:12px;background:var(--lg-amber-bg);color:var(--lg-amber);font-size:13px;line-height:1.45}
+.lg-general{display:flex;flex-direction:column;gap:12px;min-width:0}
+.lg-search{display:flex;align-items:center;gap:8px;padding:0 12px;border:1px solid var(--lg-line);border-radius:14px;background:#fff;color:var(--lg-sub)}
+.lg-search input{flex:1;min-width:0;border:0!important;padding:12px 0!important;background:transparent!important;font-size:15px;outline:none}
+.lg-sources{display:flex;flex-direction:column;gap:8px}
+.lg-source{border:1px solid var(--lg-line);border-radius:16px;background:var(--lg-paper,#fff);overflow:hidden}
+.lg-source-head{display:flex;align-items:center;gap:8px;padding:4px 10px 4px 4px;flex-wrap:wrap}
+.lg-source-title{flex:1 1 180px;min-width:0;display:flex;align-items:center;gap:8px;min-height:44px;padding:6px 8px;background:none;border:0;text-align:left;font:inherit;color:var(--lg-ink);cursor:pointer}
+.lg-source-title b{font-size:14px;line-height:1.3;overflow-wrap:anywhere}
+.lg-source-title svg{flex:none;transition:transform .2s}
+.lg-source.open .lg-source-title svg{transform:rotate(180deg)}
+.lg-source-head .lg-link{min-height:44px;white-space:nowrap}
+.lg-source-list{display:flex;flex-direction:column;padding:0 12px 6px;border-top:1px solid var(--lg-line)}
+.lg-source-list .lg-check{padding:10px 0;min-height:44px;font-size:13px;line-height:1.4;border-bottom:1px solid var(--lg-line)}
+.lg-source-list .lg-check:last-child{border-bottom:0}
+.lg-source-list .lg-check span{min-width:0;overflow-wrap:anywhere}
+.lg-chosen{font-size:13px;font-weight:700;color:var(--lg-ink)}
+.lg-choose{display:flex;flex-direction:column;gap:8px;text-align:left}
+.lg-choose .button{margin-top:6px}
+.lg-choose .lg-link{align-self:center;min-height:44px}
+.lg-group .lg-search,.classroom .lg-search{flex-direction:row;align-items:center}
+.lg-search svg{flex:none}
+.lg-choose .button{align-self:stretch;width:100%;max-width:none}
+.lg-confirm .lg-choose .button{width:100%!important;align-self:stretch!important}

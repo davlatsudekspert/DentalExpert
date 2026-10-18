@@ -48,3 +48,9 @@ export const JOIN_EVENT='de:join',SCAN_EVENT='de:scan',CLASSROOM_CHANGED='de:cla
 export const openJoin=(j:Invite)=>{try{dispatchEvent(new CustomEvent(JOIN_EVENT,{detail:j}))}catch{/* no window */}};
 export const openScan=()=>{try{dispatchEvent(new CustomEvent(SCAN_EVENT))}catch{/* no window */}};
 export const classroomChanged=()=>{try{dispatchEvent(new CustomEvent(CLASSROOM_CHANGED))}catch{/* no window */}};
+
+/** A topic test the teacher chose to give to a group from the topic page (Learn → curriculum), picked up by the classroom screen. */
+let assignTopic:string|null=null;
+export const ASSIGN_EVENT='de:assign-topic';
+export const askAssignTopic=(topicId:string)=>{assignTopic=topicId;try{dispatchEvent(new CustomEvent(ASSIGN_EVENT,{detail:topicId}))}catch{/* no window */}};
+export const takeAssignTopic=()=>{const t=assignTopic;assignTopic=null;return t};
