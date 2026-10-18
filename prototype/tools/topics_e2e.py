@@ -73,7 +73,8 @@ with sync_playwright() as p:
     # teacher finishes, student reviews
     tp.get_by_role('button',name='Testni yakunlash').click();tp.wait_for_timeout(400)
     tp.locator('.lg-confirm-actions .button').last.click();tp.wait_for_timeout(900)
-    tp.get_by_role('button',name='Natijalar').click();tp.wait_for_timeout(900)
+    # The live rows and, once the test is over, the per-question bars are always on the test card.
+    check('teacher sees the student\'s row',tp.locator('.lg-live .lg-row.s2').count()==1)
     check('teacher sees results and error bars',tp.locator('.lg-err').count()==3)
     tp.screenshot(path=OUT+'/t6-results.png',full_page=True)
     tp.get_by_role('button',name='Terapiya 3-kurs').click();tp.wait_for_timeout(600)

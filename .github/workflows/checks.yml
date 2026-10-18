@@ -1,7 +1,7 @@
 name: Checks
 
 # The guard on every push: build, type checks, content and native safety checks, unit tests, the local API suites
-# (auth, admin, classroom, topic tests, QR quick tests, Google/Apple sign-in) and the browser walks.
+# (auth, admin, classroom, teacher–student tests v2, topic tests, QR joins, Google/Apple sign-in) and the browser walks.
 on:
   push:
   pull_request:
@@ -40,14 +40,16 @@ jobs:
           python3 tools/curriculum.py build
           git diff --exit-code -- src/curriculum functions/_lib/curriculumKeys.ts
           python3 tools/question_audit.py --quiet
-      - name: Unit tests (QR/invite parsing, nickname filter)
-        run: npx tsx tools/join_link_test.ts && npx tsx tools/profanity_test.ts
+      - name: Unit tests (QR/invite parsing, nickname filter, per-student variant draw vs shared vectors)
+        run: |
+          npx tsx tools/join_link_test.ts && npx tsx tools/profanity_test.ts
+          python3 tools/variant_vectors.py --check && npx tsx tools/variant_test.ts
       - name: Build (app type check + bundle)
         run: npm run build
       - name: Type check server functions
         run: npx tsc -p functions/tsconfig.json --noEmit
       - name: API suites on a local server
-        run: bash tools/ci_local_server.sh auth_test admin_test classroom_test topics_test profile_public_test quick_test photo_test
+        run: bash tools/ci_local_server.sh auth_test admin_test classroom_test classroom_v2_test topics_test profile_public_test quick_test photo_test
       - name: Google / Apple sign-in suite
         run: pip install cryptography && python3 tools/oauth_test.py
       - name: Browsers for the walks
@@ -55,8 +57,8 @@ jobs:
           pip install playwright==1.64.0 pillow
           python -m playwright install --with-deps chromium webkit
           echo "CHROMIUM_PATH=$(python -c 'from playwright.sync_api import sync_playwright as s;p=s().start();print(p.chromium.executable_path);p.stop()')" >> "$GITHUB_ENV"
-      - name: Browser walks (profile, classroom, topic test, QR quick test)
-        run: SIM_OUT=/tmp/sim bash tools/ci_local_server.sh profile_e2e classroom_e2e topics_e2e quick_e2e
+      - name: Browser walks (profile, classroom, topic test, QR join, teacher–student test on iPhone WebKit)
+        run: SIM_OUT=/tmp/sim bash tools/ci_local_server.sh profile_e2e classroom_e2e topics_e2e quick_e2e classroom_v2_e2e
       - name: Live site on a TV and slides in present mode
         run: python3 tools/present_test.py dist
       - name: Every screen in uz/ru/en (offline build)
