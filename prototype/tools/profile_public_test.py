@@ -1,4 +1,6 @@
-"""Dentist public profile: edit contacts, request listing, owner verifies, patients see it with the contact links; edits clear verification."""
+"""Dentist public profile: edit contacts, request listing, owner verifies, patients see it with the contact links; edits clear verification.
+Role switching (PUT /api/auth/role): the four app roles only, never admin; guests and signed-out callers refused; leaving
+'dentist' takes the public listing down; a teacher's groups stay theirs after switching; 10 switches a day."""
 import os
 import json,urllib.parse,urllib.request,urllib.error,time
 B=f'http://127.0.0.1:{os.environ.get("DE_PORT","8788")}/api'
@@ -35,4 +37,28 @@ call('/auth/profile','PUT',{**full,'phone':'+998 90 999 99 99','publishRequested
 check('cannot verify a profile that was not submitted',call('/admin/users','PUT',{'id':du['id'],'verified':True},A)[0]==400)
 P,pu=login(f'pt+{time.time_ns()}@example.com','patient','Patient')
 s,r=call('/auth/profile','PUT',{**full},P);check('patient cannot request publishing',r['user']['publishRequested'] is False)
+# Role switching.
+import sys;sys.path.insert(0,os.path.dirname(os.path.abspath(__file__)))
+from classroom_test_lib import legacy_guest  # noqa: E402
+call('/auth/profile','PUT',{**full,'publishRequested':True},D);call('/admin/users','PUT',{'id':du['id'],'verified':True},A)
+check('listed again before switching',any(d['fullName']=='Dr Public Test' for d in call('/doctors?city=UZ-TK')[1]['doctors']))
+check('switching to admin is refused',call('/auth/role','PUT',{'role':'admin'},D)==(400,{'error':'bad_role'}))
+check('an unknown role is refused',call('/auth/role','PUT',{'role':'owner'},D)[0]==400 and call('/auth/role','PUT',{},D)[0]==400)
+check('signed out cannot switch',call('/auth/role','PUT',{'role':'teacher'})[0]==401)
+gt,_=legacy_guest('Mehmon');check('a guest cannot switch',call('/auth/role','PUT',{'role':'teacher'},gt)[0] in (401,403))
+s,r=call('/auth/role','PUT',{'role':'dentist'},D);check('the same role is a no-op',s==200 and r['user']['role']=='dentist')
+s,r=call('/auth/role','PUT',{'role':'teacher'},D)
+check('dentist → teacher: switched, listing request and verification cleared',s==200 and r['user']['role']=='teacher' and r['user']['publishRequested'] is False and r['user']['verified'] is False)
+check('/auth/me shows the new role',call('/auth/me',token=D)[1]['user']['role']=='teacher')
+check('no longer listed for patients',all(d['fullName']!='Dr Public Test' for d in call('/doctors?city=UZ-TK')[1]['doctors']))
+s,r=call('/classroom/groups','POST',{'name':'Rol guruhi'},D);check('as a teacher: can create a group',s==200);gid=r['group']['id']
+s,r=call('/auth/role','PUT',{'role':'student'},D);check('teacher → student',s==200 and r['user']['role']=='student')
+check('as a student: cannot create new groups',call('/classroom/groups','POST',{'name':'Yana'},D)==(403,{'error':'teacher_only'}))
+check('as a student: the owned group still answers as its owner',call(f'/classroom/assignments?groupId={gid}',token=D)[1].get('role')=='owner')
+s,r=call('/auth/role','PUT',{'role':'dentist'},D)
+check('back to dentist: not listed until requested and verified again',s==200 and r['user']['role']=='dentist' and r['user']['publishRequested'] is False and all(d['fullName']!='Dr Public Test' for d in call('/doctors?city=UZ-TK')[1]['doctors']))
+check('admin rights do not come from the role',call('/auth/me',token=D)[1]['user']['isAdmin'] is False)
+# 3 switches so far; 10 a day in all.
+codes=[call('/auth/role','PUT',{'role':['teacher','patient'][i%2]},D)[0] for i in range(8)]
+check('role switches are rate limited (10 a day)',codes[:7]==[200]*7 and codes[7]==429)
 print('PASS',len(ok),'checks')
