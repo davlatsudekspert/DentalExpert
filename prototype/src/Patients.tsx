@@ -54,7 +54,7 @@ export default function Patients({lang,uid,onChange}:{lang:Lang;uid?:string|null
  if(cur)return <section className="patients">
   <button className="cr-back" onClick={()=>setOpen(null)}><ChevronLeft size={16}/>{t.back}</button>
   <div className="card pt-head"><span className="pt-avatar">{cur.name.split(/\s+/).map(x=>x[0]).join('').slice(0,2).toUpperCase()}</span><div><h2>{cur.name}</h2><p className="muted">{cur.phone||'—'}</p></div></div>
-  {cur.note&&<div className="card"><p>{cur.note}</p></div>}
+  {cur.note&&<div className="card empty-card"><p>{cur.note}</p></div>}
   <h3>{t.chart}</h3>
   <Chart lang={lang} teeth={cur.teeth} onSet={(n,s)=>patch(p=>({...p,teeth:{...p.teeth,[n]:s}}))}/>
   <h3>{t.visits}</h3>

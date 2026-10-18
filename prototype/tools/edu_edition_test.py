@@ -130,6 +130,8 @@ with sync_playwright() as p:
     check('full record: patient list',pg.locator('.patients').count()==1)
     goto(pg,'screen=dashboard&role=dentist')
     check('full dentist home: Patients tile',pg.get_by_text('Patients').count()>=1)
+    pad=pg.locator('.card',has_text='No patients yet').first.evaluate("e=>[parseFloat(getComputedStyle(e).paddingLeft),parseFloat(getComputedStyle(e).paddingTop)]")
+    check('full dentist home: the empty patients card has inner padding',pad[0]>=12 and pad[1]>=12,str(pad))
     sp=page('dentist');goto(sp,'screen=edit',1400)
     check('full dentist editor: public-listing option',sp.locator('.publish-card').count()==1)
     sp.context.close()
