@@ -3,7 +3,7 @@ import {GRACE_MIN,STATE_SQL,body,clean,groupRole,limited,needUser,noStore,reveal
 import {explainFor,keyFor,refsOf} from '../../_lib/classTest';
 
 type A={group_id:string;kind:string;status:string;answer_key:string|null;due_date:string|null;topic_id:string|null;questions:string|null;minutes:number|null;reveal:string|null;
- pool:string|null;since_close:number|null;since_deadline:number|null;elapsed:number|null;mine:string|null};
+ pool:string|null;deck_id:string|null;since_close:number|null;since_deadline:number|null;elapsed:number|null;mine:string|null};
 // A member answers a task (text, editable while open) or a quiz (one attempt). Quiz scoring happens here against the
 // key, which is never sent to students before the reveal the teacher chose.
 export const onRequestPost:PagesFunction<Env>=async({request,env})=>{
@@ -12,7 +12,7 @@ export const onRequestPost:PagesFunction<Env>=async({request,env})=>{
  const b=await body(request);if('res' in b)return b.res;
  if(await limited(env,'submit',user.id))return tooMany();
  const id=clean(b.data.assignmentId,60);
- const as=await env.DB.prepare(`SELECT group_id,kind,status,answer_key,due_date,topic_id,questions,minutes,reveal,pool,${STATE_SQL()},
+ const as=await env.DB.prepare(`SELECT group_id,kind,status,answer_key,due_date,topic_id,questions,minutes,reveal,pool,deck_id,${STATE_SQL()},
    (SELECT (julianday('now')-julianday(started_at))*1440 FROM class_submissions WHERE assignment_id=class_assignments.id AND user_id=?) AS elapsed,
    (SELECT questions FROM class_submissions WHERE assignment_id=class_assignments.id AND user_id=?) AS mine
   FROM class_assignments WHERE id=?`).bind(user.id,user.id,id).first<A>();

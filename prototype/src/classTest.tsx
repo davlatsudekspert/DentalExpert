@@ -4,6 +4,7 @@ import {callApi} from './api';
 import QuizRun,{type RunQ} from './QuizRun';
 import {loadTopic,topicMeta,tx,type L,type Topic} from './curriculumData';
 import {drawVariant,qref,refIndex,refTopic} from './classroomShared';
+import {resolveWith,type Loaders} from './questionIndex';
 import type {Lang} from './discoveryData';
 
 /** One server-scored class test (topic test or deck quiz) for a student: start or resume, save answers as they go, submit, score and review. */
@@ -11,7 +12,7 @@ export type TestReviewData={answers:number[]|null;correct:number[];explain:(L|nu
 export type Reveal='closed'|'deadline'|'instant';
 export type TestMeta={id:string;title:string;status:'open'|'closed';topicId?:string;questions?:number[];deckId?:string|null;minutes?:number;reveal?:Reveal;
  /** Topic tests: question refs ("topic:index") of the fixed test or of the variant pool. */
- items?:string[];variant?:boolean;perStudent?:number;questionCount?:number;deadlineAt?:string;ended?:boolean;
+ items?:string[];variant?:boolean;general?:boolean;perStudent?:number;questionCount?:number;deadlineAt?:string;ended?:boolean;
  mine:{answer:string|null;score:number|null;total:number|null;startedAt?:string|null;questions?:string[];review?:TestReviewData}|null};
 export type TestItem={q:string;options:string[];explanation?:string};
 type DeckQ={q:string;options:string[];correct:number;explanation:string};
@@ -45,25 +46,26 @@ export const testError=(lang:Lang,code:string)=>{const e=testWords[lang].err;ret
 /** The note under a score while the right answers are still hidden. */
 export const revealNote=(a:Pick<TestMeta,'reveal'|'deadlineAt'>,lang:Lang)=>a.reveal==='deadline'&&a.deadlineAt?testWords[lang].reviewDeadline(fmtWhen(a.deadlineAt,lang)):testWords[lang].reviewLater;
 
-const decks=new Map<string,Promise<{id:string;quiz:DeckQ[]}[]>>();
+const decks=new Map<string,Promise<{id:string;title:string;quiz:DeckQ[]}[]>>();
 const loadDecks=(lang:Lang)=>{if(!decks.has(lang))decks.set(lang,fetch(`/decks/manifest.${lang}.json`).then(r=>r.ok?r.json():[]).catch(()=>{decks.delete(lang);return []}));return decks.get(lang)!};
-export const topicItems=(topic:Topic,idx:number[],lang:Lang):TestItem[]=>idx.map(i=>topic.test[i]).filter(Boolean).map(q=>({q:tx(q.q,lang),options:q.options.map(o=>tx(o,lang))}));
-/** Questions by ref ("topic:index"), loading each topic once; null when one cannot be loaded. */
+/** The app's one question index (src/questionIndex.ts) with the real loaders: topic JSON bundled with the app, deck
+ * quizzes from the deck manifest. Teacher screen, preview, student test, big screen and results all go through here. */
+const loaders:Loaders={topic:id=>loadTopic(id),decks:lang=>loadDecks(lang)};
+/** Questions by ref, in order; null when one cannot be resolved. */
 export async function refItems(refs:string[],lang:Lang):Promise<TestItem[]|null>{
- const ids=[...new Set(refs.map(refTopic))];
- const topics=new Map((await Promise.all(ids.map(async id=>[id,await loadTopic(id)] as const))));
- const out:TestItem[]=[];
- for(const r of refs){const q=topics.get(refTopic(r))?.test[refIndex(r)];if(!q)return null;out.push({q:tx(q.q,lang),options:q.options.map(o=>tx(o,lang))})}
- return out;
+ const xs=await resolveWith(refs,lang,loaders);
+ return xs.some(x=>!x)?null:xs.map(x=>({q:x!.q,options:x!.options,explanation:x!.explanation}));
 }
-/** The refs a topic test shows: the student's own draw (variant), else the fixed list. */
-export const testRefs=(a:Pick<TestMeta,'topicId'|'questions'|'items'|'variant'|'mine'>,own?:string[]|null)=>
- a.variant?own||a.mine?.questions||a.mine?.review?.questions||null:a.items||(a.topicId&&a.questions?a.questions.map(i=>qref(a.topicId!,i)):null);
-/** The questions of a class test, in the order the server scores them: a topic test's refs, or a deck quiz. */
-export async function loadTestItems(a:Pick<TestMeta,'topicId'|'questions'|'deckId'|'items'|'variant'|'mine'>,lang:Lang,own?:string[]|null):Promise<TestItem[]|null>{
- if(a.topicId){const refs=testRefs(a,own);return refs?refItems(refs,lang):null}
- const d=(await loadDecks(lang)).find(x=>x.id===a.deckId);
- return d?d.quiz.map(q=>({q:q.q,options:q.options,explanation:q.explanation})):null;
+/** Index entries with the deck keys (the preview scores deck questions with them; topic keys come from the server). */
+export const indexEntries=(refs:string[],lang:Lang)=>resolveWith(refs,lang,loaders);
+/** The refs a test shows this student: their own list for a pool test (variant or general), else the fixed list
+ * (a topic test's questions or a deck quiz, both sent by the server as `items`). */
+export const testRefs=(a:Pick<TestMeta,'topicId'|'questions'|'items'|'variant'|'perStudent'|'mine'>,own?:string[]|null)=>
+ own||a.mine?.questions||a.mine?.review?.questions||(a.perStudent?null:a.items||(a.topicId&&a.questions?a.questions.map(i=>qref(a.topicId!,i)):null));
+/** The questions of a class test, in the order the server scores them. */
+export async function loadTestItems(a:Pick<TestMeta,'topicId'|'questions'|'deckId'|'items'|'variant'|'perStudent'|'mine'>,lang:Lang,own?:string[]|null):Promise<TestItem[]|null>{
+ const refs=testRefs(a,own);
+ return refs?refItems(refs,lang):null;
 }
 const local=(id:string)=>`de_prog:${id}`;
 const readLocal=(id:string):(number|null)[]|null=>{try{const v=JSON.parse(localStorage.getItem(local(id))||'null');return Array.isArray(v)?v:null}catch{return null}};
@@ -114,8 +116,8 @@ export function TestRun({lang,a,userId,exitLabel,onExit,onError,onSubmitted}:{la
   if(!live)return;
   if(!r.ok)return cb.current.onError(r.status===0?'network':r.data.error||'other');
   // A variant test: the server drew this student's questions; the app's copy of the same draw must agree.
-  const own=a.variant?r.data.questions||null:null;
-  if(own&&a.items&&cb.current.userId)void drawVariant(a.id,cb.current.userId,a.items,own.length,a.topicId).then(ix=>{if(ix.map(i=>a.items![i]).join()!==own.join())console.warn('variant draw differs from the server; using the server list')});
+  const own=r.data.questions||null;
+  if(own&&a.items&&a.perStudent&&cb.current.userId)void drawVariant(a.id,cb.current.userId,a.items,own.length,a.topicId).then(ix=>{if(ix.map(i=>a.items![i]).join()!==own.join())console.warn('variant draw differs from the server; using the server list')});
   const qs=await loadTestItems(a,lang,own);
   if(!live)return;
   if(!qs)return cb.current.onError('load');
@@ -153,15 +155,17 @@ export function PreviewRun({lang,a,userId,onExit}:{lang:Lang;a:TestMeta;userId:s
  const [deadline]=useState(()=>a.minutes?Date.now()+a.minutes*60000:a.deadlineAt?Date.parse(a.deadlineAt):undefined);
  const [score,setScore]=useState<[number,number]|null>(null);
  useEffect(()=>{let live=true;(async()=>{
-  if(!a.topicId||!a.items){setErr('load');return}
-  const refs=a.variant?(await drawVariant(a.id,userId,a.items,a.perStudent||a.questionCount||0,a.topicId)).map(i=>a.items![i]):a.items;
-  const ids=[...new Set(refs.map(refTopic))];
+  if(!a.items){setErr('load');return}
+  const refs=a.perStudent?(await drawVariant(a.id,userId,a.items,a.perStudent,a.topicId)).map(i=>a.items![i]):a.items;
+  // Topic keys from the public self-study key endpoint; deck keys are in the deck manifest the index reads.
+  const ids=[...new Set(refs.map(refTopic).filter(id=>!id.startsWith('deck.')))];
   const keys=new Map(await Promise.all(ids.map(async id=>{const r=await callApi<{correct:number[]}>(`/curriculum/key?topicId=${encodeURIComponent(id)}`);return [id,r.ok?r.data.correct:null] as const})));
-  const items=await refItems(refs,lang);
+  const items=await indexEntries(refs,lang);
   if(!live)return;
-  if(!items||[...keys.values()].some(k=>!k)){setErr(items?'network':'load');return}
-  setQs(items.map((q,k)=>({q:q.q,options:q.options,correct:keys.get(refTopic(refs[k]))![refIndex(refs[k])],explanation:''})));
- })();return ()=>{live=false}},[a.id,a.items,a.variant,a.perStudent,a.questionCount,a.topicId,userId,lang]);
+  if(items.some(x=>!x)){setErr('load');return}
+  if([...keys.values()].some(k=>!k)){setErr('network');return}
+  setQs(items.map((q,k)=>({q:q!.q,options:q!.options,correct:q!.correct??keys.get(refTopic(refs[k]))![refIndex(refs[k])],explanation:''})));
+ })();return ()=>{live=false}},[a.id,a.items,a.perStudent,a.topicId,userId,lang]);
  const title=`${t.preview} · ${testTitle(a,lang)}`;
  if(!qs)return <div className="quiz-run" role="dialog" aria-modal="true" aria-label={title} aria-busy={!err}>
   <div className="quiz-run-bar"><strong>{title}</strong><button data-close onClick={onExit} aria-label={t.close}><X size={20}/></button></div>

@@ -1,6 +1,7 @@
 import {json,type Env} from '../../_lib/db';
 import {STATE_SQL,body,clean,ended,groupRole,isoOf,needUser,newId,noStore,revealOf,revealOpen} from '../../_lib/classroom';
-import {explainFor,keyFor,refsOf} from '../../_lib/classTest';
+import {explainFor,finalizeExpired,keyFor,refsOf} from '../../_lib/classTest';
+import {GRACE_MIN} from '../../_lib/classroom';
 
 type Row=Record<string,unknown>;
 const MAX_ASSIGNMENTS=100;
@@ -17,6 +18,7 @@ export const onRequestGet:PagesFunction<Env>=async({request,env})=>{
  const groupId=url.searchParams.get('groupId')||'';
  const role=await groupRole(env,groupId,user.id);
  if(!role)return json({error:'forbidden'},403,noStore);
+ await finalizeExpired(env,groupId,GRACE_MIN).catch(()=>0);
  const {results}=await env.DB.prepare(
   `SELECT a.id,a.kind,a.title,a.body,a.deck_id,a.status,a.due_date,a.created_at,a.answer_key,a.topic_id,a.questions,a.minutes,a.reveal,a.pool,a.per_student,a.deadline_at,${STATE_SQL('a.')},
      (SELECT COUNT(*) FROM class_submissions s WHERE s.assignment_id=a.id) AS submitted,
@@ -24,13 +26,15 @@ export const onRequestGet:PagesFunction<Env>=async({request,env})=>{
    FROM class_assignments a LEFT JOIN class_submissions s ON s.assignment_id=a.id AND s.user_id=?
    WHERE a.group_id=?${role==='owner'?'':` AND (a.topic_id IS NULL OR EXISTS (SELECT 1 FROM class_topics t WHERE t.group_id=a.group_id AND t.topic_id=a.topic_id AND t.closed_at IS NULL))`} ORDER BY a.created_at DESC`
  ).bind(user.id,groupId).all<Row>();
- const items=(r:Row)=>r.pool?JSON.parse(r.pool as string) as string[]:r.topic_id&&r.questions?(JSON.parse(r.questions as string) as number[]).map(i=>`${r.topic_id}:${i}`):undefined;
+ // The refs of the test in the one question index: its pool, or the fixed questions of a topic test or deck quiz.
+ const items=(r:Row)=>r.pool?JSON.parse(r.pool as string) as string[]:refsOf(r as never,null)??undefined;
+ const isVariant=(r:Row)=>!!r.pool&&(JSON.parse(r.pool as string) as string[]).length>(r.per_student as number);
  const assignments=results.map(r=>{
   const st=r as Row&{status:unknown;since_close:unknown;since_deadline:unknown;reveal:unknown};
   const mineRefs=r.pool?(r.my_questions?JSON.parse(r.my_questions as string) as string[]:null):refsOf(r as never,null);
   return {id:r.id,kind:r.kind,title:r.title,body:r.body,deckId:r.deck_id,status:r.status,dueDate:r.due_date,createdAt:r.created_at,
   questionCount:r.pool?r.per_student:r.answer_key?(JSON.parse(r.answer_key as string) as number[]).length:undefined,
-  topicId:r.topic_id??undefined,questions:r.questions?JSON.parse(r.questions as string):undefined,items:items(r),variant:r.pool?true:undefined,perStudent:r.per_student??undefined,
+  topicId:r.topic_id??undefined,questions:r.questions?JSON.parse(r.questions as string):undefined,items:items(r),variant:isVariant(r)||undefined,general:r.pool&&!r.topic_id?true:undefined,perStudent:r.per_student??undefined,
   minutes:r.minutes??undefined,deadlineAt:isoOf(r.deadline_at)??undefined,ended:ended(st),reveal:revealOf(r.reveal),
   submitted:role==='owner'?r.submitted:undefined,
   mine:role==='member'&&(r.my_answer!==null||r.my_score!==null)?{answer:r.my_answer,score:r.my_score,total:r.my_total,startedAt:r.my_started,questions:r.pool?mineRefs??undefined:undefined,
