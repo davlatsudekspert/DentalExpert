@@ -98,6 +98,7 @@ with sync_playwright() as p:
     s2.goto(B+s2.locator('#web').get_attribute('href')+'&shot=1');s2.wait_for_selector('.qj-signin',timeout=15000)
     check('signed out: sign in first',s2.locator('.qj-signin').get_by_role('button',name='Kirish').count()==1);s2.screenshot(path=f'{OUT}/s2-2-sign-in-first.png')
     s2.locator('.qj-signin').get_by_role('button',name='Kirish').click();s2.wait_for_selector('input[name=email]')
+    check('sign-in from a class invite presents the student role, not "Bemor"',s2.get_by_text('Dental Expert · Talaba').count()==1 and s2.get_by_text('Dental Expert · Bemor').count()==0)
     sql(f"DELETE FROM auth_codes WHERE email='{e2}'")  # the account was made a moment ago; skip the 60-second resend wait
     s2.fill('input[name=email]',e2)
     with s2.expect_response('**/api/auth/request-code') as rr:s2.locator('form .button[type=submit]').click()
@@ -110,6 +111,21 @@ with sync_playwright() as p:
     answer_all(s2);s2.wait_for_selector('.qj-center, .quiz-run-result, .qj-review',timeout=10000);s2.wait_for_timeout(600)
     s2.screenshot(path=f'{OUT}/s2-4-result.png')
     check('student 2 sees the score and the "answers after the teacher finishes" note',s2.get_by_text('ustoz testni yakunlagach').count()>=1)
+
+    # Student 4: opens the invite signed out and signs up instead: the form presents the student role, the new account is
+    # a student one, and the invite reopens at the nickname step.
+    s4c=ch.new_context(viewport={'width':393,'height':852},is_mobile=True,has_touch=True,extra_http_headers={'cf-connecting-ip':ip()});s4=s4c.new_page();e4=[];s4.on('pageerror',lambda x:e4.append(str(x)))
+    s4.goto(f'{B}/?join={g["code"]}&a={test["id"]}&lang=uz&shot=1');s4.wait_for_selector('.qj-signin',timeout=15000)
+    s4.locator('.qj-signin').get_by_role('button',name='Ro‘yxatdan o‘tish').click();s4.wait_for_selector('input[name=fullname]')
+    check('sign-up from a class invite presents the student role',s4.get_by_text('Dental Expert · Talaba').count()==1 and s4.get_by_text('Dental Expert · Bemor').count()==0)
+    s4.screenshot(path=f'{OUT}/s4-1-sign-up.png')
+    s4.fill('input[name=fullname]','Malika Sobirova');s4.fill('input[name=email]',f'student+{time.time_ns()}@example.com')
+    with s4.expect_response('**/api/auth/request-code') as rr:s4.locator('form .button[type=submit]').click()
+    s4.wait_for_selector('.completion-code input');s4.fill('.completion-code input',rr.value.json()['devCode']);s4.get_by_role('button',name='Tasdiqlash').click()
+    s4.wait_for_selector('#qj-nick',timeout=15000)
+    check('after sign-up the invite reopens at the nickname step',g['code'][:3] in s4.locator('.qj-code').first.inner_text())
+    check('the account made from the invite is a student one',s4.evaluate("()=>fetch('/api/auth/me').then(r=>r.json()).then(j=>j.user&&j.user.role)")=='student')
+    s4c.close()
 
     # Student 3: types a wrong code into the scanner's manual field, then pastes the invite text.
     # (Playwright's Linux WebKit has no capture backend and crashes on getUserMedia, so this phone runs in Chromium with no camera at all.)
@@ -149,5 +165,5 @@ with sync_playwright() as p:
     tp.screenshot(path=f'{OUT}/t6-board-closed-1920.png')
     check('hardest questions after finishing',tp.get_by_text('Eng qiyin savollar').count()>=1)
     p2.wait_for_timeout(6000);p2.screenshot(path=f'{OUT}/t7-board-closed-1280.png')
-    check('no page errors',not terr and not e1 and not e2s and not e3)
+    check('no page errors',not terr and not e1 and not e2s and not e3 and not e4)
     print(f'{n} checks passed')
