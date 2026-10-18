@@ -17,16 +17,19 @@ const PRIVACY:Record<Lang,{lead:string;full:string;items:[string,string][]}>={
  uz:{lead:'Dental Expert sizning ma’lumotlaringizni faqat ilova ishlashi uchun saqlaydi va reklama uchun ishlatmaydi.',full:'To‘liq maxfiylik siyosati',items:[
   ['Hisob','Email, ism, rol va (xohlasangiz) telefon, ish joyi va tavsif serverda saqlanadi. Kirish email kodi, Google yoki Apple orqali.'],
   ['Guruhlar','Guruhga qo‘shilsangiz, taxallusingiz va javoblaringiz ustozga ko‘rinadi. Email va ismingiz ko‘rinmaydi. Guruhdan chiqsangiz javoblaringiz o‘chadi.'],
+  ['Tezkor hisob (QR test)','QR orqali kirmasdan qo‘shilsangiz, shu qurilma uchun faqat sinf hisobi ochiladi: email va parolsiz, faqat taxallus va test natijalari. Kalit qurilmaning xavfsiz xotirasida saqlanadi. 180 kun ishlatilmasa o‘chadi; keyin email, Google yoki Apple orqali kirsangiz natijalar saqlanadi.'],
   ['Bemorlar ro‘yxati va kunlik mashqlar','Stomatolog qo‘shgan bemorlar va kunlik mashq natijalari faqat shu qurilmada saqlanadi, serverga yuborilmaydi.'],
   ['Hisobni o‘chirish','Sozlamalar → Hisobni o‘chirish: hisob, sessiyalar, guruhlar va javoblar o‘chiriladi, shu qurilmadagi ma’lumotlar ham tozalanadi.']]},
  ru:{lead:'Dental Expert хранит ваши данные только для работы приложения и не использует их для рекламы.',full:'Полная политика конфиденциальности',items:[
   ['Аккаунт','На сервере хранятся email, имя, роль и (по желанию) телефон, место работы и описание. Вход по коду из email, через Google или Apple.'],
   ['Группы','Если вы вступаете в группу, преподаватель видит ваш псевдоним и ответы, но не email и не имя. При выходе из группы ответы удаляются.'],
+  ['Быстрый аккаунт (тест по QR)','Если вы вступаете по QR без входа, для этого устройства создаётся аккаунт только для занятий: без email и пароля, только ник и результаты тестов. Ключ хранится в защищённом хранилище устройства. Удаляется через 180 дней без использования; если позже войти через email, Google или Apple, результаты сохранятся.'],
   ['Список пациентов и ежедневные задания','Пациенты, добавленные стоматологом, и результаты заданий хранятся только на этом устройстве и не отправляются на сервер.'],
   ['Удаление аккаунта','Настройки → Удалить аккаунт: удаляются аккаунт, сессии, группы и ответы, а также данные на этом устройстве.']]},
  en:{lead:'Dental Expert stores your data only to run the app and never uses it for advertising.',full:'Full privacy policy',items:[
   ['Account','Email, name, role and (optionally) phone, workplace and bio are stored on our server. You sign in with an email code, Google or Apple.'],
   ['Groups','If you join a group, the teacher sees your nickname and answers, not your email or name. Leaving the group deletes your answers.'],
+  ['Quick account (QR test)','Joining by QR without signing in creates a class-only account for this device: no email or password, just a nickname and test results. Its key is kept in the device’s secure storage. It is deleted after 180 days without use; signing in later with email, Google or Apple keeps your results.'],
   ['Patient list and daily practice','Patients a dentist adds and daily-practice results stay on this device and are never sent to a server.'],
   ['Deleting your account','Settings → Delete account removes your account, sessions, groups and answers, and clears the data on this device.']]}
 };

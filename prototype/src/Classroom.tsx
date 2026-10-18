@@ -1,9 +1,13 @@
-import {useCallback,useEffect,useMemo,useRef,useState} from 'react';
-import {BarChart3,BookOpen,Check,ChevronLeft,ClipboardList,Copy,Eye,EyeOff,LogIn,Plus,Presentation,QrCode,Timer,Trash2,Users} from 'lucide-react';
+import {Suspense,lazy,useCallback,useEffect,useMemo,useRef,useState} from 'react';
+import {BarChart3,BookOpen,Check,ChevronLeft,ClipboardList,Copy,Eye,EyeOff,LogIn,Plus,Presentation,QrCode,Timer,Trash2,UserMinus,Users,Tv} from 'lucide-react';
 import qrcode from 'qrcode-generator';
-import {callApi,type AuthUser} from './api';
-import QuizRun from './QuizRun';
+import {callApi,joinLink,parseJoin,type AuthUser} from './api';
+import QrScanner from './QrScanner';
+import QuickJoin from './QuickJoin';
+import {TestRun,TestReview,testError,testWords,topicItems} from './classTest';
 import Slides from './Slides';
+import type {BigTest} from './BigScreen';
+const BigScreen=lazy(()=>import('./BigScreen'));
 import {OralList,SubjectHero,SubjectList,TopicList,toTop,useTopic} from './Curriculum';
 import {subjectColor} from './subjectArt';
 import {SUBJECTS,metaLine,topicMeta,tx,type Subject,type Topic,type TopicMeta} from './curriculumData';
@@ -21,6 +25,11 @@ type TopicRow={topicId:string;openedAt:string;closedAt:string|null;lectureDoneAt
 type Deck={id:string;title:string;quiz:{q:string;options:string[];correct:number;explanation:string}[]};
 
 const ruPlural=(n:number,one:string,few:string,many:string)=>{const a=n%10,b=n%100;return a===1&&b!==11?one:a>=2&&a<=4&&(b<12||b>14)?few:many};
+const joinErr={
+ uz:{taken:'Bu nom guruhda band — boshqasini yozing.',rude:'Bu nomni ishlatib bo‘lmaydi — boshqa nom tanlang.',full:'Guruh to‘lgan (500 talaba). Ustozingizga ayting.'},
+ ru:{taken:'Это имя в группе уже занято — напишите другое.',rude:'Это имя использовать нельзя — выберите другое.',full:'Группа заполнена (500 студентов). Сообщите преподавателю.'},
+ en:{taken:'That name is taken in this group — try another.',rude:'That name can’t be used — choose another one.',full:'The group is full (500 students). Tell your teacher.'}
+};
 const words={
  uz:{student:'Talaba',nick:'Taxallus (ixtiyoriy)',nickPh:'Masalan: Lola',nickHint:'Ustoz sizni shu nom yoki raqam bilan ko‘radi',close:'Yopish',reopen:'Qayta ochish',closedLbl:'Yopilgan',errClosed:'Topshiriq yopilgan.',errDone:'Siz bu testni allaqachon topshirgansiz.',errStarted:'Bu test allaqachon boshlangan va qayta boshlab bo‘lmaydi.',errDue:'Topshirish muddati o‘tgan.',errRate:'Juda ko‘p urinish. Keyinroq qayta urinib ko‘ring.',errNick:'Taxallus 2–24 belgi: harf, raqam, bo‘sh joy.',errNickTaken:'“Talaba N” ko‘rinishidagi nom band — boshqa nom tanlang.',title:'Guruhlar va darslar',signIn:'Guruhlar uchun email orqali kiring.',signInBtn:'Kirish',offline:'Guruhlar hozir mavjud emas (internet yoki server).',
   newGroup:'Yangi guruh',groupName:'Guruh nomi',groupHint:'Masalan: Terapiya 3-kurs',create:'Yaratish',code:'Qo‘shilish kodi',members:'talaba',copy:'Kodni nusxalash',copyInvite:'Taklif matnini nusxalash',copied:'Nusxalandi',noGroups:'Hali guruh yo‘q.',
@@ -75,6 +84,15 @@ const words={
   testOpen:'Test open',timeLimit:'min',testWait:'It appears here when your teacher starts the test.',reviewLater:'The right answers appear once your teacher finishes the test.',yourAns:'Your answer',right:'Right answer',noAnswer:'No answer',timeUp:'Time is up.',goals:'Learning goals',pick:'Choose a subject'}
 };
 type W=typeof words.uz;
+const scanWords={uz:'QR skanerlash',ru:'Сканировать QR',en:'Scan QR'};
+const more={
+ uz:{big:'Katta ekran · QR',reveal:'To‘g‘ri javoblar',revealClosed:'test yakunlangach',revealInstant:'darhol (topshirgach)',revealWarn:'Diqqat: birinchi topshirgan talaba to‘g‘ri javoblarni ko‘radi va hali yechayotganlarga aytib qo‘yishi mumkin. Nazorat testlari uchun «test yakunlangach»ni tanlang.',remove:'Chiqarish',confirmRemove:(n:string)=>`${n} guruhdan chiqarilsinmi? Uning shu guruhdagi javoblari o‘chiriladi.`},
+ ru:{big:'Большой экран · QR',reveal:'Верные ответы',revealClosed:'после завершения теста',revealInstant:'сразу (после сдачи)',revealWarn:'Внимание: первый сдавший увидит верные ответы и может подсказать тем, кто ещё решает. Для контрольных выберите «после завершения теста».',remove:'Исключить',confirmRemove:(n:string)=>`Исключить ${n} из группы? Ответы в этой группе будут удалены.`},
+ en:{big:'Big screen · QR',reveal:'Right answers',revealClosed:'after the test is finished',revealInstant:'right away (after submitting)',revealWarn:'Note: the first student to submit sees the right answers and could pass them to classmates still answering. For graded tests choose “after the test is finished”.',remove:'Remove',confirmRemove:(n:string)=>`Remove ${n} from the group? Their answers in this group are deleted.`}
+};
+type Reveal='closed'|'instant';
+/** Lazy-loaded teacher big screen (live results + join QR). */
+const Big=({lang,groupId,code,test,onClose}:{lang:Lang;groupId:string;code:string;test:BigTest;onClose:(finished:boolean)=>void})=><Suspense fallback={null}><BigScreen lang={lang} groupId={groupId} groupCode={code} test={test} onClose={onClose}/></Suspense>;
 
 const lsGet=<T,>(k:string,d:T):T=>{try{const v=localStorage.getItem(k);return v?JSON.parse(v) as T:d}catch{return d}};
 const lsSet=(k:string,v:unknown)=>{try{localStorage.setItem(k,JSON.stringify(v))}catch{/* storage unavailable */}};
@@ -91,7 +109,9 @@ export default function Classroom({lang,user,onSignIn}:{lang:Lang;user:AuthUser|
  const [name,setName]=useState('');
  const [code,setCode]=useState('');
  const [nick,setNick]=useState('');
- const errText=(e?:string)=>e==='rate_limited'?t.errRate:e==='bad_nickname'?(/^(student|talaba|студент)\s*\d+$/iu.test(nick.trim())?t.errNickTaken:t.errNick):e==='name_required'?t.errName:e==='not_found'||e==='bad_code'?t.errCode:e==='teacher_only'?t.errTeacher:t.errGeneric;
+ const [scan,setScan]=useState(false);
+ const [quick,setQuick]=useState<{code:string;testId?:string}|null>(null);
+ const errText=(e?:string)=>e==='rate_limited'?t.errRate:e==='bad_nickname'?(/^(student|talaba|студент)\s*\d+$/iu.test(nick.trim())?t.errNickTaken:t.errNick):e==='name_required'?t.errName:e==='not_found'||e==='bad_code'?t.errCode:e==='teacher_only'?t.errTeacher:e==='nick_taken'?joinErr[lang].taken:e==='nickname_rejected'?joinErr[lang].rude:e==='group_full'?joinErr[lang].full:t.errGeneric;
  const load=useCallback(async()=>{
   const r=await callApi<{groups:Group[]}>('/classroom/groups');
   if(r.status===0||r.status===404){setOffline(true);return}
@@ -108,10 +128,14 @@ export default function Classroom({lang,user,onSignIn}:{lang:Lang;user:AuthUser|
   {groups===null?<p className="muted">…</p>:groups.length===0?<p className="muted">{t.noGroups}</p>:<div className="lg-list">{groups.map(g=>
    <button key={g.id} className="lg-row" onClick={()=>setOpen(g)}><span className="lg-ico"><Users size={18}/></span><span className="lg-row-text"><strong>{g.name}</strong><small>{teacher?`${g.members??0} ${t.members} · ${t.code}: ${g.code}`:(g.teacher?`${t.teacher}: ${g.teacher} · `:'')+(g.myNickname||`${t.student} ${nn(g.myNo??0)}`)}</small></span></button>)}</div>}
   {teacher?<div className="cr-form"><label>{t.newGroup}<input value={name} maxLength={60} placeholder={t.groupName} aria-describedby="cr-group-hint" onChange={e=>setName(e.target.value)}/><small id="cr-group-hint" className="cr-help">{t.groupHint}</small></label><button className="button" disabled={name.trim().length<2} onClick={create}><Plus size={17}/>{t.create}</button></div>
-  :<div className="cr-form"><label>{t.join}<input value={code} autoCapitalize="characters" autoComplete="off" spellCheck={false} placeholder={t.joinPh} aria-describedby="cr-code-hint" onChange={e=>setCode(e.target.value.toUpperCase().replace(/[^A-Z0-9]/g,'').slice(0,6))}/><small id="cr-code-hint" className="cr-help">{t.joinHint}</small></label>
+  :<div className="cr-form"><button className="button secondary cr-scan" onClick={()=>setScan(true)}><QrCode size={18}/>{scanWords[lang]}</button>
+   {/* A pasted QR link or invite text fills the code; one that names a test opens the quick test straight away. */}
+   <label>{t.join}<input value={code} autoCapitalize="characters" autoComplete="off" spellCheck={false} placeholder={t.joinPh} aria-describedby="cr-code-hint" onChange={e=>{const v=e.target.value;const p=v.length>7?parseJoin(v):null;if(p?.testId){setCode(p.code);setQuick(p);return}setCode(p?p.code:v.toUpperCase().replace(/[^A-Z0-9]/g,'').slice(0,6))}}/><small id="cr-code-hint" className="cr-help">{t.joinHint}</small></label>
    <label>{t.nick}<input value={nick} maxLength={24} placeholder={t.nickPh} aria-describedby="cr-nick-hint" onChange={e=>setNick(e.target.value)}/><small id="cr-nick-hint" className="cr-help">{t.nickHint}</small></label><button className="button" disabled={code.length!==6} onClick={join}><LogIn size={17}/>{t.joinBtn}</button></div>}
   {msg&&<p className="cr-error" role="alert">{msg}</p>}
   {!teacher&&<small className="muted">{t.note}</small>}
+  {scan&&<QrScanner lang={lang} onResult={r=>{setScan(false);setQuick(r)}} onClose={()=>setScan(false)}/>}
+  {quick&&<QuickJoin lang={lang} code={quick.code} testId={quick.testId} signedIn onDone={()=>{setCode('');load()}} onClose={()=>{setQuick(null);load()}}/>}
  </section>;
 }
 
@@ -152,8 +176,8 @@ function GroupView({lang,group,teacher,onBack}:{lang:Lang;group:Group;teacher:bo
  useEffect(()=>{if(first.current){first.current=false;return}toTop(top.current)},[sel,topicId]);
  return <section className="classroom card lg-group" ref={top}>
   <button className="cr-back" onClick={backTo}><ChevronLeft size={16}/>{backLabel}</button>
-  {sel?<AssignmentView lang={lang} a={sel} teacher={teacher} roster={roster} decks={decks} onChanged={load} onDeleted={()=>{setSel(null);load()}}/>
-  :topicId?(teacher?<TeacherTopic lang={lang} groupId={group.id} topicId={topicId} row={row} test={items?.find(a=>a.id===row?.testId)||null} members={book?.members||[]} onChanged={load}/>
+  {sel?<AssignmentView lang={lang} groupId={group.id} code={group.code||''} a={sel} teacher={teacher} roster={roster} decks={decks} onChanged={load} onDeleted={()=>{setSel(null);load()}}/>
+  :topicId?(teacher?<TeacherTopic lang={lang} groupId={group.id} code={group.code||''} topicId={topicId} row={row} test={items?.find(a=>a.id===row?.testId)||null} members={book?.members||[]} onChanged={load}/>
    :<StudentTopic lang={lang} topicId={topicId} test={items?.find(a=>a.id===row?.testId)||null} onChanged={load}/>)
   :<>
    <span className="lg-eyebrow">{teacher?`${memberCount} ${t.members}`:(group.teacher?`${t.teacher}: ${group.teacher}`:'')}</span>
@@ -170,7 +194,7 @@ function GroupView({lang,group,teacher,onBack}:{lang:Lang;group:Group;teacher:bo
     :<button className="button secondary" onClick={leave}>{t.leave}</button>}
    </>}
    {tab==='book'&&teacher&&<Gradebook lang={lang} groupId={group.id} book={book}/>}
-   {tab==='people'&&teacher&&<><InviteCard lang={lang} group={group}/><People lang={lang} groupId={group.id} members={book?.members||null}/></>}
+   {tab==='people'&&teacher&&<><InviteCard lang={lang} group={group}/><People lang={lang} groupId={group.id} members={book?.members||null} onChanged={load}/></>}
   </>}
  </section>;
 }
@@ -193,7 +217,7 @@ function InviteCard({lang,group}:{lang:Lang;group:Group}){
  return <div className="lg-card lg-invite">
   <h3><QrCode size={16}/>{t.invite}</h3>
   <div className="lg-invite-body"><img src={qr} alt={`QR: ${code}`} width={128} height={128}/><div><small>{t.code}</small><b translate="no">{code.slice(0,3)} {code.slice(3)}</b><p className="muted">{t.inviteHint}</p></div></div>
-  <div className="cr-actions"><button className="button secondary" onClick={()=>copy('c',code)}><Copy size={15}/>{copied==='c'?t.copied:t.copy}</button><button className="button secondary" onClick={()=>copy('i',t.inviteText(group.name,code))}><Copy size={15}/>{copied==='i'?t.copied:t.copyInvite}</button></div>
+  <div className="cr-actions"><button className="button secondary" onClick={()=>copy('c',code)}><Copy size={15}/>{copied==='c'?t.copied:t.copy}</button><button className="button secondary" onClick={()=>copy('i',t.inviteText(group.name,code)+'\n'+joinLink(code))}><Copy size={15}/>{copied==='i'?t.copied:t.copyInvite}</button></div>
  </div>;
 }
 
@@ -239,7 +263,7 @@ function MyResults({lang,items}:{lang:Lang;items:Assignment[]|null}){
 
 type Oral={asked:number[];marks:Record<string,Record<string,'y'|'p'|'n'>>};
 
-function TeacherTopic({lang,groupId,topicId,row,test,members,onChanged}:{lang:Lang;groupId:string;topicId:string;row:TopicRow|null;test:Assignment|null;members:BookMember[];onChanged:()=>void}){
+function TeacherTopic({lang,groupId,code,topicId,row,test,members,onChanged}:{lang:Lang;groupId:string;code:string;topicId:string;row:TopicRow|null;test:Assignment|null;members:BookMember[];onChanged:()=>void}){
  const t=words[lang];
  const topic=useTopic(topicId);
  const meta=topicMeta(topicId);
@@ -284,8 +308,8 @@ function TeacherTopic({lang,groupId,topicId,row,test,members,onChanged}:{lang:La
     <DoneToggle t={t} done={!!row?.oralDoneAt} disabled={!isOpen||busy} onSet={d=>act('oral',{done:d})}/>
    </Stage>
    <Stage n={3} t={t} title={t.test} done={!!test&&test.status==='closed'} hint={test?'':t.testHint}>
-    {test?<TestRunning lang={lang} groupId={groupId} topic={topic} test={test} members={members} label={label} onFinish={()=>setAsking(true)}/>
-    :<TestSetup lang={lang} groupId={groupId} topic={topic} disabled={!isOpen||busy} onStart={(questions,minutes)=>act('test',{questions,minutes,title:tx(topic.title,lang)})}/>}
+    {test?<TestRunning lang={lang} groupId={groupId} code={code} topic={topic} test={test} members={members} label={label} onFinish={()=>setAsking(true)} onChanged={onChanged}/>
+    :<TestSetup lang={lang} groupId={groupId} topic={topic} disabled={!isOpen||busy} onStart={(questions,minutes,reveal)=>act('test',{questions,minutes,reveal,title:tx(topic.title,lang)})}/>}
    </Stage>
    {asking&&<ConfirmSheet text={t.confirmFinish} ok={t.finishTest} cancel={t.cancel} onOk={async()=>{setAsking(false);await act('finish')}} onCancel={()=>setAsking(false)}/>}
    {show&&<Slides title={tx(topic.title,lang)} eyebrow={tx(subject.title,lang)} slides={topic.slides} lang={lang} accent={subjectColor(subject.id).c} teacher onClose={()=>setShow(false)}/>}
@@ -319,8 +343,9 @@ function useKey(groupId:string,topicId:string){
  return key;
 }
 
-function TestSetup({lang,groupId,topic,disabled,onStart}:{lang:Lang;groupId:string;topic:Topic;disabled:boolean;onStart:(q:number[],m:number)=>void}){
- const t=words[lang];
+function TestSetup({lang,groupId,topic,disabled,onStart}:{lang:Lang;groupId:string;topic:Topic;disabled:boolean;onStart:(q:number[],m:number,r:Reveal)=>void}){
+ const t=words[lang],x=more[lang];
+ const [reveal,setReveal]=useState<Reveal>('closed');
  const key=useKey(groupId,topic.id);
  const [pick,setPick]=useState<number[]>(()=>topic.test.map((_,k)=>k));
  const [minutes,setMinutes]=useState(Math.max(5,topic.test.length*2));
@@ -328,15 +353,17 @@ function TestSetup({lang,groupId,topic,disabled,onStart}:{lang:Lang;groupId:stri
   <ol className="lg-qpick">{topic.test.map((q,k)=><li key={k}><label className="lg-check"><input type="checkbox" checked={pick.includes(k)} onChange={e=>setPick(e.target.checked?[...pick,k].sort((a,b)=>a-b):pick.filter(x=>x!==k))}/><b>{tx(q.q,lang)}</b></label>
    <ul>{q.options.map((o,j)=><li key={j} className={key?.[k]===j?'right':''}>{tx(o,lang)}</li>)}</ul></li>)}</ol>
   <div className="cr-form lg-inline"><label>{t.minutes}<input type="number" min={1} max={180} value={minutes} onChange={e=>setMinutes(Math.max(1,Math.min(180,Number(e.target.value)||1)))}/></label>
-   <button className="button" disabled={disabled||!pick.length} onClick={()=>onStart(pick,minutes)}><Timer size={16}/>{t.startTest} · {pick.length}</button></div>
+   <RevealPick x={x} value={reveal} onChange={setReveal}/>
+   <button className="button" disabled={disabled||!pick.length} onClick={()=>onStart(pick,minutes,reveal)}><Timer size={16}/>{t.startTest} · {pick.length}</button></div>
  </>;
 }
 
-function TestRunning({lang,groupId,topic,test,members,label,onFinish}:{lang:Lang;groupId:string;topic:Topic;test:Assignment;members:BookMember[];label:(m:BookMember)=>string;onFinish:()=>void}){
+function TestRunning({lang,groupId,code,topic,test,members,label,onFinish,onChanged}:{lang:Lang;groupId:string;code:string;topic:Topic;test:Assignment;members:BookMember[];label:(m:BookMember)=>string;onFinish:()=>void;onChanged:()=>void}){
  const t=words[lang];
  const key=useKey(groupId,topic.id);
  const [res,setRes]=useState<Member[]|null>(null);
  const [showRes,setShowRes]=useState(false);
+ const [big,setBig]=useState(false);
  useEffect(()=>{if(showRes)callApi<{members:Member[]}>(`/classroom/assignments?groupId=${groupId}&assignmentId=${test.id}`).then(r=>{if(r.ok)setRes(r.data.members)})},[showRes,groupId,test.id,test.submitted]);
  const qs=test.questions||[];
  const done=(res||[]).filter(m=>m.answer==='done');
@@ -345,6 +372,8 @@ function TestRunning({lang,groupId,topic,test,members,label,onFinish}:{lang:Lang
   <div className="lg-mine"><div><b>{test.submitted??0}/{members.length}</b> <small>{t.submitted}</small></div><span className={'lg-tag '+(test.status==='open'?'warn':'brand')}>{test.status==='open'?t.st.testing:t.st.done}</span>
    <div className="lg-bar"><i style={{width:`${members.length?(test.submitted??0)/members.length*100:0}%`}}/></div></div>
   <p className="muted">{t.qCount(qs.length)} · {test.minutes} {t.timeLimit}</p>
+  {code&&<button className="button lg-big" onClick={()=>setBig(true)}><Tv size={18}/>{more[lang].big}</button>}
+  {big&&<Big lang={lang} groupId={groupId} code={code} test={{id:test.id,title:test.title,topicId:topic.id}} onClose={()=>{setBig(false);onChanged()}}/>}
   <div className="cr-actions"><button className="button secondary" onClick={()=>setShowRes(!showRes)}><BarChart3 size={16}/>{t.results}</button>{test.status==='open'&&<button className="button" onClick={onFinish}>{t.finishTest}</button>}</div>
   {showRes&&(res===null?<p className="muted">…</p>:<>
    <div className="lg-list">{[...res].sort((a,b)=>(b.score??-1)-(a.score??-1)).map(m=>{const bm=byNo.get(m.no);return <div key={m.no} className="lg-row static"><span className="lg-row-text"><strong>{bm?label(bm):m.nickname||`${t.student} ${nn(m.no)}`}</strong><small>{m.answer==='done'?`${m.score}/${m.total}`:m.answer==='started'?t.st.testing:t.notYet}</small></span>{m.answer==='done'&&m.total?<span className="lg-tag brand">{Math.round((m.score||0)/m.total*100)}%</span>:null}</div>})}</div>
@@ -359,23 +388,13 @@ function StudentTopic({lang,topicId,test,onChanged}:{lang:Lang;topicId:string;te
  const topic=useTopic(topicId);
  const meta=topicMeta(topicId);
  const [show,setShow]=useState(false);
- const [run,setRun]=useState<number|null>(null);
+ const [run,setRun]=useState(false);
  const [score,setScore]=useState<[number,number]|null>(null);
  const [err,setErr]=useState('');
  if(!meta)return null;
  const subject=subjectOf(meta);
  const mine=test?.mine;
  const finished=mine?.answer==='done'||!!score;
- const startTest=async()=>{
-  if(!test)return;setErr('');
-  const r=await callApi<{minutes:number|null}>('/classroom/start','POST',{assignmentId:test.id});
-  if(r.ok){setRun(Date.now()+(r.data.minutes||test.minutes||20)*60000);onChanged()}
-  else setErr(r.data.error==='already_started'?t.errStarted:r.data.error==='closed'?t.errClosed:t.errGeneric);
- };
- const submit=async(_s:number,_n:number,answers:number[])=>{
-  const r=await callApi<{score:number;total:number}>('/classroom/submit','POST',{assignmentId:test!.id,answers});
-  if(r.ok){setScore([r.data.score,r.data.total]);onChanged()}else setErr(r.data.error==='time_up'?t.timeUp:r.data.error==='already_submitted_or_not_started'?t.errDone:t.errGeneric);
- };
  const qs=topic&&test?.questions?test.questions.map(i=>topic.test[i]).filter(Boolean):[];
  return <>
   <span className="lg-eyebrow">{tx(subject.title,lang)}</span>
@@ -387,37 +406,17 @@ function StudentTopic({lang,topicId,test,onChanged}:{lang:Lang;topicId:string;te
    <div className={'lg-stage'+(finished?' done':'')}><span className="lg-eyebrow">{t.test}</span>
     {!test?<p className="muted">{t.testWait}</p>
     :finished?<><p className="cr-score">{t.result}: {score?score[0]:mine?.score} / {score?score[1]:mine?.total}</p>
-     {mine?.review?<Review lang={lang} topic={topic} questions={test.questions||[]} review={mine.review}/>:<p className="muted">{t.reviewLater}</p>}</>
-    :mine?.answer==='started'&&run===null?<p className="muted">{t.errStarted}</p>
-    :test.status==='open'?<><p className="muted">{t.qCount(qs.length)} · {test.minutes} {t.timeLimit}</p><button className="button" onClick={startTest}><Timer size={16}/>{t.start}</button></>
+     {mine?.review?<TestReview lang={lang} items={topicItems(topic,test.questions||[],lang)} review={mine.review}/>:<p className="muted">{t.reviewLater}</p>}</>
+    :test.status==='open'?<><p className="muted">{t.qCount(qs.length)} · {test.minutes} {t.timeLimit}</p><button className="button" onClick={()=>{setErr('');setRun(true)}}><Timer size={16}/>{mine?.answer==='started'?testWords[lang].resume:t.start}</button></>
     :<p className="muted">{t.errClosed}</p>}
     {err&&<p className="cr-error" role="alert">{err}</p>}
    </div>
    <h3 className="lg-h">{t.prepare}</h3>
    <OralList lang={lang} topic={topic}/>
    {show&&<Slides title={tx(topic.title,lang)} eyebrow={tx(subject.title,lang)} slides={topic.slides} lang={lang} accent={subjectColor(subject.id).c} onClose={()=>setShow(false)}/>}
-   {run!==null&&test&&<QuizRun title={tx(topic.title,lang)} lang={lang} reveal={false} deadline={run}
-    questions={qs.map(q=>({q:tx(q.q,lang),options:q.options.map(o=>tx(o,lang)),correct:-1,explanation:''}))}
-    result={score?<ScoreCard t={t} score={score[0]} total={score[1]}/>:err?<p className="cr-error">{err}</p>:<p>…</p>}
-    onDone={submit} onClose={()=>setRun(null)}/>}
+   {run&&test&&<TestRun lang={lang} a={test} onExit={()=>{setRun(false);onChanged()}} onError={e=>{setRun(false);setErr(testError(lang,e));onChanged()}} onSubmitted={(s,n)=>setScore([s,n])}/>}
   </>}
  </>;
-}
-
-/** Server-scored result inside QuizRun: ring, verdict, one plain sentence (QuizRun's bar already says "Score"). */
-function ScoreCard({t,score,total}:{t:W;score:number;total:number}){
- const pct=total?Math.round(score/total*100):0;
- return <><div className="qr-ring" style={{['--p' as string]:pct}}><div><b>{score} / {total}</b><small>{pct}%</small></div></div>
-  <h3 className="qr-verdict">{pct>=80?t.great:pct>=60?t.good:t.more}</h3><p>{t.scoreLine(score,total)}</p><p className="lg-small">{t.reviewLater}</p></>;
-}
-
-function Review({lang,topic,questions,review}:{lang:Lang;topic:Topic;questions:number[];review:Review}){
- const t=words[lang];
- return <ol className="lg-review">{questions.map((qi,k)=>{const q=topic.test[qi];if(!q)return null;const mine=review.answers?.[k];const ok=mine===review.correct[k];
-  return <li key={k} className={ok?'ok':'bad'}><b>{tx(q.q,lang)}</b>
-   {!ok&&<small>{t.yourAns}: {mine!==undefined&&mine>=0?tx(q.options[mine],lang):t.noAnswer}</small>}
-   <small className="right">{t.right}: {tx(q.options[review.correct[k]],lang)}</small>
-   {review.explain[k]&&<p>{tx(review.explain[k]!,lang)}</p>}</li>})}</ol>;
 }
 
 function Gradebook({lang,groupId,book}:{lang:Lang;groupId:string;book:Book|null}){
@@ -433,14 +432,26 @@ function Gradebook({lang,groupId,book}:{lang:Lang;groupId:string;book:Book|null}
   <ol className="lg-book-key">{book.quizzes.map((q,k)=><li key={q.id}><b>{k+1}</b> {q.title}</li>)}</ol></div>;
 }
 
-function People({lang,groupId,members}:{lang:Lang;groupId:string;members:BookMember[]|null}){
- const t=words[lang];
+function People({lang,groupId,members,onChanged}:{lang:Lang;groupId:string;members:BookMember[]|null;onChanged:()=>void}){
+ const t=words[lang],x=more[lang];
  const k=`de_alias:${groupId}`;
  const [aliases,setAliases]=useState<Record<string,string>>(()=>lsGet(k,{}));
+ const [removing,setRemoving]=useState<BookMember|null>(null);
+ const [err,setErr]=useState('');
  if(members===null)return <p className="muted">…</p>;
  if(!members.length)return <p className="muted">{t.noMembers}</p>;
- return <div className="lg-list">{members.map(m=><div key={m.no} className="lg-row static"><span className="lg-ico">{nn(m.no)}</span><span className="lg-row-text"><strong>{m.nickname||`${t.student} ${nn(m.no)}`}</strong>
-  <input className="lg-alias" maxLength={40} placeholder={t.alias} value={aliases[m.no]||''} onChange={e=>{const v={...aliases,[m.no]:e.target.value};setAliases(v);lsSet(k,v)}}/></span></div>)}</div>;
+ const name=(m:BookMember)=>m.nickname||`${t.student} ${nn(m.no)}`;
+ const remove=async(m:BookMember)=>{setRemoving(null);setErr('');const r=await callApi(`/classroom/members?groupId=${encodeURIComponent(groupId)}&no=${m.no}`,'DELETE');if(r.ok)onChanged();else setErr(t.errGeneric)};
+ return <><div className="lg-list">{members.map(m=><div key={m.no} className="lg-row static"><span className="lg-ico">{nn(m.no)}</span><span className="lg-row-text"><strong>{name(m)}</strong>
+  <input className="lg-alias" maxLength={40} placeholder={t.alias} value={aliases[m.no]||''} onChange={e=>{const v={...aliases,[m.no]:e.target.value};setAliases(v);lsSet(k,v)}}/></span>
+  <button className="lg-remove" aria-label={`${x.remove}: ${name(m)}`} title={x.remove} onClick={()=>setRemoving(m)}><UserMinus size={18}/></button></div>)}</div>
+  {err&&<p className="cr-error" role="alert">{err}</p>}
+  {removing&&<ConfirmSheet text={x.confirmRemove(name(removing))} ok={x.remove} cancel={t.cancel} danger onOk={()=>remove(removing)} onCancel={()=>setRemoving(null)}/>}</>;
+}
+
+/** Whether students see the right answers straight after submitting or only once the teacher finishes the test. */
+function RevealPick({x,value,onChange}:{x:typeof more.uz;value:Reveal;onChange:(r:Reveal)=>void}){
+ return <><label>{x.reveal}<select value={value} onChange={e=>onChange(e.target.value as Reveal)}><option value="closed">{x.revealClosed}</option><option value="instant">{x.revealInstant}</option></select></label>{value==='instant'&&<small className="muted lg-small" role="note">{x.revealWarn}</small>}</>;
 }
 
 function NewAssignment({lang,groupId,decks,onDone,onCancel}:{lang:Lang;groupId:string;decks:Deck[];onDone:()=>void;onCancel:()=>void}){
@@ -450,15 +461,17 @@ function NewAssignment({lang,groupId,decks,onDone,onCancel}:{lang:Lang;groupId:s
  const [body,setBody]=useState('');
  const [due,setDue]=useState('');
  const [deck,setDeck]=useState(decks[0]?.id||'');
+ const [reveal,setReveal]=useState<Reveal>('closed');
  const [err,setErr]=useState('');
  const save=async()=>{
   const chosen=decks.find(d=>d.id===(deck||decks[0]?.id));
-  const r=await callApi('/classroom/assignments','POST',{groupId,kind,title,body,dueDate:due,deckId:kind==='quiz'?chosen?.id:undefined,key:kind==='quiz'?chosen?.quiz.map(q=>q.correct):undefined});
+  const r=await callApi('/classroom/assignments','POST',{groupId,kind,title,body,dueDate:due,deckId:kind==='quiz'?chosen?.id:undefined,key:kind==='quiz'?chosen?.quiz.map(q=>q.correct):undefined,reveal:kind==='quiz'?reveal:undefined});
   if(r.ok)onDone();else setErr(t.errGeneric);
  };
  return <div className="cr-form">
   <label>{t.kind}<select value={kind} onChange={e=>setKind(e.target.value as 'task'|'quiz')}><option value="task">{t.task}</option><option value="quiz" disabled={decks.length===0}>{t.quiz}</option></select></label>
   {kind==='quiz'&&<label>{t.deck}<select value={deck||decks[0]?.id} onChange={e=>setDeck(e.target.value)}>{decks.map(d=><option key={d.id} value={d.id}>{d.title}</option>)}</select></label>}
+  {kind==='quiz'&&<RevealPick x={more[lang]} value={reveal} onChange={setReveal}/>}
   <label>{t.titleF}<input value={title} maxLength={100} onChange={e=>setTitle(e.target.value)}/></label>
   <label>{t.bodyF}<textarea rows={3} maxLength={1000} value={body} onChange={e=>setBody(e.target.value)}/></label>
   <label>{t.due}<input type="date" value={due} onChange={e=>setDue(e.target.value)}/></label>
@@ -467,7 +480,7 @@ function NewAssignment({lang,groupId,decks,onDone,onCancel}:{lang:Lang;groupId:s
  </div>;
 }
 
-function AssignmentView({lang,a,teacher,roster,decks,onChanged,onDeleted}:{lang:Lang;a:Assignment;teacher:boolean;roster:Member[]|null;decks:Deck[];onChanged:()=>void;onDeleted:()=>void}){
+function AssignmentView({lang,groupId,code,a,teacher,roster,decks,onChanged,onDeleted}:{lang:Lang;groupId:string;code:string;a:Assignment;teacher:boolean;roster:Member[]|null;decks:Deck[];onChanged:()=>void;onDeleted:()=>void}){
  const t=words[lang];
  const [answer,setAnswer]=useState(a.mine?.answer||'');
  const [done,setDone]=useState(!!a.mine);
@@ -476,15 +489,17 @@ function AssignmentView({lang,a,teacher,roster,decks,onChanged,onDeleted}:{lang:
  const deck=decks.find(d=>d.id===a.deckId);
  const [err,setErr]=useState('');
  const send=async()=>{setErr('');const r=await callApi('/classroom/submit','POST',{assignmentId:a.id,answer});if(r.ok){setDone(true);onChanged()}else setErr(r.data.error==='closed'?t.errClosed:t.errGeneric)};
- const finish=async(_s:number,_n:number,answers:number[])=>{setErr('');const r=await callApi<{score:number;total:number}>('/classroom/submit','POST',{assignmentId:a.id,answers});if(r.ok){setScore([r.data.score,r.data.total]);setDone(true);onChanged()}else setErr(r.data.error==='already_submitted_or_not_started'?t.errDone:r.data.error==='closed'?t.errClosed:t.errGeneric)};
  const toggle=async()=>{await callApi('/classroom/assignments','PUT',{assignmentId:a.id,status:a.status==='open'?'closed':'open'});onDeleted()};
  const [asking,setAsking]=useState(false);
+ const [big,setBig]=useState(false);
  const del=async()=>{setAsking(false);await callApi('/classroom/assignments?assignmentId='+a.id,'DELETE');onDeleted()};
  return <>
   <h2>{a.title}</h2>
   {a.dueDate&&<p className="muted">{t.dueLbl}: {a.dueDate}</p>}
   {a.body&&<p className="body-copy">{a.body}</p>}
   {teacher?<>
+   {a.kind==='quiz'&&code&&<button className="button lg-big" onClick={()=>setBig(true)}><Tv size={18}/>{more[lang].big}</button>}
+   {big&&<Big lang={lang} groupId={groupId} code={code} test={{id:a.id,title:a.title,deckId:a.deckId}} onClose={f=>{setBig(false);if(f)onDeleted()}}/>}
    <h3>{t.roster}</h3>
    {roster===null?<p className="muted">…</p>:<div className="lg-list">{roster.map((m,i)=><div key={i} className="lg-row static"><span className="lg-row-text"><strong>{m.nickname||`${t.student} ${nn(m.no)}`}</strong><small>{m.submittedAt&&m.answer!=='started'?(a.kind==='quiz'?`${t.result}: ${m.score}/${m.total}`:m.answer):m.answer==='started'?t.st.testing:t.notYet}</small></span></div>)}</div>}
    <div className="cr-actions"><button className="button secondary" onClick={toggle}>{a.status==='open'?t.close:t.reopen}</button>
@@ -498,9 +513,9 @@ function AssignmentView({lang,a,teacher,roster,decks,onChanged,onDeleted}:{lang:
   </>:<>
    {score&&<p className="cr-score">{t.result}: {score[0]} / {score[1]}</p>}
    {a.status==='closed'&&!score&&<p className="muted">{t.errClosed}</p>}
-   {!score&&<button className="button" disabled={!deck||a.status==='closed'} onClick={async()=>{setErr('');const r=await callApi('/classroom/start','POST',{assignmentId:a.id});if(r.ok)setRun(true);else setErr(r.data.error==='already_started'?t.errStarted:r.data.error==='closed'?t.errClosed:r.data.error==='past_due'?t.errDue:t.errGeneric)}}>{t.start}</button>}
+   {!score&&<button className="button" disabled={!deck||a.status==='closed'} onClick={()=>{setErr('');setRun(true)}}>{a.mine?.answer==='started'?testWords[lang].resume:t.start}</button>}
    {err&&<p className="cr-error" role="alert">{err}</p>}
-   {run&&deck&&<QuizRun title={a.title} lang={lang} reveal={false} questions={deck.quiz} onDone={finish} onClose={()=>setRun(false)}/>}
+   {run&&<TestRun lang={lang} a={a} onExit={()=>{setRun(false);onChanged()}} onError={e=>{setRun(false);setErr(testError(lang,e));onChanged()}} onSubmitted={(s,n)=>{setScore([s,n]);setDone(true)}}/>}
   </>}
  </>;
 }

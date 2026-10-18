@@ -35,3 +35,7 @@
 /* Group tabs: four tabs don't fit a 300px card in one row in any language, so they form an even 2×2 grid. */
 .lg-tabs{display:grid!important;grid-template-columns:1fr 1fr;gap:8px!important;overflow:visible!important}
 .lg-tabs button{width:100%;padding:0 10px!important;font-family:inherit!important;font-size:13.5px!important;letter-spacing:0!important;text-transform:none!important;min-height:44px}
+/* QR quick tests: the auth-screen entry and the guest note in Settings. */
+.auth-quick{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:46px;margin-top:6px;padding:0 18px;border:1px solid currentColor;border-radius:999px;background:transparent;color:inherit;font:inherit;font-size:14px;font-weight:600;opacity:.85;cursor:pointer}
+.guest-note{display:flex;gap:12px;align-items:flex-start;padding:16px!important}
+.guest-note b{display:block;margin-bottom:4px}.guest-note p{margin:0 0 10px;font-size:14px;line-height:1.5;opacity:.8}

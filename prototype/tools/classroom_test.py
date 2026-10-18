@@ -46,7 +46,7 @@ check('resubmit updates',call('/classroom/submit','POST',{'assignmentId':task,'a
 check('wrong answer count 400',call('/classroom/submit','POST',{'assignmentId':quiz,'answers':[0]},S)[0]==400)
 check('submit before start rejected',call('/classroom/submit','POST',{'assignmentId':quiz,'answers':[0,1,0]},S)[0]==409)
 check('student starts quiz',call('/classroom/start','POST',{'assignmentId':quiz},S)[0]==200)
-check('start twice rejected (no second try by peeking)',call('/classroom/start','POST',{'assignmentId':quiz},S)[0]==409)
+s2,r2=call('/classroom/start','POST',{'assignmentId':quiz},S);check('starting again resumes the same attempt (no fresh try by peeking)',s2==200 and r2.get('resumed') is True)
 s,r=call('/classroom/submit','POST',{'assignmentId':quiz,'answers':[0,1,0]},S);check('server scores quiz (2/3)',s==200 and r['score']==2 and r['total']==3)
 check('quiz is one attempt',call('/classroom/submit','POST',{'assignmentId':quiz,'answers':[0,1,2]},S)[0]==409)
 check('claimed score ignored',call('/classroom/submit','POST',{'assignmentId':quiz,'score':3,'total':3},S2)[0]==400)

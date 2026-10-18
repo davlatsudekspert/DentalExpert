@@ -31,11 +31,22 @@
 				<string>$(GOOGLE_IOS_URL_SCHEME)</string>
 			</array>
 		</dict>
+		<dict>
+			<!-- QR quick tests: the dental-expert.pages.dev/j/ page opens dentalexpert://j?c=CODE&a=TEST in the app. -->
+			<key>CFBundleURLName</key>
+			<string>uz.dentalexpert.app.join</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>dentalexpert</string>
+			</array>
+		</dict>
 	</array>
 	<key>CFBundleShortVersionString</key>
 	<string>$(MARKETING_VERSION)</string>
 	<key>CFBundleVersion</key>
 	<string>$(CURRENT_PROJECT_VERSION)</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Dental Expert uses the camera only to scan your teacher’s QR code to join a class test. No photos are taken or stored.</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>ITSAppUsesNonExemptEncryption</key>

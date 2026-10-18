@@ -37,7 +37,8 @@ export const authEnabled=(env:Env,request:Request)=>!!env.AUTH_SECRET&&(!!env.RE
 export const normalizeEmail=(v:unknown)=>{
  if(typeof v!=='string')return null;
  const e=v.trim().toLowerCase();
- return e.length<=254&&/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(e)?e:null;
+ // The guest placeholder domain is reserved: nobody can request a code for it or sign in to a guest that way.
+ return e.length<=254&&/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(e)&&!e.endsWith('@guest.invalid')?e:null;
 };
 
 /** State-changing requests must be JSON and, when the browser sends Origin, same-origin. */
@@ -58,23 +59,50 @@ export function readCookie(request:Request,name:string){
 export const cookieHeader=(request:Request,value:string,maxAge:number)=>
  `${COOKIE}=${value}; Path=/; HttpOnly; SameSite=Lax; Max-Age=${maxAge}${isLocal(request)?'':'; Secure'}`;
 
-export type SessionUser={id:string;email:string;name:string|null;role:Role;countryCode:string|null;cityId:string|null;phone:string|null;workplace:string|null;bio:string|null;specialty:string|null;telegram:string|null;instagram:string|null;publicEmail:string|null;address:string|null;mapUrl:string|null;publishRequested:boolean;verified:boolean};
+export type SessionUser={id:string;guest:boolean;email:string;name:string|null;role:Role;countryCode:string|null;cityId:string|null;phone:string|null;workplace:string|null;bio:string|null;specialty:string|null;telegram:string|null;instagram:string|null;publicEmail:string|null;address:string|null;mapUrl:string|null;publishRequested:boolean;verified:boolean};
+
+/** A class-only guest session (QR quick test) is accepted only here; every other endpoint treats it as signed out. */
+const GUEST_PATHS=/^\/api\/(classroom\/(groups|join|quick|start|submit|progress|assignments|topics)|auth\/(me|logout|account))$/;
+export const GUEST_DAYS=180;
+export const guestEmail=(id:string)=>`guest-${id}@guest.invalid`;
+export const isGuestEmail=(e:string)=>e.endsWith('@guest.invalid');
 
 export async function sessionUser(env:Env,request:Request):Promise<SessionUser|null>{
  const token=sessionToken(request);
  if(!token)return null;
  const row=await env.DB.prepare(
-  `SELECT u.id,u.email,u.name,u.role,u.country_code,u.city_id,u.phone,u.workplace,u.bio,u.specialty,u.telegram,u.instagram,u.public_email,u.address,u.map_url,u.publish_requested,u.verified_at FROM sessions s JOIN users u ON u.id=s.user_id
+  `SELECT u.id,u.guest,u.email,u.name,u.role,u.country_code,u.city_id,u.phone,u.workplace,u.bio,u.specialty,u.telegram,u.instagram,u.public_email,u.address,u.map_url,u.publish_requested,u.verified_at FROM sessions s JOIN users u ON u.id=s.user_id
    WHERE s.token_hash=? AND s.expires_at>datetime('now') AND u.suspended_at IS NULL`
  ).bind(await sha256(token)).first<Record<string,string|number|null>>();
- return row?{id:row.id as string,email:row.email as string,name:row.name as string|null,role:row.role as Role,countryCode:row.country_code as string|null,cityId:row.city_id as string|null,phone:row.phone as string|null,workplace:row.workplace as string|null,bio:row.bio as string|null,specialty:row.specialty as string|null,telegram:row.telegram as string|null,instagram:row.instagram as string|null,publicEmail:row.public_email as string|null,address:row.address as string|null,mapUrl:row.map_url as string|null,publishRequested:!!row.publish_requested,verified:!!row.verified_at}:null;
+ if(row?.guest&&!GUEST_PATHS.test(new URL(request.url).pathname))return null;
+ return row?{id:row.id as string,guest:!!row.guest,email:row.email as string,name:row.name as string|null,role:row.role as Role,countryCode:row.country_code as string|null,cityId:row.city_id as string|null,phone:row.phone as string|null,workplace:row.workplace as string|null,bio:row.bio as string|null,specialty:row.specialty as string|null,telegram:row.telegram as string|null,instagram:row.instagram as string|null,publicEmail:row.public_email as string|null,address:row.address as string|null,mapUrl:row.map_url as string|null,publishRequested:!!row.publish_requested,verified:!!row.verified_at}:null;
 }
 
-export async function createSession(env:Env,request:Request,userId:string){
+export async function createSession(env:Env,request:Request,userId:string,days=SESSION_DAYS){
  const token=randomToken();
- await env.DB.prepare(`INSERT INTO sessions (token_hash,user_id,expires_at) VALUES (?,?,datetime('now','+${SESSION_DAYS} days'))`)
+ await env.DB.prepare(`INSERT INTO sessions (token_hash,user_id,expires_at) VALUES (?,?,datetime('now','+${days} days'))`)
   .bind(await sha256(token),userId).run();
- return {token,cookie:cookieHeader(request,token,SESSION_DAYS*86400)};
+ return {token,cookie:cookieHeader(request,token,days*86400)};
+}
+
+/** Signing in (email code, Google, Apple) from a device that holds a guest session keeps that guest's groups and
+ * results: memberships and submissions move to the real account and the guest is deleted. Teachers never take them. */
+async function adoptGuest(env:Env,request:Request,userId:string,role:unknown){
+ const token=sessionToken(request);
+ if(!token)return;
+ const g=await env.DB.prepare(`SELECT u.id FROM sessions s JOIN users u ON u.id=s.user_id WHERE s.token_hash=? AND u.guest=1 AND s.expires_at>datetime('now')`).bind(await sha256(token)).first<{id:string}>();
+ if(!g||g.id===userId)return;
+ // A teacher signing in on a student's device ends that guest session instead (its data expires with the guest).
+ if(role==='teacher'||role==='dentist'){await env.DB.prepare(`DELETE FROM sessions WHERE token_hash=?`).bind(await sha256(token)).run();return}
+ // Only groups the account is not in yet move over, with their results; for groups it already belongs to the guest's
+ // attempts are dropped, so a student cannot keep the best of several tries under their real name.
+ await env.DB.batch([
+  env.DB.prepare(`UPDATE class_submissions SET user_id=? WHERE user_id=? AND assignment_id IN (SELECT a.id FROM class_assignments a JOIN class_members m ON m.group_id=a.group_id
+    WHERE m.user_id=? AND a.group_id NOT IN (SELECT group_id FROM class_members WHERE user_id=?) AND a.group_id NOT IN (SELECT id FROM class_groups WHERE teacher_id=?))`).bind(userId,g.id,g.id,userId,userId),
+  env.DB.prepare(`INSERT OR IGNORE INTO class_members (group_id,user_id,member_no,nickname,joined_at) SELECT m.group_id,?,m.member_no,m.nickname,m.joined_at FROM class_members m
+   WHERE m.user_id=? AND m.group_id NOT IN (SELECT id FROM class_groups WHERE teacher_id=?)`).bind(userId,g.id,userId),
+  env.DB.prepare(`DELETE FROM users WHERE id=? AND guest=1`).bind(g.id)
+ ]);
 }
 
 /** Profile shape returned by every sign-in endpoint. */
@@ -85,6 +113,7 @@ export const profileOf=(u:Record<string,string|number|null>)=>({id:u.id,email:u.
 export async function signedIn(env:Env,request:Request,user:Record<string,string|number|null>){
  const blocked=await env.DB.prepare(`SELECT suspended_at FROM users WHERE id=?`).bind(user.id).first<{suspended_at:string|null}>();
  if(blocked?.suspended_at)return json({error:'suspended'},403,'no-store');
+ await adoptGuest(env,request,String(user.id),user.role).catch(()=>{});
  const session=await createSession(env,request,String(user.id));
  const profile=profileOf(user);
  if(isNativeClient(request))return json({user:profile,token:session.token},200,'no-store');

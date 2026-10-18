@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Dental Expert · Testga qo‘shilish</title>
+<meta name="theme-color" content="#f8f6f1">
+<style>
+:root{--ink:#171716;--sub:#55534f;--line:#dfd9cd;--card:#fffdf9;--bg:#f2eee6;--dark:#252422}
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%;background:var(--bg);color:var(--ink);font:16px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+main{max-width:460px;margin:0 auto;padding:max(28px,env(safe-area-inset-top)) 16px 32px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:.02em}
+.brand i{width:34px;height:34px;border-radius:11px;background:var(--dark);display:grid;place-items:center}
+.brand svg{width:20px;height:20px}
+.langs{margin-left:auto;display:flex;gap:4px}
+.langs button{min-width:44px;min-height:36px;border:1px solid var(--line);border-radius:999px;background:transparent;color:var(--sub);font:600 13px inherit;cursor:pointer}
+.langs button[aria-pressed=true]{background:var(--dark);border-color:var(--dark);color:#fff}
+.card{margin-top:22px;padding:26px 20px;border:1px solid var(--line);border-radius:28px;background:var(--card);box-shadow:0 18px 40px #1717160d;text-align:center}
+.eyebrow{font:600 12px ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--sub)}
+h1{margin:8px 0 6px;font:400 34px/1.1 "Instrument Serif",Georgia,"Times New Roman",serif}
+p{margin:0 0 14px;color:var(--sub)}
+.code{margin:18px 0 6px;font:700 46px/1 ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.08em}
+.code small{display:block;margin-top:8px;font:500 13px/1.4 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;letter-spacing:0;color:var(--sub)}
+.btn{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;min-height:54px;margin-top:12px;border-radius:999px;border:1px solid var(--dark);background:var(--dark);color:#fff;font:600 16px inherit;text-decoration:none}
+.btn.ghost{background:transparent;color:var(--ink);border-color:var(--line)}
+.stores{display:flex;gap:10px;margin-top:12px}.stores .btn{margin:0;font-size:14px}
+.steps{margin:22px 0 0;padding:0;list-style:none;text-align:left;counter-reset:s}
+.steps li{counter-increment:s;display:flex;gap:12px;align-items:flex-start;padding:8px 0;color:var(--sub);font-size:15px}
+.steps li::before{content:counter(s);flex:none;width:26px;height:26px;border-radius:50%;background:#efebe3;color:var(--ink);font-weight:700;font-size:13px;display:grid;place-items:center}
+.bad{color:#9b3b30}
+footer{margin-top:22px;text-align:center;font-size:13px;color:var(--sub)}
+footer a{color:var(--ink)}
+</style>
+</head>
+<body>
+<main>
+ <div class="brand"><i><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3c-2.2 0-3.5 1.9-3.5 4.4 0 2 .8 3.4 1.4 5 .6 1.7.6 3.6 1.1 5.6.4 1.6 1 3 2 3 1.2 0 1.4-2 1.7-3.6.3-1.4.8-2.4 2.3-2.4s2 1 2.3 2.4c.3 1.6.5 3.6 1.7 3.6 1 0 1.6-1.4 2-3 .5-2 .5-3.9 1.1-5.6.6-1.6 1.4-3 1.4-5C20.5 4.9 19.2 3 17 3c-1.8 0-3 1-5 1S8.8 3 7 3Z"/></svg></i>Dental Expert
+  <div class="langs" role="group" aria-label="Language"><button data-l="uz">UZ</button><button data-l="ru">RU</button><button data-l="en">EN</button></div></div>
+ <div class="card">
+  <span class="eyebrow" data-t="eyebrow"></span>
+  <h1 data-t="title"></h1>
+  <p data-t="lead"></p>
+  <div class="code" id="code" aria-live="polite"></div>
+  <a class="btn" id="open" href="#" data-t="open"></a>
+  <a class="btn ghost" id="web" href="/" data-t="web"></a>
+  <ol class="steps"><li data-t="s1"></li><li data-t="s2"></li><li data-t="s3"></li></ol>
+  <div class="stores"><a class="btn ghost" id="ios" href="https://apps.apple.com/search?term=Dental%20Expert" rel="noopener">App Store</a><a class="btn ghost" id="play" href="https://play.google.com/store/apps/details?id=uz.dentalexpert.app" rel="noopener">Google Play</a></div>
+ </div>
+ <footer><a href="/privacy/" data-t="privacy"></a></footer>
+</main>
+<script>
+(function(){
+ // Only a 6-character join code and a test id are read from the link; anything else is ignored.
+ var q=new URLSearchParams(location.search);
+ var c=(q.get('c')||'').toUpperCase().replace(/[^A-Z0-9]/g,'');if(c.length!==6)c='';
+ var a=q.get('a')||'';if(!/^[A-Za-z0-9-]{8,60}$/.test(a))a='';
+ var T={
+  uz:{eyebrow:'Sinf testi',title:'Testga qo‘shilish',lead:'Ustozingiz bergan testni Dental Expert ilovasida yeching. Faqat ismingiz yoki taxallusingiz kerak — email va parol shart emas.',open:'Ilovada ochish',web:'Brauzerda davom etish',s1:'Dental Expert ilovasini oching (yo‘q bo‘lsa, quyidan o‘rnating).',s2:'«Guruhlar» → «Guruhga qo‘shilish» bo‘limiga shu kodni kiriting yoki QR’ni skanerlang.',s3:'Ismingizni yozing va testni boshlang.',codeHint:'Qo‘shilish kodi',noCode:'Havolada kod topilmadi. Ustozingizdan kodni so‘rang.',privacy:'Maxfiylik siyosati',doc:'Dental Expert · Testga qo‘shilish'},
+  ru:{eyebrow:'Тест в группе',title:'Присоединиться к тесту',lead:'Пройдите тест преподавателя в приложении Dental Expert. Нужно только имя или ник — без email и пароля.',open:'Открыть в приложении',web:'Продолжить в браузере',s1:'Откройте приложение Dental Expert (если его нет — установите ниже).',s2:'В разделе «Группы» → «Присоединиться» введите этот код или отсканируйте QR.',s3:'Напишите своё имя и начните тест.',codeHint:'Код для входа',noCode:'В ссылке нет кода. Спросите код у преподавателя.',privacy:'Политика конфиденциальности',doc:'Dental Expert · Присоединиться к тесту'},
+  en:{eyebrow:'Class test',title:'Join the test',lead:'Take your teacher’s test in the Dental Expert app. Only a name or nickname is needed — no email or password.',open:'Open in the app',web:'Continue in the browser',s1:'Open the Dental Expert app (install it below if you don’t have it).',s2:'In Groups → Join a group, enter this code or scan the QR.',s3:'Type your name and start the test.',codeHint:'Join code',noCode:'No code in this link. Ask your teacher for the code.',privacy:'Privacy Policy',doc:'Dental Expert · Join the test'}
+ };
+ var nav=(navigator.language||'uz').slice(0,2),lang=q.get('lang')||(T[nav]?nav:'uz');if(!T[lang])lang='uz';
+ var params='c='+c+(a?'&a='+encodeURIComponent(a):'');
+ var android=/Android/i.test(navigator.userAgent);
+ function render(){
+  var t=T[lang];document.documentElement.lang=lang;document.title=t.doc;
+  document.querySelectorAll('[data-t]').forEach(function(e){e.textContent=t[e.getAttribute('data-t')]});
+  document.querySelectorAll('.langs button').forEach(function(b){b.setAttribute('aria-pressed',String(b.getAttribute('data-l')===lang))});
+  var box=document.getElementById('code');box.textContent='';
+  if(c){box.appendChild(document.createTextNode(c.slice(0,3)+' '+c.slice(3)));var s=document.createElement('small');s.textContent=t.codeHint;box.appendChild(s)}
+  else{box.className='code bad';box.style.fontSize='17px';box.textContent=t.noCode}
+  var open=document.getElementById('open'),web=document.getElementById('web');
+  open.style.display=c?'':'none';web.style.display=c?'':'none';
+  // Android opens the app or falls back to Google Play; iOS uses the app's URL scheme.
+  open.href=android?'intent://j?'+params+'#Intent;scheme=dentalexpert;package=uz.dentalexpert.app;S.browser_fallback_url='+encodeURIComponent('https://play.google.com/store/apps/details?id=uz.dentalexpert.app')+';end':'dentalexpert://j?'+params;
+  web.href='/?join='+c+(a?'&a='+encodeURIComponent(a):'')+'&lang='+lang;
+  document.querySelector('footer a').href='/privacy/?lang='+lang;
+ }
+ document.querySelectorAll('.langs button').forEach(function(b){b.addEventListener('click',function(){lang=b.getAttribute('data-l');render()})});
+ render();
+})();
+</script>
+</body>
+</html>

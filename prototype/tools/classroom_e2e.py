@@ -44,7 +44,7 @@ with sync_playwright() as p:
     sp.locator('.lg-row',has_text='Caries quiz').click();sp.get_by_role('button',name='Start quiz').click();sp.wait_for_timeout(400)
     n=0
     while sp.locator('.quiz-run-options').count():
-        sp.locator('.quiz-run-options button').first.click();sp.get_by_role('button',name='Next' if sp.get_by_role('button',name='Next').count() else 'Finish').click();sp.wait_for_timeout(200);n+=1
+        sp.locator('.quiz-run-options button').first.click();sp.get_by_role('button',name='Next' if sp.get_by_role('button',name='Next').count() else 'Submit').click();sp.wait_for_timeout(200);n+=1
         if n>10:break
     check('quiz finished with result',sp.locator('.quiz-run-result').count()==1)
     sp.screenshot(path=OUT+'/c3-student-quiz-result.png')
@@ -61,7 +61,7 @@ with sync_playwright() as p:
     sp.screenshot(path=OUT+'/c5-daily.png')
     sp.get_by_role('button',name='Тест дня',exact=False).click();sp.wait_for_timeout(300)
     for _ in range(5):
-        sp.locator('.quiz-run-options button').first.click();sp.locator('.quiz-run-body .button').click();sp.wait_for_timeout(150)
+        sp.locator('.quiz-run-options button').first.click();(sp.locator('.qr-nav .button, .quiz-run-body .button').last).click();sp.wait_for_timeout(150)
     check('daily test finishes',sp.locator('.quiz-run-result').count()==1)
     sp.get_by_role('button',name='Закрыть').last.click()
     sp.get_by_role('button',name='Задание по картинке',exact=False).click();sp.wait_for_timeout(500)

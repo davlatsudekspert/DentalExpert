@@ -16,7 +16,7 @@ export const onRequestGet:PagesFunction<Env>=async({request,env})=>{
  const role=await groupRole(env,groupId,user.id);
  if(!role)return json({error:'forbidden'},403,noStore);
  const {results}=await env.DB.prepare(
-  `SELECT a.id,a.kind,a.title,a.body,a.deck_id,a.status,a.due_date,a.created_at,a.answer_key,a.topic_id,a.questions,a.minutes,(julianday('now')-julianday(a.closed_at))*1440 AS since_close,
+  `SELECT a.id,a.kind,a.title,a.body,a.deck_id,a.status,a.due_date,a.created_at,a.answer_key,a.topic_id,a.questions,a.minutes,a.reveal,(julianday('now')-julianday(a.closed_at))*1440 AS since_close,
      (SELECT COUNT(*) FROM class_submissions s WHERE s.assignment_id=a.id) AS submitted,
      s.answer AS my_answer,s.score AS my_score,s.total AS my_total,s.started_at AS my_started,s.answers AS my_answers
    FROM class_assignments a LEFT JOIN class_submissions s ON s.assignment_id=a.id AND s.user_id=?
@@ -24,23 +24,32 @@ export const onRequestGet:PagesFunction<Env>=async({request,env})=>{
  ).bind(user.id,groupId).all<Row>();
  const assignments=results.map(r=>({id:r.id,kind:r.kind,title:r.title,body:r.body,deckId:r.deck_id,status:r.status,dueDate:r.due_date,createdAt:r.created_at,
   questionCount:r.answer_key?(JSON.parse(r.answer_key as string) as number[]).length:undefined,
-  topicId:r.topic_id??undefined,questions:r.questions?JSON.parse(r.questions as string):undefined,minutes:r.minutes??undefined,
+  topicId:r.topic_id??undefined,questions:r.questions?JSON.parse(r.questions as string):undefined,minutes:r.minutes??undefined,reveal:r.reveal==='instant'?'instant':'closed',
   submitted:role==='owner'?r.submitted:undefined,
   mine:role==='member'&&(r.my_answer!==null||r.my_score!==null)?{answer:r.my_answer,score:r.my_score,total:r.my_total,startedAt:r.my_started,
    // Once the teacher has finished a topic test, each student can review it: own answers, the right options and explanations
    // (not earlier, and not during the grace minutes, so the key cannot reach classmates who are still answering).
-   review:r.my_answer==='done'&&r.status==='closed'&&typeof r.since_close==='number'&&r.since_close>GRACE_MIN&&r.topic_id&&r.questions&&Object.hasOwn(CURRICULUM_KEYS,r.topic_id as string)?{answers:r.my_answers?JSON.parse(r.my_answers as string):null,
-    correct:JSON.parse(r.answer_key as string),explain:(JSON.parse(r.questions as string) as number[]).map(i=>CURRICULUM_KEYS[r.topic_id as string].e[i]??null)}:undefined}:null}));
- let members:unknown;
+   // With reveal='instant' the student sees them right after their own submission instead.
+   review:r.my_answer==='done'&&r.answer_key&&(r.reveal==='instant'||r.status==='closed'&&typeof r.since_close==='number'&&r.since_close>GRACE_MIN)?{answers:r.my_answers?JSON.parse(r.my_answers as string):null,
+    correct:JSON.parse(r.answer_key as string),explain:r.topic_id&&r.questions&&Object.hasOwn(CURRICULUM_KEYS,r.topic_id as string)?(JSON.parse(r.questions as string) as number[]).map(i=>CURRICULUM_KEYS[r.topic_id as string].e[i]??null):null}:undefined}:null}));
+ let members:unknown,stats:unknown;
  const assignmentId=url.searchParams.get('assignmentId');
  if(role==='owner'&&assignmentId){
   const {results:subs}=await env.DB.prepare(
-   `SELECT m.member_no,m.nickname,s.answer,s.answers,s.score,s.total,s.submitted_at FROM class_members m
+   `SELECT m.member_no,m.nickname,s.answer,s.answers,s.progress,s.score,s.total,s.started_at,s.submitted_at FROM class_members m
     LEFT JOIN class_submissions s ON s.user_id=m.user_id AND s.assignment_id=(SELECT id FROM class_assignments WHERE id=? AND group_id=?) WHERE m.group_id=? ORDER BY m.member_no`
   ).bind(assignmentId,groupId,groupId).all<Row>();
-  members=subs.map(r=>({no:r.member_no,nickname:r.nickname,answer:r.answer,answers:r.answers?JSON.parse(r.answers as string):null,score:r.score,total:r.total,submittedAt:r.submitted_at}));
+  members=subs.map(r=>({no:r.member_no,nickname:r.nickname,answer:r.answer,answers:r.answers?JSON.parse(r.answers as string):null,score:r.score,total:r.total,startedAt:r.started_at,submittedAt:r.submitted_at,
+   answered:r.answer==='started'&&r.progress?(JSON.parse(r.progress as string) as (number|null)[]).filter(x=>x!==null).length:undefined}));
+  // Per-question right/answered counts for the "hardest questions" panel, only once the test is finished.
+  const t=results.find(r=>r.id===assignmentId);
+  if(t&&t.status==='closed'&&t.answer_key){
+   const key=JSON.parse(t.answer_key as string) as number[];
+   const done=subs.filter(r=>r.answer==='done'&&r.answers).map(r=>JSON.parse(r.answers as string) as number[]);
+   stats=key.map((k,i)=>({right:done.filter(a=>a[i]===k).length,answered:done.length}));
+  }
  }
- return json({role,assignments,members},200,noStore);
+ return json({role,assignments,members,stats},200,noStore);
 };
 
 export const onRequestPost:PagesFunction<Env>=async({request,env})=>{
@@ -58,11 +67,12 @@ export const onRequestPost:PagesFunction<Env>=async({request,env})=>{
  if(kind==='quiz'&&(!/^[a-z0-9-]{3,60}$/.test(deckId)||!key))return json({error:'deck_required'},400,noStore);
  const due=clean(b.data.dueDate,10);
  if(due&&!/^\d{4}-\d{2}-\d{2}$/.test(due))return json({error:'bad_date'},400,noStore);
+ const reveal=b.data.reveal==='instant'?'instant':'closed';
  const id=newId();
  // Check and insert in one statement so parallel requests cannot exceed the limit.
- const ins=await env.DB.prepare(`INSERT INTO class_assignments (id,group_id,kind,title,body,deck_id,answer_key,due_date)
-  SELECT ?,?,?,?,?,?,?,? WHERE (SELECT COUNT(*) FROM class_assignments WHERE group_id=? AND topic_id IS NULL)<?`)
-  .bind(id,groupId,kind,title,text,deckId||null,key?JSON.stringify(key):null,due||null,groupId,MAX_ASSIGNMENTS).run();
+ const ins=await env.DB.prepare(`INSERT INTO class_assignments (id,group_id,kind,title,body,deck_id,answer_key,due_date,reveal)
+  SELECT ?,?,?,?,?,?,?,?,? WHERE (SELECT COUNT(*) FROM class_assignments WHERE group_id=? AND topic_id IS NULL)<?`)
+  .bind(id,groupId,kind,title,text,deckId||null,key?JSON.stringify(key):null,due||null,reveal,groupId,MAX_ASSIGNMENTS).run();
  if(!ins.meta.changes)return json({error:'too_many'},429,noStore);
  return json({assignment:{id,kind,title}},201,noStore);
 };

@@ -10,5 +10,5 @@ export const onRequestGet:PagesFunction<Env>=async({request,env})=>{
  const oauth={google:oauthEnabled(env,'google'),apple:oauthEnabled(env,'apple')};
  let user=null;
  if(enabled||oauth.google||oauth.apple)try{user=await sessionUser(env,request)}catch{user=null}
- return json({enabled,oauth,user:user?{...user,isAdmin:isAdminEmail(env,user.email)}:null},200,'no-store');
+ return json({enabled,oauth,user:user?{...user,email:user.guest?'':user.email,isAdmin:!user.guest&&isAdminEmail(env,user.email)}:null},200,'no-store');
 };

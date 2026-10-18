@@ -61,7 +61,7 @@ with sync_playwright() as p:
     sp.get_by_role('button',name='Testni boshlash').click();sp.wait_for_timeout(500)
     check('timer shown',sp.locator('.quiz-run-timer').count()==1)
     for _ in range(3):
-        sp.locator('.quiz-run-options button').first.click();sp.locator('.quiz-run-body .button').click();sp.wait_for_timeout(500)
+        sp.locator('.quiz-run-options button').first.click();(sp.locator('.qr-nav .button, .quiz-run-body .button').last).click();sp.wait_for_timeout(500)
     sp.wait_for_timeout(800);check('server score shown',sp.locator('.quiz-run-result b').inner_text().endswith('/ 3'))
     sp.screenshot(path=OUT+'/u2-student-result.png')
     sp.get_by_role('button',name='Yopish').last.click();sp.wait_for_timeout(600)

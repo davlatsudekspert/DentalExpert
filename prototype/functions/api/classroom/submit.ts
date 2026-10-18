@@ -1,5 +1,6 @@
 import {json,type Env} from '../../_lib/db';
 import {GRACE_MIN,body,clean,groupRole,needUser,noStore} from '../../_lib/classroom';
+import {CURRICULUM_KEYS} from '../../_lib/curriculumKeys';
 
 // A member answers a task (text, editable while open) or a quiz (one attempt). Quiz scoring happens here against the
 // teacher's key, which is never sent to students.
@@ -8,11 +9,11 @@ export const onRequestPost:PagesFunction<Env>=async({request,env})=>{
  const {user}=a;
  const b=await body(request);if('res' in b)return b.res;
  const id=clean(b.data.assignmentId,60);
- const as=await env.DB.prepare(`SELECT group_id,kind,status,answer_key,due_date,topic_id,questions,minutes,
+ const as=await env.DB.prepare(`SELECT group_id,kind,status,answer_key,due_date,topic_id,questions,minutes,reveal,
    (julianday('now')-julianday(closed_at))*1440 AS since_close,
    (SELECT (julianday('now')-julianday(started_at))*1440 FROM class_submissions WHERE assignment_id=class_assignments.id AND user_id=?) AS elapsed
   FROM class_assignments WHERE id=?`).bind(user.id,id).first<{group_id:string;kind:string;status:string;answer_key:string|null;due_date:string|null;
-   topic_id:string|null;questions:string|null;minutes:number|null;since_close:number|null;elapsed:number|null}>();
+   topic_id:string|null;questions:string|null;minutes:number|null;reveal:string|null;since_close:number|null;elapsed:number|null}>();
  if(!as||await groupRole(env,as.group_id,user.id)!=='member')return json({error:'forbidden'},403,noStore);
  // A finished topic test still accepts answers from students who had started, for a 2-minute grace.
  const grace=as.kind==='quiz'&&as.elapsed!==null&&as.since_close!==null&&as.since_close<=GRACE_MIN;
@@ -35,5 +36,8 @@ export const onRequestPost:PagesFunction<Env>=async({request,env})=>{
  // The attempt starts with /classroom/start (which records a 0 score); finishing it fills in the real score exactly once.
  const r=await env.DB.prepare(`UPDATE class_submissions SET score=?,answer='done',answers=?,submitted_at=datetime('now') WHERE assignment_id=? AND user_id=? AND answer='started'`).bind(score,JSON.stringify(given),id,user.id).run();
  if(!r.meta.changes)return json({error:'already_submitted_or_not_started'},409,noStore);
- return json({ok:true,score,total:key.length},200,noStore);
+ // The teacher chose to show the right answers straight after submitting (otherwise they appear once the test is finished).
+ const review=as.reveal==='instant'?{answers:given,correct:key,explain:as.topic_id&&as.questions&&Object.hasOwn(CURRICULUM_KEYS,as.topic_id)
+  ?(JSON.parse(as.questions) as number[]).map(i=>CURRICULUM_KEYS[as.topic_id!].e[i]??null):null}:undefined;
+ return json({ok:true,score,total:key.length,review},200,noStore);
 };

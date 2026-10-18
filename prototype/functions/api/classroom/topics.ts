@@ -71,9 +71,9 @@ export const onRequestPost:PagesFunction<Env>=async({request,env})=>{
   const title=clean(b.data.title,100)||topicId;
   const id=newId();
   const [ins]=await env.DB.batch([
-   env.DB.prepare(`INSERT INTO class_assignments (id,group_id,kind,title,answer_key,topic_id,questions,minutes) SELECT ?,?,'quiz',?,?,?,?,?
+   env.DB.prepare(`INSERT INTO class_assignments (id,group_id,kind,title,answer_key,topic_id,questions,minutes,reveal) SELECT ?,?,'quiz',?,?,?,?,?,?
      WHERE NOT EXISTS (SELECT 1 FROM class_topics WHERE group_id=? AND topic_id=? AND test_assignment_id IS NOT NULL)`)
-    .bind(id,groupId,title,JSON.stringify(pick.map(i=>all[i])),topicId,JSON.stringify(pick),minutes,groupId,topicId),
+    .bind(id,groupId,title,JSON.stringify(pick.map(i=>all[i])),topicId,JSON.stringify(pick),minutes,b.data.reveal==='instant'?'instant':'closed',groupId,topicId),
    env.DB.prepare(`UPDATE class_topics SET test_assignment_id=? WHERE group_id=? AND topic_id=? AND test_assignment_id IS NULL AND EXISTS (SELECT 1 FROM class_assignments WHERE id=?)`)
     .bind(id,groupId,topicId,id)
   ]);
