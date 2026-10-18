@@ -124,8 +124,10 @@ with sync_playwright() as p:
     check('after sign-up the invite reopens by itself, at the nickname step',ap.locator('.qj-code').inner_text().replace(' ','')==G['code'])
     ap.locator('#qj-nick').fill('');ap.locator('#qj-nick').type('G’ayrat')
     check('iPhone apostrophe becomes a plain one as typed',ap.locator('#qj-nick').input_value()=="G'ayrat")
-    ap.wait_for_timeout(400)  # the button fades from disabled to enabled (0.2 s transition) while the name is typed
     go=ap.get_by_role('button',name='Testni boshlash')
+    # The button fades from disabled to enabled (0.2 s transition); a slow CI runner needs longer than a fixed pause, so wait for the end of the fade.
+    try:go.evaluate_handle('e=>e')and ap.wait_for_function("()=>{const b=[...document.querySelectorAll('button')].find(x=>x.textContent.includes('Testni boshlash'));return b&&!b.disabled&&getComputedStyle(b).opacity==='1'}",timeout=8000)
+    except Exception:pass
     check('start button enabled and fully opaque once a valid nickname is typed',go.is_enabled() and go.evaluate('e=>getComputedStyle(e).opacity')=='1')
     shot(ap,'a04-nickname')
     ap.get_by_role('button',name='Testni boshlash').tap()
