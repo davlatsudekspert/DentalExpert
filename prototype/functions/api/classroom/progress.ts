@@ -1,11 +1,12 @@
 import {json,type Env} from '../../_lib/db';
-import {body,clean,groupRole,needUser,noStore} from '../../_lib/classroom';
+import {body,clean,groupRole,limited,needUser,noStore,tooMany} from '../../_lib/classroom';
 
 // POST {assignmentId, answers:(number|null)[]}: saves the answers of a quiz in progress so the student can continue after
 // closing the app. Only the student's own running attempt is updated; it never affects the score (submit does that).
 export const onRequestPost:PagesFunction<Env>=async({request,env})=>{
  const a=await needUser(env,request);if('res' in a)return a.res;
  const b=await body(request);if('res' in b)return b.res;
+ if(await limited(env,'progress',a.user.id))return tooMany();
  const id=clean(b.data.assignmentId,60);
  const ans=b.data.answers;
  if(!Array.isArray(ans)||ans.length>50||!ans.every(x=>x===null||(Number.isInteger(x)&&x>=0&&x<=9)))return json({error:'bad_answers'},400,noStore);

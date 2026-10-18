@@ -1,5 +1,6 @@
 import {json,type Env} from '../../_lib/db';
-import {body,clean,groupRole,needUser,newId,noStore} from '../../_lib/classroom';
+import {body,clean,deadlineOf,groupRole,needUser,newId,noStore,revealOf} from '../../_lib/classroom';
+import {VARIANT_POOL_MAX,maxVariantCount,qref,refIndex,refTopic,variantAllowed} from '../../../src/classroomShared';
 import {CURRICULUM_KEYS} from '../../_lib/curriculumKeys';
 
 type Row=Record<string,unknown>;
@@ -31,7 +32,8 @@ export const onRequestGet:PagesFunction<Env>=async({request,env})=>{
 // POST {groupId, topicId, action}: the group's teacher runs a topic.
 //  open | close                       show the topic to students or hide it again
 //  lecture | oral  (+ done:boolean)   mark a lesson stage done or not done
-//  test {questions:number[], minutes, title}   start the topic's timed group test (once per topic)
+//  test {questions:number[] | variant:{count,extra?}, minutes|null, deadline?, reveal, title}
+//                                     start the topic's group test (once per topic); see below
 //  finish                             end the topic test; students who already started get a 2-minute grace
 export const onRequestPost:PagesFunction<Env>=async({request,env})=>{
  const a=await needUser(env,request);if('res' in a)return a.res;
@@ -64,21 +66,46 @@ export const onRequestPost:PagesFunction<Env>=async({request,env})=>{
  if(action==='test'){
   if(row.t)return json({error:'test_exists'},409,noStore);
   const all=CURRICULUM_KEYS[topicId].c;
-  const pick=pickOf(b.data.questions,all.length);
-  const minutes=Number(b.data.minutes);
-  if(!pick)return json({error:'bad_questions'},400,noStore);
-  if(!Number.isInteger(minutes)||minutes<1||minutes>180)return json({error:'bad_minutes'},400,noStore);
+  const minutes=b.data.minutes==null||b.data.minutes===''?null:Number(b.data.minutes);
+  if(minutes!==null&&(!Number.isInteger(minutes)||minutes<1||minutes>180))return json({error:'bad_minutes'},400,noStore);
+  const deadline=deadlineOf(b.data.deadline);
+  if(deadline===false)return json({error:'bad_deadline'},400,noStore);
+  const reveal=revealOf(b.data.reveal);
+  if(reveal==='deadline'&&!deadline)return json({error:'reveal_needs_deadline'},400,noStore);
+  let key:number[],questions:number[]|null=null,pool:string[]|null=null,perStudent:number|null=null;
+  const v=b.data.variant as {count?:unknown;extra?:unknown}|undefined;
+  if(v&&typeof v==='object'){
+   // Every student gets their own questions from a pool: the topic's test, plus (extra) the tests of the other topics of
+   // the same subject this group has opened, newest first, up to 60 questions. Each student needs at most half the pool.
+   const count=Number(v.count);
+   if(!Number.isInteger(count)||count<1||count>VARIANT_POOL_MAX/2)return json({error:'bad_questions'},400,noStore);
+   const topics=[topicId];
+   if(v.extra===true){
+    const subject=topicId.slice(0,topicId.lastIndexOf('-')+1);
+    const {results}=await env.DB.prepare(`SELECT topic_id FROM class_topics WHERE group_id=? AND topic_id<>? AND substr(topic_id,1,?)=? ORDER BY opened_at DESC,topic_id`)
+     .bind(groupId,topicId,subject.length,subject).all<{topic_id:string}>();
+    for(const r of results)if(Object.hasOwn(CURRICULUM_KEYS,r.topic_id))topics.push(r.topic_id);
+   }
+   pool=[];
+   for(const t of topics){const n=CURRICULUM_KEYS[t].c.length;if(pool.length+n>VARIANT_POOL_MAX)break;for(let i=0;i<n;i++)pool.push(qref(t,i))}
+   if(!variantAllowed(pool.length,count))return json({error:'variant_pool_small',pool:pool.length,max:maxVariantCount(pool.length)},400,noStore);
+   key=pool.map(r=>CURRICULUM_KEYS[refTopic(r)].c[refIndex(r)]);perStudent=count;
+  }else{
+   const pick=pickOf(b.data.questions,all.length);
+   if(!pick)return json({error:'bad_questions'},400,noStore);
+   questions=pick;key=pick.map(i=>all[i]);
+  }
   const title=clean(b.data.title,100)||topicId;
   const id=newId();
   const [ins]=await env.DB.batch([
-   env.DB.prepare(`INSERT INTO class_assignments (id,group_id,kind,title,answer_key,topic_id,questions,minutes,reveal) SELECT ?,?,'quiz',?,?,?,?,?,?
+   env.DB.prepare(`INSERT INTO class_assignments (id,group_id,kind,title,answer_key,topic_id,questions,minutes,reveal,pool,per_student,deadline_at) SELECT ?,?,'quiz',?,?,?,?,?,?,?,?,?
      WHERE NOT EXISTS (SELECT 1 FROM class_topics WHERE group_id=? AND topic_id=? AND test_assignment_id IS NOT NULL)`)
-    .bind(id,groupId,title,JSON.stringify(pick.map(i=>all[i])),topicId,JSON.stringify(pick),minutes,b.data.reveal==='instant'?'instant':'closed',groupId,topicId),
+    .bind(id,groupId,title,JSON.stringify(key),topicId,questions&&JSON.stringify(questions),minutes,reveal,pool&&JSON.stringify(pool),perStudent,deadline,groupId,topicId),
    env.DB.prepare(`UPDATE class_topics SET test_assignment_id=? WHERE group_id=? AND topic_id=? AND test_assignment_id IS NULL AND EXISTS (SELECT 1 FROM class_assignments WHERE id=?)`)
     .bind(id,groupId,topicId,id)
   ]);
   if(!ins.meta.changes)return json({error:'test_exists'},409,noStore);
-  return json({ok:true,testId:id},201,noStore);
+  return json({ok:true,testId:id,pool:pool?.length},201,noStore);
  }
  if(action==='finish'){
   if(!row.t)return json({error:'no_test'},409,noStore);

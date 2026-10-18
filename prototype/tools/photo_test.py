@@ -2,7 +2,7 @@
 (.dev.vars with AUTH_SECRET and AUTH_DEV_ECHO=1). Guests and signed-out callers are refused, uploads are checked strictly
 (data URL prefix, file signature, 200 KB), and the image is served to everyone only while the dentist's profile is public."""
 import base64,json,struct,time,urllib.request,urllib.error,zlib
-from classroom_test_lib import B,call,login
+from classroom_test_lib import B,call,login,legacy_guest
 n=0
 def check(name,cond):
     global n
@@ -36,8 +36,7 @@ O,_=login('patient','Other Patient')
 
 # Who may upload.
 check('signed out refused',put(durl('webp',WEBP),None)[0]==401)
-s,g=call('/classroom/groups','POST',{'name':'Photo class'},login('teacher','Photo Teacher')[0])
-s,q=call('/classroom/quick','POST',{'code':g['group']['code'],'nickname':'Rasm'});G=q['token']
+G,_=legacy_guest('Rasm')  # an old class-only guest (no new ones are created)
 check('class-only guest refused',put(durl('webp',WEBP),G)[0]==401)
 check('guest cannot delete',call('/auth/photo','DELETE',None,G)[0]==401)
 check('guest has no photoUrl',not call('/auth/me',token=G)[1]['user'].get('photoUrl'))

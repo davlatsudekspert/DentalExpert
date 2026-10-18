@@ -1,53 +1,46 @@
-import {createSession,guestEmail,isNativeClient,sessionUser,GUEST_DAYS} from '../../_lib/auth';
 import {json,type Env} from '../../_lib/db';
-import {addMember,body,clean,codeGuess,ipKey,isProfane,nickname,noStore,pruneGuests,underLimit} from '../../_lib/classroom';
+import {STATE_SQL,addMember,body,clean,codeGuess,ended,joinCode,limited,needUser,nickError,nickname,noStore,tooMany} from '../../_lib/classroom';
 
-// QR quick test: POST {code, nickname, assignmentId?}. A signed-in student simply joins. Anyone else gets a class-only
-// guest account for this device: no email, the nickname as name, a 180-day session that works only on the classroom
-// endpoints. Abuse limits: attempts per IP (a whole class may share one school IP, so the limit is generous) and new
-// guests per group; failed code lookups have their own tighter limit.
+type Test={id:string;title:string;status:string;since_close:number|null;since_deadline:number|null;reveal:string};
+// QR join: POST {code, assignmentId?, nickname?}. Registered accounts only (a signed-out device gets 401 and the app
+// sends the student through sign-in first, keeping the invite). The reply says who the caller is in that group:
+//  role 'owner'  — the group's own teacher (the app shows "you teach this group" and a student preview; nothing is joined)
+//  role 'member' — already in the group, or just joined with the nickname given (joined:true)
+//  role 'none'   — not in the group yet and no nickname given: the app asks for one (needNickname) and calls again.
+// Wrong codes count against the per-IP guessing limit shared with /classroom/join.
 export const onRequestPost:PagesFunction<Env>=async({request,env})=>{
+ const a=await needUser(env,request);if('res' in a)return a.res;
+ const {user}=a;
+ if(await limited(env,'quick',user.id))return tooMany();
  const b=await body(request);if('res' in b)return b.res;
- if(!env.AUTH_SECRET)return json({error:'unavailable'},503,noStore);
- const ip=await ipKey(env,request);
- if(!await underLimit(env,'quick:'+ip,150,3600))return json({error:'rate_limited'},429,noStore);
- const code=clean(b.data.code,12).toUpperCase().replace(/[^A-Z0-9]/g,'');
- if(code.length!==6)return json({error:'bad_code'},400,noStore);
- const raw=typeof b.data.nickname==='string'?b.data.nickname:'';
- const nick=nickname(raw);
- if(nick===false)return json({error:isProfane(raw)?'nickname_rejected':'bad_nickname'},400,noStore);
- // Codes are 6 characters, so wrong guesses are capped per IP (shared with /classroom/join).
+ const c=joinCode(b.data.code);
+ if('error' in c)return json({error:c.error},400,noStore);
+ const nickRaw=b.data.nickname;
+ const nick=nickname(nickRaw);
+ if(nick===false)return json({error:nickError(nickRaw)},400,noStore);
  const guess=await codeGuess(env,request);
- if(!guess.ok)return json({error:'rate_limited'},429,noStore);
- const g=await env.DB.prepare(`SELECT id,name,teacher_id FROM class_groups WHERE code=?`).bind(code).first<{id:string;name:string;teacher_id:string}>();
+ if(!guess.ok)return tooMany();
+ const g=await env.DB.prepare(`SELECT g.id,g.name,g.teacher_id,(SELECT nickname FROM class_members m WHERE m.group_id=g.id AND m.user_id=?) AS nick,
+   (SELECT 1 FROM class_members m WHERE m.group_id=g.id AND m.user_id=?) AS member FROM class_groups g WHERE g.code=?`)
+  .bind(user.id,user.id,c.code).first<{id:string;name:string;teacher_id:string;nick:string|null;member:number|null}>();
  if(!g)return json({error:'not_found'},404,noStore);
  await guess.hit();
- // The test must be a quiz of this group that students can see (a topic test only while its topic is open).
+ const owner=g.teacher_id===user.id;
+ // The test must be a quiz of this group; students only see a topic test while its topic is open.
  const aid=clean(b.data.assignmentId,60);
- let test:{id:string;title:string;status:string}|null=null;
+ let test:Test|null=null;
  if(aid){
-  test=await env.DB.prepare(`SELECT a.id,a.title,a.status FROM class_assignments a WHERE a.id=? AND a.group_id=? AND a.kind='quiz'
-    AND (a.topic_id IS NULL OR EXISTS (SELECT 1 FROM class_topics t WHERE t.group_id=a.group_id AND t.topic_id=a.topic_id AND t.closed_at IS NULL))`).bind(aid,g.id).first();
+  test=await env.DB.prepare(`SELECT a.id,a.title,a.status,a.reveal,${STATE_SQL('a.')} FROM class_assignments a WHERE a.id=? AND a.group_id=? AND a.kind='quiz'
+    AND (?3 OR a.topic_id IS NULL OR EXISTS (SELECT 1 FROM class_topics t WHERE t.group_id=a.group_id AND t.topic_id=a.topic_id AND t.closed_at IS NULL))`).bind(aid,g.id,owner?1:0).first<Test>();
   if(!test)return json({error:'test_not_found'},404,noStore);
  }
- const out=(extra:Record<string,unknown>={})=>({group:{id:g.id,name:g.name},test:test&&{id:test.id,title:test.title,status:test.status},...extra});
- const me=await sessionUser(env,request).catch(()=>null);
- if(me){
-  if(me.role==='teacher'||me.role==='dentist')return json({error:'teacher_cannot_join'},400,noStore);
-  const r=await addMember(env,g.id,me.id,nick);
-  return r==='ok'?json(out(),200,noStore):json({error:r},409,noStore);
- }
- if(!nick)return json({error:'nickname_required'},400,noStore);
- if(!await underLimit(env,'quickgroup:'+g.id,150,3600))return json({error:'rate_limited'},429,noStore);
- await pruneGuests(env).catch(()=>{});
- const id=crypto.randomUUID();
- await env.DB.prepare(`INSERT INTO users (id,email,name,role,guest,last_seen_at) VALUES (?,?,?,'student',1,datetime('now'))`).bind(id,guestEmail(id),nick).run();
- const r=await addMember(env,g.id,id,nick);
- if(r!=='ok'){await env.DB.prepare(`DELETE FROM users WHERE id=? AND guest=1`).bind(id).run();return json({error:r},409,noStore)}
- const session=await createSession(env,request,id,GUEST_DAYS);
- const user={id,guest:true,email:'',name:nick,role:'student'};
- if(isNativeClient(request))return json(out({user,token:session.token}),200,noStore);
- const res=json(out({user}),200,noStore);
- res.headers.append('set-cookie',session.cookie);
- return res;
+ const out=(role:'owner'|'member'|'none',extra:Record<string,unknown>={})=>json({role,group:{id:role==='none'?undefined:g.id,name:g.name},
+  test:test&&{id:test.id,title:test.title,status:test.status,ended:ended(test)},...extra},200,noStore);
+ if(owner)return out('owner');
+ if(g.member)return out('member',{nickname:g.nick,joined:false});
+ if(user.role==='teacher'||user.role==='dentist')return json({error:'teacher_cannot_join'},400,noStore);
+ if(!nick)return out('none',{needNickname:true});
+ const r=await addMember(env,g.id,user.id,nick);
+ if(r!=='ok')return json({error:r},409,noStore);
+ return out('member',{nickname:nick,joined:true});
 };

@@ -62,8 +62,13 @@ export const cookieHeader=(request:Request,value:string,maxAge:number)=>
 
 export type SessionUser={id:string;guest:boolean;email:string;name:string|null;role:Role;countryCode:string|null;cityId:string|null;phone:string|null;workplace:string|null;bio:string|null;specialty:string|null;telegram:string|null;instagram:string|null;publicEmail:string|null;address:string|null;mapUrl:string|null;publishRequested:boolean;verified:boolean;photoUrl:string|null};
 
-/** A class-only guest session (QR quick test) is accepted only here; every other endpoint treats it as signed out. */
-const GUEST_PATHS=/^\/api\/(classroom\/(groups|join|quick|start|submit|progress|assignments|topics)|auth\/(me|logout|account))$/;
+/** Class-only guest sessions (the old QR quick test) are no longer created. Existing ones may still read their groups
+ * and results, leave a group, sign out or delete the account until they expire; joining, starting or answering a test
+ * needs a registered account, and every other endpoint treats a guest as signed out. Signing in moves a guest's
+ * groups and results to the real account (adoptGuest). */
+const GUEST_READ=/^\/api\/classroom\/(groups|assignments|topics)$/;
+const guestAllowed=(request:Request)=>{const p=new URL(request.url).pathname;
+ return /^\/api\/auth\/(me|logout|account)$/.test(p)||request.method==='GET'&&GUEST_READ.test(p)||request.method==='DELETE'&&p==='/api/classroom/join'};
 export const GUEST_DAYS=180;
 export const guestEmail=(id:string)=>`guest-${id}@guest.invalid`;
 export const isGuestEmail=(e:string)=>e.endsWith('@guest.invalid');
@@ -75,7 +80,7 @@ export async function sessionUser(env:Env,request:Request):Promise<SessionUser|n
   `SELECT u.id,u.guest,u.email,u.name,u.role,u.country_code,u.city_id,u.phone,u.workplace,u.bio,u.specialty,u.telegram,u.instagram,u.public_email,u.address,u.map_url,u.publish_requested,u.verified_at,u.photo_at FROM sessions s JOIN users u ON u.id=s.user_id
    WHERE s.token_hash=? AND s.expires_at>datetime('now') AND u.suspended_at IS NULL`
  ).bind(await sha256(token)).first<Record<string,string|number|null>>();
- if(row?.guest&&!GUEST_PATHS.test(new URL(request.url).pathname))return null;
+ if(row?.guest&&!guestAllowed(request))return null;
  return row?{id:row.id as string,guest:!!row.guest,email:row.email as string,name:row.name as string|null,role:row.role as Role,countryCode:row.country_code as string|null,cityId:row.city_id as string|null,phone:row.phone as string|null,workplace:row.workplace as string|null,bio:row.bio as string|null,specialty:row.specialty as string|null,telegram:row.telegram as string|null,instagram:row.instagram as string|null,publicEmail:row.public_email as string|null,address:row.address as string|null,mapUrl:row.map_url as string|null,publishRequested:!!row.publish_requested,verified:!!row.verified_at,photoUrl:photoUrl(row.id,row.photo_at)}:null;
 }
 
