@@ -11,9 +11,13 @@ const TOKEN_KEY='de_token';
 // once at start-up; until then API calls wait for it. Signing in properly replaces it (the server moves the guest's results).
 const GUEST_KEY='de_guest';
 let guestToken:string|null=null;
-const secure=()=>import('capacitor-secure-storage-plugin').then(m=>m.SecureStoragePlugin);
-export const tokenReady:Promise<void>=isNative?secure().then(s=>s.get({key:GUEST_KEY})).then(r=>{guestToken=r.value||null}).catch(()=>{guestToken=null}):Promise.resolve();
-const setGuest=async(t:string|null)=>{guestToken=t;if(!isNative)return;try{const s=await secure();if(t)await s.set({key:GUEST_KEY,value:t});else await s.remove({key:GUEST_KEY})}catch{/* keychain unavailable */}};
+// Never resolve a promise WITH a Capacitor plugin object: its proxy answers every property, including `then`, so the
+// promise would wait forever (that froze sign-in on iOS). Call the method inside instead and return its result.
+type Secure=typeof import('capacitor-secure-storage-plugin')['SecureStoragePlugin'];
+const secure=async<T,>(f:(s:Secure)=>Promise<T>)=>{const m=await import('capacitor-secure-storage-plugin');return f(m.SecureStoragePlugin)};
+// Reading the key may never block start-up for long: after 1.5 s the app carries on without a guest session.
+export const tokenReady:Promise<void>=isNative?Promise.race([secure(s=>s.get({key:GUEST_KEY})).then(r=>{guestToken=r.value||null}).catch(()=>{guestToken=null}),new Promise<void>(r=>setTimeout(r,1500))]):Promise.resolve();
+const setGuest=async(t:string|null)=>{guestToken=t;if(!isNative)return;try{await secure(s=>t?s.set({key:GUEST_KEY,value:t}):s.remove({key:GUEST_KEY}))}catch{/* keychain unavailable */}};
 const getToken=()=>{try{return isNative?localStorage.getItem(TOKEN_KEY)||guestToken:null}catch{return guestToken}};
 const setToken=(t:string|null)=>{try{if(!isNative)return;if(t)localStorage.setItem(TOKEN_KEY,t);else localStorage.removeItem(TOKEN_KEY)}catch{/* storage unavailable */}};
 const authHeaders=():Record<string,string>=>{if(!isNative)return {};const t=getToken();return t?{'x-client':'native',authorization:'Bearer '+t}:{'x-client':'native'}};

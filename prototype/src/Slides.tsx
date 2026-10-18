@@ -1,5 +1,5 @@
 import {useEffect,useRef,useState} from 'react';
-import {ChevronLeft,ChevronRight,MessageSquareText,X} from 'lucide-react';
+import {Check,ChevronLeft,ChevronRight,MessageSquareText,X} from 'lucide-react';
 import cutaway from '../assets/tooth3d/premium-reference-cutaway-ivory.webp';
 import front from '../assets/tooth3d/turntable-front.webp';
 import occlusal from '../assets/tooth3d/archive-occlusal.webp';
@@ -14,9 +14,9 @@ const ANCHORS:Record<keyof typeof IMAGES,Partial<Record<Anchor,[number,number]>>
  occlusal:{cusp:[25,25],fissure:[38,51],fossa:[53,51],ridge:[50,88]}
 };
 const words={
- uz:{prev:'Oldingi',next:'Keyingi',close:'Yopish',notes:'Ustoz izohi',slide:'Slayd'},
- ru:{prev:'Назад',next:'Далее',close:'Закрыть',notes:'Заметка преподавателя',slide:'Слайд'},
- en:{prev:'Previous',next:'Next',close:'Close',notes:'Teacher note',slide:'Slide'}
+ uz:{prev:'Oldingi',next:'Keyingi',close:'Yopish',done:'Yakunlash',notes:'Ustoz izohi',slide:'Slayd'},
+ ru:{prev:'Назад',next:'Далее',close:'Закрыть',done:'Завершить',notes:'Заметка преподавателя',slide:'Слайд'},
+ en:{prev:'Previous',next:'Next',close:'Close',done:'Finish',notes:'Teacher note',slide:'Slide'}
 };
 
 /** Full-screen lecture player for curriculum topics. Diagrams are drawn natively so every language stays sharp. */
@@ -43,7 +43,7 @@ export default function Slides({title,eyebrow,slides,lang,teacher=false,accent,s
   <div className="sl-nav">
    <button className="button secondary" disabled={i===0} onClick={()=>go(-1)}><ChevronLeft size={17}/>{t.prev}</button>
    {teacher&&slides.some(x=>x.note)&&<button className={'sl-notes'+(notes?' on':'')} aria-pressed={notes} onClick={()=>setNotes(!notes)}><MessageSquareText size={16}/>{t.notes}</button>}
-   {i<last?<button className="button" onClick={()=>go(1)}>{t.next}<ChevronRight size={17}/></button>:<button className="button" onClick={onClose}>{t.close}</button>}
+   {i<last?<button className="button" onClick={()=>go(1)}>{t.next}<ChevronRight size={17}/></button>:<button className="button" onClick={onClose}><Check size={17}/>{t.done}</button>}
   </div>
  </div>;
 }

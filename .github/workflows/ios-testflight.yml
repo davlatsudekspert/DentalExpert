@@ -35,6 +35,8 @@ jobs:
           cache: npm
           cache-dependency-path: prototype/package-lock.json
       - run: npm ci
+      - name: Native safety checks (case-only file clashes, promises resolved with a plugin)
+        run: python3 tools/case_check.py && python3 tools/plugin_guard.py
       - name: Build web assets (bundled, hosted API)
         run: npm run build
         env:

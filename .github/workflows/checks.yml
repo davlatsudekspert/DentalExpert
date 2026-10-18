@@ -1,0 +1,67 @@
+name: Checks
+
+# The guard on every push: build, type checks, content and native safety checks, unit tests, the local API suites
+# (auth, admin, classroom, topic tests, QR quick tests, Google/Apple sign-in) and the browser walks.
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: checks-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    defaults:
+      run:
+        working-directory: prototype
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: prototype/package-lock.json
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: npm ci
+      - name: Native safety checks
+        run: python3 tools/case_check.py && python3 tools/plugin_guard.py
+      - name: Curriculum is valid and the generated files are up to date
+        run: |
+          python3 tools/curriculum.py
+          python3 tools/curriculum.py build
+          git diff --exit-code -- src/curriculum functions/_lib/curriculumKeys.ts
+      - name: Unit tests (QR/invite parsing, nickname filter)
+        run: npx tsx tools/join_link_test.ts && npx tsx tools/profanity_test.ts
+      - name: Build (app type check + bundle)
+        run: npm run build
+      - name: Type check server functions
+        run: npx tsc -p functions/tsconfig.json --noEmit
+      - name: API suites on a local server
+        run: bash tools/ci_local_server.sh auth_test admin_test classroom_test topics_test profile_public_test quick_test
+      - name: Google / Apple sign-in suite
+        run: python3 tools/oauth_test.py
+      - name: Browsers for the walks
+        run: |
+          pip install playwright==1.64.0 pillow
+          python -m playwright install --with-deps chromium webkit
+          echo "CHROMIUM_PATH=$(python -c 'from playwright.sync_api import sync_playwright as s;p=s().start();print(p.chromium.executable_path);p.stop()')" >> "$GITHUB_ENV"
+      - name: Browser walks (profile, classroom, topic test, QR quick test)
+        run: SIM_OUT=/tmp/sim bash tools/ci_local_server.sh profile_e2e classroom_e2e topics_e2e quick_e2e
+      - name: Every screen in uz/ru/en (offline build)
+        run: npm run build:offline && python3 tools/package.py && PROTOTYPE_HTML=demo.html python3 tools/verify.py
+      - name: Upload screenshots when something fails
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: screenshots
+          path: /tmp/sim
+          if-no-files-found: ignore

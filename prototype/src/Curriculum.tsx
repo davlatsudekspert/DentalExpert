@@ -1,5 +1,5 @@
 import {useEffect,useRef,useState,type ReactNode} from 'react';
-import {BookOpen,ChevronDown,ChevronLeft,ChevronRight,Presentation,Target} from 'lucide-react';
+import {BookOpen,CheckCircle2,ChevronDown,ChevronLeft,ChevronRight,Presentation,Target} from 'lucide-react';
 import Slides from './Slides';
 import './learn.css';
 import {SubjectIcon,subjectColor} from './subjectArt';
@@ -8,15 +8,15 @@ import type {Lang} from './discoveryData';
 
 export const cw={
  uz:{title:'Dars jadvali',sub:'Kurs → fan → mavzu. Har bir mavzuda taqdimot, og‘zaki savollar va test bor.',all:'Hammasi',topics:'mavzu',back:'Orqaga',goals:'Dars maqsadlari',
-  slides:'Taqdimotni ko‘rish',slidesN:'slayd',oral:'Og‘zaki savollar',plan:'Javob rejasi',sources:'Manbalar',materials:'Ilovadagi materiallar',empty:'Bu fan bo‘yicha mavzular tayyorlanmoqda.',
+  slides:'Taqdimotni ko‘rish',doneT:'Taqdimot tugadi',doneS:'Endi og‘zaki savollar bilan o‘zingizni tekshiring — har birida javob rejasi bor.',slidesN:'slayd',oral:'Og‘zaki savollar',plan:'Javob rejasi',sources:'Manbalar',materials:'Ilovadagi materiallar',empty:'Bu fan bo‘yicha mavzular tayyorlanmoqda.',
   note:'Namuna o‘quv reja: mazmun Dental Expert tomonidan tayyorlangan, muassasaning rasmiy dasturi emas. Rasmiy jadval — o‘z institutingiz sahifasida.',
   testInGroup:'Mavzu testi ustoz guruhda ochganda topshiriladi.'},
  ru:{title:'Учебный план',sub:'Курс → предмет → тема. В каждой теме — презентация, устные вопросы и тест.',all:'Все',topics:'тем',back:'Назад',goals:'Цели занятия',
-  slides:'Смотреть презентацию',slidesN:'слайдов',oral:'Устные вопросы',plan:'План ответа',sources:'Источники',materials:'Материалы в приложении',empty:'Темы по этому предмету готовятся.',
+  slides:'Смотреть презентацию',doneT:'Презентация пройдена',doneS:'Теперь проверьте себя устными вопросами — у каждого есть план ответа.',slidesN:'слайдов',oral:'Устные вопросы',plan:'План ответа',sources:'Источники',materials:'Материалы в приложении',empty:'Темы по этому предмету готовятся.',
   note:'Примерный учебный план: содержание подготовлено Dental Expert, это не официальная программа вуза. Официальное расписание — на сайте вашего вуза.',
   testInGroup:'Тест по теме сдаётся, когда преподаватель откроет его в группе.'},
  en:{title:'Curriculum',sub:'Year → subject → topic. Every topic has slides, oral questions and a test.',all:'All',topics:'topics',back:'Back',goals:'Learning goals',
-  slides:'View the slides',slidesN:'slides',oral:'Oral questions',plan:'Answer plan',sources:'Sources',materials:'Materials in the app',empty:'Topics for this subject are being prepared.',
+  slides:'View the slides',doneT:'Slides finished',doneS:'Now test yourself with the oral questions — each has an answer plan.',slidesN:'slides',oral:'Oral questions',plan:'Answer plan',sources:'Sources',materials:'Materials in the app',empty:'Topics for this subject are being prepared.',
   note:'Sample curriculum: content prepared by Dental Expert, not an institution’s official syllabus. Your official timetable is on your institution’s site.',
   testInGroup:'The topic test is taken when your teacher opens it in a group.'}
 };
@@ -70,18 +70,20 @@ export function OralList({lang,topic,extra}:{lang:Lang;topic:Topic;extra?:(k:num
 export function TopicOverview({lang,topic,subject}:{lang:Lang;topic:Topic;subject:Subject}){
  const t=cw[lang];
  const [show,setShow]=useState(false);
+ const seen=loadSeen()[topic.id];const [done,setDone]=useState(!!seen&&seen.s>=seen.n);
  return <>
   <span className="lg-eyebrow">{tx(subject.title,lang)}</span>
   <h2>{tx(topic.title,lang)}</h2>
   <p className="muted">{metaLine(topic,lang)}</p>
   <div className="lg-card"><h3><Target size={16}/>{t.goals}</h3><ul className="lg-goals">{topic.goals.map((g,k)=><li key={k}>{tx(g,lang)}</li>)}</ul></div>
   <button className="button" onClick={()=>setShow(true)}><Presentation size={17}/>{t.slides} · {topic.slides.length} {t.slidesN}</button>
+  {done&&<div className="lg-done" role="status"><CheckCircle2 size={20}/><div><b>{t.doneT}</b><small>{t.doneS}</small></div></div>}
   <h3 className="lg-h">{t.oral}</h3>
   <OralList lang={lang} topic={topic}/>
   <p className="muted lg-small">{t.testInGroup}</p>
   <div className="lg-card"><h3><BookOpen size={16}/>{t.sources}</h3><ul className="lg-sources" lang="en" translate="no">{topic.sources.map((s,k)=><li key={k}>{s}</li>)}</ul></div>
   {show&&<Slides title={tx(topic.title,lang)} eyebrow={tx(subject.title,lang)} slides={topic.slides} lang={lang} accent={subjectColor(subject.id).c}
-   start={loadLast()?.id===topic.id?loadLast()!.slide:0} onProgress={i=>markSlide(topic.id,i,topic.slides.length)} onClose={()=>setShow(false)}/>}
+   start={loadLast()?.id===topic.id?loadLast()!.slide:0} onProgress={i=>markSlide(topic.id,i,topic.slides.length)} onFinished={()=>setDone(true)} onClose={()=>setShow(false)}/>}
  </>;
 }
 

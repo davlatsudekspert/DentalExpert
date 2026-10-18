@@ -40,7 +40,7 @@ with sync_playwright() as p:
         if not nxt.count() or n>14:break
         nxt.click();tp.wait_for_timeout(250)
     check('slides played',n==topic.get('slides',n) or n>=7)
-    tp.locator('.sl-nav .button',has_text='Yopish').click();tp.wait_for_timeout(300)
+    tp.locator('.sl-nav .button',has_text='Yakunlash').click();tp.wait_for_timeout(300)
     tp.locator('.lg-stage').nth(0).get_by_role('button',name='O‘tildi deb belgilash').click();tp.wait_for_timeout(700)
     check('lecture marked',tp.locator('.lg-stage.done').count()>=1)
     tp.locator('.lg-oral-item button').first.click();tp.wait_for_timeout(200)
