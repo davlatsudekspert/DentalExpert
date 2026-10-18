@@ -29,10 +29,18 @@ with sync_playwright() as p:
     tp.locator('.lg-row',has_text=subj['title']['uz']).click();tp.wait_for_timeout(300)
     tp.screenshot(path=OUT+'/t2-plan-topics.png',full_page=True)
     tp.locator('.lg-row',has_text=topic['title']['uz']).click();tp.wait_for_timeout(800)
+    # Not yet open to students: the start button is off and says why.
+    start=tp.locator('.lg-setup .button',has_text='Testni boshlash')
+    check('closed topic: start disabled with a one-line reason',start.is_disabled() and tp.locator('.lg-why',has_text='Talabalarga ochish').count()==1 and start.get_attribute('aria-describedby')=='lg-start-why')
     tp.get_by_role('button',name='Talabalarga ochish').click();tp.wait_for_timeout(800)
+    check('opened topic: the reason is gone',tp.locator('.lg-why').count()==0)
     check('topic opened',tp.get_by_role('button',name='Talabalardan yashirish').count()==1)
     tp.screenshot(path=OUT+'/t3-topic-stages.png',full_page=True)
+    playbtn=tp.get_by_role('button',name='Taqdimotni boshlash',exact=False).inner_text()
     tp.get_by_role('button',name='Taqdimotni boshlash',exact=False).click();tp.wait_for_timeout(400)
+    total=tp.locator('.sl-bar b').inner_text().split('/')[-1].strip()
+    full=json.load(open(f'src/curriculum/topics/{topic["id"]}.json'));want=len(full['slides'])+(1 if full.get('sources') else 0)
+    check('slide count on the button matches the player (references slide included)',playbtn.strip().endswith(f'· {want}') and total==str(want))
     n=0
     while True:
         tp.screenshot(path=f'{OUT}/s{n:02d}.png');n+=1

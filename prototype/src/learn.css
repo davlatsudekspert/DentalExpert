@@ -37,6 +37,8 @@
 .lg-invite-body small{font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--lg-sub)}
 .lg-invite-body p{font-size:12px;line-height:1.45}
 @media (max-width:380px){.lg-invite-body{flex-direction:column;align-items:flex-start}}
+/* Small phones (with larger text): the group card and its stage cards give back side padding so selects like the reveal rule keep their whole option text. */
+@media (max-width:380px){.classroom.lg-group{padding-left:12px;padding-right:12px}.lg-group .lg-stage{padding:14px 12px}}
 .lg-mine{display:grid;grid-template-columns:1fr auto;align-items:center;gap:6px 10px}
 .lg-mine>b{font-size:24px;color:var(--lg-deep)}
 .lg-mine small{font-size:12px;color:var(--lg-sub)}
@@ -386,10 +388,11 @@ button.cr-back{min-height:44px;padding:10px 14px 10px 0;margin:-6px 0}
 /* Assigning tests: preset chips with a custom value, the general test page, the teacher's choice on a topic test. */
 .lg-pick{border:0;margin:0;padding:0;min-width:0;display:flex;flex-direction:column;gap:8px}
 .lg-pick legend{padding:0;margin-bottom:8px;font-size:13px;font-weight:700;color:var(--lg-ink)}
-.lg-chips{display:flex;flex-wrap:wrap;gap:8px}
+/* align-items:center: a chip keeps its pill shape beside the taller "Boshqa" box instead of stretching to the row height. */
+.lg-chips{display:flex;flex-wrap:wrap;align-items:center;gap:8px}
 .lg-chips>button{min-height:44px;padding:8px 14px;border-radius:999px;border:1px solid var(--lg-line);background:var(--lg-paper,#fff);color:var(--lg-ink);font:inherit;font-size:14px;font-weight:650;cursor:pointer;white-space:nowrap}
 .lg-chips>button.on,.lg-custom.on{background:var(--lg-ink);border-color:var(--lg-ink);color:#fff}
-.lg-custom{display:inline-flex;align-items:center;gap:6px;min-height:44px;padding:0 6px 0 14px;border-radius:999px;border:1px solid var(--lg-line);font-size:14px;font-weight:650;flex:1 1 150px;max-width:220px}
+.lg-custom{display:inline-flex;align-items:center;gap:6px;min-height:44px;padding:0 6px 0 14px;border-radius:999px;border:1px solid var(--lg-line);font-size:14px;font-weight:650;flex:1 1 150px;max-width:220px;margin:0}
 .lg-group .lg-custom,.classroom .lg-custom{flex-direction:row}
 .lg-custom input{flex:1;min-width:0;width:auto!important;min-height:34px;padding:4px 10px!important;border-radius:999px!important;border:1px solid var(--lg-line)!important;background:#fff!important;color:var(--lg-ink)!important;font-size:15px}
 .lg-date{margin-top:4px}

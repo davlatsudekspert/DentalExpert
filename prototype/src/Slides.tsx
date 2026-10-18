@@ -26,7 +26,7 @@ export default function Slides({title,eyebrow,slides:topicSlides,sources,lang,te
  const slides:Slide[]=sources?.length?[...topicSlides,{layout:'refs'} as unknown as Slide]:topicSlides;
  const t=words[lang];
  const [i,setI]=useState(()=>Math.max(0,Math.min(slides.length-1,start)));
- useEffect(()=>{onProgress?.(Math.min(i,topicSlides.length-1))},[i]);// eslint-disable-line react-hooks/exhaustive-deps
+ useEffect(()=>{onProgress?.(i)},[i]);// eslint-disable-line react-hooks/exhaustive-deps
  const [notes,setNotes]=useState(teacher);
  // Presenting: landscape and screen kept on (native app — fills a TV/monitor over AirPlay or HDMI), fullscreen on the web.
  const root=useRef<HTMLDivElement>(null);

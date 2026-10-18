@@ -6,7 +6,7 @@ import {callApi} from './api';
 import {askAssignTopic} from './joinLink';
 import './learn.css';
 import {SubjectIcon,subjectColor} from './subjectArt';
-import {SUBJECTS,courseWord,loadLast,loadSeen,loadTopic,markSlide,metaLine,topicsOf,tx,type Subject,type Topic,type TopicMeta} from './curriculumData';
+import {SUBJECTS,courseWord,loadLast,loadSeen,loadTopic,markSlide,metaLine,slideCount,topicsOf,tx,type Subject,type Topic,type TopicMeta} from './curriculumData';
 import type {Lang} from './discoveryData';
 
 export const cw={
@@ -79,14 +79,14 @@ export function TopicOverview({lang,topic,subject,teacher}:{lang:Lang;topic:Topi
   <h2>{tx(topic.title,lang)}</h2>
   <p className="muted">{metaLine(topic,lang)}</p>
   <div className="lg-card"><h3><Target size={16}/>{t.goals}</h3><ul className="lg-goals">{topic.goals.map((g,k)=><li key={k}>{tx(g,lang)}</li>)}</ul></div>
-  <button className="button" onClick={()=>setShow(true)}><Presentation size={17}/>{t.slides} · {topic.slides.length} {t.slidesN}</button>
+  <button className="button" onClick={()=>setShow(true)}><Presentation size={17}/>{t.slides} · {slideCount(topic)} {t.slidesN}</button>
   {done&&<div className="lg-done" role="status"><CheckCircle2 size={20}/><div><b>{t.doneT}</b><small>{t.doneS}</small></div></div>}
   <h3 className="lg-h">{t.oral}</h3>
   <OralList lang={lang} topic={topic}/>
   <SelfTest lang={lang} topic={topic} teacher={teacher}/>
   <div className="lg-card"><h3><BookOpen size={16}/>{t.sources}</h3><ul className="lg-sources" lang="en" translate="no">{topic.sources.map((s,k)=><li key={k}>{s}</li>)}</ul></div>
   {show&&<Slides title={tx(topic.title,lang)} eyebrow={tx(subject.title,lang)} slides={topic.slides} sources={topic.sources} lang={lang} accent={subjectColor(subject.id).c}
-   start={loadLast()?.id===topic.id?loadLast()!.slide:0} onProgress={i=>markSlide(topic.id,i,topic.slides.length)} onFinished={()=>setDone(true)} onClose={()=>setShow(false)}/>}
+   start={loadLast()?.id===topic.id?loadLast()!.slide:0} onProgress={i=>markSlide(topic.id,i,slideCount(topic))} onFinished={()=>setDone(true)} onClose={()=>setShow(false)}/>}
  </>;
 }
 

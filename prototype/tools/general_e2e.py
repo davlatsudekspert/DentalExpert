@@ -3,9 +3,10 @@
 CSS font size scaled, as with the system's larger text). On each: the teacher opens "Umumiy test berish", picks two
 subjects with "Hammasini tanlash" and a search, chooses 50 questions, 20 minutes, variants on (the open window stays
 1 day), assigns; a student solves it; the teacher's live page shows the result. Nothing may be cut off: no sideways
-scrolling, no chip, button or select whose text is clipped. On the iPhone also: a teacher's "Mavzu bo‘yicha test"
-asks "Guruhga topshirish" / "O‘zim yechib ko‘rish" and the first opens that topic's settings in the group, a student's
-starts the test at once. Screenshots go to SIM_OUT. Needs PLAYWRIGHT_BROWSERS_PATH with WebKit."""
+scrolling, no chip, button or select whose text is clipped. On both: a teacher's "Mavzu bo‘yicha test" asks
+"Guruhga topshirish" / "O‘zim yechib ko‘rish" and the first opens that topic's settings in the group, where the
+disabled "Testni boshlash" says why (the topic is not open yet) and, with variants on, the lone count chip stays a pill.
+On the iPhone also: "O‘zim yechib ko‘rish" starts a practice run, a student's starts the test at once. Screenshots go to SIM_OUT. Needs PLAYWRIGHT_BROWSERS_PATH with WebKit."""
 import json,os,re,sys,time
 sys.path.insert(0,os.path.dirname(os.path.abspath(__file__)))
 from playwright.sync_api import sync_playwright
@@ -99,16 +100,27 @@ with sync_playwright() as p:
         tp.wait_for_timeout(5500);tp.locator('.lg-live').scroll_into_view_if_needed()
         check(f'{tag}: the teacher sees the result live',tp.locator('.lg-live .lg-row.s2').count()==1 and '/50' in tp.locator('.lg-live .lg-row.s2').inner_text())
         shot(tp,'g07-teacher-result')
+        # Topic page: a teacher chooses; "Guruhga topshirish" opens the topic's settings in the (only) group.
+        tp.goto(B+'/?screen=courses&lang=uz&shot=1');tp.wait_for_selector('.learn');tp.locator('.learn-tabs button',has_text='O‘quv reja').tap();tp.wait_for_timeout(400)
+        tp.locator('.lg-section .lg-row',has_text=subj['perio']).tap();tp.wait_for_timeout(300);tp.locator('.lg-section .lg-row').first.tap();tp.wait_for_timeout(600)
+        tp.locator('.lg-selftest .button').tap();tp.wait_for_selector('.lg-choose')
+        check(f'{tag}: teacher: the topic test asks first (group or myself), no test opened yet',tp.locator('.quiz-run').count()==0 and tp.get_by_role('button',name='Guruhga topshirish').count()==1 and tp.get_by_role('button',name='O‘zim yechib ko‘rish').count()==1)
+        tp.wait_for_timeout(500);shot(tp,'t01-topic-choice');nocut(tp,'choice')
+        tp.get_by_role('button',name='Guruhga topshirish').tap();tp.wait_for_selector('.lg-setup',timeout=15000);tp.wait_for_timeout(400)
+        check(f'{tag}: "Guruhga topshirish" opens that topic\'s test settings in the group',tp.get_by_role('button',name=re.compile('Talabalarga ochish|Talabalardan yashirish')).count()==1)
+        tp.locator('.lg-setup').first.scroll_into_view_if_needed();shot(tp,'t02-topic-settings');nocut(tp,'topic settings')
+        # The topic is not open to students yet: "Testni boshlash" is off and a line under it says why.
+        start=tp.locator('.lg-setup .button',has_text='Testni boshlash')
+        check(f'{tag}: closed topic: start is off and explained',start.is_disabled() and 'Talabalarga ochish' in tp.locator('.lg-why').inner_text())
+        start.scroll_into_view_if_needed();shot(tp,'t03-start-why');nocut(tp,'start reason')
+        # Variants on: the count row keeps one preset chip next to "Boshqa"; it stays a pill, not a tall stretched one.
+        cnt=tp.locator('.lg-setup .lg-pick',has_text='Savollar soni').first
+        cnt.locator('.lg-chips>button',has_text='5').first.tap();tp.wait_for_timeout(150)
+        tp.locator('.lg-setup label.lg-check',has_text='Har bir talabaga boshqa savollar').locator('input').check();tp.wait_for_timeout(200)
+        cnt.scroll_into_view_if_needed();shot(tp,'t04-variant-count');nocut(tp,'variant count')
+        dims=cnt.evaluate("e=>{const b=[...e.querySelectorAll('.lg-chips>button')].map(x=>x.getBoundingClientRect());const c=e.querySelector('.lg-custom').getBoundingClientRect();return {b:b.map(r=>[r.width,r.height]),c:c.height}}")
+        check(f'{tag}: with variants the preset chip keeps its pill shape beside "Boshqa"',len(dims['b'])==1 and all(h<=dims['c']+1 and h<=w*1.4+12 for w,h in dims['b']) and all(abs(h-dims['c'])<=8 for _,h in dims['b']))
         if tag=='iphone':
-            # Topic page: a teacher chooses; "Guruhga topshirish" opens the topic's settings in the (only) group.
-            tp.goto(B+'/?screen=courses&lang=uz&shot=1');tp.wait_for_selector('.learn');tp.locator('.learn-tabs button',has_text='O‘quv reja').tap();tp.wait_for_timeout(400)
-            tp.locator('.lg-section .lg-row',has_text=subj['perio']).tap();tp.wait_for_timeout(300);tp.locator('.lg-section .lg-row').first.tap();tp.wait_for_timeout(600)
-            tp.locator('.lg-selftest .button').tap();tp.wait_for_selector('.lg-choose')
-            check('teacher: the topic test asks first (group or myself), no test opened yet',tp.locator('.quiz-run').count()==0 and tp.get_by_role('button',name='Guruhga topshirish').count()==1 and tp.get_by_role('button',name='O‘zim yechib ko‘rish').count()==1)
-            tp.wait_for_timeout(500);shot(tp,'t01-topic-choice');nocut(tp,'choice')
-            tp.get_by_role('button',name='Guruhga topshirish').tap();tp.wait_for_selector('.lg-setup',timeout=15000);tp.wait_for_timeout(400)
-            check('"Guruhga topshirish" opens that topic\'s test settings in the group',tp.get_by_role('button',name=re.compile('Talabalarga ochish|Talabalardan yashirish')).count()==1)
-            tp.locator('.lg-setup').first.scroll_into_view_if_needed();shot(tp,'t02-topic-settings');nocut(tp,'topic settings')
             tp.goto(B+'/?screen=courses&lang=uz&shot=1');tp.wait_for_selector('.learn');tp.locator('.learn-tabs button',has_text='O‘quv reja').tap();tp.wait_for_timeout(400)
             tp.locator('.lg-section .lg-row',has_text=subj['perio']).tap();tp.wait_for_timeout(300);tp.locator('.lg-section .lg-row').first.tap();tp.wait_for_timeout(600)
             tp.locator('.lg-selftest .button').tap();tp.get_by_role('button',name='O‘zim yechib ko‘rish').tap();tp.wait_for_selector('.quiz-run-options button',timeout=10000)

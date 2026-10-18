@@ -11,7 +11,7 @@ import type {BigTest} from './BigScreen';
 const BigScreen=lazy(()=>import('./BigScreen'));
 import {OralList,SubjectHero,SubjectList,TopicList,toTop,useTopic} from './Curriculum';
 import {subjectColor} from './subjectArt';
-import {SUBJECTS,metaLine,topicMeta,tx,type Subject,type Topic,type TopicMeta} from './curriculumData';
+import {SUBJECTS,metaLine,slideCount,topicMeta,tx,type Subject,type Topic,type TopicMeta} from './curriculumData';
 import type {Lang} from './discoveryData';
 
 type Group={id:string;name:string;code?:string;members?:number;teacher?:string|null;myNo?:number;myNickname?:string|null};
@@ -45,7 +45,7 @@ const words={
   st:{none:'Ochilmagan',hidden:'Yashirilgan',open:'Ochiq',lecture:'Ma’ruza o‘tildi',oral:'Savol-javob o‘tildi',testing:'Test ketmoqda',done:'Yakunlangan'},
   openTopic:'Talabalarga ochish',hideTopic:'Talabalardan yashirish',stage:'BOSQICH',lecture:'Ma’ruza',lectureHint:'Taqdimotni ekranga chiqarib, izohlar bilan o‘ting.',play:'Taqdimotni boshlash',markDone:'O‘tildi deb belgilash',doneLbl:'O‘tildi',undo:'Bekor qilish',
   oral:'Og‘zaki savol-javob',oralHint:'Savolni bering, javob rejasiga qarab talabalarni baholang. Belgilar faqat shu qurilmada saqlanadi.',asked:'So‘raldi',grade:'Baholash',knew:'Bildi',partly:'Qisman',didnt:'Bilmadi',
-  test:'Mavzu testi',testHint:'Savollarni tanlang (to‘g‘ri javob yashil), vaqtni belgilang va testni boshlang.',minutes:'Vaqt (daqiqa)',startTest:'Testni boshlash',finishTest:'Testni yakunlash',confirmFinish:'Test yakunlansin? Boshlagan talabalarga 2 daqiqa beriladi.',results:'Natijalar',needOpen:'Avval mavzuni talabalarga oching.',
+  test:'Mavzu testi',testHint:'Savollarni tanlang (to‘g‘ri javob yashil), vaqtni belgilang va testni boshlang.',minutes:'Vaqt (daqiqa)',startTest:'Testni boshlash',finishTest:'Testni yakunlash',confirmFinish:'Test yakunlansin? Boshlagan talabalarga 2 daqiqa beriladi.',results:'Natijalar',needOpen:'Avval mavzuni talabalarga oching.',needOpenTest:'Testni boshlash uchun avval mavzuni yuqoridagi «Talabalarga ochish» tugmasi bilan oching.',
   of:'dan',avg:'O‘rtacha',perQ:'Savollar bo‘yicha',qN:(n:number)=>`${n}-savol`,qCount:(n:number)=>`${n} ta savol`,rightN:(r:number,n:number)=>`${r}/${n} to‘g‘ri`,inviteToGrade:'Baholash uchun talabalarni guruhga taklif qiling.',cancel:'Bekor qilish',great:'A’lo natija!',good:'Yaxshi natija',more:'Mavzuni yana takrorlang',scoreLine:(s:number,n:number)=>`${n} ta savoldan ${s} tasiga to‘g‘ri javob berdingiz`,noMembers:'Hali talaba yo‘q.',alias:'Shaxsiy belgi (faqat sizga ko‘rinadi)',
   myResults:'Mening natijalarim',quizzesDone:'test topshirildi',topics:'Mavzular',noTopics:'Ustoz hali mavzu ochmagan.',watch:'Taqdimotni ko‘rish',prepare:'Tayyorlanish uchun savollar',
   testOpen:'Test ochiq',timeLimit:'daqiqa',testWait:'Ustoz testni boshlaganda shu yerda paydo bo‘ladi.',reviewLater:'To‘g‘ri javoblar ustoz testni yakunlagach ko‘rinadi.',yourAns:'Sizning javobingiz',right:'To‘g‘ri javob',noAnswer:'Javob berilmagan',timeUp:'Vaqt tugadi.',goals:'Dars maqsadlari',pick:'Fan tanlang'},
@@ -62,7 +62,7 @@ const words={
   st:{none:'Не открыта',hidden:'Скрыта',open:'Открыта',lecture:'Лекция проведена',oral:'Опрос проведён',testing:'Идёт тест',done:'Завершена'},
   openTopic:'Открыть студентам',hideTopic:'Скрыть от студентов',stage:'ЭТАП',lecture:'Лекция',lectureHint:'Выведите презентацию на экран и проведите её с заметками.',play:'Начать презентацию',markDone:'Отметить как проведённую',doneLbl:'Проведено',undo:'Отменить',
   oral:'Устный опрос',oralHint:'Задайте вопрос и оцените студентов по плану ответа. Отметки хранятся только на этом устройстве.',asked:'Задан',grade:'Оценить',knew:'Знает',partly:'Частично',didnt:'Не знает',
-  test:'Тест по теме',testHint:'Выберите вопросы (верный ответ — зелёным), задайте время и начните тест.',minutes:'Время (мин)',startTest:'Начать тест',finishTest:'Завершить тест',confirmFinish:'Завершить тест? Начавшим студентам даётся 2 минуты.',results:'Результаты',needOpen:'Сначала откройте тему студентам.',
+  test:'Тест по теме',testHint:'Выберите вопросы (верный ответ — зелёным), задайте время и начните тест.',minutes:'Время (мин)',startTest:'Начать тест',finishTest:'Завершить тест',confirmFinish:'Завершить тест? Начавшим студентам даётся 2 минуты.',results:'Результаты',needOpen:'Сначала откройте тему студентам.',needOpenTest:'Чтобы начать тест, сначала откройте тему кнопкой «Открыть студентам» выше.',
   of:'из',avg:'Средний',perQ:'По вопросам',qN:(n:number)=>`Вопрос ${n}`,qCount:(n:number)=>`${n} ${ruPlural(n,'вопрос','вопроса','вопросов')}`,rightN:(r:number,n:number)=>`${r}/${n} верно`,inviteToGrade:'Чтобы оценивать, пригласите студентов в группу.',cancel:'Отмена',great:'Отличный результат!',good:'Хороший результат',more:'Стоит повторить тему',scoreLine:(s:number,n:number)=>`Верных ответов: ${s} из ${n}`,noMembers:'Студентов пока нет.',alias:'Личная метка (видна только вам)',
   myResults:'Мои результаты',quizzesDone:'тестов сдано',topics:'Темы',noTopics:'Преподаватель ещё не открыл темы.',watch:'Смотреть презентацию',prepare:'Вопросы для подготовки',
   testOpen:'Тест открыт',timeLimit:'мин',testWait:'Появится здесь, когда преподаватель начнёт тест.',reviewLater:'Верные ответы появятся после завершения теста преподавателем.',yourAns:'Ваш ответ',right:'Верный ответ',noAnswer:'Нет ответа',timeUp:'Время вышло.',goals:'Цели занятия',pick:'Выберите предмет'},
@@ -79,7 +79,7 @@ const words={
   st:{none:'Not opened',hidden:'Hidden',open:'Open',lecture:'Lecture done',oral:'Oral Q&A done',testing:'Test running',done:'Completed'},
   openTopic:'Open to students',hideTopic:'Hide from students',stage:'STAGE',lecture:'Lecture',lectureHint:'Put the slides on screen and teach with the notes.',play:'Start the slides',markDone:'Mark as done',doneLbl:'Done',undo:'Undo',
   oral:'Oral Q&A',oralHint:'Ask the question and grade students against the answer plan. Marks are kept on this device only.',asked:'Asked',grade:'Grade',knew:'Knew',partly:'Partly',didnt:'Did not know',
-  test:'Topic test',testHint:'Choose the questions (the right answer is green), set the time and start the test.',minutes:'Time (min)',startTest:'Start the test',finishTest:'Finish the test',confirmFinish:'Finish the test? Students who started get 2 more minutes.',results:'Results',needOpen:'Open the topic to students first.',
+  test:'Topic test',testHint:'Choose the questions (the right answer is green), set the time and start the test.',minutes:'Time (min)',startTest:'Start the test',finishTest:'Finish the test',confirmFinish:'Finish the test? Students who started get 2 more minutes.',results:'Results',needOpen:'Open the topic to students first.',needOpenTest:'To start the test, first open the topic with “Open to students” above.',
   of:'of',avg:'Average',perQ:'By question',qN:(n:number)=>`Question ${n}`,qCount:(n:number)=>`${n} question${n===1?'':'s'}`,rightN:(r:number,n:number)=>`${r}/${n} correct`,inviteToGrade:'Invite students to the group to grade them.',cancel:'Cancel',great:'Excellent!',good:'Good result',more:'Worth revising this topic',scoreLine:(s:number,n:number)=>`You answered ${s} of ${n} correctly`,noMembers:'No students yet.',alias:'Private label (only you see it)',
   myResults:'My results',quizzesDone:'quizzes done',topics:'Topics',noTopics:'Your teacher has not opened any topics yet.',watch:'View the slides',prepare:'Questions to prepare',
   testOpen:'Test open',timeLimit:'min',testWait:'It appears here when your teacher starts the test.',reviewLater:'The right answers appear once your teacher finishes the test.',yourAns:'Your answer',right:'Right answer',noAnswer:'No answer',timeUp:'Time is up.',goals:'Learning goals',pick:'Choose a subject'}
@@ -310,7 +310,7 @@ function TeacherTopic({lang,groupId,code,user,topicId,row,topics,test,members,on
   {err&&<p className="cr-error" role="alert">{err}</p>}
   {!topic?<p className="muted">…</p>:<>
    <Stage n={1} t={t} title={t.lecture} done={!!row?.lectureDoneAt} hint={t.lectureHint}>
-    <div className="cr-actions"><button className="button" onClick={()=>setShow(true)}><Presentation size={16}/>{t.play} · {topic.slides.length}</button>
+    <div className="cr-actions"><button className="button" onClick={()=>setShow(true)}><Presentation size={16}/>{t.play} · {slideCount(topic)}</button>
      <DoneToggle t={t} done={!!row?.lectureDoneAt} disabled={!isOpen||busy} onSet={d=>act('lecture',{done:d})}/></div>
    </Stage>
    <Stage n={2} t={t} title={t.oral} done={!!row?.oralDoneAt} hint={t.oralHint}>
@@ -324,7 +324,7 @@ function TeacherTopic({lang,groupId,code,user,topicId,row,topics,test,members,on
    </Stage>
    <Stage n={3} t={t} title={t.test} done={!!test&&test.status==='closed'} hint={test?'':t.testHint}>
     {test?<TestRunning lang={lang} groupId={groupId} code={code} user={user} topicId={topic.id} test={test} members={members} label={label} onFinish={()=>setAsking(true)} onChanged={onChanged}/>
-    :<TestSetup lang={lang} groupId={groupId} topic={topic} topics={topics} disabled={!isOpen||busy} error={testErr} onStart={p=>{bigFor={id:topic.id,until:Date.now()+20000};act('test',{...p,title:tx(topic.title,lang)})}}/>}
+    :<TestSetup lang={lang} groupId={groupId} topic={topic} topics={topics} disabled={!isOpen||busy} reason={isOpen?undefined:t.needOpenTest} error={testErr} onStart={p=>{bigFor={id:topic.id,until:Date.now()+20000};act('test',{...p,title:tx(topic.title,lang)})}}/>}
    </Stage>
    {asking&&<ConfirmSheet text={t.confirmFinish} ok={t.finishTest} cancel={t.cancel} onOk={async()=>{setAsking(false);await act('finish')}} onCancel={()=>setAsking(false)}/>}
    {show&&<Slides title={tx(topic.title,lang)} eyebrow={tx(subject.title,lang)} slides={topic.slides} sources={topic.sources} lang={lang} accent={subjectColor(subject.id).c} teacher onClose={()=>setShow(false)}/>}
@@ -361,9 +361,9 @@ function useKey(groupId:string,topicId:string){
 let bigFor:{id:string;until:number}|null=null;
 
 /** Topic test settings (src/testSetup.tsx) with the teacher's key for marking the right options. */
-function TestSetup({lang,groupId,topic,topics,disabled,error,onStart}:{lang:Lang;groupId:string;topic:Topic;topics:TopicRow[]|null;disabled:boolean;error?:string;onStart:(p:TestPayload)=>void}){
+function TestSetup({lang,groupId,topic,topics,disabled,reason,error,onStart}:{lang:Lang;groupId:string;topic:Topic;topics:TopicRow[]|null;disabled:boolean;reason?:string;error?:string;onStart:(p:TestPayload)=>void}){
  const key=useKey(groupId,topic.id);
- return <TopicTestSetup lang={lang} topic={topic} topics={topics} keyOf={key} disabled={disabled} error={error} onStart={onStart}/>;
+ return <TopicTestSetup lang={lang} topic={topic} topics={topics} keyOf={key} disabled={disabled} reason={reason} error={error} onStart={onStart}/>;
 }
 
 type Live=Member&{startedAt?:string|null;answered?:number;questions?:string[]};
@@ -451,7 +451,7 @@ function StudentTopic({lang,user,topicId,test,onChanged}:{lang:Lang;user:AuthUse
   <p className="muted">{metaLine(meta,lang)}</p>
   {!topic?<p className="muted">…</p>:<>
    <div className="lg-card"><h3><BookOpen size={16}/>{t.goals}</h3><ul className="lg-goals">{topic.goals.map((g,k)=><li key={k}>{tx(g,lang)}</li>)}</ul></div>
-   <button className="button" onClick={()=>setShow(true)}><Presentation size={16}/>{t.watch} · {topic.slides.length}</button>
+   <button className="button" onClick={()=>setShow(true)}><Presentation size={16}/>{t.watch} · {slideCount(topic)}</button>
    <div className={'lg-stage'+(finished?' done':'')}><span className="lg-eyebrow">{t.test}</span>
     {!test?<p className="muted">{t.testWait}</p>
     :finished?<><p className="cr-score">{t.result}: {score?score[0]:mine?.score} / {score?score[1]:mine?.total}</p>

@@ -2,7 +2,7 @@ import {useState} from 'react';
 import {Flame,Play,Sparkles} from 'lucide-react';
 import Slides from './Slides';
 import {useTopic} from './Curriculum';
-import {SUBJECTS,TOPICS,loadLast,loadSeen,markSlide,topicMeta,tx,type TopicMeta} from './curriculumData';
+import {SUBJECTS,TOPICS,loadLast,loadSeen,markSlide,slideCount,topicMeta,tx,type TopicMeta} from './curriculumData';
 import {SubjectIcon,subjectColor} from './subjectArt';
 import {localDay} from './dailyData';
 import {streakDays} from './Achievements';
@@ -43,6 +43,6 @@ export default function Today({lang}:{lang:Lang}){
     <em>{progress?`${progress.s}/${progress.n} ${t.slide}`:''}{learned?`${progress?' · ':''}${learned} ${t.learned}`:''}</em></div></div>
   <button className="td-go" disabled={!topic} onClick={()=>{markStudyDay();setOpen(true)}}><Play size={16}/>{progress?t.cont:t.start}</button>
   {open&&topic&&<Slides title={tx(topic.title,lang)} eyebrow={tx(subject.title,lang)} slides={topic.slides} sources={topic.sources} lang={lang} accent={a.c}
-   start={last?.id===topic.id?last.slide:0} onProgress={i=>markSlide(topic.id,i,topic.slides.length)} onClose={()=>{setOpen(false);setTick(x=>x+1)}}/>}
+   start={last?.id===topic.id?last.slide:0} onProgress={i=>markSlide(topic.id,i,slideCount(topic))} onClose={()=>{setOpen(false);setTick(x=>x+1)}}/>}
  </section>;
 }

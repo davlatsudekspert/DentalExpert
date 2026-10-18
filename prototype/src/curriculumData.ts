@@ -33,6 +33,8 @@ export const typeWord:Record<Lang,Record<TopicMeta['type'],string>>={
 };
 export const metaLine=(m:TopicMeta,lang:Lang)=>lang==='uz'?`${m.n}-mavzu · ${m.week}-hafta · ${typeWord.uz[m.type]} · ${m.hours} soat`
  :lang==='ru'?`Тема ${m.n} · ${m.week}-я неделя · ${typeWord.ru[m.type]} · ${m.hours} ч`:`Topic ${m.n} · Week ${m.week} · ${typeWord.en[m.type]} · ${m.hours} h`;
+/** Slides the player shows for a topic: its own slides plus the closing references slide when it has sources (Slides.tsx). */
+export const slideCount=(t:{slides:unknown[];sources?:string[]})=>t.slides.length+(t.sources?.length?1:0);
 export const courseWord=(c:number,lang:Lang)=>lang==='uz'?`${c}-kurs`:lang==='ru'?`${c} курс`:`Year ${c}`;
 
 /** Self-study progress on this device: furthest slide seen per topic, and the last topic opened. */

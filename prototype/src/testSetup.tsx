@@ -110,7 +110,7 @@ function VariantBox({t,checked,allowed,pool,count,onChange}:{t:W;checked:boolean
 }
 
 /** Topic test settings: which / how many questions (custom number bounded by the pool), variants, time, open window, reveal. */
-export function TopicTestSetup({lang,topic,topics,keyOf,disabled,error,onStart}:{lang:Lang;topic:Topic;topics:TopicRow[]|null;keyOf:number[]|null;disabled:boolean;error?:string;onStart:(p:TestPayload)=>void}){
+export function TopicTestSetup({lang,topic,topics,keyOf,disabled,reason,error,onStart}:{lang:Lang;topic:Topic;topics:TopicRow[]|null;keyOf:number[]|null;disabled:boolean;reason?:string;error?:string;onStart:(p:TestPayload)=>void}){
  const t=w[lang];
  const total=topic.test.length;
  const [count,setCount]=useState(total);
@@ -139,7 +139,8 @@ export function TopicTestSetup({lang,topic,topics,keyOf,disabled,error,onStart}:
   <div className="cr-form lg-setup">
    <TestOptions lang={lang} onChange={onOpts}/>
    {error&&<p className="cr-error" role="alert">{setupError(lang,error)}</p>}
-   <button className="button" disabled={disabled||!opts.ok||(variant?!allowed:!pick.length)} onClick={()=>onStart({...opts.o,...(variant?{variant:{count,extra}}:{questions:pick})})}><Timer size={16}/>{t.start} · {variant?count:pick.length}</button>
+   <button className="button" disabled={disabled||!opts.ok||(variant?!allowed:!pick.length)} aria-describedby={reason?'lg-start-why':undefined} onClick={()=>onStart({...opts.o,...(variant?{variant:{count,extra}}:{questions:pick})})}><Timer size={16}/>{t.start} · {variant?count:pick.length}</button>
+   {reason&&<small id="lg-start-why" className="cr-help lg-why" role="note">{reason}</small>}
   </div>
  </>;
 }

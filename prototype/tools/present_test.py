@@ -22,7 +22,9 @@ LIVE=f'http://tv.test:{port}';DEV=f'http://127.0.0.1:{port}'
 def open_slides(pg,base):
     pg.goto(f'{base}/?screen=courses&lang=uz&role=student');pg.wait_for_timeout(900)
     pg.locator('.lg-section .lg-row').first.click();pg.wait_for_timeout(300);pg.locator('.lg-section .lg-row').first.click();pg.wait_for_timeout(500)
+    btn=pg.locator('.lg-section > .button').first.inner_text()
     pg.locator('.lg-section > .button').first.click();pg.wait_for_timeout(600)
+    return btn
 box="s=>{const e=document.querySelector(s);if(!e)return null;const r=e.getBoundingClientRect();return {l:r.left,t:r.top,w:r.width,h:r.height,vw:innerWidth,vh:innerHeight}}"
 with sync_playwright() as p:
     exe='/usr/bin/chromium' if os.path.exists('/usr/bin/chromium') else None
@@ -35,7 +37,10 @@ with sync_playwright() as p:
     ph=tv.evaluate(box,'.phone')
     check('live: app is a centred column',ph and ph['w']<=560 and abs(ph['l']-(1920-ph['w'])/2)<2,str(ph))
     if OUT:tv.screenshot(path=f'{OUT}/live-1920.png')
-    open_slides(tv,LIVE)
+    btn=open_slides(tv,LIVE)
+    # The button counts the closing references slide too, so it matches the player's "1 / N".
+    total=tv.locator('.sl-bar b').inner_text().split('/')[-1].strip()
+    check('slide count on the button matches the player',f'· {total} ' in btn+' ',f'{btn!r} vs {total}')
     sl=tv.evaluate(box,'.sl-player')
     check('live 1920: slides fill the screen',sl and sl['w']>=1919 and sl['h']>=1079,str(sl))
     tv.locator('.sl-present').click();tv.wait_for_timeout(600)
