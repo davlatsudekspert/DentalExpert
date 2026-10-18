@@ -3,14 +3,16 @@
 :root{--lg-ink:#183e50;--lg-sub:#5b6f77;--lg-line:#d6e5e6;--lg-brand:#168d8b;--lg-deep:#10254e;--lg-soft:#e3f1f1;--lg-paper:#fff;
  --lg-amber:#8a5a0b;--lg-amber-bg:#fff1db;--lg-red:#b3261e;--lg-red-bg:#fdecea;--sl-brand:#168d8b}
 
-.lg-section,.lg-group{display:flex;flex-direction:column;gap:12px}
+.lg-section,.lg-group{display:flex;flex-direction:column;gap:12px;scroll-margin-top:calc(env(safe-area-inset-top) + 8px)}
 .lg-group h2,.lg-section h2{font-size:22px;line-height:1.25}
 .lg-eyebrow{display:block;font-size:11px;font-weight:750;letter-spacing:1.6px;text-transform:uppercase;color:var(--lg-brand)}
 .lg-h{font-size:15px;margin-top:6px}
 .lg-small{font-size:12px;line-height:1.5}
 .lg-list{display:flex;flex-direction:column;gap:8px}
 .lg-row{display:flex;align-items:center;gap:12px;width:100%;min-height:62px;text-align:left;padding:10px 12px;border:1px solid var(--lg-line);border-radius:18px;background:var(--lg-paper);color:var(--lg-ink)}
-.lg-row>span:nth-child(2){display:flex;flex-direction:column;gap:2px;flex:1;min-width:0}
+.lg-row-text{display:flex;flex-direction:column;align-items:flex-start;gap:2px;flex:1;min-width:0}
+.lg-row-text>strong,.lg-row-text>small{align-self:stretch}
+.lg-row-text>.lg-tag{margin-top:4px}
 .lg-row strong{font-size:14px;line-height:1.35}
 .lg-row small{font-size:12px;color:var(--lg-sub);line-height:1.4}
 .lg-row>svg:last-child{flex:none;color:#9bb0b6}
@@ -21,7 +23,9 @@
 .lg-tag{display:inline-flex;align-items:center;gap:4px;flex:none;padding:4px 10px;border-radius:20px;font-size:11px;font-weight:700;background:#eef2f3;color:var(--lg-sub);white-space:nowrap}
 .lg-tag.brand{background:var(--lg-soft);color:#0f6f6d}
 .lg-tag.warn{background:var(--lg-amber-bg);color:var(--lg-amber)}
-.lg-tabs{margin:6px 0 2px}
+.lg-tabs{margin:6px 0 2px;flex-wrap:nowrap!important;overflow-x:auto;scrollbar-width:none;padding:2px;-webkit-overflow-scrolling:touch}
+.lg-tabs::-webkit-scrollbar{display:none}
+.lg-tabs button{flex:none;white-space:nowrap;min-height:40px}
 .lg-link{display:inline-flex;align-items:center;gap:4px;align-self:flex-start;font-size:12px;font-weight:700;color:var(--lg-brand);min-height:32px}
 .lg-card{display:flex;flex-direction:column;gap:8px;padding:14px 16px;border-radius:22px;background:var(--lg-paper);border:1px solid var(--lg-line)}
 .lg-card h3,.lg-stage h3{display:flex;align-items:center;gap:7px;font-size:15px}
@@ -53,9 +57,13 @@
 .lg-oral-plan{padding:0 14px 12px 48px}
 .lg-oral-plan small{font-size:11px;font-weight:750;letter-spacing:1px;text-transform:uppercase;color:var(--lg-brand)}
 .lg-oral-plan ul{margin:6px 0 0;padding-left:16px;font-size:13px;line-height:1.5;display:flex;flex-direction:column;gap:3px}
-.lg-oral-tools{display:flex;flex-wrap:wrap;align-items:center;gap:6px 14px;padding:0 12px 10px 48px}
-.lg-check{display:flex;align-items:flex-start;gap:8px;font-size:13px;min-height:32px}
-.lg-check input{width:18px;height:18px;margin-top:1px;accent-color:var(--lg-brand);flex:none}
+.lg-oral-tools{display:flex;flex-wrap:wrap;align-items:center;gap:6px 14px;padding:0 12px 2px 48px}
+.lg-check,.classroom label.lg-check{display:flex;flex-direction:row;align-items:flex-start;gap:10px;font-weight:inherit;font-size:13px;min-height:44px;padding:12px 8px 12px 0;cursor:pointer}
+.lg-check input{width:20px;height:20px;margin:0;accent-color:var(--lg-brand);flex:none}
+.classroom .lg-qpick .lg-check{margin:-10px -12px 0;padding:12px}
+.lg-oral-tools .lg-check{align-items:center}
+.lg-oral-tools .lg-link{min-height:44px}
+.lg-hint{font-size:12px;line-height:1.4;color:var(--lg-sub);padding:6px 0}
 .lg-grade{width:100%;display:flex;flex-direction:column;gap:6px}
 .lg-grade>div{display:flex;align-items:center;justify-content:space-between;gap:8px;font-size:12px}
 .lg-seg{display:inline-flex;border:1px solid var(--lg-line);border-radius:12px;overflow:hidden;flex:none}
@@ -71,9 +79,13 @@
 .lg-inline{flex-direction:row;align-items:flex-end;gap:10px;flex-wrap:wrap}
 .lg-inline label{flex:1;min-width:120px}
 .lg-errs{display:flex;flex-direction:column;gap:8px;margin-top:6px}
-.lg-err{display:grid;grid-template-columns:1fr 70px 38px;align-items:center;gap:8px;font-size:12px}
-.lg-err span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.lg-err{display:grid;grid-template-columns:1fr auto;align-items:center;gap:4px 10px;font-size:12px}
+.lg-err-q{grid-column:1/-1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--lg-sub)}
+.lg-err-q b{color:var(--lg-ink)}
 .lg-err .lg-bar{grid-column:auto}
+.lg-err small{font-size:12px;font-weight:750;white-space:nowrap}
+.lg-err.good .lg-bar i{background:var(--pr-green,#1f9e74)}.lg-err.good small{color:var(--pr-green,#16805d)}
+.lg-err.bad .lg-bar i{background:var(--lg-red)}.lg-err.bad small{color:var(--lg-red)}
 .lg-review{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:10px;font-size:13px}
 .lg-review li{display:flex;flex-direction:column;gap:3px;line-height:1.45}
 .lg-review li.bad b{color:var(--lg-red)}
@@ -177,8 +189,9 @@
 .sl-notes.on{background:var(--lg-amber-bg);color:var(--lg-amber);border-color:#f0d9ad}
 /* Buttons inside lesson screens: the global .button is full-width; here they share a row and wrap. */
 .lg-group .cr-actions,.lg-section .cr-actions{flex-wrap:wrap}
-.lg-group .cr-actions .button,.lg-group .lg-stage .button,.lg-group>.button{flex:1 1 150px;width:auto;max-width:none;align-self:stretch;white-space:normal;line-height:1.3;margin-top:4px}
+.lg-group .cr-actions .button,.lg-group .lg-inline .button,.lg-group>.button{flex:1 1 150px;width:auto;max-width:none;align-self:stretch;white-space:normal;line-height:1.3;margin-top:4px}
 .lg-group>.button{flex:none;align-self:flex-start}
+.lg-group .lg-stage>.button{flex:none;width:100%;max-width:none;white-space:normal;line-height:1.3}
 .lg-invite-body b{font-size:24px;letter-spacing:2px;white-space:nowrap}
 .lg-invite-body>div{min-width:0}
 .lg-group .cr-actions .button.secondary{flex:1 1 150px;width:auto}
@@ -254,9 +267,10 @@
 .anatomy-tools button[aria-pressed=true]{background:#10254e!important;color:#fff!important;border-color:#10254e!important}
 .anatomy-tools button[aria-pressed=true] svg{color:#fff}
 /* 3D atlas chips: explode on its own row, layers share the row below so nothing is cut off */
-.atlas3d-chips{display:grid!important;grid-template-columns:repeat(auto-fit,minmax(0,1fr));overflow:visible!important}
-.atlas3d-chips .explode{grid-column:1/-1;justify-content:center}
-.atlas3d-chips button{justify-content:center;padding:0 8px!important;font-size:12.5px!important}
+/* Wrapping flex, not an auto-fit grid: WebKit collapses minmax(0,1fr) tracks to zero width and the chips pile up. */
+.atlas3d-chips{display:flex!important;flex-wrap:wrap;overflow:visible!important}
+.atlas3d-chips .explode{flex-basis:100%!important;justify-content:center}
+.atlas3d-chips button{flex:1 1 auto!important;justify-content:center;padding:0 12px!important;font-size:12.5px!important;white-space:nowrap}
 /* Settings */
 .settings-profile{display:flex;align-items:center;gap:14px;padding:18px!important;border:0!important;background:linear-gradient(135deg,#10254e,#168d8b)!important;color:#fff;box-shadow:0 16px 34px #10254e2e!important}
 .settings-profile h2{color:#fff!important}
@@ -337,3 +351,11 @@ body{-webkit-text-size-adjust:100%}
 .theme-swatch.color{background:linear-gradient(135deg,#e6f9fc,#17a6b7)}
 .help-links a::after{margin-left:auto;padding-left:12px}
 .help-links a{gap:10px}
+/* Lesson screens: 44px back link, form helper text, in-app confirmation sheet. */
+button.cr-back{min-height:44px;padding:10px 14px 10px 0;margin:-6px 0}
+.cr-help{font-size:12px;font-weight:400;line-height:1.4;color:var(--lg-sub)}
+.lg-confirm{position:fixed;inset:0;z-index:120;display:flex;align-items:flex-end;justify-content:center;padding:16px 16px calc(16px + env(safe-area-inset-bottom));background:#0d1a1f73;animation:soft-in .2s ease}
+.lg-confirm-sheet{width:min(100%,460px);display:flex;flex-direction:column;gap:14px;padding:20px 18px 18px;border-radius:24px;background:var(--lg-paper);color:var(--lg-ink);box-shadow:0 20px 50px #0d1a1f40}
+.lg-confirm-sheet p{font-size:15px;line-height:1.5;font-weight:600}
+.lg-confirm-actions{display:flex;gap:10px}
+.lg-confirm-actions .button{flex:1 1 0;width:auto;min-height:48px;margin-top:0;padding:10px 12px;white-space:normal;line-height:1.3}

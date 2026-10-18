@@ -1,4 +1,4 @@
-import {useEffect,useState,type ReactNode} from 'react';
+import {useEffect,useRef,useState,type ReactNode} from 'react';
 import {BookOpen,ChevronDown,ChevronLeft,ChevronRight,Presentation,Target} from 'lucide-react';
 import Slides from './Slides';
 import './learn.css';
@@ -21,6 +21,9 @@ export const cw={
   testInGroup:'The topic test is taken when your teacher opens it in a group.'}
 };
 
+/** Brings a lesson screen's top back into view after navigating inside it (when it has scrolled above the viewport). */
+export const toTop=(el:HTMLElement|null)=>{if(el&&el.getBoundingClientRect().top<0)el.scrollIntoView?.({block:'start'})};
+
 /** Course chips + subject rows. */
 export function SubjectList({lang,onPick}:{lang:Lang;onPick:(s:Subject)=>void}){
  const t=cw[lang];
@@ -32,18 +35,18 @@ export function SubjectList({lang,onPick}:{lang:Lang;onPick:(s:Subject)=>void}){
  return <>
   <div className="chips">{[0,...courses].map(c=><button key={c} className={course===c?'active':''} onClick={()=>setCourse(c)}>{c?courseWord(c,lang):t.all}</button>)}</div>
   <div className="lg-list">{list.map(s=>{const n=topicsOf(s.id).length;return <button key={s.id} className="lg-row" onClick={()=>onPick(s)}>
-   <span className="lg-ico" style={{background:subjectColor(s.id).bg}}><SubjectIcon id={s.id}/></span><span><strong>{tx(s.title,lang)}</strong><small>{courseWord(s.course,lang)} · {s.semester}-{lang==='en'?'sem.':lang==='ru'?'сем.':'semestr'} · {n} {t.topics}</small>{n>0&&<i className="lg-mini"><b style={{width:`${done(s.id)/n*100}%`,background:subjectColor(s.id).c}}/></i>}</span><ChevronRight size={16}/></button>})}</div>
+   <span className="lg-ico" style={{background:subjectColor(s.id).bg}}><SubjectIcon id={s.id}/></span><span className="lg-row-text"><strong>{tx(s.title,lang)}</strong><small>{courseWord(s.course,lang)} · {s.semester}-{lang==='en'?'sem.':lang==='ru'?'сем.':'semestr'} · {n} {t.topics}</small>{n>0&&<i className="lg-mini"><b style={{width:`${done(s.id)/n*100}%`,background:subjectColor(s.id).c}}/></i>}</span><ChevronRight size={16}/></button>})}</div>
  </>;
 }
 
-/** Topic rows of one subject; `tag` adds a status pill per topic (used in groups). */
+/** Topic rows of one subject; `tag` adds a status pill under each title (used in groups). */
 export function TopicList({lang,subject,onPick,tag}:{lang:Lang;subject:Subject;onPick:(m:TopicMeta)=>void;tag?:(m:TopicMeta)=>ReactNode}){
  const t=cw[lang];
  const list=topicsOf(subject.id);
  const seen=loadSeen();
  if(!list.length)return <p className="muted">{t.empty}</p>;
  return <div className="lg-list">{list.map(m=><button key={m.id} className="lg-row" onClick={()=>onPick(m)}>
-  <span className={'lg-ico num '+m.type} style={{background:subjectColor(m.subject).bg,color:subjectColor(m.subject).c}}>{m.n}</span><span><strong>{tx(m.title,lang)}</strong><small>{metaLine(m,lang)}</small></span>{tag?tag(m):seen[m.id]?<span className="lg-tag brand">{seen[m.id].s>=seen[m.id].n?'✓':`${seen[m.id].s}/${seen[m.id].n}`}</span>:null}<ChevronRight size={16}/></button>)}</div>;
+  <span className={'lg-ico num '+m.type} style={{background:subjectColor(m.subject).bg,color:subjectColor(m.subject).c}}>{m.n}</span><span className="lg-row-text"><strong>{tx(m.title,lang)}</strong><small>{metaLine(m,lang)}</small>{tag?.(m)}</span>{!tag&&seen[m.id]?<span className="lg-tag brand">{seen[m.id].s>=seen[m.id].n?'✓':`${seen[m.id].s}/${seen[m.id].n}`}</span>:null}<ChevronRight size={16}/></button>)}</div>;
 }
 
 export function useTopic(id:string|null){
@@ -96,7 +99,10 @@ export default function Curriculum({lang}:{lang:Lang}){
  const [subject,setSubject]=useState<Subject|null>(null);
  const [meta,setMeta]=useState<TopicMeta|null>(null);
  const topic=useTopic(meta?.id||null);
- return <section className="lg-section">
+ const top=useRef<HTMLElement>(null);
+ const first=useRef(true);
+ useEffect(()=>{if(first.current){first.current=false;return}toTop(top.current)},[subject,meta]);
+ return <section className="lg-section" ref={top}>
   {subject&&<button className="cr-back" onClick={()=>meta?setMeta(null):setSubject(null)}><ChevronLeft size={16}/>{meta?tx(subject.title,lang):t.title}</button>}
   {!subject?<><p className="muted">{t.sub}</p><SubjectList lang={lang} onPick={setSubject}/><small className="muted lg-small">{t.note}</small></>
   :!meta?<><SubjectHero lang={lang} subject={subject}/><TopicList lang={lang} subject={subject} onPick={setMeta}/></>

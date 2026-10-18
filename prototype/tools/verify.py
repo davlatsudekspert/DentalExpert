@@ -21,6 +21,9 @@ with sync_playwright() as p:
  def go(screen,lang='uz'):
   page.goto(f'{BASE}/?screen={screen}&lang={lang}')
   page.wait_for_selector('.screen')
+  # Let hero/lesson pictures finish loading before the image checks read them.
+  try:page.wait_for_function("()=>[...document.querySelectorAll('.screen img')].every(i=>i.complete)",timeout=5000)
+  except Exception:pass
  for lang in ['uz','ru','en']:
   for screen in SCREENS:
    go(screen,lang)

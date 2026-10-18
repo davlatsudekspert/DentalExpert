@@ -72,6 +72,7 @@
 .pr-arch-jaw{font-size:13px;font-weight:700;fill:#9bb4b8;letter-spacing:.3px}
 .pr-arch-num{font-size:12.5px;font-weight:800;fill:#fff}
 .pr-tooth-btn{outline:none}
+.pr-tooth-hit{fill:transparent;stroke:none}
 .pr-tooth-btn:hover .pr-tshape{fill:#e3f1f1}
 .pr-tooth-btn:focus-visible .pr-tshape{stroke:var(--pr-brand);stroke-width:3.2}
 .pr-pulse{animation:pr-pulse 1.6s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
@@ -133,6 +134,12 @@
 .pr-seg-ok{background:var(--pr-green);border-color:var(--pr-green);color:#fff}
 .pr-seg-bad{background:var(--pr-red);border-color:var(--pr-red);color:#fff}
 .pr-seg-wrap{display:flex;flex-direction:column;gap:6px}
+/* `.pr button{color:inherit}` and the theme's `.pr-seg-btn` background outrank single-class states, so selected/graded states carry their own specificity. */
+:root .pr .pr-seg-btn.pr-seg-on{background:var(--pr-dark);border-color:var(--pr-dark);color:#fff}
+:root .pr .pr-seg-btn.pr-seg-ok{background:var(--pr-green);border-color:var(--pr-green);color:#fff}
+:root .pr .pr-seg-btn.pr-seg-bad{background:var(--pr-red);border-color:var(--pr-red);color:#fff}
+.pr .pr-opt-ok{color:#0d5a41}
+.pr .pr-opt-bad{color:#7c2219}
 
 /* perio */
 .pr-perio-head{font-size:12px;font-weight:700;fill:var(--pr-dark)}
@@ -173,6 +180,8 @@
 .pr-btn-ghost:hover{background:var(--pr-soft)}
 .pr-btn-wide{width:100%}
 .pr-next{animation:pr-up .35s .05s cubic-bezier(.2,.9,.3,1.2) both}
+/* Keep feedback and Next clear of the fixed bottom nav when scrolled into view. */
+.pr-fb-slot,.pr-next{scroll-margin-bottom:calc(120px + env(safe-area-inset-bottom))}
 
 /* setup + result */
 .pr-setup{padding:22px 18px;display:flex;flex-direction:column;gap:14px;align-items:flex-start}

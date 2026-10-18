@@ -1,11 +1,11 @@
-import {useEffect,useMemo,useState} from 'react';
+import {useEffect,useMemo,useRef,useState} from 'react';
 import {AlarmClock,Check,ChevronRight,CircleAlert,Database,History,RotateCcw,Trophy,X} from 'lucide-react';
 import type {Lang} from './discoveryData';
 import QuizRun,{type RunQ} from './QuizRun';
-import {bank} from './dailyData';
+import {ruPl} from './Review';
 import './review.css';
 
-/** "Imtihon rejimi": timed mock exam drawn only from questions whose answers ship in the app (deck quizzes + daily bank). */
+/** "Imtihon rejimi": timed mock exam drawn only from professional questions whose answers ship in the app (mini-lesson deck quizzes). The patient-level daily bank is deliberately left out. */
 
 type Deck={id:string;title:string;quiz:{q:string;options:string[];correct:number;explanation:string}[]};
 type ExamQ=RunQ&{source:string};
@@ -14,11 +14,14 @@ type Result={qs:ExamQ[];answers:number[];used:number;mins:number};
 
 const KEY='de_exam';
 const PASS=60;
+const COUNTS=[20,30] as const;
+type Count=typeof COUNTS[number];
+const ruQ=(n:number)=>`${n} ${ruPl(n,['вопрос','вопроса','вопросов'])}`;
 
 const dict={
  uz:{title:'Imtihon rejimi',sub:'Haqiqiy imtihondagidek: vaqt cheklangan, natija va xatolar oxirida ko‘rsatiladi',
   count:'Savollar soni',time:'Vaqt',q:(n:number)=>`${n} ta savol`,min:(n:number)=>`${n} daqiqa`,
-  pool:'Savollar bazasi',poolText:(n:number,d:number,b:number)=>`Hozir bazada ${n} ta savol bor: ${d} tasi mini-dars testlaridan, ${b} tasi kundalik savollardan. Har safar tasodifiy aralashtiriladi.`,
+  pool:'Savollar bazasi',poolText:(n:number)=>`Hozir bazada mini-dars testlaridan ${n} ta kasbiy savol bor. Har safar tasodifiy aralashtiriladi.`,
   poolNote:'Fan mavzulari bo‘yicha testlarning javoblari faqat serverda (guruh testlari uchun) saqlanadi, shuning uchun ular bu imtihonga kiritilmagan.',
   repeat:'Baza hali kichik — urinishlar orasida savollar takrorlanishi mumkin.',
   capped:(n:number)=>`Bazada atigi ${n} ta savol bor, shuning uchun imtihon ${n} ta savoldan iborat bo‘ladi.`,
@@ -27,24 +30,24 @@ const dict={
   passed:'Tabriklaymiz, imtihondan o‘tdingiz!',failed:'Bu safar o‘tish balliga yetmadi',passMark:'O‘tish bali 60%',
   correct:'To‘g‘ri',wrong:'Xato',skipped:'Javobsiz',used:'Sarflangan vaqt',
   mistakes:'Xatolar tahlili',your:'Sizning javobingiz',none:'Javob berilmagan',right:'To‘g‘ri javob',why:'Izoh',noMistakes:'Xato yo‘q — barcha javoblar to‘g‘ri. Zo‘r natija!',
-  retry:'Qayta topshirish',home:'Sozlamalarga qaytish',history:'Oxirgi urinishlar',historyEmpty:'Hali urinishlar yo‘q. Birinchi imtihoningizni topshirib ko‘ring — natijalar shu yerda saqlanadi.',
+  retry:'Qayta topshirish',home:'Yangi imtihon',history:'Oxirgi urinishlar',historyEmpty:'Hali urinishlar yo‘q. Birinchi imtihoningizni topshirib ko‘ring — natijalar shu yerda saqlanadi.',
   best:'Eng yaxshi natija',avg:'O‘rtacha',ok:'O‘tdi',fail:'O‘tmadi'},
  ru:{title:'Режим экзамена',sub:'Как на настоящем экзамене: время ограничено, результат и ошибки видны в конце',
-  count:'Количество вопросов',time:'Время',q:(n:number)=>`${n} вопросов`,min:(n:number)=>`${n} мин`,
-  pool:'База вопросов',poolText:(n:number,d:number,b:number)=>`Сейчас в базе ${n} вопросов: ${d} из тестов мини-уроков и ${b} из ежедневных вопросов. Каждый раз они перемешиваются случайно.`,
+  count:'Количество вопросов',time:'Время',q:ruQ,min:(n:number)=>`${n} мин`,
+  pool:'База вопросов',poolText:(n:number)=>`Сейчас в базе ${ruQ(n)} из тестов мини-уроков. Каждый раз они перемешиваются случайно.`,
   poolNote:'Ответы к тестам по темам предметов хранятся только на сервере (для групповых тестов), поэтому они не входят в этот экзамен.',
   repeat:'База пока небольшая — вопросы могут повторяться между попытками.',
-  capped:(n:number)=>`В базе всего ${n} вопросов, поэтому экзамен будет из ${n} вопросов.`,
+  capped:(n:number)=>`В базе всего ${ruQ(n)}, поэтому экзамен будет из ${ruQ(n)}.`,
   rules:['После выбора ответа правильность не показывается.','Когда время выйдет, экзамен завершится автоматически; вопросы без ответа считаются ошибками.','Проходной балл — 60%.'],
   start:'Начать экзамен',loading:'Загружаем вопросы…',empty:'Вопросы не найдены. Проверьте подключение и попробуйте снова.',
   passed:'Поздравляем, экзамен сдан!',failed:'В этот раз до проходного балла не хватило',passMark:'Проходной балл 60%',
   correct:'Верно',wrong:'Ошибки',skipped:'Без ответа',used:'Затрачено',
   mistakes:'Разбор ошибок',your:'Ваш ответ',none:'Нет ответа',right:'Правильный ответ',why:'Пояснение',noMistakes:'Ошибок нет — все ответы верные. Отличный результат!',
-  retry:'Пройти ещё раз',home:'К настройкам',history:'Последние попытки',historyEmpty:'Попыток пока нет. Сдайте первый экзамен — результаты сохранятся здесь.',
+  retry:'Пройти ещё раз',home:'Новый экзамен',history:'Последние попытки',historyEmpty:'Попыток пока нет. Сдайте первый экзамен — результаты сохранятся здесь.',
   best:'Лучший результат',avg:'В среднем',ok:'Сдан',fail:'Не сдан'},
  en:{title:'Exam mode',sub:'Just like the real exam: timed, with your score and mistakes shown at the end',
   count:'Number of questions',time:'Time',q:(n:number)=>`${n} questions`,min:(n:number)=>`${n} min`,
-  pool:'Question pool',poolText:(n:number,d:number,b:number)=>`The pool has ${n} questions right now: ${d} from mini-lesson quizzes and ${b} from the daily questions. They are shuffled every time.`,
+  pool:'Question pool',poolText:(n:number)=>`The pool has ${n} professional questions from the mini-lesson quizzes. They are shuffled every time.`,
   poolNote:'Answers to the subject topic tests are kept only on the server (for group tests), so those are not part of this exam.',
   repeat:'The pool is still small, so questions may repeat between attempts.',
   capped:(n:number)=>`The pool has only ${n} questions, so this exam will have ${n}.`,
@@ -53,7 +56,7 @@ const dict={
   passed:'Congratulations, you passed!',failed:'Not quite the pass mark this time',passMark:'Pass mark 60%',
   correct:'Correct',wrong:'Wrong',skipped:'Unanswered',used:'Time used',
   mistakes:'Mistake review',your:'Your answer',none:'No answer',right:'Correct answer',why:'Explanation',noMistakes:'No mistakes — every answer was right. Excellent!',
-  retry:'Try again',home:'Back to setup',history:'Recent attempts',historyEmpty:'No attempts yet. Take your first exam and your results will be kept here.',
+  retry:'Try again',home:'New exam',history:'Recent attempts',historyEmpty:'No attempts yet. Take your first exam and your results will be kept here.',
   best:'Best score',avg:'Average',ok:'Passed',fail:'Failed'}
 };
 
@@ -87,17 +90,17 @@ export default function Exam({lang}:{lang:'uz'|'ru'|'en'}){
  const t=dict[lang];
  const l=lang as Lang;
  const [decks,setDecks]=useState<Deck[]|null>(null);
- const [count,setCount]=useState<20|40>(20);
+ const [count,setCount]=useState<Count>(20);
  const [mins,setMins]=useState<20|40>(20);
  const [run,setRun]=useState<{qs:ExamQ[];deadline:number;started:number;mins:number}|null>(null);
  const [result,setResult]=useState<Result|null>(null);
  const [history,setHistory]=useState<Attempt[]>(loadHistory);
+ const resRef=useRef<HTMLDivElement>(null);
 
  useEffect(()=>{let live=true;setDecks(null);fetch(`/decks/manifest.${lang}.json`).then(r=>r.ok?r.json():[]).then(d=>{if(live)setDecks(Array.isArray(d)?d:[])}).catch(()=>{if(live)setDecks([])});return ()=>{live=false}},[lang]);
 
- const daily=useMemo<ExamQ[]>(()=>bank(l).map(q=>({...q,source:'daily'})),[l]);
  const deckQs=useMemo<ExamQ[]>(()=>(decks||[]).flatMap(d=>d.quiz.map(q=>({q:q.q,options:q.options,correct:q.correct,explanation:q.explanation,source:d.title}))),[decks]);
- const pool=useMemo(()=>[...deckQs,...daily],[deckQs,daily]);
+ const pool=deckQs;
  const size=Math.min(count,pool.length);
 
  const start=()=>{
@@ -118,6 +121,9 @@ export default function Exam({lang}:{lang:'uz'|'ru'|'en'}){
   setRun(null);
  };
 
+ // The result replaces the full-screen run; start it at the top rather than wherever the setup was scrolled to.
+ useEffect(()=>{if(result)resRef.current?.scrollIntoView({block:'start'})},[result]);
+
  if(run)return <QuizRun title={t.title} lang={l} questions={run.qs} reveal={false} deadline={run.deadline} onDone={(_s,_n,a)=>done(a)} onClose={()=>setRun(null)}/>;
 
  if(result){
@@ -128,7 +134,7 @@ export default function Exam({lang}:{lang:'uz'|'ru'|'en'}){
   const pct=Math.round(correct/n*100);
   const pass=pct>=PASS;
   const misses=result.qs.map((q,k)=>({q,a:result.answers[k],k})).filter(x=>x.a!==x.q.correct);
-  return <div className="rv-root ex-root">
+  return <div className="rv-root ex-root ex-done" ref={resRef}>
    <section className={'ex-result '+(pass?'pass':'fail')}>
     <ScoreRing pct={pct} pass={pass}/>
     <div className="ex-verdict">{pass?<Trophy size={18}/>:<CircleAlert size={18}/>}<strong>{pass?t.passed:t.failed}</strong></div>
@@ -162,7 +168,7 @@ export default function Exam({lang}:{lang:'uz'|'ru'|'en'}){
  return <div className="rv-root ex-root">
   <header className="rv-head"><h2>{t.title}</h2><p>{t.sub}</p></header>
   <section className="ex-setup">
-   <Seg label={t.count} value={count} options={[20,40] as (20|40)[]} render={t.q} onChange={setCount}/>
+   <Seg label={t.count} value={count} options={[...COUNTS]} render={t.q} onChange={setCount}/>
    <Seg label={t.time} value={mins} options={[20,40] as (20|40)[]} render={t.min} onChange={setMins}/>
    <ul className="ex-rules">{t.rules.map((r,k)=><li key={k}>{k===1?<AlarmClock size={16}/>:<Check size={16}/>}<span>{r}</span></li>)}</ul>
    {decks===null?<div className="rv-loading" role="status"><span className="rv-spin"/>{t.loading}</div>
@@ -173,8 +179,7 @@ export default function Exam({lang}:{lang:'uz'|'ru'|'en'}){
   <section className="ex-pool">
    <div className="ex-pool-head"><Database size={18}/><strong>{t.pool}</strong><span className="ex-pool-n">{decks===null?'…':pool.length}</span></div>
    {decks!==null&&<>
-    <div className="ex-pool-bar" aria-hidden="true"><i style={{width:`${pool.length?deckQs.length/pool.length*100:0}%`}}/><em style={{width:`${pool.length?daily.length/pool.length*100:0}%`}}/></div>
-    <p>{t.poolText(pool.length,deckQs.length,daily.length)}</p>
+    <p>{t.poolText(pool.length)}</p>
     {pool.length<count*2&&<p className="ex-amber">{t.repeat}</p>}
    </>}
    <p className="rv-muted">{t.poolNote}</p>

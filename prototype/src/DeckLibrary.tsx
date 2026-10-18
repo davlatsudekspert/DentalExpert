@@ -26,6 +26,7 @@ function Viewer({deck,lang,onClose,onProgress}:{deck:Deck;lang:Lang;onClose:()=>
  const t=words[lang];
  const [n,setN]=useState(1);
  const [mode,setMode]=useState<'slides'|'quiz'>('slides');
+ const [rot,setRot]=useState(false);
  const [answers,setAnswers]=useState<(number|null)[]>(()=>deck.quiz.map(()=>null));
  const root=useRef<HTMLDivElement>(null);
  const touch=useRef<number|null>(null);
@@ -36,7 +37,8 @@ function Viewer({deck,lang,onClose,onProgress}:{deck:Deck;lang:Lang;onClose:()=>
   const prevOverflow=document.body.style.overflow;document.body.style.overflow='hidden';
   return()=>{window.removeEventListener('keydown',key);document.body.style.overflow=prevOverflow};
  },[go,onClose]);
- const present=()=>{const el=root.current as (HTMLElement&{webkitRequestFullscreen?:()=>void})|null;if(!el)return;try{(el.requestFullscreen?.()||el.webkitRequestFullscreen?.())}catch{/* fullscreen unavailable */}};
+ // Phones in portrait (and iOS, which has no element fullscreen) turn the slide sideways to fill the screen instead.
+ const present=()=>{const el=root.current as (HTMLElement&{webkitRequestFullscreen?:()=>void})|null;if(!el)return;if(innerHeight>innerWidth||!(el.requestFullscreen||el.webkitRequestFullscreen)){setRot(r=>!r);return}try{(el.requestFullscreen?.()||el.webkitRequestFullscreen?.())}catch{/* fullscreen unavailable */}};
  // Copy/save affordances are removed; screenshots of a displayed screen cannot be prevented.
  const block=(e:{preventDefault:()=>void})=>e.preventDefault();
  const score=answers.filter((a,i)=>a===deck.quiz[i].correct).length;
@@ -46,11 +48,11 @@ function Viewer({deck,lang,onClose,onProgress}:{deck:Deck;lang:Lang;onClose:()=>
   <div className="deck-bar">
    <strong>{deck.title}</strong>
    <span>{mode==='slides'?`${n} / ${deck.slides}`:t.result}</span>
-   <button onClick={present} aria-label={t.present}><Maximize size={18}/></button>
-   <button onClick={onClose} aria-label={t.close}><X size={20}/></button>
+   <button onClick={present} aria-label={t.present} aria-pressed={rot}><Maximize size={18}/></button>
+   <button data-close onClick={onClose} aria-label={t.close}><X size={20}/></button>
   </div>
   {mode==='slides'?<>
-   <div className="deck-stage" onTouchStart={e=>{touch.current=e.touches[0].clientX}} onTouchEnd={e=>{if(touch.current===null)return;const dx=e.changedTouches[0].clientX-touch.current;touch.current=null;if(Math.abs(dx)>40)go(dx<0?1:-1)}}>
+   <div className={'deck-stage'+(rot?' rot':'')} onTouchStart={e=>{touch.current=e.touches[0].clientX}} onTouchEnd={e=>{if(touch.current===null)return;const dx=e.changedTouches[0].clientX-touch.current;touch.current=null;if(Math.abs(dx)>40)go(dx<0?1:-1)}}>
     <img src={slideUrl(deck.id,lang,n)} alt={`${deck.title} ${n}`} draggable={false}/>
     <div className="deck-shield"/>
    </div>

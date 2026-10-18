@@ -23,7 +23,7 @@ with sync_playwright() as p:
     tp.screenshot(path=OUT+'/t1-group-invite.png',full_page=True)
     sc,sp,serr=login(b,'student','Talaba Bir')
     sp.goto(BASE+'/?screen=student&lang=uz');sp.wait_for_selector('.classroom');sp.wait_for_timeout(700)
-    sp.get_by_placeholder('6 belgili',exact=False).fill(code);sp.get_by_placeholder('Ustoz sizni',exact=False).fill('Lola');sp.get_by_role('button',name='Qo‘shilish',exact=True).click();sp.wait_for_timeout(800)
+    sp.get_by_placeholder('6 belgili',exact=False).fill(code);sp.get_by_placeholder('Masalan: Lola',exact=False).fill('Lola');sp.get_by_role('button',name='Qo‘shilish',exact=True).click();sp.wait_for_timeout(800)
     # teacher: plan → subject → topic
     tp.reload();tp.wait_for_selector('.classroom');tp.locator('.lg-row',has_text='Terapiya 3-kurs').click();tp.wait_for_timeout(800)
     tp.locator('.lg-row',has_text=subj['title']['uz']).click();tp.wait_for_timeout(300)
@@ -66,8 +66,8 @@ with sync_playwright() as p:
     sp.screenshot(path=OUT+'/u2-student-result.png')
     sp.get_by_role('button',name='Yopish').last.click();sp.wait_for_timeout(600)
     # teacher finishes, student reviews
-    tp.on('dialog',lambda d:d.accept())
-    tp.get_by_role('button',name='Testni yakunlash').click();tp.wait_for_timeout(900)
+    tp.get_by_role('button',name='Testni yakunlash').click();tp.wait_for_timeout(400)
+    tp.locator('.lg-confirm-actions .button').last.click();tp.wait_for_timeout(900)
     tp.get_by_role('button',name='Natijalar').click();tp.wait_for_timeout(900)
     check('teacher sees results and error bars',tp.locator('.lg-err').count()==3)
     tp.screenshot(path=OUT+'/t6-results.png',full_page=True)

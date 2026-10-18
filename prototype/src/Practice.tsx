@@ -110,7 +110,8 @@ export default function Practice({lang}:{lang:'uz'|'ru'|'en'}){
   if(nb){const b={...best,[run.sim.id]:run.score};setBest(b);saveBest(b)}
   setRun({...run,done:true,newBest:nb&&prev>=0});
  };
- useEffect(()=>{if(run?.fb){fbRef.current?.scrollIntoView({block:'nearest',behavior:'smooth'})}},[run?.fb]);
+ // Bring feedback + Next into view; scroll-margin-bottom in practice.css keeps them above the bottom nav.
+ useEffect(()=>{if(run?.fb){(nextRef.current||fbRef.current)?.scrollIntoView({block:'nearest',behavior:'smooth'})}},[run?.fb]);
  useEffect(()=>{if(run&&!run.fb){const el=topRef.current;if(el&&el.getBoundingClientRect().top<0)el.scrollIntoView({block:'start'})}},[run?.i,run?.done]);// eslint-disable-line react-hooks/exhaustive-deps
 
  const footer=<p className="pr-footer">{t.footer}</p>;
@@ -136,7 +137,7 @@ export default function Practice({lang}:{lang:'uz'|'ru'|'en'}){
  if(run){
   const Sim=run.sim.comp;
   if(run.done)return <div className="pr" ref={topRef}>
-   <div className="pr-bar"><button type="button" className="pr-icon-btn" aria-label={t.menu} onClick={()=>setRun(null)}><ArrowLeft size={20}/></button><span className="pr-bar-title">{run.sim.title[lang]}</span></div>
+   <div className="pr-bar"><button type="button" className="pr-icon-btn" data-back aria-label={t.menu} onClick={()=>setRun(null)}><ArrowLeft size={20}/></button><span className="pr-bar-title">{run.sim.title[lang]}</span></div>
    <section className="pr-card pr-result" aria-live="polite">
     <span className="pr-eyebrow">{t.result}</span>
     <ScoreRing score={run.score}/>

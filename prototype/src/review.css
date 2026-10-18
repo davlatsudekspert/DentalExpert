@@ -101,6 +101,7 @@
 .rv-grade:active{transform:scale(.97)}
 .rv-grade strong{font-size:15px}
 .rv-grade small{font-size:12px;opacity:.85;text-align:center;line-height:1.2}
+.rv-actions,.rv-grades{scroll-margin-bottom:calc(120px + env(safe-area-inset-bottom))}
 .rv-grade.again{background:var(--rv-red-bg);color:var(--rv-red);border-color:#f3cfc6}
 .rv-grade.hard{background:var(--rv-amber-bg);color:var(--rv-amber);border-color:#f1dcb4}
 .rv-grade.easy{background:var(--rv-green-bg);color:var(--rv-green);border-color:#bfe5d5}
@@ -136,9 +137,6 @@
 .ex-pool-head{display:flex;align-items:center;gap:8px;color:var(--rv-brand)}
 .ex-pool-head strong{flex:1;color:var(--rv-deep);font-size:15px}
 .ex-pool-n{font-size:22px;font-weight:800;color:var(--rv-deep)}
-.ex-pool-bar{display:flex;height:8px;border-radius:8px;overflow:hidden;background:var(--rv-soft);gap:2px}
-.ex-pool-bar i{background:var(--rv-brand)}
-.ex-pool-bar em{background:#5cc3bf}
 .ex-pool p{font-size:13px}
 .ex-history-head{display:flex;align-items:center;gap:8px;color:var(--rv-brand)}
 .ex-history-head h3{font-size:16px;color:var(--rv-deep)}
@@ -163,6 +161,7 @@
 .ex-h-bar span{position:absolute;top:-3px;width:2px;height:12px;background:var(--rv-deep);border-radius:1px;opacity:.5}
 
 .ex-result{align-items:center;text-align:center;gap:12px;padding:24px 16px}
+.ex-root.ex-done{scroll-margin-top:12px}
 .ex-result.pass{background:linear-gradient(170deg,#eef9f8 0%,#fff 55%)}
 .ex-result.fail{background:linear-gradient(170deg,#fff6ea 0%,#fff 55%)}
 .ex-ring{position:relative}
@@ -173,10 +172,10 @@
 .ex-result.pass .ex-verdict svg{color:var(--rv-brand)}
 .ex-result.fail .ex-verdict svg{color:var(--rv-amber)}
 .ex-score{color:var(--rv-muted);font-size:13px}
-.ex-tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;width:100%}
-.ex-tiles div{display:flex;flex-direction:column;padding:10px 4px;border-radius:14px;background:var(--rv-soft);min-width:0}
+.ex-tiles{display:grid;grid-template-columns:1fr 1fr;gap:8px;width:100%}
+.ex-tiles div{display:flex;flex-direction:column;padding:10px 8px;border-radius:14px;background:var(--rv-soft);min-width:0}
 .ex-tiles b{font-size:18px;color:var(--rv-deep)}
-.ex-tiles span{font-size:12px;color:var(--rv-muted);line-height:1.2;overflow-wrap:anywhere}
+.ex-tiles span{font-size:12px;color:var(--rv-muted);line-height:1.25;overflow-wrap:normal;word-break:normal;hyphens:auto;-webkit-hyphens:auto}
 .ex-tiles .ok{background:var(--rv-green-bg)}.ex-tiles .ok b{color:var(--rv-green)}
 .ex-tiles .bad{background:var(--rv-red-bg)}.ex-tiles .bad b{color:var(--rv-red)}
 .ex-tiles .skip{background:var(--rv-amber-bg)}.ex-tiles .skip b{color:var(--rv-amber)}
@@ -210,3 +209,19 @@
  .rv-card.flipped .rv-back{opacity:1;visibility:visible}
  .rv-ring-arc,.ex-ring-arc,.rv-bar i,.rv-done-badge,.rv-spin{transition:none;animation:none}
 }
+/* WebKit can paint a mirrored back face through backface-visibility; swap faces at mid-flip instead. */
+.rv-face{transition:visibility 0s linear .3s}
+.rv-card:not(.flipped) .rv-back,.rv-card.flipped .rv-front{visibility:hidden}
+/* End-session confirmation (in-app sheet above the bottom nav). */
+.rv-confirm{position:fixed;inset:0;z-index:95;display:flex;align-items:flex-end;justify-content:center;padding:16px 16px calc(16px + env(safe-area-inset-bottom));background:#10254e59;animation:rv-fade .2s ease}
+.rv-confirm-card{width:100%;max-width:440px;display:flex;flex-direction:column;gap:8px;padding:22px 18px 18px;border-radius:24px;background:#fff;box-shadow:0 24px 60px #10254e40;animation:rv-in .25s ease;text-align:left}
+.rv-confirm-card h3{font-size:18px;color:var(--rv-ink)}
+.rv-confirm-card p{font-size:14px;color:var(--rv-muted);margin-bottom:8px}
+.rv-confirm-card .rv-primary,.rv-confirm-card .rv-secondary{width:100%}
+.rv-confirm-card .rv-leave{color:var(--rv-red);border-color:#f3cfc6}
+@keyframes rv-fade{from{opacity:0}to{opacity:1}}
+:root[data-theme="mono"] .rv-confirm{background:#17171659}
+:root[data-theme="mono"] .rv-confirm-card{background:#f8f6f1;box-shadow:0 24px 60px #281e0c33}
+:root[data-theme="dark"] .rv-confirm{background:#00000080}
+:root[data-theme="dark"] .rv-confirm-card{background:#111f2e;box-shadow:0 24px 60px #00000080}
+@media (prefers-reduced-motion:reduce){.rv-confirm,.rv-confirm-card{animation:none}}

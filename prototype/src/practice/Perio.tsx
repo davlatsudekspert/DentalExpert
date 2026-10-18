@@ -27,7 +27,7 @@ const T={
   stShort:{1:'I',2:'II',3:'III / IV'} as Record<Stage,string>,st:{1:'Стадия I',2:'Стадия II',3:'Стадия III / IV'} as Record<Stage,string>,
   simple:'Упрощённое упражнение: стадия только по межзубному CAL (AAP/EFP 2017); стадии III и IV различаются по факторам сложности.',
   title:'Схема пародонтального зондирования',cej:'CEJ',
-  explain:(site:string,pd:number,r:number,cal:number,st:string)=>`Самая тяжёлая межзубная точка ${site}: CAL = PD ${pd} ${r>=0?'+ рецессия '+r:'− '+(-r)+' (десна коронарнее CEJ)'} = ${cal} мм, значит ${st.toLowerCase()} (I: 1–2 мм, II: 3–4 мм, III/IV: ≥5 мм).`
+  explain:(site:string,pd:number,r:number,cal:number,st:string)=>`Самая тяжёлая межзубная точка ${site}: CAL = PD ${pd} ${r>=0?'+ рецессия '+r:'− '+(-r)+' (десна коронарнее CEJ)'} = ${cal} мм, значит ${st.replace('Стадия','стадия')} (I: 1–2 мм, II: 3–4 мм, III/IV: ≥5 мм).`
  },
  en:{
   q:'Work out the clinical attachment loss (CAL) at the worst interdental site and choose the periodontitis stage.',

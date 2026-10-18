@@ -6,7 +6,7 @@ from playwright.sync_api import sync_playwright
 import json,os,sys,time
 B='http://127.0.0.1:8788';lang=sys.argv[1] if len(sys.argv)>1 else 'uz';OUT=os.environ.get('SIM_OUT','/tmp/sim-ios');os.makedirs(OUT,exist_ok=True)
 SCREENS=['home','search','profile','clinics','booking','dashboard','edit','record','chart','anatomy','teacher','student','courses','settings','privacy','forum','notifications']
-bad=[]
+bad=[];TH=('&theme='+os.environ['THEME']) if os.environ.get('THEME') else ''
 def check(name,ok,info=''):
     print(('PASS ' if ok else 'FAIL ')+name+(f' ({info})' if info and not ok else ''))
     if not ok:bad.append(name)
@@ -22,23 +22,25 @@ with sync_playwright() as p:
         c.request.post(B+'/api/auth/verify',data=json.dumps({'email':e,'code':r['devCode']}),headers={'content-type':'application/json'})
         pg=c.new_page();errs=[];pg.on('pageerror',lambda x:errs.append(str(x)))
         for s in SCREENS:
-            pg.goto(f'{B}/?screen={s}&lang={lang}&shot=1');pg.wait_for_timeout(900)
+            pg.goto(f'{B}/?screen={s}&lang={lang}&shot=1'+TH);pg.wait_for_timeout(900)
             pg.evaluate('window.scrollTo(0,document.body.scrollHeight)');pg.wait_for_timeout(300)
             n=inview(pg,'.bottom-nav')
             if n:check(f'{role}/{s}: bottom nav on screen',0<=n['top']<n['h'] and n['bottom']<=n['h']+1,str(n))
             ov=pg.evaluate('document.documentElement.scrollWidth-innerWidth')
             check(f'{role}/{s}: no horizontal overflow',ov<=1,f'{ov}px')
         # 3D atlas sheet
-        pg.goto(f'{B}/?screen=anatomy&lang={lang}&shot=1');pg.wait_for_timeout(800)
+        pg.goto(f'{B}/?screen=anatomy&lang={lang}&shot=1'+TH);pg.wait_for_timeout(800)
         pg.evaluate('window.scrollTo(0,400)');pg.locator('.atlas3d-launch').click();pg.wait_for_timeout(2500)
         a=inview(pg,'.atlas3d');t=inview(pg,'.atlas3d-top');ch=inview(pg,'.atlas3d-chips')
         check(f'{role}: 3D atlas covers screen',a and abs(a['top'])<2 and abs(a['bottom']-a['h'])<2,str(a))
         check(f'{role}: 3D atlas header visible',t and t['top']>=0 and t['bottom']<=t['h'],str(t))
         check(f'{role}: 3D atlas layer buttons visible',ch and ch['bottom']<=ch['h'] and ch['right']<=ch['w']+1,str(ch))
+        ov3=pg.evaluate("""()=>{const r=[...document.querySelectorAll('.atlas3d-chips button')].map(b=>b.getBoundingClientRect());let n=0;for(let i=0;i<r.length;i++)for(let j=i+1;j<r.length;j++){const a=r[i],c=r[j];if(a.left<c.right-1&&c.left<a.right-1&&a.top<c.bottom-1&&c.top<a.bottom-1)n++}return n}""")
+        check(f'{role}: 3D atlas chips do not overlap',ov3==0,f'{ov3} overlapping pairs')
         pg.screenshot(path=f'{OUT}/{role}-atlas3d.png')
         pg.locator('.atlas3d-top button').last.click();pg.wait_for_timeout(400)
         # slides from the curriculum
-        pg.goto(f'{B}/?screen=courses&lang={lang}&shot=1');pg.wait_for_timeout(800)
+        pg.goto(f'{B}/?screen=courses&lang={lang}&shot=1'+TH);pg.wait_for_timeout(800)
         pg.evaluate('window.scrollTo(0,300)')
         pg.locator('.lg-section .lg-row').first.click();pg.wait_for_timeout(300);pg.locator('.lg-section .lg-row').first.click();pg.wait_for_timeout(600)
         pg.locator('.lg-section > .button').first.click();pg.wait_for_timeout(600)
@@ -48,7 +50,7 @@ with sync_playwright() as p:
         pg.screenshot(path=f'{OUT}/{role}-slides.png')
         pg.locator('.sl-bar button').click();pg.wait_for_timeout(300)
         # quiz sheet
-        pg.goto(f'{B}/?screen=courses&lang={lang}&shot=1');pg.wait_for_timeout(800)
+        pg.goto(f'{B}/?screen=courses&lang={lang}&shot=1'+TH);pg.wait_for_timeout(800)
         pg.locator('.learn > .chips button').nth(6).click();pg.wait_for_timeout(500)
         pg.evaluate('window.scrollTo(0,300)');pg.locator('.learn .cr-row').first.click();pg.wait_for_timeout(500)
         q=inview(pg,'.quiz-run')

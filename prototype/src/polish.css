@@ -1,0 +1,37 @@
+/* Late overrides loaded after the theme sheets: status bar, contrast and tap-target fixes from the iPhone audit. */
+:root[data-theme="mono"] body::before{background:#f8f6f1ee}
+.dash-banner.compact .db-text small{color:#e6f7f7;opacity:1;font-size:12.5px}
+:root[data-theme="mono"] .dash-banner.compact .db-text small{color:#ffffffd9}
+.topbar .icon-button,.home-header .icon-button{min-width:44px;min-height:44px}
+.toast button{min-width:44px;min-height:44px;display:inline-grid;place-items:center}
+.section-link,.text-button{min-height:44px;display:inline-flex;align-items:center}
+.calendar-heading .cal-nav{display:inline-flex;gap:4px;margin-left:auto}
+.calendar-heading .cal-nav button{width:44px;height:44px;display:grid;place-items:center;border:0;border-radius:14px;background:transparent;color:inherit;cursor:pointer}
+.calendar-heading .cal-nav button:disabled{opacity:.3;cursor:default}
+.calendar-grid button{min-height:40px}
+/* Odontogram: the full arch (16 teeth) fits the phone width with a visible midline, no sideways scroll. */
+.pt-teeth{display:grid!important;grid-template-columns:repeat(8,minmax(0,1fr)) 6px repeat(8,minmax(0,1fr));gap:2px;overflow:visible!important}
+.pt-teeth .pt-tooth{min-width:0;padding:3px 0;border-radius:8px}
+.pt-teeth .pt-tooth:nth-child(8){margin-right:0;grid-column:8}
+.pt-teeth .pt-tooth:nth-child(n+9){grid-column:auto}
+.pt-teeth .pt-tooth:nth-child(9){grid-column:10}
+.pt-teeth::after{content:'';grid-column:9;grid-row:1;justify-self:center;width:1.5px;background:#c9d8da;border-radius:2px}
+.pt-teeth .pt-tooth svg{width:100%;max-width:22px;height:26px}
+.pt-teeth .pt-tooth span{font-size:10px}
+.pt-picker button{min-height:44px}
+/* A lone last tile in the 3-column grid becomes a full-width row instead of an orphan. */
+.role-tiles button:last-child:nth-child(3n+1){grid-column:1/-1;flex-direction:row;justify-content:center;gap:12px;min-height:64px}
+.role-tiles button:last-child:nth-child(3n+2){grid-column:span 2;flex-direction:row;justify-content:center;gap:12px}
+.ac-ring small{font-size:10.5px;letter-spacing:.4px}
+.five-tab-nav .nav-label{font-size:11.5px}
+/* Lesson deck turned sideways on a portrait phone: the 16:9 slide uses the full screen height. */
+.deck-stage.rot{overflow:hidden}
+.deck-stage.rot img{max-width:none;max-height:none;width:calc(100dvh - 190px);height:auto;max-height:calc(100vw - 16px);transform:rotate(90deg)}
+/* Patient guides on the home screen: blend into the page instead of a white slab. */
+.home-screen .pg-root{--pg-bg:transparent;--pg-card:#fff;--pg-tint:#e7f4f3;padding-left:0;padding-right:0}
+:root[data-theme="mono"] .home-screen .pg-root{--pg-accent:#252422;--pg-card:#fffdf9;--pg-tint:#efebe3;--pg-line:#e3ddd1}
+/* Practice drills redefine their palette on .pr; in Ivory use the theme's muted green/red/amber. */
+:root[data-theme="mono"] .pr{--pr-green:#3f6b4a;--pr-red:#9b3b30;--pr-amber:#86672a;--pr-brand:#171716;--pr-dark:#171716;--pr-ink:#171716;--pr-muted:#55534f;--pr-line:#dfd9cd;--pr-soft:#ebe6dc}
+/* Group tabs: four tabs don't fit a 300px card in one row in any language, so they form an even 2×2 grid. */
+.lg-tabs{display:grid!important;grid-template-columns:1fr 1fr;gap:8px!important;overflow:visible!important}
+.lg-tabs button{width:100%;padding:0 10px!important;font-family:inherit!important;font-size:13.5px!important;letter-spacing:0!important;text-transform:none!important;min-height:44px}

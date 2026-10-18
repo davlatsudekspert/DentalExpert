@@ -3,7 +3,7 @@
 .quiz-run-bar{background:#ffffffcc;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid #e3eef0!important}
 .quiz-run-bar strong{flex:1;min-width:0;font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:#10254e}
 .qr-count{padding:5px 10px;border-radius:20px;background:#e3f1f1;color:#0f6f6d;font-size:12px;font-weight:800;white-space:nowrap}
-.quiz-run-bar button{display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:#fff;box-shadow:0 4px 12px #183e5012}
+.quiz-run-bar button{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:#fff;box-shadow:0 4px 12px #183e5012}
 .quiz-run-body{max-width:620px;width:100%;margin:0 auto}
 .qr-steps{display:flex!important;gap:5px;height:6px!important;background:none!important}
 .quiz-run-progress.qr-steps i{display:block;width:auto!important;flex:1;height:6px;border-radius:6px;background:#dbe8ea;transition:background .25s}
@@ -27,7 +27,7 @@
 .quiz-run-why{display:flex;flex-direction:column;gap:4px;padding:12px 14px!important;border-radius:16px!important;font-size:13px;line-height:1.5;animation:qr-in .25s ease}
 .quiz-run-why b{font-size:14px}
 .quiz-run-why.ok{background:#e9f8f1!important;color:#14593d!important}
-.quiz-run-why.bad{background:#fff1db!important;color:#6b4508!important}
+.quiz-run-why.bad{background:#fdeeee!important;color:#8c2a22!important}
 .quiz-run-why.saved{background:#eef4ff!important;color:#24427a!important}
 @keyframes qr-in{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
 .quiz-run-body>.button{align-self:stretch!important;width:100%!important;min-height:52px}
@@ -39,3 +39,24 @@
 .qr-verdict{display:flex;align-items:center;gap:8px;font-size:20px!important;color:#10254e}
 .qr-verdict svg{color:#e0a01e}
 .quiz-run-result>p{color:#5b6f77}
+/* Feedback and Next stay clear of the home indicator when scrolled into view. */
+.quiz-run-why,.quiz-run-body>.button{scroll-margin-bottom:calc(120px + env(safe-area-inset-bottom))}
+/* Leave confirmation (in-app, replaces window.confirm). */
+.qr-confirm{position:absolute;inset:0;z-index:5;display:flex;align-items:flex-end;justify-content:center;padding:16px 16px calc(16px + env(safe-area-inset-bottom));background:#10254e59;animation:qr-fade .2s ease}
+.qr-confirm-card{width:100%;max-width:440px;display:flex;flex-direction:column;gap:8px;padding:22px 18px 18px;border-radius:24px;background:#fff;box-shadow:0 24px 60px #10254e40;animation:qr-in .25s ease}
+.qr-confirm-card h3{margin:0;font-size:18px;color:#10254e}
+.qr-confirm-card p{margin:0 0 8px;font-size:14px;line-height:1.45;color:#5b6f77}
+.qr-confirm-actions{display:flex;flex-direction:column;gap:8px}
+.qr-confirm-actions .button{width:100%;min-height:50px;margin:0}
+.qr-leave{min-height:48px;border-radius:14px;background:#fdeeee;color:#a3322a;font-weight:700;font-size:15px}
+@keyframes qr-fade{from{opacity:0}to{opacity:1}}
+:root[data-theme="mono"] .qr-confirm{background:#17171659}
+:root[data-theme="mono"] .qr-confirm-card{background:#f8f6f1;box-shadow:0 24px 60px #281e0c33}
+:root[data-theme="mono"] .qr-confirm-card h3{color:#171716}
+:root[data-theme="mono"] .qr-confirm-card p{color:#55534f}
+:root[data-theme="dark"] .qr-confirm{background:#00000080}
+:root[data-theme="dark"] .qr-confirm-card{background:#111f2e;box-shadow:0 24px 60px #00000080}
+:root[data-theme="dark"] .qr-confirm-card h3{color:#e8f1f4}
+:root[data-theme="dark"] .qr-confirm-card p{color:#a9bec8}
+:root[data-theme="dark"] .qr-leave{background:#3a2226;color:#f2a9a0}
+@media (prefers-reduced-motion:reduce){.qr-confirm,.qr-confirm-card{animation:none}}

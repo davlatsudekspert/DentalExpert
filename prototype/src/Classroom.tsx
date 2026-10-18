@@ -1,10 +1,10 @@
-import {useCallback,useEffect,useMemo,useState} from 'react';
+import {useCallback,useEffect,useMemo,useRef,useState} from 'react';
 import {BarChart3,BookOpen,Check,ChevronLeft,ClipboardList,Copy,Eye,EyeOff,LogIn,Plus,Presentation,QrCode,Timer,Trash2,Users} from 'lucide-react';
 import qrcode from 'qrcode-generator';
 import {callApi,type AuthUser} from './api';
 import QuizRun from './QuizRun';
 import Slides from './Slides';
-import {OralList,SubjectHero,SubjectList,TopicList,useTopic} from './Curriculum';
+import {OralList,SubjectHero,SubjectList,TopicList,toTop,useTopic} from './Curriculum';
 import {subjectColor} from './subjectArt';
 import {SUBJECTS,metaLine,topicMeta,tx,type Subject,type Topic,type TopicMeta} from './curriculumData';
 import type {Lang} from './discoveryData';
@@ -20,12 +20,13 @@ type Book={quizzes:{id:string;title:string;topicId:string|null;total:number}[];m
 type TopicRow={topicId:string;openedAt:string;closedAt:string|null;lectureDoneAt:string|null;oralDoneAt:string|null;testId:string|null};
 type Deck={id:string;title:string;quiz:{q:string;options:string[];correct:number;explanation:string}[]};
 
+const ruPlural=(n:number,one:string,few:string,many:string)=>{const a=n%10,b=n%100;return a===1&&b!==11?one:a>=2&&a<=4&&(b<12||b>14)?few:many};
 const words={
- uz:{student:'Talaba',nick:'Taxallus (ixtiyoriy)',nickHint:'Ustoz sizni shu nom yoki raqam bilan ko‘radi',close:'Yopish',reopen:'Qayta ochish',closedLbl:'Yopilgan',errClosed:'Topshiriq yopilgan.',errDone:'Siz bu testni allaqachon topshirgansiz.',errStarted:'Bu test allaqachon boshlangan va qayta boshlab bo‘lmaydi.',errDue:'Topshirish muddati o‘tgan.',errRate:'Juda ko‘p urinish. Keyinroq qayta urinib ko‘ring.',errNick:'Taxallus 2–24 belgi: harf, raqam, bo‘sh joy.',title:'Guruhlar va darslar',signIn:'Guruhlar uchun email orqali kiring.',signInBtn:'Kirish',offline:'Guruhlar hozir mavjud emas (internet yoki server).',
-  newGroup:'Yangi guruh',groupName:'Guruh nomi (masalan: Terapiya 3-kurs)',create:'Yaratish',code:'Qo‘shilish kodi',members:'talaba',copy:'Kodni nusxalash',copyInvite:'Taklif matnini nusxalash',copied:'Nusxalandi',noGroups:'Hali guruh yo‘q.',
+ uz:{student:'Talaba',nick:'Taxallus (ixtiyoriy)',nickPh:'Masalan: Lola',nickHint:'Ustoz sizni shu nom yoki raqam bilan ko‘radi',close:'Yopish',reopen:'Qayta ochish',closedLbl:'Yopilgan',errClosed:'Topshiriq yopilgan.',errDone:'Siz bu testni allaqachon topshirgansiz.',errStarted:'Bu test allaqachon boshlangan va qayta boshlab bo‘lmaydi.',errDue:'Topshirish muddati o‘tgan.',errRate:'Juda ko‘p urinish. Keyinroq qayta urinib ko‘ring.',errNick:'Taxallus 2–24 belgi: harf, raqam, bo‘sh joy.',errNickTaken:'“Talaba N” ko‘rinishidagi nom band — boshqa nom tanlang.',title:'Guruhlar va darslar',signIn:'Guruhlar uchun email orqali kiring.',signInBtn:'Kirish',offline:'Guruhlar hozir mavjud emas (internet yoki server).',
+  newGroup:'Yangi guruh',groupName:'Guruh nomi',groupHint:'Masalan: Terapiya 3-kurs',create:'Yaratish',code:'Qo‘shilish kodi',members:'talaba',copy:'Kodni nusxalash',copyInvite:'Taklif matnini nusxalash',copied:'Nusxalandi',noGroups:'Hali guruh yo‘q.',
   back:'Guruhlar',assignments:'Topshiriqlar',noAssign:'Hali topshiriq yo‘q.',add:'Topshiriq berish',kind:'Turi',task:'Matnli javob',quiz:'Test (taqdimot testi)',titleF:'Sarlavha',bodyF:'Izoh (ixtiyoriy)',due:'Muddat',deck:'Taqdimot',
   submitted:'topshirdi',delete:'O‘chirish',confirmDel:'Topshiriq o‘chirilsin?',roster:'Talabalar',notYet:'Topshirmagan',
-  join:'Guruhga qo‘shilish',joinHint:'Ustoz bergan 6 belgili kod',joinBtn:'Qo‘shilish',leave:'Guruhdan chiqish',teacher:'Ustoz',
+  join:'Guruhga qo‘shilish',joinPh:'6 belgili kod',joinHint:'Ustoz bergan kod — bo‘sh joy bilan yozilsa ham bo‘ladi',joinBtn:'Qo‘shilish',leave:'Guruhdan chiqish',teacher:'Ustoz',
   answer:'Javobingiz',send:'Yuborish',resend:'Qayta yuborish',sent:'Yuborildi',start:'Testni boshlash',result:'Natija',dueLbl:'Muddat',
   errName:'Nom kamida 2 belgi.',errCode:'Kod noto‘g‘ri yoki guruh topilmadi.',errGeneric:'Bajarilmadi. Qayta urinib ko‘ring.',errTeacher:'Guruhni faqat ustoz yaratadi.',
   note:'Test natijasi serverda hisoblanadi; rasmiy baho emas. Ustoz sizni taxallus yoki raqam bilan ko‘radi, email yoki ismingizni emas.',
@@ -35,14 +36,14 @@ const words={
   openTopic:'Talabalarga ochish',hideTopic:'Talabalardan yashirish',stage:'BOSQICH',lecture:'Ma’ruza',lectureHint:'Taqdimotni ekranga chiqarib, izohlar bilan o‘ting.',play:'Taqdimotni boshlash',markDone:'O‘tildi deb belgilash',doneLbl:'O‘tildi',undo:'Bekor qilish',
   oral:'Og‘zaki savol-javob',oralHint:'Savolni bering, javob rejasiga qarab talabalarni baholang. Belgilar faqat shu qurilmada saqlanadi.',asked:'So‘raldi',grade:'Baholash',knew:'Bildi',partly:'Qisman',didnt:'Bilmadi',
   test:'Mavzu testi',testHint:'Savollarni tanlang (to‘g‘ri javob yashil), vaqtni belgilang va testni boshlang.',minutes:'Vaqt (daqiqa)',startTest:'Testni boshlash',finishTest:'Testni yakunlash',confirmFinish:'Test yakunlansin? Boshlagan talabalarga 2 daqiqa beriladi.',results:'Natijalar',needOpen:'Avval mavzuni talabalarga oching.',
-  of:'dan',avg:'O‘rtacha',err:'Xato',qShort:'S',noMembers:'Hali talaba yo‘q.',alias:'Shaxsiy belgi (faqat sizga ko‘rinadi)',
+  of:'dan',avg:'O‘rtacha',perQ:'Savollar bo‘yicha',qN:(n:number)=>`${n}-savol`,qCount:(n:number)=>`${n} ta savol`,rightN:(r:number,n:number)=>`${r}/${n} to‘g‘ri`,inviteToGrade:'Baholash uchun talabalarni guruhga taklif qiling.',cancel:'Bekor qilish',great:'A’lo natija!',good:'Yaxshi natija',more:'Mavzuni yana takrorlang',scoreLine:(s:number,n:number)=>`${n} ta savoldan ${s} tasiga to‘g‘ri javob berdingiz`,noMembers:'Hali talaba yo‘q.',alias:'Shaxsiy belgi (faqat sizga ko‘rinadi)',
   myResults:'Mening natijalarim',quizzesDone:'test topshirildi',topics:'Mavzular',noTopics:'Ustoz hali mavzu ochmagan.',watch:'Taqdimotni ko‘rish',prepare:'Tayyorlanish uchun savollar',
   testOpen:'Test ochiq',timeLimit:'daqiqa',testWait:'Ustoz testni boshlaganda shu yerda paydo bo‘ladi.',reviewLater:'To‘g‘ri javoblar ustoz testni yakunlagach ko‘rinadi.',yourAns:'Sizning javobingiz',right:'To‘g‘ri javob',noAnswer:'Javob berilmagan',timeUp:'Vaqt tugadi.',goals:'Dars maqsadlari',pick:'Fan tanlang'},
- ru:{student:'Студент',nick:'Псевдоним (необязательно)',nickHint:'Преподаватель увидит вас под этим именем или номером',close:'Закрыть приём',reopen:'Открыть снова',closedLbl:'Закрыто',errClosed:'Задание закрыто.',errDone:'Вы уже сдали этот тест.',errStarted:'Этот тест уже начат, начать заново нельзя.',errDue:'Срок сдачи истёк.',errRate:'Слишком много попыток. Попробуйте позже.',errNick:'Псевдоним 2–24 символа: буквы, цифры, пробел.',title:'Группы и занятия',signIn:'Войдите по email, чтобы пользоваться группами.',signInBtn:'Войти',offline:'Группы сейчас недоступны (интернет или сервер).',
-  newGroup:'Новая группа',groupName:'Название группы (например: Терапия, 3 курс)',create:'Создать',code:'Код для вступления',members:'студ.',copy:'Копировать код',copyInvite:'Копировать приглашение',copied:'Скопировано',noGroups:'Групп пока нет.',
+ ru:{student:'Студент',nick:'Псевдоним (необязательно)',nickPh:'Например: Лола',nickHint:'Преподаватель увидит вас под этим именем или номером',close:'Закрыть приём',reopen:'Открыть снова',closedLbl:'Закрыто',errClosed:'Задание закрыто.',errDone:'Вы уже сдали этот тест.',errStarted:'Этот тест уже начат, начать заново нельзя.',errDue:'Срок сдачи истёк.',errRate:'Слишком много попыток. Попробуйте позже.',errNick:'Псевдоним 2–24 символа: буквы, цифры, пробел.',errNickTaken:'Имя вида «Студент N» занято — выберите другое.',title:'Группы и занятия',signIn:'Войдите по email, чтобы пользоваться группами.',signInBtn:'Войти',offline:'Группы сейчас недоступны (интернет или сервер).',
+  newGroup:'Новая группа',groupName:'Название группы',groupHint:'Например: Терапия, 3 курс',create:'Создать',code:'Код для вступления',members:'студ.',copy:'Копировать код',copyInvite:'Копировать приглашение',copied:'Скопировано',noGroups:'Групп пока нет.',
   back:'Группы',assignments:'Задания',noAssign:'Заданий пока нет.',add:'Дать задание',kind:'Тип',task:'Текстовый ответ',quiz:'Тест (по презентации)',titleF:'Заголовок',bodyF:'Описание (необязательно)',due:'Срок',deck:'Презентация',
   submitted:'сдали',delete:'Удалить',confirmDel:'Удалить задание?',roster:'Студенты',notYet:'Не сдано',
-  join:'Вступить в группу',joinHint:'6‑значный код от преподавателя',joinBtn:'Вступить',leave:'Выйти из группы',teacher:'Преподаватель',
+  join:'Вступить в группу',joinPh:'6-значный код',joinHint:'Код от преподавателя — можно вводить с пробелом',joinBtn:'Вступить',leave:'Выйти из группы',teacher:'Преподаватель',
   answer:'Ваш ответ',send:'Отправить',resend:'Отправить снова',sent:'Отправлено',start:'Начать тест',result:'Результат',dueLbl:'Срок',
   errName:'Название — минимум 2 символа.',errCode:'Неверный код или группа не найдена.',errGeneric:'Не получилось. Попробуйте ещё раз.',errTeacher:'Группы создаёт только преподаватель.',
   note:'Результат теста считается на сервере; это не официальная оценка. Преподаватель видит вас по псевдониму или номеру, а не по email или имени.',
@@ -52,14 +53,14 @@ const words={
   openTopic:'Открыть студентам',hideTopic:'Скрыть от студентов',stage:'ЭТАП',lecture:'Лекция',lectureHint:'Выведите презентацию на экран и проведите её с заметками.',play:'Начать презентацию',markDone:'Отметить как проведённую',doneLbl:'Проведено',undo:'Отменить',
   oral:'Устный опрос',oralHint:'Задайте вопрос и оцените студентов по плану ответа. Отметки хранятся только на этом устройстве.',asked:'Задан',grade:'Оценить',knew:'Знает',partly:'Частично',didnt:'Не знает',
   test:'Тест по теме',testHint:'Выберите вопросы (верный ответ — зелёным), задайте время и начните тест.',minutes:'Время (мин)',startTest:'Начать тест',finishTest:'Завершить тест',confirmFinish:'Завершить тест? Начавшим студентам даётся 2 минуты.',results:'Результаты',needOpen:'Сначала откройте тему студентам.',
-  of:'из',avg:'Средний',err:'Ошибки',qShort:'В',noMembers:'Студентов пока нет.',alias:'Личная метка (видна только вам)',
+  of:'из',avg:'Средний',perQ:'По вопросам',qN:(n:number)=>`Вопрос ${n}`,qCount:(n:number)=>`${n} ${ruPlural(n,'вопрос','вопроса','вопросов')}`,rightN:(r:number,n:number)=>`${r}/${n} верно`,inviteToGrade:'Чтобы оценивать, пригласите студентов в группу.',cancel:'Отмена',great:'Отличный результат!',good:'Хороший результат',more:'Стоит повторить тему',scoreLine:(s:number,n:number)=>`Верных ответов: ${s} из ${n}`,noMembers:'Студентов пока нет.',alias:'Личная метка (видна только вам)',
   myResults:'Мои результаты',quizzesDone:'тестов сдано',topics:'Темы',noTopics:'Преподаватель ещё не открыл темы.',watch:'Смотреть презентацию',prepare:'Вопросы для подготовки',
   testOpen:'Тест открыт',timeLimit:'мин',testWait:'Появится здесь, когда преподаватель начнёт тест.',reviewLater:'Верные ответы появятся после завершения теста преподавателем.',yourAns:'Ваш ответ',right:'Верный ответ',noAnswer:'Нет ответа',timeUp:'Время вышло.',goals:'Цели занятия',pick:'Выберите предмет'},
- en:{student:'Student',nick:'Nickname (optional)',nickHint:'Your teacher sees you by this name or number',close:'Close submissions',reopen:'Reopen',closedLbl:'Closed',errClosed:'This assignment is closed.',errDone:'You have already submitted this quiz.',errStarted:'This quiz was already started and cannot be restarted.',errDue:'The due date has passed.',errRate:'Too many attempts. Try again later.',errNick:'Nickname: 2–24 letters, digits or spaces.',title:'Groups and classes',signIn:'Sign in with your email to use groups.',signInBtn:'Sign in',offline:'Groups are unavailable right now (network or server).',
-  newGroup:'New group',groupName:'Group name (e.g. Therapy, year 3)',create:'Create',code:'Join code',members:'students',copy:'Copy code',copyInvite:'Copy invitation',copied:'Copied',noGroups:'No groups yet.',
+ en:{student:'Student',nick:'Nickname (optional)',nickPh:'e.g. Lola',nickHint:'Your teacher sees you by this name or number',close:'Close submissions',reopen:'Reopen',closedLbl:'Closed',errClosed:'This assignment is closed.',errDone:'You have already submitted this quiz.',errStarted:'This quiz was already started and cannot be restarted.',errDue:'The due date has passed.',errRate:'Too many attempts. Try again later.',errNick:'Nickname: 2–24 letters, digits or spaces.',errNickTaken:'Names like “Student N” are reserved — choose another one.',title:'Groups and classes',signIn:'Sign in with your email to use groups.',signInBtn:'Sign in',offline:'Groups are unavailable right now (network or server).',
+  newGroup:'New group',groupName:'Group name',groupHint:'For example: Therapy, year 3',create:'Create',code:'Join code',members:'students',copy:'Copy code',copyInvite:'Copy invitation',copied:'Copied',noGroups:'No groups yet.',
   back:'Groups',assignments:'Assignments',noAssign:'No assignments yet.',add:'Give an assignment',kind:'Type',task:'Written answer',quiz:'Quiz (from a presentation)',titleF:'Title',bodyF:'Notes (optional)',due:'Due date',deck:'Presentation',
   submitted:'submitted',delete:'Delete',confirmDel:'Delete this assignment?',roster:'Students',notYet:'Not submitted',
-  join:'Join a group',joinHint:'The 6-character code from your teacher',joinBtn:'Join',leave:'Leave group',teacher:'Teacher',
+  join:'Join a group',joinPh:'6-character code',joinHint:'The code from your teacher — spaces are fine',joinBtn:'Join',leave:'Leave group',teacher:'Teacher',
   answer:'Your answer',send:'Submit',resend:'Submit again',sent:'Submitted',start:'Start quiz',result:'Score',dueLbl:'Due',
   errName:'Name needs at least 2 characters.',errCode:'Wrong code or group not found.',errGeneric:'That did not work. Please try again.',errTeacher:'Only teachers can create groups.',
   note:'Quiz scores are calculated on the server; they are not official grades. The teacher sees you by nickname or number, not by email or name.',
@@ -69,7 +70,7 @@ const words={
   openTopic:'Open to students',hideTopic:'Hide from students',stage:'STAGE',lecture:'Lecture',lectureHint:'Put the slides on screen and teach with the notes.',play:'Start the slides',markDone:'Mark as done',doneLbl:'Done',undo:'Undo',
   oral:'Oral Q&A',oralHint:'Ask the question and grade students against the answer plan. Marks are kept on this device only.',asked:'Asked',grade:'Grade',knew:'Knew',partly:'Partly',didnt:'Did not know',
   test:'Topic test',testHint:'Choose the questions (the right answer is green), set the time and start the test.',minutes:'Time (min)',startTest:'Start the test',finishTest:'Finish the test',confirmFinish:'Finish the test? Students who started get 2 more minutes.',results:'Results',needOpen:'Open the topic to students first.',
-  of:'of',avg:'Average',err:'Errors',qShort:'Q',noMembers:'No students yet.',alias:'Private label (only you see it)',
+  of:'of',avg:'Average',perQ:'By question',qN:(n:number)=>`Question ${n}`,qCount:(n:number)=>`${n} question${n===1?'':'s'}`,rightN:(r:number,n:number)=>`${r}/${n} correct`,inviteToGrade:'Invite students to the group to grade them.',cancel:'Cancel',great:'Excellent!',good:'Good result',more:'Worth revising this topic',scoreLine:(s:number,n:number)=>`You answered ${s} of ${n} correctly`,noMembers:'No students yet.',alias:'Private label (only you see it)',
   myResults:'My results',quizzesDone:'quizzes done',topics:'Topics',noTopics:'Your teacher has not opened any topics yet.',watch:'View the slides',prepare:'Questions to prepare',
   testOpen:'Test open',timeLimit:'min',testWait:'It appears here when your teacher starts the test.',reviewLater:'The right answers appear once your teacher finishes the test.',yourAns:'Your answer',right:'Right answer',noAnswer:'No answer',timeUp:'Time is up.',goals:'Learning goals',pick:'Choose a subject'}
 };
@@ -90,7 +91,7 @@ export default function Classroom({lang,user,onSignIn}:{lang:Lang;user:AuthUser|
  const [name,setName]=useState('');
  const [code,setCode]=useState('');
  const [nick,setNick]=useState('');
- const errText=(e?:string)=>e==='rate_limited'?t.errRate:e==='bad_nickname'?t.errNick:e==='name_required'?t.errName:e==='not_found'||e==='bad_code'?t.errCode:e==='teacher_only'?t.errTeacher:t.errGeneric;
+ const errText=(e?:string)=>e==='rate_limited'?t.errRate:e==='bad_nickname'?(/^(student|talaba|студент)\s*\d+$/iu.test(nick.trim())?t.errNickTaken:t.errNick):e==='name_required'?t.errName:e==='not_found'||e==='bad_code'?t.errCode:e==='teacher_only'?t.errTeacher:t.errGeneric;
  const load=useCallback(async()=>{
   const r=await callApi<{groups:Group[]}>('/classroom/groups');
   if(r.status===0||r.status===404){setOffline(true);return}
@@ -105,11 +106,12 @@ export default function Classroom({lang,user,onSignIn}:{lang:Lang;user:AuthUser|
  return <section className="classroom card" aria-label={t.title}>
   <h2>{t.title}</h2>
   {groups===null?<p className="muted">…</p>:groups.length===0?<p className="muted">{t.noGroups}</p>:<div className="lg-list">{groups.map(g=>
-   <button key={g.id} className="lg-row" onClick={()=>setOpen(g)}><span className="lg-ico"><Users size={18}/></span><span><strong>{g.name}</strong><small>{teacher?`${g.members??0} ${t.members} · ${t.code}: ${g.code}`:(g.teacher?`${t.teacher}: ${g.teacher} · `:'')+(g.myNickname||`${t.student} ${nn(g.myNo??0)}`)}</small></span></button>)}</div>}
-  {teacher?<div className="cr-form"><label>{t.newGroup}<input value={name} maxLength={60} placeholder={t.groupName} onChange={e=>setName(e.target.value)}/></label><button className="button" disabled={name.trim().length<2} onClick={create}><Plus size={17}/>{t.create}</button></div>
-  :<div className="cr-form"><label>{t.join}<input value={code} maxLength={6} autoCapitalize="characters" placeholder={t.joinHint} onChange={e=>setCode(e.target.value.toUpperCase().replace(/[^A-Z0-9]/g,''))}/></label><label>{t.nick}<input value={nick} maxLength={24} placeholder={t.nickHint} onChange={e=>setNick(e.target.value)}/></label><button className="button" disabled={code.length!==6} onClick={join}><LogIn size={17}/>{t.joinBtn}</button></div>}
+   <button key={g.id} className="lg-row" onClick={()=>setOpen(g)}><span className="lg-ico"><Users size={18}/></span><span className="lg-row-text"><strong>{g.name}</strong><small>{teacher?`${g.members??0} ${t.members} · ${t.code}: ${g.code}`:(g.teacher?`${t.teacher}: ${g.teacher} · `:'')+(g.myNickname||`${t.student} ${nn(g.myNo??0)}`)}</small></span></button>)}</div>}
+  {teacher?<div className="cr-form"><label>{t.newGroup}<input value={name} maxLength={60} placeholder={t.groupName} aria-describedby="cr-group-hint" onChange={e=>setName(e.target.value)}/><small id="cr-group-hint" className="cr-help">{t.groupHint}</small></label><button className="button" disabled={name.trim().length<2} onClick={create}><Plus size={17}/>{t.create}</button></div>
+  :<div className="cr-form"><label>{t.join}<input value={code} autoCapitalize="characters" autoComplete="off" spellCheck={false} placeholder={t.joinPh} aria-describedby="cr-code-hint" onChange={e=>setCode(e.target.value.toUpperCase().replace(/[^A-Z0-9]/g,'').slice(0,6))}/><small id="cr-code-hint" className="cr-help">{t.joinHint}</small></label>
+   <label>{t.nick}<input value={nick} maxLength={24} placeholder={t.nickPh} aria-describedby="cr-nick-hint" onChange={e=>setNick(e.target.value)}/><small id="cr-nick-hint" className="cr-help">{t.nickHint}</small></label><button className="button" disabled={code.length!==6} onClick={join}><LogIn size={17}/>{t.joinBtn}</button></div>}
   {msg&&<p className="cr-error" role="alert">{msg}</p>}
-  <small className="muted">{t.note}</small>
+  {!teacher&&<small className="muted">{t.note}</small>}
  </section>;
 }
 
@@ -131,6 +133,9 @@ function GroupView({lang,group,teacher,onBack}:{lang:Lang;group:Group;teacher:bo
   if(teacher){const b=await callApi<Book>('/classroom/gradebook?groupId='+group.id);if(b.ok)setBook(b.data)}
  },[group.id,teacher]);
  useEffect(()=>{load()},[load]);
+ // While a test is running the teacher's "N/M submitted" refreshes on its own (only when the app is in front).
+ const live=teacher&&!!items?.some(a=>a.kind==='quiz'&&a.status==='open');
+ useEffect(()=>{if(!live)return;const id=setInterval(()=>{if(document.visibilityState==='visible')load()},15000);return ()=>clearInterval(id)},[live,load]);
  useEffect(()=>{fetch(`/decks/manifest.${lang}.json`).then(r=>r.ok?r.json():[]).then(setDecks).catch(()=>setDecks([]))},[lang]);
  const openAssignment=async(a:Assignment)=>{
   if(a.topicId){setTopicId(a.topicId);setTab('plan');return}
@@ -142,7 +147,10 @@ function GroupView({lang,group,teacher,onBack}:{lang:Lang;group:Group;teacher:bo
  const backTo=sel?()=>{setSel(null);load()}:topicId?()=>{setTopicId(null);load()}:onBack;
  const backLabel=sel?group.name:topicId?group.name:t.back;
  const row=topics?.find(r=>r.topicId===topicId)||null;
- return <section className="classroom card lg-group">
+ const top=useRef<HTMLElement>(null);
+ const first=useRef(true);
+ useEffect(()=>{if(first.current){first.current=false;return}toTop(top.current)},[sel,topicId]);
+ return <section className="classroom card lg-group" ref={top}>
   <button className="cr-back" onClick={backTo}><ChevronLeft size={16}/>{backLabel}</button>
   {sel?<AssignmentView lang={lang} a={sel} teacher={teacher} roster={roster} decks={decks} onChanged={load} onDeleted={()=>{setSel(null);load()}}/>
   :topicId?(teacher?<TeacherTopic lang={lang} groupId={group.id} topicId={topicId} row={row} test={items?.find(a=>a.id===row?.testId)||null} members={book?.members||[]} onChanged={load}/>
@@ -152,11 +160,11 @@ function GroupView({lang,group,teacher,onBack}:{lang:Lang;group:Group;teacher:bo
    <h2>{group.name}</h2>
    {teacher&&memberCount===0&&<InviteCard lang={lang} group={group}/>}
    {!teacher&&<MyResults lang={lang} items={items}/>}
-   <div className="chips lg-tabs">{(teacher?['plan','work','book','people'] as const:['plan','work'] as const).map(k=><button key={k} className={tab===k?'active':''} onClick={()=>setTab(k)}>{k==='plan'&&!teacher?t.topics:t.tabs[k]}</button>)}</div>
-   {tab==='plan'&&(teacher?<TeacherPlan lang={lang} topics={topics} items={items} onPick={setTopicId}/>:<StudentPlan lang={lang} topics={topics} items={items} onPick={setTopicId}/>)}
+   <div className="chips lg-tabs" role="tablist">{(teacher?['plan','work','book','people'] as const:['plan','work'] as const).map(k=><button key={k} role="tab" aria-selected={tab===k} className={tab===k?'active':''} onClick={()=>setTab(k)}>{k==='plan'&&!teacher?t.topics:t.tabs[k]}</button>)}</div>
+   {tab==='plan'&&(teacher?<TeacherPlan lang={lang} topics={topics} items={items} onPick={setTopicId} onNav={()=>toTop(top.current)}/>:<StudentPlan lang={lang} topics={topics} items={items} onPick={setTopicId}/>)}
    {tab==='work'&&<>
     {items===null?<p className="muted">…</p>:items.length===0?<p className="muted">{t.noAssign}</p>:<div className="lg-list">{items.map(a=>
-     <button key={a.id} className="lg-row" onClick={()=>openAssignment(a)}><span className={'lg-ico '+(a.kind==='quiz'?'quiz':'task')}>{a.kind==='quiz'?<ClipboardList size={18}/>:'✎'}</span><span><strong>{a.title}</strong><small>{teacher?`${a.submitted??0}/${memberCount} ${t.submitted}`:a.mine?(a.kind==='quiz'&&a.mine.answer==='done'?`${t.result}: ${a.mine.score}/${a.mine.total}`:a.kind==='task'?t.sent:''):''}{a.dueDate?` · ${t.dueLbl} ${a.dueDate}`:''}</small></span>
+     <button key={a.id} className="lg-row" onClick={()=>openAssignment(a)}><span className={'lg-ico '+(a.kind==='quiz'?'quiz':'task')}>{a.kind==='quiz'?<ClipboardList size={18}/>:'✎'}</span><span className="lg-row-text"><strong>{a.title}</strong><small>{teacher?`${a.submitted??0}/${memberCount} ${t.submitted}`:a.mine?(a.kind==='quiz'&&a.mine.answer==='done'?`${t.result}: ${a.mine.score}/${a.mine.total}`:a.kind==='task'?t.sent:''):''}{a.dueDate?` · ${t.dueLbl} ${a.dueDate}`:''}</small></span>
       <AssignTag t={t} a={a} teacher={teacher}/></button>)}</div>}
     {teacher?(adding?<NewAssignment lang={lang} groupId={group.id} decks={decks} onDone={()=>{setAdding(false);load()}} onCancel={()=>setAdding(false)}/>:<button className="button" onClick={()=>setAdding(true)}><Plus size={17}/>{t.add}</button>)
     :<button className="button secondary" onClick={leave}>{t.leave}</button>}
@@ -198,9 +206,12 @@ function topicStatus(t:W,row:TopicRow|undefined,test:Assignment|undefined):[stri
  return [t.st.open,'brand'];
 }
 
-function TeacherPlan({lang,topics,items,onPick}:{lang:Lang;topics:TopicRow[]|null;items:Assignment[]|null;onPick:(id:string)=>void}){
+function TeacherPlan({lang,topics,items,onPick,onNav}:{lang:Lang;topics:TopicRow[]|null;items:Assignment[]|null;onPick:(id:string)=>void;onNav:()=>void}){
  const t=words[lang];
  const [subject,setSubject]=useState<Subject|null>(()=>{const first=topics?.[0];const m=first&&topicMeta(first.topicId);return m?subjectOf(m):null});
+ const nav=useRef(onNav);nav.current=onNav;
+ const first=useRef(true);
+ useEffect(()=>{if(first.current){first.current=false;return}nav.current()},[subject]);
  const tag=(m:TopicMeta)=>{const row=topics?.find(r=>r.topicId===m.id);const [txt,cls]=topicStatus(t,row,items?.find(a=>a.id===row?.testId));return <span className={'lg-tag '+cls}>{txt}</span>};
  if(!subject)return <><p className="muted">{t.pick}</p><SubjectList lang={lang} onPick={setSubject}/></>;
  return <><button className="lg-link" onClick={()=>setSubject(null)}><ChevronLeft size={14}/>{tx(subject.title,lang)}</button><SubjectHero lang={lang} subject={subject}/><TopicList lang={lang} subject={subject} onPick={m=>onPick(m.id)} tag={tag}/></>;
@@ -212,8 +223,8 @@ function StudentPlan({lang,topics,items,onPick}:{lang:Lang;topics:TopicRow[]|nul
  const list=topics.map(r=>({r,m:topicMeta(r.topicId)})).filter((x):x is {r:TopicRow;m:TopicMeta}=>!!x.m).reverse();
  if(!list.length)return <p className="muted">{t.noTopics}</p>;
  return <div className="lg-list">{list.map(({r,m})=>{const test=items?.find(a=>a.id===r.testId);return <button key={m.id} className="lg-row" onClick={()=>onPick(m.id)}>
-  <span className={'lg-ico '+m.type}>{m.n}</span><span><strong>{tx(m.title,lang)}</strong><small>{tx(subjectOf(m).title,lang)} · {metaLine(m,lang)}</small></span>
-  {test&&(test.mine?.answer==='done'?<span className="lg-tag brand">{test.mine.score}/{test.mine.total}</span>:test.status==='open'?<span className="lg-tag warn">{t.testOpen}</span>:null)}</button>})}</div>;
+  <span className={'lg-ico '+m.type}>{m.n}</span><span className="lg-row-text"><strong>{tx(m.title,lang)}</strong><small>{tx(subjectOf(m).title,lang)} · {metaLine(m,lang)}</small>
+  {test&&(test.mine?.answer==='done'?<span className="lg-tag brand">{t.result}: {test.mine.score}/{test.mine.total}</span>:test.status==='open'?<span className="lg-tag warn">{t.testOpen}</span>:null)}</span></button>})}</div>;
 }
 
 function MyResults({lang,items}:{lang:Lang;items:Assignment[]|null}){
@@ -238,6 +249,7 @@ function TeacherTopic({lang,groupId,topicId,row,test,members,onChanged}:{lang:La
  const okey=`de_oral:${groupId}:${topicId}`;
  const [oral,setOral]=useState<Oral>(()=>lsGet(okey,{asked:[],marks:{}}));
  const [grading,setGrading]=useState<number|null>(null);
+ const [asking,setAsking]=useState(false);
  const aliases=lsGet<Record<string,string>>(`de_alias:${groupId}`,{});
  const act=async(action:string,extra:Record<string,unknown>={})=>{
   setErr('');setBusy(true);
@@ -265,16 +277,17 @@ function TeacherTopic({lang,groupId,topicId,row,test,members,onChanged}:{lang:La
    <Stage n={2} t={t} title={t.oral} done={!!row?.oralDoneAt} hint={t.oralHint}>
     <OralList lang={lang} topic={topic} extra={k=><div className="lg-oral-tools">
      <label className="lg-check"><input type="checkbox" checked={oral.asked.includes(k)} onChange={e=>saveOral({...oral,asked:e.target.checked?[...oral.asked,k]:oral.asked.filter(x=>x!==k)})}/>{t.asked}</label>
-     {members.length>0&&<button className="lg-link" onClick={()=>setGrading(grading===k?null:k)}>{t.grade}</button>}
+     {members.length>0?<button className="lg-link" aria-expanded={grading===k} onClick={()=>setGrading(grading===k?null:k)}>{t.grade}</button>:<small className="lg-hint">{t.inviteToGrade}</small>}
      {grading===k&&<div className="lg-grade">{members.map(m=>{const v=oral.marks[k]?.[m.no];const set=(x:'y'|'p'|'n')=>saveOral({...oral,marks:{...oral.marks,[k]:{...oral.marks[k],[m.no]:x}}});
       return <div key={m.no}><span>{label(m)}</span><span className="lg-seg">{(['y','p','n'] as const).map(x=><button key={x} className={v===x?'on '+x:''} onClick={()=>set(x)}>{x==='y'?t.knew:x==='p'?t.partly:t.didnt}</button>)}</span></div>})}</div>}
     </div>}/>
     <DoneToggle t={t} done={!!row?.oralDoneAt} disabled={!isOpen||busy} onSet={d=>act('oral',{done:d})}/>
    </Stage>
    <Stage n={3} t={t} title={t.test} done={!!test&&test.status==='closed'} hint={test?'':t.testHint}>
-    {test?<TestRunning lang={lang} groupId={groupId} topic={topic} test={test} members={members} label={label} onFinish={async()=>{if(window.confirm(t.confirmFinish))await act('finish')}}/>
+    {test?<TestRunning lang={lang} groupId={groupId} topic={topic} test={test} members={members} label={label} onFinish={()=>setAsking(true)}/>
     :<TestSetup lang={lang} groupId={groupId} topic={topic} disabled={!isOpen||busy} onStart={(questions,minutes)=>act('test',{questions,minutes,title:tx(topic.title,lang)})}/>}
    </Stage>
+   {asking&&<ConfirmSheet text={t.confirmFinish} ok={t.finishTest} cancel={t.cancel} onOk={async()=>{setAsking(false);await act('finish')}} onCancel={()=>setAsking(false)}/>}
    {show&&<Slides title={tx(topic.title,lang)} eyebrow={tx(subject.title,lang)} slides={topic.slides} lang={lang} accent={subjectColor(subject.id).c} teacher onClose={()=>setShow(false)}/>}
   </>}
  </>;
@@ -282,6 +295,17 @@ function TeacherTopic({lang,groupId,topicId,row,test,members,onChanged}:{lang:La
 
 function Stage({n,t,title,done,hint,children}:{n:number;t:W;title:string;done:boolean;hint?:string;children:React.ReactNode}){
  return <div className={'lg-stage'+(done?' done':'')}><span className="lg-eyebrow">{n}-{t.stage}</span><h3>{done&&<Check size={16}/>}{title}</h3>{hint&&<p className="muted">{hint}</p>}{children}</div>;
+}
+
+/** In-app confirmation (replaces window.confirm): focus starts on Cancel, Escape or the backdrop cancels, focus returns afterwards. */
+function ConfirmSheet({text,ok,cancel,danger,onOk,onCancel}:{text:string;ok:string;cancel:string;danger?:boolean;onOk:()=>void;onCancel:()=>void}){
+ const ref=useRef<HTMLButtonElement>(null);
+ const esc=useRef(onCancel);esc.current=onCancel;
+ useEffect(()=>{const back=document.activeElement as HTMLElement|null;ref.current?.focus();const k=(e:KeyboardEvent)=>{if(e.key==='Escape')esc.current()};addEventListener('keydown',k);return ()=>{removeEventListener('keydown',k);back?.focus?.()}},[]);
+ return <div className="lg-confirm" onClick={e=>{if(e.target===e.currentTarget)onCancel()}}>
+  <div className="lg-confirm-sheet" role="alertdialog" aria-modal="true" aria-labelledby="lg-confirm-text"><p id="lg-confirm-text">{text}</p>
+   <div className="lg-confirm-actions"><button ref={ref} className="button secondary" onClick={onCancel}>{cancel}</button><button className={'button'+(danger?' secondary danger':'')} onClick={onOk}>{ok}</button></div></div>
+ </div>;
 }
 
 function DoneToggle({t,done,disabled,onSet}:{t:W;done:boolean;disabled:boolean;onSet:(d:boolean)=>void}){
@@ -320,12 +344,12 @@ function TestRunning({lang,groupId,topic,test,members,label,onFinish}:{lang:Lang
  return <>
   <div className="lg-mine"><div><b>{test.submitted??0}/{members.length}</b> <small>{t.submitted}</small></div><span className={'lg-tag '+(test.status==='open'?'warn':'brand')}>{test.status==='open'?t.st.testing:t.st.done}</span>
    <div className="lg-bar"><i style={{width:`${members.length?(test.submitted??0)/members.length*100:0}%`}}/></div></div>
-  <p className="muted">{qs.length} {t.qShort} · {test.minutes} {t.timeLimit}</p>
+  <p className="muted">{t.qCount(qs.length)} · {test.minutes} {t.timeLimit}</p>
   <div className="cr-actions"><button className="button secondary" onClick={()=>setShowRes(!showRes)}><BarChart3 size={16}/>{t.results}</button>{test.status==='open'&&<button className="button" onClick={onFinish}>{t.finishTest}</button>}</div>
   {showRes&&(res===null?<p className="muted">…</p>:<>
-   <div className="lg-list">{[...res].sort((a,b)=>(b.score??-1)-(a.score??-1)).map(m=>{const bm=byNo.get(m.no);return <div key={m.no} className="lg-row static"><span><strong>{bm?label(bm):m.nickname||`${t.student} ${nn(m.no)}`}</strong><small>{m.answer==='done'?`${m.score}/${m.total}`:m.answer==='started'?t.st.testing:t.notYet}</small></span>{m.answer==='done'&&m.total?<span className="lg-tag brand">{Math.round((m.score||0)/m.total*100)}%</span>:null}</div>})}</div>
-   {done.length>0&&key&&<div className="lg-errs"><h3>{t.err}</h3>{qs.map((qi,k)=>{const wrong=done.filter(m=>m.answers?.[k]!==key[qi]).length;const pct=Math.round(wrong/done.length*100);
-    return <div key={k} className="lg-err"><span>{t.qShort}{k+1}. {tx(topic.test[qi]?.q,lang)}</span><div className="lg-bar err"><i style={{width:pct+'%'}}/></div><b>{pct}%</b></div>})}</div>}
+   <div className="lg-list">{[...res].sort((a,b)=>(b.score??-1)-(a.score??-1)).map(m=>{const bm=byNo.get(m.no);return <div key={m.no} className="lg-row static"><span className="lg-row-text"><strong>{bm?label(bm):m.nickname||`${t.student} ${nn(m.no)}`}</strong><small>{m.answer==='done'?`${m.score}/${m.total}`:m.answer==='started'?t.st.testing:t.notYet}</small></span>{m.answer==='done'&&m.total?<span className="lg-tag brand">{Math.round((m.score||0)/m.total*100)}%</span>:null}</div>})}</div>
+   {done.length>0&&key&&<div className="lg-errs"><h3>{t.perQ}</h3>{qs.map((qi,k)=>{const right=done.filter(m=>m.answers?.[k]===key[qi]).length;const pct=Math.round(right/done.length*100);
+    return <div key={k} className={'lg-err '+(pct>=60?'good':'bad')}><span className="lg-err-q"><b>{t.qN(k+1)}</b> {tx(topic.test[qi]?.q,lang)}</span><div className="lg-bar" role="img" aria-label={`${t.rightN(right,done.length)} · ${pct}%`}><i style={{width:Math.max(pct,2)+'%'}}/></div><small>{t.rightN(right,done.length)}</small></div>})}</div>}
   </>)}
  </>;
 }
@@ -365,7 +389,7 @@ function StudentTopic({lang,topicId,test,onChanged}:{lang:Lang;topicId:string;te
     :finished?<><p className="cr-score">{t.result}: {score?score[0]:mine?.score} / {score?score[1]:mine?.total}</p>
      {mine?.review?<Review lang={lang} topic={topic} questions={test.questions||[]} review={mine.review}/>:<p className="muted">{t.reviewLater}</p>}</>
     :mine?.answer==='started'&&run===null?<p className="muted">{t.errStarted}</p>
-    :test.status==='open'?<><p className="muted">{qs.length} {t.qShort} · {test.minutes} {t.timeLimit}</p><button className="button" onClick={startTest}><Timer size={16}/>{t.start}</button></>
+    :test.status==='open'?<><p className="muted">{t.qCount(qs.length)} · {test.minutes} {t.timeLimit}</p><button className="button" onClick={startTest}><Timer size={16}/>{t.start}</button></>
     :<p className="muted">{t.errClosed}</p>}
     {err&&<p className="cr-error" role="alert">{err}</p>}
    </div>
@@ -374,10 +398,17 @@ function StudentTopic({lang,topicId,test,onChanged}:{lang:Lang;topicId:string;te
    {show&&<Slides title={tx(topic.title,lang)} eyebrow={tx(subject.title,lang)} slides={topic.slides} lang={lang} accent={subjectColor(subject.id).c} onClose={()=>setShow(false)}/>}
    {run!==null&&test&&<QuizRun title={tx(topic.title,lang)} lang={lang} reveal={false} deadline={run}
     questions={qs.map(q=>({q:tx(q.q,lang),options:q.options.map(o=>tx(o,lang)),correct:-1,explanation:''}))}
-    result={score?<><b>{score[0]} / {score[1]}</b><p>{t.result}</p></>:err?<p className="cr-error">{err}</p>:<p>…</p>}
+    result={score?<ScoreCard t={t} score={score[0]} total={score[1]}/>:err?<p className="cr-error">{err}</p>:<p>…</p>}
     onDone={submit} onClose={()=>setRun(null)}/>}
   </>}
  </>;
+}
+
+/** Server-scored result inside QuizRun: ring, verdict, one plain sentence (QuizRun's bar already says "Score"). */
+function ScoreCard({t,score,total}:{t:W;score:number;total:number}){
+ const pct=total?Math.round(score/total*100):0;
+ return <><div className="qr-ring" style={{['--p' as string]:pct}}><div><b>{score} / {total}</b><small>{pct}%</small></div></div>
+  <h3 className="qr-verdict">{pct>=80?t.great:pct>=60?t.good:t.more}</h3><p>{t.scoreLine(score,total)}</p><p className="lg-small">{t.reviewLater}</p></>;
 }
 
 function Review({lang,topic,questions,review}:{lang:Lang;topic:Topic;questions:number[];review:Review}){
@@ -408,7 +439,7 @@ function People({lang,groupId,members}:{lang:Lang;groupId:string;members:BookMem
  const [aliases,setAliases]=useState<Record<string,string>>(()=>lsGet(k,{}));
  if(members===null)return <p className="muted">…</p>;
  if(!members.length)return <p className="muted">{t.noMembers}</p>;
- return <div className="lg-list">{members.map(m=><div key={m.no} className="lg-row static"><span className="lg-ico">{nn(m.no)}</span><span><strong>{m.nickname||`${t.student} ${nn(m.no)}`}</strong>
+ return <div className="lg-list">{members.map(m=><div key={m.no} className="lg-row static"><span className="lg-ico">{nn(m.no)}</span><span className="lg-row-text"><strong>{m.nickname||`${t.student} ${nn(m.no)}`}</strong>
   <input className="lg-alias" maxLength={40} placeholder={t.alias} value={aliases[m.no]||''} onChange={e=>{const v={...aliases,[m.no]:e.target.value};setAliases(v);lsSet(k,v)}}/></span></div>)}</div>;
 }
 
@@ -447,16 +478,18 @@ function AssignmentView({lang,a,teacher,roster,decks,onChanged,onDeleted}:{lang:
  const send=async()=>{setErr('');const r=await callApi('/classroom/submit','POST',{assignmentId:a.id,answer});if(r.ok){setDone(true);onChanged()}else setErr(r.data.error==='closed'?t.errClosed:t.errGeneric)};
  const finish=async(_s:number,_n:number,answers:number[])=>{setErr('');const r=await callApi<{score:number;total:number}>('/classroom/submit','POST',{assignmentId:a.id,answers});if(r.ok){setScore([r.data.score,r.data.total]);setDone(true);onChanged()}else setErr(r.data.error==='already_submitted_or_not_started'?t.errDone:r.data.error==='closed'?t.errClosed:t.errGeneric)};
  const toggle=async()=>{await callApi('/classroom/assignments','PUT',{assignmentId:a.id,status:a.status==='open'?'closed':'open'});onDeleted()};
- const del=async()=>{if(window.confirm(t.confirmDel)){await callApi('/classroom/assignments?assignmentId='+a.id,'DELETE');onDeleted()}};
+ const [asking,setAsking]=useState(false);
+ const del=async()=>{setAsking(false);await callApi('/classroom/assignments?assignmentId='+a.id,'DELETE');onDeleted()};
  return <>
   <h2>{a.title}</h2>
   {a.dueDate&&<p className="muted">{t.dueLbl}: {a.dueDate}</p>}
   {a.body&&<p className="body-copy">{a.body}</p>}
   {teacher?<>
    <h3>{t.roster}</h3>
-   {roster===null?<p className="muted">…</p>:<div className="lg-list">{roster.map((m,i)=><div key={i} className="lg-row static"><span><strong>{m.nickname||`${t.student} ${nn(m.no)}`}</strong><small>{m.submittedAt&&m.answer!=='started'?(a.kind==='quiz'?`${t.result}: ${m.score}/${m.total}`:m.answer):m.answer==='started'?t.st.testing:t.notYet}</small></span></div>)}</div>}
+   {roster===null?<p className="muted">…</p>:<div className="lg-list">{roster.map((m,i)=><div key={i} className="lg-row static"><span className="lg-row-text"><strong>{m.nickname||`${t.student} ${nn(m.no)}`}</strong><small>{m.submittedAt&&m.answer!=='started'?(a.kind==='quiz'?`${t.result}: ${m.score}/${m.total}`:m.answer):m.answer==='started'?t.st.testing:t.notYet}</small></span></div>)}</div>}
    <div className="cr-actions"><button className="button secondary" onClick={toggle}>{a.status==='open'?t.close:t.reopen}</button>
-   <button className="button secondary" onClick={del}><Trash2 size={16}/>{t.delete}</button></div>
+   <button className="button secondary" onClick={()=>setAsking(true)}><Trash2 size={16}/>{t.delete}</button></div>
+   {asking&&<ConfirmSheet text={t.confirmDel} ok={t.delete} cancel={t.cancel} danger onOk={del} onCancel={()=>setAsking(false)}/>}
   </>:a.kind==='task'?<>
    <label>{t.answer}<textarea rows={5} maxLength={2000} value={answer} onChange={e=>{setAnswer(e.target.value);setDone(false)}}/></label>
    {a.status==='closed'&&<p className="muted">{t.errClosed}</p>}

@@ -190,6 +190,7 @@ export function Arches({layout,render,onTap,toothLabel,upperLabel,lowerLabel,tit
    const interactive=!!onTap&&activeTap;
    return <g key={t.num} className={'pr-tooth'+(interactive?' pr-tooth-btn':'')} transform={`translate(${r1(t.x)} ${r1(t.y)}) rotate(${r1(t.rot)})`}
     {...(interactive?{role:'button',tabIndex:0,'aria-label':toothLabel?.(t),onKeyDown:(e:KeyboardEvent)=>key(e,t.num)}:{})}>
+    {interactive&&<circle className="pr-tooth-hit" r={28}/>}{/* invisible ≥44 CSS px tap area (SVG groups have no pseudo-elements); the svg-level tap still picks the nearest tooth */}
     {render(t)}
    </g>})}
   {children}

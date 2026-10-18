@@ -32,7 +32,7 @@ with sync_playwright() as p:
     tp.screenshot(path=OUT+'/c1-teacher-group.png')
     sc,sp,serr=login(b,'student','Stud Browser')
     sp.goto(BASE+'/?screen=student&lang=en');sp.wait_for_selector('.classroom');sp.wait_for_timeout(800)
-    sp.get_by_placeholder('6-character',exact=False).fill(code);sp.get_by_placeholder('Your teacher sees you',exact=False).fill('Zebra');sp.get_by_role('button',name='Join',exact=True).click();sp.wait_for_timeout(800)
+    sp.get_by_placeholder('6-character',exact=False).fill(code);sp.get_by_placeholder('e.g. Lola',exact=False).fill('Zebra');sp.get_by_role('button',name='Join',exact=True).click();sp.wait_for_timeout(800)
     sp.locator('.lg-row',has_text='Browser Group').click();sp.wait_for_timeout(600)
     sp.locator('.lg-tabs button',has_text='Assignments').click();sp.wait_for_timeout(300)
     sp.locator('.lg-row',has_text='Describe enamel').click();sp.wait_for_timeout(300)

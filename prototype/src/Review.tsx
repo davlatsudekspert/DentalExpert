@@ -1,4 +1,4 @@
-import {useEffect,useMemo,useState,type ReactNode} from 'react';
+import {useEffect,useMemo,useRef,useState,type ReactNode} from 'react';
 import {ArrowLeft,BookOpen,Check,ChevronRight,Flame,Layers,RotateCcw,Sparkles} from 'lucide-react';
 import type {Lang} from './discoveryData';
 import {SUBJECTS,TOPICS,loadTopic,tx,type Topic} from './curriculumData';
@@ -18,6 +18,9 @@ const INTERVALS=[1,3,7,14,30];
 const NEW_PER_DAY=20;
 const KEY='de_review';
 const DECK_GROUP='decks';
+/** Russian noun form for n: [1 день, 2 дня, 5 дней]. */
+export const ruPl=(n:number,[one,few,many]:[string,string,string])=>{const a=Math.abs(n)%10,b=Math.abs(n)%100;return a===1&&b!==11?one:a>=2&&a<=4&&(b<12||b>14)?few:many};
+const ruDays=(n:number)=>`${n} ${ruPl(n,['день','дня','дней'])}`,ruCards=(n:number)=>`${n} ${ruPl(n,['карточка','карточки','карточек'])}`;
 
 const dict={
  uz:{title:'Takrorlash',sub:'Har bir karta eslab qolish uchun eng qulay vaqtda qaytadi',due:'Bugun takrorlash',fresh:'Yangi kartalar',streak:'Ketma-ket',days:(n:number)=>`${n} kun`,
@@ -30,29 +33,29 @@ const dict={
   left:(n:number)=>`${n} ta qoldi`,back:'Orqaga',stop:'Seansni tugatish',
   emptyTitle:'Bugungi takrorlash yakunlandi',emptyNext:(d:string)=>`Keyingi kartalar ${d} kuni qaytadi.`,emptyNew:'Yangi kartalar ertaga qo‘shiladi.',emptyNone:'Tanlangan fanlarda hozircha kartalar yo‘q.',
   doneTitle:'Ajoyib! Seans tugadi',doneText:(n:number)=>`${n} ta karta takrorlandi. Ertaga yana qaytib keling — ketma-ketlik shunday saqlanadi.`,
-  doneStats:{again:'Bilmadim',hard:'Qiyin',easy:'Oson'},home:'Bosh sahifaga'},
- ru:{title:'Повторение',sub:'Каждая карточка возвращается тогда, когда её проще всего закрепить',due:'К повторению',fresh:'Новые карточки',streak:'Серия',days:(n:number)=>`${n} дн.`,
-  today:'План на сегодня',todayOf:(a:number,b:number)=>`${a} / ${b} карточек`,subjects:'Предметы',all:'Выбрать все',none:'Сбросить',
-  cards:(n:number)=>`${n} карт.`,dueBadge:(n:number)=>`${n} к повторению`,newBadge:(n:number)=>`${n} новых`,decks:'Тесты мини-уроков',
-  start:(n:number)=>`Начать · ${n} карт.`,pick:'Выберите хотя бы один предмет',loading:'Готовим карточки…',
+  doneStats:{again:'Bilmadim',hard:'Qiyin',easy:'Oson'},home:'Takrorlashga qaytish',leaveQ:'Seansni tugatasizmi?',leaveT:'Baholangan kartalar saqlanadi, qolganlari navbatda qoladi.',stay:'Davom etish',leave:'Tugatish'},
+ ru:{title:'Повторение',sub:'Каждая карточка возвращается тогда, когда её проще всего закрепить',due:'К повторению',fresh:'Новые карточки',streak:'Серия',days:ruDays,
+  today:'План на сегодня',todayOf:(a:number,b:number)=>`${a} / ${ruCards(b)}`,subjects:'Предметы',all:'Выбрать все',none:'Сбросить',
+  cards:ruCards,dueBadge:(n:number)=>`${n} к повторению`,newBadge:(n:number)=>`${n} ${ruPl(n,['новая','новые','новых'])}`,decks:'Тесты мини-уроков',
+  start:(n:number)=>`Начать · ${ruCards(n)}`,pick:'Выберите хотя бы один предмет',loading:'Готовим карточки…',
   limit:'Не больше 20 новых карточек в день',schedule:'Интервалы: 1 → 3 → 7 → 14 → 30 дней. Не больше 20 новых карточек в день.',
   show:'Показать ответ',tap:'Нажмите, чтобы перевернуть',plan:'План ответа',correct:'Правильный ответ',why:'Пояснение',oral:'Устный вопрос',quiz:'Тестовый вопрос',
-  again:'Не знаю',hard:'Трудно',easy:'Легко',soon:'в этой сессии',after:(n:number)=>`через ${n} дн.`,grade:'Оцените себя',
+  again:'Не знаю',hard:'Трудно',easy:'Легко',soon:'в этой сессии',after:(n:number)=>`через ${ruDays(n)}`,grade:'Оцените себя',
   left:(n:number)=>`осталось ${n}`,back:'Назад',stop:'Завершить сессию',
   emptyTitle:'На сегодня всё повторено',emptyNext:(d:string)=>`Следующие карточки вернутся ${d}.`,emptyNew:'Новые карточки добавятся завтра.',emptyNone:'В выбранных предметах пока нет карточек.',
   doneTitle:'Отлично! Сессия завершена',doneText:(n:number)=>`Повторено карточек: ${n}. Возвращайтесь завтра, чтобы сохранить серию.`,
-  doneStats:{again:'Не знаю',hard:'Трудно',easy:'Легко'},home:'На главную'},
+  doneStats:{again:'Не знаю',hard:'Трудно',easy:'Легко'},home:'К повторению',leaveQ:'Завершить сессию?',leaveT:'Оценённые карточки сохранятся, остальные останутся в очереди.',stay:'Продолжить',leave:'Завершить'},
  en:{title:'Review',sub:'Each card comes back right when it is easiest to remember',due:'Due today',fresh:'New cards',streak:'Streak',days:(n:number)=>`${n} d`,
-  today:'Today’s plan',todayOf:(a:number,b:number)=>`${a} / ${b} cards`,subjects:'Subjects',all:'Select all',none:'Clear',
-  cards:(n:number)=>`${n} cards`,dueBadge:(n:number)=>`${n} due`,newBadge:(n:number)=>`${n} new`,decks:'Mini-lesson quizzes',
-  start:(n:number)=>`Start · ${n} cards`,pick:'Pick at least one subject',loading:'Preparing cards…',
+  today:'Today’s plan',todayOf:(a:number,b:number)=>`${a} / ${b} card${b===1?'':'s'}`,subjects:'Subjects',all:'Select all',none:'Clear',
+  cards:(n:number)=>`${n} card${n===1?'':'s'}`,dueBadge:(n:number)=>`${n} due`,newBadge:(n:number)=>`${n} new`,decks:'Mini-lesson quizzes',
+  start:(n:number)=>`Start · ${n} card${n===1?'':'s'}`,pick:'Pick at least one subject',loading:'Preparing cards…',
   limit:'Up to 20 new cards a day',schedule:'Schedule: 1 → 3 → 7 → 14 → 30 days. At most 20 new cards a day.',
   show:'Show answer',tap:'Tap the card to flip it',plan:'Answer plan',correct:'Correct answer',why:'Explanation',oral:'Oral question',quiz:'Quiz question',
   again:'Again',hard:'Hard',easy:'Easy',soon:'this session',after:(n:number)=>`in ${n} d`,grade:'Grade yourself',
   left:(n:number)=>`${n} left`,back:'Back',stop:'End session',
   emptyTitle:'Today’s review is done',emptyNext:(d:string)=>`The next cards come back on ${d}.`,emptyNew:'New cards are added tomorrow.',emptyNone:'The selected subjects have no cards yet.',
-  doneTitle:'Great! Session complete',doneText:(n:number)=>`${n} cards reviewed. Come back tomorrow to keep your streak.`,
-  doneStats:{again:'Again',hard:'Hard',easy:'Easy'},home:'Back to overview'}
+  doneTitle:'Great! Session complete',doneText:(n:number)=>`${n} card${n===1?'':'s'} reviewed. Come back tomorrow to keep your streak.`,
+  doneStats:{again:'Again',hard:'Hard',easy:'Easy'},home:'Back to review',leaveQ:'End this session?',leaveT:'Graded cards are saved; the rest stay in your queue.',stay:'Keep going',leave:'End session'}
 };
 
 const blank=():Store=>({v:1,cards:{},excluded:[],newDay:'',newCount:0,doneDay:'',doneCount:0,streakDay:'',streak:0});
@@ -89,6 +92,8 @@ export default function Review({lang}:{lang:'uz'|'ru'|'en'}){
  const [flipped,setFlipped]=useState(false);
  const [tally,setTally]=useState({again:0,hard:0,easy:0,done:0});
  const [finished,setFinished]=useState(false);
+ const [ask,setAsk]=useState(false);
+ const gradesRef=useRef<HTMLDivElement>(null);
  const today=localDay();
 
  useEffect(()=>{let live=true;Promise.all(TOPICS.map(m=>loadTopic(m.id))).then(r=>{if(live)setTopics(r.filter((x):x is Topic=>!!x))});return ()=>{live=false}},[]);
@@ -133,7 +138,7 @@ export default function Review({lang}:{lang:'uz'|'ru'|'en'}){
   const pool=cards.filter(c=>act.has(c.group));
   const due=pool.filter(c=>{const s=store.cards[c.id];return s&&s.due<=today}).sort((a,b)=>store.cards[a.id].due.localeCompare(store.cards[b.id].due));
   const fresh=shuffle(pool.filter(c=>!store.cards[c.id])).slice(0,newQuota);
-  setQueue([...due,...fresh]);setFlipped(false);setTally({again:0,hard:0,easy:0,done:0});setFinished(false);
+  setQueue([...due,...fresh]);setFlipped(false);setAsk(false);setTally({again:0,hard:0,easy:0,done:0});setFinished(false);
  };
 
  const grade=(g:Grade)=>{
@@ -159,7 +164,7 @@ export default function Review({lang}:{lang:'uz'|'ru'|'en'}){
  const hintFor=(g:Grade,card:Card)=>{if(g==='again')return t.soon;const b=nextBox(store.cards[card.id],g);return t.after(INTERVALS[b-1])};
 
  useEffect(()=>{
-  if(!queue)return;
+  if(!queue||ask)return;
   const onKey=(e:KeyboardEvent)=>{
    if(e.key===' '||e.key==='Enter'){if(!flipped){e.preventDefault();setFlipped(true)}return}
    if(!flipped)return;
@@ -168,13 +173,19 @@ export default function Review({lang}:{lang:'uz'|'ru'|'en'}){
   window.addEventListener('keydown',onKey);return ()=>window.removeEventListener('keydown',onKey);
  });
 
+ // Grades appear below the card once flipped: keep them above the bottom nav (scroll-margin-bottom in review.css).
+ useEffect(()=>{if(flipped)gradesRef.current?.scrollIntoView({block:'nearest',behavior:'smooth'})},[flipped]);
+ const endSession=()=>{setAsk(false);setQueue(null);setFinished(tally.done+tally.again>0)};
+ // The back arrow is also what the global swipe-back clicks: with graded cards it asks first; a second press/swipe dismisses the sheet.
+ const tryEnd=()=>{if(ask)setAsk(false);else if(tally.done+tally.again>0)setAsk(true);else endSession()};
+
  if(queue&&queue.length){
   const card=queue[0];
   const total=tally.done+queue.length;
   const groupTitle=groups.find(g=>g.id===card.group)?.title||'';
   return <div className="rv-root rv-session">
    <div className="rv-topbar">
-    <button className="rv-icon" data-back onClick={()=>{setQueue(null);setFinished(tally.done+tally.again>0)}} aria-label={t.stop}><ArrowLeft size={20}/></button>
+    <button className="rv-icon" data-back onClick={tryEnd} aria-label={t.stop}><ArrowLeft size={20}/></button>
     <div className="rv-bar" role="progressbar" aria-valuemin={0} aria-valuemax={total} aria-valuenow={tally.done}><i style={{width:`${total?tally.done/total*100:0}%`}}/></div>
     <span className="rv-left">{t.left(queue.length)}</span>
    </div>
@@ -195,10 +206,14 @@ export default function Review({lang}:{lang:'uz'|'ru'|'en'}){
    </div>
    <div className="rv-actions">
     {!flipped?<button className="rv-primary" onClick={()=>setFlipped(true)}>{t.show}</button>
-    :<><p className="rv-grade-label">{t.grade}</p><div className="rv-grades">
+    :<><p className="rv-grade-label">{t.grade}</p><div className="rv-grades" ref={gradesRef}>
      {(['again','hard','easy'] as Grade[]).map(g=><button key={g} className={'rv-grade '+g} onClick={()=>grade(g)}><strong>{t[g]}</strong><small>{hintFor(g,card)}</small></button>)}
     </div></>}
    </div>
+   {ask&&<div className="rv-confirm" onClick={()=>setAsk(false)}><div className="rv-confirm-card" role="alertdialog" aria-modal="true" aria-labelledby="rv-confirm-t" aria-describedby="rv-confirm-d" onClick={e=>e.stopPropagation()}>
+    <h3 id="rv-confirm-t">{t.leaveQ}</h3><p id="rv-confirm-d">{t.leaveT}</p>
+    <button className="rv-primary" autoFocus onClick={()=>setAsk(false)}>{t.stay}</button><button className="rv-secondary rv-leave" onClick={endSession}>{t.leave}</button>
+   </div></div>}
   </div>;
  }
 
