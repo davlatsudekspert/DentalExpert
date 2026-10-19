@@ -99,4 +99,24 @@ check('photo gone with the account',raw(url4,A)[0]==404)
 R,_=login('dentist','Dr Rate')
 codes=[put(durl('webp',WEBP),R)[0] for _ in range(21)]
 check('rate limited after 20 changes',codes[:20]==[200]*20 and codes[20]==429)
+
+# The app owner (the verifier) keeps their own verification when they change photo or profile; others lose it.
+import os
+# CORS: the native app fetches the owner's photo with a bearer token, so /api/photo must answer capacitor://localhost.
+s,h,_=raw('/api/photo?u=x&v=y',A,{'origin':'capacitor://localhost'})
+check('photo answers CORS for the native origin',h.get('access-control-allow-origin')=='capacitor://localhost')
+try:
+    r=urllib.request.Request(B.removesuffix('/api')+'/api/photo?u=x&v=y',headers={'origin':'capacitor://localhost','access-control-request-method':'GET','access-control-request-headers':'authorization, x-client'},method='OPTIONS')
+    x=urllib.request.urlopen(r);ok=x.status==204 and 'authorization' in x.headers.get('access-control-allow-headers','')
+except Exception:ok=False
+check('photo preflight allowed',ok)
+
+# Owner account: dentist, listed and verified; a photo change keeps verification, and so does saving the profile with a new bio.
+call('/auth/role','PUT',{'role':'dentist'},A)
+prof={'name':'Owner','phone':'+998901234567','workplace':'DE','bio':'x','specialty':'Expert','publishRequested':True}
+call('/auth/profile','PUT',prof,A)
+oid=[x for x in call('/admin/users','GET',None,A)[1]['users'] if x['email']=='davlatsudekspert@gmail.com'][0]['id']
+check('owner verified',call('/admin/users','PUT',{'id':oid,'verified':True},A)[0]==200)
+s,r=put(durl('webp',WEBP),A);check('owner keeps verification after a new photo',s==200 and r['user']['verified'] is True and call('/auth/me',token=A)[1]['user']['verified'] is True)
+s,r=call('/auth/profile','PUT',{**prof,'name':'Owner Two','phone':'+998901111111'},A);check('owner keeps verification after profile change',s==200 and call('/auth/me',token=A)[1]['user']['verified'] is True)
 print('PASS',n,'checks')

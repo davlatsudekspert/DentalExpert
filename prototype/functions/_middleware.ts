@@ -3,7 +3,7 @@ import type {Env} from './_lib/db';
 
 // Native app WebViews call the hosted API cross-origin. Only these origins are allowed; no credentials/cookies are involved
 // (the app sends a bearer token), so wildcard-style CORS risks do not apply.
-const PUBLIC_READ=/^\/api\/(doctors|sponsors|institutions|decks)(\/|$)/;
+const PUBLIC_READ=/^\/api\/(doctors|sponsors|institutions|decks|photo)(\/|$)/;
 const AUTH=/^\/api\/(auth|classroom|admin|reports)(\/|$)/;
 
 export const onRequest:PagesFunction<Env>=async({request,next})=>{

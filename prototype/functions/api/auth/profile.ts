@@ -1,4 +1,5 @@
 import {guardPost,sessionUser} from '../../_lib/auth';
+import {isAdminEmail} from '../../_lib/admin';
 import {json,type Env} from '../../_lib/db';
 
 const field=(v:unknown,max:number)=>typeof v==='string'?v.trim().slice(0,max)||null:null;
@@ -27,7 +28,7 @@ export const onRequestPut:PagesFunction<Env>=async({request,env})=>{
  const workplace=field(b.workplace,100),bio=field(b.bio,600),specialty=field(b.specialty,80),address=field(b.address,150);
  const publishRequested=user.role==='dentist'&&b.publishRequested===true?1:0;
  const same=(a:string|null,c:string|null)=>(a||null)===(c||null);
- const identityChanged=!same(user.name,name)||!same(user.phone,phone)||!same(user.telegram,telegram)||!same(user.instagram,instagram)||!same(user.publicEmail,publicEmail)||!same(user.mapUrl,mapUrl)||!same(user.workplace,workplace)||!same(user.address,address)||!same(user.specialty,specialty);
+ const identityChanged=!isAdminEmail(env,user.email)&&(!same(user.name,name)||!same(user.phone,phone)||!same(user.telegram,telegram)||!same(user.instagram,instagram)||!same(user.publicEmail,publicEmail)||!same(user.mapUrl,mapUrl)||!same(user.workplace,workplace)||!same(user.address,address)||!same(user.specialty,specialty));
  await env.DB.prepare(
   `UPDATE users SET name=?,phone=?,workplace=?,bio=?,specialty=?,telegram=?,instagram=?,public_email=?,address=?,map_url=?,publish_requested=?,
    verified_at=CASE WHEN ?=1 THEN NULL ELSE verified_at END WHERE id=?`
