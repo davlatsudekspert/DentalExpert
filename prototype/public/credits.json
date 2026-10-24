@@ -1,0 +1,177 @@
+{
+ "version": 1,
+ "note": "Every photograph bundled in the app. Licences verified on the Wikimedia Commons file pages (extmetadata) on 2026-10-24.",
+ "images": [
+  {
+   "file": "radio.webp",
+   "title": "Basic panoramic radiograph",
+   "author": "Coronation Dental Specialty Group",
+   "license": "CC BY 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Basic_panoramic_radiograph.jpg",
+   "fileUrl": "https://commons.wikimedia.org/wiki/File:Basic_panoramic_radiograph.jpg",
+   "source": "Wikimedia Commons",
+   "modifications": "resized to 1000px wide, converted to WebP",
+   "width": 1000,
+   "height": 487,
+   "alt": {
+    "uz": "Panoramik rentgenogramma: pastki va yuqori jag tishlari, chuqur joylashgan aql tishlari",
+    "ru": "Панорамная рентгенограмма: зубы верхней и нижней челюсти, ретенированные зубы мудрости",
+    "en": "Panoramic dental radiograph showing the upper and lower teeth and impacted wisdom teeth"
+   },
+   "subject": "radio"
+  },
+  {
+   "file": "ped.webp",
+   "title": "Deciduous teeth-boy-OPG-10,10,2019",
+   "author": "Gang65",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Deciduous_teeth-boy-OPG-10,10,2019.jpg",
+   "fileUrl": "https://commons.wikimedia.org/wiki/File:Deciduous_teeth-boy-OPG-10,10,2019.jpg",
+   "source": "Wikimedia Commons",
+   "modifications": "resized to 1000px wide, converted to WebP",
+   "width": 1000,
+   "height": 505,
+   "alt": {
+    "uz": "Bola panoramik rentgenogrammasi: sut va doimiy tishlar aralash prikusda",
+    "ru": "Панорамный снимок ребёнка: молочные и постоянные зубы в периоде сменного прикуса",
+    "en": "Panoramic radiograph of a child showing primary and permanent teeth in mixed dentition"
+   },
+   "subject": "ped"
+  },
+  {
+   "file": "endo.webp",
+   "title": "Endodontic Files 20-40",
+   "author": "Hanabishi",
+   "license": "CC BY-SA 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Endodontic_Files_20-40.JPG",
+   "fileUrl": "https://commons.wikimedia.org/wiki/File:Endodontic_Files_20-40.JPG",
+   "source": "Wikimedia Commons",
+   "modifications": "cropped, resized to 1000px wide, converted to WebP, contrast adjusted",
+   "width": 512,
+   "height": 665,
+   "alt": {
+    "uz": "Kanal ichi qo‘l fayllari to‘plami (15–40 o‘lchamlar)",
+    "ru": "Набор ручных эндодонтических файлов (размеры 15–40)",
+    "en": "Set of hand endodontic files for root canal work (sizes 15 to 40)"
+   },
+   "subject": "endo"
+  },
+  {
+   "file": "surg.webp",
+   "title": "Dental extraction forceps",
+   "author": "Revolver00870",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Dental_extraction_forceps.jpg",
+   "fileUrl": "https://commons.wikimedia.org/wiki/File:Dental_extraction_forceps.jpg",
+   "source": "Wikimedia Commons",
+   "modifications": "resized to 1000px wide, converted to WebP",
+   "width": 1000,
+   "height": 827,
+   "alt": {
+    "uz": "Tish olish uchun qisqichlar (shchiptsy) to‘plami",
+    "ru": "Набор щипцов для удаления зубов",
+    "en": "A set of dental extraction forceps"
+   },
+   "subject": "surg"
+  },
+  {
+   "file": "pros.webp",
+   "title": "Dental setup for implants",
+   "author": "Coronation Dental Specialty Group",
+   "license": "CC BY-SA 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Dental_setup_for_implants.jpg",
+   "fileUrl": "https://commons.wikimedia.org/wiki/File:Dental_setup_for_implants.jpg",
+   "source": "Wikimedia Commons",
+   "modifications": "resized to 1000px wide, converted to WebP",
+   "width": 1000,
+   "height": 865,
+   "alt": {
+    "uz": "Gips modellarda tishlarning tayyorlanishi va keramik koronkalar",
+    "ru": "Гипсовые модели челюстей с временными коронками при планировании протезирования",
+    "en": "Plaster jaw models with prosthetic crowns used for treatment planning"
+   },
+   "subject": "pros"
+  },
+  {
+   "file": "perio.webp",
+   "title": "Gingivitis",
+   "author": "Roquex",
+   "license": "CC0 1.0",
+   "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Gingivitis.jpg",
+   "fileUrl": "https://commons.wikimedia.org/wiki/File:Gingivitis.jpg",
+   "source": "Wikimedia Commons",
+   "modifications": "resized to 1000px wide, converted to WebP",
+   "width": 1000,
+   "height": 750,
+   "alt": {
+    "uz": "Gingivit: milk qirrasining yallig‘lanishi, tish toshi va pigmentatsiya",
+    "ru": "Гингивит: воспалённый край десны, зубной камень и налёт",
+    "en": "Gingivitis with inflamed gum margin, calculus and staining on the lower front teeth"
+   },
+   "subject": "perio"
+  },
+  {
+   "file": "impl.webp",
+   "title": "Implant overdenture model",
+   "author": "Coronation Dental Specialty Group",
+   "license": "CC BY-SA 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Implant_overdenture_model.jpg",
+   "fileUrl": "https://commons.wikimedia.org/wiki/File:Implant_overdenture_model.jpg",
+   "source": "Wikimedia Commons",
+   "modifications": "resized to 1000px wide, converted to WebP",
+   "width": 1000,
+   "height": 698,
+   "alt": {
+    "uz": "Implantlarga tayanuvchi qoplama protez modeli",
+    "ru": "Модель условно-съёмного протеза на имплантатах",
+    "en": "Model of an implant-retained overdenture on screw implants"
+   },
+   "subject": "impl"
+  },
+  {
+   "file": "ortho.webp",
+   "title": "Orthopantomogram of severe dental crowding",
+   "author": "Challiyan",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Orthopantomogram_of_severe_dental_crowding.jpg",
+   "fileUrl": "https://commons.wikimedia.org/wiki/File:Orthopantomogram_of_severe_dental_crowding.jpg",
+   "source": "Wikimedia Commons",
+   "modifications": "resized to 1000px wide, converted to WebP",
+   "width": 1000,
+   "height": 529,
+   "alt": {
+    "uz": "Tishlarning kuchli gavjumligi ko‘rsatilgan ortopantomogramma",
+    "ru": "Ортопантомограмма с выраженным скученным положением зубов",
+    "en": "Orthopantomogram showing severe dental crowding"
+   },
+   "subject": "ortho"
+  },
+  {
+   "file": "mfs.webp",
+   "title": "Human mandible mental protuberance",
+   "author": "Petter Bøckman",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Human_mandible_mental_protuberance.jpg",
+   "fileUrl": "https://commons.wikimedia.org/wiki/File:Human_mandible_mental_protuberance.jpg",
+   "source": "Wikimedia Commons",
+   "modifications": "resized to 1000px wide, converted to WebP",
+   "width": 1000,
+   "height": 823,
+   "alt": {
+    "uz": "Pastki jag suyagi, iyak bo‘rtig‘i aylana bilan belgilangan",
+    "ru": "Нижняя челюсть человека, подбородочный выступ обведён кругом",
+    "en": "Human mandible with the mental protuberance circled"
+   },
+   "subject": "mfs"
+  }
+ ]
+}
