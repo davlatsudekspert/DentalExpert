@@ -23,6 +23,8 @@ def open_feature(pg):
 def run20(pg):
     pg.locator('.at-row',has_text='Ortopedik stomatologiya').click()
     pg.wait_for_selector('.ex-seg');pg.locator('.ex-seg button',has_text='20 ta').click()
+    sw=pg.evaluate("()=>document.documentElement.scrollWidth-innerWidth");right=pg.evaluate("()=>Math.max(...[...document.querySelectorAll('.rv-root, .rv-root *')].map(e=>e.getBoundingClientRect().right))-innerWidth")
+    check('setup screen fits the phone width (no sideways overflow)',sw<=1 and right<=1)
     pg.wait_for_function("!document.querySelector('.at-start').disabled",timeout=8000)
     pg.locator('.at-start').click();pg.wait_for_selector('.quiz-run-options',timeout=5000)
     check('first question has 4 options and a report button',pg.locator('.quiz-run-options button').count()==4 and pg.locator('.at-report').count()==1)

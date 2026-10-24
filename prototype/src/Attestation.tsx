@@ -70,7 +70,7 @@ export default function Attestation({lang}:{lang:Lang}){
   <header className="rv-head"><h2>{sel.name}</h2><p>{lang==='ru'?sel.servedRu:sel.served} {t.q}</p></header>
   {sel.status==='beta'&&<p className="at-warn" role="note"><ShieldAlert size={15}/>{t.betaNote(Math.round(sel.agreement*100))}</p>}
   <div className="ex-field"><span className="ex-label">{t.count}</span>
-   <div className="ex-seg" role="radiogroup" aria-label={t.count}>{[...COUNTS,0].map(n=><button key={n} role="radio" aria-checked={n===count} className={n===count?'on':''} onClick={()=>setCount(n)}>{n===0?t.all:t.random(n)}</button>)}</div></div>
+   <div className="ex-seg at-seg" role="radiogroup" aria-label={t.count}>{[...COUNTS,0].map(n=><button key={n} role="radio" aria-checked={n===count} className={n===count?'on':''} onClick={()=>setCount(n)}>{n===0?t.all:t.random(n)}</button>)}</div></div>
   {Number.isFinite(left)&&left>0&&(count===0||count>left)&&<p className="muted">{t.limited(left)}</p>}
   <button className="rv-primary at-start" disabled={!qs||!qs.length} onClick={start}>{left<=0?<Lock size={17}/>:null}{left<=0?t.used:t.start}</button>
   {qs&&!qs.length&&<p className="muted">{t.empty}</p>}

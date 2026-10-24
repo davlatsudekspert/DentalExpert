@@ -235,3 +235,5 @@
 .at-warn{display:flex;gap:8px;align-items:flex-start;padding:10px 12px;border-radius:10px;background:rgba(192,87,60,.12);font-size:.85rem}
 .at-report{display:inline-flex;align-items:center;gap:5px;background:none;border:0;padding:4px 0;font-size:.78rem;opacity:.75;text-decoration:underline;cursor:pointer;color:inherit}
 .at-start{margin:14px 0}.at-back{margin-bottom:8px}.at-left{margin:6px 0}
+
+.ex-seg.at-seg{grid-auto-flow:row!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:6px}.at-seg button{white-space:normal;min-height:44px;padding:6px 8px;line-height:1.2}
