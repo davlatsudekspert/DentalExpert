@@ -43,6 +43,7 @@ async function squarePhoto(file:Blob):Promise<string>{
   const c=document.createElement('canvas');c.width=c.height=PHOTO_SIZE;
   const ctx=c.getContext('2d');if(!ctx)throw new Error('bad_file');
   ctx.imageSmoothingQuality='high';
+  ctx.fillStyle='#fff';ctx.fillRect(0,0,PHOTO_SIZE,PHOTO_SIZE);// a transparent PNG must not turn black in the JPEG fallback
   ctx.drawImage(img,(w-side)/2,(h-side)/2,side,side,0,0,PHOTO_SIZE,PHOTO_SIZE);
   for(const q of [0.82,0.7,0.55]){
    let d=c.toDataURL('image/webp',q);

@@ -52,7 +52,7 @@ jobs:
       - name: Type check server functions
         run: npx tsc -p functions/tsconfig.json --noEmit
       - name: API suites on a local server
-        run: bash tools/ci_local_server.sh auth_test admin_test classroom_test classroom_v2_test general_test topics_test profile_public_test quick_test photo_test pro_off_test
+        run: bash tools/ci_local_server.sh auth_test admin_test classroom_test classroom_v2_test general_test topics_test profile_public_test quick_test photo_test pro_off_test security_test
       - name: Google / Apple sign-in suite
         run: pip install cryptography && python3 tools/oauth_test.py
       - name: Browsers for the walks
@@ -61,7 +61,7 @@ jobs:
           python -m playwright install --with-deps chromium webkit
           echo "CHROMIUM_PATH=$(python -c 'from playwright.sync_api import sync_playwright as s;p=s().start();print(p.chromium.executable_path);p.stop()')" >> "$GITHUB_ENV"
       - name: Browser walks (profile, classroom, topic test, QR join, teacher–student and general tests on iPhone / small-phone WebKit, Pro flag off)
-        run: SIM_OUT=/tmp/sim bash tools/ci_local_server.sh profile_e2e admin_flag_e2e classroom_e2e topics_e2e quick_e2e classroom_v2_e2e general_e2e pro_off_e2e photos_e2e
+        run: SIM_OUT=/tmp/sim bash tools/ci_local_server.sh profile_e2e admin_flag_e2e classroom_e2e topics_e2e quick_e2e classroom_v2_e2e general_e2e pro_off_e2e photos_e2e contrast_e2e layout_e2e states_e2e photo_ui_e2e
       # Pro/Free ON: a second build (VITE_PRO_ENABLED=1) and a second server (PRO_ENABLED=1), run after every flag-off step above
       # because the helper rewrites .dev.vars. Covers the trial, one trial per person, the gates, the webhook, admin grants and the paywall.
       - name: Pro/Free with the flag on (API + browser)

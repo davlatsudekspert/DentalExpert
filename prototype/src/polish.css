@@ -84,3 +84,31 @@
 @container slp (max-height:520px){.sl-cover{min-height:clamp(150px,55cqh,300px)}.sl-bar{padding:4px 12px}.sl-bar small{display:none}.sl-bar button{width:38px;height:38px}.sl-nav{padding:4px 12px calc(4px + env(safe-area-inset-bottom))}.sl-nav .button{min-height:38px}.sl-stage{padding:6px 10px}.sl-slide{min-height:0;padding:12px 22px;gap:8px;font-size:13px}.sl-tree{gap:14px}.sl-tree-root{padding:8px 16px}.sl-tree-root::after{bottom:-14px;height:14px}}
 /* Education edition (Android): four tabs, no find-a-dentist search, no raised centre button. */
 .bottom-nav.five-tab-nav.four-tab{grid-template-columns:repeat(4,minmax(0,1fr));align-items:center}
+/* Colour theme, WCAG AA text contrast (the ivory theme is untouched). style.css loads last, so these use the theme attribute to win. */
+:root[data-theme="color"] .chips button:not(.active){color:#3f5862}
+:root[data-theme="color"] .chips button.active{background:#16706c;border-color:#16706c}
+:root[data-theme="color"] .td-card .td-go{color:color-mix(in srgb,var(--td) 65%,#000)}
+:root[data-theme="color"] .td-card .td-streak{background:#00000033}
+:root[data-theme="color"] .lang-mark{color:#3f6f64}
+:root[data-theme="color"] .mint-avatar{color:#256a60}
+:root[data-theme="color"] .pf-stats small{color:#fff!important}
+:root[data-theme="color"] .pf-card{--pf-hero:linear-gradient(135deg,#10254e,#0f7a78)}
+/* Tap targets: at least 44 x 44 px for buttons, tabs, chips and selects on the main screens. */
+.chips button,.learn > .chips.learn-tabs button{min-height:44px}
+main .hero button,main .hero .button{min-height:44px;padding:10px 14px}
+.text-button{min-width:44px;min-height:44px;justify-content:center}
+.icon-button{min-width:44px;min-height:44px}
+.ac-toggle{width:44px;height:44px}
+.pf-card .pf-edit{min-height:44px}
+.pf-card .pf-bar{min-height:44px;justify-content:center}
+.discovery-location select,.discovery-location input{min-height:44px}
+.atlas-pin::after{content:'';position:absolute;inset:-9px}
+.search-field input{min-height:44px;margin:-10px 0}
+.cr-retry{min-height:44px;padding:0 6px;font:inherit;color:inherit;text-decoration:underline}
+/* Dark theme (not offered in Settings yet, kept readable): same fixes as the colour theme. */
+:root[data-theme="dark"] .td-card .td-main small,:root[data-theme="dark"] .pf-stats small{color:#fff!important}
+:root[data-theme="dark"] .td-card .td-go{color:#8fe9e4}
+:root[data-theme="dark"] .pf-card{--pf-hero:linear-gradient(135deg,#10254e,#0f6f6d)}
+/* Booking calendar days: full cell width and 44 px tall (seven columns cannot all be 44 wide on a 360 px phone). */
+.calendar{padding:17px 10px}
+.calendar .calendar-grid button{width:100%;min-width:40px;height:44px}
