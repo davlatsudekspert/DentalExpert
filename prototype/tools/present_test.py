@@ -47,6 +47,13 @@ with sync_playwright() as p:
     check('live 1920: present toggles on',tv.locator('.sl-player.presenting').count()==1)
     sl=tv.evaluate(box,'.sl-slide');check('live 1920: slide is landscape',sl and sl['w']>sl['h'],str(sl))
     if OUT:tv.screenshot(path=f'{OUT}/present-1920.png')
+    # A short monitor/laptop window (about 1000x460 CSS px): the cover picture must sit inside its card, not be cut off at the top.
+    for vw,vh in ((1000,461),(900,420),(844,390)):
+        sm=b.new_page(viewport={'width':vw,'height':vh});open_slides(sm,LIVE);sm.locator('.sl-present').click();sm.wait_for_timeout(500)
+        cv=sm.evaluate(box,'.sl-cover');mk=sm.evaluate(box,'.sl-cover-mark')
+        check(f'short {vw}x{vh}: cover picture is inside its card',cv and mk and mk['t']>=cv['t']-1 and mk['t']+mk['h']<=cv['t']+cv['h']+1,f'{cv} {mk}')
+        check(f'short {vw}x{vh}: cover is not squashed',cv and cv['h']>=140,str(cv))
+        sm.close()
     dev=b.new_page(viewport={'width':1280,'height':900})
     dev.goto(f'{DEV}/?screen=home&lang=uz');dev.wait_for_timeout(700)
     check('localhost: design studio kept',dev.locator('.studio-aside').count()==1)

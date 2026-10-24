@@ -124,7 +124,7 @@
 .sl-eyebrow{font-size:clamp(11px,1.4vw,14px);font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--lg-brand)}
 .sl-cover h1{font-size:clamp(26px,5vw,52px);line-height:1.1;color:var(--lg-deep);max-width:85%}
 .sl-cover p{font-size:clamp(15px,2.2vw,22px);color:var(--lg-sub);max-width:80%;line-height:1.4}
-.sl-cover-mark{position:absolute;right:0;bottom:0;width:min(44%,260px);aspect-ratio:1;background:var(--sl-cover) center/contain no-repeat;opacity:.95;pointer-events:none}
+.sl-cover-mark{position:absolute;right:0;bottom:0;height:min(100%,260px);max-width:44%;aspect-ratio:1;background:var(--sl-cover) center/contain no-repeat;opacity:.95;pointer-events:none}
 .sl-cover h1,.sl-cover p{position:relative;z-index:1}
 .sl-bullets{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:clamp(8px,1.5vw,14px)}
 .sl-bullets li{position:relative;padding-left:24px;line-height:1.45}
