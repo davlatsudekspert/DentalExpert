@@ -26,12 +26,16 @@ export const sourceNote={
  uz:'Savollar manbasi: Tibbiyot va farmatsevtika xodimlarining malakasini baholash markazi (tmbm.ssv.uz) ochiq test bazasi. Norasmiy tayyorgarlik vositasi; rasmiy imtihon bilan bog‘liq emas. Javoblar kaliti avtomatik aniqlangan, xatolik haqida xabar bering.',
  ru:'Источник вопросов: открытая тестовая база Центра оценки квалификации медицинских и фармацевтических работников (tmbm.ssv.uz). Неофициальное средство подготовки; не связано с официальным экзаменом. Ключ ответов определён автоматически, сообщайте об ошибках.'
 };
+export const guaranteeNote={
+ uz:'Diqqat: ilova imtihonda aynan shu savollar tushishiga kafolat bermaydi. Bu rasmiy ochiq bazadagi savollar bo‘yicha tayyorgarlik vositasi; imtihon tarkibi o‘zgarishi mumkin.',
+ ru:'Внимание: приложение не гарантирует, что на экзамене попадутся именно эти вопросы. Это инструмент подготовки по вопросам из открытой официальной базы; состав экзамена может меняться.'
+};
 export const contactNote={
  uz:`Aloqa / olib tashlash so‘rovi (huquq egalari uchun): ${SUPPORT_EMAIL}`,
  ru:`Контакты / запрос на удаление (для правообладателей): ${SUPPORT_EMAIL}`
 };
 
-export function AttestationNote({lang}:{lang:Lang}){
+export function AttestationNote({lang,noGuarantee}:{lang:Lang;noGuarantee?:boolean}){
  if(lang==='en')return null;
- return <div className="at-note"><p>{sourceNote[lang]}</p><p>{contactNote[lang]}</p></div>;
+ return <div className="at-note">{!noGuarantee&&<p className="at-guarantee"><b>{guaranteeNote[lang]}</b></p>}<p>{sourceNote[lang]}</p><p>{contactNote[lang]}</p></div>;
 }

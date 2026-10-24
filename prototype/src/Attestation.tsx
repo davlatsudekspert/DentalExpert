@@ -4,7 +4,7 @@ import {ArrowLeft,ChevronRight,Flag,Lock,ShieldAlert,Trophy} from 'lucide-react'
 import type {Lang} from './discoveryData';
 import QuizRun,{type RunQ} from './QuizRun';
 import ReportForm from './ReportForm';
-import {ATT_SPECS,AttestationNote,attestationOn,loadAtt,type AttSpec} from './attestationConfig';
+import {ATT_SPECS,AttestationNote,guaranteeNote,attestationOn,loadAtt,type AttSpec} from './attestationConfig';
 import {attestationLeft,showPaywall,takeAttestation,usePro} from './billing';
 import {FREE} from './proConfig';
 import './review.css';
@@ -57,15 +57,16 @@ export default function Attestation({lang}:{lang:Lang}){
   if(!b[k]||pct>=b[k].pct){b[k]={pct,n:total,at:Date.now()};setBest(b);saveBest(b)}
  };
  const ShowReport=report?<ReportForm lang={lang} onClose={()=>setReport(null)} initial={{category:'content',subject:report,body:t.reportBody}}/>:null;
- if(run&&sel)return <>{<QuizRun title={specName(sel,lang)} questions={runQs} lang={lang} onDone={done} onClose={()=>setRun(null)}/>}{ShowReport}</>;
+ if(run&&sel)return <>{<QuizRun title={specName(sel,lang)} note={lang==='ru'?guaranteeNote.ru:guaranteeNote.uz} questions={runQs} lang={lang} onDone={done} onClose={()=>setRun(null)}/>}{ShowReport}</>;
  if(!sel)return <div className="rv-root ex-root">
   <header className="rv-head"><h2>{t.title}</h2><p>{t.lead}</p></header>
+  <p className="at-guarantee"><b>{guaranteeNote[lang==='ru'?'ru':'uz']}</b></p>
   {Number.isFinite(left)&&<p className="muted at-left">{left>0?t.left(left):t.used}</p>}
   <div className="at-list">{ATT_SPECS.map(s=>{const b=best[s.id];const locked=s.status==='withheld';
    return <button key={s.id} className="card at-row" disabled={locked} onClick={()=>setSel(s)}>
     <span className="at-main"><strong>{specName(s,lang)}</strong><small>{locked?t.soon:`${lang==='ru'?s.servedRu:s.served} ${t.q}`}{s.status==='beta'?' · '+t.beta.replace('%',String(Math.round(s.agreement*100))+'%'):''}</small>{b&&<small className="at-best"><Trophy size={12}/> {t.best}: {b.pct}%</small>}</span>
     {locked?<ShieldAlert size={16}/>:<ChevronRight size={16}/>}</button>})}</div>
-  <AttestationNote lang={lang}/>
+  <AttestationNote lang={lang} noGuarantee/>
  </div>;
  return <div className="rv-root ex-root">
   <button className="button secondary at-back" onClick={()=>setSel(null)}><ArrowLeft size={16}/>{t.back}</button>
