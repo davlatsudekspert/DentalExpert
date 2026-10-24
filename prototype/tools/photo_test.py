@@ -115,7 +115,7 @@ check('photo preflight allowed',ok)
 call('/auth/role','PUT',{'role':'dentist'},A)
 prof={'name':'Owner','phone':'+998901234567','workplace':'DE','bio':'x','specialty':'Expert','publishRequested':True}
 call('/auth/profile','PUT',prof,A)
-oid=[x for x in call('/admin/users','GET',None,A)[1]['users'] if x['email']=='davlatsudekspert@gmail.com'][0]['id']
+oid=[x for x in call('/admin/users?q=davlatsudekspert','GET',None,A)[1]['users'] if x['email']=='davlatsudekspert@gmail.com'][0]['id']
 check('owner verified',call('/admin/users','PUT',{'id':oid,'verified':True},A)[0]==200)
 s,r=put(durl('webp',WEBP),A);check('owner keeps verification after a new photo',s==200 and r['user']['verified'] is True and call('/auth/me',token=A)[1]['user']['verified'] is True)
 s,r=call('/auth/profile','PUT',{**prof,'name':'Owner Two','phone':'+998901111111'},A);check('owner keeps verification after profile change',s==200 and call('/auth/me',token=A)[1]['user']['verified'] is True)
