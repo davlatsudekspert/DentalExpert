@@ -50,7 +50,7 @@ jobs:
       - name: Type check server functions
         run: npx tsc -p functions/tsconfig.json --noEmit
       - name: API suites on a local server
-        run: bash tools/ci_local_server.sh auth_test admin_test classroom_test classroom_v2_test general_test topics_test profile_public_test quick_test photo_test
+        run: bash tools/ci_local_server.sh auth_test admin_test classroom_test classroom_v2_test general_test topics_test profile_public_test quick_test photo_test security_test
       - name: Google / Apple sign-in suite
         run: pip install cryptography && python3 tools/oauth_test.py
       - name: Browsers for the walks

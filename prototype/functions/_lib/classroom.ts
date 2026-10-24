@@ -1,4 +1,4 @@
-import {GUEST_DAYS,guardPost,sha256,sessionUser,type SessionUser} from './auth';
+import {GUEST_DAYS,foreignOrigin,guardPost,sha256,sessionUser,type SessionUser} from './auth';
 import {isProfane} from './profanity';
 import {json,type Env} from './db';
 import {CODE_ALPHABET,checkNick,normalizeCode,normalizeNick} from '../../src/classroomShared';
@@ -16,6 +16,7 @@ export const clean=(v:unknown,max:number)=>typeof v==='string'?v.trim().slice(0,
 /** Resolves the signed-in user or a ready 401 response. Old class-only guest sessions reach only the few read-only
  * classroom paths auth.ts still allows (no new guests are created); they are no longer extended, so they expire. */
 export async function needUser(env:Env,request:Request):Promise<{user:SessionUser}|{res:Response}>{
+ if(request.method!=='GET'&&request.method!=='HEAD'){const bad=foreignOrigin(request);if(bad)return {res:bad}}
  const user=await sessionUser(env,request).catch(()=>null);
  return user?{user}:{res:json({error:'unauthorized'},401,noStore)};
 }

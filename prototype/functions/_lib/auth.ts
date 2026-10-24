@@ -42,12 +42,19 @@ export const normalizeEmail=(v:unknown)=>{
  return e.length<=254&&/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(e)&&!e.endsWith('@guest.invalid')?e:null;
 };
 
-/** State-changing requests must be JSON and, when the browser sends Origin, same-origin. */
+/** A browser request from another site is refused (cookie sessions); native app origins and requests without Origin pass. */
+export function foreignOrigin(request:Request){
+ const origin=request.headers.get('origin');
+ return origin&&origin!==new URL(request.url).origin&&!NATIVE_ORIGINS.has(origin)?json({error:'bad_origin'},403,'no-store'):null;
+}
+/** JSON bodies here are a few KB; the largest is a profile photo (200 KB as a data URL). Refused before parsing. */
+export const MAX_BODY=600_000;
+
+/** State-changing requests must be JSON, small and, when the browser sends Origin, same-origin. */
 export function guardPost(request:Request){
  if(!(request.headers.get('content-type')||'').includes('application/json'))return json({error:'json_required'},415,'no-store');
- const origin=request.headers.get('origin');
- if(origin&&origin!==new URL(request.url).origin&&!NATIVE_ORIGINS.has(origin))return json({error:'bad_origin'},403,'no-store');
- return null;
+ if(Number(request.headers.get('content-length')||0)>MAX_BODY)return json({error:'too_large'},413,'no-store');
+ return foreignOrigin(request);
 }
 
 export function readCookie(request:Request,name:string){
