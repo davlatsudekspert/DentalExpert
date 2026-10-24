@@ -17,7 +17,7 @@ const w={
   leave:'Ommaviy profilingiz yashiriladi: bemorlar sizni endi topa olmaydi. Yana Stomatolog bo‘lsangiz, profil qayta tasdiqlanishi kerak. Rolni almashtiramizmi?',leaveOk:'Ha, almashtirish',ask:(r:string)=>`Rolingiz «${r}» bo‘ladi va bosh sahifa almashadi.`,
   err:{rate_limited:'Bugun rol juda ko‘p almashtirildi. Ertaga urinib ko‘ring.',other:'Rol almashtirilmadi. Qayta urinib ko‘ring.'},
   edit:'Tahrirlash',filled:(n:number)=>`Profil ${n}% to‘ldirilgan`,fill:'To‘ldirish',st:['Ommaga ko‘rsatilmagan','Tasdiq kutilmoqda','Tasdiqlangan · ommaviy'],
-  level:'Daraja',xp:'XP',streak:'Kun ketma-ket',topics:'Mavzu',patients:'Bemor',groups:'Guruh',students:'Talaba',
+  level:'Daraja',xp:'XP',streak:'Kun ketma‑ket',topics:'Mavzu',patients:'Bemor',groups:'Guruh',students:'Talaba',
   admin:'Admin paneli',adminSub:'Foydalanuvchilar, shikoyatlar, tasdiqlash',language:'Ilova tili',look:'Ko‘rinish',ivory:'Oq',colour:'Rangli',help:'Yordam va maxfiylik',privacy:'Maxfiylik',contact:'Yordam va aloqa',contactSub:'Veb-sayt',report:'Shikoyat yoki murojaat yuborish',
   about:'Ilova haqida',account:'Hisob',out:'Chiqish',del:'Hisobni o‘chirish',delSub:'Hisob va ma’lumotlar butunlay o‘chiriladi',demoOut:'Chiqish (demo)',guest:'Tezkor hisob'},
  ru:{role:'Моя роль',roleHint:'Роль определяет главный экран и инструменты. Вернуть прежнюю можно в любой момент.',roles:{dentist:'Стоматолог',teacher:'Преподаватель',student:'Студент',patient:'Пациент'},change:'Сменить роль',keep:'Отмена',
