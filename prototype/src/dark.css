@@ -1414,7 +1414,7 @@
 :root[data-theme="dark"] .pr-ring-of{fill:#869fab}
 :root[data-theme="dark"] .pr-footer{color:#a9bec8}
 /* ---- dark remap: review.css ---- */
-:root[data-theme="dark"] .rv-root{--rv-ink:#e8f1f4;--rv-brand:#2bb3ad;--rv-deep:#16283a;--rv-soft:#16283a;--rv-line:#22384b;--rv-muted:#a9bec8;--rv-amber:#d99526;--rv-amber-bg:#303230;--rv-red:#ca4c35;--rv-red-bg:#3f2c31;--rv-green:#26d9a1;--rv-green-bg:#1b4a47}
+:root[data-theme="dark"] .rv-root{--rv-ink:#e8f1f4;--rv-brand:#2bb3ad;--rv-deep:#f2f7f9;--rv-soft:#16283a;--rv-line:#22384b;--rv-muted:#a9bec8;--rv-amber:#d99526;--rv-amber-bg:#303230;--rv-red:#ca4c35;--rv-red-bg:#3f2c31;--rv-green:#26d9a1;--rv-green-bg:#1b4a47}
 :root[data-theme="dark"] .rv-primary{color:#ffffff;box-shadow:0 10px 24px #168d8b38}
 :root[data-theme="dark"] .rv-secondary{background:#111f2e}
 :root[data-theme="dark"] .rv-primary:focus-visible,:root[data-theme="dark"] .rv-secondary:focus-visible,:root[data-theme="dark"] .rv-root button:focus-visible,:root[data-theme="dark"] .rv-card-inner:focus-visible{outline:3px solid #2cd3cb}

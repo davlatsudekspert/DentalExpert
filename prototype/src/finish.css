@@ -1,0 +1,75 @@
+/* Visual finish pass (loaded last). Root-cause fixes shared by every theme; colours stay in the theme sheets.
+   1 hero art stays inside its card  2 one gutter for every learn tab  3 atlas view tabs  4 small-phone label fits
+   5 forms inside gap layouts  6 native safe area  7 subject hero  8 greeting  9 dark leftovers in Review / Exam / Attestation.
+   The learn / review / practice sheets load lazily and therefore after this file, so the rules that have to beat them
+   carry a :root prefix (one extra class of specificity) instead of relying on order. */
+
+/* 1. Hero art: inside the card (it used to bleed past the right edge and run into the headline), vertically centred,
+      the headline keeps its own column and breaks evenly. */
+.phone .hero{--art:clamp(108px,37%,156px)}
+.phone .hero .hero-tooth{position:absolute;left:auto;bottom:auto;right:12px;top:50%;transform:translateY(-50%);width:var(--art);height:auto;aspect-ratio:1/1;pointer-events:none}
+.phone .hero .hero-tooth>.hero-render{display:block;width:100%;height:100%;object-fit:contain}
+.phone .hero .hero-copy{width:calc(100% - var(--art) - 4px);max-width:none}
+:root[data-theme] .phone .hero h1{text-wrap:balance;overflow-wrap:break-word;hyphens:manual;font-size:clamp(22px,6.6vw,29px)!important;line-height:1.06!important}
+.phone .hero p{text-wrap:pretty;max-width:none}
+.phone .home-screen .hero p,.phone .home-screen .hero h1{max-width:none}
+
+/* 2. One gutter: learn tabs line up with the chips and the other tabs (the sheets used to add 16-20px of their own);
+      a flex child may shrink below the width of its widest <select> option. */
+:root .learn>*{min-width:0}
+:root .learn .rv-root{padding-left:0;padding-right:0;min-width:0}
+:root .learn .rv-root select{min-width:0;max-width:100%}
+:root .learn .deck-library,:root .screen .official-schedule,:root .screen .deck-library{margin-left:0;margin-right:0}
+:root .learn .pr-head{padding-left:0;padding-right:0}
+:root .learn>.chips.learn-tabs{margin:0 0 4px}
+:root .learn .daily.card,:root .learn .deck-library{margin-top:0;margin-bottom:0}
+
+/* 3. Atlas view tabs: three equal columns that can shrink, icon above the label, so "Yuqoridan" no longer pokes out of the card. */
+.anatomy-view-tabs{grid-template-columns:repeat(3,minmax(0,1fr))}
+.anatomy-view-tabs button{min-width:0;height:auto;min-height:88px;flex-direction:column;justify-content:center;gap:4px;padding:8px 4px;text-align:center}
+.anatomy-view-tabs span{min-width:0;max-width:100%;text-align:center}
+.anatomy-view-tabs img{width:44px;height:52px}
+
+/* 4. Tiles: equal height per row. Tabs: the longest word ("Инструменты") fits its pill on a 360 px phone. */
+.role-tiles{grid-auto-rows:1fr}
+:root .learn>.chips.learn-tabs button{min-width:0;padding-left:3px!important;padding-right:3px!important}
+@media (max-width:380px){:root .learn>.chips.learn-tabs button{font-size:12px!important}}
+
+/* 5. Forms inside gap layouts: the global label/input/button margins used to stack on top of the flex/grid gap (blank bands in the group and schedule cards). */
+:root .cr-form label,:root .cr-form input,:root .cr-form select,:root .cr-form textarea,:root .official-schedule label,:root .official-schedule select,:root .ex-setup label,:root .classroom label>input,:root .classroom label>select{margin-top:0;margin-bottom:0}
+:root .cr-form .button,:root .official-schedule .button{margin-top:0}
+:root .rv-root .at-list,:root .rv-root .at-note{margin-top:0;margin-bottom:0}
+
+/* 6. Native: the phone frame already pads for the notch, so the atlas title must not add it twice. */
+html.native .anatomy-title{padding-top:0}
+
+/* 7. Subject hero: the title column shrinks next to the icon instead of dropping below it (long titles such as Implantologiya);
+      the photo box keeps its 16:7 ratio so nothing jumps when the image arrives. */
+:root .lg-hero>div:not(.lg-hero-ico){flex:1 1 0;min-width:0}
+:root .lg-hero-photo{aspect-ratio:16/7;height:auto}
+
+/* 8. Greeting: a long name wraps to a second line instead of being cut (flex + nowrap clipped it without an ellipsis). */
+:root .home-header h2{display:block;white-space:normal;overflow:visible;line-height:1.22;overflow-wrap:anywhere}
+:root .home-header h2 .wave{display:inline-block;margin-left:6px;vertical-align:baseline}
+
+/* 9. Dark theme leftovers: the exam subject list is a global white <select>. */
+:root[data-theme="dark"] .rv-root select{background-color:#111f2e;border-color:#22384b;color:#e8f1f4}
+
+/* 10. Dark: the picture-practice sheet had no dark palette (navy headings on navy cards). */
+:root[data-theme="dark"] .pr{--pr-ink:#e8f1f4;--pr-dark:#f2f7f9;--pr-brand:#2bb3ad;--pr-soft:#16283a;--pr-bg:#0b1724;--pr-muted:#a9bec8;--pr-line:#22384b}
+
+/* 11. Colour look: small muted text and white-on-teal buttons reach WCAG AA (they were 3.2-4.4:1). */
+:root[data-theme="color"] .admin-card span,:root[data-theme="color"] .admin-bars small,:root[data-theme="color"] .admin-user small{color:#4f6a74}
+:root[data-theme="color"] .daily-streak{color:#52707a}
+:root[data-theme="color"] .daily-go{color:#0f6f6d}
+:root[data-theme="color"] .rv-root{--rv-brand:#0f7471;--rv-muted:#4a6671}
+:root[data-theme="color"] .rv-primary{background:linear-gradient(120deg,#12908d,#0f7471)}
+:root[data-theme="color"] .pr{--pr-brand:#0f7471;--pr-muted:#4a6671}
+
+/* 12. Review / Exam segmented controls: equal columns that may wrap, so three options fit a 360 px phone. */
+:root .ex-seg:not(.at-seg){grid-auto-flow:column;grid-auto-columns:minmax(0,1fr);grid-template-columns:none}
+:root .ex-seg button{min-width:0;padding-left:4px;padding-right:4px;white-space:normal;line-height:1.15}
+:root[data-theme="color"] .pr-sim-meta,:root[data-theme="color"] .pr-sim-best{color:#4a6671}
+:root[data-theme="color"] .daily-text small{color:#4f6a74}
+:root[data-theme="color"] .ex-subject>span,:root[data-theme="color"] .ex-label{color:#3f5b66}
+:root[data-theme="dark"] .rv-primary{background:linear-gradient(120deg,#12908d,#0f7471);color:#fff}
