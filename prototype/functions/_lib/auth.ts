@@ -118,7 +118,7 @@ export const USER_COLUMNS='id,email,name,role,country_code,city_id,phone,workpla
 export const profileOf=(u:Record<string,string|number|null>)=>({id:u.id,email:u.email,name:u.name,role:u.role,countryCode:u.country_code,cityId:u.city_id,phone:u.phone,workplace:u.workplace,bio:u.bio,specialty:u.specialty,telegram:u.telegram,instagram:u.instagram,publicEmail:u.public_email,address:u.address,mapUrl:u.map_url,publishRequested:!!u.publish_requested,verified:!!u.verified_at,photoUrl:photoUrl(u.id,u.photo_at)});
 
 /** Opens a session: native clients get the token in the body (stored on the device); browsers get an HttpOnly cookie. */
-export async function signedIn(env:Env,request:Request,user:Record<string,string|number|null>){
+export async function signedIn(env:Env,request:Request,user:Record<string,string|number|null>,extra?:{trialDenied?:string|null;cookie?:string}){
  const blocked=await env.DB.prepare(`SELECT suspended_at FROM users WHERE id=?`).bind(user.id).first<{suspended_at:string|null}>();
  if(blocked?.suspended_at)return json({error:'suspended'},403,'no-store');
  await adoptGuest(env,request,String(user.id),user.role).catch(()=>{});
@@ -126,9 +126,11 @@ export async function signedIn(env:Env,request:Request,user:Record<string,string
  const session=await createSession(env,request,String(user.id));
  const pro=await proOf(env,{id:String(user.id),role:user.role as Role,guest:false}).catch(()=>undefined);
  const profile={...profileOf(user),...(pro?{pro}:{})};
- if(isNativeClient(request))return json({user:profile,token:session.token},200,'no-store');
- const res=json({user:profile},200,'no-store');
+ const td=extra?.trialDenied?{trialDenied:extra.trialDenied}:{};
+ if(isNativeClient(request))return json({user:profile,token:session.token,...td},200,'no-store');
+ const res=json({user:profile,...td},200,'no-store');
  res.headers.append('set-cookie',session.cookie);
+ if(extra?.cookie)res.headers.append('set-cookie',extra.cookie);
  return res;
 }
 

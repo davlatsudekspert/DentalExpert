@@ -11,7 +11,7 @@ export const onRequest:PagesFunction<Env>=async({request,next})=>{
  const origin=request.headers.get('origin');
  const cors=!!origin&&NATIVE_ORIGINS.has(origin)&&(PUBLIC_READ.test(url.pathname)||AUTH.test(url.pathname));
  if(request.method==='OPTIONS'&&cors)
-  return new Response(null,{status:204,headers:{'access-control-allow-origin':origin!,'access-control-allow-methods':'GET, POST, PUT, DELETE','access-control-allow-headers':'accept, content-type, authorization, x-client','access-control-max-age':'86400',vary:'origin'}});
+  return new Response(null,{status:204,headers:{'access-control-allow-origin':origin!,'access-control-allow-methods':'GET, POST, PUT, DELETE','access-control-allow-headers':'accept, content-type, authorization, x-client, x-device-id','access-control-max-age':'86400',vary:'origin'}});
  const res=await next();
  if(!cors)return res;
  const out=new Response(res.body,res);

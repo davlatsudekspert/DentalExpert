@@ -2,6 +2,7 @@ import {authEnabled,guardPost,hmac,normalizeEmail,sha256,signedIn,timingSafeEqua
 import {json,type Env} from '../../_lib/db';
 import {underLimit} from '../../_lib/ratelimit';
 import {reviewRole} from '../../_lib/review';
+import {keepEmailClaim,startTrial} from '../../_lib/trial';
 
 const MAX_ATTEMPTS=5,MAX_FAILS_DAY=15;
 const failures=async(env:Env,email:string)=>(await env.DB.prepare(`SELECT count FROM rate_limits WHERE bucket=? AND window_start>?`).bind('vfail:'+email,Date.now()-86400000).first<{count:number}>())?.count||0;
@@ -23,6 +24,8 @@ export const onRequestPost:PagesFunction<Env>=async({request,env})=>{
   if(!timingSafeEqual(await hmac(env.AUTH_SECRET!,'review:'+code),await hmac(env.AUTH_SECRET!,'review:'+env.REVIEW_CODE))){await underLimit(env,'vfail:'+email,1e9,86400);return json({error:'invalid_code'},400,'no-store')}
   let ru=await env.DB.prepare(`SELECT ${USER_COLUMNS} FROM users WHERE email=?`).bind(email).first<Record<string,string|number|null>>();
   if(!ru){const id=crypto.randomUUID();await env.DB.prepare(`INSERT INTO users (id,email,name,role,email_verified_at) VALUES (?,?,?,?,datetime('now'))`).bind(id,email,'Store Reviewer ('+rr+')',rr).run();ru=await env.DB.prepare(`SELECT ${USER_COLUMNS} FROM users WHERE id=?`).bind(id).first<Record<string,string|number|null>>()}
+  // Store reviewers always see everything: their trial never ends.
+  await env.DB.prepare(`UPDATE users SET trial_ends_at=datetime('now','+3650 days'),trial_denied=0 WHERE id=?`).bind(ru!.id).run();
   return signedIn(env,request,ru!);
  }
  const row=await env.DB.prepare(
@@ -46,12 +49,18 @@ export const onRequestPost:PagesFunction<Env>=async({request,env})=>{
  const p=row.pending_profile?JSON.parse(row.pending_profile) as {name:string|null;role:Role;cityId:string|null;countryCode:string|null}:{name:null,role:'patient' as Role,cityId:null,countryCode:null};
  // An existing account keeps its stored profile; only a new account takes the sign-up fields.
  let user=await env.DB.prepare(`SELECT ${USER_COLUMNS} FROM users WHERE email=?`).bind(email).first<Record<string,string|number|null>>();
+ let trial:{denied:string|null;cookie?:string}|undefined;
  if(!user){
   const id=crypto.randomUUID();
   await env.DB.prepare(`INSERT INTO users (id,email,name,role,country_code,city_id,email_verified_at) VALUES (?,?,?,?,?,?,datetime('now'))`)
    .bind(id,email,p.name,p.role,p.countryCode,p.cityId).run();
   user={id,email,name:p.name,role:p.role,country_code:p.countryCode,city_id:p.cityId,phone:null,workplace:null,bio:null};
- }else await env.DB.prepare(`UPDATE users SET email_verified_at=COALESCE(email_verified_at,datetime('now')) WHERE id=?`).bind(user.id).run();
+  // One trial per person (functions/_lib/trial.ts). Never blocks the sign-up itself.
+  trial=await startTrial(env,request,{id,email}).catch(()=>undefined);
+ }else{
+  await env.DB.prepare(`UPDATE users SET email_verified_at=COALESCE(email_verified_at,datetime('now')) WHERE id=?`).bind(user.id).run();
+  await keepEmailClaim(env,String(user.id),email).catch(()=>{});
+ }
 
- return signedIn(env,request,user);
+ return signedIn(env,request,user,{trialDenied:trial?.denied,cookie:trial?.cookie});
 };

@@ -1,3 +1,4 @@
+import {keepEmailClaim,startTrial} from '../../_lib/trial';
 import {guardPost,ROLES,sha256,signedIn,USER_COLUMNS} from '../../_lib/auth';
 import {cityIdOk,json,type Env} from '../../_lib/db';
 import {oauthEnabled,PROVIDERS,verifyIdToken,type Provider} from '../../_lib/oauth';
@@ -28,6 +29,7 @@ export const onRequestPost:PagesFunction<Env>=async({request,env})=>{
 
  const byId=(id:string)=>env.DB.prepare(`SELECT ${USER_COLUMNS} FROM users WHERE id=?`).bind(id).first<Row>();
  const ident=await env.DB.prepare(`SELECT user_id FROM oauth_identities WHERE provider=? AND subject=?`).bind(provider,v.sub).first<{user_id:string}>();
+ let trial:{denied:string|null;cookie?:string}|undefined;
  let user=ident?await byId(ident.user_id):null;
  if(!user){
   // An existing account with this verified email keeps its stored profile; only a new account takes the sign-up fields.
@@ -39,13 +41,18 @@ export const onRequestPost:PagesFunction<Env>=async({request,env})=>{
    const cityId=typeof body.cityId==='string'&&cityIdOk(body.cityId)?body.cityId:null;
    const countryCode=typeof body.countryCode==='string'&&/^[A-Z]{2}$/.test(body.countryCode)?body.countryCode:null;
    // ON CONFLICT keeps two simultaneous first sign-ins from failing; the row that won is read back.
-   await env.DB.prepare(`INSERT INTO users (id,email,name,role,country_code,city_id,email_verified_at) VALUES (?,?,?,?,?,?,datetime('now')) ON CONFLICT (email) DO NOTHING`)
-    .bind(crypto.randomUUID(),v.email,name,role,countryCode,cityId).run();
+   const newId=crypto.randomUUID();
+   const ins=await env.DB.prepare(`INSERT INTO users (id,email,name,role,country_code,city_id,email_verified_at) VALUES (?,?,?,?,?,?,datetime('now')) ON CONFLICT (email) DO NOTHING`)
+    .bind(newId,v.email,name,role,countryCode,cityId).run();
    user=await env.DB.prepare(`SELECT ${USER_COLUMNS} FROM users WHERE email=?`).bind(v.email).first<Row>();
    if(!user)return json({error:'server_error'},500,'no-store');
-  }else await env.DB.prepare(`UPDATE users SET email_verified_at=COALESCE(email_verified_at,datetime('now')) WHERE id=?`).bind(user.id).run();
+   if(ins.meta.changes===1)trial=await startTrial(env,request,{id:String(user.id),email:v.email}).catch(()=>undefined);
+  }else{
+   await env.DB.prepare(`UPDATE users SET email_verified_at=COALESCE(email_verified_at,datetime('now')) WHERE id=?`).bind(user.id).run();
+   await keepEmailClaim(env,String(user.id),String(user.email)).catch(()=>{});
+  }
   await env.DB.prepare(`INSERT INTO oauth_identities (provider,subject,user_id) VALUES (?,?,?) ON CONFLICT (provider,subject) DO UPDATE SET user_id=excluded.user_id`)
    .bind(provider,v.sub,user.id).run();
  }
- return signedIn(env,request,user);
+ return signedIn(env,request,user,{trialDenied:trial?.denied,cookie:trial?.cookie});
 };

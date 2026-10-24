@@ -1,4 +1,5 @@
 import {NATIVE_ORIGINS,cookieHeader,sessionUser} from '../../_lib/auth';
+import {keepEmailClaim} from '../../_lib/trial';
 import {json,type Env} from '../../_lib/db';
 
 // Account deletion (App Store / Google Play requirement): removes the user and, by cascade, their sessions,
@@ -8,6 +9,7 @@ export const onRequestDelete:PagesFunction<Env>=async({request,env})=>{
  if(origin&&origin!==new URL(request.url).origin&&!NATIVE_ORIGINS.has(origin))return json({error:'bad_origin'},403,'no-store');
  const user=await sessionUser(env,request);
  if(!user)return json({error:'unauthorized'},401,'no-store');
+ await keepEmailClaim(env,user.id,user.email).catch(()=>{});
  await env.DB.batch([
   env.DB.prepare(`DELETE FROM auth_codes WHERE email=?`).bind(user.email),
   env.DB.prepare(`DELETE FROM rate_limits WHERE bucket IN (?,?,?)`).bind('join:'+user.id,'report:'+user.id,'photo:'+user.id),

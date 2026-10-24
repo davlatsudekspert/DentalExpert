@@ -3,6 +3,8 @@
 -- trial is created_at + 30 days (functions/_lib/entitlement.ts), so the sign-up code needs no change.
 -- Nothing here changes behaviour until the server flag PRO_ENABLED=1.
 ALTER TABLE users ADD COLUMN trial_ends_at TEXT;
+-- 1 when the person/device had already used a trial, so this account started on the Free tier.
+ALTER TABLE users ADD COLUMN trial_denied INTEGER NOT NULL DEFAULT 0;
 UPDATE users SET trial_ends_at=datetime('now','+30 days') WHERE guest=0;
 
 CREATE TABLE subscriptions (
@@ -55,3 +57,17 @@ CREATE TABLE admin_audit (
   detail TEXT,
   at TEXT NOT NULL DEFAULT (datetime('now'))
 );
+
+-- One trial per person: salted SHA-256 hashes (never the raw values) of the things a person re-uses when farming accounts.
+-- kind: email (normalized: lower-case, +tag removed, Gmail dots removed, googlemail = gmail), device (random id kept in the
+-- phone's Keychain/Keystore), cookie (web), ip (coarse network, counted, not blocked on its own).
+-- A claim outlives the account (deleting an account does not bring the trial back).
+CREATE TABLE trial_claims (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  kind TEXT NOT NULL CHECK (kind IN ('email','device','cookie','ip')),
+  hash TEXT NOT NULL,
+  user_id TEXT,
+  claimed_at TEXT NOT NULL DEFAULT (datetime('now'))
+);
+CREATE INDEX idx_trial_claims ON trial_claims (kind, hash);
+CREATE INDEX idx_trial_claims_user ON trial_claims (user_id);

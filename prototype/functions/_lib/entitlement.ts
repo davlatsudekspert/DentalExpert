@@ -15,7 +15,7 @@ export const TRIAL_SQL=(u:string)=>`COALESCE(${u}.trial_ends_at,datetime(${u}.cr
 const LIVE_SUB=`status IN ('active','cancelled','billing_issue') AND (expires_at IS NULL OR expires_at>datetime('now'))`;
 
 /** The pure decision: best of an admin grant, a paid subscription for this role's plan, the trial. Dates are SQLite UTC strings. */
-export function stateOf(user:Pick<SessionUser,'role'|'guest'>,trial:string|null,now:string,subs:SubRow[]):ProState{
+export function stateOf(user:Pick<SessionUser,'role'|'guest'>,trial:string|null,now:string,subs:SubRow[],trialUsed=false):ProState{
  // Patients (and old class-only guests) never pay: active forever, nothing to buy.
  if(user.role==='patient'||user.guest)return {active:true,reason:'free',trialEndsAt:null,expiresAt:null,plan:null};
  const live=subs.filter(s=>['active','cancelled','billing_issue'].includes(s.status)&&(!s.expires_at||s.expires_at>now));
@@ -23,21 +23,24 @@ export function stateOf(user:Pick<SessionUser,'role'|'guest'>,trial:string|null,
  const plan=planForRole(user.role)?.id||null;
  if(admin)return {active:true,reason:'admin-grant',trialEndsAt:toIso(trial),expiresAt:toIso(admin.expires_at),plan};
  // A purchase counts only for the plan of the account's current role (a role switch never gives another role's Pro).
+ // A plan of another role unlocks nothing here, but the app explains it ("you hold the Student plan; the teacher panel needs the Teacher plan").
+ const other=live.find(s=>s.source!=='admin'&&roleOfProduct(s.product_id)&&roleOfProduct(s.product_id)!==user.role);
+ const heldRole=other?roleOfProduct(other.product_id):null;
  const paid=live.filter(s=>roleOfProduct(s.product_id)===user.role).sort((a,b)=>(b.expires_at||'').localeCompare(a.expires_at||''))[0];
  if(paid)return {active:true,reason:'paid',trialEndsAt:toIso(trial),expiresAt:toIso(paid.expires_at),plan:paid.product_id};
- if(trial&&trial>now)return {active:true,reason:'trial',trialEndsAt:toIso(trial),expiresAt:null,plan};
- return {active:false,reason:'free',trialEndsAt:toIso(trial),expiresAt:null,plan};
+ if(trial&&trial>now)return {active:true,reason:'trial',trialEndsAt:toIso(trial),expiresAt:null,plan,trialUsed,heldRole};
+ return {active:false,reason:'free',trialEndsAt:toIso(trial),expiresAt:null,plan,trialUsed,heldRole};
 }
 
 /** Reads the rows and decides. Call only when the flag is on. */
 export async function entitlement(env:Env,user:Who):Promise<ProState>{
  if(user.role==='patient'||user.guest)return stateOf(user,null,'',[]);
  const [u,s]=await env.DB.batch([
-  env.DB.prepare(`SELECT ${TRIAL_SQL('u')} AS trial,datetime('now') AS now FROM users u WHERE u.id=?`).bind(user.id),
+  env.DB.prepare(`SELECT ${TRIAL_SQL('u')} AS trial,datetime('now') AS now,u.trial_denied AS denied FROM users u WHERE u.id=?`).bind(user.id),
   env.DB.prepare(`SELECT product_id,source,status,expires_at FROM subscriptions WHERE user_id=? AND ${LIVE_SUB}`).bind(user.id)
  ]);
- const r=u.results[0] as {trial:string;now:string}|undefined;
- return stateOf(user,r?.trial||null,r?.now||'',s.results as SubRow[]);
+ const r=u.results[0] as {trial:string;now:string;denied:number}|undefined;
+ return stateOf(user,r?.trial||null,r?.now||'',s.results as SubRow[],!!r?.denied);
 }
 
 /** `pro` for session answers: undefined while the flag is off. */
