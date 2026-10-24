@@ -327,7 +327,7 @@ function TeacherTopic({lang,groupId,code,user,topicId,row,topics,test,members,on
     :<TestSetup lang={lang} groupId={groupId} topic={topic} topics={topics} disabled={!isOpen||busy} reason={isOpen?undefined:t.needOpenTest} error={testErr} onStart={p=>{bigFor={id:topic.id,until:Date.now()+20000};act('test',{...p,title:tx(topic.title,lang)})}}/>}
    </Stage>
    {asking&&<ConfirmSheet text={t.confirmFinish} ok={t.finishTest} cancel={t.cancel} onOk={async()=>{setAsking(false);await act('finish')}} onCancel={()=>setAsking(false)}/>}
-   {show&&<Slides title={tx(topic.title,lang)} eyebrow={tx(subject.title,lang)} slides={topic.slides} sources={topic.sources} lang={lang} accent={subjectColor(subject.id).c} teacher onClose={()=>setShow(false)}/>}
+   {show&&<Slides title={tx(topic.title,lang)} eyebrow={tx(subject.title,lang)} slides={topic.slides} sources={topic.sources} lang={lang} accent={subjectColor(subject.id).c} subject={subject.id} teacher onClose={()=>setShow(false)}/>}
   </>}
  </>;
 }
@@ -464,7 +464,7 @@ function StudentTopic({lang,user,topicId,test,onChanged}:{lang:Lang;user:AuthUse
    </div>
    <h3 className="lg-h">{t.prepare}</h3>
    <OralList lang={lang} topic={topic}/>
-   {show&&<Slides title={tx(topic.title,lang)} eyebrow={tx(subject.title,lang)} slides={topic.slides} sources={topic.sources} lang={lang} accent={subjectColor(subject.id).c} onClose={()=>setShow(false)}/>}
+   {show&&<Slides title={tx(topic.title,lang)} eyebrow={tx(subject.title,lang)} slides={topic.slides} sources={topic.sources} lang={lang} accent={subjectColor(subject.id).c} subject={subject.id} onClose={()=>setShow(false)}/>}
    {run&&test&&<TestRun lang={lang} a={test as TestMeta} userId={user.id} onExit={()=>{setRun(false);onChanged()}} onError={e=>{setRun(false);setErr(testError(lang,e));onChanged()}} onSubmitted={(s,n)=>setScore([s,n])}/>}
   </>}
  </>;

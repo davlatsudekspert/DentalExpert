@@ -8,6 +8,8 @@ import './learn.css';
 import {SubjectIcon,subjectColor} from './subjectArt';
 import {SUBJECTS,courseWord,loadLast,loadSeen,loadTopic,markSlide,metaLine,slideCount,topicsOf,tx,type Subject,type Topic,type TopicMeta} from './curriculumData';
 import type {Lang} from './discoveryData';
+import {SUBJECT_PHOTO,photoInfo,photoUrl,photoAlt} from './photos';
+import './photos.css';
 
 export const cw={
  uz:{title:'O‘quv reja',sub:'Kurs → fan → mavzu. Har bir mavzuda taqdimot, og‘zaki savollar va test bor.',all:'Hammasi',topics:'mavzu',back:'Orqaga',goals:'Dars maqsadlari',
@@ -85,14 +87,16 @@ export function TopicOverview({lang,topic,subject,teacher}:{lang:Lang;topic:Topi
   <OralList lang={lang} topic={topic}/>
   <SelfTest lang={lang} topic={topic} teacher={teacher}/>
   <div className="lg-card"><h3><BookOpen size={16}/>{t.sources}</h3><ul className="lg-sources" lang="en" translate="no">{topic.sources.map((s,k)=><li key={k}>{s}</li>)}</ul></div>
-  {show&&<Slides title={tx(topic.title,lang)} eyebrow={tx(subject.title,lang)} slides={topic.slides} sources={topic.sources} lang={lang} accent={subjectColor(subject.id).c}
+  {show&&<Slides title={tx(topic.title,lang)} eyebrow={tx(subject.title,lang)} slides={topic.slides} sources={topic.sources} lang={lang} accent={subjectColor(subject.id).c} subject={subject.id}
    start={loadLast()?.id===topic.id?loadLast()!.slide:0} onProgress={i=>markSlide(topic.id,i,slideCount(topic))} onFinished={()=>setDone(true)} onClose={()=>setShow(false)}/>}
  </>;
 }
 
 export function SubjectHero({lang,subject}:{lang:Lang;subject:Subject}){
  const t=cw[lang];const a=subjectColor(subject.id);const n=topicsOf(subject.id).length;
- return <div className="lg-hero" style={{background:`linear-gradient(135deg,${a.bg},#ffffff)`,borderColor:a.bg}}>
+ const ph=SUBJECT_PHOTO[subject.id],pi=ph?photoInfo(ph):undefined;
+ return <div className={'lg-hero'+(pi?' has-photo':'')} style={{background:`linear-gradient(135deg,${a.bg},#ffffff)`,borderColor:a.bg}}>
+  {pi&&<img className="lg-hero-photo" src={photoUrl(ph)} alt={photoAlt(ph,lang)} width={pi.width} height={pi.height} loading="lazy" decoding="async"/>}
   <span className="lg-hero-ico" style={{color:a.c}}><SubjectIcon id={subject.id} size={34}/></span>
   <div><span className="lg-eyebrow" style={{color:a.c}}>{courseWord(subject.course,lang)} · {subject.semester}-{lang==='en'?'sem.':lang==='ru'?'сем.':'semestr'}</span><h2>{tx(subject.title,lang)}</h2><small>{n} {t.topics}</small></div>
  </div>;

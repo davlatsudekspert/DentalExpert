@@ -42,7 +42,7 @@ export default function Today({lang}:{lang:Lang}){
     {progress&&<span className="td-bar"><i style={{width:`${progress.s/progress.n*100}%`}}/></span>}
     <em>{progress?`${progress.s}/${progress.n} ${t.slide}`:''}{learned?`${progress?' · ':''}${learned} ${t.learned}`:''}</em></div></div>
   <button className="td-go" disabled={!topic} onClick={()=>{markStudyDay();setOpen(true)}}><Play size={16}/>{progress?t.cont:t.start}</button>
-  {open&&topic&&<Slides title={tx(topic.title,lang)} eyebrow={tx(subject.title,lang)} slides={topic.slides} sources={topic.sources} lang={lang} accent={a.c}
+  {open&&topic&&<Slides title={tx(topic.title,lang)} eyebrow={tx(subject.title,lang)} slides={topic.slides} sources={topic.sources} lang={lang} accent={a.c} subject={subject.id}
    start={last?.id===topic.id?last.slide:0} onProgress={i=>markSlide(topic.id,i,slideCount(topic))} onClose={()=>{setOpen(false);setTick(x=>x+1)}}/>}
  </section>;
 }
