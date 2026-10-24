@@ -1,6 +1,7 @@
-import {handleProRequired} from './billing';
+import {PRO_ENABLED,handleProRequired,proAllowed} from './billing';
+import {topicIsFree} from './proConfig';
 import {useEffect,useRef,useState,type ReactNode} from 'react';
-import {BookOpen,CheckCircle2,ClipboardCheck,ChevronDown,ChevronLeft,ChevronRight,Presentation,Target,Users} from 'lucide-react';
+import {BookOpen,CheckCircle2,ClipboardCheck,Lock,ChevronDown,ChevronLeft,ChevronRight,Presentation,Target,Users} from 'lucide-react';
 import Slides from './Slides';
 import QuizRun,{type RunQ} from './QuizRun';
 import {callApi} from './api';
@@ -52,7 +53,7 @@ export function TopicList({lang,subject,onPick,tag}:{lang:Lang;subject:Subject;o
  const seen=loadSeen();
  if(!list.length)return <p className="muted">{t.empty}</p>;
  return <div className="lg-list">{list.map(m=><button key={m.id} className="lg-row" onClick={()=>onPick(m)}>
-  <span className={'lg-ico num '+m.type} style={{background:subjectColor(m.subject).bg,color:subjectColor(m.subject).c}}>{m.n}</span><span className="lg-row-text"><strong>{tx(m.title,lang)}</strong><small>{metaLine(m,lang)}</small>{tag?.(m)}</span>{!tag&&seen[m.id]?<span className="lg-tag brand">{seen[m.id].s>=seen[m.id].n?'✓':`${seen[m.id].s}/${seen[m.id].n}`}</span>:null}<ChevronRight size={16}/></button>)}</div>;
+  <span className={'lg-ico num '+m.type} style={{background:subjectColor(m.subject).bg,color:subjectColor(m.subject).c}}>{m.n}</span><span className="lg-row-text"><strong>{tx(m.title,lang)}</strong><small>{metaLine(m,lang)}</small>{tag?.(m)}</span>{PRO_ENABLED&&!topicIsFree(m.id)&&!proAllowed('topics')?<span className="lg-tag brand pw-badge" aria-label="Pro"><Lock size={11}/> Pro</span>:null}{!tag&&seen[m.id]?<span className="lg-tag brand">{seen[m.id].s>=seen[m.id].n?'✓':`${seen[m.id].s}/${seen[m.id].n}`}</span>:null}<ChevronRight size={16}/></button>)}</div>;
 }
 
 export function useTopic(id:string|null){
@@ -145,7 +146,7 @@ function SelfTest({lang,topic,teacher}:{lang:Lang;topic:Topic;teacher?:boolean})
   {best&&<p className="lg-best">{t.best}: <b>{best.best}/{best.total}</b></p>}
   {err&&<p className="error-text" role="alert">{t.testErr}</p>}
   {/* A teacher is asked first: give it to a group, or try it themself. A student starts right away. */}
-  <button className="button secondary" disabled={busy} onClick={teacher?()=>setChoose(true):start}><ClipboardCheck size={17}/>{t.selfTest}</button>
+  <button className="button secondary" disabled={busy} onClick={teacher?()=>setChoose(true):start}>{PRO_ENABLED&&!topicIsFree(topic.id)&&!proAllowed('topics')?<Lock size={17}/>:<ClipboardCheck size={17}/>}{t.selfTest}</button>
   {choose&&<div className="lg-confirm" onClick={e=>{if(e.target===e.currentTarget)setChoose(false)}}><div className="lg-confirm-sheet lg-choose" role="dialog" aria-modal="true" aria-labelledby="lg-choose-t">
    <p id="lg-choose-t"><b>{t.selfTest}</b> · {tx(topic.title,lang)}</p>
    <button className="button" autoFocus onClick={()=>{setChoose(false);askAssignTopic(topic.id)}}><Users size={17}/>{ch.group}</button><small className="lg-small muted">{ch.groupHint}</small>
