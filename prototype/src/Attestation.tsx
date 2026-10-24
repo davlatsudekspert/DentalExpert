@@ -8,6 +8,8 @@ import {ATT_SPECS,AttestationNote,attestationOn,loadAtt,type AttSpec} from './at
 import {attestationLeft,showPaywall,takeAttestation,usePro} from './billing';
 import {FREE} from './proConfig';
 import './review.css';
+const RU_NAMES:Record<string,string>={umumiy:'Общая стоматология',terapevtik:'Терапевтическая стоматология',ortopedik:'Ортопедическая стоматология',xirurgik:'Хирургическая стоматология (оральная)',yuzjag:'Челюстно-лицевая хирургия',bolalar:'Детская стоматология','bolalar-yuzjag':'Детская челюстно-лицевая хирургия','bolalar-terapevtik':'Детская терапевтическая стоматология','bolalar-xirurgik':'Детская хирургическая стоматология',ortodontiya:'Ортодонтия',implantologiya:'Дентальная имплантология',parodontologiya:'Пародонтология'};
+const specName=(s:{id:string;name:string},lang:string)=>lang==='ru'?RU_NAMES[s.id]||s.name:s.name;
 
 /** "Attestatsiya tayyorgarligi": unofficial exam prep from the public TMBM question banks. Option order is shuffled per question in
  * the data (the source key was first) and again per attempt by QuizRun. Keys come from data/attestation (audited, see AUDIT.md). */
@@ -55,19 +57,19 @@ export default function Attestation({lang}:{lang:Lang}){
   if(!b[k]||pct>=b[k].pct){b[k]={pct,n:total,at:Date.now()};setBest(b);saveBest(b)}
  };
  const ShowReport=report?<ReportForm lang={lang} onClose={()=>setReport(null)} initial={{category:'content',subject:report,body:t.reportBody}}/>:null;
- if(run&&sel)return <>{<QuizRun title={sel.name} questions={runQs} lang={lang} onDone={done} onClose={()=>setRun(null)}/>}{ShowReport}</>;
+ if(run&&sel)return <>{<QuizRun title={specName(sel,lang)} questions={runQs} lang={lang} onDone={done} onClose={()=>setRun(null)}/>}{ShowReport}</>;
  if(!sel)return <div className="rv-root ex-root">
   <header className="rv-head"><h2>{t.title}</h2><p>{t.lead}</p></header>
   {Number.isFinite(left)&&<p className="muted at-left">{left>0?t.left(left):t.used}</p>}
   <div className="at-list">{ATT_SPECS.map(s=>{const b=best[s.id];const locked=s.status==='withheld';
    return <button key={s.id} className="card at-row" disabled={locked} onClick={()=>setSel(s)}>
-    <span className="at-main"><strong>{s.name}</strong><small>{locked?t.soon:`${lang==='ru'?s.servedRu:s.served} ${t.q}`}{s.status==='beta'?' · '+t.beta.replace('%',String(Math.round(s.agreement*100))+'%'):''}</small>{b&&<small className="at-best"><Trophy size={12}/> {t.best}: {b.pct}%</small>}</span>
+    <span className="at-main"><strong>{specName(s,lang)}</strong><small>{locked?t.soon:`${lang==='ru'?s.servedRu:s.served} ${t.q}`}{s.status==='beta'?' · '+t.beta.replace('%',String(Math.round(s.agreement*100))+'%'):''}</small>{b&&<small className="at-best"><Trophy size={12}/> {t.best}: {b.pct}%</small>}</span>
     {locked?<ShieldAlert size={16}/>:<ChevronRight size={16}/>}</button>})}</div>
   <AttestationNote lang={lang}/>
  </div>;
  return <div className="rv-root ex-root">
   <button className="button secondary at-back" onClick={()=>setSel(null)}><ArrowLeft size={16}/>{t.back}</button>
-  <header className="rv-head"><h2>{sel.name}</h2><p>{lang==='ru'?sel.servedRu:sel.served} {t.q}</p></header>
+  <header className="rv-head"><h2>{specName(sel,lang)}</h2><p>{lang==='ru'?sel.servedRu:sel.served} {t.q}</p></header>
   {sel.status==='beta'&&<p className="at-warn" role="note"><ShieldAlert size={15}/>{t.betaNote(Math.round(sel.agreement*100))}</p>}
   <div className="ex-field"><span className="ex-label">{t.count}</span>
    <div className="ex-seg at-seg" role="radiogroup" aria-label={t.count}>{[...COUNTS,0].map(n=><button key={n} role="radio" aria-checked={n===count} className={n===count?'on':''} onClick={()=>setCount(n)}>{n===0?t.all:t.random(n)}</button>)}</div></div>

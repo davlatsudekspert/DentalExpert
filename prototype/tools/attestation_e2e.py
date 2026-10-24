@@ -66,6 +66,7 @@ with sync_playwright() as p:
         pg.goto(BASE+f'/?screen=courses&lang={lang}');pg.wait_for_selector('.learn-tabs',timeout=8000)
         check(f'{lang}: Attestation tab present',pg.locator('.learn-tabs button',has_text=label).count()==1)
     pg.locator('.learn-tabs button',has_text='Аттестация').click();pg.wait_for_selector('.at-list',timeout=6000)
+    check('ru: specialty names are Russian (no Uzbek names left)','stomatologiya' not in pg.locator('.at-list').inner_text().lower() and 'Ортодонтия' in pg.locator('.at-list').inner_text())
     check('ru: 12 specialties, source note in Russian','Источник вопросов' in pg.locator('.at-note').inner_text() and pg.locator('.at-row').count()==12)
     pg.locator('.at-row:not(:disabled)',has_text='Ортопед').count()  # names stay Uzbek-language labels from the index
     pg.locator('.at-row:not(:disabled)').first.click();pg.wait_for_selector('.ex-seg');pg.wait_for_function("!document.querySelector('.at-start').disabled",timeout=8000)
