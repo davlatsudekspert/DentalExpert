@@ -1,6 +1,8 @@
 import {TRIAL_DAYS} from '../../src/proConfig';
 import {devEcho,hmac,isLocal,randomToken,sha256} from './auth';
 import type {Env} from './db';
+// With the Pro flag off nothing here touches the database: no trial is started and no claim is stored, so the 0016 tables are not needed and no identifier is collected.
+const off=(env:Env)=>env.PRO_ENABLED!=='1';
 
 // One trial per person. A new account gets the 30-day trial only when none of the person's identifiers has claimed one:
 // the normalized e-mail, the phone's device id (native apps), the web cookie; a coarse network address may claim at most
@@ -53,6 +55,7 @@ async function emailClaimed(env:Env,userId:string,email:string,emailHash:string)
 
 /** Decides and records the trial of a NEW account. Never throws to the caller's sign-up: failures leave the default trial. */
 export async function startTrial(env:Env,request:Request,user:{id:string;email:string}):Promise<{denied:TrialDenied|null;cookie?:string}>{
+ if(off(env))return {denied:null};
  const emailHash=await h(env,'email',normalizedEmail(user.email));
  const dev=deviceOf(request),devHash=dev?await h(env,'device',dev):null;
  const native=isNative(request);
@@ -86,6 +89,7 @@ export async function startTrial(env:Env,request:Request,user:{id:string;email:s
 
 /** Keeps the e-mail claim when an account is deleted, so deleting and signing up again does not bring the trial back. */
 export async function keepEmailClaim(env:Env,userId:string,email:string){
+ if(off(env))return;
  const hash=await h(env,'email',normalizedEmail(email));
  await env.DB.prepare(`INSERT INTO trial_claims (kind,hash,user_id) SELECT 'email',?1,?2 WHERE NOT EXISTS (SELECT 1 FROM trial_claims WHERE kind='email' AND hash=?1)`).bind(hash,userId).run();
  // The claim keeps no link to a person once the account is gone.

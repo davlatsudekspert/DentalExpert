@@ -10,7 +10,7 @@ import {grantPro,monthsOk,revokePro} from '../../_lib/grants';
 export const onRequestGet:PagesFunction<Env>=async({request,env})=>{
  const a=await needAdmin(env,request);if('res' in a)return a.res;
  const {results}=await env.DB.prepare(
-  `SELECT email,months,granted_by,granted_at,user_id,expires_at FROM pro_grants WHERE revoked_at IS NULL AND (expires_at IS NULL OR expires_at>datetime('now')) ORDER BY granted_at DESC LIMIT 200`).all<Record<string,unknown>>();
+  `SELECT email,months,granted_by,granted_at,user_id,expires_at FROM pro_grants WHERE revoked_at IS NULL AND (expires_at IS NULL OR expires_at>datetime('now')) ORDER BY granted_at DESC LIMIT 200`).all<Record<string,unknown>>().catch(()=>({results:[] as Record<string,unknown>[]}));
  return json({grants:results.map(r=>({email:r.email,months:r.months,grantedBy:r.granted_by,grantedAt:r.granted_at,until:r.expires_at,registered:!!r.user_id,pending:!r.user_id}))},200,noStore);
 };
 

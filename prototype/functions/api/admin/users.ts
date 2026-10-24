@@ -14,13 +14,13 @@ export const onRequestGet:PagesFunction<Env>=async({request,env})=>{
  const offset=Math.max(0,Number(url.searchParams.get('offset'))||0);
  const like='%'+q.replace(/[%_\\]/g,m=>'\\'+m)+'%';
  const {results}=await env.DB.prepare(
-  `SELECT id,email,name,role,country_code,city_id,created_at,suspended_at,phone,workplace,specialty,telegram,instagram,public_email,address,map_url,publish_requested,verified_at,photo_at,${TRIAL_SQL('users')} AS trial,datetime('now') AS now FROM users
+  `SELECT id,email,name,role,country_code,city_id,created_at,suspended_at,phone,workplace,specialty,telegram,instagram,public_email,address,map_url,publish_requested,verified_at,photo_at,${proEnabled(env)?TRIAL_SQL('users'):'NULL'} AS trial,datetime('now') AS now FROM users
    WHERE (?1='' OR lower(email) LIKE ?2 ESCAPE '\\' OR lower(COALESCE(name,'')) LIKE ?2 ESCAPE '\\')
    ORDER BY created_at DESC LIMIT 50 OFFSET ?3`
  ).bind(q,like,offset).all<Record<string,unknown>>();
  const ids=results.map(r=>String(r.id));
- const subs=ids.length?(await env.DB.prepare(`SELECT user_id,product_id,source,status,expires_at FROM subscriptions WHERE user_id IN (${ids.map(()=>'?').join(',')})`).bind(...ids).all<SubRow&{user_id:string}>()).results:[];
- return json({proEnabled:proEnabled(env),users:results.map(r=>({id:r.id,pro:stateOf({role:r.role as 'student',guest:false},r.trial as string,r.now as string,subs.filter(s=>s.user_id===r.id)),email:r.email,name:r.name,role:r.role,countryCode:r.country_code,cityId:r.city_id,createdAt:r.created_at,suspended:!!r.suspended_at,admin:isAdminEmail(env,String(r.email)),publishRequested:!!r.publish_requested,verified:!!r.verified_at,profile:r.role==='dentist'?{phone:r.phone,workplace:r.workplace,specialty:r.specialty,telegram:r.telegram,instagram:r.instagram,email:r.public_email,address:r.address,map:r.map_url,city:r.city_id,photoUrl:photoUrl(r.id,r.photo_at)}:null}))},200,'no-store');
+ const subs=proEnabled(env)&&ids.length?(await env.DB.prepare(`SELECT user_id,product_id,source,status,expires_at FROM subscriptions WHERE user_id IN (${ids.map(()=>'?').join(',')})`).bind(...ids).all<SubRow&{user_id:string}>()).results:[];
+ return json({proEnabled:proEnabled(env),users:results.map(r=>({id:r.id,pro:proEnabled(env)?stateOf({role:r.role as 'student',guest:false},r.trial as string,r.now as string,subs.filter(s=>s.user_id===r.id)):undefined,email:r.email,name:r.name,role:r.role,countryCode:r.country_code,cityId:r.city_id,createdAt:r.created_at,suspended:!!r.suspended_at,admin:isAdminEmail(env,String(r.email)),publishRequested:!!r.publish_requested,verified:!!r.verified_at,profile:r.role==='dentist'?{phone:r.phone,workplace:r.workplace,specialty:r.specialty,telegram:r.telegram,instagram:r.instagram,email:r.public_email,address:r.address,map:r.map_url,city:r.city_id,photoUrl:photoUrl(r.id,r.photo_at)}:null}))},200,'no-store');
 };
 
 // PUT {id, role?, suspended?}: change a role or suspend/restore an account. Admins cannot be suspended.

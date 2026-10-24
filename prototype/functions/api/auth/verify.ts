@@ -25,7 +25,7 @@ export const onRequestPost:PagesFunction<Env>=async({request,env})=>{
   let ru=await env.DB.prepare(`SELECT ${USER_COLUMNS} FROM users WHERE email=?`).bind(email).first<Record<string,string|number|null>>();
   if(!ru){const id=crypto.randomUUID();await env.DB.prepare(`INSERT INTO users (id,email,name,role,email_verified_at) VALUES (?,?,?,?,datetime('now'))`).bind(id,email,'Store Reviewer ('+rr+')',rr).run();ru=await env.DB.prepare(`SELECT ${USER_COLUMNS} FROM users WHERE id=?`).bind(id).first<Record<string,string|number|null>>()}
   // Store reviewers always see everything: their trial never ends.
-  await env.DB.prepare(`UPDATE users SET trial_ends_at=datetime('now','+3650 days'),trial_denied=0 WHERE id=?`).bind(ru!.id).run();
+  if(env.PRO_ENABLED==='1')await env.DB.prepare(`UPDATE users SET trial_ends_at=datetime('now','+3650 days'),trial_denied=0 WHERE id=?`).bind(ru!.id).run();
   return signedIn(env,request,ru!);
  }
  const row=await env.DB.prepare(

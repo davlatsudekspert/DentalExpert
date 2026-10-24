@@ -72,3 +72,6 @@ Trial claims store only salted hashes (e-mail, device id, cookie, coarse network
 
 ## Attestation prep (Attestatsiya tayyorgarligi) and the Free limit
 Free: 20 attestation questions per UTC day, counted **on the device** (`attestationLeft` / `takeAttestation` in `src/billing.ts`, limit `FREE.attestationPerDay` in `src/proConfig.ts`); a test is shortened to what is left. Pro (trial, paid, admin grant): unlimited. Flag off: unlimited. Why not the server counter `/api/billing/practice`: the question files ship with the app as static chunks, so a server count would not protect anything, and it would mix with the picture-practice allowance. Answer keys never travel through the API. When the allowance is used up the existing `practice` paywall opens. The section is hidden in English (uz and ru only).
+
+## Flag off needs no migration
+With `PRO_ENABLED` off the server never reads or writes the 0016 columns/tables (no trial start, no claim hashes, no admin Pro columns; the Pro admin list is empty). Verified by running the auth, admin, classroom, topic, QR, photo and security suites and the profile/admin/classroom browser walks against a database migrated only up to 0015. Apply `0016_pro.sql` before switching the flag on.
