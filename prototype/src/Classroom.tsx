@@ -1,3 +1,4 @@
+import {handleProRequired,proAllowed,showPaywall} from './billing';
 import {Suspense,lazy,useCallback,useEffect,useMemo,useRef,useState} from 'react';
 import {BarChart3,BookOpen,Check,ChevronLeft,ClipboardList,Copy,Eye,EyeOff,Layers,LogIn,Plus,Presentation,QrCode,Timer,Trash2,UserMinus,Users,Tv} from 'lucide-react';
 import qrcode from 'qrcode-generator';
@@ -126,7 +127,7 @@ export default function Classroom({lang,user,onSignIn}:{lang:Lang;user:AuthUser|
  if(!user)return <section className="classroom card"><h2>{t.title}</h2><p className="muted">{t.signIn}</p><button className="button" onClick={onSignIn}><LogIn size={17}/>{t.signInBtn}</button></section>;
  if(offline)return <section className="classroom card"><h2>{t.title}</h2><p className="muted">{t.offline}</p></section>;
  if(open)return <GroupView lang={lang} group={open} teacher={teacher} user={user} initialTopic={assign} onBack={()=>{setOpen(null);setAssign(null);load()}}/>;
- const create=async()=>{setMsg('');const r=await callApi('/classroom/groups','POST',{name});if(r.ok){setName('');load()}else setMsg(errText(r.data.error))};
+ const create=async()=>{setMsg('');const r=await callApi('/classroom/groups','POST',{name});if(r.ok){setName('');load()}else if(!handleProRequired(r,'groups'))setMsg(errText(r.data.error))};
  const join=async()=>{setMsg('');const c=nick.trim()?checkNick(nick):null;if(c&&!c.ok){setMsg(errText(c.error));return}const r=await callApi('/classroom/join','POST',{code,nickname:c?.nick||''});if(r.ok){setCode('');load()}else setMsg(errText(r.status===0?'network':r.data.error))};
  return <section className="classroom card" aria-label={t.title}>
   <h2>{t.title}</h2>
@@ -396,7 +397,7 @@ function TestRunning({lang,groupId,code,user,topicId,test,members,label,onFinish
    <div className="lg-bar"><i style={{width:`${rows.length?done/rows.length*100:0}%`}}/></div></div>
   <p className="muted">{info}</p>
   {!over&&code&&<QrCard lang={lang} code={code} testId={test.id}/>}
-  <div className="cr-actions">{code&&<button className="button lg-big" onClick={()=>setBig(true)}><Tv size={18}/>{more[lang].big}</button>}</div>
+  <div className="cr-actions">{code&&<button className="button lg-big" onClick={()=>{if(proAllowed('present'))setBig(true);else showPaywall('present')}}><Tv size={18}/>{more[lang].big}</button>}</div>
   <div className="cr-actions"><button className="button secondary" onClick={()=>setPreview(true)}><Eye size={16}/>{r.preview}</button>{test.status==='open'&&<button className="button" onClick={onFinish}>{t.finishTest}</button>}</div>
   {big&&<Big lang={lang} groupId={groupId} code={code} test={{id:test.id,title:test.title,topicId}} onClose={()=>{setBig(false);onChanged();load()}}/>}
   {preview&&user&&<PreviewRun lang={lang} a={test as TestMeta} userId={user.id} onExit={()=>setPreview(false)}/>}

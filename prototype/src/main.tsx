@@ -33,6 +33,8 @@ import {loadSeen} from './curriculumData';
 import ProfileForm,{useOwnPhoto} from './ProfileForm';
 import ProfilePanel from './ProfilePanel';
 import Admin from './Admin';
+import PaywallHost from './Paywall';
+import {onProRefreshed,setProUser} from './billing';
 import ReportForm from './ReportForm';
 import Patients,{loadPatients,clearLocalData} from './Patients';
 import Classroom from './Classroom';
@@ -91,6 +93,9 @@ useEffect(()=>{if(!isNative)return;let off:(()=>void)|undefined;const open=(u?:s
 // Sign-in, sign-up, OAuth and profile saves answer without isAdmin (only /auth/me carries it): fetch it once, or the admin entry vanishes until the app restarts.
 // Opening Profil re-reads the account: the admin may have verified (or un-verified) it from the admin panel since the last response.
 useEffect(()=>{if(screen!=='settings'||!authUser||authUser.guest)return;let live=true;fetchAuth().then(a=>{if(live&&a.user&&a.user.id===authUser.id)setAuthUser(u=>u&&u.id===a.user!.id&&(u.verified!==a.user!.verified||u.photoUrl!==a.user!.photoUrl||u.publishRequested!==a.user!.publishRequested)?a.user:u)});return()=>{live=false}},[screen]);
+// Pro/Free (off unless VITE_PRO_ENABLED): keep the plan state in step with the signed-in user; a store purchase re-reads the account.
+useEffect(()=>{setProUser(authUser)},[authUser]);
+useEffect(()=>{onProRefreshed(u=>setAuthUser(prev=>prev&&prev.id===u.id?{...prev,...u,isAdmin:prev.isAdmin}:prev))},[]);
 useEffect(()=>{if(!authUser||authUser.guest||authUser.isAdmin!==undefined)return;let live=true;fetchAuth().then(a=>{if(live&&a.user&&a.user.id===authUser.id)setAuthUser(a.user)});return()=>{live=false}},[authUser]);
 useEffect(()=>{let live=true;fetchAuth().then(a=>{if(!live)return;setAuthKnown(true);setAuthEnabled(a.enabled);setAuthUser(a.user);if(a.user)applyUser(a.user);if(a.user)setRole(eduRole(a.user.role));if(a.user&&(!initial.get('screen')||!allowed(initial.get('screen')!))){setScreen(homeOf(a.user.role))}});return()=>{live=false}},[]);
 // Server profiles are merged over the local demo list, so existing indexes stay stable and the demo list is the fallback.
@@ -198,7 +203,7 @@ const learn=(k:string)=>()=>{setTab(k);go('courses')};const tiles:[string,React.
 {designScreens.includes(screen as DesignScreen)&&<DesignCompletion screen={screen as DesignScreen} lang={lang} onNavigate={go} roleHome={homeOf(role)} auth={authEnabled?{email:pendingEmail,onVerify:async code=>{const r=await verifyCode(pendingEmail,code);if(r.ok&&r.data.user){setAuthUser(r.data.user);applyUser(r.data.user);return {ok:true}}return {ok:false,error:r.data.error,attemptsLeft:r.data.attemptsLeft}},onResend:async()=>{const r=await requestCode({email:pendingEmail,role:authRole,lang});return {ok:r.ok,error:r.data.error,retryAfterSec:r.data.retryAfterSec}}}:undefined}/>}
 {extraScreens.includes(screen as ExtraScreenName)&&<AccountCommunity key={screen+'-'+lang} screen={screen as ExtraScreenName} lang={lang} onNavigate={go}/>}
 {(screen==='student'||screen==='teacher')&&<><div id="sec-groups"><Classroom lang={lang} user={authUser} onSignIn={()=>go('auth')}/></div><div id="sec-schedule"><OfficialSchedule lang={lang}/></div></>}
-{showReport&&<ReportForm lang={lang} onClose={()=>setShowReport(false)}/>}{showAdmin&&authUser?.isAdmin&&<Admin onClose={()=>setShowAdmin(false)}/>}{show3D&&<Suspense fallback={null}><Atlas3D lang={lang} onClose={()=>setShow3D(false)}/></Suspense>}
+{showReport&&<ReportForm lang={lang} onClose={()=>setShowReport(false)}/>}<PaywallHost lang={lang} onSignIn={()=>go('auth')}/>{showAdmin&&authUser?.isAdmin&&<Admin onClose={()=>setShowAdmin(false)}/>}{show3D&&<Suspense fallback={null}><Atlas3D lang={lang} onClose={()=>setShow3D(false)}/></Suspense>}
 
 </div>{!['language','splash','onboard','roles','auth','login','signup','verifyEmail','forgot'].includes(screen)&&<nav className={'bottom-nav five-tab-nav '+(EDU?'four-tab ':'')+(navCompact?'compact':'')} aria-label={p.mainNav}>{([[Home,homeOf(role),'home'],[Search,'search','search'],[Layers,'anatomy','atlas'],[BookOpen,'courses','learn'],[UserRound,'settings','account']] as const).filter(([,s])=>allowed(s)).map(([I,s,label],index)=><button key={label} type="button" aria-label={navCopy[lang][label]} aria-current={screen===s?'page':undefined} className={(screen===s?'active ':'')+(index===2&&!EDU?'nav-featured':'')} onClick={()=>go(s)}><span className="nav-icon">{icon(I)}</span><span className="nav-label">{navCopy[lang][label]}</span></button>)}</nav>}<div className="home-indicator"/>{notice&&<div className="toast" role="status"><Check size={16}/>{notice}<button aria-label={p.close} onClick={()=>setNotice('')}><X size={14}/></button></div>}</main>{!isNative&&!new URLSearchParams(location.search).has('shot')&&(location.protocol==='file:'||/^(localhost|127\.0\.0\.1)$|\.local$/.test(location.hostname)||new URLSearchParams(location.search).has('dev'))&&<div className="mobile-screen-picker"><select aria-label={p.picker} value={screen} onChange={e=>go(e.target.value)}>{menuScreens.map(s=><option key={s} value={s}>{designScreens.includes(s as DesignScreen)?designTitles[lang][s as DesignScreen]:extraScreens.includes(s as ExtraScreenName)?extraTitles[lang][s as ExtraScreenName]:t(s as Key)}</option>)}</select><button aria-label={t('language')} onClick={()=>setLang(LANG_ORDER[(LANG_ORDER.indexOf(lang)+1)%LANG_ORDER.length])}><Globe size={16}/>{lang.toUpperCase()}</button></div>}</div>}
 createRoot(document.getElementById('root')!).render(<App/>);

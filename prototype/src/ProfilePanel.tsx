@@ -7,6 +7,8 @@ import {EDU} from './edition';
 import {LANG_LABEL,LANG_ORDER} from './i18n';
 import type {Lang} from './discoveryData';
 import LogoMark from './LogoMark';
+import {PRO_ENABLED,showPaywall,usePro} from './billing';
+import {heldNote,planStatus} from './Paywall';
 import './profile.css';
 
 type Role=AuthUser['role'];
@@ -41,6 +43,10 @@ const filledPct=(u:AuthUser|null,name:string,photo:string)=>{const pro=u?.role==
 export default function ProfilePanel({lang,user,role,name,initials,photo,theme,setTheme,setLang,authEnabled,demo,privacyLabel,onEdit,onAdmin,onPrivacy,onReport,onDemoOut,onSignOut,onDelete,onRole}:{lang:Lang;user:AuthUser|null;role:Role;name:string;initials:string;photo:string;theme:'mono'|'color';setTheme:(t:'mono'|'color')=>void;setLang:(l:Lang)=>void;authEnabled:boolean;demo:string;privacyLabel:string;
  onEdit:()=>void;onAdmin:()=>void;onPrivacy:()=>void;onReport:()=>void;onDemoOut:()=>void;onSignOut:()=>void;onDelete:()=>void;onRole:(r:Role)=>Promise<string>}){
  const t=w[lang],signed=!!user&&!user.guest;
+ const {pro}=usePro();
+ const planWord={uz:['Tarif','Tarif va Pro','Bepul tarif'],ru:['Тариф','Тариф и Pro','Бесплатный тариф'],en:['Plan','Plan and Pro','Free plan']}[lang];
+ // Dentists lose the public listing when Pro lapses (the profile and its verification stay).
+ const listingPaused={uz:'Ommaviy ro‘yxat to‘xtatilgan: Pro kerak.',ru:'Публичный список приостановлен: нужен Pro.',en:'Public listing paused: needs Pro.'}[lang];
  const [open,setOpen]=useState(false),[pick,setPick]=useState<Role|null>(null),[busy,setBusy]=useState(false),[err,setErr]=useState('');
  const [grp,setGrp]=useState<{n:number;s:number}|null>(null);
  const teaching=signed&&role==='teacher';
@@ -79,6 +85,7 @@ export default function ProfilePanel({lang,user,role,name,initials,photo,theme,s
     {!pick&&<small className="pf-hint">{t.roleHint}</small>}
    </div>}
   </div>}
+  {PRO_ENABLED&&signed&&role!=='patient'&&pro&&<>{group(planWord[0])}<div className="pf-group">{row(ShieldCheck,planStatus(lang,pro)||planWord[2],()=>showPaywall(),{sub:heldNote(lang,pro,role)||planWord[1],cls:'pf-plan'})}{role==='dentist'&&!pro.active&&!EDU&&user?.verified&&<small className="pf-hint">{listingPaused}</small>}</div></>}
   {group(t.language)}
   <div className="card settings-list lang-grid">{LANG_ORDER.map(l=><button key={l} onClick={()=>{setLang(l);document.documentElement.lang=l}}><span className="lang-mark" lang={l}>{l.toUpperCase()}</span><strong lang={l}>{LANG_LABEL[l]}</strong><span className={'radio '+(lang===l?'checked':'')}>{lang===l&&<Check size={14}/>}</span></button>)}</div>
   {group(t.look)}

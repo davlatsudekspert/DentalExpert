@@ -1,3 +1,4 @@
+import {reservePractice} from './billing';
 import {useEffect,useRef,useState,type ComponentType} from 'react';
 import {ArrowLeft,Calculator,Check,ChevronRight,Hash,Layers,RotateCcw,Ruler,ScanLine,Trophy,X,type LucideIcon} from 'lucide-react';
 import './practice.css';
@@ -97,7 +98,7 @@ export default function Practice({lang}:{lang:'uz'|'ru'|'en'}){
  const fbRef=useRef<HTMLDivElement>(null);
  const nextRef=useRef<HTMLButtonElement>(null);
 
- const start=(sim:SimDef,mode:Record<string,string>={})=>{setSetup(null);setRun({sim,mode,i:0,score:0,fb:null,id:Date.now(),done:false,newBest:false})};
+ const start=async(sim:SimDef,mode:Record<string,string>={})=>{if(!await reservePractice(CASES))return;setSetup(null);setRun({sim,mode,i:0,score:0,fb:null,id:Date.now(),done:false,newBest:false})};
  const open=(sim:SimDef)=>{
   if(sim.modes)setSetup({sim,mode:Object.fromEntries(sim.modes.map(m=>[m.id,m.options[0].id]))});
   else start(sim);

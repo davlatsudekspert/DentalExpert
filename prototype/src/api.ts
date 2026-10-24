@@ -19,11 +19,20 @@ let guestToken:string|null=null;
 type Secure=typeof import('capacitor-secure-storage-plugin')['SecureStoragePlugin'];
 const secure=async<T,>(f:(s:Secure)=>Promise<T>)=>{const m=await import('capacitor-secure-storage-plugin');return f(m.SecureStoragePlugin)};
 // Reading the key may never block start-up for long: after 1.5 s the app carries on without it.
-export const tokenReady:Promise<void>=isNative?Promise.race([secure(s=>s.get({key:GUEST_KEY})).then(r=>{guestToken=r.value||null}).catch(()=>{guestToken=null}),new Promise<void>(r=>setTimeout(r,1500))]):Promise.resolve();
+// A random id for this install, kept in the Keychain / Keystore (it survives a reinstall), sent as X-Device-Id so the server can
+// give the 30-day Pro trial once per device. It is a random UUID, not a hardware identifier, and only its salted hash is stored.
+const DEVICE_KEY='de_device';
+let deviceId:string|null=null;
+const newId=()=>{try{return crypto.randomUUID()}catch{return '00000000-0000-4000-8000-'+Date.now().toString(16).padStart(12,'0').slice(-12)}};
+const loadDevice=async()=>{
+ try{const r=await secure(s=>s.get({key:DEVICE_KEY}));deviceId=r.value||null}catch{deviceId=null}
+ if(!deviceId){deviceId=newId();try{await secure(s=>s.set({key:DEVICE_KEY,value:deviceId!}))}catch{/* keychain unavailable: the id lasts until the app is reinstalled */}}
+};
+export const tokenReady:Promise<void>=isNative?Promise.race([Promise.all([secure(s=>s.get({key:GUEST_KEY})).then(r=>{guestToken=r.value||null}).catch(()=>{guestToken=null}),loadDevice()]).then(()=>{}),new Promise<void>(r=>setTimeout(r,1500))]):Promise.resolve();
 const dropGuest=async()=>{guestToken=null;if(!isNative)return;try{await secure(s=>s.remove({key:GUEST_KEY}))}catch{/* keychain unavailable */}};
 const getToken=()=>{try{return isNative?localStorage.getItem(TOKEN_KEY)||guestToken:null}catch{return guestToken}};
 const setToken=(t:string|null)=>{try{if(!isNative)return;if(t)localStorage.setItem(TOKEN_KEY,t);else localStorage.removeItem(TOKEN_KEY)}catch{/* storage unavailable */}};
-const authHeaders=():Record<string,string>=>{if(!isNative)return {};const t=getToken();return t?{'x-client':'native',authorization:'Bearer '+t}:{'x-client':'native'}};
+const authHeaders=():Record<string,string>=>{if(!isNative)return {};const t=getToken(),d:Record<string,string>=deviceId?{'x-device-id':deviceId}:{};return t?{'x-client':'native',...d,authorization:'Bearer '+t}:{'x-client':'native',...d}};
 /** A real sign-in or sign-out ends the device's old guest session. */
 const signedInAs=(t:string|null)=>{setToken(t);void dropGuest()};
 
@@ -55,7 +64,8 @@ export async function fetchDoctors(cityId:string,signal?:AbortSignal):Promise<Ap
  }catch{return null}
 }
 
-export type AuthUser={id:string;guest?:boolean;email:string;name:string|null;role:'patient'|'dentist'|'teacher'|'student';countryCode:string|null;cityId:string|null;phone?:string|null;workplace?:string|null;bio?:string|null;isAdmin?:boolean;specialty?:string|null;telegram?:string|null;instagram?:string|null;publicEmail?:string|null;address?:string|null;mapUrl?:string|null;publishRequested?:boolean;verified?:boolean;photoUrl?:string|null};
+import type {ProState} from './proConfig';
+export type AuthUser={pro?:ProState;id:string;guest?:boolean;email:string;name:string|null;role:'patient'|'dentist'|'teacher'|'student';countryCode:string|null;cityId:string|null;phone?:string|null;workplace?:string|null;bio?:string|null;isAdmin?:boolean;specialty?:string|null;telegram?:string|null;instagram?:string|null;publicEmail?:string|null;address?:string|null;mapUrl?:string|null;publishRequested?:boolean;verified?:boolean;photoUrl?:string|null};
 export type AuthState={enabled:boolean;user:AuthUser|null};
 
 async function post<T>(path:string,body:unknown,method:'POST'|'PUT'|'DELETE'='POST'):Promise<{ok:boolean;status:number;data:T&{error?:string;retryAfterSec?:number;attemptsLeft?:number}}>{

@@ -1,3 +1,4 @@
+import {handleProRequired} from './billing';
 import {useEffect,useMemo,useState} from 'react';
 import {ChevronDown,Search,Timer} from 'lucide-react';
 import {callApi} from './api';
@@ -176,7 +177,7 @@ export function GeneralSetup({lang,groupId,onDone,onCancel}:{lang:Lang;groupId:s
  const onOpts=useMemo(()=>(o:Options,ok:boolean)=>setOpts({o,ok}),[]);
  const assign=async()=>{setErr('');setBusy(true);
   const r=await callApi<{testId:string}>('/classroom/general','POST',{groupId,title:title.trim(),sources:[...sel],count:n,variant,...opts.o});
-  setBusy(false);if(r.ok)onDone(r.data.testId);else setErr(r.status===0?'other':r.data.error||'other')};
+  setBusy(false);if(r.ok)onDone(r.data.testId);else if(handleProRequired(r,'generalTests'))return;else setErr(r.status===0?'other':r.data.error||'other')};
  return <div className="lg-general">
   <h2>{t.gTitle}</h2><p className="muted">{t.gLead}</p>
   <label className="lg-search"><Search size={16} aria-hidden/><input type="search" value={q} placeholder={t.search} aria-label={t.search} onChange={e=>setQ(e.target.value)}/></label>

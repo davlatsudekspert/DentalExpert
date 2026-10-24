@@ -1,3 +1,4 @@
+import {proAllowed,showPaywall} from './billing';
 import {useEffect,useRef,useState} from 'react';
 import {Check,ChevronLeft,ChevronRight,MessageSquareText,MonitorUp,X} from 'lucide-react';
 import {Capacitor} from '@capacitor/core';
@@ -33,6 +34,7 @@ export default function Slides({title,eyebrow,slides:topicSlides,sources,lang,te
  const [presenting,setPresenting]=useState(false);
  const native=Capacitor.isNativePlatform();
  const present=async(on:boolean)=>{
+  if(on&&!proAllowed('present')){showPaywall('present');return}
   setPresenting(on);
   try{
    if(native){

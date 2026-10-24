@@ -44,5 +44,7 @@ export const topicNumber=(id:string)=>{const m=/-(\d{2})$/.exec(id);return m?Num
 export const topicIsFree=(id:string)=>topicNumber(id)<=FREE.topicsPerSubject;
 
 export type ProReason='trial'|'paid'|'admin-grant'|'free';
-export type ProState={active:boolean;reason:ProReason;trialEndsAt:string|null;expiresAt:string|null;plan:string|null};
+/** `trialUsed`: this account got no trial because the person/device already used one. `heldRole`: the account holds a paid plan of ANOTHER role
+ * than its current one (Pro is bound to the plan's role, so that plan unlocks nothing here). */
+export type ProState={active:boolean;reason:ProReason;trialEndsAt:string|null;expiresAt:string|null;plan:string|null;trialUsed?:boolean;heldRole?:PlanRole|null};
 export const daysLeft=(iso:string|null|undefined,now=Date.now())=>{const t=iso?Date.parse(iso.includes('T')?iso:iso.replace(' ','T')+'Z'):NaN;return Number.isFinite(t)?Math.max(0,Math.ceil((t-now)/86400000)):0};

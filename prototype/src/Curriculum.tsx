@@ -1,3 +1,4 @@
+import {handleProRequired} from './billing';
 import {useEffect,useRef,useState,type ReactNode} from 'react';
 import {BookOpen,CheckCircle2,ClipboardCheck,ChevronDown,ChevronLeft,ChevronRight,Presentation,Target,Users} from 'lucide-react';
 import Slides from './Slides';
@@ -130,6 +131,7 @@ function SelfTest({lang,topic,teacher}:{lang:Lang;topic:Topic;teacher?:boolean})
  const [best,setBest]=useState(()=>readBest()[topic.id]);
  if(!topic.test?.length)return <p className="muted lg-small">{t.testInGroup}</p>;
  const start=async()=>{setBusy(true);setErr(false);const r=await callApi<{correct:number[];explain:{en:string;ru:string;uz:string}[]}>('/curriculum/key?topicId='+topic.id);setBusy(false);
+  if(handleProRequired(r,'topics'))return;
   if(!r.ok||!Array.isArray(r.data.correct)){setErr(true);return}
   setQs(topic.test.map((x,k)=>({q:tx(x.q,lang),options:x.options.map(o=>tx(o,lang)),correct:r.data.correct[k],explanation:tx(r.data.explain[k],lang)})))};
  const done=(score:number,total:number)=>{const all=readBest();const prev=all[topic.id];if(!prev||score>prev.best){all[topic.id]={best:score,total};try{localStorage.setItem(BEST,JSON.stringify(all))}catch{/* storage unavailable */}setBest(all[topic.id])}};

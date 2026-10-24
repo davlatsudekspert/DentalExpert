@@ -1,3 +1,4 @@
+import {proAllowed,showPaywall} from './billing';
 import {useEffect,useRef,useState} from 'react';
 import * as THREE from 'three';
 import {Layers,RotateCcw,X} from 'lucide-react';
@@ -31,6 +32,8 @@ const T={
 };
 
 const COLORS:Record<LayerKey,string>={enamel:'#bfe9ff',dentin:'#f0c987',pulp:'#ff6a6a',vessels:'#ffd84d',root:'#e6d5b0'};
+/** Free tier: the outer layers can be explored; the inner ones and the exploded view are Pro. */
+const FREE_LAYERS:LayerKey[]=['enamel','dentin'];
 const ORDER:LayerKey[]=['enamel','dentin','pulp','vessels','root'];
 const PLATES=['interior','exterior','dentin','enamel','pulp','vessels','nerves'] as const;
 type Plate=typeof PLATES[number];
@@ -139,6 +142,7 @@ export default function Atlas3D({lang,onClose}:{lang:Lang;onClose:()=>void}){
   };
 
   const setSel=(k:LayerKey|null)=>{
+   if(k&&!FREE_LAYERS.includes(k)&&!proAllowed('atlas3d')){showPaywall('atlas3d');return}
    selectedKey=k;setSelected(k);
    PLATES.forEach(p=>{
     const inSel=!!k&&LAYER_PLATES[k].includes(p);
@@ -146,7 +150,7 @@ export default function Atlas3D({lang,onClose}:{lang:Lang;onClose:()=>void}){
     state.liftT.set(p,inSel?(isExploded?1.0:2.0):0);
    });
   };
-  const setExp=(v:boolean)=>{isExploded=v;if(v){yawT=-0.62;pitchT=0.16}else if(yawT<-0.5){yawT=-0.38;pitchT=0.08};setExploded(v);PLATES.forEach(p=>{const e=EXPLODED[p];state.target.set(p,v?[e[0],e[1],e[2]]:[0,0,Z0[p]])});setSel(selectedKey)};
+  const setExp=(v:boolean)=>{if(v&&!proAllowed('atlas3d')){showPaywall('atlas3d');return}isExploded=v;if(v){yawT=-0.62;pitchT=0.16}else if(yawT<-0.5){yawT=-0.38;pitchT=0.08};setExploded(v);PLATES.forEach(p=>{const e=EXPLODED[p];state.target.set(p,v?[e[0],e[1],e[2]]:[0,0,Z0[p]])});setSel(selectedKey)};
   api.current={select:k=>setSel(k===selectedKey?null:k),explode:setExp,reset:()=>{yawT=-0.38;pitchT=0.08;dist=27;setSel(null);setExp(false)}};
 
   const down=(e:PointerEvent)=>{el.setPointerCapture(e.pointerId);pointers.set(e.pointerId,{x:e.clientX,y:e.clientY});dragging=true;moved=0;sx=lx=e.clientX;sy=ly=e.clientY;lastInput=performance.now();

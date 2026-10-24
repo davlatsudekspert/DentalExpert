@@ -1,3 +1,4 @@
+import {showPaywall} from './billing';
 import {useEffect,useMemo,useRef,useState} from 'react';
 import {AlarmClock,Check,ChevronRight,CircleAlert,Database,History,RotateCcw,Trophy,X} from 'lucide-react';
 import type {Lang} from './discoveryData';
@@ -112,10 +113,13 @@ export default function Exam({lang}:{lang:'uz'|'ru'|'en'}){
  const start=async()=>{
   if(!poolN||busy)return;
   setBusy(true);setFailed(false);
+  let locked=false;
   const picked=subj==='mix'?shuffle(TOPICS).slice(0,Math.ceil(count/10)+3):bank;
   const parts=await Promise.all(picked.map(async m=>{const [tp,k]=await Promise.all([loadTopic(m.id),callApi<{correct:number[];explain:{en:string;ru:string;uz:string}[]}>('/curriculum/key?topicId='+m.id)]);
+   if(k.status===402)locked=true;
    return tp&&k.ok?tp.test.map((x,i)=>({q:tx(x.q,l),options:x.options.map(o=>tx(o,l)),correct:k.data.correct[i],explanation:tx(k.data.explain[i],l),source:tx(tp.title,l)})):[]}));
   setBusy(false);
+  if(locked){showPaywall('exam');return}
   const qs=[...parts.flat(),...(subj==='mix'?deckQs:[])];
   if(!qs.length){setFailed(true);return}
   const now=Date.now();
