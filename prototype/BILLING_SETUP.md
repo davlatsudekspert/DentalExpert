@@ -54,3 +54,8 @@ Price and period on each plan card (store price when available), auto-renew and 
 2. Migration applied; `REVENUECAT_WEBHOOK_AUTH`, `TRIAL_PEPPER` set; send a RevenueCat **TEST** event (answers `ignored: type`, 200).
 3. Build a TestFlight/internal build with `VITE_PRO_ENABLED=1` and the plugin; verify purchase, renewal, cancel, restore, expiry.
 4. Set `PRO_ENABLED=1` on the server, release the apps. To roll back, unset `PRO_ENABLED`: everything is free again at once.
+
+## At launch (when PRO_ENABLED is switched on)
+- Trial clocks start at sign-up even while Pro is off, so accounts created in the free-for-all period would already be past their 30 days. Right before switching Pro on, give every account a fresh 30 days once:
+  `UPDATE users SET trial_ends_at=datetime('now','+30 days') WHERE guest=0;`
+- Apple App Privacy / Google Data safety: the app sends a random install ID (Keychain/Keystore) used for abuse prevention (one free trial per device). Declare "Device ID" (not linked to tracking, purpose: app functionality / fraud prevention) before the first store submission that contains it. The privacy policy (public/privacy) already describes it.
