@@ -4,6 +4,7 @@
   "name": "Umumiy stomatologiya",
   "total": 500,
   "served": 0,
+  "servedRu": 0,
   "status": "withheld",
   "agreement": 0.4
  },
@@ -12,6 +13,7 @@
   "name": "Terapevtik stomatologiya",
   "total": 584,
   "served": 0,
+  "servedRu": 0,
   "status": "withheld",
   "agreement": 0.5
  },
@@ -20,6 +22,7 @@
   "name": "Ortopedik stomatologiya",
   "total": 520,
   "served": 492,
+  "servedRu": 498,
   "status": "ok",
   "agreement": 0.98
  },
@@ -28,6 +31,7 @@
   "name": "Xirurgik stomatologiya (og‘iz bo‘shlig‘i)",
   "total": 492,
   "served": 466,
+  "servedRu": 469,
   "status": "beta",
   "agreement": 0.83
  },
@@ -36,6 +40,7 @@
   "name": "Yuz-jag‘ xirurgiyasi",
   "total": 473,
   "served": 0,
+  "servedRu": 0,
   "status": "withheld",
   "agreement": 0.67
  },
@@ -44,6 +49,7 @@
   "name": "Bolalar stomatologiyasi",
   "total": 476,
   "served": 0,
+  "servedRu": 0,
   "status": "withheld",
   "agreement": 0.8
  },
@@ -52,6 +58,7 @@
   "name": "Bolalar yuz-jag‘ xirurgiyasi",
   "total": 478,
   "served": 450,
+  "servedRu": 467,
   "status": "ok",
   "agreement": 0.98
  },
@@ -59,7 +66,8 @@
   "id": "bolalar-terapevtik",
   "name": "Bolalar terapevtik stomatologiyasi",
   "total": 486,
-  "served": 460,
+  "served": 457,
+  "servedRu": 460,
   "status": "beta",
   "agreement": 0.82
  },
@@ -68,6 +76,7 @@
   "name": "Bolalar xirurgik stomatologiyasi",
   "total": 478,
   "served": 452,
+  "servedRu": 467,
   "status": "ok",
   "agreement": 0.95
  },
@@ -76,6 +85,7 @@
   "name": "Ortodontiya",
   "total": 499,
   "served": 458,
+  "servedRu": 478,
   "status": "ok",
   "agreement": 0.98
  },
@@ -84,6 +94,7 @@
   "name": "Dental implantologiya",
   "total": 473,
   "served": 449,
+  "servedRu": 455,
   "status": "beta",
   "agreement": 0.87
  },
@@ -92,6 +103,7 @@
   "name": "Parodontologiya",
   "total": 438,
   "served": 0,
+  "servedRu": 0,
   "status": "withheld",
   "agreement": 0.14
  }

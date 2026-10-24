@@ -57,6 +57,16 @@ export async function reservePractice(n:number):Promise<boolean>{
  return true;   // network trouble never blocks learning
 }
 
+// ---- Attestation-prep allowance on Free: FREE.attestationPerDay questions per day, counted on this device (the question files ship with the app).
+const attUsed=()=>{try{const v=JSON.parse(localStorage.getItem('de_att_day')||'{}');return v.d===dayKey()?Number(v.n)||0:0}catch{return 0}};
+/** Questions still allowed today (Infinity when unlimited). */
+export const attestationLeft=()=>proActive()?Infinity:Math.max(0,FREE.attestationPerDay-attUsed());
+/** Books `n` attestation questions against today's allowance. */
+export function takeAttestation(n:number){
+ if(proActive())return;
+ try{localStorage.setItem('de_att_day',JSON.stringify({d:dayKey(),n:attUsed()+n}))}catch{/* storage unavailable */}
+}
+
 // ---- Store billing. The provider is the only place that talks to App Store / Google Play (through RevenueCat).
 export type Offer={productId:string;period:Period;price:string};
 export type PurchaseResult='ok'|'cancelled'|'error';

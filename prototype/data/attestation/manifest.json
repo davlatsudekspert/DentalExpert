@@ -22,6 +22,16 @@
     "identical-options": 1
    },
    "warnings": [],
+   "ru": {
+    "url": "https://tmbm.ssv.uz/uploads/category/files/78-umumij-stom-test-sajt-rus-500.pdf",
+    "sha256": "9c4c4ff756a8287d228a0197e3fdd031d2bfb3f816d6f7e2cbd4d03647e8fcb6",
+    "retrieved": "2026-10-24",
+    "questions": 500,
+    "optionCounts": {
+     "4": 500
+    },
+    "warnings": []
+   },
    "status": "withheld",
    "audit": {
     "sampled": 60,
@@ -37,8 +47,10 @@
     ],
     "sampleSeed": "audit:umumiy"
    },
-   "review": 500,
+   "review": 530,
+   "ruOnly": 30,
    "served": 0,
+   "servedRu": 0,
    "negatedStems": 53,
    "allNoneOptions": 33
   },
@@ -60,6 +72,16 @@
     "cyrillic": 1
    },
    "warnings": [],
+   "ru": {
+    "url": "https://tmbm.ssv.uz/uploads/category/files/79-terap-stom-test-sajt-rus-584.pdf",
+    "sha256": "0c17310d2ded6867a0a954ff91f9c4be5803ef25bd513371ddc93d48f38a8599",
+    "retrieved": "2026-10-24",
+    "questions": 584,
+    "optionCounts": {
+     "4": 584
+    },
+    "warnings": []
+   },
    "status": "withheld",
    "audit": {
     "sampled": 60,
@@ -75,8 +97,10 @@
     ],
     "sampleSeed": "audit:terapevtik"
    },
-   "review": 584,
+   "review": 639,
+   "ruOnly": 55,
    "served": 0,
+   "servedRu": 0,
    "negatedStems": 66,
    "allNoneOptions": 33
   },
@@ -97,6 +121,16 @@
     "cyrillic": 13
    },
    "warnings": [],
+   "ru": {
+    "url": "https://tmbm.ssv.uz/uploads/category/files/80-ortoped-stom-test-sajt-rus-520.pdf",
+    "sha256": "ec7d33e7f4cb00432e58a6ea383dc8b57ffe215f74700590b122172a3404daac",
+    "retrieved": "2026-10-24",
+    "questions": 520,
+    "optionCounts": {
+     "4": 520
+    },
+    "warnings": []
+   },
    "status": "ok",
    "audit": {
     "sampled": 60,
@@ -113,7 +147,9 @@
     "sampleSeed": "audit:ortopedik"
    },
    "review": 28,
+   "ruOnly": 144,
    "served": 492,
+   "servedRu": 498,
    "negatedStems": 7,
    "allNoneOptions": 16
   },
@@ -136,6 +172,16 @@
     "excel-date": 2
    },
    "warnings": [],
+   "ru": {
+    "url": "https://tmbm.ssv.uz/uploads/category/files/81-hirurg-stom-test-sajt-rus-492.pdf",
+    "sha256": "67fa68949cdf82c3c00b956bcb3354b3b3cce4f905d7db079b51aee8a0895538",
+    "retrieved": "2026-10-24",
+    "questions": 492,
+    "optionCounts": {
+     "4": 492
+    },
+    "warnings": []
+   },
    "status": "beta",
    "audit": {
     "sampled": 60,
@@ -152,7 +198,9 @@
     "sampleSeed": "audit:xirurgik"
    },
    "review": 26,
+   "ruOnly": 111,
    "served": 466,
+   "servedRu": 469,
    "negatedStems": 47,
    "allNoneOptions": 48
   },
@@ -174,6 +222,16 @@
     "cyrillic": 3
    },
    "warnings": [],
+   "ru": {
+    "url": "https://tmbm.ssv.uz/uploads/category/files/82-uz-zag-hir-test-sajt-rus-473.pdf",
+    "sha256": "34f1d46b4d70905f1d547d4a4b8cf2a2f9f2d723a3754b8dad32bc700ee7fbe8",
+    "retrieved": "2026-10-24",
+    "questions": 473,
+    "optionCounts": {
+     "4": 473
+    },
+    "warnings": []
+   },
    "status": "withheld",
    "audit": {
     "sampled": 60,
@@ -189,8 +247,10 @@
     ],
     "sampleSeed": "audit:yuzjag"
    },
-   "review": 473,
+   "review": 530,
+   "ruOnly": 57,
    "served": 0,
+   "servedRu": 0,
    "negatedStems": 46,
    "allNoneOptions": 24
   },
@@ -211,6 +271,16 @@
     "duplicate-of": 3
    },
    "warnings": [],
+   "ru": {
+    "url": "https://tmbm.ssv.uz/uploads/category/files/83-bolalar-stom-test-sajt-rus-449.pdf",
+    "sha256": "804a5f1145c77e43e0c18cd61dee31dc928de7e1f37c4928c282a79f2832277d",
+    "retrieved": "2026-10-24",
+    "questions": 472,
+    "optionCounts": {
+     "4": 472
+    },
+    "warnings": []
+   },
    "status": "withheld",
    "audit": {
     "sampled": 60,
@@ -226,8 +296,10 @@
     ],
     "sampleSeed": "audit:bolalar"
    },
-   "review": 476,
+   "review": 889,
+   "ruOnly": 413,
    "served": 0,
+   "servedRu": 0,
    "negatedStems": 40,
    "allNoneOptions": 30
   },
@@ -248,6 +320,16 @@
     "identical-options": 4
    },
    "warnings": [],
+   "ru": {
+    "url": "https://tmbm.ssv.uz/uploads/category/files/84-bol-uz-zag-hir-test-baza-rus-451.pdf",
+    "sha256": "dd6ec3c52a7d0d89a70396b720dd012e51fb26e81b7e2b5153deb4466238530f",
+    "retrieved": "2026-10-24",
+    "questions": 470,
+    "optionCounts": {
+     "4": 470
+    },
+    "warnings": []
+   },
    "status": "ok",
    "audit": {
     "sampled": 60,
@@ -264,9 +346,11 @@
     "sampleSeed": "audit:bolalar-yuzjag"
    },
    "review": 28,
+   "ruOnly": 437,
    "served": 450,
+   "servedRu": 467,
    "negatedStems": 36,
-   "allNoneOptions": 24
+   "allNoneOptions": 25
   },
   {
    "id": "bolalar-terapevtik",
@@ -285,6 +369,16 @@
     "cyrillic": 1
    },
    "warnings": [],
+   "ru": {
+    "url": "https://tmbm.ssv.uz/uploads/category/files/85-bol-ter-stom-test-sajt-rus-486.pdf",
+    "sha256": "ae453dcec42fae924c20a7bd28c02510a933c507e4294216ff5a3ab52287de58",
+    "retrieved": "2026-10-24",
+    "questions": 486,
+    "optionCounts": {
+     "4": 486
+    },
+    "warnings": []
+   },
    "status": "beta",
    "audit": {
     "sampled": 60,
@@ -300,8 +394,10 @@
     ],
     "sampleSeed": "audit:bolalar-terapevtik"
    },
-   "review": 26,
-   "served": 460,
+   "review": 29,
+   "ruOnly": 59,
+   "served": 457,
+   "servedRu": 460,
    "negatedStems": 21,
    "allNoneOptions": 8
   },
@@ -322,6 +418,16 @@
     "cyrillic": 2
    },
    "warnings": [],
+   "ru": {
+    "url": "https://tmbm.ssv.uz/uploads/category/files/86-bol-hir-stom-test-sajt-rus-451.pdf",
+    "sha256": "ca6c49110a208b889f2c0f2944b7f5baa0cd4fd8a70994a0e90cae1809300a4a",
+    "retrieved": "2026-10-24",
+    "questions": 470,
+    "optionCounts": {
+     "4": 470
+    },
+    "warnings": []
+   },
    "status": "ok",
    "audit": {
     "sampled": 60,
@@ -338,9 +444,11 @@
     "sampleSeed": "audit:bolalar-xirurgik"
    },
    "review": 26,
+   "ruOnly": 427,
    "served": 452,
+   "servedRu": 467,
    "negatedStems": 36,
-   "allNoneOptions": 24
+   "allNoneOptions": 25
   },
   {
    "id": "ortodontiya",
@@ -359,6 +467,16 @@
     "layout-merge": 29
    },
    "warnings": [],
+   "ru": {
+    "url": "https://tmbm.ssv.uz/uploads/category/files/87-ortodontia-test-sajtga-rus-499.pdf",
+    "sha256": "e8bdedad451df1ec893ecd7ad5194414b65ff6ded826f6e2cf77394e178e479d",
+    "retrieved": "2026-10-24",
+    "questions": 499,
+    "optionCounts": {
+     "4": 499
+    },
+    "warnings": []
+   },
    "status": "ok",
    "audit": {
     "sampled": 60,
@@ -374,8 +492,10 @@
     ],
     "sampleSeed": "audit:ortodontiya"
    },
-   "review": 41,
+   "review": 43,
+   "ruOnly": 122,
    "served": 458,
+   "servedRu": 478,
    "negatedStems": 5,
    "allNoneOptions": 0
   },
@@ -395,6 +515,16 @@
     "identical-options": 1
    },
    "warnings": [],
+   "ru": {
+    "url": "https://tmbm.ssv.uz/uploads/category/files/88-dental-impl-test-sajt-rus-421.pdf",
+    "sha256": "1b1f2cf1cce315f3550678721dc4b38f777f866fba71eda8500ad537e3ed8288",
+    "retrieved": "2026-10-24",
+    "questions": 458,
+    "optionCounts": {
+     "4": 458
+    },
+    "warnings": []
+   },
    "status": "beta",
    "audit": {
     "sampled": 60,
@@ -411,8 +541,10 @@
     "sampleSeed": "audit:implantologiya"
    },
    "review": 24,
+   "ruOnly": 355,
    "served": 449,
-   "negatedStems": 61,
+   "servedRu": 455,
+   "negatedStems": 62,
    "allNoneOptions": 30
   },
   {
@@ -431,6 +563,17 @@
     "cyrillic": 1
    },
    "warnings": [],
+   "ru": {
+    "url": "https://tmbm.ssv.uz/uploads/category/files/89-paradontologia-test-sajt-rus-376.pdf",
+    "sha256": "21efb9cd92c96e7bb99e34e42873093734db8da5e23be38880dba8c47908e97c",
+    "retrieved": "2026-10-24",
+    "questions": 431,
+    "optionCounts": {
+     "3": 1,
+     "4": 430
+    },
+    "warnings": []
+   },
    "status": "withheld",
    "audit": {
     "sampled": 60,
@@ -446,8 +589,10 @@
     ],
     "sampleSeed": "audit:parodontologiya"
    },
-   "review": 438,
+   "review": 842,
+   "ruOnly": 404,
    "served": 0,
+   "servedRu": 0,
    "negatedStems": 83,
    "allNoneOptions": 17
   }
@@ -457,5 +602,5 @@
   "ok": 0.95,
   "beta": 0.8
  },
- "totalServed": 3227
+ "totalServed": 3224
 }

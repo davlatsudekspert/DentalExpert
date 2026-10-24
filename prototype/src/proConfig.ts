@@ -26,6 +26,8 @@ export const FREE={
  topicsPerSubject:3,
  /** Practice questions per calendar day (UTC). */
  practicePerDay:20,
+ /** Attestation-prep questions per calendar day (UTC), counted on the device: the question files ship with the app, so a server count would protect nothing. */
+ attestationPerDay:20,
  /** Groups a teacher may run. */
  groups:1
 } as const;

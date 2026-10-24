@@ -225,3 +225,13 @@
 :root[data-theme="dark"] .rv-confirm{background:#00000080}
 :root[data-theme="dark"] .rv-confirm-card{background:#111f2e;box-shadow:0 24px 60px #00000080}
 @media (prefers-reduced-motion:reduce){.rv-confirm,.rv-confirm-card{animation:none}}
+
+/* Attestation prep */
+.at-list{display:grid;gap:8px;margin:12px 0}
+.at-row{display:flex;align-items:center;justify-content:space-between;gap:10px;text-align:left;width:100%;padding:12px 14px;min-height:56px;cursor:pointer}
+.at-row:disabled{opacity:.6;cursor:not-allowed}
+.at-main{display:grid;gap:2px;min-width:0}.at-main small{opacity:.75}.at-best{display:flex;align-items:center;gap:4px}
+.at-note{margin:14px 0;font-size:.78rem;line-height:1.4;opacity:.8}.at-note p{margin:0 0 6px}
+.at-warn{display:flex;gap:8px;align-items:flex-start;padding:10px 12px;border-radius:10px;background:rgba(192,87,60,.12);font-size:.85rem}
+.at-report{display:inline-flex;align-items:center;gap:5px;background:none;border:0;padding:4px 0;font-size:.78rem;opacity:.75;text-decoration:underline;cursor:pointer;color:inherit}
+.at-start{margin:14px 0}.at-back{margin-bottom:8px}.at-left{margin:6px 0}

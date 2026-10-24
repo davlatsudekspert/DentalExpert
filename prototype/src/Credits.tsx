@@ -2,6 +2,7 @@ import {X} from 'lucide-react';
 import credits from '../public/credits.json';
 import type {Lang} from './discoveryData';
 import {photoUrl} from './photos';
+import {attestationOn,AttestationNote} from './attestationConfig';
 import './photos.css';
 
 const words={
@@ -26,6 +27,7 @@ export default function Credits({lang,onClose}:{lang:Lang;onClose:()=>void}){
      <small>{t.src}: <a href={e.fileUrl} target="_blank" rel="noopener noreferrer">Wikimedia Commons</a></small>
      <small>{t.mod}: {e.modifications}</small></div>
    </li>)}</ul>
+   {attestationOn(lang)&&<AttestationNote lang={lang}/>}
   </div>
  </div>;
 }

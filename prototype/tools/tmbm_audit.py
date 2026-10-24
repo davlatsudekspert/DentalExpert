@@ -20,9 +20,11 @@ import collections, hashlib, json, math, os, random, re
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 D = os.path.join(ROOT, 'data', 'attestation')
+T_M = 'янв|фев|мар|апр|май|июн|июл|авг|сен|окт|ноя|дек'
 OK_AT, BETA_AT = 0.95, 0.80
 SAMPLE = 60
 
+EXCEL_RU = re.compile(r'(^|\s)(\d{1,2}-(%s)\b|(%s)-\d{1,2}\b)' % (T_M, T_M), re.I)
 NEG = re.compile(r"\bemas\b|maydi\b|noto.?g.?ri javob|tashqari|istisno|kirmaydi|bo.?lmaydi|bo.?lmagan|qo.?llab bo.?lmaydi", re.I)
 ALLNONE = re.compile(r"(hamma|xamma|barcha|hammasi|barchasi|bari)\b.{0,20}(to.?g.?ri|noto.?g.?ri)|to.?g.?ri javob yo.?q|hammasi to|barchasi to", re.I)
 
@@ -52,10 +54,11 @@ def main():
         path = os.path.join(D, sid + '.json')
         doc = json.load(open(path))
         qs = doc['questions']
+        uzqs = [q for q in qs if 'q' in q]   # the Uzbek-bearing questions, in file order (the sample is drawn from them)
         for q in qs:
             q.pop('review', None)
             q.pop('why', None)
-        ns = sample_ns(qs, sid)
+        ns = sample_ns(uzqs, sid)
         v = verd[sid]
         judged = set(v['wrong']) | set(v['ambiguous']) | set(v['corrupt'])
         assert judged <= set(ns), (sid, sorted(judged - set(ns)))
@@ -66,7 +69,6 @@ def main():
         agree_dec = ok / dec if dec else 0.0
         lo, hi = wilson(ok, dec)
         status = 'ok' if agree_dec >= OK_AT else 'beta' if agree_dec >= BETA_AT else 'withheld'
-        by_n = {q['n']: q for q in qs}
         why = collections.defaultdict(list)
         for n in v['wrong']:
             why[n].append('audit-key-wrong')
@@ -79,8 +81,23 @@ def main():
         neg = allnone = 0
         key_of = lambda q: q['o'][q['k']]
         for q in qs:
-            n = q['n']
+            n = q.get('n')
+            if 'q' not in q:
+                # Russian-only question: no Uzbek twin, so no sample verdict; it inherits the specialty status
+                n = q['id']
+                if len(q['ru']['o']) != 4 or any(not o for o in q['ru']['o']) or not q['ru']['q']:
+                    why[n].append('malformed')
+                if EXCEL_RU.search(' '.join([q['ru']['q']] + q['ru']['o'])):
+                    why[n].append('excel-date')
+                q.setdefault('flags', []).append('ru-only-unaudited')
+                continue
             fl = q.get('flags', [])
+            if 'ru' in q:
+                rt = ' '.join([q['ru']['q']] + q['ru']['o'])
+                if len(q['ru']['o']) != 4 or any(not o for o in q['ru']['o']):
+                    why[n].append('malformed')
+                if EXCEL_RU.search(rt):
+                    why[n].append('excel-date')
             if len(q['o']) != 4 or any(not o for o in q['o']) or not q['q']:
                 why[n].append('malformed')
             keyl = key_of(q).lower()
@@ -111,10 +128,10 @@ def main():
                 first[sig] = q
         if status == 'withheld':
             for q in qs:
-                why[q['n']].append('specialty-withheld')
+                why[q.get('n') or q['id']].append('specialty-withheld')
         flagged = 0
         for q in qs:
-            r = why.get(q['n'])
+            r = why.get(q.get('n') or q['id'])
             if r:
                 q['review'] = True
                 q['why'] = sorted(set(r))
@@ -123,24 +140,36 @@ def main():
                 q['flags'] = sorted(set(q['flags']))
         with open(path, 'w', encoding='utf-8') as f:
             json.dump(doc, f, ensure_ascii=False, separators=(',', ':'))
-        served = len(qs) - flagged
+        served = len(uzqs) - sum(1 for q in uzqs if q.get('review'))
+        served_ru = sum(1 for q in qs if 'ru' in q and not q.get('review'))
         # what the app ships: only non-review questions, no flags, one lazily loaded file per specialty
         os.makedirs(os.path.join(D, 'served'), exist_ok=True)
         sp_path = os.path.join(D, 'served', sid + '.json')
         if os.path.exists(sp_path):
             os.remove(sp_path)
         if status != 'withheld':
-            slim = [{'id': q['id'], 'q': q['q'], 'o': q['o'], 'k': q['k']} for q in qs if not q.get('review')]
+            slim = []
+            for q in qs:
+                if q.get('review'):
+                    continue
+                it = {'id': q['id']}
+                if 'q' in q:
+                    it.update({'q': q['q'], 'o': q['o'], 'k': q['k']})
+                if 'ru' in q:
+                    it['r'] = {'q': q['ru']['q'], 'o': q['ru']['o'], 'k': q['ru']['k']}
+                slim.append(it)
             json.dump({'id': sid, 'questions': slim}, open(sp_path, 'w', encoding='utf-8'), ensure_ascii=False, separators=(',', ':'))
         sp['status'] = status
         sp['audit'] = {'sampled': SAMPLE, 'ok': ok, 'ambiguous': a, 'wrong': w, 'corrupt': c,
                        'agreementAll': round(agree_all, 3), 'agreementDecidable': round(agree_dec, 3),
                        'wilson95': [round(lo, 3), round(hi, 3)], 'sampleSeed': 'audit:' + sid}
         sp['review'] = flagged
+        sp['ruOnly'] = len(qs) - len(uzqs)
         sp['served'] = served
+        sp['servedRu'] = served_ru
         sp['negatedStems'] = neg
         sp['allNoneOptions'] = allnone
-        index.append({'id': sid, 'name': sp['name'], 'total': len(qs), 'served': served, 'status': status,
+        index.append({'id': sid, 'name': sp['name'], 'total': len(uzqs), 'served': served, 'servedRu': served_ru, 'status': status,
                       'agreement': round(agree_dec, 2)})
         reason_count = collections.Counter(x.split(':')[0] for r in why.values() for x in set(r))
         lines.append((sp, v, ns, reason_count, flagged))

@@ -1,0 +1,212 @@
+[
+ {
+  "id": "umumiy",
+  "uz": 500,
+  "ru": 500,
+  "paired": 470,
+  "sameNumber": 470,
+  "uzOnly": 30,
+  "ruOnly": 30,
+  "rejected": {
+   "key-numbers": 3,
+   "key-not-first": 1,
+   "bridge-option-numbers": 7,
+   "bridge-key-numbers": 1,
+   "bridge-stem-numbers": 1,
+   "bridge-key-not-first": 2
+  },
+  "ruDroppedMalformed": [],
+  "byEvidence": 196,
+  "bridged": 274
+ },
+ {
+  "id": "terapevtik",
+  "uz": 584,
+  "ru": 584,
+  "paired": 529,
+  "sameNumber": 529,
+  "uzOnly": 55,
+  "ruOnly": 55,
+  "rejected": {
+   "bridge-option-numbers": 2
+  },
+  "ruDroppedMalformed": [],
+  "byEvidence": 222,
+  "bridged": 307
+ },
+ {
+  "id": "ortopedik",
+  "uz": 520,
+  "ru": 520,
+  "paired": 376,
+  "sameNumber": 375,
+  "uzOnly": 144,
+  "ruOnly": 144,
+  "rejected": {
+   "key-not-first": 3,
+   "bridge-key-not-first": 4,
+   "bridge-option-numbers": 2
+  },
+  "ruDroppedMalformed": [],
+  "byEvidence": 148,
+  "bridged": 228
+ },
+ {
+  "id": "xirurgik",
+  "uz": 492,
+  "ru": 492,
+  "paired": 381,
+  "sameNumber": 381,
+  "uzOnly": 111,
+  "ruOnly": 111,
+  "rejected": {
+   "bridge-key-not-first": 2,
+   "bridge-option-numbers": 1
+  },
+  "ruDroppedMalformed": [],
+  "byEvidence": 173,
+  "bridged": 208
+ },
+ {
+  "id": "yuzjag",
+  "uz": 473,
+  "ru": 473,
+  "paired": 416,
+  "sameNumber": 416,
+  "uzOnly": 57,
+  "ruOnly": 57,
+  "rejected": {
+   "bridge-key-not-first": 1
+  },
+  "ruDroppedMalformed": [],
+  "byEvidence": 133,
+  "bridged": 283
+ },
+ {
+  "id": "bolalar",
+  "uz": 476,
+  "ru": 472,
+  "paired": 59,
+  "sameNumber": 0,
+  "uzOnly": 417,
+  "ruOnly": 413,
+  "rejected": {
+   "key-numbers": 2,
+   "key-not-first": 1,
+   "bridge-stem-numbers": 2,
+   "bridge-option-numbers": 4,
+   "bridge-key-not-first": 1
+  },
+  "ruDroppedMalformed": [],
+  "byEvidence": 31,
+  "bridged": 28
+ },
+ {
+  "id": "bolalar-yuzjag",
+  "uz": 478,
+  "ru": 470,
+  "paired": 33,
+  "sameNumber": 0,
+  "uzOnly": 445,
+  "ruOnly": 437,
+  "rejected": {
+   "key-not-first": 4,
+   "key-numbers": 4
+  },
+  "ruDroppedMalformed": [],
+  "byEvidence": 29,
+  "bridged": 4
+ },
+ {
+  "id": "bolalar-terapevtik",
+  "uz": 486,
+  "ru": 486,
+  "paired": 427,
+  "sameNumber": 423,
+  "uzOnly": 59,
+  "ruOnly": 59,
+  "rejected": {
+   "key-not-first": 1,
+   "bridge-option-numbers": 5,
+   "bridge-key-not-first": 3,
+   "bridge-stem-numbers": 3
+  },
+  "ruDroppedMalformed": [],
+  "byEvidence": 197,
+  "bridged": 230
+ },
+ {
+  "id": "bolalar-xirurgik",
+  "uz": 478,
+  "ru": 470,
+  "paired": 43,
+  "sameNumber": 0,
+  "uzOnly": 435,
+  "ruOnly": 427,
+  "rejected": {
+   "key-not-first": 4,
+   "key-numbers": 4,
+   "bridge-key-numbers": 1,
+   "bridge-option-numbers": 1
+  },
+  "ruDroppedMalformed": [],
+  "byEvidence": 29,
+  "bridged": 14
+ },
+ {
+  "id": "ortodontiya",
+  "uz": 499,
+  "ru": 499,
+  "paired": 377,
+  "sameNumber": 377,
+  "uzOnly": 122,
+  "ruOnly": 122,
+  "rejected": {
+   "bridge-option-numbers": 24,
+   "bridge-stem-numbers": 14
+  },
+  "ruDroppedMalformed": [],
+  "byEvidence": 140,
+  "bridged": 237
+ },
+ {
+  "id": "implantologiya",
+  "uz": 473,
+  "ru": 458,
+  "paired": 103,
+  "sameNumber": 0,
+  "uzOnly": 370,
+  "ruOnly": 355,
+  "rejected": {
+   "key-numbers": 1,
+   "bridge-stem-numbers": 2,
+   "bridge-option-numbers": 2,
+   "bridge-key-not-first": 3
+  },
+  "ruDroppedMalformed": [],
+  "byEvidence": 50,
+  "bridged": 53
+ },
+ {
+  "id": "parodontologiya",
+  "uz": 438,
+  "ru": 431,
+  "paired": 26,
+  "sameNumber": 0,
+  "uzOnly": 412,
+  "ruOnly": 404,
+  "rejected": {
+   "key-numbers": 29,
+   "key-not-first": 40,
+   "bridge-key-numbers": 5,
+   "bridge-option-numbers": 4,
+   "bridge-key-not-first": 3,
+   "bridge-stem-numbers": 1
+  },
+  "ruDroppedMalformed": [
+   "parodontologiya-r0209"
+  ],
+  "byEvidence": 19,
+  "bridged": 7
+ }
+]

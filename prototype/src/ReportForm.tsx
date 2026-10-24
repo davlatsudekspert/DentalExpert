@@ -10,11 +10,11 @@ const words={
 };
 
 /** Complaints, content reports and bug reports. Works signed in or not; also satisfies App Store guideline 1.2 (a way to report content). */
-export default function ReportForm({lang,onClose}:{lang:Lang;onClose:()=>void}){
+export default function ReportForm({lang,onClose,initial}:{lang:Lang;onClose:()=>void;initial?:{category?:string;subject?:string;body?:string}}){
  const t=words[lang];
- const [category,setCategory]=useState('complaint');
- const [subject,setSubject]=useState('');
- const [body,setBody]=useState('');
+ const [category,setCategory]=useState(initial?.category||'complaint');
+ const [subject,setSubject]=useState(initial?.subject||'');
+ const [body,setBody]=useState(initial?.body||'');
  const [contact,setContact]=useState('');
  const [msg,setMsg]=useState('');
  const [done,setDone]=useState(false);

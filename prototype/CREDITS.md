@@ -15,3 +15,11 @@ Photographs bundled in the app (`src/photos/*.webp`). All are from Wikimedia Com
 | `mfs.webp` | Human mandible mental protuberance | Petter Bøckman | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0) | [Commons file page](https://commons.wikimedia.org/wiki/File:Human_mandible_mental_protuberance.jpg) | resized to 1000px wide, converted to WebP |
 
 Derivatives of CC BY-SA images (the crops and WebP conversions here) are shared under the same licence as the original.
+
+# Question sources: Attestatsiya tayyorgarligi
+
+The "Attestatsiya tayyorgarligi" (certification exam prep) section uses the public test-question PDFs ("TEST SINOVI SAVOLLARI", Uzbek and the official Russian editions) of the Medical Personnel Qualification Assessment Centre (Tibbiyot va farmatsevtika xodimlarining malakasini baholash markazi, tmbm.ssv.uz) for 12 dental specialties. Source URLs, retrieval dates and SHA-256 of every PDF: `data/attestation/manifest.json`.
+
+- Shown in the app (Learn > Attestatsiya, and Profil > Image credits) in Uzbek and Russian only: "Savollar manbasi: Tibbiyot va farmatsevtika xodimlarining malakasini baholash markazi (tmbm.ssv.uz) ochiq test bazasi. Norasmiy tayyorgarlik vositasi; rasmiy imtihon bilan bog'liq emas. Javoblar kaliti avtomatik aniqlangan, xatolik haqida xabar bering."
+- Not official, not endorsed. The site footer says all rights reserved; no permission was requested and the owner accepted the risk. **Contact / removal request: davlatsudekspert@gmail.com** (also shown in the app). Kill switches: `VITE_ATTESTATION_ENABLED=0` at build time (the question files are then not bundled) and `ATTESTATION_ENABLED=0` on the server (the app hides the section after asking `/api/attestation/status`).
+- Wording is not rewritten; only mechanical spelling fixes (typos, missing o'/g' marks, x/h, spacing) with the untouched text kept in `src`. The answer key (first option) is checked in `data/attestation/AUDIT.md`: questions with doubtful keys are `review: true` and never served; specialties whose key assumption fails are withheld.

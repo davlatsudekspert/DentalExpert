@@ -18,7 +18,7 @@ Reviewer: one AI model, one pass, from general knowledge, no textbook lookup. "A
 | yuzjag | 473 | 30 | 15 | 13 | 2 | 50% | 67% | 52-79% | **withheld** | 0 |
 | bolalar | 476 | 39 | 11 | 10 | 0 | 65% | 80% | 66-88% | **withheld** | 0 |
 | bolalar-yuzjag | 478 | 42 | 17 | 1 | 0 | 70% | 98% | 88-100% | **ok** | 450 |
-| bolalar-terapevtik | 486 | 36 | 16 | 7 | 1 | 60% | 82% | 68-90% | **beta** | 460 |
+| bolalar-terapevtik | 486 | 36 | 16 | 7 | 1 | 60% | 82% | 68-90% | **beta** | 457 |
 | bolalar-xirurgik | 478 | 41 | 17 | 1 | 1 | 68% | 95% | 84-99% | **ok** | 452 |
 | ortodontiya | 499 | 40 | 19 | 1 | 0 | 67% | 98% | 87-100% | **ok** | 458 |
 | implantologiya | 473 | 39 | 15 | 6 | 0 | 65% | 87% | 74-94% | **beta** | 449 |
@@ -30,18 +30,18 @@ Status rule: decidable agreement >= 95% `ok`, >= 80% `beta` (served with a visib
 
 Questions get `review: true` and a `why` list; the app never serves them. Counts of reasons per specialty (a question can have several):
 
-- **umumiy**: 500 of 500 marked `review`. audit-key-ambiguous 15, audit-key-wrong 27, cyrillic 2, specialty-withheld 500. Informational only (served): 53 negated stems, 33 with an all/none-of-the-above option.
-- **terapevtik**: 584 of 584 marked `review`. audit-key-ambiguous 10, audit-key-wrong 24, audit-text-corrupt 1, cyrillic 1, key-repeated-among-options 2, specialty-withheld 584. Informational only (served): 66 negated stems, 33 with an all/none-of-the-above option.
+- **umumiy**: 530 of 500 marked `review`. audit-key-ambiguous 15, audit-key-wrong 27, cyrillic 2, specialty-withheld 530. Informational only (served): 53 negated stems, 33 with an all/none-of-the-above option.
+- **terapevtik**: 639 of 584 marked `review`. audit-key-ambiguous 10, audit-key-wrong 24, audit-text-corrupt 1, cyrillic 1, excel-date 4, key-repeated-among-options 2, specialty-withheld 639. Informational only (served): 66 negated stems, 33 with an all/none-of-the-above option.
 - **ortopedik**: 28 of 520 marked `review`. audit-key-ambiguous 12, audit-key-wrong 1, cyrillic 13, key-repeated-among-options 2. Informational only (served): 7 negated stems, 16 with an all/none-of-the-above option.
 - **xirurgik**: 26 of 492 marked `review`. audit-key-ambiguous 12, audit-key-wrong 8, cyrillic 3, duplicate-of 2, excel-date 2, key-repeated-among-options 1. Informational only (served): 47 negated stems, 48 with an all/none-of-the-above option.
-- **yuzjag**: 473 of 473 marked `review`. audit-key-ambiguous 15, audit-key-wrong 13, audit-text-corrupt 2, cyrillic 3, excel-date 3, key-repeated-among-options 1, specialty-withheld 473. Informational only (served): 46 negated stems, 24 with an all/none-of-the-above option.
-- **bolalar**: 476 of 476 marked `review`. audit-key-ambiguous 11, audit-key-wrong 10, cyrillic 1, duplicate-of 3, glued-words 3, specialty-withheld 476. Informational only (served): 40 negated stems, 30 with an all/none-of-the-above option.
-- **bolalar-yuzjag**: 28 of 478 marked `review`. audit-key-ambiguous 17, audit-key-wrong 1, cyrillic 5, glued-words 3, key-repeated-among-options 3. Informational only (served): 36 negated stems, 24 with an all/none-of-the-above option.
-- **bolalar-terapevtik**: 26 of 486 marked `review`. audit-key-ambiguous 16, audit-key-wrong 7, audit-text-corrupt 1, cyrillic 1, key-repeated-among-options 1. Informational only (served): 21 negated stems, 8 with an all/none-of-the-above option.
-- **bolalar-xirurgik**: 26 of 478 marked `review`. audit-key-ambiguous 17, audit-key-wrong 1, audit-text-corrupt 1, cyrillic 2, glued-words 3, key-repeated-among-options 3. Informational only (served): 36 negated stems, 24 with an all/none-of-the-above option.
-- **ortodontiya**: 41 of 499 marked `review`. audit-key-ambiguous 19, audit-key-wrong 1, cyrillic 22, excel-date 20. Informational only (served): 5 negated stems, 0 with an all/none-of-the-above option.
-- **implantologiya**: 24 of 473 marked `review`. audit-key-ambiguous 15, audit-key-wrong 6, duplicate-of 2, key-repeated-among-options 1. Informational only (served): 61 negated stems, 30 with an all/none-of-the-above option.
-- **parodontologiya**: 438 of 438 marked `review`. audit-key-ambiguous 24, audit-key-wrong 31, cyrillic 1, glued-words 1, specialty-withheld 438. Informational only (served): 83 negated stems, 17 with an all/none-of-the-above option.
+- **yuzjag**: 530 of 473 marked `review`. audit-key-ambiguous 15, audit-key-wrong 13, audit-text-corrupt 2, cyrillic 3, excel-date 3, key-repeated-among-options 1, specialty-withheld 530. Informational only (served): 46 negated stems, 24 with an all/none-of-the-above option.
+- **bolalar**: 889 of 476 marked `review`. audit-key-ambiguous 11, audit-key-wrong 10, cyrillic 1, duplicate-of 3, glued-words 3, specialty-withheld 889. Informational only (served): 40 negated stems, 30 with an all/none-of-the-above option.
+- **bolalar-yuzjag**: 28 of 478 marked `review`. audit-key-ambiguous 17, audit-key-wrong 1, cyrillic 5, glued-words 3, key-repeated-among-options 3. Informational only (served): 36 negated stems, 25 with an all/none-of-the-above option.
+- **bolalar-terapevtik**: 29 of 486 marked `review`. audit-key-ambiguous 16, audit-key-wrong 7, audit-text-corrupt 1, cyrillic 1, excel-date 3, key-repeated-among-options 1. Informational only (served): 21 negated stems, 8 with an all/none-of-the-above option.
+- **bolalar-xirurgik**: 26 of 478 marked `review`. audit-key-ambiguous 17, audit-key-wrong 1, audit-text-corrupt 1, cyrillic 2, glued-words 3, key-repeated-among-options 3. Informational only (served): 36 negated stems, 25 with an all/none-of-the-above option.
+- **ortodontiya**: 43 of 499 marked `review`. audit-key-ambiguous 19, audit-key-wrong 1, cyrillic 22, excel-date 22. Informational only (served): 5 negated stems, 0 with an all/none-of-the-above option.
+- **implantologiya**: 24 of 473 marked `review`. audit-key-ambiguous 15, audit-key-wrong 6, duplicate-of 2, key-repeated-among-options 1. Informational only (served): 62 negated stems, 30 with an all/none-of-the-above option.
+- **parodontologiya**: 842 of 438 marked `review`. audit-key-ambiguous 24, audit-key-wrong 31, cyrillic 1, glued-words 1, specialty-withheld 842. Informational only (served): 83 negated stems, 17 with an all/none-of-the-above option.
 
 ## Flagged question ids from the sample
 

@@ -80,8 +80,13 @@ def fix_homoglyphs(s, stats):
     return s2
 
 
+LANG = 'uz'   # tools/tmbm_import_ru.py sets 'ru': Cyrillic text keeps its letters and apostrophes, only whitespace is normalised
+
+
 def normalise(s, stats):
     s = s.replace('\u00a0', ' ').replace('\u200b', '').replace('\u00ad', '').replace('\ufeff', '')
+    if LANG == 'ru':
+        return re.sub(r'\s+', ' ', s).strip()
     s = fix_homoglyphs(s, stats)
     # apostrophes: o'/g' (Uzbek o‘ g‘) -> U+2018 ; every other apostrophe (tutuq) -> U+2019
     s = re.sub("(?<=[oOgG])[%s]" % re.escape(APOS), chr(0), s)

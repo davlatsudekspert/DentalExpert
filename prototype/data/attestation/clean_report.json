@@ -1,0 +1,86 @@
+{
+ "perSpecialty": [
+  {
+   "id": "umumiy",
+   "questions": 530,
+   "changedQuestions": 60,
+   "fixes": 67
+  },
+  {
+   "id": "terapevtik",
+   "questions": 639,
+   "changedQuestions": 6,
+   "fixes": 6
+  },
+  {
+   "id": "ortopedik",
+   "questions": 664,
+   "changedQuestions": 3,
+   "fixes": 6
+  },
+  {
+   "id": "xirurgik",
+   "questions": 603,
+   "changedQuestions": 6,
+   "fixes": 8
+  },
+  {
+   "id": "yuzjag",
+   "questions": 530,
+   "changedQuestions": 2,
+   "fixes": 3
+  },
+  {
+   "id": "bolalar",
+   "questions": 889,
+   "changedQuestions": 172,
+   "fixes": 260
+  },
+  {
+   "id": "bolalar-yuzjag",
+   "questions": 915,
+   "changedQuestions": 114,
+   "fixes": 137
+  },
+  {
+   "id": "bolalar-terapevtik",
+   "questions": 545,
+   "changedQuestions": 15,
+   "fixes": 19
+  },
+  {
+   "id": "bolalar-xirurgik",
+   "questions": 905,
+   "changedQuestions": 115,
+   "fixes": 138
+  },
+  {
+   "id": "ortodontiya",
+   "questions": 621,
+   "changedQuestions": 74,
+   "fixes": 108
+  },
+  {
+   "id": "implantologiya",
+   "questions": 828,
+   "changedQuestions": 93,
+   "fixes": 130
+  },
+  {
+   "id": "parodontologiya",
+   "questions": 842,
+   "changedQuestions": 60,
+   "fixes": 82
+  }
+ ],
+ "byKind": {
+  "x-h": 302,
+  "typo": 320,
+  "ru-typo": 19,
+  "spacing-ru": 73,
+  "apostrophe": 196,
+  "spacing": 54
+ },
+ "distinctPairs": 378,
+ "autoApostropheWords": 73
+}

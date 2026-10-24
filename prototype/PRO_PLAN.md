@@ -67,3 +67,6 @@ Trial claims store only salted hashes (e-mail, device id, cookie, coarse network
 
 ## Tests
 `tools/pro_test.py` (trial, gates, webhook, admin grants), `tools/pro_trial_test.py` (one trial per person, role-bound plans, admin reset), `tools/pro_off_test.py` (flag off), `tools/pro_e2e.py` and `tools/pro_off_e2e.py` (paywall, 360x640 and 390x844, flag on/off). All run in `.github/workflows/checks.yml`.
+
+## Attestation prep (Attestatsiya tayyorgarligi) and the Free limit
+Free: 20 attestation questions per UTC day, counted **on the device** (`attestationLeft` / `takeAttestation` in `src/billing.ts`, limit `FREE.attestationPerDay` in `src/proConfig.ts`); a test is shortened to what is left. Pro (trial, paid, admin grant): unlimited. Flag off: unlimited. Why not the server counter `/api/billing/practice`: the question files ship with the app as static chunks, so a server count would not protect anything, and it would mix with the picture-practice allowance. Answer keys never travel through the API. When the allowance is used up the existing `practice` paywall opens. The section is hidden in English (uz and ru only).
