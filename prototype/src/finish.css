@@ -11,6 +11,7 @@
 .phone .hero .hero-tooth>.hero-render{display:block;width:100%;height:100%;object-fit:contain}
 .phone .hero .hero-copy{width:calc(100% - var(--art) - 4px);max-width:none}
 :root[data-theme] .phone .hero h1{text-wrap:balance;overflow-wrap:break-word;hyphens:manual;font-size:clamp(22px,6.6vw,29px)!important;line-height:1.06!important}
+:root[data-theme="color"] .phone .hero h1,:root[data-theme="dark"] .phone .hero h1{font-size:clamp(19px,5.5vw,24px)!important;line-height:1.1!important}
 .phone .hero p{text-wrap:pretty;max-width:none}
 .phone .home-screen .hero p,.phone .home-screen .hero h1{max-width:none}
 
@@ -49,8 +50,8 @@ html.native .anatomy-title{padding-top:0}
 :root .lg-hero-photo{aspect-ratio:16/7;height:auto}
 
 /* 8. Greeting: a long name wraps to a second line instead of being cut (flex + nowrap clipped it without an ellipsis). */
-:root .home-header h2{display:block;white-space:normal;overflow:visible;line-height:1.22;overflow-wrap:anywhere}
-:root .home-header h2 .wave{display:inline-block;margin-left:6px;vertical-align:baseline}
+:root .home-header h2{display:block;white-space:normal;overflow:visible;line-height:1.22;overflow-wrap:break-word}
+:root .home-header h2 .wave{display:inline;margin-left:6px;white-space:nowrap}
 
 /* 9. Dark theme leftovers: the exam subject list is a global white <select>. */
 :root[data-theme="dark"] .rv-root select{background-color:#111f2e;border-color:#22384b;color:#e8f1f4}
@@ -75,3 +76,5 @@ html.native .anatomy-title{padding-top:0}
 :root[data-theme="dark"] .rv-primary{background:linear-gradient(120deg,#12908d,#0f7471);color:#fff}
 :root[data-theme="color"] .pf{--pf-sub:#4a6671}
 :root[data-theme="color"] .admin-tabs button.on{background:#0f7471;border-color:#0f7471;color:#fff}
+/* 360 px phones: a long role word (Преподаватель) and a long name share the greeting row without breaking the name mid-word. */
+@media (max-width:380px){:root .home-header h2{font-size:17px!important}:root .home-header .role-chip{padding:5px 8px;font-size:10px;letter-spacing:.02em}:root .home-header{gap:9px}}

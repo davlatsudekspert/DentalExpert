@@ -77,7 +77,7 @@ for(const e of document.querySelectorAll(root+' *')){
  const own=[...e.childNodes].filter(n=>n.nodeType===3&&n.textContent.trim()).map(n=>n.textContent.trim()).join(' ');
  if(!own)continue;const r=e.getBoundingClientRect();if(r.width<4||r.height<4||r.bottom<0||r.top>innerHeight||r.right<0||r.left>innerWidth)continue;
  let op=1;for(let x=e;x;x=x.parentElement)op*=+getComputedStyle(x).opacity;if(op<.05)continue;
- const nv=document.querySelector('nav.bottom-nav');if(nv&&!e.closest('nav')){const q=nv.getBoundingClientRect();if(r.bottom>q.top&&r.top<q.bottom&&r.right>q.left&&r.left<q.right)continue}
+ const nv=document.querySelector('nav.bottom-nav');if(nv&&!e.closest('nav')&&[nv,...nv.querySelectorAll('*')].some(n=>{const q=n.getBoundingClientRect();return r.bottom>q.top&&r.top<q.bottom&&r.right>q.left&&r.left<q.right}))continue
  out.push({t:own.slice(0,30)+' ['+(typeof e.className==='string'?e.className:'')+']',c:s.color,fs:parseFloat(s.fontSize),fw:+s.fontWeight,op,x:r.left,y:r.top,w:r.width,h:r.height,dis:!!e.closest('[disabled],[aria-disabled=true]')})}
 return out}"""
 def _lum(c):
@@ -85,11 +85,13 @@ def _lum(c):
     return 0.2126*f(c[0])+0.7152*f(c[1])+0.0722*f(c[2])
 def _ratio(a,b):
     la,lb=_lum(a),_lum(b);return (max(la,lb)+0.05)/(min(la,lb)+0.05)
-def contrast(pg,root='main.phone'):
+def contrast(pg,root='main.phone',_depth=0):
     """WCAG AA (4.5:1, 3:1 for large text) of every visible text in `root`, sampled from a real screenshot. Returns {text: ratio} of failures."""
-    items=pg.evaluate(CONTRAST_JS,root);img=Image.open(io.BytesIO(pg.screenshot())).convert('RGB');bad={}
-    for it in items:
-        if it['dis']:continue
+    pg.wait_for_timeout(350)
+    items=pg.evaluate(CONTRAST_JS,root);img=Image.open(io.BytesIO(pg.screenshot())).convert('RGB');again=pg.evaluate(CONTRAST_JS,root);bad={}
+    if len(again)!=len(items) and _depth<3:return contrast(pg,root,_depth+1)   # the page was still moving (nav bar compacting, fade-in): sample again
+    for it,it2 in zip(items,again):
+        if it['dis'] or abs(it['y']-it2['y'])>1 or abs(it['x']-it2['x'])>1:continue   # moved while sampled: not a stable pixel read
         m=re.match(r'rgba?\((\d+), (\d+), (\d+)(?:, ([\d.]+))?\)',it['c'])
         if not m:continue
         fg=tuple(int(m.group(i)) for i in (1,2,3));a=float(m.group(4) or 1)*it['op']
