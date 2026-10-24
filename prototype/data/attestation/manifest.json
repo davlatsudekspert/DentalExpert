@@ -1,0 +1,461 @@
+{
+ "source": "Tibbiyot va farmatsevtika xodimlarining malakasini baholash markazi (tmbm.ssv.uz), \"TEST SINOVI SAVOLLARI\"",
+ "keyConvention": "source option 1 is the key (not marked in the PDFs); options shuffled per question, seeded by question id",
+ "generator": "tools/tmbm_import.py",
+ "retrieved": "2026-10-24",
+ "specialties": [
+  {
+   "id": "umumiy",
+   "name": "Umumiy stomatologiya",
+   "url": "https://tmbm.ssv.uz/uploads/category/files/78-umumij-stom-test-sajt-uzb-500.pdf",
+   "sha256": "a1f19cfd17b9db88574d610f110202ea160738052a4302b1deddd4d6d0122afe",
+   "retrieved": "2026-10-24",
+   "questions": 500,
+   "optionCounts": {
+    "4": 500
+   },
+   "homoglyphWordsRepaired": 15,
+   "flagCounts": {
+    "layout-merge": 20,
+    "script-merge": 7,
+    "cyrillic": 2,
+    "identical-options": 1
+   },
+   "warnings": [],
+   "status": "withheld",
+   "audit": {
+    "sampled": 60,
+    "ok": 18,
+    "ambiguous": 15,
+    "wrong": 27,
+    "corrupt": 0,
+    "agreementAll": 0.3,
+    "agreementDecidable": 0.4,
+    "wilson95": [
+     0.27,
+     0.545
+    ],
+    "sampleSeed": "audit:umumiy"
+   },
+   "review": 500,
+   "served": 0,
+   "negatedStems": 53,
+   "allNoneOptions": 33
+  },
+  {
+   "id": "terapevtik",
+   "name": "Terapevtik stomatologiya",
+   "url": "https://tmbm.ssv.uz/uploads/category/files/79-terap-stom-test-sajt-uzb-584.pdf",
+   "sha256": "3e796f661f35b5ecebe6a5373428e7a19c92952e86a82b7ba07cbe34c551560f",
+   "retrieved": "2026-10-24",
+   "questions": 584,
+   "optionCounts": {
+    "4": 584
+   },
+   "homoglyphWordsRepaired": 0,
+   "flagCounts": {
+    "layout-merge": 13,
+    "script-merge": 7,
+    "identical-options": 3,
+    "cyrillic": 1
+   },
+   "warnings": [],
+   "status": "withheld",
+   "audit": {
+    "sampled": 60,
+    "ok": 25,
+    "ambiguous": 10,
+    "wrong": 24,
+    "corrupt": 1,
+    "agreementAll": 0.417,
+    "agreementDecidable": 0.5,
+    "wilson95": [
+     0.366,
+     0.634
+    ],
+    "sampleSeed": "audit:terapevtik"
+   },
+   "review": 584,
+   "served": 0,
+   "negatedStems": 66,
+   "allNoneOptions": 33
+  },
+  {
+   "id": "ortopedik",
+   "name": "Ortopedik stomatologiya",
+   "url": "https://tmbm.ssv.uz/uploads/category/files/80-ortoped-stom-test-sajt-uzb-520.pdf",
+   "sha256": "56054012a53d1ead70bdcbda79368e4947d2e7a5d462eabc54a27f20c3214c34",
+   "retrieved": "2026-10-24",
+   "questions": 520,
+   "optionCounts": {
+    "4": 520
+   },
+   "homoglyphWordsRepaired": 15,
+   "flagCounts": {
+    "identical-options": 10,
+    "layout-merge": 1,
+    "cyrillic": 13
+   },
+   "warnings": [],
+   "status": "ok",
+   "audit": {
+    "sampled": 60,
+    "ok": 47,
+    "ambiguous": 12,
+    "wrong": 1,
+    "corrupt": 0,
+    "agreementAll": 0.783,
+    "agreementDecidable": 0.979,
+    "wilson95": [
+     0.891,
+     0.996
+    ],
+    "sampleSeed": "audit:ortopedik"
+   },
+   "review": 28,
+   "served": 492,
+   "negatedStems": 7,
+   "allNoneOptions": 16
+  },
+  {
+   "id": "xirurgik",
+   "name": "Xirurgik stomatologiya (og‘iz bo‘shlig‘i)",
+   "url": "https://tmbm.ssv.uz/uploads/category/files/81-hirurg-stom-test-sajt-uzb-492.pdf",
+   "sha256": "6afe36a38a2351d337834486f5a4a3a01b042c10201e9a63f55491dff9b45e7f",
+   "retrieved": "2026-10-24",
+   "questions": 492,
+   "optionCounts": {
+    "4": 492
+   },
+   "homoglyphWordsRepaired": 0,
+   "flagCounts": {
+    "layout-merge": 1,
+    "identical-options": 4,
+    "duplicate-of": 2,
+    "cyrillic": 3,
+    "excel-date": 2
+   },
+   "warnings": [],
+   "status": "beta",
+   "audit": {
+    "sampled": 60,
+    "ok": 40,
+    "ambiguous": 12,
+    "wrong": 8,
+    "corrupt": 0,
+    "agreementAll": 0.667,
+    "agreementDecidable": 0.833,
+    "wilson95": [
+     0.704,
+     0.913
+    ],
+    "sampleSeed": "audit:xirurgik"
+   },
+   "review": 26,
+   "served": 466,
+   "negatedStems": 47,
+   "allNoneOptions": 48
+  },
+  {
+   "id": "yuzjag",
+   "name": "Yuz-jag‘ xirurgiyasi",
+   "url": "https://tmbm.ssv.uz/uploads/category/files/82-uz-zag-hir-test-sajt-uzb-473.pdf",
+   "sha256": "742c78d8af6eec72ae3000e7f9b0ff6bb23b38e496186a397731c3ca6182abc2",
+   "retrieved": "2026-10-24",
+   "questions": 473,
+   "optionCounts": {
+    "4": 473
+   },
+   "homoglyphWordsRepaired": 0,
+   "flagCounts": {
+    "layout-merge": 1,
+    "identical-options": 2,
+    "excel-date": 3,
+    "cyrillic": 3
+   },
+   "warnings": [],
+   "status": "withheld",
+   "audit": {
+    "sampled": 60,
+    "ok": 30,
+    "ambiguous": 15,
+    "wrong": 13,
+    "corrupt": 2,
+    "agreementAll": 0.5,
+    "agreementDecidable": 0.667,
+    "wilson95": [
+     0.521,
+     0.786
+    ],
+    "sampleSeed": "audit:yuzjag"
+   },
+   "review": 473,
+   "served": 0,
+   "negatedStems": 46,
+   "allNoneOptions": 24
+  },
+  {
+   "id": "bolalar",
+   "name": "Bolalar stomatologiyasi",
+   "url": "https://tmbm.ssv.uz/uploads/category/files/83-bolalar-stom-test-sajt-uzb-453.pdf",
+   "sha256": "50f6933c723f7527879fe5bdb4cc8eb54b4bd19531d3ba6ea1132dd407683c48",
+   "retrieved": "2026-10-24",
+   "questions": 476,
+   "optionCounts": {
+    "4": 476
+   },
+   "homoglyphWordsRepaired": 144,
+   "flagCounts": {
+    "cyrillic": 1,
+    "glued-words": 3,
+    "duplicate-of": 3
+   },
+   "warnings": [],
+   "status": "withheld",
+   "audit": {
+    "sampled": 60,
+    "ok": 39,
+    "ambiguous": 11,
+    "wrong": 10,
+    "corrupt": 0,
+    "agreementAll": 0.65,
+    "agreementDecidable": 0.796,
+    "wilson95": [
+     0.664,
+     0.885
+    ],
+    "sampleSeed": "audit:bolalar"
+   },
+   "review": 476,
+   "served": 0,
+   "negatedStems": 40,
+   "allNoneOptions": 30
+  },
+  {
+   "id": "bolalar-yuzjag",
+   "name": "Bolalar yuz-jag‘ xirurgiyasi",
+   "url": "https://tmbm.ssv.uz/uploads/category/files/84-bol-uz-zag-hir-test-baza-uzb-463.pdf",
+   "sha256": "510cf4119bc1cbc6173137668d855dd39aa6486a75bbff508606b355dada1818",
+   "retrieved": "2026-10-24",
+   "questions": 478,
+   "optionCounts": {
+    "4": 478
+   },
+   "homoglyphWordsRepaired": 0,
+   "flagCounts": {
+    "cyrillic": 5,
+    "glued-words": 3,
+    "identical-options": 4
+   },
+   "warnings": [],
+   "status": "ok",
+   "audit": {
+    "sampled": 60,
+    "ok": 42,
+    "ambiguous": 17,
+    "wrong": 1,
+    "corrupt": 0,
+    "agreementAll": 0.7,
+    "agreementDecidable": 0.977,
+    "wilson95": [
+     0.879,
+     0.996
+    ],
+    "sampleSeed": "audit:bolalar-yuzjag"
+   },
+   "review": 28,
+   "served": 450,
+   "negatedStems": 36,
+   "allNoneOptions": 24
+  },
+  {
+   "id": "bolalar-terapevtik",
+   "name": "Bolalar terapevtik stomatologiyasi",
+   "url": "https://tmbm.ssv.uz/uploads/category/files/85-bol-ter-stom-test-sajt-uzb-486.pdf",
+   "sha256": "f1a1487243d6c8ab007b64a9a176b7c075bb55eac79996e69f452046a106f9c3",
+   "retrieved": "2026-10-24",
+   "questions": 486,
+   "optionCounts": {
+    "4": 486
+   },
+   "homoglyphWordsRepaired": 0,
+   "flagCounts": {
+    "layout-merge": 1,
+    "identical-options": 3,
+    "cyrillic": 1
+   },
+   "warnings": [],
+   "status": "beta",
+   "audit": {
+    "sampled": 60,
+    "ok": 36,
+    "ambiguous": 16,
+    "wrong": 7,
+    "corrupt": 1,
+    "agreementAll": 0.6,
+    "agreementDecidable": 0.818,
+    "wilson95": [
+     0.68,
+     0.905
+    ],
+    "sampleSeed": "audit:bolalar-terapevtik"
+   },
+   "review": 26,
+   "served": 460,
+   "negatedStems": 21,
+   "allNoneOptions": 8
+  },
+  {
+   "id": "bolalar-xirurgik",
+   "name": "Bolalar xirurgik stomatologiyasi",
+   "url": "https://tmbm.ssv.uz/uploads/category/files/86-bol-hir-stom-test-sajt-uzb-462.pdf",
+   "sha256": "c88aaf7498aa255965800fe9c5848253b370f18ba620d94c5a91c3c22002706c",
+   "retrieved": "2026-10-24",
+   "questions": 478,
+   "optionCounts": {
+    "4": 478
+   },
+   "homoglyphWordsRepaired": 0,
+   "flagCounts": {
+    "identical-options": 4,
+    "glued-words": 3,
+    "cyrillic": 2
+   },
+   "warnings": [],
+   "status": "ok",
+   "audit": {
+    "sampled": 60,
+    "ok": 41,
+    "ambiguous": 17,
+    "wrong": 1,
+    "corrupt": 1,
+    "agreementAll": 0.683,
+    "agreementDecidable": 0.953,
+    "wilson95": [
+     0.845,
+     0.987
+    ],
+    "sampleSeed": "audit:bolalar-xirurgik"
+   },
+   "review": 26,
+   "served": 452,
+   "negatedStems": 36,
+   "allNoneOptions": 24
+  },
+  {
+   "id": "ortodontiya",
+   "name": "Ortodontiya",
+   "url": "https://tmbm.ssv.uz/uploads/category/files/87-ortodontia-test-sajtga-uzb-499.pdf",
+   "sha256": "63791a2ed184fcce7c6c4e0dd3f458e98461739a8622a7995666d4d04af5bc56",
+   "retrieved": "2026-10-24",
+   "questions": 499,
+   "optionCounts": {
+    "4": 499
+   },
+   "homoglyphWordsRepaired": 2,
+   "flagCounts": {
+    "excel-date": 20,
+    "cyrillic": 22,
+    "layout-merge": 29
+   },
+   "warnings": [],
+   "status": "ok",
+   "audit": {
+    "sampled": 60,
+    "ok": 40,
+    "ambiguous": 19,
+    "wrong": 1,
+    "corrupt": 0,
+    "agreementAll": 0.667,
+    "agreementDecidable": 0.976,
+    "wilson95": [
+     0.874,
+     0.996
+    ],
+    "sampleSeed": "audit:ortodontiya"
+   },
+   "review": 41,
+   "served": 458,
+   "negatedStems": 5,
+   "allNoneOptions": 0
+  },
+  {
+   "id": "implantologiya",
+   "name": "Dental implantologiya",
+   "url": "https://tmbm.ssv.uz/uploads/category/files/88-dental-impl-test-sajt-uzb-452.pdf",
+   "sha256": "5d1686f0634958c40a8dcbe354cb259d26f8217da301be395baf4e24622fa41d",
+   "retrieved": "2026-10-24",
+   "questions": 473,
+   "optionCounts": {
+    "4": 473
+   },
+   "homoglyphWordsRepaired": 0,
+   "flagCounts": {
+    "duplicate-of": 2,
+    "identical-options": 1
+   },
+   "warnings": [],
+   "status": "beta",
+   "audit": {
+    "sampled": 60,
+    "ok": 39,
+    "ambiguous": 15,
+    "wrong": 6,
+    "corrupt": 0,
+    "agreementAll": 0.65,
+    "agreementDecidable": 0.867,
+    "wilson95": [
+     0.738,
+     0.937
+    ],
+    "sampleSeed": "audit:implantologiya"
+   },
+   "review": 24,
+   "served": 449,
+   "negatedStems": 61,
+   "allNoneOptions": 30
+  },
+  {
+   "id": "parodontologiya",
+   "name": "Parodontologiya",
+   "url": "https://tmbm.ssv.uz/uploads/category/files/89-paradontologia-test-sajt-uzb-386.pdf",
+   "sha256": "822ab4145b0b6b4fd03d4aa4a14fd00e54bb7f9de2e3da91f15711580fff138a",
+   "retrieved": "2026-10-24",
+   "questions": 438,
+   "optionCounts": {
+    "4": 438
+   },
+   "homoglyphWordsRepaired": 2,
+   "flagCounts": {
+    "glued-words": 1,
+    "cyrillic": 1
+   },
+   "warnings": [],
+   "status": "withheld",
+   "audit": {
+    "sampled": 60,
+    "ok": 5,
+    "ambiguous": 24,
+    "wrong": 31,
+    "corrupt": 0,
+    "agreementAll": 0.083,
+    "agreementDecidable": 0.139,
+    "wilson95": [
+     0.061,
+     0.287
+    ],
+    "sampleSeed": "audit:parodontologiya"
+   },
+   "review": 438,
+   "served": 0,
+   "negatedStems": 83,
+   "allNoneOptions": 17
+  }
+ ],
+ "total": 5897,
+ "auditThresholds": {
+  "ok": 0.95,
+  "beta": 0.8
+ },
+ "totalServed": 3227
+}

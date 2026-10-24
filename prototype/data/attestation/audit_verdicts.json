@@ -1,0 +1,15 @@
+{
+ "_note": "Hand judgement of the sampled questions (60 per specialty, sample drawn by tools/tmbm_audit.py, seed 'audit:<id>'). Numbers are the source question numbers (field n). wrong = the key (source option 1) is clearly not the right answer; ambiguous = I could not confirm the key from general dental knowledge, the stem is ill-formed or several options are defensible; corrupt = the question text is damaged (e.g. spreadsheet dates). Every sampled question not listed was judged to have a correct key. One reviewer (an AI model), one pass, no textbook lookup: treat as a screening audit, not as a clinical review.",
+ "umumiy": {"wrong":[8,15,66,89,110,118,138,147,155,175,252,319,324,391,402,417,424,431,432,433,435,459,464,467,472,473,476],"ambiguous":[6,10,25,58,82,124,135,179,183,318,328,395,416,434,466],"corrupt":[]},
+ "terapevtik": {"wrong":[18,60,88,102,124,142,207,255,292,309,320,357,363,368,372,392,405,406,407,422,447,538,572,581],"ambiguous":[54,78,192,261,352,442,445,544,559,561],"corrupt":[551]},
+ "ortopedik": {"wrong":[438],"ambiguous":[1,11,68,83,98,136,173,189,224,287,341,514],"corrupt":[]},
+ "xirurgik": {"wrong":[62,142,286,313,343,445,463,478],"ambiguous":[16,17,81,82,241,258,290,299,422,427,434,452],"corrupt":[]},
+ "yuzjag": {"wrong":[169,170,175,183,197,237,261,263,281,318,321,386,413],"ambiguous":[2,9,10,25,34,38,69,103,230,243,308,310,316,336,444],"corrupt":[207,208]},
+ "bolalar": {"wrong":[6,7,12,24,46,63,185,187,401,406],"ambiguous":[20,33,75,141,186,210,245,324,412,414,424],"corrupt":[]},
+ "bolalar-yuzjag": {"wrong":[389],"ambiguous":[14,44,88,107,112,175,195,242,254,258,263,270,296,317,342,348,436],"corrupt":[]},
+ "bolalar-terapevtik": {"wrong":[24,88,304,330,381,425,434],"ambiguous":[82,92,166,171,203,249,313,316,322,323,338,341,379,380,393,430],"corrupt":[413]},
+ "bolalar-xirurgik": {"wrong":[17],"ambiguous":[19,35,51,64,70,107,123,174,254,270,284,333,344,397,401,404,409],"corrupt":[444]},
+ "ortodontiya": {"wrong":[182],"ambiguous":[111,112,166,203,227,235,258,287,291,294,320,330,339,355,407,418,466,481,486],"corrupt":[]},
+ "implantologiya": {"wrong":[33,134,242,250,251,255],"ambiguous":[112,115,119,142,159,160,182,321,330,336,350,396,409,431,451],"corrupt":[]},
+ "parodontologiya": {"wrong":[1,9,31,35,38,58,82,108,121,130,131,144,147,157,159,179,214,226,232,233,242,267,290,306,337,365,367,394,398,434,438],"ambiguous":[18,25,48,49,50,52,78,100,126,148,167,168,188,236,257,274,351,361,362,387,409,411,414,421],"corrupt":[]}
+}
