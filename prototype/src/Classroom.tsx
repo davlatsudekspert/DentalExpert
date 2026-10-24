@@ -32,7 +32,7 @@ const joinErr={
  en:{taken:'That name is taken in this group — try another.',rude:'That name can’t be used — choose another one.',full:'The group is full (200 students). Tell your teacher.',ambiguous:'Codes never contain 0, O, 1 or I — check your teacher’s code again.',own:'This is your own group — you teach it.',signin:'Your session has expired — sign in again.',network:'No internet connection. Check it and try again.'}
 };
 const words={
- uz:{student:'Talaba',nick:'Taxallus (ixtiyoriy)',nickPh:'Masalan: Lola',nickHint:'Ustoz sizni shu nom yoki raqam bilan ko‘radi',close:'Yopish',reopen:'Qayta ochish',closedLbl:'Yopilgan',errClosed:'Topshiriq yopilgan.',errDone:'Siz bu testni allaqachon topshirgansiz.',errStarted:'Bu test allaqachon boshlangan va qayta boshlab bo‘lmaydi.',errDue:'Topshirish muddati o‘tgan.',errRate:'Juda ko‘p urinish. Keyinroq qayta urinib ko‘ring.',errNick:'Taxallus 2–24 belgi: harf, raqam, bo‘sh joy.',errNickTaken:'“Talaba N” ko‘rinishidagi nom band — boshqa nom tanlang.',title:'Guruhlar va darslar',signIn:'Guruhlar uchun email orqali kiring.',signInBtn:'Kirish',offline:'Guruhlar hozir mavjud emas (internet yoki server).',
+ uz:{student:'Talaba',nick:'Taxallus (ixtiyoriy)',nickPh:'Masalan: Lola',nickHint:'Ustoz sizni shu nom yoki raqam bilan ko‘radi',close:'Yopish',reopen:'Qayta ochish',closedLbl:'Yopilgan',errClosed:'Topshiriq yopilgan.',errDone:'Siz bu testni allaqachon topshirgansiz.',errStarted:'Bu test allaqachon boshlangan va qayta boshlab bo‘lmaydi.',errDue:'Topshirish muddati o‘tgan.',errRate:'Juda ko‘p urinish. Keyinroq qayta urinib ko‘ring.',errNick:'Taxallus 2–24 belgi: harf, raqam, bo‘sh joy.',errNickTaken:'“Talaba N” ko‘rinishidagi nom band — boshqa nom tanlang.',title:'Guruhlar va darslar',signIn:'Guruhlar uchun email orqali kiring.',signInBtn:'Kirish',offline:'Guruhlar hozir mavjud emas (internet yoki server).',retry:'Qayta urinib ko‘rish',
   newGroup:'Yangi guruh',groupName:'Guruh nomi',groupHint:'Masalan: Terapiya 3-kurs',create:'Yaratish',code:'Qo‘shilish kodi',members:'talaba',copy:'Kodni nusxalash',copyInvite:'Taklif matnini nusxalash',copied:'Nusxalandi',noGroups:'Hali guruh yo‘q.',
   back:'Guruhlar',assignments:'Topshiriqlar',noAssign:'Hali topshiriq yo‘q.',add:'Topshiriq berish',kind:'Turi',task:'Matnli javob',quiz:'Test (taqdimot testi)',titleF:'Sarlavha',bodyF:'Izoh (ixtiyoriy)',due:'Muddat',deck:'Taqdimot',
   submitted:'topshirdi',delete:'O‘chirish',confirmDel:'Topshiriq o‘chirilsin?',roster:'Talabalar',notYet:'Topshirmagan',
@@ -49,7 +49,7 @@ const words={
   of:'dan',avg:'O‘rtacha',perQ:'Savollar bo‘yicha',qN:(n:number)=>`${n}-savol`,qCount:(n:number)=>`${n} ta savol`,rightN:(r:number,n:number)=>`${r}/${n} to‘g‘ri`,inviteToGrade:'Baholash uchun talabalarni guruhga taklif qiling.',cancel:'Bekor qilish',great:'A’lo natija!',good:'Yaxshi natija',more:'Mavzuni yana takrorlang',scoreLine:(s:number,n:number)=>`${n} ta savoldan ${s} tasiga to‘g‘ri javob berdingiz`,noMembers:'Hali talaba yo‘q.',alias:'Shaxsiy belgi (faqat sizga ko‘rinadi)',
   myResults:'Mening natijalarim',quizzesDone:'test topshirildi',topics:'Mavzular',noTopics:'Ustoz hali mavzu ochmagan.',watch:'Taqdimotni ko‘rish',prepare:'Tayyorlanish uchun savollar',
   testOpen:'Test ochiq',timeLimit:'daqiqa',testWait:'Ustoz testni boshlaganda shu yerda paydo bo‘ladi.',reviewLater:'To‘g‘ri javoblar ustoz testni yakunlagach ko‘rinadi.',yourAns:'Sizning javobingiz',right:'To‘g‘ri javob',noAnswer:'Javob berilmagan',timeUp:'Vaqt tugadi.',goals:'Dars maqsadlari',pick:'Fan tanlang'},
- ru:{student:'Студент',nick:'Псевдоним (необязательно)',nickPh:'Например: Лола',nickHint:'Преподаватель увидит вас под этим именем или номером',close:'Закрыть приём',reopen:'Открыть снова',closedLbl:'Закрыто',errClosed:'Задание закрыто.',errDone:'Вы уже сдали этот тест.',errStarted:'Этот тест уже начат, начать заново нельзя.',errDue:'Срок сдачи истёк.',errRate:'Слишком много попыток. Попробуйте позже.',errNick:'Псевдоним 2–24 символа: буквы, цифры, пробел.',errNickTaken:'Имя вида «Студент N» занято — выберите другое.',title:'Группы и занятия',signIn:'Войдите по email, чтобы пользоваться группами.',signInBtn:'Войти',offline:'Группы сейчас недоступны (интернет или сервер).',
+ ru:{student:'Студент',nick:'Псевдоним (необязательно)',nickPh:'Например: Лола',nickHint:'Преподаватель увидит вас под этим именем или номером',close:'Закрыть приём',reopen:'Открыть снова',closedLbl:'Закрыто',errClosed:'Задание закрыто.',errDone:'Вы уже сдали этот тест.',errStarted:'Этот тест уже начат, начать заново нельзя.',errDue:'Срок сдачи истёк.',errRate:'Слишком много попыток. Попробуйте позже.',errNick:'Псевдоним 2–24 символа: буквы, цифры, пробел.',errNickTaken:'Имя вида «Студент N» занято — выберите другое.',title:'Группы и занятия',signIn:'Войдите по email, чтобы пользоваться группами.',signInBtn:'Войти',offline:'Группы сейчас недоступны (интернет или сервер).',retry:'Повторить',
   newGroup:'Новая группа',groupName:'Название группы',groupHint:'Например: Терапия, 3 курс',create:'Создать',code:'Код для вступления',members:'студ.',copy:'Копировать код',copyInvite:'Копировать приглашение',copied:'Скопировано',noGroups:'Групп пока нет.',
   back:'Группы',assignments:'Задания',noAssign:'Заданий пока нет.',add:'Дать задание',kind:'Тип',task:'Текстовый ответ',quiz:'Тест (по презентации)',titleF:'Заголовок',bodyF:'Описание (необязательно)',due:'Срок',deck:'Презентация',
   submitted:'сдали',delete:'Удалить',confirmDel:'Удалить задание?',roster:'Студенты',notYet:'Не сдано',
@@ -66,7 +66,7 @@ const words={
   of:'из',avg:'Средний',perQ:'По вопросам',qN:(n:number)=>`Вопрос ${n}`,qCount:(n:number)=>`${n} ${ruPlural(n,'вопрос','вопроса','вопросов')}`,rightN:(r:number,n:number)=>`${r}/${n} верно`,inviteToGrade:'Чтобы оценивать, пригласите студентов в группу.',cancel:'Отмена',great:'Отличный результат!',good:'Хороший результат',more:'Стоит повторить тему',scoreLine:(s:number,n:number)=>`Верных ответов: ${s} из ${n}`,noMembers:'Студентов пока нет.',alias:'Личная метка (видна только вам)',
   myResults:'Мои результаты',quizzesDone:'тестов сдано',topics:'Темы',noTopics:'Преподаватель ещё не открыл темы.',watch:'Смотреть презентацию',prepare:'Вопросы для подготовки',
   testOpen:'Тест открыт',timeLimit:'мин',testWait:'Появится здесь, когда преподаватель начнёт тест.',reviewLater:'Верные ответы появятся после завершения теста преподавателем.',yourAns:'Ваш ответ',right:'Верный ответ',noAnswer:'Нет ответа',timeUp:'Время вышло.',goals:'Цели занятия',pick:'Выберите предмет'},
- en:{student:'Student',nick:'Nickname (optional)',nickPh:'e.g. Lola',nickHint:'Your teacher sees you by this name or number',close:'Close submissions',reopen:'Reopen',closedLbl:'Closed',errClosed:'This assignment is closed.',errDone:'You have already submitted this quiz.',errStarted:'This quiz was already started and cannot be restarted.',errDue:'The due date has passed.',errRate:'Too many attempts. Try again later.',errNick:'Nickname: 2–24 letters, digits or spaces.',errNickTaken:'Names like “Student N” are reserved — choose another one.',title:'Groups and classes',signIn:'Sign in with your email to use groups.',signInBtn:'Sign in',offline:'Groups are unavailable right now (network or server).',
+ en:{student:'Student',nick:'Nickname (optional)',nickPh:'e.g. Lola',nickHint:'Your teacher sees you by this name or number',close:'Close submissions',reopen:'Reopen',closedLbl:'Closed',errClosed:'This assignment is closed.',errDone:'You have already submitted this quiz.',errStarted:'This quiz was already started and cannot be restarted.',errDue:'The due date has passed.',errRate:'Too many attempts. Try again later.',errNick:'Nickname: 2–24 letters, digits or spaces.',errNickTaken:'Names like “Student N” are reserved — choose another one.',title:'Groups and classes',signIn:'Sign in with your email to use groups.',signInBtn:'Sign in',offline:'Groups are unavailable right now (network or server).',retry:'Retry',
   newGroup:'New group',groupName:'Group name',groupHint:'For example: Therapy, year 3',create:'Create',code:'Join code',members:'students',copy:'Copy code',copyInvite:'Copy invitation',copied:'Copied',noGroups:'No groups yet.',
   back:'Groups',assignments:'Assignments',noAssign:'No assignments yet.',add:'Give an assignment',kind:'Type',task:'Written answer',quiz:'Quiz (from a presentation)',titleF:'Title',bodyF:'Notes (optional)',due:'Due date',deck:'Presentation',
   submitted:'submitted',delete:'Delete',confirmDel:'Delete this assignment?',roster:'Students',notYet:'Not submitted',
@@ -115,8 +115,8 @@ export default function Classroom({lang,user,onSignIn}:{lang:Lang;user:AuthUser|
  const errText=(e?:string)=>e==='rate_limited'?t.errRate:e==='bad_nickname'?t.errNick:e==='reserved_nickname'?t.errNickTaken:e==='name_required'?t.errName:e==='not_found'||e==='bad_code'?t.errCode:e==='ambiguous_code'?j.ambiguous:e==='own_group'?j.own:e==='unauthorized'?j.signin:e==='network'?j.network:e==='teacher_only'?t.errTeacher:e==='nick_taken'?j.taken:e==='nickname_rejected'?j.rude:e==='group_full'?j.full:t.errGeneric;
  const load=useCallback(async()=>{
   const r=await callApi<{groups:Group[]}>('/classroom/groups');
-  if(r.status===0||r.status===404){setOffline(true);return}
-  if(r.ok){setOffline(false);setGroups(r.data.groups)}
+  if(r.ok){setOffline(false);setGroups(r.data.groups);return}
+  if(r.status!==401)setOffline(true);// a 5xx or 429 must not leave the list on '…'
  },[]);
  useEffect(()=>{if(user)load();else setGroups(null)},[user,load]);
  // A join through the QR sheet (an overlay at the app root) reloads the list.
@@ -124,7 +124,7 @@ export default function Classroom({lang,user,onSignIn}:{lang:Lang;user:AuthUser|
  // A teacher with one group goes straight to the topic; with several the list asks which group.
  useEffect(()=>{if(assign&&groups?.length===1)setOpen(groups[0])},[assign,groups]);
  if(!user)return <section className="classroom card"><h2>{t.title}</h2><p className="muted">{t.signIn}</p><button className="button" onClick={onSignIn}><LogIn size={17}/>{t.signInBtn}</button></section>;
- if(offline)return <section className="classroom card"><h2>{t.title}</h2><p className="muted">{t.offline}</p></section>;
+ if(offline)return <section className="classroom card"><h2>{t.title}</h2><p className="muted">{t.offline}</p><button className="button secondary" onClick={()=>void load()}>{t.retry}</button></section>;
  if(open)return <GroupView lang={lang} group={open} teacher={teacher} user={user} initialTopic={assign} onBack={()=>{setOpen(null);setAssign(null);load()}}/>;
  const create=async()=>{setMsg('');const r=await callApi('/classroom/groups','POST',{name});if(r.ok){setName('');load()}else setMsg(errText(r.data.error))};
  const join=async()=>{setMsg('');const c=nick.trim()?checkNick(nick):null;if(c&&!c.ok){setMsg(errText(c.error));return}const r=await callApi('/classroom/join','POST',{code,nickname:c?.nick||''});if(r.ok){setCode('');load()}else setMsg(errText(r.status===0?'network':r.data.error))};
@@ -147,6 +147,7 @@ function GroupView({lang,group,teacher,user,initialTopic,onBack}:{lang:Lang;grou
  const t=words[lang];
  const [tab,setTab]=useState<'plan'|'work'|'book'|'people'>('plan');
  const [items,setItems]=useState<Assignment[]|null>(null);
+ const [failed,setFailed]=useState(false);
  const [topics,setTopics]=useState<TopicRow[]|null>(null);
  const [book,setBook]=useState<Book|null>(null);
  const [decks,setDecks]=useState<Deck[]>([]);
@@ -157,8 +158,9 @@ function GroupView({lang,group,teacher,user,initialTopic,onBack}:{lang:Lang;grou
  const [general,setGeneral]=useState(false);
  const load=useCallback(async()=>{
   const [a,tp]=await Promise.all([callApi<{assignments:Assignment[]}>('/classroom/assignments?groupId='+group.id),callApi<{topics:TopicRow[]}>('/classroom/topics?groupId='+group.id)]);
-  if(a.ok)setItems(a.data.assignments);
-  if(tp.ok)setTopics(tp.data.topics);
+  setFailed(!a.ok||!tp.ok);
+  if(a.ok)setItems(a.data.assignments);else setItems(prev=>prev??[]);
+  if(tp.ok)setTopics(tp.data.topics);else setTopics(prev=>prev??[]);
   if(teacher){const b=await callApi<Book>('/classroom/gradebook?groupId='+group.id);if(b.ok)setBook(b.data)}
  },[group.id,teacher]);
  useEffect(()=>{load()},[load]);
@@ -183,6 +185,7 @@ function GroupView({lang,group,teacher,user,initialTopic,onBack}:{lang:Lang;grou
  useEffect(()=>{if(first.current){first.current=false;return}toTop(top.current)},[sel,topicId,general]);
  return <section className="classroom card lg-group" ref={top}>
   <button className="cr-back" onClick={backTo}><ChevronLeft size={16}/>{backLabel}</button>
+  {failed&&<p className="cr-error" role="alert">{t.offline} <button className="cr-retry" onClick={()=>void load()}>{t.retry}</button></p>}
   {sel?<AssignmentView lang={lang} groupId={group.id} code={group.code||''} user={user} a={items?.find(x=>x.id===sel.id)||sel} teacher={teacher} roster={roster} decks={decks} members={book?.members||[]} onChanged={load} onDeleted={()=>{setSel(null);load()}}/>
   :topicId?(teacher?<TeacherTopic lang={lang} groupId={group.id} code={group.code||''} user={user} topicId={topicId} row={row} topics={topics} test={items?.find(a=>a.id===row?.testId)||null} members={book?.members||[]} onChanged={load}/>
    :<StudentTopic lang={lang} user={user} topicId={topicId} test={items?.find(a=>a.id===row?.testId)||null} onChanged={load}/>)
