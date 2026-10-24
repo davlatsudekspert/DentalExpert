@@ -46,6 +46,8 @@ with sync_playwright() as p:
     while sp.locator('.quiz-run-options').count():
         sp.locator('.quiz-run-options button').first.click();sp.get_by_role('button',name='Next' if sp.get_by_role('button',name='Next').count() else 'Submit').click();sp.wait_for_timeout(200);n+=1
         if n>10:break
+    try:sp.wait_for_selector('.quiz-run-result',timeout=10000)
+    except Exception:pass
     check('quiz finished with result',sp.locator('.quiz-run-result').count()==1)
     sp.screenshot(path=OUT+'/c3-student-quiz-result.png')
     sp.get_by_role('button',name='Close').last.click();sp.wait_for_timeout(800)
