@@ -73,3 +73,5 @@ html.native .anatomy-title{padding-top:0}
 :root[data-theme="color"] .daily-text small{color:#4f6a74}
 :root[data-theme="color"] .ex-subject>span,:root[data-theme="color"] .ex-label{color:#3f5b66}
 :root[data-theme="dark"] .rv-primary{background:linear-gradient(120deg,#12908d,#0f7471);color:#fff}
+:root[data-theme="color"] .pf{--pf-sub:#4a6671}
+:root[data-theme="color"] .admin-tabs button.on{background:#0f7471;border-color:#0f7471;color:#fff}
