@@ -1,0 +1,11 @@
+/* Real photographs (bundled, credited in public/credits.json). */
+.cr-credits{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.cr-credits li{display:flex;gap:12px;padding:10px;align-items:flex-start}
+.cr-credits img{flex:none;width:96px;height:72px;object-fit:cover;border-radius:10px;background:#e9edf0}
+.cr-credits div{min-width:0;display:flex;flex-direction:column;gap:2px;font-size:13px}
+.cr-credits small{font-size:12px;color:var(--lg-sub,#5b6b78);overflow-wrap:anywhere}
+.cr-credits a{color:inherit;text-decoration:underline}
+.ph{display:block;width:100%;height:auto;object-fit:cover;background:#e9edf0}
+.lg-hero.has-photo{flex-wrap:wrap}
+.lg-hero-photo{order:-1;flex:0 0 100%;width:100%;height:auto;aspect-ratio:16/7;object-fit:cover;border-radius:16px;background:#e9edf0}
+@media (min-width:700px){.lg-hero-photo{aspect-ratio:16/5}}

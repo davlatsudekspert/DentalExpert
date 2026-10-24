@@ -1,4 +1,4 @@
-import {useEffect,useState} from 'react';
+import {lazy,Suspense,useEffect,useState} from 'react';
 import {BadgeCheck,BookOpen,Check,ChevronRight,Clock,EyeOff,ExternalLink,GraduationCap,HeartPulse,Info,LifeBuoy,LogOut,MessageSquareWarning,ShieldCheck,Stethoscope,Trash2,UserCog,UserRound,Users} from 'lucide-react';
 import {callApi,type AuthUser} from './api';
 import {progressSummary} from './Achievements';
@@ -7,6 +7,8 @@ import {EDU} from './edition';
 import {LANG_LABEL,LANG_ORDER} from './i18n';
 import type {Lang} from './discoveryData';
 import LogoMark from './LogoMark';
+const Credits=lazy(()=>import('./Credits'));
+const creditsLabel={uz:'Rasm manbalari',ru:'Источники изображений',en:'Image credits'};
 import './profile.css';
 
 type Role=AuthUser['role'];
@@ -42,6 +44,7 @@ export default function ProfilePanel({lang,user,role,name,initials,photo,theme,s
  onEdit:()=>void;onAdmin:()=>void;onPrivacy:()=>void;onReport:()=>void;onDemoOut:()=>void;onSignOut:()=>void;onDelete:()=>void;onRole:(r:Role)=>Promise<string>}){
  const t=w[lang],signed=!!user&&!user.guest;
  const [open,setOpen]=useState(false),[pick,setPick]=useState<Role|null>(null),[busy,setBusy]=useState(false),[err,setErr]=useState('');
+ const [credits,setCredits]=useState(false);
  const [grp,setGrp]=useState<{n:number;s:number}|null>(null);
  const teaching=signed&&role==='teacher';
  // A teacher's groups and students come from the classroom API (the same list as the home screen); nothing is shown until it answers.
@@ -88,6 +91,7 @@ export default function ProfilePanel({lang,user,role,name,initials,photo,theme,s
    {row(ShieldCheck,privacyLabel,onPrivacy)}
    {row(LifeBuoy,t.contact,()=>window.open('https://dental-expert.pages.dev/contact/#'+lang,'_blank','noopener'),{ext:true,sub:t.contactSub,cls:'pf-contact'})}
    {row(MessageSquareWarning,t.report,onReport,{cls:'pf-report'})}
+   {row(Info,creditsLabel[lang],()=>setCredits(true),{cls:'pf-credits'})}
    {!authEnabled&&row(LogOut,t.demoOut,onDemoOut)}
   </div>
   {group(t.about)}
@@ -96,5 +100,6 @@ export default function ProfilePanel({lang,user,role,name,initials,photo,theme,s
    {row(LogOut,t.out,onSignOut,{cls:'pf-out'})}
    {row(Trash2,t.del,onDelete,{danger:true,sub:t.delSub,cls:'pf-del'})}
   </div></>}
+ {credits&&<Suspense fallback={null}><Credits lang={lang} onClose={()=>setCredits(false)}/></Suspense>}
  </div>;
 }
