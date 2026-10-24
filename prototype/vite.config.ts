@@ -6,5 +6,6 @@ const offline=process.env.OFFLINE==='1';
 
 export default defineConfig({
   assetsInclude: ['**/*.glb', '**/*.pptx'],
-  build: {assetsInlineLimit: offline ? 8 * 1024 * 1024 : 4096},
+  // The single-file demo cannot fetch lazy chunks, so the offline build folds them into the entry script.
+  build: {assetsInlineLimit: offline ? 8 * 1024 * 1024 : 4096,rollupOptions:{output:{inlineDynamicImports:offline}}},
 });

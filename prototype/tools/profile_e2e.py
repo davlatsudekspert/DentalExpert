@@ -64,7 +64,7 @@ with sync_playwright() as p:
     check('switched to student: student home',ctx.request.get(BASE+'/api/auth/me').json()['user']['role']=='student')
     pg.screenshot(path=OUT+'/p6-student-home.png')
     pg.locator('.bottom-nav button[aria-label="Profil"]').click();pg.wait_for_selector('.pf-card');pg.wait_for_timeout(500)
-    check('Profil says Talaba at once, with level / XP / streak',pg.locator('.pf-chip').first.inner_text()=='Talaba' and pg.locator('.pf-stats small').all_inner_texts()==['Daraja','XP','Kun ketma-ket'])
+    check('Profil says Talaba at once, with level / XP / streak',pg.locator('.pf-chip').first.inner_text()=='Talaba' and pg.locator('.pf-stats small').all_inner_texts()==['Daraja','XP','Kun ketma\u2011ket'])
     pg.locator('.pf-rolehead').click();pg.locator('.pf-roles button',has_text='Stomatolog').click();pg.get_by_role('button',name='Rolni almashtirish').click()
     pg.wait_for_selector('.home-header',timeout=10000);pg.wait_for_timeout(400)
     check('back to dentist: dentist home, not listed again until requested',ctx.request.get(BASE+'/api/auth/me').json()['user']['role']=='dentist' and ctx.request.get(BASE+'/api/auth/me').json()['user']['publishRequested'] is False)
