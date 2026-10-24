@@ -416,3 +416,6 @@ button.cr-back{min-height:44px;padding:10px 14px 10px 0;margin:-6px 0}
 .lg-search svg{flex:none}
 .lg-choose .button{align-self:stretch;width:100%;max-width:none}
 .lg-confirm .lg-choose .button{width:100%!important;align-self:stretch!important}
+/* Slide cover with a real photograph: banner above the title on narrow or short screens, picture on the right when there is room. */
+.sl-cover-photo{display:block;width:100%;height:clamp(110px,28vh,240px);object-fit:cover;border-radius:16px;box-shadow:0 6px 20px #0a1c2a26;background:#e9edf0}
+@media (min-width:820px) and (min-height:560px){.sl-cover.has-photo .sl-cover-photo{position:absolute;right:0;top:50%;transform:translateY(-50%);width:42%;height:auto;max-height:100%;aspect-ratio:4/3}.sl-cover.has-photo h1{max-width:54%}.sl-cover.has-photo p{max-width:52%}}

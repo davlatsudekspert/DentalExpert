@@ -7,6 +7,8 @@ import front from '../assets/tooth3d/turntable-front.webp';
 import occlusal from '../assets/tooth3d/archive-occlusal.webp';
 import {tx,type Anchor,type L,type Slide} from './curriculumData';
 import type {Lang} from './discoveryData';
+import {SUBJECT_PHOTO,photoInfo,photoUrl,photoAlt} from './photos';
+import './photos.css';
 
 const IMAGES={cutaway,front,occlusal};
 // Marker positions (percent of the square picture) — the validator in tools/curriculum.py lists the same names.
@@ -22,7 +24,7 @@ const words={
 };
 
 /** Full-screen lecture player for curriculum topics. Diagrams are drawn natively so every language stays sharp. */
-export default function Slides({title,eyebrow,slides:topicSlides,sources,lang,teacher=false,accent,start=0,onProgress,onClose,onFinished}:{title:string;eyebrow?:string;slides:Slide[];sources?:string[];lang:Lang;teacher?:boolean;accent?:string;start?:number;onProgress?:(i:number)=>void;onClose:()=>void;onFinished?:()=>void}){
+export default function Slides({title,eyebrow,slides:topicSlides,sources,lang,teacher=false,accent,subject,start=0,onProgress,onClose,onFinished}:{title:string;eyebrow?:string;slides:Slide[];sources?:string[];lang:Lang;teacher?:boolean;accent?:string;subject?:string;start?:number;onProgress?:(i:number)=>void;onClose:()=>void;onFinished?:()=>void}){
  // The deck always ends with the topic's references, so the sources are on screen when the lecture is shown.
  const slides:Slide[]=sources?.length?[...topicSlides,{layout:'refs'} as unknown as Slide]:topicSlides;
  const t=words[lang];
@@ -59,7 +61,7 @@ export default function Slides({title,eyebrow,slides:topicSlides,sources,lang,te
   <div className="sl-bar"><span><small>{eyebrow}</small><strong>{title}</strong></span><b>{i+1} / {slides.length}</b><button className="sl-present" onClick={()=>void present(!presenting)} aria-pressed={presenting} aria-label={t.present} title={t.present}><MonitorUp size={19}/></button><button onClick={()=>{if(presenting)void present(false);onClose()}} aria-label={t.close}><X size={20}/></button></div>
   <div className="sl-progress"><i style={{width:`${((i+1)/slides.length)*100}%`}}/></div>
   <div className="sl-stage" onTouchStart={e=>{touch.current=axis(e.touches[0])}} onTouchEnd={e=>{if(touch.current===null)return;const dx=axis(e.changedTouches[0])-touch.current;touch.current=null;if(Math.abs(dx)>50)go(dx<0?1:-1)}}>
-   <article key={i} className={'sl-slide sl-l-'+s.layout} aria-roledescription={t.slide}>{(s.layout as string)==='refs'?<><h2 className="sl-title">{t.refs}</h2><ol className="sl-refs" lang="en" translate="no">{sources!.map((x,k)=><li key={k}>{x}</li>)}</ol></>:<SlideBody s={s} lang={lang} eyebrow={eyebrow}/>}</article>
+   <article key={i} className={'sl-slide sl-l-'+s.layout} aria-roledescription={t.slide}>{(s.layout as string)==='refs'?<><h2 className="sl-title">{t.refs}</h2><ol className="sl-refs" lang="en" translate="no">{sources!.map((x,k)=><li key={k}>{x}</li>)}</ol></>:<SlideBody s={s} lang={lang} eyebrow={eyebrow} subject={subject}/>}</article>
   </div>
   {notes&&s.note&&<p className="sl-note"><MessageSquareText size={15}/>{tx(s.note,lang)}</p>}
   <div className="sl-nav">
@@ -70,11 +72,15 @@ export default function Slides({title,eyebrow,slides:topicSlides,sources,lang,te
  </div>;
 }
 
-function SlideBody({s,lang,eyebrow}:{s:Slide;lang:Lang;eyebrow?:string}){
+function SlideBody({s,lang,eyebrow,subject}:{s:Slide;lang:Lang;eyebrow?:string;subject?:string}){
  const T=(v?:L)=>tx(v,lang);
  const head=<h2 className="sl-title">{T(s.title)}</h2>;
  switch(s.layout){
-  case 'title':return <div className="sl-cover"><span className="sl-eyebrow">{eyebrow}</span><h1>{T(s.title)}</h1>{s.subtitle&&<p>{T(s.subtitle)}</p>}<i className="sl-cover-mark" style={{['--sl-cover' as string]:`url(${cutaway})`}} aria-hidden/></div>;
+  case 'title':{
+   // A real, credited photograph for the subject when there is a matching one; otherwise the drawn cutaway.
+   const ph=subject?SUBJECT_PHOTO[subject]:undefined,pi=ph?photoInfo(ph):undefined;
+   return <div className={'sl-cover'+(pi?' has-photo':'')}>{pi&&<img className="sl-cover-photo" src={photoUrl(ph!)} alt={photoAlt(ph!,lang)} width={pi.width} height={pi.height} decoding="async"/>}<span className="sl-eyebrow">{eyebrow}</span><h1>{T(s.title)}</h1>{s.subtitle&&<p>{T(s.subtitle)}</p>}{!pi&&<i className="sl-cover-mark" style={{['--sl-cover' as string]:`url(${cutaway})`}} aria-hidden/>}</div>;
+  }
   case 'bullets':case 'summary':return <>{head}<ul className="sl-bullets">{s.bullets?.map((b,k)=><li key={k}>{T(b)}</li>)}</ul></>;
   case 'key':return <>{head}<div className="sl-key"><b>{T(s.term)}</b><p>{T(s.definition)}</p></div></>;
   case 'flow':return <>{head}<ol className="sl-flow">{s.steps?.map((x,k)=><li key={k}><span className="sl-num">{k+1}</span><div><b>{T(x.label)}</b>{x.detail&&<small>{T(x.detail)}</small>}</div></li>)}</ol></>;

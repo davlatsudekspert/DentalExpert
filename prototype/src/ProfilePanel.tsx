@@ -1,4 +1,4 @@
-import {useEffect,useState} from 'react';
+import {lazy,Suspense,useEffect,useState} from 'react';
 import {BadgeCheck,BookOpen,Check,ChevronRight,Clock,EyeOff,ExternalLink,GraduationCap,HeartPulse,Info,LifeBuoy,LogOut,MessageSquareWarning,ShieldCheck,Stethoscope,Trash2,UserCog,UserRound,Users} from 'lucide-react';
 import {callApi,type AuthUser} from './api';
 import {progressSummary} from './Achievements';
@@ -9,6 +9,8 @@ import type {Lang} from './discoveryData';
 import LogoMark from './LogoMark';
 import {PRO_ENABLED,showPaywall,usePro} from './billing';
 import {heldNote,planStatus} from './Paywall';
+const Credits=lazy(()=>import('./Credits'));
+const creditsLabel={uz:'Rasm manbalari',ru:'Источники изображений',en:'Image credits'};
 import './profile.css';
 
 type Role=AuthUser['role'];
@@ -48,6 +50,7 @@ export default function ProfilePanel({lang,user,role,name,initials,photo,theme,s
  // Dentists lose the public listing when Pro lapses (the profile and its verification stay).
  const listingPaused={uz:'Ommaviy ro‘yxat to‘xtatilgan: Pro kerak.',ru:'Публичный список приостановлен: нужен Pro.',en:'Public listing paused: needs Pro.'}[lang];
  const [open,setOpen]=useState(false),[pick,setPick]=useState<Role|null>(null),[busy,setBusy]=useState(false),[err,setErr]=useState('');
+ const [credits,setCredits]=useState(false);
  const [grp,setGrp]=useState<{n:number;s:number}|null>(null);
  const teaching=signed&&role==='teacher';
  // A teacher's groups and students come from the classroom API (the same list as the home screen); nothing is shown until it answers.
@@ -95,6 +98,7 @@ export default function ProfilePanel({lang,user,role,name,initials,photo,theme,s
    {row(ShieldCheck,privacyLabel,onPrivacy)}
    {row(LifeBuoy,t.contact,()=>window.open('https://dental-expert.pages.dev/contact/#'+lang,'_blank','noopener'),{ext:true,sub:t.contactSub,cls:'pf-contact'})}
    {row(MessageSquareWarning,t.report,onReport,{cls:'pf-report'})}
+   {row(Info,creditsLabel[lang],()=>setCredits(true),{cls:'pf-credits'})}
    {!authEnabled&&row(LogOut,t.demoOut,onDemoOut)}
   </div>
   {group(t.about)}
@@ -103,5 +107,6 @@ export default function ProfilePanel({lang,user,role,name,initials,photo,theme,s
    {row(LogOut,t.out,onSignOut,{cls:'pf-out'})}
    {row(Trash2,t.del,onDelete,{danger:true,sub:t.delSub,cls:'pf-del'})}
   </div></>}
+ {credits&&<Suspense fallback={null}><Credits lang={lang} onClose={()=>setCredits(false)}/></Suspense>}
  </div>;
 }
