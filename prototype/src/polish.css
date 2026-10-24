@@ -91,7 +91,7 @@
 :root[data-theme="color"] .td-card .td-streak{background:#00000033}
 :root[data-theme="color"] .lang-mark{color:#3f6f64}
 :root[data-theme="color"] .mint-avatar{color:#256a60}
-:root[data-theme="color"] .pf-stats small{color:#fff}
+:root[data-theme="color"] .pf-stats small{color:#fff!important}
 :root[data-theme="color"] .pf-card{--pf-hero:linear-gradient(135deg,#10254e,#0f7a78)}
 /* Tap targets: at least 44 x 44 px for buttons, tabs, chips and selects on the main screens. */
 .chips button,.learn > .chips.learn-tabs button{min-height:44px}
@@ -105,3 +105,7 @@ main .hero button,main .hero .button{min-height:44px;padding:10px 14px}
 .atlas-pin::after{content:'';position:absolute;inset:-9px}
 .search-field input{min-height:44px;margin:-10px 0}
 .cr-retry{min-height:44px;padding:0 6px;font:inherit;color:inherit;text-decoration:underline}
+/* Dark theme (not offered in Settings yet, kept readable): same fixes as the colour theme. */
+:root[data-theme="dark"] .td-card .td-main small,:root[data-theme="dark"] .pf-stats small{color:#fff!important}
+:root[data-theme="dark"] .td-card .td-go{color:#8fe9e4}
+:root[data-theme="dark"] .pf-card{--pf-hero:linear-gradient(135deg,#10254e,#0f6f6d)}

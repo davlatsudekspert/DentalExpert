@@ -36,16 +36,18 @@ fails=0
 with sync_playwright() as p:
     b=p.chromium.launch(executable_path=os.environ.get('CHROMIUM_PATH','/usr/bin/chromium'),args=['--no-sandbox'])
     for role,tabs in (('student',['Profil']),('teacher',['Profil']),('patient',['Profil'])):
-        for theme in ('mono','color'):
+        for theme in ('mono','color','dark'):  # dark is not offered in Settings yet: forced through the attribute
             ctx=b.new_context(viewport={'width':390,'height':844},is_mobile=True,has_touch=True)
             e=f'{role}+{time.time_ns()}@example.com';hd={'content-type':'application/json'}
             r=ctx.request.post(BASE+'/api/auth/request-code',data=json.dumps({'email':e,'name':'Ali Abduraxmonov','role':role,'lang':'uz'}),headers=hd).json()
             ctx.request.post(BASE+'/api/auth/verify',data=json.dumps({'email':e,'code':r['devCode']}),headers=hd)
-            pg=ctx.new_page();pg.goto(f'{BASE}/?lang=uz&theme={theme}');pg.wait_for_timeout(1500)
+            pg=ctx.new_page();pg.goto(f'{BASE}/?lang=uz&theme={"mono" if theme=="dark" else theme}');pg.wait_for_timeout(1500)
+            if theme=='dark':pg.evaluate("document.documentElement.dataset.theme='dark'")
             names=['home']+tabs
             for i,n in enumerate(names):
                 if i:
                     pg.locator('nav button',has_text=n).first.click();pg.wait_for_timeout(900)
+                    if theme=='dark':pg.evaluate("document.documentElement.dataset.theme='dark'")
                 bad=scan(pg)
                 print(('FAIL ' if bad else 'PASS ')+f'{role} {theme} {n} contrast',bad or '')
                 fails+=bool(bad)
