@@ -1,3 +1,4 @@
+import {callApi} from './api';
 import {useEffect,useMemo,useState} from 'react';
 import {ArrowLeft,ChevronRight,Flag,Lock,ShieldAlert,Trophy} from 'lucide-react';
 import type {Lang} from './discoveryData';
@@ -34,7 +35,7 @@ export default function Attestation({lang}:{lang:Lang}){
  const [best,setBest]=useState<Best>(loadBest);
  const [report,setReport]=useState<string|null>(null);
  const [off,setOff]=useState(false);
- useEffect(()=>{fetch('/api/attestation/status').then(r=>r.ok?r.json():null).then(j=>{if(j&&j.enabled===false)setOff(true)}).catch(()=>{})},[]);
+ useEffect(()=>{callApi<{enabled?:boolean}>('/attestation/status').then(r=>{if(r.ok&&r.data.enabled===false)setOff(true)}).catch(()=>{})},[]);
  useEffect(()=>{setQs(null);if(sel&&sel.status!=='withheld')loadAtt(sel.id,lang==='ru'?'ru':'uz').then(x=>setQs(x as Q[])).catch(()=>setQs([]))},[sel,lang]);
  const left=attestationLeft();
  const runQs:RunQ[]=useMemo(()=>(run||[]).map(q=>({q:q.q,options:q.o,correct:q.k,explanation:'',

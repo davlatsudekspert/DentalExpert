@@ -39,6 +39,9 @@ def cors(path,origin,method='GET'):
 for path in ('/api/curriculum/key?topicId=zz-00','/api/doctors?city=UZ-TK','/api/institutions','/api/auth/me'):
     s,h=cors(path,'capacitor://localhost');check('native origin allowed on '+path.split('?')[0],h.get('access-control-allow-origin')=='capacitor://localhost')
 s,h=cors('/api/curriculum/key?topicId=zz-00','capacitor://localhost','OPTIONS');check('preflight on the curriculum key',s==204)
+# Every API the native app calls must answer the app's origin, or the iOS/Android WebView blocks it.
+for path in ('/api/billing/practice','/api/attestation/status','/api/photo?u=x&v=y','/api/auth/me','/api/admin/stats','/api/classroom/groups'):
+    s,h=cors(path,'capacitor://localhost','OPTIONS');check('preflight allowed on '+path.split('?')[0],s==204 and h.get('access-control-allow-origin')=='capacitor://localhost')
 s,h=cors('/api/doctors?city=UZ-TK','https://evil.example');check('a foreign site gets no CORS header',h.get('access-control-allow-origin') is None)
 # Static hosting headers (public/_headers): hashed assets cache for good, pages are not sniffed or framed by other sites.
 import re
