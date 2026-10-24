@@ -1,4 +1,5 @@
 import {cityIdOk,doctorsInCity,json,type Env} from '../_lib/db';
+import {proEnabled,SPECIALIST_PRO_SQL} from '../_lib/entitlement';
 import {photoUrl} from '../_lib/photo';
 
 type Row=Record<string,string|number|null>;
@@ -7,7 +8,7 @@ const tr=(v:unknown)=>{const t=typeof v==='string'?v:'';return {uz:t,ru:t,en:t}}
 async function publishedDentists(env:Env,city:string){
  const {results}=await env.DB.prepare(
   `SELECT id,name,phone,workplace,bio,specialty,telegram,instagram,public_email,address,map_url,city_id,photo_at FROM users
-   WHERE role='dentist' AND publish_requested=1 AND verified_at IS NOT NULL AND suspended_at IS NULL AND city_id=? ORDER BY verified_at DESC LIMIT 100`
+   WHERE role='dentist' AND publish_requested=1 AND verified_at IS NOT NULL AND suspended_at IS NULL AND city_id=?${proEnabled(env)?' AND '+SPECIALIST_PRO_SQL('users'):''} ORDER BY verified_at DESC LIMIT 100`
  ).bind(city).all<Row>();
  return results.map(r=>{
   const contacts=[['phone',r.phone],['telegram',r.telegram],['instagram',r.instagram],['email',r.public_email],['map',r.map_url]]

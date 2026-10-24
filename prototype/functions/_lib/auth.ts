@@ -1,5 +1,7 @@
 import {json,type Env} from './db';
 import {photoUrl} from './photo';
+import {proOf} from './entitlement';
+import {applyPendingGrant} from './grants';
 
 export const ROLES=['patient','dentist','teacher','student'] as const;
 export type Role=typeof ROLES[number];
@@ -120,8 +122,10 @@ export async function signedIn(env:Env,request:Request,user:Record<string,string
  const blocked=await env.DB.prepare(`SELECT suspended_at FROM users WHERE id=?`).bind(user.id).first<{suspended_at:string|null}>();
  if(blocked?.suspended_at)return json({error:'suspended'},403,'no-store');
  await adoptGuest(env,request,String(user.id),user.role).catch(()=>{});
+ await applyPendingGrant(env,String(user.id),String(user.email),String(user.role)).catch(()=>{});
  const session=await createSession(env,request,String(user.id));
- const profile=profileOf(user);
+ const pro=await proOf(env,{id:String(user.id),role:user.role as Role,guest:false}).catch(()=>undefined);
+ const profile={...profileOf(user),...(pro?{pro}:{})};
  if(isNativeClient(request))return json({user:profile,token:session.token},200,'no-store');
  const res=json({user:profile},200,'no-store');
  res.headers.append('set-cookie',session.cookie);

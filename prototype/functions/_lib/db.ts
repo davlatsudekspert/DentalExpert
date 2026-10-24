@@ -1,4 +1,6 @@
-export interface Env {DB:D1Database;MEDIA:R2Bucket;AUTH_SECRET?:string;RESEND_API_KEY?:string;AUTH_FROM?:string;AUTH_DEV_ECHO?:string;ADMIN_EMAILS?:string;REVIEW_ACCOUNTS?:string;REVIEW_CODE?:string;
+export interface Env {DB:D1Database;MEDIA:R2Bucket;AUTH_SECRET?:string;RESEND_API_KEY?:string;AUTH_FROM?:string;AUTH_DEV_ECHO?:string;ADMIN_EMAILS?:string;
+ /** Pro/Free system: "1" turns it on (default off). REVENUECAT_WEBHOOK_AUTH is the shared secret RevenueCat sends in the Authorization header. */
+ PRO_ENABLED?:string;REVENUECAT_WEBHOOK_AUTH?:string;REVIEW_ACCOUNTS?:string;REVIEW_CODE?:string;
  /** Comma-separated OAuth client IDs accepted as the id_token `aud` (Sign in with Google / Apple). */
  GOOGLE_CLIENT_IDS?:string;APPLE_CLIENT_IDS?:string;
  /** Local tests only: a JWKS JSON trusted instead of the provider's, honoured only with AUTH_DEV_ECHO=1 on localhost. */

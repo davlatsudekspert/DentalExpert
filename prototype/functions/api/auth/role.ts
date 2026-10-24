@@ -1,5 +1,6 @@
 import {ROLES,guardPost,sessionUser,type Role} from '../../_lib/auth';
 import {json,type Env} from '../../_lib/db';
+import {proOf} from '../../_lib/entitlement';
 import {underLimit} from '../../_lib/ratelimit';
 
 const MAX_PER_DAY=10;
@@ -25,5 +26,6 @@ export const onRequestPut:PagesFunction<Env>=async({request,env})=>{
  await env.DB.prepare(
   `UPDATE users SET role=?,publish_requested=CASE WHEN ?=1 THEN 0 ELSE publish_requested END,verified_at=CASE WHEN ?=1 THEN NULL ELSE verified_at END WHERE id=?`
  ).bind(role,leaving?1:0,leaving?1:0,user.id).run();
- return json({user:{...user,role,...(leaving?{publishRequested:false,verified:false}:{})}},200,'no-store');
+ const pro=await proOf(env,{id:user.id,role:role as Role,guest:false}).catch(()=>undefined);
+ return json({user:{...user,role,...(pro?{pro}:{}),...(leaving?{publishRequested:false,verified:false}:{})}},200,'no-store');
 };

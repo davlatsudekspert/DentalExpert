@@ -1,4 +1,6 @@
 import {json,type Env} from '../../_lib/db';
+import {entitlement,proEnabled,proRequired} from '../../_lib/entitlement';
+import {FREE} from '../../../src/proConfig';
 import {body,clean,needUser,newCode,newId,noStore} from '../../_lib/classroom';
 
 type Row=Record<string,unknown>;
@@ -28,11 +30,14 @@ export const onRequestPost:PagesFunction<Env>=async({request,env})=>{
  const b=await body(request);if('res' in b)return b.res;
  const name=clean(b.data.name,60);
  if(name.length<2)return json({error:'name_required'},400,noStore);
-  for(let i=0;i<5;i++){
+  // Free tier: one group. Pro (trial, paid, admin grant) keeps the usual MAX_GROUPS. Existing groups are never removed.
+ let cap=MAX_GROUPS;
+ if(proEnabled(env)&&!(await entitlement(env,user)).active)cap=FREE.groups;
+ for(let i=0;i<5;i++){
   const id=newId(),code=newCode();
   try{
-   const r=await env.DB.prepare(`INSERT INTO class_groups (id,teacher_id,name,code) SELECT ?,?,?,? WHERE (SELECT COUNT(*) FROM class_groups WHERE teacher_id=?)<?`).bind(id,user.id,name,code,user.id,MAX_GROUPS).run();
-   if(!r.meta.changes)return json({error:'too_many_groups'},429,noStore);
+   const r=await env.DB.prepare(`INSERT INTO class_groups (id,teacher_id,name,code) SELECT ?,?,?,? WHERE (SELECT COUNT(*) FROM class_groups WHERE teacher_id=?)<?`).bind(id,user.id,name,code,user.id,cap).run();
+   if(!r.meta.changes)return cap<MAX_GROUPS?proRequired('groups',{limit:cap}):json({error:'too_many_groups'},429,noStore);
    return json({group:{id,name,code,members:0}},201,noStore);
   }catch{/* code collision, retry */}
  }

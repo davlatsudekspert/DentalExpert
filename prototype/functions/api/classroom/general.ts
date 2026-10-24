@@ -1,5 +1,6 @@
 import {json,type Env} from '../../_lib/db';
 import {body,clean,deadlineOf,groupRole,needUser,newId,noStore,revealOf} from '../../_lib/classroom';
+import {mayUse,proRequired} from '../../_lib/entitlement';
 import {isSource,keyOf,sourceRefs} from '../../_lib/questionIndex';
 import {GENERAL_MAX,GENERAL_POOL_MAX,drawVariant,variantAllowed} from '../../../src/classroomShared';
 
@@ -15,6 +16,8 @@ export const onRequestPost:PagesFunction<Env>=async({request,env})=>{
  const b=await body(request);if('res' in b)return b.res;
  const groupId=clean(b.data.groupId,60);
  if(await groupRole(env,groupId,a.user.id)!=='owner')return json({error:'forbidden'},403,noStore);
+ // Pro feature for the teacher; students sitting a general test are never affected.
+ if(!await mayUse(env,a.user))return proRequired('generalTests');
  const raw=b.data.sources;
  if(!Array.isArray(raw)||!raw.length||raw.length>150||!raw.every(x=>typeof x==='string'))return json({error:'bad_sources'},400,noStore);
  const sources=[...new Set(raw as string[])];

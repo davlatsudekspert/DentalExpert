@@ -2,6 +2,7 @@
 # CI helper: local D1 with all migrations + `wrangler pages dev` with dev-only secrets (email codes echoed, localhost
 # only). Then runs the API and browser suites, clearing rate limits between them.
 # Env: DE_PORT (default 8788), D1_PERSIST (the --persist-to directory, default .wrangler/state), DIST (default dist).
+# PRO_ENABLED=1 turns the Pro/Free system on for that server (default off, as in production today).
 # When a server already answers on DE_PORT it is used as is (then D1_PERSIST must be the directory it persists to).
 set -euo pipefail
 cd "$(dirname "$0")/.."
@@ -9,7 +10,8 @@ export DE_PORT="${DE_PORT:-8788}" D1_PERSIST="${D1_PERSIST:-.wrangler/state}"
 DIST="${DIST:-dist}"
 URL="http://127.0.0.1:$DE_PORT/api/auth/me"
 if ! curl -sf "$URL" >/dev/null; then
- printf 'AUTH_SECRET=%s\nAUTH_DEV_ECHO=1\n' "$(openssl rand -hex 32)" > .dev.vars
+ printf 'AUTH_SECRET=%s\nAUTH_DEV_ECHO=1\nREVENUECAT_WEBHOOK_AUTH=ci-webhook-secret\n' "$(openssl rand -hex 32)" > .dev.vars
+ [ "${PRO_ENABLED:-}" = 1 ] && echo 'PRO_ENABLED=1' >> .dev.vars
  CI=1 npx wrangler d1 migrations apply dental-expert --local --persist-to "$D1_PERSIST" >/dev/null
  npx wrangler pages dev "$DIST" --port "$DE_PORT" --persist-to "$D1_PERSIST" --d1 DB=8b0734eb-b1db-4bd7-9bbf-60d9db51f658 --show-interactive-dev-session=false > /tmp/pages-dev.log 2>&1 &
 fi
