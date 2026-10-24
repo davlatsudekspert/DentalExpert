@@ -3,7 +3,7 @@ import {BarChart3,BookOpen,Check,ChevronLeft,ClipboardList,Copy,Eye,EyeOff,Layer
 import qrcode from 'qrcode-generator';
 import {callApi,joinLink,parseJoin,type AuthUser} from './api';
 import {CLASSROOM_CHANGED,openJoin,openScan,takeAssignTopic} from './joinLink';
-import {APOSTROPHES,VARIANT_POOL_MAX,checkNick,maxVariantCount,variantAllowed} from './classroomShared';
+import {APOSTROPHES,checkNick} from './classroomShared';
 import {GeneralSetup,TopicTestSetup,type TestPayload} from './testSetup';
 import {PreviewRun,TestRun,TestReview,fmtDue,loadTestItems,refItems,revealNote,testError,testWords,type Reveal,type TestItem,type TestMeta} from './classTest';
 import Slides from './Slides';

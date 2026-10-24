@@ -80,7 +80,6 @@ export default function Atlas3D({lang,onClose}:{lang:Lang;onClose:()=>void}){
   const glows=new Map<LayerKey,THREE.Mesh>();
   const state={target:new Map<string,[number,number,number]>(),cur:new Map<string,[number,number,number]>(),op:new Map<string,number>(),opT:new Map<string,number>(),lift:new Map<string,number>(),liftT:new Map<string,number>()};
   let selectedKey:LayerKey|null=null,isExploded=false,disposed=false;
-  const flow={value:0};
 
   const mkAlpha=(name:string,img:HTMLImageElement)=>{const c=document.createElement('canvas');c.width=c.height=256;const x=c.getContext('2d',{willReadFrequently:true})!;x.drawImage(img,0,0,256,256);alphaMaps[name]={d:x.getImageData(0,0,256,256).data,w:256}};
 

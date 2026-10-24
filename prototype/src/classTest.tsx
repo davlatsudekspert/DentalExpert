@@ -2,7 +2,7 @@ import {useEffect,useMemo,useRef,useState} from 'react';
 import {Eye,RotateCw,Sparkles,X} from 'lucide-react';
 import {callApi} from './api';
 import QuizRun,{type RunQ} from './QuizRun';
-import {loadTopic,topicMeta,tx,type L,type Topic} from './curriculumData';
+import {loadTopic,topicMeta,tx,type L} from './curriculumData';
 import {drawVariant,qref,refIndex,refTopic} from './classroomShared';
 import {resolveWith,type Loaders} from './questionIndex';
 import type {Lang} from './discoveryData';

@@ -11,7 +11,7 @@ Bu papka mustaqil React + TypeScript + Vite **dizayn prototipi**. Asosiy loyiha 
 ## Fayllar va buyruqlar
 
 - `demo.html` — offline ko‘rish uchun bitta HTML fayl.
-- `src/main.tsx`, `src/style.css`, `src/PremiumTurntable.tsx` — ekranlar, dizayn va 360° vizual; `src/Tooth3D.tsx` — eski GLB drafti.
+- `src/main.tsx`, `src/style.css`, `src/PremiumTurntable.tsx` — ekranlar, dizayn va 360° vizual.
 - `assets/tooth3d/` — original Blender sahnalari, uch ildizli GLB draft, foydalanuvchi yuborgan JPG ko‘rinishlar va splash/anatomiya illyustratsiyalari.
 - `screenshots/jpg/preview-board.jpg` — 8 asosiy ekranning umumiy ko‘rinishi; `screenshots/jpg/` — barcha 27 ekran.
 - `DESIGN_HANDOFF.md` — ekranlar, holatlar, komponentlar va cheklovlar haqida batafsil izoh.

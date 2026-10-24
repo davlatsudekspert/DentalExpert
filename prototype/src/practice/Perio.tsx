@@ -1,6 +1,6 @@
 import {useState} from 'react';
 import {Check,X} from 'lucide-react';
-import {type SimProps,Stepper,CheckButton,Figure,rint,pick,smoothOpen,smoothClosed,r1} from './shared';
+import {type SimProps,Stepper,CheckButton,Figure,rint,pick,smoothOpen,smoothClosed} from './shared';
 
 type Stage=1|2|3;
 const SITES=['MB','B','DB','ML','L','DL'] as const;

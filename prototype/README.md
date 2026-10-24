@@ -70,7 +70,7 @@ Login ma’lumotlarini hech qayerga yubormaydi. Maxfiylik sahifasi yuridik jihat
 ## Fayllar
 
 `src/main.tsx` — ekranlar, lokal holat va tarjimalar.
-`src/PremiumTurntable.tsx` — premium tasvirli 360° vizual boshqaruvi; `src/Tooth3D.tsx` — avvalgi WebGL drafti.
+`src/PremiumTurntable.tsx` — premium tasvirli 360° vizual boshqaruvi.
 `assets/tooth3d/` — original Blender `.blend` sahnasi va uning renderlari, premium hero hamda foydalanuvchi yuborgan kesim illyustratsiyasi (PNG/WebP/JPG); `tools/create_tooth_asset.py` — Blender generatori.
 `tools/build_reference_molar.py` — arxivdagi JPG ko‘rinishlari asosida uch ildizli tahrirlanadigan Blender sahnasi va GLB draft yaratadi.
 `public/clinicians.png` — dastlabki 3 ta fiktsion portret; `assets/clinician-contact-sheet.png` va `assets/headscarf-clinicians.png` — qolgan demo profillar uchun fotografik kontakt-varaqlar. Har demo shaharda 2 erkak va 2 ayol portreti bor; ayollardan biri ro‘molli. Bular haqiqiy shifokorlarning suratlari emas; `src/Portrait.tsx` — uning vektor fallbacki. `src/LogoMark.tsx` — original vektor logo.

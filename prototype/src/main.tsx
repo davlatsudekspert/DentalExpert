@@ -27,12 +27,12 @@ import '@fontsource-variable/manrope/index.css';
 import '@fontsource/ibm-plex-mono/500.css';
 import './dark.css';
 import './polish.css';
-import PatientGuides from './PatientGuides';
+const PatientGuides=lazy(()=>import('./PatientGuides'));
 import Achievements,{streakDays} from './Achievements';
 import {loadSeen} from './curriculumData';
 import ProfileForm,{useOwnPhoto} from './ProfileForm';
 import ProfilePanel from './ProfilePanel';
-import Admin from './Admin';
+const Admin=lazy(()=>import('./Admin'));
 import ReportForm from './ReportForm';
 import Patients,{loadPatients,clearLocalData} from './Patients';
 import Classroom from './Classroom';
@@ -154,7 +154,7 @@ return <div className={'studio'+(devStudio?'':' web-app')}>{/* Join sheets live 
 <div className="quick-grid">{([[HeartPulse,lang==='uz'?'Qo‘llanmalar':lang==='ru'?'Советы':'Care guides',()=>document.querySelector('.pg-root')?.scrollIntoView({behavior:'smooth'})],[Layers,t('anatomy'),()=>go('anatomy')],[Flame,lang==='uz'?'Kunlik mashq':lang==='ru'?'Задания дня':'Daily practice',()=>{setTab('daily');go('courses')}],[BookOpen,lang==='uz'?'Darslar':lang==='ru'?'Уроки':'Lessons',()=>{setTab('lessons');go('courses')}]] as [typeof Home,string,()=>void][]).map(([I,label,fn])=><button key={label} onClick={fn}><span>{icon(I)}</span>{label}</button>)}</div>
 
 {section(t('specialists'),()=>go('search'))}{visibleDoctors.slice(0,2).map(({i})=>docCard(i))}{visibleDoctors.length===0&&<p className="discovery-empty">{lang==='uz'?'Bu shaharda hozircha namunaviy profil yo‘q. Boshqa shaharni tanlang.':lang==='ru'?'Для этого города пока нет примеров профилей. Выберите другой город.':'No sample profiles in this city yet. Choose another city.'}</p>}
-<PatientGuides lang={lang}/>
+<Suspense fallback={null}><PatientGuides lang={lang}/></Suspense>
 <button className="learning-banner" onClick={()=>go('anatomy')}><span className="tile"><Layers/></span><div><span className="eyebrow">{p.academy}</span><h3>{t('anatomy')}</h3><p>{t('anatomySub')}</p></div><ArrowUpRight size={20}/></button></>}
 {screen==='search'&&!EDU&&<>
 <h2 className="large-heading">{t('find')}</h2>
@@ -198,7 +198,7 @@ const learn=(k:string)=>()=>{setTab(k);go('courses')};const tiles:[string,React.
 {designScreens.includes(screen as DesignScreen)&&<DesignCompletion screen={screen as DesignScreen} lang={lang} onNavigate={go} roleHome={homeOf(role)} auth={authEnabled?{email:pendingEmail,onVerify:async code=>{const r=await verifyCode(pendingEmail,code);if(r.ok&&r.data.user){setAuthUser(r.data.user);applyUser(r.data.user);return {ok:true}}return {ok:false,error:r.data.error,attemptsLeft:r.data.attemptsLeft}},onResend:async()=>{const r=await requestCode({email:pendingEmail,role:authRole,lang});return {ok:r.ok,error:r.data.error,retryAfterSec:r.data.retryAfterSec}}}:undefined}/>}
 {extraScreens.includes(screen as ExtraScreenName)&&<AccountCommunity key={screen+'-'+lang} screen={screen as ExtraScreenName} lang={lang} onNavigate={go}/>}
 {(screen==='student'||screen==='teacher')&&<><div id="sec-groups"><Classroom lang={lang} user={authUser} onSignIn={()=>go('auth')}/></div><div id="sec-schedule"><OfficialSchedule lang={lang}/></div></>}
-{showReport&&<ReportForm lang={lang} onClose={()=>setShowReport(false)}/>}{showAdmin&&authUser?.isAdmin&&<Admin onClose={()=>setShowAdmin(false)}/>}{show3D&&<Suspense fallback={null}><Atlas3D lang={lang} onClose={()=>setShow3D(false)}/></Suspense>}
+{showReport&&<ReportForm lang={lang} onClose={()=>setShowReport(false)}/>}{showAdmin&&authUser?.isAdmin&&<Suspense fallback={null}><Admin onClose={()=>setShowAdmin(false)}/></Suspense>}{show3D&&<Suspense fallback={null}><Atlas3D lang={lang} onClose={()=>setShow3D(false)}/></Suspense>}
 
 </div>{!['language','splash','onboard','roles','auth','login','signup','verifyEmail','forgot'].includes(screen)&&<nav className={'bottom-nav five-tab-nav '+(EDU?'four-tab ':'')+(navCompact?'compact':'')} aria-label={p.mainNav}>{([[Home,homeOf(role),'home'],[Search,'search','search'],[Layers,'anatomy','atlas'],[BookOpen,'courses','learn'],[UserRound,'settings','account']] as const).filter(([,s])=>allowed(s)).map(([I,s,label],index)=><button key={label} type="button" aria-label={navCopy[lang][label]} aria-current={screen===s?'page':undefined} className={(screen===s?'active ':'')+(index===2&&!EDU?'nav-featured':'')} onClick={()=>go(s)}><span className="nav-icon">{icon(I)}</span><span className="nav-label">{navCopy[lang][label]}</span></button>)}</nav>}<div className="home-indicator"/>{notice&&<div className="toast" role="status"><Check size={16}/>{notice}<button aria-label={p.close} onClick={()=>setNotice('')}><X size={14}/></button></div>}</main>{!isNative&&!new URLSearchParams(location.search).has('shot')&&(location.protocol==='file:'||/^(localhost|127\.0\.0\.1)$|\.local$/.test(location.hostname)||new URLSearchParams(location.search).has('dev'))&&<div className="mobile-screen-picker"><select aria-label={p.picker} value={screen} onChange={e=>go(e.target.value)}>{menuScreens.map(s=><option key={s} value={s}>{designScreens.includes(s as DesignScreen)?designTitles[lang][s as DesignScreen]:extraScreens.includes(s as ExtraScreenName)?extraTitles[lang][s as ExtraScreenName]:t(s as Key)}</option>)}</select><button aria-label={t('language')} onClick={()=>setLang(LANG_ORDER[(LANG_ORDER.indexOf(lang)+1)%LANG_ORDER.length])}><Globe size={16}/>{lang.toUpperCase()}</button></div>}</div>}
 createRoot(document.getElementById('root')!).render(<App/>);
