@@ -109,3 +109,6 @@ main .hero button,main .hero .button{min-height:44px;padding:10px 14px}
 :root[data-theme="dark"] .td-card .td-main small,:root[data-theme="dark"] .pf-stats small{color:#fff!important}
 :root[data-theme="dark"] .td-card .td-go{color:#8fe9e4}
 :root[data-theme="dark"] .pf-card{--pf-hero:linear-gradient(135deg,#10254e,#0f6f6d)}
+/* Booking calendar days: full cell width and 44 px tall (seven columns cannot all be 44 wide on a 360 px phone). */
+.calendar{padding:17px 10px}
+.calendar .calendar-grid button{width:100%;min-width:40px;height:44px}
