@@ -17,3 +17,4 @@ release/
 decks/review/
 store-assets/shots/
 dist-pro/
+__pycache__/
