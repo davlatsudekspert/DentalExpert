@@ -7,7 +7,7 @@ import front from '../assets/tooth3d/turntable-front.webp';
 import occlusal from '../assets/tooth3d/archive-occlusal.webp';
 import {tx,type Anchor,type L,type Slide} from './curriculumData';
 import type {Lang} from './discoveryData';
-import {SUBJECT_PHOTO,photoInfo,photoUrl,photoAlt} from './photos';
+import {SUBJECT_PHOTO,photoInfo,photoUrl,photoAlt,photoFocus} from './photos';
 import './photos.css';
 
 const IMAGES={cutaway,front,occlusal};
@@ -79,7 +79,7 @@ function SlideBody({s,lang,eyebrow,subject}:{s:Slide;lang:Lang;eyebrow?:string;s
   case 'title':{
    // A real, credited photograph for the subject when there is a matching one; otherwise the drawn cutaway.
    const ph=subject?SUBJECT_PHOTO[subject]:undefined,pi=ph?photoInfo(ph):undefined;
-   return <div className={'sl-cover'+(pi?' has-photo':'')}>{pi&&<img className="sl-cover-photo" src={photoUrl(ph!)} alt={photoAlt(ph!,lang)} width={pi.width} height={pi.height} decoding="async"/>}<span className="sl-eyebrow">{eyebrow}</span><h1>{T(s.title)}</h1>{s.subtitle&&<p>{T(s.subtitle)}</p>}{!pi&&<i className="sl-cover-mark" style={{['--sl-cover' as string]:`url(${cutaway})`}} aria-hidden/>}</div>;
+   return <div className={'sl-cover'+(pi?' has-photo':'')}>{pi&&<img className="sl-cover-photo" src={photoUrl(ph!)} alt={photoAlt(ph!,lang)} width={pi.width} height={pi.height} style={{objectPosition:photoFocus(ph!)}} decoding="async"/>}<span className="sl-eyebrow">{eyebrow}</span><h1>{T(s.title)}</h1>{s.subtitle&&<p>{T(s.subtitle)}</p>}{!pi&&<i className="sl-cover-mark" style={{['--sl-cover' as string]:`url(${cutaway})`}} aria-hidden/>}</div>;
   }
   case 'bullets':case 'summary':return <>{head}<ul className="sl-bullets">{s.bullets?.map((b,k)=><li key={k}>{T(b)}</li>)}</ul></>;
   case 'key':return <>{head}<div className="sl-key"><b>{T(s.term)}</b><p>{T(s.definition)}</p></div></>;

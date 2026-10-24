@@ -10,7 +10,7 @@ import './learn.css';
 import {SubjectIcon,subjectColor} from './subjectArt';
 import {SUBJECTS,courseWord,loadLast,loadSeen,loadTopic,markSlide,metaLine,slideCount,topicsOf,tx,type Subject,type Topic,type TopicMeta} from './curriculumData';
 import type {Lang} from './discoveryData';
-import {SUBJECT_PHOTO,photoInfo,photoUrl,photoAlt} from './photos';
+import {SUBJECT_PHOTO,photoInfo,photoUrl,photoAlt,photoFocus} from './photos';
 import './photos.css';
 
 export const cw={
@@ -98,7 +98,7 @@ export function SubjectHero({lang,subject}:{lang:Lang;subject:Subject}){
  const t=cw[lang];const a=subjectColor(subject.id);const n=topicsOf(subject.id).length;
  const ph=SUBJECT_PHOTO[subject.id],pi=ph?photoInfo(ph):undefined;
  return <div className={'lg-hero'+(pi?' has-photo':'')} style={{background:`linear-gradient(135deg,${a.bg},#ffffff)`,borderColor:a.bg}}>
-  {pi&&<img className="lg-hero-photo" src={photoUrl(ph)} alt={photoAlt(ph,lang)} width={pi.width} height={pi.height} loading="lazy" decoding="async"/>}
+  {pi&&<img className="lg-hero-photo" src={photoUrl(ph)} alt={photoAlt(ph,lang)} width={pi.width} height={pi.height} style={{objectPosition:photoFocus(ph)}} loading="lazy" decoding="async"/>}
   <span className="lg-hero-ico" style={{color:a.c}}><SubjectIcon id={subject.id} size={34}/></span>
   <div><span className="lg-eyebrow" style={{color:a.c}}>{courseWord(subject.course,lang)} · {subject.semester}-{lang==='en'?'sem.':lang==='ru'?'сем.':'semestr'}</span><h2>{tx(subject.title,lang)}</h2><small>{n} {t.topics}</small></div>
  </div>;

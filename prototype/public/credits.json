@@ -172,6 +172,44 @@
     "en": "Human mandible with the mental protuberance circled"
    },
    "subject": "mfs"
+  },
+  {
+   "file": "card.webp",
+   "title": "Dental Caries Cavity 2 (cropped)",
+   "author": "Suyash.dwivedi",
+   "license": "CC BY-SA 4.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Dental_Caries_Cavity_2_(cropped).JPG",
+   "fileUrl": "https://commons.wikimedia.org/wiki/File:Dental_Caries_Cavity_2_(cropped).JPG",
+   "source": "Wikimedia Commons",
+   "modifications": "resized to 1000px wide, converted to WebP",
+   "width": 1000,
+   "height": 750,
+   "alt": {
+    "uz": "Molyar tishdagi qoramtir kariyes bo‘shlig‘i, yaqin plandan",
+    "ru": "Тёмная кариозная полость в зубе, крупный план",
+    "en": "Close-up of a tooth with a dark carious cavity"
+   },
+   "subject": "card"
+  },
+  {
+   "file": "prev.webp",
+   "title": "Dentalni hygiena - pomucky",
+   "author": "Milenafoto",
+   "license": "CC BY-SA 3.0",
+   "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Dentalni_hygiena_-_pomucky.jpg",
+   "fileUrl": "https://commons.wikimedia.org/wiki/File:Dentalni_hygiena_-_pomucky.jpg",
+   "source": "Wikimedia Commons",
+   "modifications": "cropped (the two product labels at the left and right edges are cut away), resized to 1000px wide, converted to WebP",
+   "width": 1000,
+   "height": 1115,
+   "alt": {
+    "uz": "Og‘iz gigiyenasi vositalari: tish cho‘tkasi, til tozalagich va bir tutamli cho‘tka, tish-jag‘ modeli yonida",
+    "ru": "Средства гигиены полости рта: зубная щётка, скребок для языка и монопучковая щётка рядом с моделью челюстей",
+    "en": "Oral hygiene aids: a toothbrush, a tongue cleaner and a single-tuft brush beside a jaw model"
+   },
+   "subject": "prev"
   }
  ]
 }
