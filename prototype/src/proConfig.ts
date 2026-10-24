@@ -14,10 +14,14 @@ export const PLANS:Record<PlanRole,{id:'student'|'teacher'|'specialist';monthly:
  teacher:{id:'teacher',monthly:{product:'de_teacher_monthly',usd:2.49},yearly:{product:'de_teacher_yearly',usd:24.99}},
  dentist:{id:'specialist',monthly:{product:'de_specialist_monthly',usd:3.49},yearly:{product:'de_specialist_yearly',usd:34.99}}
 };
-export const PRODUCT_IDS=Object.values(PLANS).flatMap(p=>[p.monthly.product,p.yearly.product]);
+/** Premium: one plan for every role (student, teacher, specialist). Not bound to a role: it unlocks every Pro feature of whatever role the account has. */
+export const PREMIUM={id:'premium',monthly:{product:'de_premium_monthly',usd:4.99},yearly:{product:'de_premium_yearly',usd:49.99}} as const;
+export const PREMIUM_PRODUCTS:readonly string[]=[PREMIUM.monthly.product,PREMIUM.yearly.product];
+export const isPremiumProduct=(product:string)=>PREMIUM_PRODUCTS.includes(product);
+export const PRODUCT_IDS=[...Object.values(PLANS).flatMap(p=>[p.monthly.product,p.yearly.product]),...PREMIUM_PRODUCTS];
 /** The plan a role may buy; patients never pay. */
 export const planForRole=(role:string):typeof PLANS[PlanRole]|null=>role==='student'||role==='teacher'||role==='dentist'?PLANS[role]:null;
-/** Which role a product belongs to (the server refuses a purchase that does not match the account's role). */
+/** Which role a product belongs to (the server refuses a purchase that does not match the account's role). Premium belongs to no role: null. */
 export const roleOfProduct=(product:string):PlanRole|null=>(Object.keys(PLANS) as PlanRole[]).find(r=>PLANS[r].monthly.product===product||PLANS[r].yearly.product===product)||null;
 
 /** Free tier, after the trial. Everything not listed here stays free for everybody. */

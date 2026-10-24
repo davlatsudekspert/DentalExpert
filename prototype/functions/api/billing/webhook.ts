@@ -1,4 +1,4 @@
-import {PRODUCT_IDS,roleOfProduct} from '../../../src/proConfig';
+import {PRODUCT_IDS,isPremiumProduct,roleOfProduct} from '../../../src/proConfig';
 import {ipKey} from '../../_lib/classroom';
 import {sha256,timingSafeEqual} from '../../_lib/auth';
 import {json,type Env} from '../../_lib/db';
@@ -7,7 +7,7 @@ import {underLimit} from '../../_lib/ratelimit';
 // POST /api/billing/webhook — RevenueCat server events. Authenticated by the shared secret RevenueCat sends in the
 // Authorization header (env REVENUECAT_WEBHOOK_AUTH). app_user_id is our user id. Idempotent by event id: a repeated
 // delivery changes nothing. Always answers 200 for well-formed events we deliberately ignore, so RevenueCat stops retrying.
-// Store purchases only ever apply to the plan of the account's role (a student cannot unlock the teacher plan).
+// Store purchases only ever apply to the plan of the account's role (a student cannot unlock the teacher plan); Premium is for any role.
 const TYPE_STATUS:Record<string,'active'|'cancelled'|'expired'|'billing_issue'>={
  INITIAL_PURCHASE:'active',RENEWAL:'active',UNCANCELLATION:'active',PRODUCT_CHANGE:'active',NON_RENEWING_PURCHASE:'active',
  CANCELLATION:'cancelled',BILLING_ISSUE:'billing_issue',EXPIRATION:'expired'
@@ -50,7 +50,7 @@ export const onRequestPost:PagesFunction<Env>=async({request,env})=>{
 
  const user=await env.DB.prepare(`SELECT id,role FROM users WHERE id=? AND guest=0`).bind(uid).first<{id:string;role:string}>();
  // Remember the event id either way, so a replay of an ignored event is cheap.
- if(!user||roleOfProduct(product)!==user.role){
+ if(!user||(!isPremiumProduct(product)&&roleOfProduct(product)!==user.role)){
   await env.DB.prepare(`INSERT OR IGNORE INTO billing_events (event_id) VALUES (?)`).bind(id).run();
   return json({ok:true,ignored:user?'role_mismatch':'unknown_user'},200,'no-store');
  }

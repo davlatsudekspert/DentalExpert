@@ -63,13 +63,13 @@ jobs:
           python -m playwright install --with-deps chromium webkit
           echo "CHROMIUM_PATH=$(python -c 'from playwright.sync_api import sync_playwright as s;p=s().start();print(p.chromium.executable_path);p.stop()')" >> "$GITHUB_ENV"
       - name: Browser walks (profile, classroom, topic test, QR join, teacher–student and general tests on iPhone / small-phone WebKit, Pro flag off)
-        run: SIM_OUT=/tmp/sim bash tools/ci_local_server.sh profile_e2e admin_flag_e2e classroom_e2e topics_e2e quick_e2e classroom_v2_e2e general_e2e pro_off_e2e attestation_off_e2e photos_e2e contrast_e2e layout_e2e states_e2e photo_ui_e2e
+        run: SIM_OUT=/tmp/sim bash tools/ci_local_server.sh profile_e2e admin_flag_e2e classroom_e2e topics_e2e quick_e2e classroom_v2_e2e general_e2e pro_off_e2e premium_off_e2e attestation_off_e2e photos_e2e contrast_e2e layout_e2e states_e2e photo_ui_e2e
       # Pro/Free ON: a second build (VITE_PRO_ENABLED=1) and a second server (PRO_ENABLED=1), run after every flag-off step above
       # because the helper rewrites .dev.vars. Covers the trial, one trial per person, the gates, the webhook, admin grants and the paywall.
       - name: Pro/Free with the flag on (API + browser)
         run: |
           VITE_PRO_ENABLED=1 npx vite build --outDir dist-pro --emptyOutDir
-          PRO_ENABLED=1 DIST=dist-pro DE_PORT=8803 D1_PERSIST=.wrangler/state-pro bash tools/ci_local_server.sh pro_test pro_trial_test pro_e2e attestation_on_e2e
+          PRO_ENABLED=1 DIST=dist-pro DE_PORT=8803 D1_PERSIST=.wrangler/state-pro bash tools/ci_local_server.sh pro_test pro_trial_test premium_test pro_e2e premium_e2e attestation_on_e2e
       - name: Live site on a TV and slides in present mode
         run: python3 tools/present_test.py dist
       - name: Education edition (Android / Google Play) has no patient role, dentist search, booking or patient records

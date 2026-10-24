@@ -1,6 +1,6 @@
 import {useSyncExternalStore} from 'react';
 import {Capacitor,registerPlugin} from '@capacitor/core';
-import {FEATURE_ROLES,FREE,PLANS,planForRole,type Period,type PlanRole,type ProFeature,type ProState} from './proConfig';
+import {FEATURE_ROLES,FREE,PLANS,PREMIUM,PREMIUM_PRODUCTS,planForRole,type Period,type PlanRole,type ProFeature,type ProState} from './proConfig';
 import {callApi,fetchAuth,type AuthUser} from './api';
 
 /** Pro / Free on the client. OFF unless the build sets VITE_PRO_ENABLED=1 (and the server PRO_ENABLED=1): then every
@@ -75,7 +75,7 @@ export interface BillingProvider{
  available():Promise<boolean>;
  /** Links store purchases to our account id (RevenueCat app_user_id); the server webhook reads it. */
  identify(userId:string):Promise<void>;
- /** Store prices in the local currency for the given role's two products, when the store answered. */
+ /** Store prices in the local currency for the given role's two products and the two Premium ones, when the store answered. */
  offers(role:PlanRole):Promise<Offer[]>;
  purchase(productId:string):Promise<PurchaseResult>;
  restore():Promise<'ok'|'error'>;
@@ -112,7 +112,8 @@ const revenueCat:BillingProvider={
   try{
    const o=await rc!.getOfferings();pkgs=o.current?.availablePackages||[];
    const mine=planForRole(role);if(!mine)return [];
-   return pkgs.filter(p=>[mine.monthly.product,mine.yearly.product].includes(p.product.identifier.split(':')[0]))
+   // The role's own two products and the two Premium ones (Premium is offered to every role).
+   return pkgs.filter(p=>[mine.monthly.product,mine.yearly.product,...PREMIUM_PRODUCTS].includes(p.product.identifier.split(':')[0]))
     .map(p=>({productId:p.product.identifier.split(':')[0],period:periodOf(p.product.identifier),price:p.product.priceString}));
   }catch{return []}
  },
@@ -139,7 +140,12 @@ export async function refreshPro(tries=1,wantActive=false):Promise<ProState|null
  return snap.pro;
 }
 
-/** USD list price of the user's plan, for the web text and as a fallback while the store prices load. */
-export const listPrice=(role:PlanRole,period:Period)=>PLANS[role][period].usd;
+/** The plan a card belongs to: the role's own plan or Premium (all roles). */
+export type PlanKind='role'|'premium';
+const planOf=(role:PlanRole,kind:PlanKind)=>kind==='premium'?PREMIUM:PLANS[role];
+/** USD list price of the user's plan (or of Premium), for the web text and as a fallback while the store prices load. */
+export const listPrice=(role:PlanRole,period:Period,kind:PlanKind='role')=>planOf(role,kind)[period].usd;
+/** Store product id of a card. */
+export const productOf=(role:PlanRole,period:Period,kind:PlanKind='role')=>planOf(role,kind)[period].product;
 /** Percent saved by the yearly plan against twelve months, computed from the config. */
-export const yearlySavingPct=(role:PlanRole)=>{const p=PLANS[role];return Math.max(0,Math.round((1-p.yearly.usd/(p.monthly.usd*12))*100))};
+export const yearlySavingPct=(role:PlanRole,kind:PlanKind='role')=>{const p=planOf(role,kind);return Math.max(0,Math.round((1-p.yearly.usd/(p.monthly.usd*12))*100))};

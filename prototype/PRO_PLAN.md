@@ -12,8 +12,9 @@ Status: built on branch `feat/pro`, **OFF by default**. With the flag off the ap
 | Student | 1.49 | 9.99 | `de_student_monthly`, `de_student_yearly` |
 | Teacher | 2.49 | 24.99 | `de_teacher_monthly`, `de_teacher_yearly` |
 | Specialist (dentist) | 3.49 | 34.99 | `de_specialist_monthly`, `de_specialist_yearly` |
+| **Premium** (all roles) | 4.99 | 49.99 | `de_premium_monthly`, `de_premium_yearly` |
 
-Patients: always free, no paywall, no plan row. All numbers, ids, the trial length and the Free limits live in **one module**, `src/proConfig.ts`, imported by the app and the server. The yearly saving shown on the paywall is computed from it.
+Premium is Pro for every role in one plan (student, teacher and specialist features). Patients: always free, no paywall, no plan row. All numbers, ids, the trial length and the Free limits live in **one module**, `src/proConfig.ts`, imported by the app and the server. The yearly saving shown on the paywall is computed from it.
 
 ## Trial
 - Every account gets 30 days of everything, no card. Existing accounts: 30 days from the migration (`0016_pro.sql`). New accounts: 30 days from sign-up.
@@ -49,9 +50,10 @@ Students in a class are never affected by their teacher's tier. Existing groups 
 
 ## Entitlement
 `entitlement(user)` (`functions/_lib/entitlement.ts`) returns `{active, reason: trial|paid|admin-grant|free, trialEndsAt, expiresAt, plan, trialUsed, heldRole}`.
-- Order: admin grant, paid plan of the account's **current role**, trial, free.
-- **Plans are bound to the role.** A Student plan unlocks only student features; after a switch to teacher or dentist the account gets nothing from it (`heldRole='student'`, the paywall says "you hold the Student plan; the Teacher role needs the Teacher plan"). Admin grants work for any role. Role switches stay limited to 10 a day.
-- The webhook refuses (ignores) a purchase whose product does not belong to the account's role.
+- Order: admin grant, paid plan of the account's **current role** or a **Premium** plan (any role), trial, free.
+- **Plans are bound to the role.** A Student plan unlocks only student features; after a switch to teacher or dentist the account gets nothing from it (`heldRole='student'`, the paywall says "you hold the Student plan; the Teacher role needs the Teacher plan"). **Premium is the exception: it is not bound to a role.** While a Premium subscription is live, `active` is true for student, teacher and dentist alike, it unlocks every Pro feature of the current role (also after a role switch, no `heldRole`), and patients still never need it. A role-bound plan held next to a different role is offered the Premium upgrade on the paywall ("one plan for all your roles"). Admin grants work for any role. Role switches stay limited to 10 a day.
+- The webhook refuses (ignores) a purchase whose product does not belong to the account's role; the two Premium products are exempt and accepted for any account role (same idempotency and ordering). A Premium dentist is listed in the public listing like a Specialist subscriber.
+- Paywall: the role's own plan and a separate Premium group ("Everything unlocked: all roles") with the yearly saving computed from the config; one line under the Free vs Pro table says Premium = Pro for every role. Profil "Plan" row reads "Premium" when active. The web still sells nothing.
 
 ## Billing flow
 1. App (native, with the purchase plugin, see `BILLING_SETUP.md`) shows the paywall for the user's role, buys through RevenueCat with `app_user_id = our user id`.
@@ -66,7 +68,7 @@ Admin panel, Pro tab: grant Pro to **any e-mail** for 1/3/6/12 months or until r
 Trial claims store only salted hashes (e-mail, device id, cookie, coarse network). Mention "device identifier used to prevent abuse of the free trial" in the App Privacy / Data safety answers (see `BILLING_SETUP.md`).
 
 ## Tests
-`tools/pro_test.py` (trial, gates, webhook, admin grants), `tools/pro_trial_test.py` (one trial per person, role-bound plans, admin reset), `tools/pro_off_test.py` (flag off), `tools/pro_e2e.py` and `tools/pro_off_e2e.py` (paywall, 360x640 and 390x844, flag on/off). All run in `.github/workflows/checks.yml`.
+`tools/pro_test.py` (trial, gates, webhook, admin grants), `tools/pro_trial_test.py` (one trial per person, role-bound plans, admin reset), `tools/pro_off_test.py` (flag off), `tools/premium_test.py` (Premium webhook, role switch, expiry, idempotency, ordering), `tools/premium_e2e.py` / `premium_off_e2e.py` (Premium cards at 360x640 and 390x844 for the three roles; flag off: no paywall), `tools/pro_e2e.py` and `tools/pro_off_e2e.py` (paywall, 360x640 and 390x844, flag on/off). All run in `.github/workflows/checks.yml`.
 
 ## Attestation prep (Attestatsiya tayyorgarligi) and the Free limit
 Free: 20 attestation questions per UTC day, counted **on the device** (`attestationLeft` / `takeAttestation` in `src/billing.ts`, limit `FREE.attestationPerDay` in `src/proConfig.ts`); a test is shortened to what is left. Pro (trial, paid, admin grant): unlimited. Flag off: unlimited. Why not the server counter `/api/billing/practice`: the question files ship with the app as static chunks, so a server count would not protect anything, and it would mix with the picture-practice allowance. Answer keys never travel through the API. When the allowance is used up the existing `practice` paywall opens. The section is hidden in English (uz and ru only).

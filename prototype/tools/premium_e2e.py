@@ -28,7 +28,7 @@ def overflow(pg):return pg.evaluate('document.documentElement.scrollWidth>innerW
 with sync_playwright() as p:
     b=p.chromium.launch(executable_path=os.environ.get('CHROMIUM_PATH','/usr/bin/chromium'),args=['--no-sandbox'])
     if MODE=='off':
-        ctx,_,_=account(b,'student');pg=ctx.new_page();errs=[];pg.on('pageerror',lambda x:errs.append(str(x)))
+        ctx,_,_=account(b,'student',False);pg=ctx.new_page();errs=[];pg.on('pageerror',lambda x:errs.append(str(x)))
         pg.goto(BASE+'/?screen=settings&lang=en');pg.wait_for_selector('.pf',timeout=8000)
         check('flag off: no plan row, no Premium text anywhere',pg.locator('.pf-plan').count()==0 and 'Premium' not in pg.locator('body').inner_text())
         check('flag off: no paywall element',pg.locator('.pw').count()==0 and not errs)

@@ -5,14 +5,15 @@ The code is written against a small provider interface (`src/billing.ts`). The p
 ## 1. RevenueCat
 1. Create a RevenueCat project, add an **iOS** app (bundle id of Dental Expert) and an **Android** app (package name).
 2. Entitlement: one entitlement, e.g. `pro`. Products below attach to it. (The server decides access from our own table; RevenueCat is the receipt checker and event source.)
-3. Offerings: a `default` offering with six packages (monthly and yearly of each plan). The app picks the two packages of the user's role by product id.
+3. Offerings: a `default` offering with **eight** packages (monthly and yearly of Student, Teacher, Specialist and Premium). The app shows the two packages of the user's role plus the two Premium ones, picked by product id. Attach all eight products to the one entitlement `pro` (Premium included); the server decides access from its own table anyway.
 4. API keys: the public **iOS** SDK key and **Android** SDK key.
 5. Integrations, Webhooks: URL `https://<your-domain>/api/billing/webhook`, Authorization header value = a long random secret you invent (also set as `REVENUECAT_WEBHOOK_AUTH` below). Send events for all products.
 
 ## 2. App Store Connect
 1. Agreements, Tax, Banking: paid-apps agreement active.
-2. One **subscription group** ("Dental Expert Pro") with six auto-renewable subscriptions, ids exactly:
-   `de_student_monthly` 1.49, `de_student_yearly` 9.99, `de_teacher_monthly` 2.49, `de_teacher_yearly` 24.99, `de_specialist_monthly` 3.49, `de_specialist_yearly` 34.99 (USD; pick the nearest tier, Apple converts to local currencies).
+2. One **subscription group** ("Dental Expert Pro") with **eight** auto-renewable subscriptions, ids exactly:
+   `de_student_monthly` 1.49, `de_student_yearly` 9.99, `de_teacher_monthly` 2.49, `de_teacher_yearly` 24.99, `de_specialist_monthly` 3.49, `de_specialist_yearly` 34.99, `de_premium_monthly` 4.99, `de_premium_yearly` 49.99 (USD; pick the nearest tier, Apple converts to local currencies). Names: Student / Teacher / Specialist / Premium, monthly and yearly (Premium description: "Everything unlocked for every role").
+   **Premium must be in the same subscription group** as the other six, so a user can switch between plans (upgrade, downgrade, crossgrade) without being billed twice: the store replaces the old subscription. Set the levels in the group so Premium ranks above Specialist, Teacher, Student (yearly above monthly within a plan).
 3. **No introductory offer / free trial in the store** (the 30-day trial is server-side, no card). Do not configure one.
 4. Localizations (uz/ru/en display name and description) and a review screenshot of the paywall for each subscription.
 5. App Review notes: describe the roles and plans; give the reviewer account (`REVIEW_ACCOUNTS`) a note that Pro is active for it. The paywall already shows: price, period, auto-renew text, cancellation path, links to Terms of Use (Apple standard EULA) and Privacy Policy, and "Restore purchases". Add the Privacy Policy URL and the EULA link in the app metadata.
@@ -20,7 +21,7 @@ The code is written against a small provider interface (`src/billing.ts`). The p
 
 ## 3. Google Play Console
 1. Merchant account and payments profile.
-2. Subscriptions with the same six product ids; one base plan each (monthly or yearly auto-renewing), prices in USD with automatic local conversion. **No free-trial offer** (server-side trial).
+2. Subscriptions with the same eight product ids (Premium included); one base plan each (monthly or yearly auto-renewing), prices in USD with automatic local conversion. **No free-trial offer** (server-side trial). Play has no subscription groups: switching between separate subscriptions is a cancel plus new purchase, so tell Premium buyers to cancel the old plan in Play (RevenueCat's product-change handling covers plans inside one subscription only).
 3. Real-time developer notifications are handled by RevenueCat: link the Play service-account credentials in RevenueCat.
 4. License testers for internal testing. The Android build is the Education edition; Pro works the same, prices are the store's local currency.
 
@@ -50,7 +51,7 @@ Price and period on each plan card (store price when available), auto-renew and 
 - RevenueCat processes purchase data: list it among processors.
 
 ## 8. Launch checklist
-1. Products approved/active in both stores and added to the RevenueCat offering.
+1. All eight products approved/active in both stores (Premium in the same group / upgrade path as the others) and added to the RevenueCat offering.
 2. Migration applied; `REVENUECAT_WEBHOOK_AUTH`, `TRIAL_PEPPER` set; send a RevenueCat **TEST** event (answers `ignored: type`, 200).
 3. Build a TestFlight/internal build with `VITE_PRO_ENABLED=1` and the plugin; verify purchase, renewal, cancel, restore, expiry.
 4. Set `PRO_ENABLED=1` on the server, release the apps. To roll back, unset `PRO_ENABLED`: everything is free again at once.
