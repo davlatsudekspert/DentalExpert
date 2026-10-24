@@ -13,6 +13,8 @@ Photographs bundled in the app (`src/photos/*.webp`). All are from Wikimedia Com
 | `impl.webp` | Implant overdenture model | Coronation Dental Specialty Group | [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0) | [Commons file page](https://commons.wikimedia.org/wiki/File:Implant_overdenture_model.jpg) | resized to 1000px wide, converted to WebP |
 | `ortho.webp` | Orthopantomogram of severe dental crowding | Challiyan | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0) | [Commons file page](https://commons.wikimedia.org/wiki/File:Orthopantomogram_of_severe_dental_crowding.jpg) | resized to 1000px wide, converted to WebP |
 | `mfs.webp` | Human mandible mental protuberance | Petter Bøckman | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0) | [Commons file page](https://commons.wikimedia.org/wiki/File:Human_mandible_mental_protuberance.jpg) | resized to 1000px wide, converted to WebP |
+| `card.webp` | Dental Caries Cavity 2 (cropped) | Suyash.dwivedi | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0) | [Commons file page](https://commons.wikimedia.org/wiki/File:Dental_Caries_Cavity_2_(cropped).JPG) | resized to 1000px wide, converted to WebP |
+| `prev.webp` | Dentalni hygiena - pomucky | Milenafoto | [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0) | [Commons file page](https://commons.wikimedia.org/wiki/File:Dentalni_hygiena_-_pomucky.jpg) | cropped (the two product labels at the left and right edges are cut away), resized to 1000px wide, converted to WebP |
 
 Derivatives of CC BY-SA images (the crops and WebP conversions here) are shared under the same licence as the original.
 

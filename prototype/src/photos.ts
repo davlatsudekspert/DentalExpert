@@ -10,4 +10,8 @@ export const photoInfo=(file:string)=>byFile.get(file);
 export const photoAlt=(file:string,lang:Lang)=>byFile.get(file)?.alt[lang]||'';
 
 /** Subject -> cover photo (only subjects with a clean, correctly matching image appear here; others keep their icon). */
-export const SUBJECT_PHOTO:Record<string,string>={radio:'radio.webp',ped:'ped.webp',endo:'endo.webp',surg:'surg.webp',pros:'pros.webp',perio:'perio.webp',impl:'impl.webp',ortho:'ortho.webp',mfs:'mfs.webp'};
+export const SUBJECT_PHOTO:Record<string,string>={radio:'radio.webp',ped:'ped.webp',endo:'endo.webp',surg:'surg.webp',pros:'pros.webp',perio:'perio.webp',impl:'impl.webp',ortho:'ortho.webp',mfs:'mfs.webp',card:'card.webp',prev:'prev.webp'};
+
+/** Focal point (CSS object-position) for the wide hero crop, so the subject of each photo stays inside the 16:7 box. */
+export const PHOTO_FOCUS:Record<string,string>={'endo.webp':'50% 22%','mfs.webp':'50% 64%','impl.webp':'50% 58%','pros.webp':'50% 34%','perio.webp':'50% 58%','surg.webp':'50% 40%','ortho.webp':'50% 55%','ped.webp':'50% 55%','card.webp':'45% 62%','prev.webp':'50% 58%'};
+export const photoFocus=(file:string)=>PHOTO_FOCUS[file]||'50% 50%';
