@@ -1,16 +1,13 @@
+import {compareTable} from './proCompare';
+import {attestationOn} from './attestationConfig';
 import {useEffect,useState} from 'react';
 import {Check,Lock,RotateCcw,X} from 'lucide-react';
 import {billing,hidePaywall,listPrice,PRO_ENABLED,proActive,refreshPro,usePaywall,usePro,yearlySavingPct,type Offer} from './billing';
-import {daysLeft,FEATURE_ROLES,FREE,PLANS,planForRole,PRO_FEATURES,TRIAL_DAYS,type Period,type PlanRole,type ProFeature} from './proConfig';
+import {daysLeft,FREE,PLANS,planForRole,TRIAL_DAYS,type Period,type PlanRole,type ProFeature} from './proConfig';
 import type {Lang} from './discoveryData';
 import {EDU} from './edition';
 import './pro.css';
 
-const FEATURE_TEXT:Record<Lang,Record<ProFeature,string>>={
- uz:{topics:'To‘liq o‘quv reja: barcha mavzular va testlar',practice:'Cheksiz rasmli amaliyot',exam:'Imtihon rejimi',review:'Takrorlash (oraliqli eslatma)',atlas3d:'To‘liq 3D atlas',groups:'Cheksiz guruhlar',generalTests:'Umumiy testlar',present:'Taqdimot rejimi',listing:'Ommaviy tasdiqlangan stomatolog ro‘yxati'},
- ru:{topics:'Полный учебный план: все темы и тесты',practice:'Практика по картинкам без лимита',exam:'Режим экзамена',review:'Повторение с интервалами',atlas3d:'Полный 3D-атлас',groups:'Любое число групп',generalTests:'Общие тесты',present:'Режим презентации',listing:'Публичный список проверенных стоматологов'},
- en:{topics:'Full curriculum: every topic and quiz',practice:'Unlimited picture practice',exam:'Exam mode',review:'Spaced-repetition review',atlas3d:'Full 3D atlas',groups:'Unlimited groups',generalTests:'General tests',present:'Presentation mode',listing:'Public verified-dentist listing'}
-};
 const W={
  uz:{title:'Dental Expert Pro',trial:(n:number)=>`Sinov muddati: ${n} kun qoldi`,trialEnded:'Sinov muddati tugadi: hozir bepul rejadasiz',paid:'Pro faol',grant:'Pro faol (sovg‘a)',until:(d:string)=>`${d} gacha`,
   free:(n:number)=>`Bepul reja: kuniga ${n} ta mashq savoli, har fan bo‘yicha dastlabki ${FREE.topicsPerSubject} ta mavzu, ${FREE.groups} ta guruh. Sinfingizdagi testlar har doim bepul.`,
@@ -78,8 +75,7 @@ export default function PaywallHost({lang,onSignIn}:{lang:Lang;onSignIn:()=>void
   setBusy(false)};
  const restore=async()=>{if(busy)return;setBusy(true);setMsg('');const r=await billing.restore();if(r==='ok'){await refreshPro(4,true);setMsg(t.restored)}else setMsg(t.err);setBusy(false)};
  // The Android education edition has no public dentist listing, so it is not offered there.
- const features=PRO_FEATURES.filter(f=>(!role||FEATURE_ROLES[f].includes(role as PlanRole))&&!(EDU&&f==='listing'));
- const status=planStatus(lang,pro);
+  const status=planStatus(lang,pro);
  return <div className="quiz-run pw" role="dialog" aria-modal="true" aria-label={t.title}>
   <div className="quiz-run-bar"><strong>{t.title}</strong><button data-close onClick={hidePaywall} aria-label={t.close}><X size={20}/></button></div>
   <div className="quiz-run-body pw-body">
@@ -88,7 +84,11 @@ export default function PaywallHost({lang,onSignIn}:{lang:Lang;onSignIn:()=>void
    {status&&<p className={'pw-status'+(pro?.reason==='trial'?' pw-trial':'')} role="status">{status}</p>}
    {feature&&!proActive()&&<p className="pw-why"><Lock size={15}/>{t.why[feature]}</p>}
    {!proActive()&&<p className="pw-free">{t.free(FREE.practicePerDay)}</p>}
-   <ul className="pw-features">{features.map(f=><li key={f}><Check size={16}/>{FEATURE_TEXT[lang][f]}</li>)}</ul>
+   {(()=>{const c=compareTable(lang,role||'',{attestation:attestationOn(lang),listing:!EDU});return <div className="pw-compare" role="table" aria-label={c.title}>
+    <h3>{c.title}</h3>
+    <div className="pw-row pw-head" role="row"><span role="columnheader"/><span role="columnheader">{c.free}</span><span role="columnheader">{c.pro}</span></div>
+    {c.rows.map(r=><div key={r.id} className="pw-row" role="row"><span role="rowheader">{r.label}</span><span className={r.locked?'pw-no':''} role="cell">{r.free}</span><b role="cell">{r.pro}</b></div>)}
+    <p className="muted pw-always">{c.always}</p></div>})()}
    {!userId?<><p className="muted">{t.signin}</p><button className="button" onClick={()=>{hidePaywall();onSignIn()}}>{t.signinBtn}</button></>
     :plan&&<>
      <div className="pw-plans" role="radiogroup" aria-label={t.title}>
