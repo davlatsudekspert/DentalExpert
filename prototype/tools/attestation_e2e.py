@@ -65,6 +65,8 @@ with sync_playwright() as p:
     ctx=account(b,(390,844));pg=ctx.new_page();errs=[];pg.on('pageerror',lambda x:errs.append(str(x)))
     for lang,label in [('uz','Bilim va malakani baholash'),('ru','Проверка знаний и компетенций')]:
         pg.goto(BASE+f'/?screen=courses&lang={lang}');pg.wait_for_selector('.learn-tabs',timeout=8000)
+        # the tabs first render for the signed-out default role; the student's tab set follows once /auth/me answers
+        pg.locator('.learn-tabs button',has_text=label).first.wait_for(timeout=8000)
         check(f'{lang}: Attestation tab present',pg.locator('.learn-tabs button',has_text=label).count()==1)
     pg.locator('.learn-tabs button',has_text='Проверка знаний и компетенций').click();pg.wait_for_selector('.at-list',timeout=6000)
     check('ru: no guarantee / not-official warning on the list','гарантирует' not in pg.locator('main.phone').inner_text() and 'не связано с государственными' in pg.locator('main.phone').inner_text())

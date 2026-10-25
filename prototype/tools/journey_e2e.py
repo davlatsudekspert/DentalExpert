@@ -4,9 +4,14 @@ import os,json,time,re
 from playwright.sync_api import sync_playwright
 BASE=f'http://127.0.0.1:{os.environ.get("DE_PORT","8788")}'
 HD={'content-type':'application/json'}
+import random
+def newctx(b,w=390,h=844):
+    """A phone context with its own client address, so the per-address code limit (20 an hour) does not stop a long walk."""
+    return b.new_context(viewport={'width':w,'height':h},is_mobile=True,has_touch=True,
+                         extra_http_headers={'cf-connecting-ip':'10.%d.%d.%d'%(random.randrange(256),random.randrange(256),random.randrange(1,255))})
 def check(n,c):print(('PASS ' if c else 'FAIL ')+n);assert c,n
 def signin(b,role,lang):
-    ctx=b.new_context(viewport={'width':390,'height':844},is_mobile=True,has_touch=True)
+    ctx=newctx(b)
     e=f'{role}+{time.time_ns()}@example.com'
     r=ctx.request.post(BASE+'/api/auth/request-code',data=json.dumps({'email':e,'name':'Ali Abduraxmonov','role':role,'lang':lang}),headers=HD).json()
     ctx.request.post(BASE+'/api/auth/verify',data=json.dumps({'email':e,'code':r['devCode']}),headers=HD)
@@ -54,7 +59,7 @@ with sync_playwright() as p:
         check(f'{lang} ({fail}): Retry signs the user straight back in (home with the tab bar)',pg.locator('nav.bottom-nav').count()==1)
         ctx.close()
     # A first launch offline: language and role can still be chosen; the sign-up step shows the notice, not the demo form.
-    ctx=b.new_context(viewport={'width':390,'height':844},is_mobile=True,has_touch=True);pg=ctx.new_page()
+    ctx=newctx(b);pg=ctx.new_page()
     ctx.route(re.compile(r'/api/'),lambda rt:rt.abort())
     pg.goto(f'{BASE}/');pg.wait_for_timeout(1200);pg.locator('button').filter(has_text='English').first.click();pg.wait_for_timeout(400)
     pg.locator('.role-card').nth(3).click();pg.locator('button.button').last.click();pg.wait_for_timeout(600)

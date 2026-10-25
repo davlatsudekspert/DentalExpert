@@ -3,28 +3,28 @@ import {attestationOn} from './attestationConfig';
 import {useEffect,useState} from 'react';
 import {Check,Lock,RotateCcw,X} from 'lucide-react';
 import {billing,hidePaywall,listPrice,PRO_ENABLED,proActive,productOf,refreshPro,usePaywall,usePro,yearlySavingPct,type Offer,type PlanKind} from './billing';
-import {daysLeft,FREE,isPremiumProduct,planForRole,TRIAL_DAYS,type Period,type PlanRole,type ProFeature} from './proConfig';
+import {daysLeft,FEATURE_ROLES,FREE,isPremiumProduct,planForRole,TRIAL_DAYS,type Period,type PlanRole,type ProFeature} from './proConfig';
 import type {Lang} from './discoveryData';
 import {EDU} from './edition';
 import './pro.css';
 
 const W={
  uz:{title:'Dental Expert Pro',trial:(n:number)=>`Sinov muddati: ${n} kun qoldi`,trialEnded:'Sinov muddati tugadi: hozir bepul rejadasiz',paid:'Pro faol',grant:'Pro faol (sovg‘a)',until:(d:string)=>`${d} gacha`,
-  free:(n:number)=>`Bepul reja: kuniga ${n} ta mashq savoli, har fan bo‘yicha dastlabki ${FREE.topicsPerSubject} ta mavzu, ${FREE.groups} ta guruh. Sinfingizdagi testlar har doim bepul.`,
+  free:(n:number,g:boolean)=>`Bepul reja: kuniga ${n} ta mashq savoli, har fan bo‘yicha dastlabki ${FREE.topicsPerSubject} ta mavzu${g?`, ${FREE.groups} ta guruh`:''}. Sinfingizdagi testlar har doim bepul.`,
   why:{topics:'Bu mavzu Pro tarkibida.',practice:`Bugungi ${FREE.practicePerDay} ta bepul savol tugadi.`,exam:'Imtihon rejimi Pro tarkibida.',review:'Takrorlash Pro tarkibida.',atlas3d:'To‘liq 3D atlas Pro tarkibida.',groups:`Bepul rejada ${FREE.groups} ta guruh.`,generalTests:'Umumiy testlar Pro tarkibida.',present:'Taqdimot rejimi Pro tarkibida.',listing:'Ommaviy ro‘yxat Pro tarkibida.'} as Record<ProFeature,string>,
   month:'Oylik',year:'Yillik',per:{monthly:'oyiga',yearly:'yiliga'},save:(p:number)=>`${p}% tejash`,buy:'Obuna bo‘lish',busy:'Kuting…',restore:'Xaridlarni tiklash',close:'Yopish',
   appOnly:'Obuna iOS yoki Android ilovasida rasmiylashtiriladi. Ilovada shu hisob bilan kiring: Pro bu yerda ham ishlaydi.',signin:'Sinov va obuna uchun hisobingizga kiring.',signinBtn:'Kirish',
   renew:'Obuna tanlangan davr oxirida avtomatik yangilanadi, agar uni kamida 24 soat oldin do‘kon sozlamalarida bekor qilmasangiz. To‘lov Apple ID yoki Google Play hisobingizdan yechiladi. Obunani App Store (Apple ID → Obunalar) yoki Google Play (Obunalar) orqali boshqarasiz va bekor qilasiz.',
   trialUsed:'Bu qurilmada yoki hisobda sinov muddati allaqachon ishlatilgan: bepul rejadasiz.',held:(h:string,c:string)=>`Sizda ${h} tarifi bor; ${c} paneli uchun ${c} tarifi kerak.`,roleNames:{student:'Talaba',teacher:'Ustoz',dentist:'Mutaxassis'} as Record<string,string>,terms:'Foydalanish shartlari',privacy:'Maxfiylik siyosati',ok:'Pro faollashtirildi',wait:'To‘lov qabul qilindi, Pro tez orada faollashadi.',err:'Xarid amalga oshmadi. Qayta urinib ko‘ring.',restored:'Tiklash tugadi.',list:'Narx (USD)',patient:'Bemorlar uchun ilova bepul.',premium:'Premium',premiumTag:'Hammasi ochiq: barcha rollar',premiumLine:'Premium = barcha rollar uchun Pro: talaba, ustoz va mutaxassis imkoniyatlari bitta tarifda.',upgrade:'Barcha rollaringiz uchun bitta tarif: Premium.',ownHead:(r:string)=>`${r} tarifi`},
  ru:{title:'Dental Expert Pro',trial:(n:number)=>`Пробный период: осталось ${n} дн.`,trialEnded:'Пробный период закончился: сейчас бесплатный план',paid:'Pro активен',grant:'Pro активен (подарок)',until:(d:string)=>`до ${d}`,
-  free:(n:number)=>`Бесплатный план: ${n} вопросов практики в день, первые ${FREE.topicsPerSubject} темы каждого предмета, ${FREE.groups} группа. Тесты вашего класса всегда бесплатны.`,
+  free:(n:number,g:boolean)=>`Бесплатный план: ${n} вопросов практики в день, первые ${FREE.topicsPerSubject} темы каждого предмета${g?`, ${FREE.groups} группа`:''}. Тесты вашего класса всегда бесплатны.`,
   why:{topics:'Эта тема входит в Pro.',practice:`Бесплатные ${FREE.practicePerDay} вопросов на сегодня закончились.`,exam:'Режим экзамена входит в Pro.',review:'Повторение входит в Pro.',atlas3d:'Полный 3D-атлас входит в Pro.',groups:`В бесплатном плане ${FREE.groups} группа.`,generalTests:'Общие тесты входят в Pro.',present:'Режим презентации входит в Pro.',listing:'Публичный список входит в Pro.'} as Record<ProFeature,string>,
   month:'Месяц',year:'Год',per:{monthly:'в месяц',yearly:'в год'},save:(p:number)=>`выгода ${p}%`,buy:'Оформить подписку',busy:'Подождите…',restore:'Восстановить покупки',close:'Закрыть',
   appOnly:'Подписка оформляется в приложении для iOS или Android. Войдите в приложении с этим аккаунтом: Pro заработает и здесь.',signin:'Войдите в аккаунт, чтобы начать пробный период и подписку.',signinBtn:'Войти',
   renew:'Подписка продлевается автоматически в конце выбранного периода, если не отменить её в настройках магазина минимум за 24 часа. Оплата списывается с вашего Apple ID или аккаунта Google Play. Управлять подпиской и отменить её можно в App Store (Apple ID → Подписки) или Google Play (Подписки).',
   trialUsed:'Пробный период на этом устройстве или аккаунте уже использован: у вас бесплатный план.',held:(h:string,c:string)=>`У вас тариф «${h}»; для роли «${c}» нужен тариф «${c}».`,roleNames:{student:'Студент',teacher:'Преподаватель',dentist:'Специалист'} as Record<string,string>,terms:'Условия использования',privacy:'Политика конфиденциальности',ok:'Pro активирован',wait:'Платёж принят, Pro скоро заработает.',err:'Покупка не удалась. Попробуйте ещё раз.',restored:'Восстановление завершено.',list:'Цена (USD)',patient:'Для пациентов приложение бесплатно.',premium:'Premium',premiumTag:'Всё открыто: все роли',premiumLine:'Premium = Pro для всех ролей: возможности студента, преподавателя и специалиста в одном тарифе.',upgrade:'Один тариф для всех ваших ролей: Premium.',ownHead:(r:string)=>`Тариф «${r}»`},
  en:{title:'Dental Expert Pro',trial:(n:number)=>`Free trial: ${n} ${n===1?'day':'days'} left`,trialEnded:'Your free trial has ended: you are on the Free plan',paid:'Pro is active',grant:'Pro is active (gift)',until:(d:string)=>`until ${d}`,
-  free:(n:number)=>`Free plan: ${n} practice questions a day, the first ${FREE.topicsPerSubject} topics of each subject, ${FREE.groups} group. Tests in your class are always free.`,
+  free:(n:number,g:boolean)=>`Free plan: ${n} practice questions a day, the first ${FREE.topicsPerSubject} topics of each subject${g?`, ${FREE.groups} group`:''}. Tests in your class are always free.`,
   why:{topics:'This topic is part of Pro.',practice:`You have used today’s ${FREE.practicePerDay} free questions.`,exam:'Exam mode is part of Pro.',review:'Review is part of Pro.',atlas3d:'The full 3D atlas is part of Pro.',groups:`The Free plan has ${FREE.groups} group.`,generalTests:'General tests are part of Pro.',present:'Presentation mode is part of Pro.',listing:'The public listing is part of Pro.'} as Record<ProFeature,string>,
   month:'Monthly',year:'Yearly',per:{monthly:'per month',yearly:'per year'},save:(p:number)=>`save ${p}%`,buy:'Subscribe',busy:'Please wait…',restore:'Restore purchases',close:'Close',
   appOnly:'Subscriptions are bought in the iOS or Android app. Sign in there with this account and Pro works here too.',signin:'Sign in to start your free trial or subscribe.',signinBtn:'Sign in',
@@ -84,7 +84,7 @@ export default function PaywallHost({lang,onSignIn}:{lang:Lang;onSignIn:()=>void
    {heldNote(lang,pro,role)&&<p className="pw-why" role="note">{heldNote(lang,pro,role)} {t.upgrade}</p>}
    {status&&<p className={'pw-status'+(pro?.reason==='trial'?' pw-trial':'')} role="status">{status}</p>}
    {feature&&!proActive()&&<p className="pw-why"><Lock size={15}/>{t.why[feature]}</p>}
-   {!proActive()&&<p className="pw-free">{t.free(FREE.practicePerDay)}</p>}
+   {!proActive()&&<p className="pw-free">{t.free(FREE.practicePerDay,FEATURE_ROLES.groups.includes(role as PlanRole))}</p>}
    {(()=>{const c=compareTable(lang,role||'',{attestation:attestationOn(lang),listing:!EDU});return <div className="pw-compare" role="table" aria-label={c.title}>
     <h3>{c.title}</h3>
     <div className="pw-row pw-head" role="row"><span role="columnheader"/><span role="columnheader">{c.free}</span><span role="columnheader">{c.pro}</span></div>
