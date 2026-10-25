@@ -32,6 +32,9 @@ for e in items:
     if not p.exists():fail(f'{f}: file not found in src/photos')
     elif p.stat().st_size>MAX_FILE:fail(f'{f}: {p.stat().st_size} bytes exceeds cap {MAX_FILE}')
     if not (e.get('width') and e.get('height')):fail(f'{f}: width/height required')
+    # Uzbek takes the singular after a number ("15–40 o‘lcham", not "o‘lchamlar"); tools/i18n_scan.py found one in a caption.
+    for k,v in (e.get('alt') or {}).items():
+        if k=='uz' and re.search(r'\d\s+[A-Za-zʻʼ‘’\']+lar\b',str(v)):fail(f'{f}: alt.uz has a plural after a number: {v!r}')
 total=0
 for p in sorted(PHOTOS.glob('*')):
     if p.suffix!='.webp':fail(f'{p.name}: only .webp allowed');continue

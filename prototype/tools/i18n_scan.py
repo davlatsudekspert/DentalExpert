@@ -42,6 +42,7 @@ RU_LATIN_OK = {
     'dental', 'expert', 'fdi', '3d', 'uzs', 'aed', 'usd', 'email', 'e-mail', 'google', 'apple', 'testflight', 'app', 'store',
     'telegram', 'instagram', 'pptx', 'pdf', 'gps', 'sdk', 'gdpr', 'https', 'httponly', 'cookie', 'ip', 'cloudflare', 'resend',
     'id', 'ok', 'ph', 'ohi-s', 'linea', 'alba', 'in', 'vitro', 'leeway', 'space', 'tsdi', 'sammu', 'adti', 'afu', 'ios', 'android', 'plus', 'ru',  # 'RU' = the current-language badge
+    'keychain', 'keystore',  # the iOS / Android secure stores named in the privacy policy
 }
 # Common Uzbek words that must not appear in English text (compared lower-case, apostrophes normalised).
 UZ_WORDS = {
@@ -257,6 +258,9 @@ def main():
                     page.route('https://dental-demo.local/**', lambda route: route.fulfill(status=200, content_type='text/html', body=html))
                 # Keep the scan independent of a backend: API calls fail fast, the app falls back to bundled data.
                 page.route('**/api/**', lambda route: route.abort())
+                # ...except /auth/me, which answers "no backend here" (404): an aborted or 5xx /auth/me now means "offline" and the
+                # sign-in screens show a Retry notice instead of the forms this scan reads.
+                page.route('**/api/auth/me', lambda route: route.fulfill(status=404, content_type='text/plain', body='not found'))
 
             def collect(lang, where):
                 nonlocal visited
