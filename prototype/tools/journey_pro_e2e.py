@@ -65,5 +65,22 @@ with sync_playwright() as p:
             if free:check(f'{lang}: Free teacher: general test button has a lock and opens the paywall right away',has_lock and pg.evaluate(ON_TOP)=='top')
             else:check(f'{lang}: trial teacher: no lock, the general test builder opens',not has_lock and pg.locator('.quiz-run.pw').count()==0 and pg.locator('main input[type=search], main input').count()>0)
             ctx.close()
+
+    # D4: Admin, Pro tab: a 3-month grant for an e-mail without an account was listed as "Cheksiz (… · 3 oy)" (unlimited AND 3 months).
+    ctx=b.new_context(viewport={'width':390,'height':844},is_mobile=True,has_touch=True)
+    r=ctx.request.post(BASE+'/api/auth/request-code',data=json.dumps({'email':'davlatsudekspert@gmail.com','name':'Owner','role':'dentist','lang':'uz'}),headers=HD).json()
+    ctx.request.post(BASE+'/api/auth/verify',data=json.dumps({'email':'davlatsudekspert@gmail.com','code':r['devCode']}),headers=HD)
+    pg=ctx.new_page();pg.goto(f'{BASE}/?lang=uz');pg.wait_for_selector('nav.bottom-nav',timeout=10000)
+    pg.locator('nav.bottom-nav button').last.click();pg.wait_for_timeout(800)
+    pg.locator('main button').filter(has_text='Admin').first.click();pg.wait_for_timeout(1000)
+    pg.locator('.admin-tabs button').filter(has_text='Pro').click();pg.wait_for_timeout(900)
+    for months,label,word in (('3','3 oy','3 oy'),('all','Cheksiz','Cheksiz')):
+        target=f'pending{months}+{time.time_ns()}@example.com'
+        pg.locator('.admin-pro input').first.fill(target);pg.locator('.admin-pro select').first.select_option(months)
+        pg.locator('.admin-pro button.button').first.click();pg.wait_for_timeout(1200)
+        txt=pg.evaluate("t=>{const s=[...document.querySelectorAll('.quiz-run-body strong')].find(e=>e.textContent===t);return s?s.parentElement.querySelector('small').textContent:''}",target)
+        other='Cheksiz' if months=='3' else ' oy'
+        check(f'pending {label} grant listed as {label} only: "{txt[:60]}"',word in txt and other not in txt.split(' · bergan')[0] and 'boshlanadi' in txt)
+    ctx.close()
     b.close()
 print('journey_pro_e2e: all passed')

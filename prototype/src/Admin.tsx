@@ -131,7 +131,7 @@ function ProGrants(){
    <button className="button secondary" disabled={!rEmail.trim()} onClick={resetTrial}>Tiklash</button>
   </div></div>
   {list===null?<p className="muted">…</p>:list.length===0?<p className="muted">Faol sovg‘alar yo‘q.</p>:list.map(g=><div key={g.email} className="card admin-user">
-   <div><strong>{g.email}</strong>{g.pending&&<span className="pill warn">Kutilmoqda</span>}<small>{g.until?'gacha: '+g.until.slice(0,10):'Cheksiz'}{g.pending?' (ro‘yxatdan o‘tganda boshlanadi · '+(g.months?g.months+' oy':'cheksiz')+')':''} · bergan: {g.grantedBy} · {g.grantedAt.slice(0,10)}</small></div>
+   <div><strong>{g.email}</strong>{g.pending&&<span className="pill warn">Kutilmoqda</span>}<small>{g.pending?(g.months?g.months+' oy':'Cheksiz')+' (ro‘yxatdan o‘tganda boshlanadi)':g.until?'gacha: '+g.until.slice(0,10):'Cheksiz'} · bergan: {g.grantedBy} · {g.grantedAt.slice(0,10)}</small></div>
    <div className="admin-actions"><button className="button secondary" onClick={()=>revoke(g.email)}>Bekor qilish</button></div>
   </div>)}
  </div>;
