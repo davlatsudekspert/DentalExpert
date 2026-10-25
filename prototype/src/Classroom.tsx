@@ -1,6 +1,6 @@
 import {handleProRequired,proAllowed,showPaywall} from './billing';
 import {Suspense,lazy,useCallback,useEffect,useMemo,useRef,useState} from 'react';
-import {BarChart3,BookOpen,Check,ChevronLeft,ClipboardList,Copy,Eye,EyeOff,Layers,LogIn,Plus,Presentation,QrCode,Timer,Trash2,UserMinus,Users,Tv} from 'lucide-react';
+import {BarChart3,BookOpen,Check,ChevronLeft,ClipboardList,Copy,Eye,EyeOff,Layers,Lock,LogIn,Plus,Presentation,QrCode,Timer,Trash2,UserMinus,Users,Tv} from 'lucide-react';
 import qrcode from 'qrcode-generator';
 import {callApi,joinLink,parseJoin,type AuthUser} from './api';
 import {CLASSROOM_CHANGED,openJoin,openScan,takeAssignTopic} from './joinLink';
@@ -196,7 +196,7 @@ function GroupView({lang,group,teacher,user,initialTopic,onBack}:{lang:Lang;grou
    <h2>{group.name}</h2>
    {teacher&&memberCount===0&&<InviteCard lang={lang} group={group}/>}
    {!teacher&&<MyResults lang={lang} items={items}/>}
-   {teacher&&<div className="cr-actions lg-assign"><button className="button" onClick={()=>{setTab('plan');setTimeout(()=>document.querySelector('.lg-group .lg-tabs')?.scrollIntoView({block:'start',behavior:'smooth'}),50)}}><ClipboardList size={17}/>{assignWords[lang].topic}</button><button className="button secondary" onClick={()=>setGeneral(true)}><Layers size={17}/>{assignWords[lang].general}</button></div>}
+   {teacher&&<div className="cr-actions lg-assign"><button className="button" onClick={()=>{setTab('plan');setTimeout(()=>document.querySelector('.lg-group .lg-tabs')?.scrollIntoView({block:'start',behavior:'smooth'}),50)}}><ClipboardList size={17}/>{assignWords[lang].topic}</button><button className="button secondary" onClick={()=>{if(proAllowed('generalTests'))setGeneral(true);else showPaywall('generalTests')}}>{proAllowed('generalTests')?<Layers size={17}/>:<Lock size={17}/>}{assignWords[lang].general}</button></div>}
    <div className="chips lg-tabs" role="tablist">{(teacher?['plan','work','book','people'] as const:['plan','work'] as const).map(k=><button key={k} role="tab" aria-selected={tab===k} className={tab===k?'active':''} onClick={()=>setTab(k)}>{k==='plan'&&!teacher?t.topics:t.tabs[k]}</button>)}</div>
    {tab==='plan'&&(teacher?<TeacherPlan lang={lang} topics={topics} items={items} onPick={setTopicId} onNav={()=>toTop(top.current)}/>:<StudentPlan lang={lang} topics={topics} items={items} onPick={setTopicId}/>)}
    {tab==='work'&&<>

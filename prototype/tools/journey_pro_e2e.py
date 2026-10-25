@@ -46,5 +46,24 @@ with sync_playwright() as p:
         pg.locator(f'.sl-player button[aria-label="{present}"]').click();pg.wait_for_timeout(800)
         check(f'{lang}: Free teacher "present" in the slide player opens the paywall on top',pg.evaluate(ON_TOP)=='top')
         ctx.close()
+
+    # D3: a Free teacher could open the general-test builder (pick topics, counts, deadline) and was refused only at the very end.
+    # The button carries the lock and opens the paywall at once; on the trial it opens the builder.
+    for lang,general in (('uz','Umumiy test berish'),('ru','Дать общий тест'),('en','Give a general test')):
+        for free in (True,False):
+            ctx=free_user(b,'teacher',lang) if free else None
+            if not free:
+                ctx=b.new_context(viewport={'width':390,'height':844},is_mobile=True,has_touch=True);e=f'teacher+{time.time_ns()}@example.com'
+                r=ctx.request.post(BASE+'/api/auth/request-code',data=json.dumps({'email':e,'name':'Ali','role':'teacher','lang':lang}),headers=HD).json()
+                ctx.request.post(BASE+'/api/auth/verify',data=json.dumps({'email':e,'code':r['devCode']}),headers=HD)
+            check(f'{lang}: group created',ctx.request.post(BASE+'/api/classroom/groups',data=json.dumps({'name':'Gen Group'}),headers=HD).ok)
+            pg=ctx.new_page();pg.goto(f'{BASE}/?lang={lang}');pg.wait_for_selector('nav.bottom-nav',timeout=10000);pg.wait_for_timeout(600)
+            pg.locator('main .lg-row, main .lg-list button').filter(has_text='Gen Group').first.click();pg.wait_for_timeout(1200)
+            btn=pg.locator('main button').filter(has_text=general).first
+            has_lock=btn.locator('.lucide-lock').count()==1
+            btn.click();pg.wait_for_timeout(900)
+            if free:check(f'{lang}: Free teacher: general test button has a lock and opens the paywall right away',has_lock and pg.evaluate(ON_TOP)=='top')
+            else:check(f'{lang}: trial teacher: no lock, the general test builder opens',not has_lock and pg.locator('.quiz-run.pw').count()==0 and pg.locator('main input[type=search], main input').count()>0)
+            ctx.close()
     b.close()
 print('journey_pro_e2e: all passed')
