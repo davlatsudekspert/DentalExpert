@@ -80,6 +80,17 @@ with sync_playwright() as p:
     pg.locator('main.phone .classroom input').first.fill('Double');pg.locator('main.phone .classroom button.button').first.dblclick();pg.wait_for_timeout(2000)
     names=[g['name'] for g in ctx.request.get(BASE+'/api/classroom/groups').json().get('groups',[])]
     check(f'double tap on Create: one group ({names})',names==['Double'])
+    # ...and on "Create" of a new assignment (two identical assignments), and on the topic test "Start" (must stay one test).
+    gid=ctx.request.get(BASE+'/api/classroom/groups').json()['groups'][0]['id']
+    pg.goto(f'{BASE}/?lang=en');pg.wait_for_selector('nav.bottom-nav',timeout=10000);pg.wait_for_timeout(600)
+    pg.locator('main .lg-row, main .lg-list button').filter(has_text='Double').first.click();pg.wait_for_timeout(1200)
+    pg.locator('main .lg-tabs button').nth(1).click();pg.wait_for_timeout(600)
+    pg.locator('main .classroom button').filter(has_text='Give an assignment').first.click();pg.wait_for_timeout(600)
+    f=pg.locator('.cr-form');f.locator('input:not([type=date])').first.fill('Essay one')
+    if f.locator('textarea').count():f.locator('textarea').first.fill('Write about caries')
+    f.locator('button.button').filter(has_text='Create').dblclick();pg.wait_for_timeout(2000)
+    n=len(ctx.request.get(BASE+f'/api/classroom/assignments?groupId={gid}').json()['assignments'])
+    check(f'double tap on Create assignment: one assignment ({n})',n==1)
     ctx.close()
     b.close()
 print('journey_e2e: all passed')

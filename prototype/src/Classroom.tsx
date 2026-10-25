@@ -521,9 +521,11 @@ function NewAssignment({lang,groupId,decks,onDone,onCancel}:{lang:Lang;groupId:s
  const [deck,setDeck]=useState(decks[0]?.id||'');
  const [reveal,setReveal]=useState<Reveal>('closed');
  const [err,setErr]=useState('');
+ const sending=useRef(false);// a double tap made two identical assignments
  const save=async()=>{
+  if(sending.current)return;sending.current=true;
   const chosen=decks.find(d=>d.id===(deck||decks[0]?.id));
-  const r=await callApi('/classroom/assignments','POST',{groupId,kind,title,body,dueDate:due,deckId:kind==='quiz'?chosen?.id:undefined,key:kind==='quiz'?chosen?.quiz.map(q=>q.correct):undefined,reveal:kind==='quiz'?reveal:undefined});
+  const r=await callApi('/classroom/assignments','POST',{groupId,kind,title,body,dueDate:due,deckId:kind==='quiz'?chosen?.id:undefined,key:kind==='quiz'?chosen?.quiz.map(q=>q.correct):undefined,reveal:kind==='quiz'?reveal:undefined}).finally(()=>{sending.current=false});
   if(r.ok)onDone();else setErr(t.errGeneric);
  };
  return <div className="cr-form">
