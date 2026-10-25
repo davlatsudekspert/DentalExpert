@@ -42,7 +42,7 @@ with sync_playwright() as p:
         txt=pg.locator('.at-list').inner_text()
         check(f'{size}: counts shown, withheld ones marked and disabled',' savol' in txt and 'Kalit tekshiruvda' in txt and pg.locator('.at-row:disabled').count()==5)
         note=pg.locator('.at-note').inner_text()
-        check(f'{size}: source note and removal contact visible (no not-official warning)','tmbm.ssv.uz' in note and 'rasmiy imtihon bilan bog‘liq emas' not in note and 'davlatsudekspert@gmail.com' in note)
+        check(f'{size}: source note, one-line independence statement and removal contact visible','tmbm.ssv.uz' in note and 'davlat organi bilan bog‘liq emas' in note and 'kafolat' not in note and 'davlatsudekspert@gmail.com' in note)
         check(f'{size}: no horizontal overflow',not overflow(pg))
         run20(pg)
         check(f'{size}: result screen after 20 answers','/ 20' in pg.locator('.qr-ring').inner_text())
@@ -67,7 +67,7 @@ with sync_playwright() as p:
         pg.goto(BASE+f'/?screen=courses&lang={lang}');pg.wait_for_selector('.learn-tabs',timeout=8000)
         check(f'{lang}: Attestation tab present',pg.locator('.learn-tabs button',has_text=label).count()==1)
     pg.locator('.learn-tabs button',has_text='Проверка знаний и компетенций').click();pg.wait_for_selector('.at-list',timeout=6000)
-    check('ru: no guarantee / not-official warning on the list','гарантирует' not in pg.locator('main.phone').inner_text() and 'Неофициальное' not in pg.locator('main.phone').inner_text())
+    check('ru: no guarantee / not-official warning on the list','гарантирует' not in pg.locator('main.phone').inner_text() and 'не связано с государственными' in pg.locator('main.phone').inner_text())
     check('ru: specialty names are Russian (no Uzbek names left)','stomatologiya' not in pg.locator('.at-list').inner_text().lower() and 'Ортодонтия' in pg.locator('.at-list').inner_text())
     check('ru: 12 specialties, source note in Russian','Источник вопросов' in pg.locator('.at-note').inner_text() and pg.locator('.at-row').count()==12)
     pg.locator('.at-row:not(:disabled)',has_text='Ортопед').count()  # names stay Uzbek-language labels from the index

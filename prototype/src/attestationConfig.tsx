@@ -23,8 +23,8 @@ export async function loadAtt(id:string,lang:'uz'|'ru'):Promise<Blk[]&{id:string
 
 export const SUPPORT_EMAIL='davlatsudekspert@gmail.com';
 export const sourceNote={
- uz:'Savollar manbasi: Tibbiyot va farmatsevtika xodimlarining malakasini baholash markazi (tmbm.ssv.uz) ochiq test bazasi. Javoblar kaliti avtomatik aniqlangan, xatolik haqida xabar bering.',
- ru:'Источник вопросов: открытая тестовая база Центра оценки квалификации медицинских и фармацевтических работников (tmbm.ssv.uz). Ключ ответов определён автоматически, сообщайте об ошибках.'
+ uz:'Savollar manbasi: Tibbiyot va farmatsevtika xodimlarining malakasini baholash markazi (tmbm.ssv.uz) ochiq test bazasi. Bu mustaqil o‘quv ilova: davlat organi bilan bog‘liq emas va uning nomidan ish yuritmaydi. Javoblar kaliti avtomatik aniqlangan, xatolik haqida xabar bering.',
+ ru:'Источник вопросов: открытая тестовая база Центра оценки квалификации медицинских и фармацевтических работников (tmbm.ssv.uz). Это независимое учебное приложение: не связано с государственными органами и не действует от их имени. Ключ ответов определён автоматически, сообщайте об ошибках.'
 };
 export const contactNote={
  uz:`Aloqa / olib tashlash so‘rovi (huquq egalari uchun): ${SUPPORT_EMAIL}`,
