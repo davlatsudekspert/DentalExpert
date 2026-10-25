@@ -10,7 +10,7 @@ const T:Record<Lang,{title:string;free:string;pro:string;no:string;yes:string;al
  uz:{title:'Nima bepul, nima Pro',free:'Bepul',pro:'Pro',no:'yo‘q',yes:'bor',always:'Doim bepul: hisob va profil, guruhga qo‘shilish, ustoz bergan testlarda qatnashish, natijalaringiz.',rows:{
   topics:['O‘quv reja',`har fandan ${N.topicsPerSubject} ta mavzu`,'barcha mavzular va testlar'],
   practice:['Rasmli amaliyot',`kuniga ${N.practicePerDay} ta savol`,'cheksiz'],
-  attestation:['Attestatsiya savollari',`kuniga ${N.attestationPerDay} ta savol`,'cheksiz'],
+  attestation:['Bilim va malakani baholash',`kuniga ${N.attestationPerDay} ta savol`,'cheksiz'],
   exam:['Imtihon rejimi','',''],review:['Takrorlash','',''],
   atlas3d:['3D atlas','tish, emal, dentin','barcha qatlamlar'],
   groups:['Guruhlar',`${N.groups} ta`,'20 tagacha'],generalTests:['Umumiy testlar','',''],present:['Taqdimot rejimi (katta ekran)','',''],
@@ -18,7 +18,7 @@ const T:Record<Lang,{title:string;free:string;pro:string;no:string;yes:string;al
  ru:{title:'Что бесплатно, что в Pro',free:'Бесплатно',pro:'Pro',no:'нет',yes:'есть',always:'Всегда бесплатно: аккаунт и профиль, вступление в группу, тесты, которые задал учитель, ваши результаты.',rows:{
   topics:['Учебный план',`${N.topicsPerSubject} темы в каждом предмете`,'все темы и тесты'],
   practice:['Практика по картинкам',`${N.practicePerDay} вопросов в день`,'без лимита'],
-  attestation:['Вопросы к аттестации',`${N.attestationPerDay} вопросов в день`,'без лимита'],
+  attestation:['Проверка знаний и компетенций',`${N.attestationPerDay} вопросов в день`,'без лимита'],
   exam:['Режим экзамена','',''],review:['Повторение','',''],
   atlas3d:['3D-атлас','зуб, эмаль, дентин','все слои'],
   groups:['Группы',`${N.groups}`,'до 20'],generalTests:['Общие тесты','',''],present:['Режим презентации (большой экран)','',''],
@@ -26,7 +26,7 @@ const T:Record<Lang,{title:string;free:string;pro:string;no:string;yes:string;al
  en:{title:'What is free and what is Pro',free:'Free',pro:'Pro',no:'no',yes:'yes',always:'Always free: account and profile, joining a group, tests your teacher assigns, your results.',rows:{
   topics:['Curriculum',`${N.topicsPerSubject} topics per subject`,'every topic and quiz'],
   practice:['Picture practice',`${N.practicePerDay} questions a day`,'unlimited'],
-  attestation:['Attestation questions',`${N.attestationPerDay} questions a day`,'unlimited'],
+  attestation:['Knowledge & Skills Assessment',`${N.attestationPerDay} questions a day`,'unlimited'],
   exam:['Exam mode','',''],review:['Spaced-repetition review','',''],
   atlas3d:['3D atlas','tooth, enamel, dentin','all layers'],
   groups:['Groups',`${N.groups}`,'up to 20'],generalTests:['General tests','',''],present:['Presentation mode (big screen)','',''],

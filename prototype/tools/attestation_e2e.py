@@ -19,7 +19,7 @@ def account(b,size):
     return ctx
 def open_feature(pg):
     pg.goto(BASE+'/?screen=courses&lang=uz');pg.wait_for_selector('.learn-tabs',timeout=8000)
-    pg.locator('.learn-tabs button',has_text='Attestatsiya').click();pg.wait_for_selector('.at-list',timeout=8000)
+    pg.locator('.learn-tabs button',has_text='Bilim va malakani baholash').click();pg.wait_for_selector('.at-list',timeout=8000)
 def run20(pg):
     pg.locator('.at-row',has_text='Ortopedik stomatologiya').click()
     pg.wait_for_selector('.ex-seg');pg.locator('.ex-seg button',has_text='20 ta').click()
@@ -27,7 +27,7 @@ def run20(pg):
     check('setup screen fits the phone width (no sideways overflow)',sw<=1 and right<=1)
     pg.wait_for_function("!document.querySelector('.at-start').disabled",timeout=8000)
     pg.locator('.at-start').click();pg.wait_for_selector('.quiz-run-options',timeout=5000)
-    check('quiz shows the no-guarantee warning',pg.locator('.qr-note').count()==1 and 'kafolat' in pg.locator('.qr-note').inner_text())
+    check('quiz has no exam-guarantee warning strip',pg.locator('.qr-note').count()==0)
     check('first question has 4 options and a report button',pg.locator('.quiz-run-options button').count()==4 and pg.locator('.at-report').count()==1)
     for i in range(20):
         pg.locator('.quiz-run-options button').first.click();pg.locator('.quiz-run-body button.button').click()
@@ -42,7 +42,7 @@ with sync_playwright() as p:
         txt=pg.locator('.at-list').inner_text()
         check(f'{size}: counts shown, withheld ones marked and disabled',' savol' in txt and 'Kalit tekshiruvda' in txt and pg.locator('.at-row:disabled').count()==5)
         note=pg.locator('.at-note').inner_text()
-        check(f'{size}: source note, not-official note and removal contact visible','tmbm.ssv.uz' in note and 'rasmiy imtihon bilan bog‘liq emas' in note and 'davlatsudekspert@gmail.com' in note)
+        check(f'{size}: source note and removal contact visible (no not-official warning)','tmbm.ssv.uz' in note and 'rasmiy imtihon bilan bog‘liq emas' not in note and 'davlatsudekspert@gmail.com' in note)
         check(f'{size}: no horizontal overflow',not overflow(pg))
         run20(pg)
         check(f'{size}: result screen after 20 answers','/ 20' in pg.locator('.qr-ring').inner_text())
@@ -63,11 +63,11 @@ with sync_playwright() as p:
         check(f'{size}: no page errors',not errs);ctx.close()
     # languages: uz and ru have the section, en has nothing of it (no tab, no tile, no credits line)
     ctx=account(b,(390,844));pg=ctx.new_page();errs=[];pg.on('pageerror',lambda x:errs.append(str(x)))
-    for lang,label in [('uz','Attestatsiya'),('ru','Аттестация')]:
+    for lang,label in [('uz','Bilim va malakani baholash'),('ru','Проверка знаний и компетенций')]:
         pg.goto(BASE+f'/?screen=courses&lang={lang}');pg.wait_for_selector('.learn-tabs',timeout=8000)
         check(f'{lang}: Attestation tab present',pg.locator('.learn-tabs button',has_text=label).count()==1)
-    pg.locator('.learn-tabs button',has_text='Аттестация').click();pg.wait_for_selector('.at-list',timeout=6000)
-    check('ru: no-guarantee warning on the list','не гарантирует' in pg.locator('.at-guarantee').inner_text())
+    pg.locator('.learn-tabs button',has_text='Проверка знаний и компетенций').click();pg.wait_for_selector('.at-list',timeout=6000)
+    check('ru: no guarantee / not-official warning on the list','гарантирует' not in pg.locator('main.phone').inner_text() and 'Неофициальное' not in pg.locator('main.phone').inner_text())
     check('ru: specialty names are Russian (no Uzbek names left)','stomatologiya' not in pg.locator('.at-list').inner_text().lower() and 'Ортодонтия' in pg.locator('.at-list').inner_text())
     check('ru: 12 specialties, source note in Russian','Источник вопросов' in pg.locator('.at-note').inner_text() and pg.locator('.at-row').count()==12)
     pg.locator('.at-row:not(:disabled)',has_text='Ортопед').count()  # names stay Uzbek-language labels from the index
@@ -81,11 +81,11 @@ with sync_playwright() as p:
     btn=pg.locator('.mobile-screen-picker button')
     seen=[]
     for _ in range(3):
-        seen.append((btn.inner_text().strip().upper(),pg.locator('.learn-tabs button',has_text='Attest').count()+pg.locator('.learn-tabs button',has_text='Аттест').count()))
+        seen.append((btn.inner_text().strip().upper(),pg.locator('.learn-tabs button',has_text='Bilim va malakani').count()+pg.locator('.learn-tabs button',has_text='Проверка знаний').count()))
         btn.click();pg.wait_for_timeout(400)
     check('in-app switch: present in UZ and RU, absent in EN',sorted(seen)==[('EN',0),('RU',1),('UZ',1)],) if len(set(x[0] for x in seen))==3 else print('SKIP in-app switch (picker not shown)',seen)
     pg.goto(BASE+'/?screen=courses&lang=en');pg.wait_for_selector('.learn-tabs',timeout=8000)
-    check('en: no Attestation tab and no mention in Learn',pg.locator('.learn-tabs button',has_text='Attest').count()==0 and 'ttestat' not in pg.locator('.learn').inner_text())
+    check('en: no Attestation tab and no mention in Learn',pg.locator('.learn-tabs button',has_text='Bilim va malakani').count()==0 and 'ttestat' not in pg.locator('.learn').inner_text())
     pg.goto(BASE+'/?screen=settings&lang=en');pg.wait_for_selector('.pf-credits',timeout=8000);pg.locator('.pf-credits').click();pg.wait_for_selector('.cr-credits',timeout=4000)
     check('en: credits screen has no attestation note',pg.locator('.at-note').count()==0)
     pg.goto(BASE+'/?screen=settings&lang=uz');pg.wait_for_selector('.pf-credits',timeout=8000);pg.locator('.pf-credits').click();pg.wait_for_selector('.at-note',timeout=4000)
