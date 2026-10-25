@@ -134,5 +134,19 @@ with sync_playwright() as p:
           (document.querySelector('main.phone')||document.body).appendChild(x);const s=getComputedStyle(x);return [s.backgroundColor,s.borderColor,s.fontFamily]}""")
         check(f'{theme}: Google button white with the #747775 outline and Roboto (Google branding) ({g})',g[0]=='rgb(255, 255, 255)' and g[1]=='rgb(116, 119, 117)' and g[2].startswith('Roboto'))
         ctx.close()
+
+    # D10: a suspended account (403 suspended) or a rate-limited verify (429 too_many_requests) was told "the code is wrong or has
+    # expired", so the person kept retyping a correct code.
+    for lang,susp,busy in (('uz','to‘xtatilgan','Juda ko‘p'),('ru','приостановлен','Слишком много'),('en','suspended','Too many')):
+        for err,status,want in (('suspended',403,susp),('too_many_requests',429,busy)):
+            ctx=newctx(b);pg=ctx.new_page();codes=[]
+            pg.on('response',lambda r:'/api/auth/request-code' in r.url and r.status==200 and codes.append(r.json()['devCode']))
+            ctx.route(re.compile(r'/api/auth/verify'),(lambda e,st:lambda rt:rt.fulfill(status=st,body=json.dumps({'error':e}),content_type='application/json'))(err,status))
+            pg.goto(f'{BASE}/?lang={lang}');pg.wait_for_timeout(1200);pg.locator('.auth-secondary').click();pg.wait_for_timeout(500)
+            pg.fill('input[name=email]',f'who+{time.time_ns()}@example.com');pg.locator('form button[type=submit]').click();pg.wait_for_timeout(1500)
+            pg.locator('.completion-code input').fill('123456');pg.locator('.completion-page .button').click();pg.wait_for_timeout(800)
+            note=pg.locator('.completion-note').inner_text()
+            check(f'{lang}: verify {err} says so ("{note}")',want.lower() in note.lower())
+            ctx.close()
     b.close()
 print('journey_e2e: all passed')
