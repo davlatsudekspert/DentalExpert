@@ -112,3 +112,4 @@ main .hero button,main .hero .button{min-height:44px;padding:10px 14px}
 /* Booking calendar days: full cell width and 44 px tall (seven columns cannot all be 44 wide on a 360 px phone). */
 .calendar{padding:17px 10px}
 .calendar .calendar-grid button{width:100%;min-width:40px;height:44px}
+.auth-entry.auth-down{justify-content:center;gap:6px;padding-bottom:12vh}

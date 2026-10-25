@@ -33,5 +33,32 @@ with sync_playwright() as p:
         pg.go_back();pg.wait_for_timeout(700)
         check(f'{lang}: back again shows the subject list',pg.locator('main .lg-row').count()>8 and pg.locator('nav.bottom-nav button.active').filter(has_text=learn).count()==1)
         ctx.close()
+
+    # D5: opening the app while offline (or while the API answers 5xx) showed a signed-in user the signed-out welcome screen, and
+    # "Sign up" then offered the local DEMO form (password field, "Create demo account"). Now: a calm "cannot reach the server"
+    # notice with Retry (also retried when the device comes back online); Retry signs the user straight back in.
+    for lang,retry,fail in (('uz','Qayta urinib ko‘rish','abort'),('ru','Повторить','500'),('en','Retry','abort')):
+        ctx=signin(b,'student',lang);pg=ctx.new_page()
+        down=[True]
+        def route(rt):
+            if not down[0]:return rt.continue_()
+            return rt.abort() if fail=='abort' else rt.fulfill(status=503,body='{"error":"down"}',content_type='application/json')
+        ctx.route(re.compile(r'/api/'),route)
+        pg.goto(f'{BASE}/?lang={lang}');pg.wait_for_timeout(2500)
+        check(f'{lang} ({fail}): no demo sign-up form, no password field',pg.locator('input[type=password]').count()==0 and 'demo' not in pg.locator('main').inner_text().lower())
+        check(f'{lang} ({fail}): a cannot-reach-the-server notice with Retry',pg.get_by_role('button',name=retry).count()==1)
+        for t in ('Hisob yaratish','Регистрация','Sign up','Create account'):
+            if pg.locator('main button').filter(has_text=t).count():check(f'{lang}: no sign-up button while the server is unreachable',False)
+        down[0]=False
+        pg.get_by_role('button',name=retry).click();pg.wait_for_timeout(2000)
+        check(f'{lang} ({fail}): Retry signs the user straight back in (home with the tab bar)',pg.locator('nav.bottom-nav').count()==1)
+        ctx.close()
+    # A first launch offline: language and role can still be chosen; the sign-up step shows the notice, not the demo form.
+    ctx=b.new_context(viewport={'width':390,'height':844},is_mobile=True,has_touch=True);pg=ctx.new_page()
+    ctx.route(re.compile(r'/api/'),lambda rt:rt.abort())
+    pg.goto(f'{BASE}/');pg.wait_for_timeout(1200);pg.locator('button').filter(has_text='English').first.click();pg.wait_for_timeout(400)
+    pg.locator('.role-card').nth(3).click();pg.locator('button.button').last.click();pg.wait_for_timeout(600)
+    check('first launch offline: the sign-up step shows the notice, not the demo form',pg.get_by_role('button',name='Retry').count()==1 and pg.locator('input[type=password]').count()==0)
+    ctx.close()
     b.close()
 print('journey_e2e: all passed')

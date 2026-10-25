@@ -66,7 +66,8 @@ export async function fetchDoctors(cityId:string,signal?:AbortSignal):Promise<Ap
 
 import type {ProState} from './proConfig';
 export type AuthUser={pro?:ProState;id:string;guest?:boolean;email:string;name:string|null;role:'patient'|'dentist'|'teacher'|'student';countryCode:string|null;cityId:string|null;phone?:string|null;workplace?:string|null;bio?:string|null;isAdmin?:boolean;specialty?:string|null;telegram?:string|null;instagram?:string|null;publicEmail?:string|null;address?:string|null;mapUrl?:string|null;publishRequested?:boolean;verified?:boolean;photoUrl?:string|null};
-export type AuthState={enabled:boolean;user:AuthUser|null};
+/** `unreachable`: the API did not answer (offline, timeout or a 5xx), so the signed-in state is unknown, not "signed out". */
+export type AuthState={enabled:boolean;user:AuthUser|null;unreachable?:boolean};
 
 async function post<T>(path:string,body:unknown,method:'POST'|'PUT'|'DELETE'='POST'):Promise<{ok:boolean;status:number;data:T&{error?:string;retryAfterSec?:number;attemptsLeft?:number}}>{
  await tokenReady;
@@ -82,9 +83,10 @@ export async function fetchAuth():Promise<AuthState>{
  await tokenReady;
  try{
   const res=await fetch(url('/api/auth/me'),{credentials:'same-origin',headers:{accept:'application/json',...authHeaders()}});
+  if(res.status>=500)return {enabled:false,user:null,unreachable:true};
   if(!res.ok||!(res.headers.get('content-type')||'').includes('application/json'))return {enabled:false,user:null};
   return await res.json() as AuthState;
- }catch{return {enabled:false,user:null}}
+ }catch{return {enabled:false,user:null,unreachable:true}}
 }
 export const requestCode=(b:{email:string;name?:string;role?:string;countryCode?:string;cityId?:string;lang:string})=>post<{ok?:boolean}>('/api/auth/request-code',b);
 export const verifyCode=async(email:string,code:string)=>{const r=await post<{user?:AuthUser;token?:string}>('/api/auth/verify',{email,code});if(r.ok&&r.data.token)signedInAs(r.data.token);return r};
