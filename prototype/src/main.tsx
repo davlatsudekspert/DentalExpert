@@ -117,7 +117,8 @@ const authMessages:Record<string,Record<Lang,string>>={
  invalid_email:{uz:'Email manzil noto‘g‘ri.',ru:'Неверный адрес email.',en:'That email address is not valid.'},
  other:{uz:'Kod yuborilmadi. Keyinroq urinib ko‘ring.',ru:'Не удалось отправить код. Попробуйте позже.',en:'The code could not be sent. Try again later.'}
 };
-const submitCode=async(f:FormData)=>{const email=String(f.get('email')||'').trim();const r=await requestCode({email,name:String(f.get('fullname')||'').trim()||undefined,role:authRole,countryCode:country.length===2?country:undefined,cityId:/^[A-Z]{2}-/.test(cityId)?cityId:undefined,lang});if(r.ok){setPendingEmail(email);go('verifyEmail');return}flash((authMessages[r.data.error||'']||authMessages.other)[lang])};
+const sendingCode=useRef(false);// a double tap sent two requests: the second answered "wait a moment" over the code screen
+const submitCode=async(f:FormData)=>{if(sendingCode.current)return;sendingCode.current=true;const email=String(f.get('email')||'').trim();const r=await requestCode({email,name:String(f.get('fullname')||'').trim()||undefined,role:authRole,countryCode:country.length===2?country:undefined,cityId:/^[A-Z]{2}-/.test(cityId)?cityId:undefined,lang}).finally(()=>{sendingCode.current=false});if(r.ok){setPendingEmail(email);go('verifyEmail');return}flash((authMessages[r.data.error||'']||authMessages.other)[lang])};
 // Google/Apple sign-in: same signup fields as the email code; success mirrors the verified-code path.
 const oauthProfile=()=>({name:(document.querySelector<HTMLInputElement>('.screen input[name="fullname"]')?.value||'').trim()||undefined,role:authRole,countryCode:country.length===2?country:undefined,cityId:/^[A-Z]{2}-/.test(cityId)?cityId:undefined});
 const oauthDone=(u:AuthUser)=>{setAuthUser(u);applyUser(u);setRole(eduRole(u.role));go(homeOf(u.role))};

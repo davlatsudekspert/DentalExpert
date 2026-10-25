@@ -65,5 +65,21 @@ with sync_playwright() as p:
     pg.locator('.role-card').nth(3).click();pg.locator('button.button').last.click();pg.wait_for_timeout(600)
     check('first launch offline: the sign-up step shows the notice, not the demo form',pg.get_by_role('button',name='Retry').count()==1 and pg.locator('input[type=password]').count()==0)
     ctx.close()
+
+    # D7: a double tap on "Create" made two identical groups (on Free the second one then opened the paywall), and a double tap on
+    # "Send code" showed "please wait a moment" over the code screen although the code had been sent.
+    ctx=newctx(b);pg=ctx.new_page();sent=[];pg.on('response',lambda r:'/api/auth/request-code' in r.url and sent.append(r.status))
+    pg.goto(f'{BASE}/');pg.wait_for_timeout(1000);pg.locator('button').filter(has_text='English').first.click();pg.wait_for_timeout(400)
+    pg.locator('.role-card').nth(2).click();pg.locator('button.button').last.click();pg.wait_for_timeout(500)
+    pg.fill('input[name=fullname]','Double Tap');pg.fill('input[name=email]',f'dbl+{time.time_ns()}@example.com')
+    pg.locator('form button[type=submit]').dblclick();pg.wait_for_timeout(1500)
+    check('double tap on Send code: one request, no "wait" message on the code screen',sent==[200] and pg.locator('.toast').count()==0 and pg.locator('.completion-code input').count()==1)
+    ctx.close()
+    ctx=signin(b,'teacher','en');pg=ctx.new_page();pg.goto(f'{BASE}/?lang=en');pg.wait_for_selector('nav.bottom-nav',timeout=10000)
+    pg.get_by_role('button',name='My groups').first.click();pg.wait_for_timeout(1000)
+    pg.locator('main.phone .classroom input').first.fill('Double');pg.locator('main.phone .classroom button.button').first.dblclick();pg.wait_for_timeout(2000)
+    names=[g['name'] for g in ctx.request.get(BASE+'/api/classroom/groups').json().get('groups',[])]
+    check(f'double tap on Create: one group ({names})',names==['Double'])
+    ctx.close()
     b.close()
 print('journey_e2e: all passed')

@@ -113,6 +113,8 @@ export default function Classroom({lang,user,onSignIn}:{lang:Lang;user:AuthUser|
  const [name,setName]=useState('');
  const [code,setCode]=useState('');
  const [nick,setNick]=useState('');
+ // A double tap must not send twice (it made two identical groups).
+ const busy=useRef(false);
  const errText=(e?:string)=>e==='rate_limited'?t.errRate:e==='bad_nickname'?t.errNick:e==='reserved_nickname'?t.errNickTaken:e==='name_required'?t.errName:e==='not_found'||e==='bad_code'?t.errCode:e==='ambiguous_code'?j.ambiguous:e==='own_group'?j.own:e==='unauthorized'?j.signin:e==='network'?j.network:e==='teacher_only'?t.errTeacher:e==='nick_taken'?j.taken:e==='nickname_rejected'?j.rude:e==='group_full'?j.full:t.errGeneric;
  const load=useCallback(async()=>{
   const r=await callApi<{groups:Group[]}>('/classroom/groups');
@@ -127,8 +129,8 @@ export default function Classroom({lang,user,onSignIn}:{lang:Lang;user:AuthUser|
  if(!user)return <section className="classroom card"><h2>{t.title}</h2><p className="muted">{t.signIn}</p><button className="button" onClick={onSignIn}><LogIn size={17}/>{t.signInBtn}</button></section>;
  if(offline)return <section className="classroom card"><h2>{t.title}</h2><p className="muted">{t.offline}</p><button className="button secondary" onClick={()=>void load()}>{t.retry}</button></section>;
  if(open)return <GroupView lang={lang} group={open} teacher={teacher} user={user} initialTopic={assign} onBack={()=>{setOpen(null);setAssign(null);load()}}/>;
- const create=async()=>{setMsg('');const r=await callApi('/classroom/groups','POST',{name});if(r.ok){setName('');load()}else if(!handleProRequired(r,'groups'))setMsg(errText(r.data.error))};
- const join=async()=>{setMsg('');const c=nick.trim()?checkNick(nick):null;if(c&&!c.ok){setMsg(errText(c.error));return}const r=await callApi('/classroom/join','POST',{code,nickname:c?.nick||''});if(r.ok){setCode('');load()}else setMsg(errText(r.status===0?'network':r.data.error))};
+ const create=async()=>{if(busy.current)return;busy.current=true;setMsg('');const r=await callApi('/classroom/groups','POST',{name}).finally(()=>{busy.current=false});if(r.ok){setName('');load()}else if(!handleProRequired(r,'groups'))setMsg(errText(r.data.error))};
+ const join=async()=>{setMsg('');const c=nick.trim()?checkNick(nick):null;if(c&&!c.ok){setMsg(errText(c.error));return}if(busy.current)return;busy.current=true;const r=await callApi('/classroom/join','POST',{code,nickname:c?.nick||''}).finally(()=>{busy.current=false});if(r.ok){setCode('');load()}else setMsg(errText(r.status===0?'network':r.data.error))};
  return <section className="classroom card" aria-label={t.title}>
   <h2>{t.title}</h2>
   {teacher&&assign&&groups&&<p className="lg-note" role="status">{(groups.length?assignWords[lang].pickGroup:assignWords[lang].noGroup)(tx(topicMeta(assign)?.title,lang))}</p>}
