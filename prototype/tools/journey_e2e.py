@@ -122,5 +122,17 @@ with sync_playwright() as p:
                 check(f'{w}x{h} {role}: tab bar on screen at scroll {y} ({[round(x) for x in r]})',r[0]>=0 and r[1]<=r[2]+1)
             check(f'{w}x{h} {role}: no sideways page scroll',not pg.evaluate('document.documentElement.scrollWidth>innerWidth+1'))
             ctx.close()
+
+    # D9: in the default Ivory (mono) look the "Sign in with Apple" button was off-black #252422 and the Google one ivory, both in
+    # the app font: Apple asks for a black (or white) button in the system font, Google for white with a #747775 outline (tools/oauth_ui.py also checks it on a build with ids).
+    for theme in ('mono','color'):
+        ctx=newctx(b);pg=ctx.new_page();pg.goto(f'{BASE}/?lang=en&theme={theme}');pg.wait_for_timeout(1200)
+        st=pg.evaluate("""()=>{const x=document.createElement('button');x.className='oauth-button oauth-apple';x.textContent='Sign in with Apple';
+          (document.querySelector('main.phone')||document.body).appendChild(x);const s=getComputedStyle(x);return [s.backgroundColor,s.color,s.fontFamily]}""")
+        check(f'{theme}: Apple button black with white text and the system font ({st[0]}, {st[2][:30]})',st[0]=='rgb(0, 0, 0)' and st[1]=='rgb(255, 255, 255)' and st[2].startswith('-apple-system'))
+        g=pg.evaluate("""()=>{const x=document.createElement('button');x.className='oauth-button oauth-google';x.textContent='Sign in with Google';
+          (document.querySelector('main.phone')||document.body).appendChild(x);const s=getComputedStyle(x);return [s.backgroundColor,s.borderColor,s.fontFamily]}""")
+        check(f'{theme}: Google button white with the #747775 outline and Roboto (Google branding) ({g})',g[0]=='rgb(255, 255, 255)' and g[1]=='rgb(116, 119, 117)' and g[2].startswith('Roboto'))
+        ctx.close()
     b.close()
 print('journey_e2e: all passed')

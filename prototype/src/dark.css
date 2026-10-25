@@ -383,8 +383,8 @@
 :root[data-theme="mono"] .pt-picker button.on{border-color:#171716;background:#ebe6dc}
 :root[data-theme="mono"] .pt-legend{color:#55534f}
 :root[data-theme="mono"] .oauth-button:focus-visible{outline:3px solid #171716}
-:root[data-theme="mono"] .oauth-google{background:#f8f6f1;color:#171716;border:1px solid #171716;font-family:'Manrope Variable','Manrope',system-ui,-apple-system,'Segoe UI',sans-serif}
-:root[data-theme="mono"] .oauth-apple{background:#252422;color:#ffffff;border:1px solid #171716;font-family:'Manrope Variable','Manrope',system-ui,-apple-system,'Segoe UI',sans-serif}
+
+:root[data-theme="mono"] .oauth-apple{background:#000000;color:#ffffff;border:1px solid #000000}
 :root[data-theme="mono"] .oauth-divider{color:#55534f}
 :root[data-theme="mono"] .oauth-divider:before,:root[data-theme="mono"] .oauth-divider:after{background:#e6e1d7}
 :root[data-theme="mono"] .admin-tabs button{border:1px solid #dfd9cd;background:#f8f6f1}
