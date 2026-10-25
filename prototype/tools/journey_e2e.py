@@ -10,6 +10,22 @@ def newctx(b,w=390,h=844):
     return b.new_context(viewport={'width':w,'height':h},is_mobile=True,has_touch=True,
                          extra_http_headers={'cf-connecting-ip':'10.%d.%d.%d'%(random.randrange(256),random.randrange(256),random.randrange(1,255))})
 def check(n,c):print(('PASS ' if c else 'FAIL ')+n);assert c,n
+FRONT='http://de.test:'+os.environ.get("DE_PORT","8788")
+def real_host(ctx):
+    """Serves the app to this context as http://de.test (what a user of the live site gets: no design-study frame, which only
+    localhost shows) by forwarding every request to the local server inside the browser driver (no DNS, no extra process)."""
+    def fwd(route):
+        req=route.request;h=dict(req.headers)
+        for k in ('origin','referer'):
+            if h.get(k,'').startswith(FRONT):h[k]=BASE+h[k][len(FRONT):]
+        route.fulfill(response=route.fetch(url=BASE+req.url[len(FRONT):],headers=h))
+    ctx.route(FRONT+'/**',fwd)
+def real_signin(b,role,lang,w=390,h=844):
+    ctx=newctx(b,w,h);real_host(ctx);pg=ctx.new_page();pg.goto(FRONT+'/api/auth/me')
+    e=f'{role}+{time.time_ns()}@example.com'
+    pg.evaluate("""async([e,role,lang])=>{const h={'content-type':'application/json'};const r=await (await fetch('/api/auth/request-code',{method:'POST',headers:h,body:JSON.stringify({email:e,name:'Ali Abduraxmonov',role,lang})})).json();
+     await fetch('/api/auth/verify',{method:'POST',headers:h,body:JSON.stringify({email:e,code:r.devCode})})}""",[e,role,lang])
+    return ctx,pg
 def signin(b,role,lang):
     ctx=newctx(b)
     e=f'{role}+{time.time_ns()}@example.com'
@@ -92,5 +108,19 @@ with sync_playwright() as p:
     n=len(ctx.request.get(BASE+f'/api/classroom/assignments?groupId={gid}').json()['assignments'])
     check(f'double tap on Create assignment: one assignment ({n})',n==1)
     ctx.close()
+
+    # D8: wider than 440 px (a phone turned sideways, an iPad, a desktop browser) the tab bar was not kept on screen: it is
+    # position:sticky inside main.phone, whose overflow:hidden made it a scroll container, so the bar sat at the very end of
+    # each page. It must stay at the bottom of the viewport while the page scrolls, without sideways page scroll.
+    for w,h in ((844,390),(1024,768),(1280,720)):
+        for role in ('student','teacher'):
+            ctx,pg=real_signin(b,role,'ru',w,h);pg.goto(FRONT+'/?lang=ru');pg.wait_for_selector('nav.bottom-nav',timeout=10000);pg.wait_for_timeout(800)
+            check(f'{w}x{h} {role}: the live-site layout (no design-study frame)',pg.locator('.studio.web-app').count()==1)
+            for y in (0,500,100000):
+                pg.evaluate(f'window.scrollTo(0,{y})');pg.wait_for_timeout(300)
+                r=pg.evaluate("(()=>{const r=document.querySelector('nav.bottom-nav').getBoundingClientRect();return [r.top,r.bottom,innerHeight]})()")
+                check(f'{w}x{h} {role}: tab bar on screen at scroll {y} ({[round(x) for x in r]})',r[0]>=0 and r[1]<=r[2]+1)
+            check(f'{w}x{h} {role}: no sideways page scroll',not pg.evaluate('document.documentElement.scrollWidth>innerWidth+1'))
+            ctx.close()
     b.close()
 print('journey_e2e: all passed')

@@ -113,3 +113,5 @@ main .hero button,main .hero .button{min-height:44px;padding:10px 14px}
 .calendar{padding:17px 10px}
 .calendar .calendar-grid button{width:100%;min-width:40px;height:44px}
 .auth-entry.auth-down{justify-content:center;gap:6px;padding-bottom:12vh}
+/* The tab bar is sticky on wider screens (phone landscape, iPad, desktop): overflow:hidden made main.phone a scroll container and the bar sat at the end of the page. clip cuts the same overflow without that (older engines keep hidden). */
+.studio.web-app .phone{overflow:clip}
