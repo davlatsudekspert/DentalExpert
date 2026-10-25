@@ -127,7 +127,7 @@ A,_=login('patient','Owner') if False else (None,None)
 s,r=call('/auth/request-code','POST',{'email':'davlatsudekspert@gmail.com','name':'Owner','role':'patient','lang':'en'});s,r=call('/auth/verify','POST',{'email':'davlatsudekspert@gmail.com','code':r['devCode']});A=r['token']
 G,_=login('teacher','Grantee');end_trial(G);gid_=uid(G)
 check('non-admin cannot grant',call('/admin/users','PUT',{'id':gid_,'pro':True},G)[0]==403)
-check('grant needs a valid length',call('/admin/users','PUT',{'id':gid_,'pro':True,'months':2},A)[0]==400 and call('/admin/users','PUT',{'id':gid_,'pro':True,'months':'x'},A)[0]==400)
+check('grant needs a valid length',call('/admin/users','PUT',{'id':gid_,'pro':True,'months':61},A)[0]==400 and call('/admin/users','PUT',{'id':gid_,'pro':True,'months':'x'},A)[0]==400)
 check('patients cannot be granted (always free)',call('/admin/users','PUT',{'id':uid(P),'pro':True},A)[0]==400)
 check('admin grants Pro',call('/admin/users','PUT',{'id':gid_,'pro':True},A)[0]==200 and me(G)['pro']['reason']=='admin-grant')
 users=call('/admin/users?q='+me(G)['email'].replace('+','%2B'),token=A)[1]
@@ -145,7 +145,7 @@ check('the right secret still works for the real sender',hook(ev(wid,'TEST','de_
 def grant(email,months=None,t=None,**kw):return call('/admin/grants','POST',{'email':email,'months':months,**kw},t or A)
 def grants():return call('/admin/grants',token=A)[1]['grants']
 check('grants: anonymous and non-admin refused',call('/admin/grants')[0]==401 and call('/admin/grants',token=G)[0]==403 and grant('x@example.com',1,G)[0]==403 and call('/admin/grants','DELETE',{'email':'x@example.com'},G)[0]==403)
-check('grants: bad email / months refused',all(grant(e,1)[0]==400 for e in ['','nope','a@guest.invalid',None,5]) and all(grant('ok@example.com',m)[0]==400 for m in [0,2,13,'6',True,-1]))
+check('grants: bad email / months refused',all(grant(e,1)[0]==400 for e in ['','nope','a@guest.invalid',None,5]) and all(grant('ok@example.com',m)[0]==400 for m in [0,61,'6',True,-1,1.5]))
 H,he=login('student','Existing');end_trial(H)
 s,r=grant(he,3);check('grant to an existing account applies now',s==200 and r['applied'] is True and me(H)['pro']['reason']=='admin-grant')
 until=[g for g in grants() if g['email']==he][0]
@@ -169,4 +169,23 @@ check('a patient email cannot be granted',grant(me(P)['email'],1)[0]==400)
 check('unlimited grant has no end',grant(he,None)[0]==200 and me(H)['pro']['expiresAt'] is None and me(H)['pro']['reason']=='admin-grant')
 log=sql_json("SELECT admin_email,action,target FROM admin_audit ORDER BY id DESC LIMIT 40")
 check('every change is in the audit log (who, what, target)',any(l['action']=='grant_pro' and l['target']==newe and l['admin_email']=='davlatsudekspert@gmail.com' for l in log) and any(l['action']=='revoke_pro' and l['target']==he for l in log) and any(l['action']=='apply_pending_grant' and l['target']==newe for l in log))
+
+# ---- Free choice of length: N days or N months (not only 1/3/6/12), and the owner always has Pro.
+def days_left(email):
+    g=[x for x in grants() if x['email']==email][0];return (time.mktime(time.strptime(g['until'],'%Y-%m-%d %H:%M:%S'))-time.time()+time.timezone)/86400
+check('days: out of range / not whole refused',all(grant(he,None,days=d)[0]==400 for d in [0,3651,1.5,'5',-3,True]))
+check('days: 10 days is about 10 days',grant(he,None,days=10)[0]==200 and 9<days_left(he)<11 and me(H)['pro']['reason']=='admin-grant')
+check('days: 1 day works',grant(he,None,days=1)[0]==200 and 0<days_left(he)<1.5)
+check('months: any whole number up to 60 (2 months)',grant(he,2)[0]==200 and 55<days_left(he)<65)
+d7=f'days+{time.time_ns()}@example.com'
+s,r=grant(d7,None,days=7);check('days: pending grant for a new address',s==200 and r['pending'] is True and [g for g in grants() if g['email']==d7][0]['days']==7)
+s,r=call('/auth/request-code','POST',{'email':d7,'name':'Days','role':'student','lang':'en'});s,r=call('/auth/verify','POST',{'email':d7,'code':r['devCode']})
+check('days: the pending grant starts at sign-up and lasts 7 days',r['user']['pro']['reason']=='admin-grant' and 6<days_left(d7)<8)
+# The owner (an admin e-mail) always has Pro: any role, no end date, even when the trial is over.
+call('/auth/role','PUT',{'role':'teacher'},A);sql("UPDATE users SET trial_ends_at=datetime('now','-1 day') WHERE email='davlatsudekspert@gmail.com'")
+sql("DELETE FROM subscriptions WHERE user_id=(SELECT id FROM users WHERE email='davlatsudekspert@gmail.com')")
+o=me(A)['pro'];check('owner: Pro as a teacher with no end date',o['active'] is True and o['reason']=='admin-grant' and o['expiresAt'] is None)
+check('owner: can run several groups',call('/classroom/groups','POST',{'name':'Owner G1'},A)[0]==201 and call('/classroom/groups','POST',{'name':'Owner G2'},A)[0]==201)
+call('/auth/role','PUT',{'role':'dentist'},A);check('owner: still Pro after switching to dentist',me(A)['pro']['active'] is True)
+call('/auth/role','PUT',{'role':'patient'},A)
 print(f'{n} checks passed')

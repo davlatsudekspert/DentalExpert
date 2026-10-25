@@ -41,7 +41,8 @@ CREATE TABLE practice_usage (
 -- applied when that e-mail signs up or signs in. expires_at is set when the grant is applied; months NULL = until revoked.
 CREATE TABLE pro_grants (
   email TEXT PRIMARY KEY,
-  months INTEGER CHECK (months IS NULL OR months IN (1,3,6,12)),
+  months INTEGER CHECK (months IS NULL OR (months BETWEEN 1 AND 60)),
+  days INTEGER CHECK (days IS NULL OR (days BETWEEN 1 AND 3650)),
   granted_by TEXT NOT NULL,
   granted_at TEXT NOT NULL DEFAULT (datetime('now')),
   user_id TEXT REFERENCES users(id) ON DELETE SET NULL,

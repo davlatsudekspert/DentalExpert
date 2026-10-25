@@ -79,13 +79,15 @@ with sync_playwright() as p:
     pg.locator('nav.bottom-nav button').last.click();pg.wait_for_timeout(800)
     pg.locator('main button').filter(has_text='Admin').first.click();pg.wait_for_timeout(1000)
     pg.locator('.admin-tabs button').filter(has_text='Pro').click();pg.wait_for_timeout(900)
-    for months,label,word in (('3','3 oy','3 oy'),('all','Cheksiz','Cheksiz')):
-        target=f'pending{months}+{time.time_ns()}@example.com'
-        pg.locator('.admin-pro input').first.fill(target);pg.locator('.admin-pro select').first.select_option(months)
+    for unit,amount,label,word in (('months','3','3 oy','3 oy'),('days','10','10 kun','10 kun'),('forever','','Cheksiz','Cheksiz')):
+        target=f'pending{unit}+{time.time_ns()}@example.com'
+        pg.locator('.admin-pro input').first.fill(target);pg.locator('.admin-pro select').first.select_option(unit)
+        if amount:pg.locator('.admin-pro input[type=number]').first.fill(amount)
         pg.locator('.admin-pro button.button').first.click();pg.wait_for_timeout(1200)
         txt=pg.evaluate("t=>{const s=[...document.querySelectorAll('.quiz-run-body strong')].find(e=>e.textContent===t);return s?s.parentElement.querySelector('small').textContent:''}",target)
-        other='Cheksiz' if months=='3' else ' oy'
-        check(f'pending {label} grant listed as {label} only: "{txt[:60]}"',word in txt and other not in txt.split(' · bergan')[0] and 'boshlanadi' in txt)
+        head=txt.split(' · bergan')[0]
+        others=[w for w in ('Cheksiz','3 oy','10 kun') if w!=word]
+        check(f'pending {label} grant listed as {label} only: "{txt[:60]}"',word in head and not any(o in head for o in others) and 'boshlanadi' in txt)
     ctx.close()
 
     # D6: the Free-plan line on a student's paywall listed "1 group" (a teacher limit; students join any number of classes).

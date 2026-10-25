@@ -1,7 +1,7 @@
 import {json,type Env} from './db';
 import {photoUrl} from './photo';
 import {proOf} from './entitlement';
-import {applyPendingGrant} from './grants';
+import {applyPendingGrant,ensureOwnerPro} from './grants';
 
 export const ROLES=['patient','dentist','teacher','student'] as const;
 export type Role=typeof ROLES[number];
@@ -130,6 +130,7 @@ export async function signedIn(env:Env,request:Request,user:Record<string,string
  if(blocked?.suspended_at)return json({error:'suspended'},403,'no-store');
  await adoptGuest(env,request,String(user.id),user.role).catch(()=>{});
  await applyPendingGrant(env,String(user.id),String(user.email),String(user.role)).catch(()=>{});
+ if(env.PRO_ENABLED==='1')await ensureOwnerPro(env,String(user.id),String(user.email)).catch(()=>{});
  const session=await createSession(env,request,String(user.id));
  const pro=await proOf(env,{id:String(user.id),role:user.role as Role,guest:false}).catch(()=>undefined);
  const profile={...profileOf(user),...(pro?{pro}:{})};

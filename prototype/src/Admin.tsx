@@ -102,16 +102,16 @@ function Users(){
  </>;
 }
 
-type Grant={email:string;months:number|null;grantedBy:string;grantedAt:string;until:string|null;registered:boolean;pending:boolean};
+type Grant={email:string;months:number|null;days?:number|null;grantedBy:string;grantedAt:string;until:string|null;registered:boolean;pending:boolean};
 const ERR:Record<string,string>={bad_email:'Email noto‘g‘ri.',bad_months:'Muddat noto‘g‘ri.',patient_is_free:'Bemorlar uchun ilova bepul: Pro kerak emas.',rate_limited:'Juda tez-tez. Biroz kuting.',not_found:'Topilmadi.',bad_device:'Qurilma ID noto‘g‘ri.'};
-/** Admin → Pro: grant Pro to any e-mail for 1/3/6/12 months or until revoked; an address without an account waits and applies at sign-up. */
+/** Admin → Pro: grant Pro to any e-mail for N days, N months or until revoked; an address without an account waits and applies at sign-up. */
 function ProGrants(){
  const [list,setList]=useState<Grant[]|null>(null);
- const [email,setEmail]=useState(''),[months,setMonths]=useState('1'),[msg,setMsg]=useState(''),[busy,setBusy]=useState(false);
+ const [email,setEmail]=useState(''),[amount,setAmount]=useState('30'),[unit,setUnit]=useState<'days'|'months'|'forever'>('days'),[msg,setMsg]=useState(''),[busy,setBusy]=useState(false);
  const load=useCallback(async()=>{const r=await callApi<{grants:Grant[]}>('/admin/grants');if(r.ok)setList(r.data.grants)},[]);
  useEffect(()=>{void load()},[load]);
  const grant=async()=>{setMsg('');setBusy(true);
-  const r=await callApi<{applied?:boolean;pending?:boolean}>('/admin/grants','POST',{email:email.trim(),months:months==='all'?null:Number(months)});
+  const r=await callApi<{applied?:boolean;pending?:boolean}>('/admin/grants','POST',unit==='forever'?{email:email.trim(),months:null}:{email:email.trim(),[unit]:Number(amount)});
   setBusy(false);
   if(r.ok){setMsg(r.data.pending?'Saqlandi: ro‘yxatdan o‘tganda faollashadi.':'Pro berildi.');setEmail('');void load()}else setMsg(ERR[r.data.error||'']||'Xatolik.')};
  const revoke=async(e:string)=>{if(!window.confirm(e+': Proni bekor qilasizmi?'))return;const r=await callApi('/admin/grants','DELETE',{email:e});setMsg(r.ok?'Bekor qilindi.':ERR[r.data.error||'']||'Xatolik.');void load()};
@@ -120,8 +120,9 @@ function ProGrants(){
  return <div className="admin-pro">
   <div className="card admin-user"><div className="cr-form">
    <label>Email<input type="email" inputMode="email" autoCapitalize="off" value={email} maxLength={254} placeholder="ism@example.com" onChange={e=>setEmail(e.target.value)}/></label>
-   <label>Muddat<select value={months} onChange={e=>setMonths(e.target.value)}><option value="1">1 oy</option><option value="3">3 oy</option><option value="6">6 oy</option><option value="12">12 oy</option><option value="all">Cheksiz</option></select></label>
-   <button className="button" disabled={busy||!email.trim()} onClick={grant}>Pro berish</button>
+   <label>Muddat<select value={unit} onChange={e=>setUnit(e.target.value as 'days'|'months'|'forever')}><option value="days">Kun</option><option value="months">Oy</option><option value="forever">Cheksiz</option></select></label>
+   {unit!=='forever'&&<label>{unit==='days'?'Necha kun (1–3650)':'Necha oy (1–60)'}<input type="number" inputMode="numeric" min={1} max={unit==='days'?3650:60} value={amount} onChange={e=>setAmount(e.target.value)}/></label>}
+   <button className="button" disabled={busy||!email.trim()||(unit!=='forever'&&!(Number(amount)>=1))} onClick={grant}>Pro berish</button>
    {msg&&<p className="muted" role="status">{msg}</p>}
   </div></div>
   <div className="card admin-user"><div className="cr-form">
@@ -131,7 +132,7 @@ function ProGrants(){
    <button className="button secondary" disabled={!rEmail.trim()} onClick={resetTrial}>Tiklash</button>
   </div></div>
   {list===null?<p className="muted">…</p>:list.length===0?<p className="muted">Faol sovg‘alar yo‘q.</p>:list.map(g=><div key={g.email} className="card admin-user">
-   <div><strong>{g.email}</strong>{g.pending&&<span className="pill warn">Kutilmoqda</span>}<small>{g.pending?(g.months?g.months+' oy':'Cheksiz')+' (ro‘yxatdan o‘tganda boshlanadi)':g.until?'gacha: '+g.until.slice(0,10):'Cheksiz'} · bergan: {g.grantedBy} · {g.grantedAt.slice(0,10)}</small></div>
+   <div><strong>{g.email}</strong>{g.pending&&<span className="pill warn">Kutilmoqda</span>}<small>{g.pending?(g.days?g.days+' kun':g.months?g.months+' oy':'Cheksiz')+' (ro‘yxatdan o‘tganda boshlanadi)':g.until?'gacha: '+g.until.slice(0,10):'Cheksiz'} · bergan: {g.grantedBy} · {g.grantedAt.slice(0,10)}</small></div>
    <div className="admin-actions"><button className="button secondary" onClick={()=>revoke(g.email)}>Bekor qilish</button></div>
   </div>)}
  </div>;

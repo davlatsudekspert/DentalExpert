@@ -2,7 +2,7 @@ import {isAdminEmail,needAdmin} from '../../_lib/admin';
 import {body,clean} from '../../_lib/classroom';
 import {json,type Env} from '../../_lib/db';
 import {stateOf,proEnabled,TRIAL_SQL,type SubRow} from '../../_lib/entitlement';
-import {grantPro,monthsOk,revokePro} from '../../_lib/grants';
+import {grantPro,parseDur,revokePro} from '../../_lib/grants';
 import {photoUrl} from '../../_lib/photo';
 
 const ROLES=['patient','dentist','teacher','student'];
@@ -40,10 +40,10 @@ export const onRequestPut:PagesFunction<Env>=async({request,env})=>{
   if(b.data.suspended)await env.DB.prepare(`DELETE FROM sessions WHERE user_id=?`).bind(id).run();
  }
  if(typeof b.data.pro==='boolean'){
-  // Same as /api/admin/grants, from a user row (months 1|3|6|12, omitted = until revoked).
-  const months=b.data.months===undefined?null:b.data.months;
-  if(!monthsOk(months))return json({error:'bad_months'},400,'no-store');
-  const r=b.data.pro?await grantPro(env,target.email,months,a.user.email):(await revokePro(env,target.email,a.user.email),{});
+  // Same as /api/admin/grants, from a user row (days 1..3650 or months 1..60, omitted = until revoked).
+  const dur=parseDur(b.data);
+  if(!dur)return json({error:'bad_months'},400,'no-store');
+  const r=b.data.pro?await grantPro(env,target.email,dur,a.user.email):(await revokePro(env,target.email,a.user.email),{});
   if('error' in r)return json({error:r.error},400,'no-store');
  }
  if(typeof b.data.verified==='boolean'){
