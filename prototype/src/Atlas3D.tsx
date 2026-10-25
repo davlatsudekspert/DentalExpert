@@ -1,7 +1,7 @@
-import {proAllowed,showPaywall} from './billing';
+import {proAllowed,showPaywall,usePro} from './billing';
 import {useEffect,useRef,useState} from 'react';
 import * as THREE from 'three';
-import {Layers,RotateCcw,X} from 'lucide-react';
+import {Layers,Lock,RotateCcw,X} from 'lucide-react';
 import type {Lang} from './discoveryData';
 import fallbackImage from '../assets/tooth3d/premium-reference-cutaway-ivory.webp';
 
@@ -51,6 +51,7 @@ function webglOk(){try{const c=document.createElement('canvas');const gl=(c.getC
 
 export default function Atlas3D({lang,onClose}:{lang:Lang;onClose:()=>void}){
  const t=T[lang];
+ usePro();const locked=!proAllowed('atlas3d');// Free: a small lock on the exploded view and the Pro layers (re-rendered when the plan changes)
  const mount=useRef<HTMLDivElement>(null);
  const svg=useRef<SVGLineElement>(null);
  const dot=useRef<SVGCircleElement>(null);
@@ -227,8 +228,8 @@ export default function Atlas3D({lang,onClose}:{lang:Lang;onClose:()=>void}){
   <div className="atlas3d-bottom">
    {info&&<div className="atlas3d-card" ref={cardRef} style={{borderColor:COLORS[selected!]}}><i style={{background:COLORS[selected!]}}/><div><strong>{info[0]}</strong><p>{info[1]}</p></div></div>}
    <div className="atlas3d-chips">
-    <button className={'explode'+(exploded?' on':'')} onClick={()=>api.current?.explode(!exploded)}><Layers size={16}/>{exploded?t.assemble:t.explode}</button>
-    {ORDER.map(k=><button key={k} className={selected===k?'on':''} onClick={()=>api.current?.select(k)} style={{['--c' as string]:COLORS[k]}}><i/>{t.layers[k][0]}</button>)}
+    <button className={'explode'+(exploded?' on':'')} onClick={()=>api.current?.explode(!exploded)}><Layers size={16}/>{exploded?t.assemble:t.explode}{locked&&!exploded?<Lock size={12} aria-label="Pro"/>:null}</button>
+    {ORDER.map(k=><button key={k} className={selected===k?'on':''} onClick={()=>api.current?.select(k)} style={{['--c' as string]:COLORS[k]}}><i/>{t.layers[k][0]}{locked&&!FREE_LAYERS.includes(k)?<Lock size={12} aria-label="Pro"/>:null}</button>)}
    </div>
    <small className="atlas3d-note">{t.note}</small>
   </div>

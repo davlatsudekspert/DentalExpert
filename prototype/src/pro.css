@@ -2,6 +2,8 @@
    The accent is a deeper teal on light looks and a light teal on dark: the old #168d8b was 3.3-4.0:1 as text (AA needs 4.5:1). */
 .pw,.pw-nudge,.pf-plan{--pw-accent:#0f6f6d;--pw-accent-bg:#0f6f6d}
 :root[data-theme="dark"] .pw,:root[data-theme="dark"] .pw-nudge,:root[data-theme="dark"] .pf-plan{--pw-accent:#5fd6cd;--pw-accent-bg:#117a77}
+/* Above every full-screen viewer it can open from (slide player 95, deck viewer 100, 3D atlas 120), below the TV mode. */
+.quiz-run.pw{z-index:150}
 .pw-body{display:flex;flex-direction:column;gap:12px;padding-bottom:28px}
 .pw-status{font-weight:700;font-size:14px;padding:10px 12px;border-radius:12px;background:color-mix(in srgb,currentColor 7%,transparent)}
 .pw-trial{background:color-mix(in srgb,#168d8b 18%,transparent)}
