@@ -1,0 +1,58 @@
+{
+ "id": "reel",
+ "title": "Dental Expert: 35-second reel",
+ "total_seconds": 29.59,
+ "scenes": [
+  {
+   "key": "hook",
+   "kind": "tooth",
+   "shots": [],
+   "start": 0.0,
+   "dur": 3.4
+  },
+  {
+   "key": "atlas",
+   "kind": "card",
+   "shots": [
+    "atlas"
+   ],
+   "start": 3.4,
+   "dur": 4.8
+  },
+  {
+   "key": "topic",
+   "kind": "card",
+   "shots": [
+    "topic"
+   ],
+   "start": 8.2,
+   "dur": 5.39
+  },
+  {
+   "key": "picture",
+   "kind": "card",
+   "shots": [
+    "picture",
+    "review"
+   ],
+   "start": 13.59,
+   "dur": 6.6
+  },
+  {
+   "key": "xp",
+   "kind": "card",
+   "shots": [
+    "student"
+   ],
+   "start": 20.19,
+   "dur": 4.6
+  },
+  {
+   "key": "cta",
+   "kind": "cta",
+   "shots": [],
+   "start": 24.79,
+   "dur": 4.8
+  }
+ ]
+}

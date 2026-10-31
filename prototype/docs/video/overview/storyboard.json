@@ -1,0 +1,124 @@
+{
+ "id": "overview",
+ "title": "Dental Expert: overview",
+ "total_seconds": 77.183,
+ "scenes": [
+  {
+   "key": "hook",
+   "kind": "tooth",
+   "shots": [],
+   "start": 0.0,
+   "dur": 5.625
+  },
+  {
+   "key": "home",
+   "kind": "card",
+   "shots": [
+    "student"
+   ],
+   "start": 5.625,
+   "dur": 6.499
+  },
+  {
+   "key": "plan",
+   "kind": "card",
+   "shots": [
+    "plan"
+   ],
+   "start": 12.124,
+   "dur": 7.374
+  },
+  {
+   "key": "topic",
+   "kind": "card",
+   "shots": [
+    "subject",
+    "topic"
+   ],
+   "start": 19.498,
+   "dur": 5.859
+  },
+  {
+   "key": "slides",
+   "kind": "card",
+   "shots": [
+    "slide1",
+    "slide2",
+    "slide4"
+   ],
+   "start": 25.357,
+   "dur": 6.0
+  },
+  {
+   "key": "present",
+   "kind": "card",
+   "shots": [
+    "lessons"
+   ],
+   "start": 31.357,
+   "dur": 5.8
+  },
+  {
+   "key": "atlas",
+   "kind": "card",
+   "shots": [
+    "atlas"
+   ],
+   "start": 37.157,
+   "dur": 5.8
+  },
+  {
+   "key": "picture",
+   "kind": "card",
+   "shots": [
+    "picture"
+   ],
+   "start": 42.957,
+   "dur": 5.8
+  },
+  {
+   "key": "review",
+   "kind": "card",
+   "shots": [
+    "review"
+   ],
+   "start": 48.757,
+   "dur": 5.8
+  },
+  {
+   "key": "exam",
+   "kind": "card",
+   "shots": [
+    "exam"
+   ],
+   "start": 54.557,
+   "dur": 5.8
+  },
+  {
+   "key": "daily",
+   "kind": "card",
+   "shots": [
+    "daily",
+    "student"
+   ],
+   "start": 60.357,
+   "dur": 5.0
+  },
+  {
+   "key": "teacher",
+   "kind": "card",
+   "shots": [
+    "teacher"
+   ],
+   "start": 65.357,
+   "dur": 6.329
+  },
+  {
+   "key": "cta",
+   "kind": "cta",
+   "shots": [],
+   "start": 71.686,
+   "dur": 5.497
+  }
+ ]
+}
