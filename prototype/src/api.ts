@@ -1,5 +1,6 @@
 import type {DemoDoctor,Translated} from './discoveryData';
 import {Capacitor} from '@capacitor/core';
+import {initAppVersion,requireUpdate,versionHeaders} from './appVersion';
 
 /** Native builds load assets from the app bundle and call the hosted API; web builds stay same-origin. */
 export const isNative=Capacitor.isNativePlatform();
@@ -32,7 +33,7 @@ export const tokenReady:Promise<void>=isNative?Promise.race([Promise.all([secure
 const dropGuest=async()=>{guestToken=null;if(!isNative)return;try{await secure(s=>s.remove({key:GUEST_KEY}))}catch{/* keychain unavailable */}};
 const getToken=()=>{try{return isNative?localStorage.getItem(TOKEN_KEY)||guestToken:null}catch{return guestToken}};
 const setToken=(t:string|null)=>{try{if(!isNative)return;if(t)localStorage.setItem(TOKEN_KEY,t);else localStorage.removeItem(TOKEN_KEY)}catch{/* storage unavailable */}};
-const authHeaders=():Record<string,string>=>{if(!isNative)return {};const t=getToken(),d:Record<string,string>=deviceId?{'x-device-id':deviceId}:{};return t?{'x-client':'native',...d,authorization:'Bearer '+t}:{'x-client':'native',...d}};
+const authHeaders=():Record<string,string>=>{if(!isNative)return {};const t=getToken(),d:Record<string,string>=deviceId?{'x-device-id':deviceId}:{};return t?{'x-client':'native',...d,...versionHeaders(),authorization:'Bearer '+t}:{'x-client':'native',...d,...versionHeaders()}};
 /** A real sign-in or sign-out ends the device's old guest session. */
 const signedInAs=(t:string|null)=>{setToken(t);void dropGuest()};
 
@@ -70,9 +71,10 @@ export type AuthUser={pro?:ProState;id:string;guest?:boolean;email:string;name:s
 export type AuthState={enabled:boolean;user:AuthUser|null;unreachable?:boolean};
 
 async function post<T>(path:string,body:unknown,method:'POST'|'PUT'|'DELETE'='POST'):Promise<{ok:boolean;status:number;data:T&{error?:string;retryAfterSec?:number;attemptsLeft?:number}}>{
- await tokenReady;
+ await tokenReady;await initAppVersion();
  try{
   const res=await fetch(url(path),{method,headers:{'content-type':'application/json',...authHeaders()},body:method==='DELETE'?undefined:JSON.stringify(body),credentials:'same-origin'});
+  if(res.status===426)requireUpdate(null);
   const data=await res.json().catch(()=>({})) as never;
   return {ok:res.ok,status:res.status,data};
  }catch{return {ok:false,status:0,data:{error:'network'} as never}}
@@ -80,9 +82,10 @@ async function post<T>(path:string,body:unknown,method:'POST'|'PUT'|'DELETE'='PO
 
 /** enabled=false means email-code sign-in is unavailable and the labelled demo flow stays. */
 export async function fetchAuth():Promise<AuthState>{
- await tokenReady;
+ await tokenReady;await initAppVersion();
  try{
   const res=await fetch(url('/api/auth/me'),{credentials:'same-origin',headers:{accept:'application/json',...authHeaders()}});
+  if(res.status===426)requireUpdate(null);
   if(res.status>=500)return {enabled:false,user:null,unreachable:true};
   if(!res.ok||!(res.headers.get('content-type')||'').includes('application/json'))return {enabled:false,user:null};
   return await res.json() as AuthState;
@@ -108,9 +111,10 @@ export async function fetchInstitutions(signal?:AbortSignal):Promise<Institution
 
 /** Authenticated JSON call for the classroom API; returns status 0 when the network or API is unavailable. */
 export async function callApi<T=Record<string,unknown>>(path:string,method:'GET'|'POST'|'PUT'|'DELETE'='GET',payload?:unknown):Promise<{ok:boolean;status:number;data:T&{error?:string}}>{
- await tokenReady;
+ await tokenReady;await initAppVersion();
  try{
   const res=await fetch(url('/api'+path),{method,credentials:'same-origin',headers:{accept:'application/json',...(payload!==undefined?{'content-type':'application/json'}:{}),...authHeaders()},body:payload!==undefined?JSON.stringify(payload):undefined});
+  if(res.status===426)requireUpdate(null);
   if(!(res.headers.get('content-type')||'').includes('json'))return {ok:false,status:0,data:{error:'network'} as never};
   const data=await res.json().catch(()=>({})) as never;
   return {ok:res.ok,status:res.status,data};
@@ -128,7 +132,7 @@ export const deletePhoto=()=>post<{user?:AuthUser}>('/api/auth/photo',null,'DELE
  * bearer token an <img> cannot send, so the bytes are fetched and shown from a blob URL (the caller revokes it). */
 export async function ownPhotoSrc(photoUrl:string):Promise<{src:string;revoke?:()=>void}|null>{
  if(!isNative)return {src:photoUrl};
- await tokenReady;
+ await tokenReady;await initAppVersion();
  try{
   const res=await fetch(url(photoUrl),{headers:authHeaders()});
   if(!res.ok||!(res.headers.get('content-type')||'').startsWith('image/'))return null;

@@ -6,7 +6,9 @@ export interface Env {DB:D1Database;MEDIA:R2Bucket;AUTH_SECRET?:string;RESEND_AP
  /** Comma-separated OAuth client IDs accepted as the id_token `aud` (Sign in with Google / Apple). */
  GOOGLE_CLIENT_IDS?:string;APPLE_CLIENT_IDS?:string;
  /** Local tests only: a JWKS JSON trusted instead of the provider's, honoured only with AUTH_DEV_ECHO=1 on localhost. */
- OAUTH_TEST_JWKS?:string}
+ OAUTH_TEST_JWKS?:string;
+ /** Switching old native builds off: see functions/_lib/appver.ts. */
+ MIN_BUILD_ANDROID?:string;MIN_BUILD_IOS?:string;UPDATE_URL_ANDROID?:string;UPDATE_URL_IOS?:string;BLOCK_LEGACY_NATIVE?:string}
 
 type Row=Record<string,unknown>;
 const parse=(v:unknown)=>typeof v==='string'?JSON.parse(v):v;

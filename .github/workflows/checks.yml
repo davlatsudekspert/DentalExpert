@@ -70,6 +70,9 @@ jobs:
         run: |
           VITE_PRO_ENABLED=1 npx vite build --outDir dist-pro --emptyOutDir
           PRO_ENABLED=1 DIST=dist-pro DE_PORT=8803 D1_PERSIST=.wrangler/state-pro bash tools/ci_local_server.sh pro_test pro_trial_test premium_test pro_e2e premium_e2e attestation_on_e2e design_pro_e2e journey_pro_e2e
+      - name: Old app builds can be switched off (API and update screen)
+        run: |
+          EXTRA_VARS='MIN_BUILD_ANDROID=1050\nMIN_BUILD_IOS=30\nUPDATE_URL_ANDROID=https://play.google.com/store/apps/details?id=test.app\nUPDATE_URL_IOS=http://insecure.example\nBLOCK_LEGACY_NATIVE=1' DE_PORT=8804 D1_PERSIST=.wrangler/state-appver bash tools/ci_local_server.sh appver_test update_gate_e2e
       - name: Live site on a TV and slides in present mode
         run: python3 tools/present_test.py dist
       - name: Education edition (Android / Google Play) has no patient role, dentist search, booking or patient records
