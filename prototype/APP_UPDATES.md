@@ -1,6 +1,6 @@
 # Switching old app builds off
 
-Since build 1013 (Android) / the next iOS build, every native build sends its build number (`x-app-build`, `x-app-platform`) and
+From the first Android and iOS builds made after this change, every native build sends its build number (`x-app-build`, `x-app-platform`) and
 asks `GET /api/app/config` once at start-up. If the build is below the minimum, the app shows a blocking "Update required"
 screen (uz / ru / en) with a store link. Account, class, admin and billing APIs also answer **426** to those builds.
 
