@@ -32,7 +32,10 @@ with sync_playwright() as p:
     # Not yet open to students: the start button is off and says why.
     start=tp.locator('.lg-setup .button',has_text='Testni boshlash')
     check('closed topic: start disabled with a one-line reason',start.is_disabled() and tp.locator('.lg-why',has_text='Talabalarga ochish').count()==1 and start.get_attribute('aria-describedby')=='lg-start-why')
-    tp.get_by_role('button',name='Talabalarga ochish').click();tp.wait_for_timeout(800)
+    tp.get_by_role('button',name='Talabalarga ochish').click()
+    try:tp.get_by_role('button',name='Talabalardan yashirish').wait_for(timeout=10000)   # the server answers, then the screen redraws (slow runners)
+    except Exception:pass
+    tp.wait_for_timeout(300)
     check('opened topic: the reason is gone',tp.locator('.lg-why').count()==0)
     check('topic opened',tp.get_by_role('button',name='Talabalardan yashirish').count()==1)
     tp.screenshot(path=OUT+'/t3-topic-stages.png',full_page=True)
