@@ -6,7 +6,7 @@ image under photos/ that has no entry. Exit code 1 on any problem."""
 import json,re,sys,pathlib
 ROOT=pathlib.Path(__file__).resolve().parent.parent
 PHOTOS=ROOT/'src'/'photos'
-ALLOWED=re.compile(r'^(Public domain|CC0 1\.0|CC BY (2\.0|2\.5|3\.0|4\.0)|CC BY-SA (2\.0|2\.5|3\.0|4\.0))$')
+ALLOWED=re.compile(r'^(Public domain|CC0 1\.0|CC BY (2\.0|2\.5|3\.0|4\.0)|CC BY-SA (2\.0|2\.5|3\.0|4\.0)|AI-generated \(own work\))$')
 MAX_FILE=200*1024      # one image
 MAX_TOTAL=6*1024*1024  # everything added
 LANGS=('uz','ru','en')
@@ -24,6 +24,7 @@ for e in items:
     if not ALLOWED.match(e.get('license','')):fail(f'{f}: licence not allowed: {e.get("license")!r}')
     for k in ('sourceUrl','fileUrl'):
         if e.get(k) and not str(e[k]).startswith('https://'):fail(f'{f}: {k} must be https')
+    if e.get('license','').startswith('AI-generated') and e.get('ai') is not True:fail(f'{f}: AI-generated entries need "ai": true (the Credits screen labels them)')
     if e.get('license','').startswith('CC BY') and not e.get('licenseUrl'):fail(f'{f}: CC licence needs licenseUrl')
     if not e.get('decorative'):
         for l in LANGS:
