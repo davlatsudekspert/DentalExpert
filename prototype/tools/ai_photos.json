@@ -1,0 +1,52 @@
+{
+ "prop": {
+  "subject": "prop",
+  "title": "Dental operatory (AI-generated illustration)",
+  "focus": "58% 50%",
+  "alt": {
+   "uz": "Zamonaviy stomatologik xona: kreslo, yoritgich, qurilma va asboblar laganchasi",
+   "ru": "Современный стоматологический кабинет: кресло, светильник, установка и лоток с инструментами",
+   "en": "Modern dental operatory with a chair, light, dental unit and an instrument tray"
+  }
+ },
+ "mat": {
+  "subject": "mat",
+  "title": "Dental materials on a tray (AI-generated illustration)",
+  "focus": "50% 50%",
+  "alt": {
+   "uz": "Stomatologik materiallar laganchada: kompozit shpritslari, kapsulalar, bonding shishasi, rang tanlash namunasi va aralashtirish plitasi",
+   "ru": "Стоматологические материалы на лотке: шприцы с композитом, капсулы, флакон адгезива, шкала цвета и блок для замешивания",
+   "en": "Dental materials on a tray: composite syringes, capsules, a bonding bottle, a shade guide and a mixing pad"
+  }
+ },
+ "oralmed": {
+  "subject": "oralmed",
+  "title": "Dental examination on a tooth model (AI-generated illustration)",
+  "focus": "50% 55%",
+  "alt": {
+   "uz": "Qo‘lqopli qo‘llar tish modelida ko‘zgu va zond bilan ko‘rik o‘tkazmoqda, orqada panoramik rentgen",
+   "ru": "Руки в перчатках осматривают модель зубов зеркалом и зондом, на заднем плане панорамный рентген",
+   "en": "Gloved hands examining a tooth model with a mirror and a probe, a panoramic X-ray on the screen behind"
+  },
+  "cover": [
+   [
+    0.758,
+    0.35,
+    0.792,
+    0.382,
+    0.085
+   ]
+  ],
+  "coverNote": "a faint blurred mark on the monitor frame painted out"
+ },
+ "esth": {
+  "subject": "esth",
+  "title": "Tooth shade guide, tooth model and a ceramic veneer (AI-generated illustration)",
+  "focus": "45% 55%",
+  "alt": {
+   "uz": "Tish rangini tanlash shkalasi, tish modeli va qo‘lqopli qo‘l pinset bilan keramik vinirni ushlab turibdi",
+   "ru": "Шкала цвета зубов, модель зубов и рука в перчатке с пинцетом, держащим керамический винир",
+   "en": "A tooth shade guide, a tooth model and a gloved hand holding a ceramic veneer with tweezers"
+  }
+ }
+}
