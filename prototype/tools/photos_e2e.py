@@ -31,7 +31,11 @@ with sync_playwright() as p:
         check(f'[{lang}] credits screen lists all {len(credits)} images',n==len(credits))
         txt=pg.inner_text('.cr-credits')
         check(f'[{lang}] every author and licence is shown',all(c['author'] in txt and c['license'] in txt for c in credits))
-        check(f'[{lang}] links go to Commons file pages',pg.locator('.cr-credits a[href^="https://commons.wikimedia.org/wiki/File:"]').count()==len(credits))
+        real=[c for c in credits if not c.get('ai')];ai=[c for c in credits if c.get('ai')]
+        check(f'[{lang}] links go to Commons file pages (photographs only)',pg.locator('.cr-credits a[href^="https://commons.wikimedia.org/wiki/File:"]').count()==len(real))
+        mark={'uz':'Sun’iy intellekt yordamida yaratilgan illyustratsiya','ru':'Иллюстрация, созданная с помощью ИИ','en':'Illustration created with AI'}[lang]
+        check(f'[{lang}] each AI image is labelled as an AI illustration, not linked to Commons',txt.count(mark)==len(ai) and len(ai)>=4)
+        check(f'[{lang}] the screen says AI images are not real clinical photographs',any(w in pg.inner_text('.quiz-run') for w in ('klinik','клиническ','clinical')))
         check(f'[{lang}] credits images have alt text',pg.evaluate("Array.from(document.querySelectorAll('.cr-credits img')).every(i=>i.alt.trim().length>3)"))
         check(f'[{lang}] credits images load',loaded(pg,'.cr-credits img')==[])
         pg.locator('.quiz-run-bar button').click();pg.wait_for_selector('.cr-credits',state='detached')
