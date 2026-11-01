@@ -50,7 +50,7 @@ with sync_playwright() as p:
     # A short monitor/laptop window (about 1000x460 CSS px): the cover picture must sit inside its card, not be cut off at the top.
     for vw,vh in ((1000,461),(900,420),(844,390)):
         sm=b.new_page(viewport={'width':vw,'height':vh});open_slides(sm,LIVE);sm.locator('.sl-present').click();sm.wait_for_timeout(500)
-        cv=sm.evaluate(box,'.sl-cover');mk=sm.evaluate(box,'.sl-cover-mark')
+        cv=sm.evaluate(box,'.sl-cover');mk=sm.evaluate(box,'.sl-cover-mark') or sm.evaluate(box,'.sl-cover-photo')   # a subject with a cover photo has no mark
         check(f'short {vw}x{vh}: cover picture is inside its card',cv and mk and mk['t']>=cv['t']-1 and mk['t']+mk['h']<=cv['t']+cv['h']+1,f'{cv} {mk}')
         check(f'short {vw}x{vh}: cover is not squashed',cv and cv['h']>=140,str(cv))
         sm.close()
