@@ -16,7 +16,9 @@ What it does
   4. Specialty status from the decidable agreement: >= 95% `ok`, >= 80% `beta`, otherwise `withheld` (all its questions are `review`).
   5. Writes manifest.json (status, audit numbers, served counts), index.json (tiny, what the app imports) and AUDIT.md.
 """
-import collections, hashlib, json, math, os, random, re
+import collections, hashlib, json, math, os, random, re, sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import tmbm_import
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 D = os.path.join(ROOT, 'data', 'attestation')
@@ -44,8 +46,26 @@ def sample_ns(qs, sid):
     return [qs[i]['n'] for i in sorted(r.sample(range(len(qs)), SAMPLE))]
 
 
+def apply_ai_keys(uzqs, keys):
+    """Re-key questions from data/attestation/ai_keys.json: <number> -> index of the key in the SOURCE (PDF) option order.
+    The importer shuffles options with a seeded PRNG, so the source index is mapped back to the shuffled position."""
+    n_set = 0
+    for q in uzqs:
+        si = keys.get(str(q['n']))
+        if si is None:
+            continue
+        perm = tmbm_import.shuffle_with_key([0, 1, 2, 3], q['id'])[0]
+        if not q.get('aiKey') and perm.index(0) != q['k']:
+            continue   # the file does not match the importer's shuffle: leave it unkeyed
+        q['k'] = perm.index(si)
+        q['aiKey'] = True
+        n_set += 1
+    return n_set
+
+
 def main():
     man = json.load(open(os.path.join(D, 'manifest.json')))
+    ai_all = json.load(open(os.path.join(D, 'ai_keys.json'))) if os.path.exists(os.path.join(D, 'ai_keys.json')) else {}
     verd = json.load(open(os.path.join(D, 'audit_verdicts.json')))
     lines = []
     index = []
@@ -58,6 +78,9 @@ def main():
         for q in qs:
             q.pop('review', None)
             q.pop('why', None)
+        ai = ai_all.get(sid)
+        if ai:
+            apply_ai_keys(uzqs, ai['keys'])
         ns = sample_ns(uzqs, sid)
         v = verd[sid]
         judged = set(v['wrong']) | set(v['ambiguous']) | set(v['corrupt'])
@@ -70,9 +93,11 @@ def main():
         lo, hi = wilson(ok, dec)
         status = 'ok' if agree_dec >= OK_AT else 'beta' if agree_dec >= BETA_AT else 'withheld'
         why = collections.defaultdict(list)
-        for n in v['wrong']:
+        if ai:
+            status = 'beta'   # keys come from two independent AI passes, not from the first-option convention: always a warned beta
+        for n in v['wrong'] if not ai else []:
             why[n].append('audit-key-wrong')
-        for n in v['ambiguous']:
+        for n in v['ambiguous'] if not ai else []:
             why[n].append('audit-key-ambiguous')
         for n in v['corrupt']:
             why[n].append('audit-text-corrupt')
@@ -129,6 +154,12 @@ def main():
         if status == 'withheld':
             for q in qs:
                 why[q.get('n') or q['id']].append('specialty-withheld')
+        if ai:
+            for q in qs:
+                if 'q' not in q:
+                    why[q['id']].append('ai-keyed-uz-only')     # no Uzbek twin: its Russian key is the unreliable first-option one
+                elif not q.get('aiKey'):
+                    why[q['n']].append('ai-key-unconfirmed')
         flagged = 0
         for q in qs:
             r = why.get(q.get('n') or q['id'])
@@ -141,7 +172,7 @@ def main():
         with open(path, 'w', encoding='utf-8') as f:
             json.dump(doc, f, ensure_ascii=False, separators=(',', ':'))
         served = len(uzqs) - sum(1 for q in uzqs if q.get('review'))
-        served_ru = sum(1 for q in qs if 'ru' in q and not q.get('review'))
+        served_ru = 0 if ai else sum(1 for q in qs if 'ru' in q and not q.get('review'))
         # what the app ships: only non-review questions, no flags, one lazily loaded file per specialty
         os.makedirs(os.path.join(D, 'served'), exist_ok=True)
         sp_path = os.path.join(D, 'served', sid + '.json')
@@ -155,7 +186,7 @@ def main():
                 it = {'id': q['id']}
                 if 'q' in q:
                     it.update({'q': q['q'], 'o': q['o'], 'k': q['k']})
-                if 'ru' in q:
+                if 'ru' in q and not ai:
                     it['r'] = {'q': q['ru']['q'], 'o': q['ru']['o'], 'k': q['ru']['k']}
                 slim.append(it)
             json.dump({'id': sid, 'questions': slim}, open(sp_path, 'w', encoding='utf-8'), ensure_ascii=False, separators=(',', ':'))
@@ -164,13 +195,19 @@ def main():
                        'agreementAll': round(agree_all, 3), 'agreementDecidable': round(agree_dec, 3),
                        'wilson95': [round(lo, 3), round(hi, 3)], 'sampleSeed': 'audit:' + sid}
         sp['review'] = flagged
+        if ai:
+            sp['keySource'] = 'ai-double-check'
+            sp['aiKeys'] = {'method': ai['method'], 'pairs': ai['pairs'], 'agreed': ai['agreed'], 'served': served}
+        else:
+            sp.pop('keySource', None)
+            sp.pop('aiKeys', None)
         sp['ruOnly'] = len(qs) - len(uzqs)
         sp['served'] = served
         sp['servedRu'] = served_ru
         sp['negatedStems'] = neg
         sp['allNoneOptions'] = allnone
         index.append({'id': sid, 'name': sp['name'], 'total': len(uzqs), 'served': served, 'servedRu': served_ru, 'status': status,
-                      'agreement': round(agree_dec, 2)})
+                      'agreement': round(agree_dec, 2), **({'ai': True} if ai else {})})
         reason_count = collections.Counter(x.split(':')[0] for r in why.values() for x in set(r))
         lines.append((sp, v, ns, reason_count, flagged))
     man['auditThresholds'] = {'ok': OK_AT, 'beta': BETA_AT}
@@ -188,9 +225,16 @@ def main():
            '|---|---|---|---|---|---|---|---|---|---|---|']
     for sp, v, ns, rc, fl in lines:
         a = sp['audit']
+        if sp.get('keySource'):
+            out.append('| %s | %d | n/a | n/a | n/a | n/a | n/a | n/a | n/a | **%s** (AI keys) | %d |' % (sp['id'], sp['questions'], sp['status'], sp['served']))
+            continue
         out.append('| %s | %d | %d | %d | %d | %d | %.0f%% | %.0f%% | %.0f-%.0f%% | **%s** | %d |' % (
             sp['id'], sp['questions'], a['ok'], a['ambiguous'], a['wrong'], a['corrupt'], 100 * a['agreementAll'],
             100 * a['agreementDecidable'], 100 * a['wilson95'][0], 100 * a['wilson95'][1], sp['status'], sp['served']))
+    for sp, v, ns, rc, fl in lines:
+        if sp.get('keySource'):
+            k = sp['aiKeys']
+            out += ['', '**%s uses AI-derived keys, not the first-option convention** (the sample audit above shows the convention fails there). Method: %s. %d of %d answer pairs agreed; %d questions are served (status `beta`, Uzbek only, with a visible warning that no specialist has checked the keys). Source: `ai_keys.json`. Two AI passes agreeing is not proof of correctness: a specialist review is still required.' % (sp['id'], k['method'], k['agreed'], k['pairs'], k['served'])]
     out += ['', 'Status rule: decidable agreement >= %d%% `ok`, >= %d%% `beta` (served with a visible warning), below that `withheld` (every question is marked `review`, nothing is served). Chance level for 4 options is 25%%.' % (OK_AT * 100, BETA_AT * 100), '',
             '## Automatic scan of all questions', '',
             'Questions get `review: true` and a `why` list; the app never serves them. Counts of reasons per specialty (a question can have several):', '']

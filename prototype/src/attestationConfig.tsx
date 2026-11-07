@@ -5,7 +5,7 @@ import type {Lang} from './discoveryData';
  * bundled at all) or the server variable ATTESTATION_ENABLED is "0" (the app asks /api/attestation/status once). */
 export const ATTESTATION_ENABLED=import.meta.env.VITE_ATTESTATION_ENABLED!=='0';
 export type AttStatus='ok'|'beta'|'withheld';
-export type AttSpec={id:string;name:string;total:number;served:number;servedRu:number;status:AttStatus;agreement:number};
+export type AttSpec={id:string;name:string;total:number;served:number;servedRu:number;status:AttStatus;agreement:number;ai?:boolean};
 /** The feature is for Uzbek and Russian only: it does not exist (no tab, no route, no credits line) when the app language is English. */
 export const attestationOn=(lang:string)=>ATTESTATION_ENABLED&&(lang==='uz'||lang==='ru');
 export const ATT_SPECS:AttSpec[]=ATTESTATION_ENABLED?(index as AttSpec[]):[];

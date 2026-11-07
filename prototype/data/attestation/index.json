@@ -102,9 +102,10 @@
   "id": "parodontologiya",
   "name": "Parodontologiya",
   "total": 438,
-  "served": 0,
+  "served": 305,
   "servedRu": 0,
-  "status": "withheld",
-  "agreement": 0.14
+  "status": "beta",
+  "agreement": 0.14,
+  "ai": true
  }
 ]

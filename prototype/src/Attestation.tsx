@@ -15,8 +15,10 @@ const specName=(s:{id:string;name:string},lang:string)=>lang==='ru'?RU_NAMES[s.i
  * the data (the source key was first) and again per attempt by QuizRun. Keys come from data/attestation (audited, see AUDIT.md). */
 const T_={
  uz:{title:'Bilim va malakani baholash',lead:'Mutaxassislikni tanlang: o‘z bilimingiz ustida ishlang va baholashga tayyorlaning.',q:'savol',back:'Orqaga',start:'Boshlash',count:'Savollar soni',random:(n:number)=>`${n} ta tasodifiy`,all:'Hammasi, tartib bilan',best:'Eng yaxshi natija',none:'Hali urinilmagan',
+  betaAi:'Sinov: kalitni AI aniqlagan',aiNote:'Diqqat: bu mutaxassislikda javoblar kalitini sun’iy intellekt ikki marta mustaqil aniqlagan, mutaxassis hali tekshirmagan. Faqat mashq uchun foydalaning, xato bo‘lishi mumkin.',
   beta:'Sinov: kalit ~% aniq',betaNote:(p:number)=>`Diqqat: bu mutaxassislikda javoblar kaliti tekshiruvda, taxminan ${p}% savol to‘g‘ri belgilangan. Ehtiyot bo‘lib foydalaning.`,soon:'Kalit tekshiruvda',left:(n:number)=>`Bugun bepul: yana ${n} ta savol`,limited:(n:number)=>`Bugungi bepul limit tufayli test ${n} ta savoldan iborat bo‘ladi.`,used:'Bugungi bepul limit tugadi',report:'Xato haqida xabar berish',reportBody:'Savol/javobdagi xato: ',pro:'Pro',empty:'Savollar yuklanmadi.',unavailable:'Bu bo‘lim hozir mavjud emas.'},
  ru:{title:'Проверка знаний и компетенций',lead:'Выберите специальность: работайте над своими знаниями и готовьтесь к оценке.',q:'вопросов',back:'Назад',start:'Начать',count:'Количество вопросов',random:(n:number)=>`${n} случайных`,all:'Все по порядку',best:'Лучший результат',none:'Ещё не пройдено',
+  betaAi:'Тест: ключ определил ИИ',aiNote:'Внимание: ключ ответов в этой специальности дважды независимо определил искусственный интеллект, специалист его ещё не проверял. Используйте только для тренировки, возможны ошибки.',
   beta:'Тест: ключ ~% точен',betaNote:(p:number)=>`Внимание: в этой специальности ключ ответов проверяется, верно отмечено примерно ${p}% вопросов. Пользуйтесь осторожно.`,soon:'Ключ проверяется',left:(n:number)=>`Сегодня бесплатно: ещё ${n}`,limited:(n:number)=>`Из-за дневного бесплатного лимита в тесте будет ${n} вопросов.`,used:'Дневной бесплатный лимит исчерпан',report:'Сообщить об ошибке',reportBody:'Ошибка в вопросе/ответе: ',pro:'Pro',empty:'Вопросы не загрузились.',unavailable:'Раздел сейчас недоступен.'},
 };
 const STORE='de_attest';
@@ -63,14 +65,14 @@ export default function Attestation({lang}:{lang:Lang}){
   {Number.isFinite(left)&&<p className="muted at-left">{left>0?t.left(left):t.used}</p>}
   <div className="at-list">{ATT_SPECS.map(s=>{const b=best[s.id];const locked=s.status==='withheld';
    return <button key={s.id} className="card at-row" disabled={locked} onClick={()=>setSel(s)}>
-    <span className="at-main"><strong>{specName(s,lang)}</strong><small>{locked?t.soon:`${lang==='ru'?s.servedRu:s.served} ${t.q}`}{s.status==='beta'?' · '+t.beta.replace('%',String(Math.round(s.agreement*100))+'%'):''}</small>{b&&<small className="at-best"><Trophy size={12}/> {t.best}: {b.pct}%</small>}</span>
+    <span className="at-main"><strong>{specName(s,lang)}</strong><small>{locked?t.soon:`${lang==='ru'?s.servedRu:s.served} ${t.q}`}{s.status==='beta'?' · '+(s.ai?t.betaAi:t.beta.replace('%',String(Math.round(s.agreement*100))+'%')):''}</small>{b&&<small className="at-best"><Trophy size={12}/> {t.best}: {b.pct}%</small>}</span>
     {locked?<ShieldAlert size={16}/>:<ChevronRight size={16}/>}</button>})}</div>
   <AttestationNote lang={lang}/>
  </div>;
  return <div className="rv-root ex-root">
   <button className="button secondary at-back" onClick={()=>setSel(null)}><ArrowLeft size={16}/>{t.back}</button>
   <header className="rv-head"><h2>{specName(sel,lang)}</h2><p>{lang==='ru'?sel.servedRu:sel.served} {t.q}</p></header>
-  {sel.status==='beta'&&<p className="at-warn" role="note"><ShieldAlert size={15}/>{t.betaNote(Math.round(sel.agreement*100))}</p>}
+  {sel.status==='beta'&&<p className="at-warn" role="note"><ShieldAlert size={15}/>{sel.ai?t.aiNote:t.betaNote(Math.round(sel.agreement*100))}</p>}
   <div className="ex-field"><span className="ex-label">{t.count}</span>
    <div className="ex-seg at-seg" role="radiogroup" aria-label={t.count}>{[...COUNTS,0].map(n=><button key={n} role="radio" aria-checked={n===count} className={n===count?'on':''} onClick={()=>setCount(n)}>{n===0?t.all:t.random(n)}</button>)}</div></div>
   {Number.isFinite(left)&&left>0&&(count===0||count>left)&&<p className="muted">{t.limited(left)}</p>}

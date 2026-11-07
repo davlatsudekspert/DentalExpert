@@ -22,7 +22,9 @@ Reviewer: one AI model, one pass, from general knowledge, no textbook lookup. "A
 | bolalar-xirurgik | 478 | 41 | 17 | 1 | 1 | 68% | 95% | 84-99% | **ok** | 452 |
 | ortodontiya | 499 | 40 | 19 | 1 | 0 | 67% | 98% | 87-100% | **ok** | 458 |
 | implantologiya | 473 | 39 | 15 | 6 | 0 | 65% | 87% | 74-94% | **beta** | 449 |
-| parodontologiya | 438 | 5 | 24 | 31 | 0 | 8% | 14% | 6-29% | **withheld** | 0 |
+| parodontologiya | 438 | n/a | n/a | n/a | n/a | n/a | n/a | n/a | **beta** (AI keys) | 305 |
+
+**parodontologiya uses AI-derived keys, not the first-option convention** (the sample audit above shows the convention fails there). Method: two independent AI passes (answer from general dental knowledge, option order ignored); a key is kept only when both agree and neither is marked low confidence. 406 of 438 answer pairs agreed; 305 questions are served (status `beta`, Uzbek only, with a visible warning that no specialist has checked the keys). Source: `ai_keys.json`. Two AI passes agreeing is not proof of correctness: a specialist review is still required.
 
 Status rule: decidable agreement >= 95% `ok`, >= 80% `beta` (served with a visible warning), below that `withheld` (every question is marked `review`, nothing is served). Chance level for 4 options is 25%.
 
@@ -41,7 +43,7 @@ Questions get `review: true` and a `why` list; the app never serves them. Counts
 - **bolalar-xirurgik**: 26 of 478 marked `review`. audit-key-ambiguous 17, audit-key-wrong 1, audit-text-corrupt 1, cyrillic 2, glued-words 3, key-repeated-among-options 3. Informational only (served): 36 negated stems, 25 with an all/none-of-the-above option.
 - **ortodontiya**: 43 of 499 marked `review`. audit-key-ambiguous 19, audit-key-wrong 1, cyrillic 22, excel-date 22. Informational only (served): 5 negated stems, 0 with an all/none-of-the-above option.
 - **implantologiya**: 24 of 473 marked `review`. audit-key-ambiguous 15, audit-key-wrong 6, duplicate-of 2, key-repeated-among-options 1. Informational only (served): 62 negated stems, 30 with an all/none-of-the-above option.
-- **parodontologiya**: 842 of 438 marked `review`. audit-key-ambiguous 24, audit-key-wrong 31, cyrillic 1, glued-words 1, specialty-withheld 842. Informational only (served): 83 negated stems, 17 with an all/none-of-the-above option.
+- **parodontologiya**: 537 of 438 marked `review`. ai-key-unconfirmed 132, ai-keyed-uz-only 404, cyrillic 1, glued-words 1. Informational only (served): 83 negated stems, 17 with an all/none-of-the-above option.
 
 ## Flagged question ids from the sample
 
@@ -95,7 +97,7 @@ Ids are `<specialty>-<source number>`. These are `review: true` whatever the spe
 - key wrong: implantologiya-0033, implantologiya-0134, implantologiya-0242, implantologiya-0250, implantologiya-0251, implantologiya-0255
 - ambiguous: implantologiya-0112, implantologiya-0115, implantologiya-0119, implantologiya-0142, implantologiya-0159, implantologiya-0160, implantologiya-0182, implantologiya-0321, implantologiya-0330, implantologiya-0336, implantologiya-0350, implantologiya-0396, implantologiya-0409, implantologiya-0431, implantologiya-0451
 
-### parodontologiya (withheld)
+### parodontologiya (beta)
 - key wrong: parodontologiya-0001, parodontologiya-0009, parodontologiya-0031, parodontologiya-0035, parodontologiya-0038, parodontologiya-0058, parodontologiya-0082, parodontologiya-0108, parodontologiya-0121, parodontologiya-0130, parodontologiya-0131, parodontologiya-0144, parodontologiya-0147, parodontologiya-0157, parodontologiya-0159, parodontologiya-0179, parodontologiya-0214, parodontologiya-0226, parodontologiya-0232, parodontologiya-0233, parodontologiya-0242, parodontologiya-0267, parodontologiya-0290, parodontologiya-0306, parodontologiya-0337, parodontologiya-0365, parodontologiya-0367, parodontologiya-0394, parodontologiya-0398, parodontologiya-0434, parodontologiya-0438
 - ambiguous: parodontologiya-0018, parodontologiya-0025, parodontologiya-0048, parodontologiya-0049, parodontologiya-0050, parodontologiya-0052, parodontologiya-0078, parodontologiya-0100, parodontologiya-0126, parodontologiya-0148, parodontologiya-0167, parodontologiya-0168, parodontologiya-0188, parodontologiya-0236, parodontologiya-0257, parodontologiya-0274, parodontologiya-0351, parodontologiya-0361, parodontologiya-0362, parodontologiya-0387, parodontologiya-0409, parodontologiya-0411, parodontologiya-0414, parodontologiya-0421
 

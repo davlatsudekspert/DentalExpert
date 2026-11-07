@@ -574,7 +574,7 @@
     },
     "warnings": []
    },
-   "status": "withheld",
+   "status": "beta",
    "audit": {
     "sampled": 60,
     "ok": 5,
@@ -589,12 +589,19 @@
     ],
     "sampleSeed": "audit:parodontologiya"
    },
-   "review": 842,
+   "review": 537,
    "ruOnly": 404,
-   "served": 0,
+   "served": 305,
    "servedRu": 0,
    "negatedStems": 83,
-   "allNoneOptions": 17
+   "allNoneOptions": 17,
+   "keySource": "ai-double-check",
+   "aiKeys": {
+    "method": "two independent AI passes (answer from general dental knowledge, option order ignored); a key is kept only when both agree and neither is marked low confidence",
+    "pairs": 438,
+    "agreed": 406,
+    "served": 305
+   }
   }
  ],
  "total": 5897,
@@ -602,5 +609,5 @@
   "ok": 0.95,
   "beta": 0.8
  },
- "totalServed": 3224
+ "totalServed": 3529
 }

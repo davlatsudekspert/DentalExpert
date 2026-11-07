@@ -40,7 +40,7 @@ with sync_playwright() as p:
         rows=pg.locator('.at-row')
         check(f'{size}: 12 specialties listed',rows.count()==12)
         txt=pg.locator('.at-list').inner_text()
-        check(f'{size}: counts shown, withheld ones marked and disabled',' savol' in txt and 'Kalit tekshiruvda' in txt and pg.locator('.at-row:disabled').count()==5)
+        check(f'{size}: counts shown, withheld ones marked and disabled',' savol' in txt and 'Kalit tekshiruvda' in txt and pg.locator('.at-row:disabled').count()==4)   # umumiy, terapevtik, yuzjag, bolalar: no reliable key yet
         note=pg.locator('.at-note').inner_text()
         check(f'{size}: source note, one-line independence statement and removal contact visible','tmbm.ssv.uz' in note and 'davlat organi bilan bog‘liq emas' in note and 'kafolat' not in note and 'davlatsudekspert@gmail.com' in note)
         check(f'{size}: no horizontal overflow',not overflow(pg))

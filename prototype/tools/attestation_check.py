@@ -46,7 +46,17 @@ for sp in man['specialties']:
     if sp['review'] != review: bad(f'{sid}: manifest review count')
     uzq = [q for q in qs if 'q' in q]
     if sp['served'] != sum(1 for q in uzq if not q.get('review')): bad(f'{sid}: manifest served count')
-    if sp['servedRu'] != sum(1 for q in qs if 'ru' in q and not q.get('review')): bad(f'{sid}: manifest servedRu count')
+    ai = sp.get('keySource') == 'ai-double-check'
+    if sp['servedRu'] != (0 if ai else sum(1 for q in qs if 'ru' in q and not q.get('review'))): bad(f'{sid}: manifest servedRu count')
+    if ai:
+        # AI-keyed specialty: always beta, flagged ai in the index, Uzbek only, and only questions that carry an AI key are served
+        if sp['status'] != 'beta' or not idx[sid].get('ai'): bad(f'{sid}: AI-keyed specialty must be beta and flagged ai in index.json')
+        akeys = json.load(open(os.path.join(D, 'ai_keys.json')))[sid]['keys']
+        for q in qs:
+            if 'q' in q and not q.get('review') and (not q.get('aiKey') or str(q['n']) not in akeys): bad(f"{q['id']}: served without an AI key")
+            if 'q' not in q and not q.get('review'): bad(f"{q['id']}: Russian-only question served from an AI-keyed specialty")
+        spf = os.path.join(D, 'served', sid + '.json')
+        if os.path.exists(spf) and any('r' in x for x in json.load(open(spf))['questions']): bad(f'{sid}: served file carries Russian twins (their keys are not AI-derived)')
     if idx[sid]['served'] != sp['served'] or idx[sid]['servedRu'] != sp['servedRu'] or idx[sid]['total'] != len(uzq) or idx[sid]['status'] != sp['status']: bad(f'{sid}: index.json out of date')
     sf = os.path.join(D, 'served', sid + '.json')
     if sp['status'] == 'withheld':
