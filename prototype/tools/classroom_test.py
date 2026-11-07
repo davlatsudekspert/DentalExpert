@@ -1,6 +1,6 @@
 """Classroom API tests against a local `npm run api:dev` (needs .dev.vars with AUTH_SECRET and AUTH_DEV_ECHO=1)."""
 import os
-import json,urllib.request,urllib.error,time
+import json,urllib.request,urllib.error,time,datetime
 B=f'http://127.0.0.1:{os.environ.get("DE_PORT","8788")}/api'
 def call(path,method='GET',body=None,token=None):
     h={'x-client':'native','origin':'https://localhost'}
@@ -36,7 +36,7 @@ check('non-member cannot read assignments',call('/classroom/assignments?groupId=
 check('student cannot create assignment',call('/classroom/assignments','POST',{'groupId':g['id'],'kind':'task','title':'Hi'},S)[0]==403)
 check('quiz needs deck and key',call('/classroom/assignments','POST',{'groupId':g['id'],'kind':'quiz','title':'Quiz','deckId':'caries-basics'},T)[0]==400)
 check('bad date 400',call('/classroom/assignments','POST',{'groupId':g['id'],'kind':'task','title':'Task','dueDate':'tomorrow'},T)[0]==400)
-s,r=call('/classroom/assignments','POST',{'groupId':g['id'],'kind':'task','title':'Describe caries stages','body':'3-5 sentences','dueDate':'2026-11-01'},T);check('teacher creates task',s==201);task=r['assignment']['id']
+s,r=call('/classroom/assignments','POST',{'groupId':g['id'],'kind':'task','title':'Describe caries stages','body':'3-5 sentences','dueDate':(datetime.date.today()+datetime.timedelta(days=30)).isoformat()},T);check('teacher creates task',s==201);task=r['assignment']['id']
 s,r=call('/classroom/assignments','POST',{'groupId':g['id'],'kind':'quiz','title':'Caries quiz','deckId':'caries-basics','key':[0,1,2]},T);check('teacher creates quiz',s==201);quiz=r['assignment']['id']
 s,r=call('/classroom/assignments?groupId='+g['id'],token=S);check('student sees 2 assignments, no key leak',len(r['assignments'])==2 and all(a['mine'] is None for a in r['assignments']) and 'answer_key' not in json.dumps(r) and 'key' not in r['assignments'][0])
 codes=[call('/classroom/join','POST',{'code':'ZZZZZZ'},P)[0] for _ in range(12)]
